@@ -1,0 +1,16 @@
+This is the heart of the BBC generation system it takes the following inputs
+*raw files TODO change to R.*
+These files are in the format 
+<Publisher> <Description> <Filename> <Execution type> <Page> <disk> <generic program type> <favorate>
+These are each text tab seperated with the record being return terminated
+<Publisher> and <Description> are not length limited (be sensible) note that it is assumed that <publisher> will repeat so you need to ensure that data quality is good
+<filename> is of the form x.xxxxxxx if no prefix a $ is assumed
+<execution> is one of erlc meaning execute (as in EXEC !boot) R meaning *RUN "x.xxxxxxx" L meaning load is normally indicates a ROM  C meaning chain"x.xxxxxxx"
+<PAGE> a two character indicator of Page i.e. 0E is page = &0E00 this should not be nessasary any longer as file info has been changed on the collections i have scrubbed
+<generic program type> one of acgsmpuz A text adventure C cheat G Arcade game S Strategy M music U unknown Z utils
+<favorate> Y yes
+
+Output files 
+H software publishing houses
+D disknumber to title mapping
+CatDatx a number of Catalogue files containing the converted raw files.  Number of CatDatx files depends on the the size of the raw files

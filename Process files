@@ -14,3 +14,11 @@ Output files
 H software publishing houses
 D disknumber to title mapping
 CatDatx a number of Catalogue files containing the converted raw files.  Number of CatDatx files depends on the the size of the raw files
+
+CatDatx will contain variable null terminated records
+file description
+File name up to 6 bytes
+Disk number 1-512 one byte 1 bit
+Publishing house 1-512 one byte 1 bit
+program type 4 bits
+fav 1 bit

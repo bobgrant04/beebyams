@@ -16,9 +16,13 @@ D disknumber to title mapping
 CatDatx a number of Catalogue files containing the converted raw files.  Number of CatDatx files depends on the the size of the raw files
 
 CatDatx will contain variable null terminated records
-file description
-File name up to 6 bytes
+file description coverted into lower 127 char range
+one byte MSB =1 , fave flag, disk high bit, software house high bit, game type (4 bits)
+File name up to 6 bytes converted to lower 127 with first byte having MSB set if fielname has . as second char
 Disk number 1-512 one byte 1 bit
 Publishing house 1-512 one byte 1 bit
-program type 4 bits
-fav 1 bit
+software house one byte
+disknumber one byte
+null terminator
+Thus to extract record from start of file or null read characters until MSB is 1 this is the file description
+find the null and count back to to give the end position of filename, use bit manipulation to give file type etc

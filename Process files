@@ -11,18 +11,22 @@ These are each text tab seperated with the record being return terminated
 <favorate> Y yes
 
 Output files 
-H software publishing houses
-D disknumber to title mapping
-CatDatx a number of Catalogue files containing the converted raw files.  Number of CatDatx files depends on the the size of the raw files
+H software publishing houses 1-1027 note padded if to avoid null records 
+D disknumber to title mapping 0-510 note padded if to avoid null records 
+CatDatx a number of Catalogue files containing the converted raw files.  Number of CatDatx files depends on the the size of the raw files this starts @ catdat1 and is inremented in ASCII
 
-CatDatx will contain variable null terminated records
-file description coverted into lower 127 char range
-one byte MSB =1 , fave flag, disk high bit, software house high bit, game type (4 bits)
-File name up to 6 bytes converted to lower 127 with first byte having MSB set if fielname has . as second char
-Disk number 1-512 one byte 1 bit
-Publishing house 1-512 one byte 1 bit
-software house one byte
-disknumber one byte
-null terminator
-Thus to extract record from start of file or null read characters until MSB is 1 this is the file description
-find the null and count back to to give the end position of filename, use bit manipulation to give file type etc
+
+CatDat consists of
+variable file description coverted into lower 127 char range teminated by MSB being set
+4 bytes containing disk no pub number fav game type and catalogue number
+
+
+Thus to extract record from start of file read characters until MSB is 1 this is the file description and the next four bytes have index and data
+
+file is null terminated
+
+in order to generate files a basic program p.process and a corisponding M/C MnuHelp is used (source in p.mnuhelp).  
+NB ANY CHANGE TO P.MNUHELP WILL REQUIRE CALL ADDRESSES TO BE ALTERED IN P.PROCESS
+
+this will generate DINREC and PUBDAT - (the latter can be put in alphabetical order)
+

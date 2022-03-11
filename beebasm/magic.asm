@@ -1,6 +1,15 @@
 
-\alter used to alter exe and or load address
+\alter used to inteligently guess exe and or load address
 \Usage <fsp> (<dno>/<dsp>) (<drv>)
+\if exe is in the range 7C00 then exe will not be analysied as firm indication of file given E% will return current value
+\load address will change for rom to &8000
+\will Guess screen load mode from load address and size
+\load address will be altered for BASIC progs with <>&E00
+\normal *drive command and *din command will be issued (default to drive 3)
+\file information will be gathered 
+\Outputs E% execution L% load address S% size
+ 
+
 
 \…Variables
 NoSpecials%=0:\"offset from 1
@@ -47,7 +56,7 @@ osargs=&FFDA:osbget=&FFD7:osbput=&FFD4:osbpb=&FFD1:osfind=&FFCE:osrdch=&FFE0
 oscli=&FFF7:osfsc=&21E:osword=&FFF1
 
 
-ORG &7000
+ORG &7600
 GUARD &7C00
 
 .start
@@ -77,7 +86,7 @@ EQUS 0,0
 
 .strcheck
 \nobytes,exec,load ident
-EQUS 7,&E7,&90,"<>&E00",&E,0,"relocation to E00",13
+EQUS 7,&E7,&90,"<>&E00",&E,0,0,0,"relocation to E00",13
 EQUS 0
 
 .startexec
@@ -110,7 +119,12 @@ LDA #&D:STA strA%,X
 JSR execmd
 .ac
 \"Process filename
-\now have blockstart with filename
+\now have blockstart with filename does file exist
+LDX #blockstart:LDY #0:LDA #5:JSR osfile:CMP #1:BEQ al:LDX #2:JMP diserror:.al
+LDA load:STA l: LDA load+1:STA l+1:LDA size:STA s:LDA size+1:STA s+1
+\check to see if exe is in the 7CXX range
+LDA exe+1:CMP #&7C:BNE magic:
+STA l+1:LDA exe:STA l:RTS
 .magic
 \First load a page of data in
 
@@ -136,7 +150,8 @@ DEC matchlen:BPL fh
 JSR fullmatch
 LDA e:CMP #&23:BNE fj:LDA e+1:CMP #&80:BNE fj:
 JMP relocationcheck
-.fj:RTS
+.fj:JSR screencheck
+RTS
 
 .offset
 CMP #&FF:BEQ statistic
@@ -173,8 +188,6 @@ BNE nxtrec:RTS
 INY:LDA(Aptr),Y:cmp #0:BNE bv:RTS:.bv:CMP x:BCS nxtrec:JMP fullmatch
 .nxtrec:LDY #6:.bf:INY:LDA(Aptr),Y:CMP #13:BNE bf:
 INY:TYA:CLC:ADC Aptr:STA Aptr:LDA #0:ADC Aptr+1:STA Aptr+1:JMP bb
-
-
 }
 
 
@@ -192,7 +205,7 @@ STA strA%,X:INX:RTS
 \execmd
 .execmd:LDY #strA% DIV 256:LDX #strA% MOD 256:JMP oscli
 
-
+\checks for byte patterns and alters L or E as appropriate
 .relocationcheck
 {
 LDA #LO(strcheck):STA Aptr
@@ -204,9 +217,7 @@ INY:LDA(Aptr),Y:
 .ac:CMP rawdat,X:BEQ ab:INX:BNE ac:RTS
 .ab:LDA matchlen:STA tempx
 .af
-DEC tempx:BPL ae:INY:LDA(Aptr),Y:STA l+1:INY:LDA(Aptr),Y:STA l
-.fi
-INY:LDA(Aptr),Y:JSR osasci:CMP #13:BNE fi:RTS
+DEC tempx:BPL ae:INY:JMP fullmatch
 .ae:INY:INX:LDA(Aptr),Y:CMP rawdat,X:BNE ad:BEQ af
 .aa:RTS
 }
@@ -222,9 +233,44 @@ ADC erradd+1:STA erradd+1:LDY #0:BEQ ba
 
 .fullmatch
 {
-LDA(Aptr),Y:STA e:INY:LDA(Aptr),Y:STA e+1:INY:LDA(Aptr),Y:STA e:INY:LDA(Aptr),Y:STA l+1:INY:LDA(Aptr),Y:STA l
+LDA(Aptr),Y:STA e:INY:LDA(Aptr),Y:BEQ aa:STA e+1:INY:LDA(Aptr),Y:STA e:INY:.ab:LDA(Aptr),Y:BEQ ac:STA l+1:INY:LDA(Aptr),Y:STA l
 .fi
 INY:LDA(Aptr),Y:JSR osasci:CMP #13:BNE fi:RTS
+.aa:INY:INY:BNE ab:.ac:INY:BNE fi
+}
+\checks for full screen load
+
+.screencheck
+{
+\mode 7 &7C00 len &400
+LDA l+1:CMP #&7C:BNE aa
+LDA s+1:CMP #4:BNE exit
+LDA #&F6:JMP setexe
+.aa
+\mode 6 &6000 len &2000
+CMP  #&60:BNE ab
+LDA s+1:CMP #&20:BNE exit
+LDA #&F5:JMP setexe
+.ab
+\mode 4,5 &5800 len &2800
+CMP  #&58:BNE ac
+LDA s+1:CMP #&28:BNE exit
+LDA #&F4:JMP setexe
+.ac
+\mode 3 &4000 len &4000
+CMP  #&40:BNE ad
+LDA s+1:CMP #&40:BNE exit
+LDA #&F2:JMP setexe
+.ad
+\mode 0,1,2 &3000 len &5000
+CMP  #&30:BNE exit
+LDA s+1:CMP #&50:BNE exit
+LDA #&F1:JMP setexe
+
+
+
+.setexe:STA e:LDA #&7C:STA e+1:
+.exit: RTS
 }
 .cmdadd
 
@@ -263,11 +309,19 @@ EQUS"7FFA 0000 EXEC":EQUB &D
 EQUS"7FF9 0000 TYB music samples":EQUB &D
 EQUS"7FF8 0000 DEC compressed picture":EQUB &D
 EQUS"7FF7 0000 viewsheet":EQUB &D
+EQUS"7FF6 7C00 mode 7 Screen":EQUB &D
+EQUS"7FF5 6000 mode 6 Screen":EQUB &D
+EQUS"7FF4 5800 mode 5 Screen":EQUB &D
+EQUS"7FF3 5800 mode 4 Screen":EQUB &D
+EQUS"7FF2 4000 mode 3 Screen":EQUB &D
+EQUS"7FF1 3000 mode 2 Screen":EQUB &D
+EQUS"7FF0 3000 mode 1 Screen":EQUB &D
+EQUS"7FEF 3000 mode 0 Screen":EQUB &D
 EQUD&8D
 
 .end
 
 
 SAVE "magic", start, end,startexec
-\cd bbc/beebasm
+\cd D:\GitHub\beebyams\beebasm
 \beebasm -i magic.asm -do magic.ssd -boot magic -v -title magic

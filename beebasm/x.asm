@@ -1,16 +1,7 @@
 
 \based on CHe00 by martin mather 14/10/2006 
 \Usage <fsp> (<dno>/<dsp>) (<drv>)
-\basic progs have exe of 8023
-\basic prog load add is correct
-\roms have load add of 8000
-\ldpic on disk with the file
-\ldpic files have exe of 7FFE
-\Showpic files exe of 7FFD
-\Showpic  on disk
-\Files to be typed exe 7FFC
-\Files to be dumped exe 7FFB
-\Files to be EXEC exe 7FFA
+
 \"…Variables
 NoSpecials%=7:\"offset from 1
 EndSpecial%=&FF-NoSpecials%
@@ -230,9 +221,12 @@ GUARD &7C00
 INCBIN "$.altldpc"
 \the yorkshire boys music
 .tybmusic
-SKIPTO &7100
-INCBIN "$.code2"
 SKIPTO &7200
+INCBIN "$.code2"
+SKIPTO &7300
+\"„"RUN
+.run
+EQUS"RUN",13,0
 .startexec
 \get osargs into blockstart
 LDX #blockstart:LDY #0:LDA #1:JSR osargs  
@@ -283,16 +277,35 @@ LDX #blockstart:LDY #0:LDA #5:JSR osfile:CMP #1:BEQ al:LDX #2:JMP diserror:.al
 \file not found
 \get file info if A<> 1 not a file
 \check for specials
-LDA exe+1:CMP #&7F:BEQ specials:JMP prepload
+LDA exe+1:CMP #&7F:BEQ specials:CMP #&80:BNE endspecial
+LDA exe:CMP #&23:BNE endspecial
+\basic program
+{
+LDA load+1:STA &18:
+.ui:LDY run:BEQ ab:INC ui+1
+LDA #138:
+LDX #0:JSR osbyte:BNE ui:.ab:INC basic
+
+}
+.endspecial:JMP prepload
+ 
 \Specials
 .specials
+{
 {
 LDA exe:LDX #0
 CMP #&FE:BNE ca
 \7FFE LDPIC compressed picture
-LDY #0:.xx:LDA &7000,Y:STA &900,Y:INY:BNE xx
-JMP &900
+\debug
+LDA blockstart:STA z:LDA blockstart+1:STA z+1
+LDY #0:.xb:LDA (blockstart),y:STA strA%,Y:INY:CMP #&D:BNE xb
 
+INC blockstart:bne sa:INC blockstart+1:.sa
+LDY #0:.xx:LDA &7000,Y:STA &900,Y:INY:BNE xx
+LDY #0:.xa:LDA &7100,Y:STA &A00,Y:INY:BNE xa
+LDX #LO(strA%):LDY #HI(strA%):LDA #&40
+JMP &900
+}
 \7FFD SHOWPIC"
 .ca:CMP #&FD:BNE cc
 LDX #3
@@ -308,7 +321,7 @@ LDX #6
 \7FF9 TYB music samples
 .cf:CMP #&F9:BNE cg
 
-LDY #0:.xy:LDA &7100,y:STA &900,Y:INY:BNE xy
+LDY #0:.xy:LDA &7200,y:STA &900,Y:INY:BNE xy
 LDA #15:JSR osbyte
 LDA #255:LDX #1:JSR osbyte
 LDA #138:LDX #0:LDY #128:JSR osbyte
@@ -374,34 +387,31 @@ LDX #NoSpecials%+2:JSR prepcmd:JSR addparam
 LDA load+1:CMP #&11:BCC ay
 \romcheck 
 .romcheck
-LDA load+1:CMP #&80:BNE bascheck:JMP execmd
+CMP #&80:BNE zeropage
+.bx:JMP execmd
 \JMP so end 
 .ay
 \below &1100 so need to shift
 LDA #&11:STA loadadd+1
 LDA size+1:STA filesize:INC filesize:DEX:LDY #0
-.bv:LDA ladd,Y::STA strA%,X:INX:INY:CMP #&D:BNE bv
+.bv:LDA ladd,Y:STA strA%,X:INX:INY:CMP #&D:BNE bv
 \now have *LOAD fname 1100 ready
-\bascheck
-\if basic put command in kbd buf
-\and set basic flag
-.bascheck
-{
-LDA exe+1:STA exeadd+1:LDA exe:STA exeadd:CMP #&23:BNE ax
-LDA exeadd+1:CMP #&80:BNE ax:LDA trueadd+1:STA &18:LDA #138:.ui:LDY run
-LDX #0:JSR osbyte:INC ui+1:BNE ui:INC basic:.ax
-}
+.zeropage
+\debug
+\RTS
+
 \JMPtest
 LDY #codeend-codebegin:.av:LDA codebegin,Y:STA codestart,Y:DEY:BPL av
 \CODE NOW IN ZERO PAGE
 LDY #strA% DIV 256:LDX #strA% MOD 256
+JMP codestart
 \-----------------------
 .codebegin
 \need to keep code here to min
 \loadfile and shift if required
 JSR oscli
 LDY #0:LDX filesize:BEQ at
-.iq1:LDA(loadadd),Y:STA(trueadd),Y:INY:BNE iq1:INC loadadd+1:INC trueadd+1:DEX:BNE iq1
+.iq1:LDA(loadadd),Y:STA(trueadd),Y:INY:BNE iq1:INC loadadd+1:INC trueadd+1:DEX:BPL iq1
 \JUMP OR RTS
 \Note jmp will save RTS!
 .at:LDA basic:BNE bz:JMP(exeadd):.bz:RTS
@@ -417,10 +427,13 @@ LDY #0:LDA filesize:TAX:RTS
 \Prepcmd
 \takes x as cmdno ret x ptr to
 \strA%
-.prepcmd:LDY #0:.ez:DEX:BNE nexcmd:.ey:LDA cmdadd,Y:CMP #&80:BCC am:AND #&7F
+.prepcmd
+{
+LDY #0:.ez:DEX:BNE nexcmd:.ey:LDA cmdadd,Y:CMP #&80:BCC am:AND #&7F
 STA strA%,X:INX:RTS
 .am:STA strA%,X:INX:INY:BNE ey
-.nexcmd:LDA cmdadd,Y:INY:CMP #&80:BCC nexcmd:BCS ez     
+.nexcmd:LDA cmdadd,Y:INY:CMP #&80:BCC nexcmd:BCS ez 
+}    
 \Display error
 \takes x as strno
 .diserror
@@ -514,13 +527,11 @@ EQUS"7F01 mode 1 Screen":EQUB &D
 EQUS"7F00 mode 0 Screen":EQUB &D \22 7 curser off g=get
 EQUS"Version 1.1"
 EQUD &8D
-\"„"RUN
-.run
-EQUS"RUN",13,0
+\
 .end
 
 SAVE "x", start, end,startexec
 
 \cd bbc/beebasm
 \cd D:\GitHub\beebyams\beebasm
-\beebasm -i x.asm -do x.ssd -boot x -v
+\beebasm -i x.asm -do x.ssd -boot x -v -title x

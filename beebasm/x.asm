@@ -179,6 +179,7 @@ zz=&8E
 \&476 - &47A TEMP 3
 \&478 - &47F TEMP 4
 \&600 String manipulation
+shortcode=&640
 strA%=&6A0
 \&900 - &AFF RS232 & cassette openin/open out
 \&B00 &BFF programmable keys
@@ -220,10 +221,12 @@ GUARD &7C00
 .ldpic
 INCBIN "$.altldpc"
 \the yorkshire boys music
+
+\SKIPTO &7200
+
 .tybmusic
-SKIPTO &7200
 INCBIN "$.code2"
-SKIPTO &7300
+
 \"„"RUN
 .run
 EQUS"RUN",13,0
@@ -301,8 +304,8 @@ LDA blockstart:STA z:LDA blockstart+1:STA z+1
 LDY #0:.xb:LDA (blockstart),y:STA strA%,Y:INY:CMP #&D:BNE xb
 
 INC blockstart:bne sa:INC blockstart+1:.sa
-LDY #0:.xx:LDA &7000,Y:STA &900,Y:INY:BNE xx
-LDY #0:.xa:LDA &7100,Y:STA &A00,Y:INY:BNE xa
+LDY #0:.xx:LDA ldpic,Y:STA &900,Y:INY:BNE xx
+LDY #0:.xa:LDA ldpic+&100,Y:STA &A00,Y:INY:BNE xa
 LDX #LO(strA%):LDY #HI(strA%):LDA #&40
 JMP &900
 }
@@ -320,25 +323,32 @@ LDX #5
 LDX #6
 \7FF9 TYB music samples
 .cf:CMP #&F9:BNE cg
+{
+LDY #0:.xy:LDA tybmusic,Y:STA &900,Y:INY:BNE xy
+\clear keyboard buffer
+\LDX #0:LDA #15:JSR osbyte
+\read write start up options
+\LDA #255:LDX #1:JSR osbyte
+\insert char into buffer
+\LDA #138:LDX #0:LDY #128:JSR osbyte
 
-LDY #0:.xy:LDA &7200,y:STA &900,Y:INY:BNE xy
-LDA #15:JSR osbyte
-LDA #255:LDX #1:JSR osbyte
-LDA #138:LDX #0:LDY #128:JSR osbyte
 LDA #35:STA &74:LDAload+1::STA &75:CLC:ADC size+1:STA &76
 \setup load command
 LDX #NoSpecials%+2:JSR prepcmd:JSR addparam
 \now have *lo. FILENAME &D ready
 LDY #0:DEX
 .bv:LDA ladd,Y::STA strA%,X:INX:INY:CMP #&D:BNE bv
-\code for D00
+\now have *l. FILENAME &1100 OD
+\code for shortcode
 \no of bytes 10 so make &10
-LDY #&10
-.kk:LDA shiftme,Y:STA &D00,Y:DEY:BPL kk
-JMP &D00
+LDY #8
+.kk:LDA shiftme,Y:STA shortcode,Y:DEY:BPL kk
+LDY #HI(strA%):LDX #LO(strA%)
+JMP shortcode
 .shiftme
-LDY #strA% DIV 256:LDX #strA% MOD 256:JSR oscli
+JSR oscli
 JMP &900
+}
 }
 \7FF8 DEC compressed picture
 .cg:CMP #&F8:BNE ch
@@ -532,6 +542,6 @@ EQUD &8D
 
 SAVE "x", start, end,startexec
 
-\cd bbc/beebasm
+\cd d:\bbc/beebasm
 \cd D:\GitHub\beebyams\beebasm
 \beebasm -i x.asm -do x.ssd -boot x -v -title x

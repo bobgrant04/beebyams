@@ -490,9 +490,9 @@ EQUS"*TY",&AE
  EQUS"dec",&A0
 \SPECIALS ABOVE ALTER NoSpecials%
 \*DRIVE
-EQUS"*DR",&AE
+EQUS"*DR.",&A0
 \*DIN
-EQUS"*DI",&CE
+EQUS"*DIN",&A0
 \*LOAD
 EQUS"LO.",&A0
 \*CODE for music the yorkshire boys

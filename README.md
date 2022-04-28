@@ -31,11 +31,12 @@ Magic - Usage <fsp> (<dno>/<dsp>) (<drv>) a program for analysing program to acc
 
 Alter - Usage <fsp> (<dno>/<dsp>) (<drv>) used for executing results of magic or in the future process
 
-Process - SLOW programm consumes TAB deliminated files.  A number of switches are available:- sort publisher requires 2 pass, verify used  to clean TAB deliminated files.  generates a number of catdat files which will be in the order of the TAB deliminated files, DINREC index of disk titles and SOFTREC index of publishers. This program uses MCPROC the entry points are shared via PROCVAR.
+P.Process - SLOW programm consumes TAB deliminated files.  A number of switches are available:- sort publisher requires 2 pass, verify used  to clean TAB deliminated files.  generates a number of catdat files which will be in the order of the TAB deliminated files, DINREC index of disk titles and SOFTREC index of publishers. This program uses MCPROC the entry points are shared via PROCVAR.
 
 mnuhelp - displays program details use cursors or letters to move and ret to select.  allows filtering of display
+uses files N O for help X to launch program CATDATx files SOFTREC, DINREC.
 
-
+P.RECMMC records catalogues of multiple diskss with crc value
 
 
 

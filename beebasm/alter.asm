@@ -3,7 +3,7 @@
 \Usage <fsp> (<dno>/<dsp>) (<drv>)
 
 \…Variables
-NoSpecials%=0:\"offset from 1
+NoSpecials%=1:\"offset from 1
 EndSpecial%=&FF-NoSpecials%
 \ZERO page
 \IntA &2A -&2D
@@ -45,7 +45,7 @@ osargs=&FFDA:osbget=&FFD7:osbput=&FFD4:osbpb=&FFD1:osfind=&FFCE:osrdch=&FFE0
 oscli=&FFF7:osfsc=&21E:osword=&FFF1
 
 
-ORG &7000
+ORG &7800
 GUARD &7C00
 
 .start
@@ -127,9 +127,9 @@ ADC erradd+1:STA erradd+1:LDY #0:BEQ ba
 
 \SPECIALS ABOVE ALTER NoSpecials%
 \*DRIVE
-EQUS"*DR",&AE
+EQUS"*DR.",&A0
 \*DIN
-EQUS"*DI",&CE
+EQUS"*DIN",&A0
 \*LOAD
 EQUS"LO.",&A0
 \*CODE for music the yorkshire boys
@@ -151,10 +151,11 @@ EQUS"E% for exe 0=do not change":EQUB &D
  EQUS"ROM load should be 8000":EQUB &D
  EQUS"LDPIC on disk DATA has exe 7FFE":EQUB &D
  EQUS"SHOWPIC DATA has exe 7FFD":EQUB &D
- EQUS"Files to be *TYPE exe 7FFC":EQUB &D
-EQUS"Files to be *DUMP exe 7FFB":EQUB &8D
+ EQUS"Files to be *TYPE exe 7FFC":EQUB &8D
+
 
 \#5 EXTENDED HELP CONT
+EQUS"Files to be *DUMP exe 7FFB":EQUB &D
 EQUS"Files to be *EXEC exe 7FFA":EQUB&D
 EQUS"TYB music samples to be exe 7FF9":EQUB &D
 EQUS"Version 0.9"
@@ -164,5 +165,5 @@ EQUD&8D
 
 
 SAVE "alter", start, end
-\cd bbc/beebasm
+\D:\GitHub\beebyams\beebasm
 \beebasm -i alter.asm -do alter.ssd -boot alter -v -title alter

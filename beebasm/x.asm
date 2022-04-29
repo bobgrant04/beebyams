@@ -186,9 +186,7 @@ strA%=&6A0
 \&C00 CFF extended character
 \&D00 DFF  disk operations
 \&1100-7C00 main mem
-conb=&5000 :\control block for reading disk
-rawdat=&6000:\output for file read
-countpg=&6100:\page for count's
+
 \vectors
 USERV =&200	\reserved
 BRKV =&202	\break vector
@@ -394,6 +392,7 @@ LDA load:STA trueadd:LDA load+1:STA trueadd+1
 LDX #NoSpecials%+2:JSR prepcmd:JSR addparam
 \now have *lo. FILENAME &D ready
 \to execute
+LDA exe:STA exeadd:LDA exe+1:STA exeadd+1
 LDA load+1:CMP #&11:BCC ay
 \romcheck 
 .romcheck

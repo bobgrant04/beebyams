@@ -36,7 +36,7 @@ P.Process - SLOW programm consumes TAB deliminated files.  A number of switches 
 mnuhelp - displays program details use cursors or letters to move and ret to select.  allows filtering of display
 uses files N O for help X to launch program CATDATx files SOFTREC, DINREC.
 
-P.RECMMC records catalogues of multiple diskss with crc value
+P.RECMMC - records catalogues of multiple disks with crc value
 
 
 

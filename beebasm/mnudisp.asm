@@ -1,4 +1,8 @@
-
+\\ this program started as a conversion from a BBC basic /MC prog
+\ as such memory was an issue so three letter routine naming is used
+\ this will be changed over time
+\ labels are two character unique after conversion again this will not
+\be maintained a {} can be used
 
 
 
@@ -30,8 +34,7 @@ Apub=&7B:sno=&7D:APtr=&7F
  \e cont 8=fav A=SearchText
 \e+1 browse=1 else=0 for selectiƒon
 \f filtA
- a=&404:b=&408:c=&40C:d=&410
-  e=&414:f=&418:g=&41C:h=&420:i=&424:j=&428:k=&42C:l=&430:m=&434:n=&438:o=&43C:p=&440:q=&444:r=&448:s=&44C:t=&450:u=&454:v=&458:w=&45C:x=&460:y=&464:zz=&468
+ a=&404:b=&408:c=&40C:d=&410:e=&414:f=&418:g=&41C:h=&420:i=&424:j=&428:k=&42C:l=&430:m=&434:n=&438:o=&43C:p=&440:q=&444:r=&448:s=&44C:t=&450:u=&454:v=&458:w=&45C:x=&460:y=&464:zz=&468
 atozStart%=&404:atozlen%=&68
 \PG &600 STRING MANIPULATION
 StrA%=&640:Fna%=&6FF-10:stxt%=&620
@@ -72,6 +75,7 @@ GUARD &7C00
 {:LDA #0:STA z:STA z+1:RTS }
 \Clearint cli offset from a in X
 .clearint
+.cli
 {:LDA #0:LDY #3:.dx:STA a,X:INX:DEY:BPL dx:RTS }
 \StrAlen len of str
 \Cap StrA%
@@ -122,9 +126,7 @@ LDX #48:.lh:LDA IntA:SEC:SBC #10:BCC lj:INX:STA IntA:BNE lh:.lj:STX dinstr+4:STX
 \Loadfile lf†Needs Aptr set
 .lf
 {:LDA APtr:STA block+2:LDA APtr+1:STA block+3:LDA #0:STA block+6:LDA #&FF:LDX blockadd:LDY blockadd+1:JMP osfile:}\rts
-\ReadCat rac ret 0 OR NOT IN A
-.rac
-{:LDA #&7F:LDX pramadd:LDY pramadd+1:JSR osword:LDA pramadd+10:SBC &10:RTS }
+
 \SortStr
 .SortStr
 {:JSR stl:JSR Cap:JMP CheckLen:}\rts
@@ -132,11 +134,16 @@ LDX #48:.lh:LDA IntA:SEC:SBC #10:BCC lj:INX:STA IntA:BNE lh:.lj:STX dinstr+4:STX
 .crd
 {:JSR ged:TYA:CLC:ADC comprec:TAY:TAX:DEY:.dm:LDA (APtr),Y:STA(filtA),Y:DEY:BPL dm:TXA:CLC:ADC filtA:STA filtA:LDA #0:ADC filtA+1:STA filtA+1:LDA #46:JMP osasci:}\rts
 \Get end description ged ret Y
+.getenddescription
 .ged
 {:LDY #0:.ga:LDA (APtr),Y:INY:CMP #&80:BCC ga:RTS }
 \Get search selection gss
 .gss
-{:JSR cda:JSR ifr:JSR est:JSR sdt:JSR tfa:LDA fr%:BEQ ij:JSR idf:JSR gns:JSR idf:JSR mrz:JSR cas:JSR cda:JSR Search:JSR ssn:.ij:RTS }
+{:JSR cda:JSR ifr:JSR est:JSR sdt:JSR tfa:LDA fr%:BEQ ij:JSR idf:JSR gns:
+JSR getinput
+CPY #&D:BEQ aa:RTS:.aa
+JSR postgns
+JSR idf:JSR mrz:JSR cas:JSR cda:JSR Search:JSR ssn:.ij:RTS }
 \Search Description txt sdt
 .sdt
 :JSR SortStr:.va:JSR Search:BNE vd:RTS:.vd:JSR crd:JSR nxr:CLC:BCC va
@@ -164,8 +171,10 @@ LDX StrA%:STX tempx:LDY #0:.qj:LDA(APtr),Y:BNE vb:RTS:.vb:CMP tempx:BEQ try:CMP 
 CLC:ROL v:ROL v:LDA e:ORA #4:STA e:RTS
 \Displayfilterscreen DFS dfs
 .DFS
-:JSR him:.dfs:LDX #0:STX comprec:STX e+1:JSR ifp:JSR ims:LDY #0:STY tempy:.ma:JSR sl:JSR pre:JSR ps:JSR nxr:LDY #0:LDA(APtr),Y:BNE ma:JSR cs:JSR mks
-CMP #&D:BEQ xu:RTS:.xu
+:JSR him:
+.dfs:LDX #0:STX comprec:STX e+1:JSR ifp:JSR ims:LDY #0:STY tempy:.ma:JSR sl:JSR pre:JSR printselection:JSR nxr:LDY #0:LDA(APtr),Y:BNE ma:JSR cursorset:JSR getinput
+CPY #&D:BEQ xu:RTS
+.xu
 \selection section
 LDA cnl
 CMP #65:BNE aaa
@@ -179,19 +188,19 @@ JSR gnz:LDY #&5C:JSR ciz:JSR ldin:JSR mrz:LDA #0:STA c:JSR wtf:JSR wdn:JMP dfs
 JSR lpub:LDA #&60:STA b:LDA #2:STA c:JSR gsc:JSR wtf:LDA e:ORA #2:STAe:JMP dfs
 .ccc:CMP #68:BNE ddd
 \progtype
-.stt:LDA e:ORA #4:STA e:JSR itm:JSR iptt:JSR ims:.mo:JSR sl:JSR pre:LDA #&D:JSR osasci:JSR nxr:LDY #0:LDA(APtr),Y:BNE mo:JSR cs:JSR mks:CMP #&D:BEQ xx:RTS:.xx:LDY #&54:JSR clearint:JSR cda:LDA cnl:SEC:SBC #65:STA z:STA tempx
+.stt:LDA e:ORA #4:STA e:JSR itm:JSR iptt:JSR ims:.mo:JSR sl:JSR pre:LDA #&D:JSR osasci:JSR nxr:LDY #0:LDA(APtr),Y:BNE mo:JSR cursorset:JSR getinput:CPY #&D:BEQ xx:RTS:.xx:LDY #&54:JSR clearint:JSR cda:LDA cnl:SEC:SBC #65:STA z:STA tempx
  CLC:ROL A:ROL A:STA v:JSR mrz:LDA #3:STA c:JSR wtf:JMP dfs
 .ddd:CMP #69:BNE eee
 \favorate
 .tlf
 :LDX #0:LDA w:EOR #&40:STA w:BNE jy:LDX #0:.jx:INX:LDA fav,X:CMP #&80:BCC jx:INX:.jy:LDA e:EOR #8:STA e:LDY #0:.jw:LDA fav,X:STA StrA%,Y:INY:INX:CMP #&80:BCC jw:DEY:JSR esa:JSR itfs:JSR clz:LDA #4:STA z
-JSR mrz:JSR csta:JSR itm:JMP dfs
+JSR mrz:JSR copystrToArray:JSR itm:JMP dfs
 .eee:CMP #70:BNE fff
 \Search desc
-.ox:JSR gst:JMP dfs
+.ox:JSR getsearchtxt:JMP dfs
 .fff:CMP #71:BNE ggg
 \Search pub
-LDX #2:STX c:STX tempx:JSR det:JSR lpub:JSR gss:LDA fr%:BNE iy:JSR nsr:JMP dfs:.iy:LDY #&60:JSR czi:JSR wtf:LDA e:ORA #2:STA e:JMP dfs
+LDX #2:STX c:STX tempx:JSR det:JSR lpub:JSR gss:LDA fr%:BNE iy:JSR nsr:JMP dfs:.iy:LDY #&60:JSR czi:JSR lwtf:LDA e:ORA #2:STA e:JMP dfs
 .ggg:CMP #72:BNE hhh
 \Search din
 LDX #0:STX c:STX tempx:JSR det:JSR ldin:JSR gss:.debug:LDA fr%:BNE oy:JSR nsr:JMP dfs:.oy:LDY #&5C:JSR czi:JSR wtf:JSR wdn:JMP dfs
@@ -209,13 +218,20 @@ LDA e:AND #1:BEQ ooo:JSR ddc:LDY #0:.ae:LDA boot,Y:STA StrA%,Y:INY:CPY #8:BNE ae
 
 \no search results nsr
 .nsr
-{:LDX #0:STX comprec:STX e+1:LDA erradd:STA APtr:LDA erradd+1:STA APtr+1:JMP gns:}\rts
+{:LDX #0:STX comprec:STX e+1:LDA erradd:STA APtr:LDA erradd+1:STA APtr+1:JSR gns:JMP getinput:}\rts
 \apply filters afs
 .afs
-:LDA e:BNE xh:JMP BCD:.xh:LDY #Btmw%:JSR slw:JSR icd:JSR ifr:JSR tfa
+\are any filters set?
+:LDA e:BNE xh:JMP BCD:.xh
+:LDY #Btmw%:JSR slw:JSR icd:JSR ifr:JSR tfa
 .xa:INC catdat+6:JSR cce:CMP #1:BEQ xb
 \show filter results
-.pg:JSR pkt:LDY #Mainw%:JSR slw:LDA fr%:BNE oz:JSR nsr:JMP dfs:.oz:JSR idf:LDA APtr+1:STA d+1:LDA APtr:STA d:JSR gns:JMP lcr
+.pg:JSR pkt:LDY #Mainw%:JSR slw:LDA fr%:
+\do we have any records?
+BNE oz:JSR nsr:JMP dfs:.oz:
+JSR idf:LDA APtr+1:STA d+1:LDA APtr:STA d:
+JMP browseresults
+\JSR gns:JSR getinput:JSR postgns:JMP lcr
 .xb:LDA #130:JSR osasci:LDA #46:JSR osasci:JSR lcf:LDA f:STA filtA:LDA f+1:STA filtA+1:LDA e:AND #1:BEQ xc
 \Filter by diskno fbd
  .fbd:LDY #0:LDA(APtr),Y:BEQ oa:JSR ged:INY:LDA(APtr),Y:CMP x:BNE dn:INY:LDA(APtr),Y:AND #3:CMP x+1:BNE dn:JSR crd:.dn:JSR nxr:JMP fbd:.oa:JSR ssfr
@@ -238,24 +254,50 @@ JSR trc:LDY #21:.pf:LDA overflow,Y:STA(APtr),Y:DEY:BPL pf
 JMP pg
 .overflow:EQUS"..OUT OF MEMORY.":EQUB &AE:EQUB 0:EQUB 0:EQUB 0:EQUB 0:EQUB 0:EQUB 0
 .dh:RTS 
-\get search txt (description) gst
-.gst:LDX #3:STX tempx:JSR det:JSR est:CPY #2:BCC gst:.ak:LDA StrA%,Y:STA stxt%,Y:DEY:BPL ak:LDA #5:STA c:LDA e:ORA #&10:STA e:LDY StrAlen:LDA #32:STA StrA%,Y:JMP lwtf:\rts
+\getsearchtxt (description) getsearchtxt
+.getsearchtxt
+{:LDX #3:STX tempx:JSR det:JSR est:CPY #2:BCC getsearchtxt:.ak:LDA StrA%,Y:STA stxt%,Y:DEY:BPL ak:LDA #5:STA c:LDA e:ORA #&10:STA e:LDY StrAlen:LDA #32:STA StrA%,Y:JMP lwtf:}\rts
 \Browse catdat BCD
 .startexec
 .BCD:JSR him
-.bcd:INC e+1:JSR icd:JSR pht:JSR pkt:LDY #Mainw%:JSR slw:INC catdat+6:JSR cce:CMP #1:BNE dh:JSR lcf:LDA #0:STA b:JSR gns
-CMP #9:BNE ka:JMP dfs:.ka:CMP #32:BNE kb:JMP spa:.kb:CMP #&D:BEQ lcr
-.XXoe:JSR dfs:JMP bcd
+.bcd
+INC e+1:JSR icd:JSR pht:JSR pkt:LDY #Mainw%:JSR slw:INC catdat+6:JSR cce:CMP #1:BNE dh:JSR lcf:LDA #0:STA b:
+\display filter results re-entry
+.browseresults
+JSR gns
+JSR getinput
+
+{CPY #9:BNE ka:JSR dfs:.ka:CPY #32:BNE kb:JMP spa:.kb:CPY #63:BNE kc:JMP que:.kc:CPY #&D:BEQ lcr:}
+\should not be here?
+RTS
+\.XXoe:JSR dfs:JMP 
 \Launch current record lcr
 \X filename din
 \put X% dinno u%=catno
 \Need to convert catno-filename
-.lcr:JSR cda:JSR mrz:LDY #&5C:JSR clearint:LDY #&50:JSR clearint:JSR ged:INY:LDA(APtr),Y:STA x:INY:LDA(APtr),Y:AND #3:STA x+1:LDA(APtr),Y:ROR A:ROR A:AND #&1F:STA u:CLC:JSR ddc:JSR rac:LDA #88:STA StrA%:LDA #32:STA StrA%+1
+.lcr
+JSR postgns
+{:JSR cda:JSR mrz:
+\clear X%
+LDX #&5C:JSR clearint
+\clear U%
+LDX #&50:JSR clearint
+\get X% din no
+JSR getenddescription:INY:LDA(APtr),Y:STA x:
+INY:LDA(APtr),Y:AND #3:STA x+1:
+\U% cat number
+LDA(APtr),Y:ROR A:ROR A:AND #&1F:STA u
+CLC:JSR ddc:
+\read catalogue
+\ReadCat rac ret 0 OR NOT IN A
+{:LDA #&7F:LDX pramadd:LDY pramadd+1:JSR osword:LDA pramadd+10:SBC &10:}
+LDA #88:STA StrA%:LDA #32:STA StrA%+1
 LDX u:LDA #0:CLC:.oi:ADC #8:DEX:BNE oi:TAY:LDX #0:LDA cat+7,Y:STA StrA%+2:LDA #46:STA StrA%+3
 .oj:LDA cat,Y:CMP #32:BEQ rq:STA StrA%+4,X:INY:INX:CPX #7:BNEoj:LDA#32:STA StrA%+4,X:LDY #&FF
 .rq:LDY #&FF:.ok:INY:INX:LDA dinstr+3,Y:STAStrA%+4,X:CMP #13:BNE ok
 LDA #48:JSR ds
-RTS
+{:LDX #LO(StrA%):LDY #HI(StrA%):JMP oscli }\RET
+RTS:}
 \dr/din/cat ddc
 .ddc
 {:LDA #51:JSR ds:LDY #&5C:JSR ciz:JSR sdz:LDY #2:.og:LDA StrA%,Y:STA dinstr+3,Y:DEY:BPL og:JMP din:} \RET
@@ -267,43 +309,74 @@ RTS
 LDA z+1:CMP #1:BCC ir:BEQ is:BCS gnz:.is:LDA z:CMP #&FF:BCS gnz:.ir:LDY #&5C:JSR czi:LDY tempy:DEY:RTS
 \write din no wdn
 .wdn
-{:LDY #92:JSR ciz:LDY #0:JSR sdz:LDY #2:JSR esa:JSR itfs:JSR clz:LDA #1:STA z:JSR mrz:JSR csta:JSR itm:LDA e:ORA #1:STA e:RTS }
+{:LDY #92:JSR ciz:LDY #0:JSR sdz:LDY #2:JSR esa:JSR itfs:JSR clz:LDA #1:STA z:JSR mrz:JSR copystrToArray:JSR itm:LDA e:ORA #1:STA e:RTS }
 \Multiply by 10 mbt
 .mbt
 {:ASL z:ROL z+1:ASL z:ROL z+1:CLC:LDA tempx:ADC z:STA z:LDA #0:ADC z+1:STA z+1:ASL z:ROL z+1:RTS }               
 \togglefav tlf
-\Generalselcommon gsc
-.gsc
-{:JSR gns:JSR cda:JMP mrz:} \rts
+
+
 \Write to filterscreen wtf
 .wtf
-:JSR cas:.lwtf:JSR esa:JSR itfs:JSR clz:LDA c:STA z:JSR mrz:JSR csta:JMP itm:\rts
+:JSR cas:.lwtf
+{JSR esa:JSR itfs:JSR clz:LDA c:STA z:JSR mrz:JSR copystrToArray:JMP itm:}\rts
+
 .ret:RTS
-.tab:JMP dfs
 .que:LDA #79:JMP hlp
-.spa:JSR gst:LDA #&10:STA e:JMP afs
+.spa:JSR getsearchtxt:LDA #&10:STA e:JMP afs
+.mksend:RTS
+\getinput waits for a character to be pressed
+\ret on char selected or control keys (tab space ? )
+\-------------------------------------------------------------
+.getinput
+{.mks
+{.aa:LDA #&91:LDX#0:JSR osbyte:BCS aa}
+\now have key value in y
+{:CPY #63:BEQ aa:CPY #32:BEQ aa:CPY #9:BEQ aa:CPY #&D:BEQ aa:
+CPY #&8F:BEQ up:CPY #&8E:BEQ down:CPY #&8C:BEQ left:CPY #&8D:BEQ right:CPY #65:BCC mks:CPY ll:BCS getinput
+\Move cursor to letter
+TYA:TAX:JSR cursorclear:JSR itm:LDA #65:STA cnl:CPX cnl:BEQ mn:.mm:JSR cursordown:CPX cnl:BNE mm:.mn:JSR cursorset:.ab:JMP getinput
+.aa:RTS}
+
+
 \Makeselection mks ret A
 \OR cursor
-.mks
-:.gti:LDA #&91:LDX#0:JSR osbyte:BCS gti:TYA::CMP #63:BEQ que:CMP #32:BEQ spa:CMP #9:BEQ tab:CMP #&D:BEQ ret:CMP #&8F:BEQ up:CMP #&8E:BEQ down:CMP #&8C:BEQ left:CMP #&8D:BEQ right:CMP #65:BCC mks:CMP ll:BCS mks
+\.mks
+\:.gti:LDA #&91:LDX#0:JSR osbyte:BCS gti:TYA::CMP #63:BEQ mksend:CMP #32:BEQ mksend:CMP #9:BEQ mksend:CMP #&D:BEQ mksend:CMP #&8F:BEQ up:CMP #&8E:BEQ down:CMP #&8C:BEQ left:CMP #&8D:BEQ right:CMP #65:BCC mks:CMP ll:BCS mks
 \Move cursor to letter
-TAX:JSR cc:JSR itm:LDA #65:STA cnl:CPX cnl:BEQ mn:.mm:JSR cd:CPX cnl:BNE mm:.mn:JSR cs:JMP mks
+\TAX:JSR cursorclear:JSR itm:LDA #65:STA cnl:CPX cnl:BEQ mn:.mm:JSR cursordown:CPX cnl:BNE mm:.mn:JSR cursorset:JMP mks
 \down up right
-.down:LDX ll:DEX:CPX cnl:BEQ mks:JSR cd:JMP mks:
-.up:LDA cnl:CMP #65:BEQ mks:JSR cu:JMP mks:
-.right:LDY #0:LDA(APtr),Y:BEQ bb:RTS
- .left:LDA ll:SEC:SBC #65:STA a:LDA sno:SEC:SBC a:STA a:LDA sno+1:SBC #0:STA a+1:LDX #0:.chiz:LDA a,X:CLC:ADC a+1,X:ADC a+2,X:ADC a+3,X:BEQ be::LDA a:SEC:SBC #mm%:STA z:LDA a+1:SBC #0:STA z+1:JSR cda:JSR mrz:RTS
-.be:LDA e+1:BEQ bf:DEC catdat+6:JSR cce:CMP #1:BNE bg:JSR lcf:JSR trc:LDAsno:SEC:SBC #mm%:STA z:LDA sno+1:SBC #0:STA z+1:JSR cda:JSR mrz:RTS
-.bg:INC catdat+6:.bf:JMP mks:.bb:LDA e+1:BNE bc:JMP mks:.bc:INC catdat+6:JSR cce:CMP #1:BNE bd:JSR lcf:JMP gsc:.bd:DEC catdat+6:JMP mks
-\cursor set clear down up
-.cs:
- {LDY #0:LDA #Cnsel%+1:STA(curadd),Y:RTS:}
-.cc:
+.down
+LDX ll:DEX:CPX cnl:BEQ mks:JSR cursordown:JMP mks:
+.up
+LDA cnl:CMP #65:BEQ mks:JSR cursorup:JMP mks:
+.right
+LDY #0:LDA(APtr),Y:BEQ bb:JSR gns:JMP mks
+.left
+LDA ll:SEC:SBC #65:STA a:LDA sno:SEC:SBC a:STA a:LDA sno+1:SBC #0:STA a+1:LDX #0:.chiz:LDA a,X:CLC:ADC a+1,X:ADC a+2,X:ADC a+3,X:BEQ be::LDA a:SEC:SBC #mm%:STA z:LDA a+1:SBC #0:STA z+1:JSR cda:JSR mrz:JSR gns:JMP mks
+\are at start of record file
+.be:LDA e+1:BEQ bf
+\e+1 = flag for BCD mode
+\does previous file exist?
+:DEC catdat+6:JSR cce:CMP #1:BNE bg
+JSR lcf:JSR trc:LDA sno:SEC:SBC #mm%:STA z:LDA sno+1:SBC #0:STA z+1:JSR cda:JSR mrz:\RTS
+JMP mks
+\previous file does not exist
+.bg:INC catdat+6:.bf:JMP mks:
+.bb:LDA e+1:BNE bc:JMP mks:
+.bc:INC catdat+6:JSR cce:CMP #1:BNE bd:JSR lcf:JMP gsc:
+.bd:DEC catdat+6:JMP mks
+\cursor routines
+
+.cursorclear:
 {LDY #0:LDA #Cnsel%:STA(curadd),Y:RTS:}
-.cd:
- { INC cnl:JSR cc:CLC:LDA #&28:ADCcuradd:STA curadd:LDA #0:ADC curadd+1:STA curadd+1:JMP cs:}\rts
-.cu
-{:DEC cnl:JSR cc:SEC:LDA curadd:SBC #&28:STA curadd:LDA curadd+1:SBC #0:STA curadd+1:JMP cs:}\rts
+.cursordown:
+ { INC cnl:JSR cursorclear:CLC:LDA #&28:ADCcuradd:STA curadd:LDA #0:ADC curadd+1:STA curadd+1:JMP cursorset:}\rts
+.cursorup
+{:DEC cnl:JSR cursorclear:SEC:LDA curadd:SBC #&28:STA curadd:LDA curadd+1:SBC #0:STA curadd+1:JMP cursorset:}\rts
+}
+.cursorset:
+ {LDY #0:LDA #Cnsel%+1:STA(curadd),Y:RTS:}
 \startline sl
 .sl
 {:LDA #Csel%:JSR osasci:LDA #Cnsel%:JSR osasci:LDA #Clet%:JSR osasci:LDA ll:JSR osasci:INC ll:LDA #131:JMP osasci:}\rts
@@ -314,7 +387,7 @@ TAX:JSR cc:JSR itm:LDA #65:STA cnl:CPX cnl:BEQ mn:.mm:JSR cd:CPX cnl:BNE mm:.mn:
 .pht
 {:LDY #Topw%:JSR slw:LDY #&FF:.bj:INY:LDA helptxt,Y:BEQ bk:JSR osasci:BNE bj:.bk:RTS }
  \printselection ps
-.ps
+.printselection
 {:LDY tempy:.mf:LDA FS%,Y:CMP #&80:BCS mg:JSR osasci:INY:BNE mf:.mg:AND #&7F:JSR osasci:LDA #&D:JSR osasci:INY:STY tempy:RTS }
 \printentry pre
 .pre
@@ -340,20 +413,37 @@ LDA #fl% DIV 256:STA Apub+1:LDA #fl% MOD 256:STA Apub:.on:LDA z+1:BEQ op:DEC z+1
 .esa
 {:CPY #14:BCS mh:LDA StrA%,Y:AND #&7F:STA StrA%,Y:LDA #32:.mw:INY:STA StrA%,Y:CPY #14:BNE mw:.mr:ORA #&80:STA StrA%,Y:RTS 
 .mh:LDY #14:LDA StrA%,Y:BNE mr }
+\Generalselcommon gsc
+.gsc
+{:JSR gns:
+JSR getinput
+CPY #&D:BEQ aa:RTS:.aa
+JSR postgns
+JSR cda:JMP mrz:} \rts
 \general selection gns
+.generalselection 
 .gns
-{:JSR sco:JSR ims:LDY #0:LDA(APtr),Y:BEQ mz:JSR itm:JMP fc:.my:LDA #&D:JSR osasci:.fc:JSR sl:JSR pre:JSR nxr:LDY#0:LDA(APtr),Y:BEQ mz:LDA ll:CMP #maxmnu%:BNE my:.mz:JSR cs:JSR mks:CMP #&D:BNE gns
-LDA ll:SEC:SBC cnl:STA tempx:LDA sno:SEC:SBC tempx:STA sno:LDA sno+1:SBC #0:STA sno+1:JSR ssn:LDA sno+1:LDX b:STA a+1,X:LDA sno:STA a,X:LDA #&D:.xv:RTS }
-\CopystrToArry csta
-.csta
+{:JSR sco:JSR ims:LDY #0:LDA(APtr),Y:BEQ mz:JSR itm:JMP fc:.my:LDA #&D:JSR osasci:.fc:JSR sl:JSR pre:JSR nxr:LDY#0:LDA(APtr),Y:BEQ mz:LDA ll:CMP #maxmnu%:BNE my:.mz:JSR cursorset:RTS :}\JSR mks:RTS :\CMP #&D:BNE gns}
+
+.postgns
+\get count back
+{:LDA ll:SEC:SBC cnl:
+\apply count back
+STA tempx:LDA sno:SEC:SBC tempx:STA sno:LDA sno+1:SBC #0:STA sno+1
+\select search no into Z
+:JSR ssn
+:LDA sno+1:LDX b:STA a+1,X:LDA sno:STA a,X:
+LDA #&D:.xv:RTS: }
+\CopystrToArray copystrToArray
+.copystrToArray
 {:LDY #&FF:.mx:INY:LDA StrA%,Y:STA(APtr),Y:CMP #&80:BCC mx:RTS }
 \Init section
-\Init rec count irc
-.irc
+\initreccount initreccount
+.initreccount
 {:LDA #0:STA sno:STA sno+1:RTS }
 \Init Filter string itfs
 .itfs
-{:LDA #FS% DIV 256:STA APtr+1:LDA #FS% MOD 256:STA APtr:JMP irc:}\rts
+{:LDA #FS% DIV 256:STA APtr+1:LDA #FS% MOD 256:STA APtr:JMP initreccount:}\rts
 \Initmenuscreen ims
 .ims
 {:LDY #Mainw%:JSR slw:LDA #65:STA cnl:STA ll:JMP itm:}\rts
@@ -374,30 +464,30 @@ LDA ll:SEC:SBC cnl:STA tempx:LDA sno:SEC:SBC tempx:STA sno:LDA sno+1:SBC #0:STA 
 \Initprog type text iptt
 .iptt
 {:LDA #prtt DIV 256:STA APtr+1
-STA APtr+1:LDA #prtt MOD 256:STA APtr:JSR cad:JMPirc:}\rts
+STA APtr+1:LDA #prtt MOD 256:STA APtr:JSR cad:JMPinitreccount:}\rts
 \HardInitmenu him
 .him:JSR lpub:.caz:LDY #atozlen%:LDA#0:.zy:STA atozStart%,Y:DEY:BPL zy
 LDA #selectiontext DIV 256:STA APtr+1:LDA #selectiontext MOD 256:STA APtr:LDX#0:STX comprec:.ms:LDY #0:LDA(APtr),Y:BEQ itm:JSR cas:JSR esa:LDY #0:.mu:LDA StrA%,Y:STA FS%,X:CMP #&80:bCS mv:INY:INX:BNE mu:.mv:JSR nxr:INX:CLC:BCC ms
-\Initmenu itm   
+\Initmenu itm  
 .itm
 {:LDA #cinit% DIV 256:STA curadd+1:LDA #cinit% MOD 256:STA curadd:RTS }
 \InitdisplayFilterResults idf
 .idf
-{:LDA# fr% DIV 256:STA APtr+1:LDA #fr% MOD 256:STA APtr:JMP irc:}\rts
+{:LDA# fr% DIV 256:STA APtr+1:LDA #fr% MOD 256:STA APtr:JMP initreccount:}\rts
 \InitFilterResults ifr
 .ifr
 {:LDA #fr% DIV 256:STA filtA+1:LDA #fr% MOD 256:STA filtA:RTS }
 \Initfilterptr ifp
 .ifp
-{:LDA #filttxt% DIV 256:STA APtr+1:LDA #filttxt% MOD 256:STA APtr:JMP irc:}\rts
+{:LDA #filttxt% DIV 256:STA APtr+1:LDA #filttxt% MOD 256:STA APtr:JMP initreccount:}\rts
 \InitFileSoftrecArrayPtr ifsp
-.ifsp:LDA #fl% DIV 256:STA APtr+1:LDA #fl% MOD 256:STA APtr:JSR cad:JMP irc:\"ƒrts
+.ifsp:LDA #fl% DIV 256:STA APtr+1:LDA #fl% MOD 256:STA APtr:JSR cad:JMP initreccount:\"ƒrts
 \InitFilecatdatArrayPtr ifcp
 .ifcp
-{:LDA #cl% DIV 256:STA APtr+1:LDA #cl% MOD 256:STA APtr:JSR cad:JMP irc:}\rts
+{:LDA #cl% DIV 256:STA APtr+1:LDA #cl% MOD 256:STA APtr:JSR cad:JMP initreccount:}\rts
 \Copy d TO Aptr cda
 .cda
-{:LDA d:STA APtr:LDA d+1:STA APtr+1:JMP irc:}\rts
+{:LDA d:STA APtr:LDA d+1:STA APtr+1:JMP initreccount:}\rts
 \Data
 .pramadd:EQUW pram:.pram:EQUB Dr%:EQUD cat:EQUB 3:EQUB &53:EQUB 0:EQUB 0:EQUB &22:EQUB 0:.catadd:EQUW cat:.search:.cat:
 .erradd:EQUW err:.err:EQUS"NO RECORD":EQUB &D3:EQUB 0
@@ -416,7 +506,7 @@ EQUS"SEARCH PUBLISHE":EQUB &D2:EQUS"SEARCH DISK NAM":EQUB &C5:EQUS"DISPLAY RESUL
 EQUS"LAUNCH DIS":EQUB &CB:EQUS"DISPLAY GAME HEL":EQUB &D0:EQUS"DISPLAY MENU HEL":EQUB &D0:EQUB 0
 .helptxt:EQUB 22:EQUB 7:EQUB 141:EQUB 135:EQUB 157:EQUB 132:EQUS "     MMC MENU DISPLAY V0.9":EQUB 13:EQUB 141:EQUB 135:EQUB 157:EQUB 132:EQUS "     MMC MENU DISPLAY V0.9":EQUB 13:EQUB 133:EQUS"Search":EQUB 130:EQUS"SPACE":EQUB 133:EQUS "Advanced":EQUB 130:EQUS"TAB":EQUB 0
 \"„ACGSMPUZ"
-.keytxt:EQUB 13:EQUB 135: EQUS"A":EQUB 131:EQUS"dvent":EQUB 135:EQUS"C" :EQUB 131:EQUS"heat":EQUB 135:EQUS"G":EQUB 131:EQUS "ame":EQUB 135:EQUS"S":EQUB 131:EQUS "trat":EQUB 135:EQUS "U":EQUB 131:EQUS"til":EQUB 135:EQUS "P":EQUB 131:EQUS"ic":EQUB 135:EQUS "Z":EQUB 131:EQUS"unknown":EQUB 133:EQUS "2":EQUB 131:EQUS "playr":EQUB 133:EQUS "p":EQUB 131:EQUS "ass":EQUB 133:EQUS "j":EQUB 131: EQUS"oys":EQUB 133:EQUS"e":EQUB 131:EQUS "lectron ":EQUB 133:EQUS "l":EQUB 131:EQUS "evel":EQUB 133:EQUS "X":EQUB 131:EQUS "tra  life":EQUB 133:EQUS"s":EQUB 131:EQUS"peed":EQUB 133:EQUS"i":EQUB 131:EQUS"nvulnerable"
+.keytxt:EQUB 13:EQUB 135: EQUS"A":EQUB 131:EQUS"dvent":EQUB 135:EQUS"C" :EQUB 131:EQUS"heat":EQUB 135:EQUS"G":EQUB 131:EQUS "ame":EQUB 135:EQUS"S":EQUB 131:EQUS "trat":EQUB 135:EQUS "U":EQUB 131:EQUS"til":EQUB 135:EQUS "P":EQUB 131:EQUS"ic":EQUB 135:EQUS "Z":EQUB 131:EQUS"unknown":EQUB 133:EQUS "2":EQUB 131:EQUS "playr":EQUB 133:EQUS "p":EQUB 131:EQUS "ass":EQUB 133:EQUS "j":EQUB 131: EQUS"oys":EQUB 133:EQUS"e":EQUB 131:EQUS "lectron ":EQUB 133:EQUS "l":EQUB 131:EQUS "evel":EQUB 133:EQUS "X":EQUB 131:EQUS "tra life":EQUB 133:EQUS"s":EQUB 131:EQUS"peed":EQUB 133:EQUS"i":EQUB 131:EQUS"nvulnerable"
  EQUB 0
 .prtt
 EQUS"TEXT ADVENTUR":EQUB &C5:EQUS"CHEAT":EQUB &D3:EQUS"GAM":EQUB &C5:EQUS"STRATEG":EQUB &D9:
@@ -427,6 +517,7 @@ EQUS"UNKOW":EQUB &CE:EQUB 0
 
 SAVE "mnudisp", start, end,startexec
 
-\cd d:\bbc/beebasm
+\\cd d:\bbc/beebasm
 \cd D:\GitHub\beebyams\beebasm
 \beebasm -i mnudisp.asm -do mnudisp.ssd -boot x -v -title TIME$
+\\

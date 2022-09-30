@@ -58,7 +58,7 @@ TYA:LDA #0
 \basic =0 indicates not basic
 STA loadadd
 STA filesize:STA basic:TAX:LDA (blockstart),Y:CMP #&D:BNE aa
-LDX #1:JSR diserror:LDX #4:JSR diserror:LDX #5:JMP diserror:\JMP so end
+LDX #1:JSR diserror:LDX #4:JSR diserror:LDX #5:JSR diserror:LDX #6:JMP diserror:\JMP so end
 
 .aa:CMP #&D:BEQ cmdend:INY:LDA (blockstart),Y:CMP #32:BNE aa:INX:BNE aa
 .cmdend:CPX #2:BNE ab:STX tempx:DEY:STY tempy
@@ -146,20 +146,31 @@ EQUS"Special exe add not code",&E4
 \ 4 extended help 
 EQUS"L% for load 0=do not change":EQUB &D
 EQUS"E% for exe 0=do not change":EQUB &D
- EQUS"Basic progs need exe 8023":EQUB &D
- EQUS"Basic progs need load add set to run pa":EQUB &D
- EQUS"ROM load should be 8000":EQUB &D
- EQUS"LDPIC on disk DATA has exe 7FFE":EQUB &D
- EQUS"SHOWPIC DATA has exe 7FFD":EQUB &D
- EQUS"Files to be *TYPE exe 7FFC":EQUB &8D
+EQUS"8000 load ROM":EQUB &D
+EQUS"Basic load add set to run pa":EQUB &D
+EQUS"8023 Basic":EQUB &D
+EQUS"7FFE LDPIC":EQUB &D
+EQUS"7FFD SHOWPIC not implemented":EQUB &D
+EQUS"7FFC *TYPE":EQUB &8D
 
 
 \#5 EXTENDED HELP CONT
-EQUS"Files to be *DUMP exe 7FFB":EQUB &D
-EQUS"Files to be *EXEC exe 7FFA":EQUB&D
-EQUS"TYB music samples to be exe 7FF9":EQUB &D
-EQUS"Version 0.9"
-EQUD&8D
+EQUS"7FFB *DUMP":EQUB &D
+EQUS"7FFA *EXEC":EQUB&D
+EQUS"7FF9 TYB music samples":EQUB &D
+EQUS"7FF8 0000 DEC compressed picture":EQUB &D
+EQUS"7FF7 0000 viewsheet":EQUB &D
+EQUS"7F07 7C00 mode 7 Screen":EQUB &D
+EQUS"7F06 6000 mode 6 Screen":EQUB &D
+EQUS"7F05 5800 mode 5 Screen":EQUB &D
+EQUS"7F04 5800 mode 4 Screen":EQUB &8D
+\#6 EXTENDED HELP CONT
+EQUS"7F03 4000 mode 3 Screen":EQUB &D
+EQUS"7F02 3000 mode 2 Screen":EQUB &D
+EQUS"7F01 3000 mode 1 Screen":EQUB &D
+EQUS"7F00 3000 mode 0 Screen":EQUB &D
+EQUS"Version 1.0"
+EQUB&8D
 
 .end
 

@@ -69,6 +69,14 @@ GUARD &7C00
 .magicdata
 \entrytype,Offset, nobytes,exec,load ident
 \entry type 2= normal offset 1=indirect offset
+\Entry type 1
+\1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
+\Entry type 2
+\2,Offset, nobytes,exec,load ident
+\Entry type 3 
+\3,loadadd,exec,load,ident
+\Entry type 4
+\4,byte with highest count,no of count (or higher),exec,load,ident
 EQUS 2,0,1,&10,&80,&FE,&7F,0,0,"Ldpic",13
 EQUS 2,0,1,&60,&40,&FE,&7F,0,0,"Ldpic",13
 EQUS 2,0,1,&10,0,&FE,&7F,0,0,"Ldpic",13
@@ -76,30 +84,36 @@ EQUS 1,4,7,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
 EQUS 2,0,1,&0D,00,&23,&80,0,0,"Basic",13
 EQUS 2,1,1,&30,&90,&F8,&7F,0,0,"Dec",13
 EQUS 1,7,3,0,&28,&43,&29,0,0,0,&80,"Rom",13
+EQUS 3,&E0,&31,&F6,&7F,0,0,"Repton 3 screen",13
+EQUS 4,&23,&80,&23,&80,0,0,"Basic",13
+EQUS 4,&1F,&80,&23,&80,0,0,"Basic",13
+EQUS 5,32,1,&FC,&7F,0,0,"text/word",13
+EQUS 5,&2E,10,&F7,&7F,0,0,"viewsheet",13
+
 EQUS 0
 
 .countable
 \byte,no,exec,load,ident
 \NOTE IF byte =0 then code will not work!
-EQUS 32,1,&FC,&7F,0,0,"text/word",13
-EQUS &2E,10,&F7,&7F,0,0,"viewsheet",13
-EQUS 0
+\EQUS 32,1,&FC,&7F,0,0,"text/word",13
+\EQUS &2E,10,&F7,&7F,0,0,"viewsheet",13
+\EQUS 0
 
 .strcheck
 \nobytes,offset,string,exec,load ident
-EQUS 7,4,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
-EQUS 0
+\EQUS 7,4,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
+\EQUS 0
 
 .loadcheck
 \loadadd,exec,load,ident
-EQUS &E0,&31,&F6,&7F,0,0,"Repton 3 screen",13
-EQUS 0
+\EQUS &E0,&31,&F6,&7F,0,0,"Repton 3 screen",13
+\EQUS 0
 
 .execheck
 \exe,exec,load,ident
-EQUS &23,&80,&23,&80,0,0,"Basic",13
-EQUS &1F,&80,&23,&80,0,0,"Basic",13
-EQUS 0
+\EQUS &23,&80,&23,&80,0,0,"Basic",13
+\EQUS &1F,&80,&23,&80,0,0,"Basic",13
+\EQUS 0
 
 \end magic tables
 
@@ -114,7 +128,7 @@ TYA:LDA #0
 \basic =0 indicates not basic
 STA loadadd
 STA filesize:STA basic:TAX:LDA(blockstart),Y:CMP #&D:BNE aa
-LDX #1:JSR diserror:LDX #4:JMP diserror:\JMP so end
+LDX #1:JSR diserror:LDX #5:JMP diserror:\JMP so end
 .aa:CMP #&D:BEQ cmdend:INY:LDA(blockstart),Y:CMP #32:BNE aa:INX:BNE aa
 .cmdend:CPX #2:BNE ab:STX tempx:DEY:STY tempy
 \"…"Have drive param
@@ -144,7 +158,7 @@ LDX #blockstart:LDY #0:LDA #5:JSR osfile:CMP #1:BEQ al:LDX #2:JMP diserror:.al
 \LDA exe:STA e:LDA exe+1:STA e+1
 \check to see if exe is in the 7CXX range
 LDA exe+1:CMP #&7F:BNE magic:
-LDX #5:JSR diserror
+LDX #4:JSR diserror
 RTS
 
 \this is where the magic happens uses the tables:-
@@ -206,11 +220,39 @@ RTS
 {
 LDA #LO(magicdata):STA Aptr
 LDA #HI(magicdata):STA Aptr+1
-
-\entrytype,Offset, nobytes,values,filetype ident
+\first byte is ident so construct case statement
 .ff:
 LDY#0:LDA(Aptr),Y:BNE ab:RTS:
 .ab:
+CMP #5:BNE aj
+INY
+LDA(Aptr),Y:CMP y:BNE ag
+:INY:LDA(Aptr),Y:CMP x
+
+BCC ag
+INY:JMP fullmatch:\RTS
+
+
+.aj
+CMP #4:BNE ah
+INY:LDA(Aptr),Y:
+CMP exe:BNE ag
+INY:LDA(Aptr),Y
+CMP exe+1:BNE ag
+INY:JSR fullmatch:JMP ff
+.exit:RTS
+.nxtrec:LDY #7:
+JSR nextrec:JMP ff
+.ah
+CMP #3:BNE ad:
+INY:LDA(Aptr),Y
+CMP load:BEQ ae
+.ag
+LDY #7:JSR nextrec:JMP ff
+.ae
+INY:LDA(Aptr),Y:CMP load+1:BNE ag
+JSR fullmatch:JMP ff
+.ad
 CMP #2:BNE aa:
 \no offset
 INY:LDA #0:BEQ ac
@@ -272,36 +314,36 @@ INY:JMP fullmatch:\RTS
 \check for specific load address (currently only repton 3)
 .loadaddresscheck
 {
-LDA #LO(loadcheck):STA Aptr
-LDA #HI(loadcheck):STA Aptr+1
-.ff:
-LDY#0:LDA(Aptr),Y:BEQ exit
-CMP load:BNE nxtrec
-INY:LDA(Aptr),Y:CMP load+1:BNE nxtrec
-JMP fullmatch \RTS
-
-.exit:RTS
-
-.nxtrec:LDY #4:
-JSR nextrec:JMP ff
+RTS:\debug
+\LDA #LO(loadcheck):STA Aptr
+\LDA #HI(loadcheck):STA Aptr+1
+\.ff:
+\LDY#0:LDA(Aptr),Y:BEQ exit
+\CMP load:BNE nxtrec
+\INY:LDA(Aptr),Y:CMP load+1:BNE nxtrec
+\JMP fullmatch \RTS
+\.exit:RTS
+\.nxtrec:LDY #4:
+\JSR nextrec:JMP ff
 }
 
 .exeaddresscheck
 {
-LDA #LO(execheck):STA Aptr
-LDA #HI(execheck):STA Aptr+1
-.ff:
-LDY#0:LDA(Aptr),Y:BEQ exit
-CMP exe:BNE nxtrec
-INY:LDA(Aptr),Y:CMP exe+1:BNE nxtrec
-INY:JMP fullmatch \RTS
-.exit:RTS
-.nxtrec:LDY #4:
-JSR nextrec:JMP ff
+RTS
+\LDA #LO(execheck):STA Aptr
+\LDA #HI(execheck):STA Aptr+1
+\.ff:
+\LDY#0:LDA(Aptr),Y:BEQ exit
+\CMP exe:BNE nxtrec
+\INY:LDA(Aptr),Y:CMP exe+1:BNE nxtrec
+\INY:JMP fullmatch \RTS
+\.exit:RTS
+\.nxtrec:LDY #4:
+\JSR nextrec:JMP ff
 }
 \nextrec moves Aptr to chr after next &D
 \common to all tables
-\expects y to be loaded with start of discription
+\expects y to be loaded with start of description
 .nextrec
 {
 .aa
@@ -310,21 +352,7 @@ INY:TYA
 CLC:ADC Aptr:STA Aptr:LDA #0:ADC Aptr+1:STA Aptr+1
 RTS
 }
-\print description
-\common to all tables
-\expects y to be loaded with start of discription
-\.printdescription
-\{
-\.aa
-\LDA(Aptr),Y:
-\JSR osasci:INY:CMP #13:BNE aa 
-\RTS
-\}
 
-\Prepcmd
-\takes x as c
-\mdno ret x ptr to
-\strA%
 .prepcmd
 {
 :LDY #0:.ez:DEX:BNE nexcmd:.ey:LDA cmdadd,Y:CMP #&80:BCC am:AND #&7F
@@ -337,26 +365,7 @@ STA strA%,X:INX:RTS
 {
 :LDY #strA% DIV 256:LDX #strA% MOD 256:JMP oscli
 }
-\checks for byte patterns and alters L or E as appropriate
-\no longer required as rolled into magic!
-.relocationcheck
-\{
-\LDA e:CMP #&23:BNE aa
-\LDA e+1:CMP #&80:BNE aa
-\LDA #LO(strcheck):STA Aptr
-\LDA #HI(strcheck):STA Aptr+1
 
-\.ad:LDY #0:
-\LDA(Aptr),Y:BEQ aa:STA matchlen
-\INY:LDA(Aptr),Y:TAX:DEX
-\.af
-\INY:INX:LDA(Aptr),Y:
-\.ac:CMP rawdat,X:BEQ ab:LDY #0:LDA(Aptr),Y:TAY:INY:JSR nextrec:JMP ad:RTS
-\.ab:DEC matchlen:
-\BPL af:INY:JMP fullmatch:\RTS
-\.ae:INY:INX:LDA(Aptr),Y:CMP rawdat,X:BNE ad:BEQ af
-\.aa:RTS
-\}
 
 .diserror
 {
@@ -483,7 +492,9 @@ EQUS"Usage <fsp> (<dno>/<dsp>) (<drv>)":EQUB &8D
 EQUS"file not foun",&E4
 \ 3 exe address invalid
 EQUS"Special exe add not code",&E4
-\ 4 extended help 
+\ 4 magic set
+EQUS"Magic already set",&8D
+\ 5 extended help 
 EQUS"outputs":EQUB &D
 EQUS"L% for load 0=do not change":EQUB &D
 EQUS"E% for exe 0=do not change":EQUB &D
@@ -509,8 +520,7 @@ EQUS"7F02 3000 mode 2 Screen":EQUB &D
 EQUS"7F01 3000 mode 1 Screen":EQUB &D
 EQUS"7F00 3000 mode 0 Screen":EQUB &D
 EQUD&8D
-\ 5 magic set
-EQUS"Magic already set",&8D
+
 .end
 
 

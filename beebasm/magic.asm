@@ -72,9 +72,10 @@ GUARD &7C00
 EQUS 2,0,1,&10,&80,&FE,&7F,0,0,"Ldpic",13
 EQUS 2,0,1,&60,&40,&FE,&7F,0,0,"Ldpic",13
 EQUS 2,0,1,&10,0,&FE,&7F,0,0,"Ldpic",13
+EQUS 1,4,7,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
 EQUS 2,0,1,&0D,00,&23,&80,0,0,"Basic",13
 EQUS 2,1,1,&30,&90,&F8,&7F,0,0,"Dec",13
-EQUS 1,7,3,0,&28,&43,&29,0,0,00,&80,"Rom",13
+EQUS 1,7,3,0,&28,&43,&29,0,0,0,&80,"Rom",13
 EQUS 0
 
 .countable
@@ -132,18 +133,18 @@ LDA #&D:STA strA%,X
 JSR execmd
 .ac
 \clear E%,L%:S%
-LDX #('E'-'A'):JSR clearint
-LDX #('L'-'A'):JSR clearint
-LDX #('S'-'A'):JSR clearint
+LDX #(('E'-'A')*4):JSR clearint
+LDX #(('L'-'A')*4):JSR clearint
+LDX #(('S'-'A')*4):JSR clearint
 \"Process filename
 \now have blockstart with filename does file exist
 
 LDX #blockstart:LDY #0:LDA #5:JSR osfile:CMP #1:BEQ al:LDX #2:JMP diserror:.al
-LDA load:STA l: LDA load+1:STA l+1:LDA size:STA s:LDA size+1:STA s+1
-LDA exe:STA e:LDA exe+1:STA e+1
+\LDA load:STA l: LDA load+1:STA l+1:LDA size:STA s:LDA size+1:STA s+1
+\LDA exe:STA e:LDA exe+1:STA e+1
 \check to see if exe is in the 7CXX range
 LDA exe+1:CMP #&7F:BNE magic:
-
+LDX #5:JSR diserror
 RTS
 
 \this is where the magic happens uses the tables:-
@@ -175,8 +176,9 @@ JSR magicfile
 
 \nobytes,exec,load ident
 JSR statistic
+\relocationcheck not needed!
 \nobytes,exec,load ident
-JSR relocationcheck
+\JSR relocationcheck
 
 \hardcoded
 JSR screencheck
@@ -223,7 +225,8 @@ INY:LDA(Aptr),Y:STA matchlen:
 INX
 DEC matchlen:BPL fh
 INY
-JMP fullmatch: \RTS
+JSR fullmatch:
+JMP ff
 \LDA e:CMP #&23:BNE fj:LDA e+1:CMP #&80:BNE fj:
 \JSR relocationcheck
 .fj
@@ -291,7 +294,7 @@ LDA #HI(execheck):STA Aptr+1
 LDY#0:LDA(Aptr),Y:BEQ exit
 CMP exe:BNE nxtrec
 INY:LDA(Aptr),Y:CMP exe+1:BNE nxtrec
-JMP fullmatch \RTS
+INY:JMP fullmatch \RTS
 .exit:RTS
 .nxtrec:LDY #4:
 JSR nextrec:JMP ff
@@ -310,18 +313,16 @@ RTS
 \print description
 \common to all tables
 \expects y to be loaded with start of discription
-.printdescription
-{
-.aa
-LDA(Aptr),Y:
-JSR osasci:INY:CMP #13:BNE aa 
-RTS
-}
+\.printdescription
+\{
+\.aa
+\LDA(Aptr),Y:
+\JSR osasci:INY:CMP #13:BNE aa 
+\RTS
+\}
 
 \Prepcmd
 \takes x as c
-
-
 \mdno ret x ptr to
 \strA%
 .prepcmd
@@ -337,24 +338,25 @@ STA strA%,X:INX:RTS
 :LDY #strA% DIV 256:LDX #strA% MOD 256:JMP oscli
 }
 \checks for byte patterns and alters L or E as appropriate
+\no longer required as rolled into magic!
 .relocationcheck
-{
-LDA e:CMP #&23:BNE aa
-LDA e+1:CMP #&80:BNE aa
-LDA #LO(strcheck):STA Aptr
-LDA #HI(strcheck):STA Aptr+1
+\{
+\LDA e:CMP #&23:BNE aa
+\LDA e+1:CMP #&80:BNE aa
+\LDA #LO(strcheck):STA Aptr
+\LDA #HI(strcheck):STA Aptr+1
 
-.ad:LDY #0:
-LDA(Aptr),Y:BEQ aa:STA matchlen
-INY:LDA(Aptr),Y:TAX:DEX
-.af
-INY:INX:LDA(Aptr),Y:
-.ac:CMP rawdat,X:BEQ ab:LDY #0:LDA(Aptr),Y:TAY:INY:JSR nextrec:JMP ad:RTS
-.ab:DEC matchlen:
-BPL af:INY:JMP fullmatch:\RTS
-.ae:INY:INX:LDA(Aptr),Y:CMP rawdat,X:BNE ad:BEQ af
-.aa:RTS
-}
+\.ad:LDY #0:
+\LDA(Aptr),Y:BEQ aa:STA matchlen
+\INY:LDA(Aptr),Y:TAX:DEX
+\.af
+\INY:INX:LDA(Aptr),Y:
+\.ac:CMP rawdat,X:BEQ ab:LDY #0:LDA(Aptr),Y:TAY:INY:JSR nextrec:JMP ad:RTS
+\.ab:DEC matchlen:
+\BPL af:INY:JMP fullmatch:\RTS
+\.ae:INY:INX:LDA(Aptr),Y:CMP rawdat,X:BNE ad:BEQ af
+\.aa:RTS
+\}
 
 .diserror
 {
@@ -366,18 +368,58 @@ inc erradd+1:BNE bc
 .bb:LDA(erradd),Y:INY:CMP #&80:BCC bb:CLC:TYA:ADC erradd:STA erradd:LDA #0
 ADC erradd+1:STA erradd+1:LDY #0:BEQ ba
 }
-
+\tables are all consistant at the end namely
+\exec,load,ident
+\need to ensure that deal with dissagreements
+\if E%=0 overwrite same of L%
+\report confict and clear E% and L%
 .fullmatch
 {
-
-LDA(Aptr),Y:STA e
-INY:LDA(Aptr),Y:STA e+1
-INY:LDA(Aptr),Y:STA l:
-INY:LDA(Aptr),Y:STA l+1
-\.fi
+CLC:LDA e:ADC e+1:BEQ bc
+CLC:LDA(Aptr),Y:INY:ADC(Aptr),Y:BEQ bd
+DEY
+LDA(Aptr),Y:CMP e:BNE abort
 INY
-JSR printdescription:RTS
+LDA(Aptr),Y:CMP e+1:BNE abort
+BEQ bd
+.bc:\e is 0 need to write out
+LDA(Aptr),Y:STA e
+INY
+LDA(Aptr),Y:STA e+1
+.bd
 
+INY
+CLC:LDA l:ADC l+1:BEQ bf
+CLC:LDA(Aptr),Y:INY:ADC(Aptr),Y:BEQ bg
+DEY
+LDA(Aptr),Y:CMP l:BNE abort
+.aa
+INY
+LDA(Aptr),Y:CMP l+1:BNE abort
+BEQ bg
+.bf:\l is 0 need to write out
+LDA(Aptr),Y:STA l
+INY
+LDA(Aptr),Y:STA l+1
+.bg
+
+
+INY
+.printdescription
+{
+.aa
+LDA(Aptr),Y:
+JSR osasci:INY:CMP #13:BNE aa
+TYA:CLC:ADC Aptr:STA Aptr:
+LDA #0:ADC Aptr+1:STA Aptr+1
+RTS
+}
+.abort
+\clear E%,L%
+LDX #(('E'-'A')*4):JSR clearint
+LDX #(('L'-'A')*4):JSR clearint
+BRK
+EQUS 0,"Conflict detected",&D ,0
 }
 \checks for full screen load
 
@@ -409,11 +451,6 @@ LDA s+1:CMP #&50:BNE exit
 LDA #0:JMP setexe
 .exit: RTS
 }
-
-
-
-
-
 
 \Clearint cli offset from a in X
 .clearint
@@ -472,7 +509,8 @@ EQUS"7F02 3000 mode 2 Screen":EQUB &D
 EQUS"7F01 3000 mode 1 Screen":EQUB &D
 EQUS"7F00 3000 mode 0 Screen":EQUB &D
 EQUD&8D
-
+\ 5 magic set
+EQUS"Magic already set",&8D
 .end
 
 

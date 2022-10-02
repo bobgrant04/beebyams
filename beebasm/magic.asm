@@ -1,13 +1,13 @@
 
 \MAGIC used to inteligently guess exe and or load address
 \Usage <fsp> (<dno>/<dsp>) (<drv>)
-\if exe is in the range 7F00 then exe will not be analysied as firm indication of file given E% will return current value
+\if exe is in the range 7F00 then exe will not be analysied as firm indication of file given 
 \load address will change for rom to &8000
 \will Guess screen load mode from load address and size
 \load address will be altered for BASIC progs with <>&E00
 \normal *drive command and *din command will be issued (default to drive 3)
 \file information will be gathered 
-\Outputs E% execution L% load address S% size 
+\Outputs E% execution L% load address  
 
 \…Variables
 NoSpecials%=1:\"offset from 1
@@ -26,9 +26,10 @@ erradd=&34
 filesize=&3B
 tempx=&3D
 switch=&3E
-basic=&3F
-tempy=&40
+highestbyte=&3F
+noofbytes=&40
 matchlen=&41
+tempy =&42
 
 \&70 to &8F reserved for 
 blockstart=&70:load=blockstart+2:exe=blockstart+6:size=blockstart+&A
@@ -76,46 +77,31 @@ GUARD &7C00
 \Entry type 3 
 \3,loadadd,exec,load,ident
 \Entry type 4
-\4,byte with highest count,no of count (or higher),exec,load,ident
+\4,exec,exec,load,ident
+\Entry 5
+\5 byte with highest count,no of count (or higher),exec,load,ident
+
+EQUS 1,4,7,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
+
 EQUS 2,0,1,&10,&80,&FE,&7F,0,0,"Ldpic",13
 EQUS 2,0,1,&60,&40,&FE,&7F,0,0,"Ldpic",13
 EQUS 2,0,1,&10,0,&FE,&7F,0,0,"Ldpic",13
-EQUS 1,4,7,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
 EQUS 2,0,1,&0D,00,&23,&80,0,0,"Basic",13
 EQUS 2,1,1,&30,&90,&F8,&7F,0,0,"Dec",13
-EQUS 1,7,3,0,&28,&43,&29,0,0,0,&80,"Rom",13
+
 EQUS 3,&E0,&31,&F6,&7F,0,0,"Repton 3 screen",13
+
 EQUS 4,&23,&80,&23,&80,0,0,"Basic",13
 EQUS 4,&1F,&80,&23,&80,0,0,"Basic",13
-EQUS 5,32,1,&FC,&7F,0,0,"text/word",13
+
+EQUS 5,32,&E,&FC,&7F,0,0,"text/word",13
 EQUS 5,&2E,10,&F7,&7F,0,0,"viewsheet",13
+
+EQUS 6,7,3,0,"(C)",0,0,0,&80,"Rom",13
 
 EQUS 0
 
-.countable
-\byte,no,exec,load,ident
-\NOTE IF byte =0 then code will not work!
-\EQUS 32,1,&FC,&7F,0,0,"text/word",13
-\EQUS &2E,10,&F7,&7F,0,0,"viewsheet",13
-\EQUS 0
 
-.strcheck
-\nobytes,offset,string,exec,load ident
-\EQUS 7,4,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
-\EQUS 0
-
-.loadcheck
-\loadadd,exec,load,ident
-\EQUS &E0,&31,&F6,&7F,0,0,"Repton 3 screen",13
-\EQUS 0
-
-.execheck
-\exe,exec,load,ident
-\EQUS &23,&80,&23,&80,0,0,"Basic",13
-\EQUS &1F,&80,&23,&80,0,0,"Basic",13
-\EQUS 0
-
-\end magic tables
 
 .startexec
 
@@ -127,7 +113,7 @@ TYA:LDA #0
 \filesize =0 indicates no shift
 \basic =0 indicates not basic
 STA loadadd
-STA filesize:STA basic:TAX:LDA(blockstart),Y:CMP #&D:BNE aa
+STA filesize:TAX:LDA(blockstart),Y:CMP #&D:BNE aa
 LDX #1:JSR diserror:LDX #5:JMP diserror:\JMP so end
 .aa:CMP #&D:BEQ cmdend:INY:LDA(blockstart),Y:CMP #32:BNE aa:INX:BNE aa
 .cmdend:CPX #2:BNE ab:STX tempx:DEY:STY tempy
@@ -179,28 +165,23 @@ RTS
 
 {
 \loadadd,exec,load,ident
-JSR loadaddresscheck
+\JSR loadaddresscheck
 \exec,exec,load,ident
-JSR exeaddresscheck
+\JSR exeaddresscheck
 
-jSR loadprogpage
+\jSR loadprogpage
 
 \entrytype,Offset, nobytes,exec,load ident
-JSR magicfile
+\JSR magicfile
 
 \nobytes,exec,load ident
-JSR statistic
+\JSR statistic
 \relocationcheck not needed!
 \nobytes,exec,load ident
 \JSR relocationcheck
 
-\hardcoded
-JSR screencheck
-RTS
+
 }
-\.offset
-\CMP #&FF:BEQ statistic
-\INY:LDA(Aptr),Y:TAX:LDA rawdat,X:TAX:BNE fg
 
 
 \load a page of data in
@@ -214,23 +195,53 @@ LDY #HI(conb):
 JSR osgbpb
 \Close File
 LDA #0:LDY conb:JSR osfind
-RTS
 }
+.statistic: \need to create a page of freqs
+{
+LDA #0:STA zz:STA zz+1:TAY:.fa:STA countpg,y:DEY:BNE fa:\clear countpg
+.fb:LDA rawdat,Y:TAX:CLC:ADC zz:STA zz:LDA zz+1:ADC #0:STA zz+1
+STY tempy:TXA:TAY:LDA countpg,Y:TAX:INX:TXA:STA countpg,Y:LDY tempy:INY:BNE fb
+LDA zz:STAz:LDA zz+1:STA z+1
+}
+\will need to turn into sub if need to find next highest i.e E for text!
+.GethighestByte
+{
+LDA #0:TAY:
+.aa:CMP countpg,Y:BCS ab
+LDA countpg,Y
+STY highestbyte:BCC aa
+.ab
+INY:BNE aa:STA noofbytes:
+}
+
 .magicfile
 {
 LDA #LO(magicdata):STA Aptr
 LDA #HI(magicdata):STA Aptr+1
 \first byte is ident so construct case statement
 .ff:
-LDY#0:LDA(Aptr),Y:BNE ab:RTS:
+LDY#0:LDA(Aptr),Y:BNE ab:JMP screencheck: \RTS
 .ab:
+CMP #6:BNE ak
+INY
+LDA(Aptr),Y:TAY:LDA rawdat,Y:TAX:
+LDY #2:LDA (Aptr),Y:STA matchlen
+.al
+INY:LDA(Aptr),Y:CMP rawdat,X:BEQ am
+JMP movenxt
+.am
+INX
+DEC matchlen:BPL fh
+INY
+JSR fullmatch:JMP ff
+.ak
 CMP #5:BNE aj
 INY
-LDA(Aptr),Y:CMP y:BNE ag
-:INY:LDA(Aptr),Y:CMP x
+LDA(Aptr),Y:CMP highestbyte:BNE ag
+INY:LDA(Aptr),Y:CMP noofbytes
 
-BCC ag
-INY:JMP fullmatch:\RTS
+BCS ag
+INY:JSR fullmatch:JMP ff
 
 
 .aj
@@ -240,9 +251,7 @@ CMP exe:BNE ag
 INY:LDA(Aptr),Y
 CMP exe+1:BNE ag
 INY:JSR fullmatch:JMP ff
-.exit:RTS
-.nxtrec:LDY #7:
-JSR nextrec:JMP ff
+
 .ah
 CMP #3:BNE ad:
 INY:LDA(Aptr),Y
@@ -267,83 +276,14 @@ INY:LDA(Aptr),Y:STA matchlen:
 INX
 DEC matchlen:BPL fh
 INY
-JSR fullmatch:
-JMP ff
-\LDA e:CMP #&23:BNE fj:LDA e+1:CMP #&80:BNE fj:
-\JSR relocationcheck
-.fj
-RTS
+JSR fullmatch:JMP ff
 
 .movenxt
 LDY #2:LDA(Aptr),Y:CLC:ADC #7:TAY
-JSR nextrec
-JMP ff
-
+JSR nextrec:JMP ff
 }
 
-.statistic: \need to create a page of freqs
-{
-LDA #0:STA zz:STA zz+1:TAY:.fa:STA countpg,y:DEY:BNE fa:\clear countpg
-.fb:LDA rawdat,Y:TAX:CLC:ADC zz:STA zz:LDA zz+1:ADC #0:STA zz+1
-STY tempy:TXA:TAY:LDA countpg,Y:TAX:INX:TXA:STA countpg,Y:LDY tempy:INY:BNE fb
-LDA zz:STAz:LDA zz+1:STA z+1
-}
-.highestByte
-{
-LDA #&FF:TAX:LDY #0
-.gg:CMP countpg,Y:BEQ gh:DEY:BNE gg:DEX:TXA:BNE gg
-.gh:STY y:STA x
-}
-\ y=highest char x= char count
-\look through count table
-\byte,no,exec,load,ident
-.counttable
-{
-LDA #LO(countable):STA Aptr
-LDA #HI(countable):STA Aptr+1
-.bb:LDY #0
-LDA(Aptr),Y:BEQ exit:CMP y:BNE bc:INY:LDA(Aptr),Y:CMP x
-BCS bc
-\match found
-INY:JMP fullmatch:\RTS
-.exit RTS
-.bc:
-.nxtrec:LDY #6:JSR nextrec:BCC bb
-}
 
-\check for specific load address (currently only repton 3)
-.loadaddresscheck
-{
-RTS:\debug
-\LDA #LO(loadcheck):STA Aptr
-\LDA #HI(loadcheck):STA Aptr+1
-\.ff:
-\LDY#0:LDA(Aptr),Y:BEQ exit
-\CMP load:BNE nxtrec
-\INY:LDA(Aptr),Y:CMP load+1:BNE nxtrec
-\JMP fullmatch \RTS
-\.exit:RTS
-\.nxtrec:LDY #4:
-\JSR nextrec:JMP ff
-}
-
-.exeaddresscheck
-{
-RTS
-\LDA #LO(execheck):STA Aptr
-\LDA #HI(execheck):STA Aptr+1
-\.ff:
-\LDY#0:LDA(Aptr),Y:BEQ exit
-\CMP exe:BNE nxtrec
-\INY:LDA(Aptr),Y:CMP exe+1:BNE nxtrec
-\INY:JMP fullmatch \RTS
-\.exit:RTS
-\.nxtrec:LDY #4:
-\JSR nextrec:JMP ff
-}
-\nextrec moves Aptr to chr after next &D
-\common to all tables
-\expects y to be loaded with start of description
 .nextrec
 {
 .aa
@@ -380,7 +320,7 @@ ADC erradd+1:STA erradd+1:LDY #0:BEQ ba
 \tables are all consistant at the end namely
 \exec,load,ident
 \need to ensure that deal with dissagreements
-\if E%=0 overwrite same of L%
+\if E%=0 overwrite same with L%
 \report confict and clear E% and L%
 .fullmatch
 {
@@ -396,7 +336,6 @@ LDA(Aptr),Y:STA e
 INY
 LDA(Aptr),Y:STA e+1
 .bd
-
 INY
 CLC:LDA l:ADC l+1:BEQ bf
 CLC:LDA(Aptr),Y:INY:ADC(Aptr),Y:BEQ bg
@@ -411,8 +350,6 @@ LDA(Aptr),Y:STA l
 INY
 LDA(Aptr),Y:STA l+1
 .bg
-
-
 INY
 .printdescription
 {

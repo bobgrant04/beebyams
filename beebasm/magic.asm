@@ -14,48 +14,57 @@ NoSpecials%=1:\"offset from 1
 EndSpecial%=&FF-NoSpecials%
 \ZERO page
 \IntA &2A -&2D
-strptr=&2A
-Aptr=&2C
+
 \&2E TO &35 basic float
-trueadd=&2E
-loadadd=&30
+strptr=&2E
+Aptr=&30
+
 exeadd=&32
 erradd=&34
 \&3B to &42 basic float
 \single bytes
-filesize=&3B
+tempy=&3B
+matchlen=&3C
 tempx=&3D
-switch=&3E
+ypush=&3E
 highestbyte=&3F
 noofbytes=&40
-matchlen=&41
-tempy =&42
+quiet =&41
+basic=&42
 
-\&70 to &8F reserved for 
+
+
+
+\&70 to &8F reserved for user
 blockstart=&70:load=blockstart+2:exe=blockstart+6:size=blockstart+&A
 cat=&72
 codestart=&70
 zz=&8E
 \&F8-F9 UNUSED BY OS
+
 \end zero page
 \&400 A%-Z% INT
  a=&404:b=&408:c=&40C:d=&410:e=&414:f=&418:g=&41C:h=&420:i=&424:j=&428
  k=&42C:l=&430:m=&434:n=&438:o=&43C:p=&440:q=&444:r=&448:s=&44C:t=&450
  u=&454:v=&458:w=&45C:x=&460:y=&464:z=&468
 \&600 String manipulation
+strB%=&640
 strA%=&6A0
+\&900 rs232/cassette o/p buffer envelope buffer
+rawdat=&900:\output for file read
 \&A00 RS232 & cassette
+countpg=&A00:\page for count's
+
 \&1100-7C00 main mem
 conb=&7B90 :\control block for reading disk
-rawdat=&900:\output for file read
-countpg=&A00:\page for count's
+
 \os calls
 osasci=&FFE3:osbyte=&FFF4:oswrch=&FFEE:osnewl=&FFE7:osgbpb=&FFD1:osfile=&FFDD
 osargs=&FFDA:osbget=&FFD7:osbput=&FFD4:osbpb=&FFD1:osfind=&FFCE:osrdch=&FFE0
 oscli=&FFF7:osfsc=&21E:osword=&FFF1
 
 
-ORG &7500
+ORG &7300
 GUARD &7C00
 
 .start
@@ -79,8 +88,9 @@ GUARD &7C00
 \Entry type 4
 \4,exec,exec,load,ident
 \Entry 5
-\5 byte with highest count,no of count (or higher),exec,load,ident
-
+\5 no of high byte pairs (high,count or higher),exec,load,ident
+\Entry 6
+\6,ofset,nobytes,check bytes,exec,load,ident
 EQUS 1,4,7,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
 
 EQUS 2,0,1,&10,&80,&FE,&7F,0,0,"Ldpic",13
@@ -93,29 +103,56 @@ EQUS 3,&E0,&31,&F6,&7F,0,0,"Repton 3 screen",13
 
 EQUS 4,&23,&80,&23,&80,0,0,"Basic",13
 EQUS 4,&1F,&80,&23,&80,0,0,"Basic",13
+EQUS 4,&2B,&80,&23,&80,0,0,"Basic",13
 
-EQUS 5,32,&E,&FC,&7F,0,0,"text/word",13
-EQUS 5,&2E,10,&F7,&7F,0,0,"viewsheet",13
+EQUS 5,2,' ',0,'e',0,&FC,&7F,0,0,"text/word",13
+EQUS 5,2,' ',0,'E',0,&FC,&7F,0,0,"text/word",13
+EQUS 5,3,0,1,&80,1,&2E,1,&F7,&7F,0,0,"viewsheet",13
 
-EQUS 6,7,3,0,"(C)",0,0,0,&80,"Rom",13
+EQUS 6,7,3,0,"(C)",&CD,&D9,0,&80,"Rom",13
+
+\https://en.wikipedia.org/wiki/Letter_frequency
+\counts above 5%
+\'a','e','h','i','n','o','r','s','t' =45% 
+\allow for spaces commas full stops etc
+\Entry 7
+\7,count,no entries,bytes,exec,load,ident
+EQUS 7,100,8,'a','e','h','i','n','o','r','s','t',&FC,&7F,0,0,"text/word",13
+EQUS 7,100,8,'A','E','H','I','N','O','R','S','T',&FC,&7F,0,0,"text/word",13
+
 
 EQUS 0
 
-
-
 .startexec
-
+{
 \get osargs into blockstart
 LDX #blockstart:LDY #0:LDA #1:JSR osargs  
 \ptr to command into blockstart&70
 \X,Y,A are preserved osargs
 TYA:LDA #0
+STA quiet
+STA basic
 \filesize =0 indicates no shift
 \basic =0 indicates not basic
-STA loadadd
-STA filesize:TAX:LDA(blockstart),Y:CMP #&D:BNE aa
-LDX #1:JSR diserror:LDX #5:JMP diserror:\JMP so end
-.aa:CMP #&D:BEQ cmdend:INY:LDA(blockstart),Y:CMP #32:BNE aa:INX:BNE aa
+\STA loadadd
+TAX:LDA(blockstart),Y:CMP #&D:BNE aa
+LDX #1:JSR diserror:LDX #5:JMP diserror:\RTS
+.aa:
+CMP #('-'):BNE xa
+INY:LDA(blockstart),Y
+CMP #('Q'):BNE shift
+INC quiet
+.shift
+LDX #0
+INY:
+.xb:
+LDA(blockstart),Y:STA strB%,x:INY:INX:CMP #&D:BNE xb
+LDY #0
+.xc
+LDA strB%,Y:STA (blockstart),Y:INY:CMP #&D:BNE xc
+LDY #0:TYA:TAX
+.xa
+CMP #&D:BEQ cmdend:INY:LDA(blockstart),Y:CMP #32:BNE xa:INX:BNE xa
 .cmdend:CPX #2:BNE ab:STX tempx:DEY:STY tempy
 \"…"Have drive param
 LDX #NoSpecials%:JSR prepcmd:LDY tempy:LDA(blockstart),Y:STA strA%,X
@@ -135,18 +172,20 @@ JSR execmd
 \clear E%,L%:S%
 LDX #(('E'-'A')*4):JSR clearint
 LDX #(('L'-'A')*4):JSR clearint
-LDX #(('S'-'A')*4):JSR clearint
+LDX #(('P'-'A')*4):JSR clearint
 \"Process filename
 \now have blockstart with filename does file exist
 
-LDX #blockstart:LDY #0:LDA #5:JSR osfile:CMP #1:BEQ al:LDX #2:JMP diserror:.al
+LDX #blockstart:LDY #0:LDA #5:JSR osfile:CMP #1:BEQ al:LDX #2:STX p:JMP diserror:.al
 \LDA load:STA l: LDA load+1:STA l+1:LDA size:STA s:LDA size+1:STA s+1
 \LDA exe:STA e:LDA exe+1:STA e+1
 \check to see if exe is in the 7CXX range
 LDA exe+1:CMP #&7F:BNE magic:
+LDA quiet:BNE ax
 LDX #4:JSR diserror
+.ax
 RTS
-
+}
 \this is where the magic happens uses the tables:-
 \.magicdata needs data loading
 \entrytype,Offset, nobytes,exec,load ident
@@ -163,25 +202,7 @@ RTS
 
 .magic
 
-{
-\loadadd,exec,load,ident
-\JSR loadaddresscheck
-\exec,exec,load,ident
-\JSR exeaddresscheck
 
-\jSR loadprogpage
-
-\entrytype,Offset, nobytes,exec,load ident
-\JSR magicfile
-
-\nobytes,exec,load ident
-\JSR statistic
-\relocationcheck not needed!
-\nobytes,exec,load ident
-\JSR relocationcheck
-
-
-}
 
 
 \load a page of data in
@@ -196,33 +217,89 @@ JSR osgbpb
 \Close File
 LDA #0:LDY conb:JSR osfind
 }
-.statistic: \need to create a page of freqs
-{
-LDA #0:STA zz:STA zz+1:TAY:.fa:STA countpg,y:DEY:BNE fa:\clear countpg
-.fb:LDA rawdat,Y:TAX:CLC:ADC zz:STA zz:LDA zz+1:ADC #0:STA zz+1
-STY tempy:TXA:TAY:LDA countpg,Y:TAX:INX:TXA:STA countpg,Y:LDY tempy:INY:BNE fb
-LDA zz:STAz:LDA zz+1:STA z+1
-}
-\will need to turn into sub if need to find next highest i.e E for text!
-.GethighestByte
-{
-LDA #0:TAY:
-.aa:CMP countpg,Y:BCS ab
-LDA countpg,Y
-STY highestbyte:BCC aa
-.ab
-INY:BNE aa:STA noofbytes:
-}
+
+
+
 
 .magicfile
 {
+
 LDA #LO(magicdata):STA Aptr
 LDA #HI(magicdata):STA Aptr+1
 \first byte is ident so construct case statement
 .ff:
-LDY#0:LDA(Aptr),Y:BNE ab:JMP screencheck: \RTS
+LDY#0:LDA(Aptr),Y:BNE ab:JSR screencheck:
+\if Quiet check against existing
+.alldone
+{
+LDA quiet:BEQ exit
+LDA exe:CMP e:BNE bd
+LDA exe+1:CMP e+1:BNE bd
+LDX #(('E'-'A')*4):JSR clearint
+.bd
+LDA load:CMP l:BNE exit
+LDA load+1:CMP l+1:BNE exit
+LDX #(('L'-'A')*4):JSR clearint
+.exit
+RTS
+}
 .ab:
+\7,count,no entries,bytes,exec,load,ident
+CMP #7:BNE ca
+{
+JSR statistic
+LDA#0: STA noofbytes
+INY:LDA(Aptr),Y:STA tempx:\count
+INY:LDA(Aptr),Y:STA tempy:\no entries
+.cb
+INY:LDA(Aptr),Y:TAX
+LDA rawdat,X:
+CLC:ADC noofbytes:STA noofbytes
+DEC tempy:BPL cb
+CMP tempx
+BCS cc
+TYA:CLC:ADC #5:TAY:JSR nextrec:JMP ff
+.cc
+INY
+JSR fullmatch:JMP ff
+}
+.ca
+\5, no of high byte pairs, (high,count or higher),exec,load,ident
+CMP #5:BNE aj
+{
+.checkbasic
+{
+LDA e:CMP #&23:BNE exit
+LDA e+1:CMP #&80:BNE exit
+JMP alldone
+.exit
+}
+JSR statistic
+JSR GethighestByte
+LDY #1
+LDA(Aptr),Y:STA tempx:CLC:ROL A:STA tempy
+.an
+INY
+LDA(Aptr),Y:CMP highestbyte:BNE ao
+INY:LDA(Aptr),Y
+CMP noofbytes:BCS ao
+DEC tempx:BNE ap
+INY:JSR fullmatch:JMP ff
+.ap
+LDX highestbyte
+LDA #0:STA countpg,X
+STY ypush
+JSR GethighestByte
+LDY ypush
+JMP an
+.ao
+\move to next rec 
+CLC:LDA tempy:ADC#6:TAY:JSR nextrec:JMP ff
+}
+.aj
+
 CMP #6:BNE ak
+{
 INY
 LDA(Aptr),Y:TAY:LDA rawdat,Y:TAX:
 LDY #2:LDA (Aptr),Y:STA matchlen
@@ -234,56 +311,87 @@ INX
 DEC matchlen:BPL fh
 INY
 JSR fullmatch:JMP ff
+}
 .ak
-CMP #5:BNE aj
-INY
-LDA(Aptr),Y:CMP highestbyte:BNE ag
-INY:LDA(Aptr),Y:CMP noofbytes
-
-BCS ag
-INY:JSR fullmatch:JMP ff
-
-
-.aj
 CMP #4:BNE ah
+{
 INY:LDA(Aptr),Y:
 CMP exe:BNE ag
 INY:LDA(Aptr),Y
 CMP exe+1:BNE ag
 INY:JSR fullmatch:JMP ff
-
+}
 .ah
 CMP #3:BNE ad:
+{
 INY:LDA(Aptr),Y
 CMP load:BEQ ae
+}
 .ag
+
 LDY #7:JSR nextrec:JMP ff
+
 .ae
+{
 INY:LDA(Aptr),Y:CMP load+1:BNE ag
 JSR fullmatch:JMP ff
+}
 .ad
 CMP #2:BNE aa:
+{
 \no offset
 INY:LDA #0:BEQ ac
 \offset
+}
 .aa
 INY:LDA(Aptr),Y:
 .ac
 TAX:
 .fg
 INY:LDA(Aptr),Y:STA matchlen:
-.fh:INY:LDA(Aptr),Y:CMP rawdat,X:BNE movenxt
+
+.fh
+{
+INY:LDA(Aptr),Y:CMP rawdat,X:BNE movenxt
 INX
 DEC matchlen:BPL fh
 INY
 JSR fullmatch:JMP ff
-
+}
 .movenxt
+{
 LDY #2:LDA(Aptr),Y:CLC:ADC #7:TAY
 JSR nextrec:JMP ff
 }
+}
+
+.checkbasic
+{
+LDA e:CMP #&23:BNE exit
+LDA e+1:CMP #&80:BNE exit
+INC basic
+.exit:RTS
+}
 
 
+.GethighestByte
+{
+LDA #0:TAY:
+.aa:CMP countpg,Y:BCS ab
+LDA countpg,Y
+STY highestbyte:BCC aa
+.ab
+INY:BNE aa:STA noofbytes:
+RTS
+}
+.statistic: \need to create a page of freqs
+{
+LDA #0:STA zz:STA zz+1:TAY:.fa:STA countpg,y:DEY:BNE fa:\clear countpg
+.fb:LDA rawdat,Y:TAX:CLC:ADC zz:STA zz:LDA zz+1:ADC #0:STA zz+1
+STY tempy:TXA:TAY:LDA countpg,Y:TAX:INX:TXA:STA countpg,Y:LDY tempy:INY:BNE fb
+LDA zz:STAz:LDA zz+1:STA z+1
+RTS
+}
 .nextrec
 {
 .aa
@@ -324,6 +432,7 @@ ADC erradd+1:STA erradd+1:LDY #0:BEQ ba
 \report confict and clear E% and L%
 .fullmatch
 {
+STY ypush
 CLC:LDA e:ADC e+1:BEQ bc
 CLC:LDA(Aptr),Y:INY:ADC(Aptr),Y:BEQ bd
 DEY
@@ -351,19 +460,32 @@ INY
 LDA(Aptr),Y:STA l+1
 .bg
 INY
+LDA quiet:BNE noprint
 .printdescription
 {
 .aa
 LDA(Aptr),Y:
+
 JSR osasci:INY:CMP #13:BNE aa
 TYA:CLC:ADC Aptr:STA Aptr:
 LDA #0:ADC Aptr+1:STA Aptr+1
 RTS
 }
+.noprint
+{
+.aa
+LDA(Aptr),Y:
+INY:CMP #13:BNE aa
+TYA:CLC:ADC Aptr:STA Aptr:
+LDA #0:ADC Aptr+1:STA Aptr+1
+RTS
+}
 .abort
+LDA #6:CLC:ADC ypush
+JSR printdescription
 \clear E%,L%
-LDX #(('E'-'A')*4):JSR clearint
-LDX #(('L'-'A')*4):JSR clearint
+\LDX #(('E'-'A')*4):JSR clearint
+\LDX #(('L'-'A')*4):JSR clearint
 BRK
 EQUS 0,"Conflict detected",&D ,0
 }
@@ -424,7 +546,7 @@ EQUS"K.0 */code|M",&8D
 .erraddr:EQUW errtxt
 .errtxt
 \ 1 usage"
-EQUS"Usage <fsp> (<dno>/<dsp>) (<drv>)":EQUB &8D
+EQUS"Usage (-Q) <fsp> (<dno>/<dsp>) (<drv>)":EQUB &8D
 \ 2 file not found 
 EQUS"file not foun",&E4
 \ 3 exe address invalid
@@ -435,10 +557,11 @@ EQUS"Magic already set",&8D
 EQUS"outputs":EQUB &D
 EQUS"L% for load 0=do not change":EQUB &D
 EQUS"E% for exe 0=do not change":EQUB &D
+EQUS"P%<>0 error":EQUB &D
  .masterlist
 EQUS"E%   L% ":EQUB &D
 EQUS"8023 0000 Basic":EQUB &D
-EQUS"0000 8000 Rom":EQUB &D
+EQUS"D9CD 8000 Rom":EQUB &D
 EQUS"7FFE 0000 LDPIC compressed picture":EQUB &D
 EQUS"7FFD 0000 SHOWPIC":EQUB &D
 EQUS"7FFC 0000 type word text":EQUB &D
@@ -455,8 +578,7 @@ EQUS"7F04 5800 mode 4 Screen":EQUB &D
 EQUS"7F03 4000 mode 3 Screen":EQUB &D
 EQUS"7F02 3000 mode 2 Screen":EQUB &D
 EQUS"7F01 3000 mode 1 Screen":EQUB &D
-EQUS"7F00 3000 mode 0 Screen":EQUB &D
-EQUD&8D
+EQUS"7F00 3000 mode 0 Screen":EQUB &8D
 
 .end
 

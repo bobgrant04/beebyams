@@ -77,39 +77,46 @@ GUARD &7C00
 \section for magic tables
 
 .magicdata
-\entrytype,Offset, nobytes,exec,load ident
-\entry type 2= normal offset 1=indirect offset
-\Entry type 1
-\1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
-\Entry type 2
-\2,Offset, nobytes,exec,load ident
-\Entry type 3 
-\3,loadadd,exec,load,ident
+\all entrys of the type
+\entrytype,xxxxxxx,exec,load ident
+\where xxxx has different code to be run
+\note order is important as a rom and basic can have characteristics of text
+
 \Entry type 4
 \4,exec,exec,load,ident
 \Entry 5
 \5 no of high byte pairs (high,count or higher),exec,load,ident
-\Entry 6
-\6,ofset,nobytes,check bytes,exec,load,ident
-EQUS 1,4,7,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
 
+\Entry type 1
+\1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
+EQUS 1,4,7,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00",13
+\Entry type 2
+\2,Offset, nobytes,exec,load ident
 EQUS 2,0,1,&10,&80,&FE,&7F,0,0,"Ldpic",13
 EQUS 2,0,1,&60,&40,&FE,&7F,0,0,"Ldpic",13
 EQUS 2,0,1,&10,0,&FE,&7F,0,0,"Ldpic",13
 EQUS 2,0,1,&0D,00,&23,&80,0,0,"Basic",13
 EQUS 2,1,1,&30,&90,&F8,&7F,0,0,"Dec",13
-
+\Entry type 3 
+\3,loadadd,exec,load,ident
 EQUS 3,&E0,&31,&F6,&7F,0,0,"Repton 3 screen",13
-
+\Entry type 4
+\4,exec,exec,load,ident
 EQUS 4,&23,&80,&23,&80,0,0,"Basic",13
 EQUS 4,&1F,&80,&23,&80,0,0,"Basic",13
 EQUS 4,&2B,&80,&23,&80,0,0,"Basic",13
 
+\Entry 6
+\6,ofset,nobytes,check bytes,exec,load,ident
+EQUS 6,7,3,0,"(C)",&CD,&D9,0,&80,"Rom",13
+\Entry 5
+\5 no of high byte pairs (high,count or higher),exec,load,ident
+EQUS 5,1,01,&40,&F5,&7F,0,0,"ScrLoad",13
+EQUS 5,1,&ff,&A0,&F5,&7F,0,0,"ScrLoad",13
 EQUS 5,2,' ',0,'e',0,&FC,&7F,0,0,"text/word",13
 EQUS 5,2,' ',0,'E',0,&FC,&7F,0,0,"text/word",13
 EQUS 5,3,0,1,&80,1,&2E,1,&F7,&7F,0,0,"viewsheet",13
 
-EQUS 6,7,3,0,"(C)",&CD,&D9,0,&80,"Rom",13
 
 \https://en.wikipedia.org/wiki/Letter_frequency
 \counts above 5%
@@ -267,13 +274,9 @@ JSR fullmatch:JMP ff
 \5, no of high byte pairs, (high,count or higher),exec,load,ident
 CMP #5:BNE aj
 {
-.checkbasic
-{
-LDA e:CMP #&23:BNE exit
-LDA e+1:CMP #&80:BNE exit
-JMP alldone
-.exit
-}
+LDA e:CLC:ADC e+1:BEQ cd
+JMP alldone:\RTS
+.cd
 JSR statistic
 JSR GethighestByte
 LDY #1
@@ -297,7 +300,8 @@ JMP an
 CLC:LDA tempy:ADC#6:TAY:JSR nextrec:JMP ff
 }
 .aj
-
+\Entry 6
+\6,ofset,nobytes,check bytes,exec,load,ident
 CMP #6:BNE ak
 {
 INY
@@ -322,20 +326,21 @@ CMP exe+1:BNE ag
 INY:JSR fullmatch:JMP ff
 }
 .ah
+\Entry type 3 
+\3,loadadd,exec,load,ident
 CMP #3:BNE ad:
 {
 INY:LDA(Aptr),Y
-CMP load:BEQ ae
+CMP load:BNE ag
+INY:LDA(Aptr),Y:CMP load+1:BNE ag
+INY
+JSR fullmatch:JMP ff
 }
 .ag
 
 LDY #7:JSR nextrec:JMP ff
 
-.ae
-{
-INY:LDA(Aptr),Y:CMP load+1:BNE ag
-JSR fullmatch:JMP ff
-}
+
 .ad
 CMP #2:BNE aa:
 {
@@ -358,20 +363,14 @@ DEC matchlen:BPL fh
 INY
 JSR fullmatch:JMP ff
 }
+
 .movenxt
 {
 LDY #2:LDA(Aptr),Y:CLC:ADC #7:TAY
 JSR nextrec:JMP ff
-}
-}
 
-.checkbasic
-{
-LDA e:CMP #&23:BNE exit
-LDA e+1:CMP #&80:BNE exit
-INC basic
-.exit:RTS
 }
+}:\magic
 
 
 .GethighestByte
@@ -571,6 +570,7 @@ EQUS"7FF9 0000 TYB music samples":EQUB &D
 EQUS"7FF8 0000 DEC compressed picture":EQUB &D
 EQUS"7FF7 0000 viewsheet":EQUB &D
 EQUS"7FF6 31E0 repton 3 level":EQUB &D
+EQUS"7FF5 0000 ScrLoad":EQUB &D
 EQUS"7F07 7C00 mode 7 Screen":EQUB &D
 EQUS"7F06 6000 mode 6 Screen":EQUB &D
 EQUS"7F05 5800 mode 5 Screen":EQUB &D

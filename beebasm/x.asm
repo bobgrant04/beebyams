@@ -207,15 +207,33 @@ FSCV =&21E	\file system control entry
 EVNTV =&220	\event interrupt
 UPTV =&220	\user print routine
 \os calls
-osasci=&FFE3:osbyte=&FFF4:oswrch=&FFEE:osnewl=&FFE7:osgbpb=&FFD1:osfile=&FFDD
-osargs=&FFDA:osbget=&FFD7:osbput=&FFD4:osbpb=&FFD1:osfind=&FFCE:osrdch=&FFE0
-oscli=&FFF7:osfsc=&21E:osword=&FFF1
+osasci=&FFE3:
+osbyte=&FFF4:
+oswrch=&FFEE:
+osnewl=&FFE7:
+osgbpb=&FFD1:
+osargs=&FFDA
+osfile=&FFDD
+
+:osbget=&FFD7
+:osbput=&FFD4
+:osbpb=&FFD1:
+osfind=&FFCE
+:osrdch=&FFE0
+oscli=&FFF7
+:osfsc=&21E
+:osword=&FFF1
 
 
-ORG &7000
-GUARD &7C00
+ORG &1300
+GUARD &5800
 
 .start
+
+.scrload
+INCBIN "$.altscrl"
+\scrload headerless 
+
 .ldpic
 INCBIN "$.altldpc"
 \the yorkshire boys music
@@ -352,11 +370,63 @@ JMP &900
 .cg:CMP #&F8:BNE ch
 LDX #8
 \7FF7 viewsheet
-.ch:CMP #&F7:BNE cz
+.ch:CMP #&F7:BNE ci
 LDX #9
+.ci CMP #&F6:BNE cj
+
+
+
+\7FF6 repton3 screen
+
+\need to select repton3 disk
+\display text g=get
+\setup *k.1
+.repton3
+{
+\*dr.0
+LDX #NoSpecials%:JSR prepcmd:LDY tempy:LDA #'0'
+STA strA%,X:INX:LDA #&D:STA strA%,X:JSR execmd
+\*k.1 setup
+LDX #NoSpecials%+5:JSR prepcmd:JSR addparam:JSR execmd
+\*repton2
+LDX #NoSpecials%+4:JSR prepcmd:
+\RTS:\debug
+\mode 7
+LDX #7:JSR setmode
+\display text
+LDX #0
+.aa:LDA reptontext,X:BEQ ac:JSR osasci:INX:BNE aa
+.ac
+JSR gti
+\mode5
+LDX #5:JSR setmode
+\need to init zero page (&70 &82 loaded with zero)
+LDX #18:LDA #0
+.ab
+STA &70,X:DEX:BPL ab
+\need to initaise &7C and &7F
+lDA #&60:STA &7C
+LDA #&3:STA &7F
+
+LDX #0:STX &FE01:INX:STX &FE00
+LDY #strA% DIV 256:LDX #strA% MOD 256:JMP oscli
+\JMP execmd:\RTS
+}
+\7FF5 scrload
+.cj CMP #&F5:BNE ck
+{
+LDY #0:.xx:LDA scrload,Y:STA &900,Y:INY:BNE xx
+LDY #0:.xa:LDA scrload+&100,Y:STA &A00,Y:INY:BNE xa
+JSR sco
+\set file name into strA%
+LDA #0:TAY:TAX:JSR addparam
+JMP &900
+}
+.ck
 .cz:CPX#00:BEQ screencheck:
 JSR prepcmd:JSR addparam:JMP execmd
 \JMP so end
+
 
 .screencheck
 {
@@ -431,14 +501,16 @@ LDY #0:LDX filesize:BEQ at
 .addparam
 LDY #0:.af:LDA(blockstart),Y:STA strA%,X:INX:INY:CMP #&D:BNE af:RTS
 \execmd
-.execmd:LDY #strA% DIV 256:LDX #strA% MOD 256:JSR oscli
+.execmd
+LDY #strA% DIV 256:LDX #strA% MOD 256:JSR oscli
 LDY #0:LDA filesize:TAX:RTS
 \Prepcmd
 \takes x as cmdno ret x ptr to
 \strA%
 .prepcmd
 {
-LDY #0:.ez:DEX:BNE nexcmd:.ey:LDA cmdadd,Y:CMP #&80:BCC am:AND #&7F
+LDY #0
+.ez:DEX:BNE nexcmd:.ey:LDA cmdadd,Y:CMP #&80:BCC am:AND #&7F
 STA strA%,X:INX:RTS
 .am:STA strA%,X:INX:INY:BNE ey
 .nexcmd:LDA cmdadd,Y:INY:CMP #&80:BCC nexcmd:BCS ez 
@@ -473,6 +545,11 @@ LDA #23:JSR osasci:LDA #1:JSR osasci:LDX #9:LDA #0:.aa:JSR osasci:DEX:BNE aa:RTS
 {
 LDA #&91:LDX #0:JSR osbyte:BCS gti:RTS
 }
+\select mode X
+.setmode \x=requiredmode
+{
+LDA #22:JSR osasci:TXA:JMP osasci:\RTS
+}
 \Strings
 .cmdadd
 \*LDPIC FE
@@ -488,14 +565,18 @@ EQUS"*TY",&AE
  \*dec F9
  EQUS"dec",&A0
 \SPECIALS ABOVE ALTER NoSpecials%
-\*DRIVE
+\*DRIVE #0
 EQUS"*DR.",&A0
-\*DIN
+\*DIN #1
 EQUS"*DIN",&A0
-\*LOAD
+\*LOAD #2
 EQUS"LO.",&A0
-\*CODE for music the yorkshire boys
-EQUS"K.0 */code|M",&8D
+\select repton3 disk #3
+EQUS "DIN REPTON",'3'+&80
+\* run repton2 #4
+EQUS "REPTON2",&8D
+\*K.1 #5
+EQUS "K.1:3",'.'+&80
 \1100
 .ladd
 EQUS" 1100",&D
@@ -509,15 +590,15 @@ EQUS"file not foun",&E4
 \ 3 exe address invalid
 EQUS"Special exe add not code",&E4
 \ 4 extended help 
- EQUS"Basic progs need exe 8023":EQUB &D
- EQUS"Basic progs need load add set to run page":EQUB &D
- EQUS"!BOOT will be run as per disk opt":EQUB &D
- EQUS"ROM load should be 8000":EQUB &D
-EQUS"Files to be *DUMP exe 7FFB":EQUB &8D
-\#5 EXTENDED HELP CONT
+EQUS"Basic progs need exe 8023":EQUB &D
+EQUS"Basic progs need load add set to run page":EQUB &D
+EQUS"!BOOT will be run as per disk opt":EQUB &D
+EQUS"ROM load should be 8000":EQUB &D
+EQUS"Files to be *DUMP exe 7FFB":EQUB &D
 EQUS"TYB music samples to be exe 7FFA":EQUB &D
 EQUS"Files to be *EXEC exe 7FFA":EQUB &D
-EQUS"BOOT will be run as per disk option":EQUB &D
+EQUS"BOOT will be run as per disk option":EQUB &8D
+\#5 EXTENDED HELP CONT
 EQUS"7FFE LDPIC compressed picture":EQUB &D
 EQUS"7FFD SHOWPIC not working":EQUB &D
 EQUS"7FFC type word text":EQUB &D
@@ -526,6 +607,8 @@ EQUS"7FFA EXEC":EQUB &8D
 EQUS"7FF9 TYB music samples":EQUB &D
 EQUS"7FF8 DEC compressed picture":EQUB &D
 EQUS"7FF7 viewsheet":EQUB &D
+EQUS"7FF6 31E0 repton 3 level TODO":EQUB &D
+EQUS"7FF5 SCRLOAD TODO":EQUB &D
 EQUS"7F07 mode 7 Screen":EQUB &D
 EQUS"7F06 mode 6 Screen":EQUB &D
 EQUS"7F05 mode 5 Screen":EQUB &D
@@ -534,9 +617,14 @@ EQUS"7F03 mode 3 Screen":EQUB &D
 EQUS"7F02 mode 2 Screen":EQUB &D
 EQUS"7F01 mode 1 Screen":EQUB &D
 EQUS"7F00 mode 0 Screen":EQUB &D \22 7 curser off g=get
-EQUS"Version 1.1"
+EQUS"Version 1.2"
 EQUD &8D
 \
+
+.reptontext
+EQUS &D,&D,&D,&D,&D,&D
+EQUS "When game loads please press",130,"L",&D,"Then press",130,"F1",135,"to load selected level",&D
+EQUS 131,136,"Press any key",&D,0
 .end
 
 SAVE "x", start, end,startexec

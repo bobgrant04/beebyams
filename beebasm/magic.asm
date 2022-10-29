@@ -105,7 +105,9 @@ EQUS 3,&E0,&31,&F6,&7F,0,0,"Repton 3 screen",13
 EQUS 4,&23,&80,&23,&80,0,0,"Basic",13
 EQUS 4,&1F,&80,&23,&80,0,0,"Basic",13
 EQUS 4,&2B,&80,&23,&80,0,0,"Basic",13
-
+\see DecodingRepton.pdf
+\8,length,exec,load,ident
+EQUS 8,&30,&25,&F4,&7F,&E0,&31,"Repton Infinity screen",13
 \Entry 6
 \6,ofset,nobytes,check bytes,exec,load,ident
 EQUS 6,7,3,0,"(C)",&CD,&D9,0,&80,"Rom",13
@@ -126,6 +128,8 @@ EQUS 5,3,0,1,&80,1,&2E,1,&F7,&7F,0,0,"viewsheet",13
 \7,count,no entries,bytes,exec,load,ident
 EQUS 7,100,8,'a','e','h','i','n','o','r','s','t',&FC,&7F,0,0,"text/word",13
 EQUS 7,100,8,'A','E','H','I','N','O','R','S','T',&FC,&7F,0,0,"text/word",13
+
+
 
 
 EQUS 0
@@ -251,26 +255,67 @@ LDX #(('L'-'A')*4):JSR clearint
 RTS
 }
 .ab:
-\7,count,no entries,bytes,exec,load,ident
-CMP #7:BNE ca
+
+
+\Entry type 1
+\1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
+CMP #1:BNE cb:
 {
-JSR statistic
-LDA#0: STA noofbytes
-INY:LDA(Aptr),Y:STA tempx:\count
-INY:LDA(Aptr),Y:STA tempy:\no entries
-.cb
-INY:LDA(Aptr),Y:TAX
-LDA rawdat,X:
-CLC:ADC noofbytes:STA noofbytes
-DEC tempy:BPL cb
-CMP tempx
-BCS cc
-TYA:CLC:ADC #5:TAY:JSR nextrec:JMP ff
-.cc
+INY:LDA(Aptr),Y:
+.ac
+TAX:
+.fg
+INY:LDA(Aptr),Y:STA matchlen:
+.fh
+{
+INY:LDA(Aptr),Y:CMP rawdat,X:BNE movenxt
+INX
+DEC matchlen:BPL fh
 INY
 JSR fullmatch:JMP ff
 }
-.ca
+
+.movenxt
+{
+LDY #2:LDA(Aptr),Y:CLC:ADC #7:TAY
+JSR nextrec:JMP ff
+}
+}
+.cb
+\Entry type 2
+\2,Offset, nobytes,exec,load ident
+CMP #2:BNE aa:
+{
+\no offset
+INY:LDA #0:BEQ ag
+\offset
+}
+.aa
+\Entry type 3 
+\3,loadadd,exec,load,ident
+CMP #3:BNE ad:
+{
+INY:LDA(Aptr),Y
+CMP load:BNE ag
+INY:LDA(Aptr),Y:CMP load+1:BNE ag
+INY
+JSR fullmatch:JMP ff
+}
+.ag
+LDY #7:JSR nextrec:JMP ff
+.ad
+\Entry type 4
+\4,exec,exec,load,ident
+CMP #4:BNE ah
+{
+INY:LDA(Aptr),Y:
+CMP exe:BNE ag
+INY:LDA(Aptr),Y
+CMP exe+1:BNE ag
+INY:JSR fullmatch:JMP ff
+}
+.ah
+\Entry type 5
 \5, no of high byte pairs, (high,count or higher),exec,load,ident
 CMP #5:BNE aj
 {
@@ -299,6 +344,7 @@ JMP an
 \move to next rec 
 CLC:LDA tempy:ADC#6:TAY:JSR nextrec:JMP ff
 }
+
 .aj
 \Entry 6
 \6,ofset,nobytes,check bytes,exec,load,ident
@@ -315,46 +361,6 @@ INX
 DEC matchlen:BPL fh
 INY
 JSR fullmatch:JMP ff
-}
-.ak
-CMP #4:BNE ah
-{
-INY:LDA(Aptr),Y:
-CMP exe:BNE ag
-INY:LDA(Aptr),Y
-CMP exe+1:BNE ag
-INY:JSR fullmatch:JMP ff
-}
-.ah
-\Entry type 3 
-\3,loadadd,exec,load,ident
-CMP #3:BNE ad:
-{
-INY:LDA(Aptr),Y
-CMP load:BNE ag
-INY:LDA(Aptr),Y:CMP load+1:BNE ag
-INY
-JSR fullmatch:JMP ff
-}
-.ag
-
-LDY #7:JSR nextrec:JMP ff
-
-
-.ad
-CMP #2:BNE aa:
-{
-\no offset
-INY:LDA #0:BEQ ac
-\offset
-}
-.aa
-INY:LDA(Aptr),Y:
-.ac
-TAX:
-.fg
-INY:LDA(Aptr),Y:STA matchlen:
-
 .fh
 {
 INY:LDA(Aptr),Y:CMP rawdat,X:BNE movenxt
@@ -363,13 +369,49 @@ DEC matchlen:BPL fh
 INY
 JSR fullmatch:JMP ff
 }
-
 .movenxt
 {
 LDY #2:LDA(Aptr),Y:CLC:ADC #7:TAY
 JSR nextrec:JMP ff
-
 }
+}
+.ak
+\Entry type 7
+\7,count,no entries,bytes,exec,load,ident
+CMP #7:BNE ca
+{
+JSR statistic
+LDA#0: STA noofbytes
+INY:LDA(Aptr),Y:STA tempx:\count
+INY:LDA(Aptr),Y:STA tempy:\no entries
+.cb
+INY:LDA(Aptr),Y:TAX
+LDA rawdat,X:
+CLC:ADC noofbytes:STA noofbytes
+DEC tempy:BPL cb
+CMP tempx
+BCS cc
+TYA:CLC:ADC #5:TAY:JSR nextrec:JMP ff
+.cc
+INY
+JSR fullmatch:JMP ff
+}
+.ca
+\Entry type 8
+\8,length,exec,load,ident
+CMP #8:BNE bv:
+{
+INY:LDA(Aptr),Y
+CMP size:BNE ag
+INY:LDA(Aptr),Y:CMP size+1:BNE ag
+INY
+JSR fullmatch:JMP ff
+.ag
+LDY #7:JSR nextrec:JMP ff
+}
+.bv
+\should not be here
+RTS
 }:\magic
 
 
@@ -571,6 +613,7 @@ EQUS"7FF8 0000 DEC compressed picture":EQUB &D
 EQUS"7FF7 0000 viewsheet":EQUB &D
 EQUS"7FF6 31E0 repton 3 level":EQUB &D
 EQUS"7FF5 0000 ScrLoad":EQUB &D
+EQUS"7FF4 31E0 Repton Infinity level":EQUB &D
 EQUS"7F07 7C00 mode 7 Screen":EQUB &D
 EQUS"7F06 6000 mode 6 Screen":EQUB &D
 EQUS"7F05 5800 mode 5 Screen":EQUB &D

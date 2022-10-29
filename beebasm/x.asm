@@ -225,8 +225,8 @@ oscli=&FFF7
 :osword=&FFF1
 
 
-ORG &1300
-GUARD &5800
+ORG &7000
+GUARD &7C00
 
 .start
 
@@ -374,8 +374,6 @@ LDX #8
 LDX #9
 .ci CMP #&F6:BNE cj
 
-
-
 \7FF6 repton3 screen
 
 \need to select repton3 disk
@@ -384,8 +382,8 @@ LDX #9
 .repton3
 {
 \*dr.0
-LDX #NoSpecials%:JSR prepcmd:LDY tempy:LDA #'0'
-STA strA%,X:INX:LDA #&D:STA strA%,X:JSR execmd
+JSR setdr0
+
 \*k.1 setup
 LDX #NoSpecials%+5:JSR prepcmd:JSR addparam:JSR execmd
 \*repton2
@@ -394,10 +392,12 @@ LDX #NoSpecials%+4:JSR prepcmd:
 \mode 7
 LDX #7:JSR setmode
 \display text
+{
 LDX #0
 .aa:LDA reptontext,X:BEQ ac:JSR osasci:INX:BNE aa
 .ac
 JSR gti
+}
 \mode5
 LDX #5:JSR setmode
 \need to init zero page (&70 &82 loaded with zero)
@@ -422,7 +422,54 @@ JSR sco
 LDA #0:TAY:TAX:JSR addparam
 JMP &900
 }
-.ck
+.ck:CMP #&F4:BNE cl
+\repton infinity
+\set to dr.0
+\set drive 0 to x-files
+\need to delete g.a from x-files if it exists
+\copy file to xfiles (dr.0)
+\access file
+\rename file to g.a
+\display information
+\*repi
+\------
+\set to dr.0
+JSR setdr0
+\set drive 0 to x-files
+LDX #NoSpecials%+3
+JSR prepcmd:JSR execmd
+\need to delete prelude from x-files without interaction
+LDX #LO(preludeptr):LDY #HI(preludeptr):LDA #6:JSR osfile
+
+\copy file to xfiles (dr.0) 
+\copy 3 0 XXXX
+LDX #NoSpecials%+7
+JSR prepcmd:JSR addparam:
+\DEX:JSR addprelude:
+JSR execmd
+
+
+\LDX #NoSpecials%+6
+\JSR prepcmd:JSR execmd
+\rename file to prelude
+LDX #NoSpecials%+8
+JSR prepcmd:JSR addparam:
+DEX:JSR addprelude:JSR execmd
+
+\mode 7
+LDX #7:JSR setmode
+\display text
+{
+LDX #0
+.aa:LDA reptoninfinitytext,X:BEQ ac:JSR osasci:INX:BNE aa
+.ac
+JSR gti
+}
+
+\*repi
+LDX #NoSpecials%+9
+JSR prepcmd:JMP execmd:\RTS
+.cl
 .cz:CPX#00:BEQ screencheck:
 JSR prepcmd:JSR addparam:JMP execmd
 \JMP so end
@@ -495,11 +542,17 @@ LDY #0:LDX filesize:BEQ at
 \Note jmp will save RTS!
 .at:LDA basic:BNE bz:JMP(exeadd):.bz:RTS
 .codeend
-\-----------------------
+\--------------------------------------------
 \Routines
+.addprelude
+{
+LDY #0:.af:LDA preludetxt,Y:STA strA%,X:INX:INY:CMP #&D:BNE af:RTS
+}
 \addparam
 .addparam
+{
 LDY #0:.af:LDA(blockstart),Y:STA strA%,X:INX:INY:CMP #&D:BNE af:RTS
+}
 \execmd
 .execmd
 LDY #strA% DIV 256:LDX #strA% MOD 256:JSR oscli
@@ -545,6 +598,12 @@ LDA #23:JSR osasci:LDA #1:JSR osasci:LDX #9:LDA #0:.aa:JSR osasci:DEX:BNE aa:RTS
 {
 LDA #&91:LDX #0:JSR osbyte:BCS gti:RTS
 }
+\issue *dr.0 command
+.setdr0
+{
+LDX #NoSpecials%:JSR prepcmd:LDY tempy:LDA #'0'
+STA strA%,X:INX:LDA #&D:STA strA%,X:JMP execmd:\RTS
+}
 \select mode X
 .setmode \x=requiredmode
 {
@@ -566,17 +625,25 @@ EQUS"*TY",&AE
  EQUS"dec",&A0
 \SPECIALS ABOVE ALTER NoSpecials%
 \*DRIVE #0
-EQUS"*DR.",&A0
+EQUS"*DR",'.'+&80
 \*DIN #1
 EQUS"*DIN",&A0
 \*LOAD #2
 EQUS"LO.",&A0
 \select repton3 disk #3
-EQUS "DIN REPTON",'3'+&80
+EQUS "DIN x-files",&8D
 \* run repton2 #4
 EQUS "REPTON2",&8D
 \*K.1 #5
 EQUS "K.1:3",'.'+&80
+\delete prelude #6
+EQUS "del. prelude",&8D
+\copy start #7
+EQUS "copy 3 0",&A0
+\rename #8
+EQUS "Ren.",&A0
+\ REPi #9
+EQUS "RepI",&8D
 \1100
 .ladd
 EQUS" 1100",&D
@@ -609,6 +676,7 @@ EQUS"7FF8 DEC compressed picture":EQUB &D
 EQUS"7FF7 viewsheet":EQUB &D
 EQUS"7FF6 31E0 repton 3 level TODO":EQUB &D
 EQUS"7FF5 SCRLOAD TODO":EQUB &D
+
 EQUS"7F07 mode 7 Screen":EQUB &D
 EQUS"7F06 mode 6 Screen":EQUB &D
 EQUS"7F05 mode 5 Screen":EQUB &D
@@ -625,8 +693,17 @@ EQUD &8D
 EQUS &D,&D,&D,&D,&D,&D
 EQUS "When game loads please press",130,"L",&D,"Then press",130,"F1",135,"to load selected level",&D
 EQUS 131,136,"Press any key",&D,0
-.end
 
+.reptoninfinitytext
+EQUS &D,&D,&D,&D,&D,&D
+EQUS "When game loads please press",130,"L",&D,"Then press",130,"A",135,"to load selected level",&D
+EQUS 131,136,"Press any key",&D,0
+
+.preludetxt
+EQUS " g.a",&D
+.preludeptr
+EQUW preludetxt
+.end
 SAVE "x", start, end,startexec
 
 \cd d:\bbc/beebasm

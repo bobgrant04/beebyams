@@ -6,10 +6,10 @@ The Stairway to Hell archive had a good solution with their menu system however 
 
 the start of the process requires TAB delimiated files in the following format:-
 publisher:- name of publisher only have 1024 so try to limit
-long title:- needs to be below 240 chars but for display needs to be less than 30
-filename:- assumes $ dir needs to be less than 10 characters if dir specifeid or less than 8 if not
-execute type :- crle chain run load execute uppper of lower case 
-page number :- should be the true page required only required for basic
+long title:- needs to be below 240 chars but for display needs to be less than 30 use the #character to denote joysicks etc
+filename:- assumes $ dir needs to be less than 10 characters if dir specifed or less than 8 if not
+execute type :- crles chain run load execute special uppper of lower case 
+page number :- should be the true page required only required for basic or the lSB for specials
 game type :-acgsmpuz adventure cheat game strategy music picture util z=unkown
 favorate :- Y/N based on https://stardot.org.uk/forums/viewtopic.php?f=1&t=8259
 
@@ -26,6 +26,8 @@ mmcdat 30 years games archive based on https://stardot.org.uk/forums/viewtopic.p
 
 programs used
 X - Usage <fsp> (<dno>/<dsp>) (<drv>) a launcher program that takes a filename selects din and drive (defaults to current drive.  uses the exe details (as per *info command) to select any special processing (from 7F00 up) will re allocate code anywhere as relocation code runs in zero page.  Will use disc setting for !boot
+
+P.magic consumes TAB deliminated files will be intergrated into P.process at some stage.  Will change exe details if both magic and Special and page fields agree.
 
 Magic - Usage <fsp> (<dno>/<dsp>) (<drv>) a program for analysing program to accertain type does some magic byte checks via embedded look up tables. sets E% for exe address and L% for load.  will do some rudamentry PAGE=&E00 checks for basic programs
 

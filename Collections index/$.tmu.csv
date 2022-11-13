@@ -1,0 +1,1361 @@
+The Micro User	Introduction	HEADER	C	19	tmu83-03	U	N
+The Micro User	Games Paddle 1	A_TO_D1	C	19	tmu83-03	U	N
+The Micro User	Games Paddle 2	A_TO_D2	C	19	tmu83-03	U	N
+The Micro User	Mode Demo 1	COLR1	C	19	tmu83-03	U	N
+The Micro User	Mode Demo 2	COLR2	C	19	tmu83-03	U	N
+The Micro User	Mode Demo 3	COLR3	C	19	tmu83-03	U	N
+The Micro User	Mode Demo 4	COLR4	C	19	tmu83-03	U	N
+The Micro User	Mode Demo 5	COLR5	C	19	tmu83-03	U	N
+The Micro User	CFS Bug Patch	PATCH	C	19	tmu83-03	U	N
+The Micro User	Deathwatch	DEATHWA	C	19	tmu83-03	U	N
+The Micro User	Triangle Shapes	SHAPES	C	19	tmu83-03	U	N
+The Micro User	Random Num Ex 1	RANDOM1	C	19	tmu83-03	U	N
+The Micro User	Random Num Ex 2	RANDOM2	C	19	tmu83-03	U	N
+The Micro User	Random Num Ex 2	GUESS	C	19	tmu83-03	U	N
+The Micro User	Random Num Bingo	BINGO	C	19	tmu83-03	U	N
+The Micro User	Bubblesort Demo 1	BUB1	C	19	tmu83-03	U	N
+The Micro User	Bubblesort Demo 2	BUB2	C	19	tmu83-03	U	N
+The Micro User	Workshop 1	WORKSH1	C	19	tmu83-03	U	N
+The Micro User	Workshop 2	WORKSH2	C	19	tmu83-03	U	N
+The Micro User	Workshop 3	WORKSH3	C	19	tmu83-03	U	N
+The Micro User	Introduction	HEADER	C	19	tmu83-04	U	N
+The Micro User	Do-It-Yourself Program 1	L+T1	C	19	tmu83-04	U	N
+The Micro User	Do-It-Yourself Program 2	L+T2	C	19	tmu83-04	U	N
+The Micro User	Nim Program	NIM	C	19	tmu83-04	U	N
+The Micro User	King Kong	KONG	C	19	tmu83-04	U	N
+The Micro User	List BASIC Tokens	TOKENS	C	19	tmu83-04	U	N
+The Micro User	Horoscope	HOROSCO	C	19	tmu83-04	U	N
+The Micro User	Bits & Bytes	BINARY	C	19	tmu83-04	U	N
+The Micro User	Disc Formatter	FORMATT	C	19	tmu83-04	U	N
+The Micro User	Disassembler	DISASSE	C	19	tmu83-04	U	N
+The Micro User	Monitor Demo 1	MON1	C	19	tmu83-04	U	N
+The Micro User	Monitor Demo 2	MON2	C	19	tmu83-04	U	N
+The Micro User	Monitor Demo 3	MON3	C	19	tmu83-04	U	N
+The Micro User	Monitor Demo 4	MON4	C	19	tmu83-04	U	N
+The Micro User	Graphics Program  1	GR01	C	19	tmu83-04	U	N
+The Micro User	Graphics Program  2	GR02	C	19	tmu83-04	U	N
+The Micro User	Graphics Program  3	GR03	C	19	tmu83-04	U	N
+The Micro User	Graphics Program  4	GR04	C	19	tmu83-04	U	N
+The Micro User	Graphics Program  5	GR05	C	19	tmu83-04	U	N
+The Micro User	Graphics Program  6	GR06	C	19	tmu83-04	U	N
+The Micro User	Graphics Program  7	GR07	C	19	tmu83-04	U	N
+The Micro User	Graphics Program  8	GR08	C	19	tmu83-04	U	N
+The Micro User	Graphics Program  9	GR09	C	19	tmu83-04	U	N
+The Micro User	Graphics Program 10	GR10	C	19	tmu83-04	U	N
+The Micro User	Introduction	HEADER	C	19	tmu83-05	U	N
+The Micro User	Pelmanism	PELMAN	C	19	tmu83-05	U	N
+The Micro User	Teletext Program 1	TTXT1	C	19	tmu83-05	U	N
+The Micro User	Teletext Program 2	TTXT2	C	19	tmu83-05	U	N
+The Micro User	pH Curve	pH	C	19	tmu83-05	U	N
+The Micro User	Colorimeter Interface	COLOR	C	19	tmu83-05	U	N
+The Micro User	Character Manipulation	CHARACT	C	19	tmu83-05	U	N
+The Micro User	Teletext Program 3	TTXT3	C	19	tmu83-05	U	N
+The Micro User	Air Strike	AIRSTRI	C	19	tmu83-05	g	N
+The Micro User	Function Key Program	FUNCTIO	C	19	tmu83-05	U	N
+The Micro User	Monitor Winner	CONTEST	C	19	tmu83-05	U	N
+The Micro User	Anagrams	ANAGRAM	C	19	tmu83-05	U	N
+The Micro User	Spring Stretching	SPRING	C	19	tmu83-05	U	N
+The Micro User	Graphics Demos	GRDEMOS	C	19	tmu83-05	U	N
+The Micro User	Joystick doodle 1	JOY1	C	19	tmu83-05	U	N
+The Micro User	Joystick doodle 2	JOY2	C	19	tmu83-05	U	N
+The Micro User	OSBYTE Program 1	OSBYTE1	C	19	tmu83-05	U	N
+The Micro User	OSBYTE Program 2	OSBYTE2	C	19	tmu83-05	U	N
+The Micro User	OSBYTE Program 3	OSBYTE3	C	19	tmu83-05	U	N
+The Micro User	OSBYTE Program 4	OSBYTE4	C	19	tmu83-05	U	N
+The Micro User	OSBYTE Program 5	OSBYTE5	C	19	tmu83-05	U	N
+The Micro User	OSBYTE Program 6	OSBYTE6	C	19	tmu83-05	U	N
+The Micro User	OSBYTE Program 7	OSBYTE7	C	19	tmu83-05	U	N
+The Micro User	OSBYTE Program 8	OSBYTE8	C	19	tmu83-05	U	N
+The Micro User	OSBYTE Program 9	OSBYTE9	C	19	tmu83-05	U	N
+The Micro User	GCOL colour demo	GCOL	C	19	tmu83-05	U	N
+The Micro User	Micro User Header	HEADER	C	19	tmu83-06	U	N
+The Micro User	User-Defined Characters	USERCHA	C	19	tmu83-06	U	N
+The Micro User	Space Pilot	PILOT	C	19	tmu83-06	g	N
+The Micro User	Nomadism Simulator	NOMSIM	C	19	tmu83-06	U	N
+The Micro User	Digi Sketch Pad	DIGITIS	C	19	tmu83-06	U	N
+The Micro User	Capering Characters 1	CC1	C	19	tmu83-06	U	N
+The Micro User	Capering Characters 2	CC2	C	19	tmu83-06	U	N
+The Micro User	Capering Characters 3	CC3	C	19	tmu83-06	U	N
+The Micro User	Capering Characters 4	CC4	C	19	tmu83-06	U	N
+The Micro User	Capering Characters 5	CC5	C	19	tmu83-06	U	N
+The Micro User	Graphics Program 1	GR01	C	19	tmu83-06	U	N
+The Micro User	Graphics Program 2	GR02	C	19	tmu83-06	U	N
+The Micro User	Graphics Program 3	GR03	C	19	tmu83-06	U	N
+The Micro User	Graphics Program 4	GR04	C	19	tmu83-06	U	N
+The Micro User	Download Utility	DOWNLOA	C	19	tmu83-06	U	N
+The Micro User	One-line program	ONELINE	C	19	tmu83-06	U	N
+The Micro User	Micro User Header	HEADER	C	19	tmu83-07	U	N
+The Micro User	Set useful function keys	KEYSET	C	19	tmu83-07	U	N
+The Micro User	Ten Pins	TENPIN	C	19	tmu83-07	U	N
+The Micro User	Cup Runneth Over	CUP	C	19	tmu83-07	U	N
+The Micro User	Space Pods	SPACEPO	C	19	tmu83-07	U	N
+The Micro User	BREAK Key Fixer	BREAKFI	C	19	tmu83-07	U	N
+The Micro User	Save Screen	SCRSAVE	C	19	tmu83-07	U	N
+The Micro User	Load Screen	SCRLOAD	C	19	tmu83-07	U	N
+The Micro User	Circuit Test	TEST	C	19	tmu83-07	U	N
+The Micro User	Steady Hands	STEADY	C	19	tmu83-07	U	N
+The Micro User	Printer List Formatter	FORMAT	C	19	tmu83-07	U	N
+The Micro User	Graphics Program 1	GR01	C	19	tmu83-07	U	N
+The Micro User	Graphics Program 2	GR02	C	19	tmu83-07	U	N
+The Micro User	Graphics Program 3	GR03	C	19	tmu83-07	U	N
+The Micro User	Graphics Program 4	GR04	C	19	tmu83-07	U	N
+The Micro User	Graphics Program 5	GR05	C	19	tmu83-07	U	N
+The Micro User	Graphics Program 5A	GR05A	C	19	tmu83-07	U	N
+The Micro User	Download Utility	DOWNLOA	C	19	tmu83-07	U	N
+The Micro User	Micro User Header	HEADER	C	19	tmu83-08	U	N
+The Micro User	Fruities	FRUITIE	C	19	tmu83-08	U	N
+The Micro User	Animation Example 1	ANIMAT1	C	19	tmu83-08	U	N
+The Micro User	Animation Example 2	ANIMAT2	C	19	tmu83-08	U	N
+The Micro User	Animation Example 3	ANIMAT3	C	19	tmu83-08	U	N
+The Micro User	Animation Example 4	ANIMAT4	C	19	tmu83-08	U	N
+The Micro User	Tape -> Disc Prog 1	CASDIS1	C	19	tmu83-08	U	N
+The Micro User	Tape -> Disc Prog 2	CASDIS2	C	19	tmu83-08	U	N
+The Micro User	Logical Operators 1	LOGIC1	C	19	tmu83-08	U	N
+The Micro User	Logical Operators 2	LOGIC2	C	19	tmu83-08	U	N
+The Micro User	Logical Operators 3	LOGIC3	C	19	tmu83-08	U	N
+The Micro User	Logical Operators 4	LOGIC4	C	19	tmu83-08	U	N
+The Micro User	Logical Operators 5	LOGIC5	C	19	tmu83-08	U	N
+The Micro User	Logical Operators 6	LOGIC6	C	19	tmu83-08	U	N
+The Micro User	Logical Operators 7	LOGIC7	C	19	tmu83-08	U	N
+The Micro User	Logical Operators 8	LOGIC8	C	19	tmu83-08	U	N
+The Micro User	Logical Operators 9	LOGIC9	C	19	tmu83-08	U	N
+The Micro User	Colourful Characters 1	TTXT1	C	19	tmu83-08	U	N
+The Micro User	Colourful Characters 2	TTXT2	C	19	tmu83-08	U	N
+The Micro User	Colourful Characters 3	TTXT3	C	19	tmu83-08	U	N
+The Micro User	Colourful Characters 4	TTXT4	C	19	tmu83-08	U	N
+The Micro User	Programming Loops	LOOPS	C	19	tmu83-08	U	N
+The Micro User	Micro User Header	HEADER	C	19	tmu83-09	U	N
+The Micro User	Dumb Terminal Program	DUMTERM	C	19	tmu83-09	U	N
+The Micro User	VDU 19 Machine Code	VDU19	C	19	tmu83-09	U	N
+The Micro User	Graphics Terminal Prog	GRAPHTE	C	19	tmu83-09	U	N
+The Micro User	Galactic Invaders	GALAXYI	C	19	tmu83-09	U	N
+The Micro User	Robin & Marian	ROBIN	C	19	tmu83-09	U	N
+The Micro User	Sample Variables	VARS	C	19	tmu83-09	U	N
+The Micro User	Beeb Bodybuilding	BODYBUI	C	19	tmu83-09	U	N
+The Micro User	GCOL Program 1	GRAPH1	C	19	tmu83-09	U	N
+The Micro User	GCOL Program 2	GRAPH2	C	19	tmu83-09	U	N
+The Micro User	GCOL Program 3	GRAPH3	C	19	tmu83-09	U	N
+The Micro User	GCOL Program 4	GRAPH4	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Save 16K	BMSV16K	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Load 16K	BMLD16K	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 1	BMPRG1	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 2A	BMPRG2A	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 2B	BMPRG2B	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 3A	BMPRG3A	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 3B	BMPRG3B	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 4	BMPRG4	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 5	BMPRG5	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 6	BMPRG6	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 7A	BMPRG7A	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 7B	BMPRG7B	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 8A	BMPRG8A	C	19	tmu83-09	U	N
+The Micro User	Disk Benchmark Prog 8B	BMPRG8B	C	19	tmu83-09	U	N
+The Micro User	Micro User Header	HEADER	C	19	tmu83-10	U	N
+The Micro User	FOR/NEXT Demos	LOOPS	C	19	tmu83-10	U	N
+The Micro User	Print formatting	PRINT1	C	19	tmu83-10	U	N
+The Micro User	Print formatting	PRINT2	C	19	tmu83-10	U	N
+The Micro User	Print formatting	PRINT3	C	19	tmu83-10	U	N
+The Micro User	Fishing	FISHING	C	19	tmu83-10	U	N
+The Micro User	Graphics 1:Line Arc	GR1	C	19	tmu83-10	U	N
+The Micro User	Graphics 2:Filled Arc	GR2	C	19	tmu83-10	U	N
+The Micro User	Graphics 3:Filled Cir	GR3	C	19	tmu83-10	U	N
+The Micro User	Graphics 4:Dartboard	GR4	C	19	tmu83-10	U	N
+The Micro User	Graphics 5:Spiral	GR5	C	19	tmu83-10	U	N
+The Micro User	Graphics 6:Animation	GR6	C	19	tmu83-10	U	N
+The Micro User	RS423 Link Program 1	LINK1	C	19	tmu83-10	U	N
+The Micro User	RS423 Link Program 2	LINK2	C	19	tmu83-10	U	N
+The Micro User	Chessboard	CHESS	C	19	tmu83-10	U	N
+The Micro User	Hardware: Bellringer	BELLRIN	C	19	tmu83-10	U	N
+The Micro User	Hardware: Pentest	PENTEST	C	19	tmu83-10	U	N
+The Micro User	Contour Plotter	CONTOUR	C	19	tmu83-10	U	N
+The Micro User	Updated LIST formatter	FORMAT2	C	19	tmu83-10	U	N
+The Micro User	Joykeys	JOYKEYS	C	19	tmu83-10	U	N
+The Micro User	EU: 3D Plot	3D-PLOT	C	19	tmu83-10	U	N
+The Micro User	EU: WebWave	WEBWAVE	C	19	tmu83-10	U	N
+The Micro User	EU: Capital Idea	CAPITAL	C	19	tmu83-10	U	N
+The Micro User	EU: Day Of The Week	DAYOFWE	C	19	tmu83-10	U	N
+The Micro User	EU: Define CHR$ Demo	CHRDEMO	C	19	tmu83-10	U	N
+The Micro User	EU: Bomber	BOMBER	C	19	tmu83-10	U	N
+The Micro User	Micro User Header	HEADER	C	19	tmu83-11	U	N
+The Micro User	Light Pen Utility	PENDRAW	C	19	tmu83-11	U	N
+The Micro User	Blackjack	BLACKJA	C	19	tmu83-11	U	N
+The Micro User	Goblins	GOBLINS	C	19	tmu83-11	U	N
+The Micro User	EPROM BASIC Dump	SIDEWAY	C	19	tmu83-11	U	N
+The Micro User	Capacitor Change	CHARGE	C	19	tmu83-11	U	N
+The Micro User	Pendulum Plotter	PENDULU	C	19	tmu83-11	U	N
+The Micro User	Shady Characters 1	TUTOR1	C	19	tmu83-11	U	N
+The Micro User	Shady Characters 2	TUTOR2	C	19	tmu83-11	U	N
+The Micro User	Shady Characters 3	TUTOR3	C	19	tmu83-11	U	N
+The Micro User	Shady Characters 4	TUTOR4	C	19	tmu83-11	U	N
+The Micro User	Shady Characters 5	TUTOR5	C	19	tmu83-11	U	N
+The Micro User	Shady Characters 6	TUTOR6	C	19	tmu83-11	U	N
+The Micro User	Shady Characters 7	TUTOR7	C	19	tmu83-11	U	N
+The Micro User	Shady Characters 8	TUTOR8	C	19	tmu83-11	U	N
+The Micro User	Sound Demo 1	SOUND1	C	19	tmu83-11	U	N
+The Micro User	Sound Demo 2	SOUND2	C	19	tmu83-11	U	N
+The Micro User	Sound Demo 3	SOUND3	C	19	tmu83-11	U	N
+The Micro User	Sound Demo 4	SOUND4	C	19	tmu83-11	U	N
+The Micro User	Sound Demo 5	SOUND5	C	19	tmu83-11	U	N
+The Micro User	Sound Demo 6	SOUND6	C	19	tmu83-11	U	N
+The Micro User	Sound Demo 7	SOUND7	C	19	tmu83-11	U	N
+The Micro User	EU: Roman Candle	CANDLE	C	19	tmu83-11	U	N
+The Micro User	EU: Catherine Wheel	WHEEL	C	19	tmu83-11	U	N
+The Micro User	EU: Rocket	ROCKET	C	19	tmu83-11	U	N
+The Micro User	EU: Counting 12	COUNTIN	C	19	tmu83-11	U	N
+The Micro User	Strings Demos	STRINGS	C	19	tmu83-12	U	N
+The Micro User	Speed Reducer	SLOWER	C	19	tmu83-12	U	N
+The Micro User	Phantoms Of Tower Bridge	TOWER	C	19	tmu83-12	U	N
+The Micro User	Moving Pages	PAGED	C	19	tmu83-12	U	N
+The Micro User	Quick March Program	VDU23	C	19	tmu83-12	U	N
+The Micro User	Santa's Saucer	SANTA	C	19	tmu83-12	U	N
+The Micro User	Christmas Card	CARD	C	19	tmu83-12	U	N
+The Micro User	Beeb Bodybuilding	BODYBUI	C	19	tmu83-12	U	N
+The Micro User	Error list lister	ERRLIST	C	19	tmu83-12	U	N
+The Micro User	Graphics Demo 1	GRAPH1	C	19	tmu83-12	U	N
+The Micro User	Graphics Demo 2	GRAPH2	C	19	tmu83-12	U	N
+The Micro User	Graphics Demo 3	GRAPH3	C	19	tmu83-12	U	N
+The Micro User	Graphics Demo 4	GRAPH4	C	19	tmu83-12	U	N
+The Micro User	Graphics Demo 5	GRAPH5	C	19	tmu83-12	U	N
+The Micro User	Graphics Demo 6	GRAPH6	C	19	tmu83-12	U	N
+The Micro User	Graphics Demo 7	GRAPH7	C	19	tmu83-12	U	N
+The Micro User	Sound Demo 1	SOUND1	C	19	tmu83-12	U	N
+The Micro User	Sound Demo 2	SOUND2	C	19	tmu83-12	U	N
+The Micro User	Sound Demo 3	SOUND3	C	19	tmu83-12	U	N
+The Micro User	Sound Demo 4	SOUND4	C	19	tmu83-12	U	N
+The Micro User	Sound Demo 5	SOUND5	C	19	tmu83-12	U	N
+The Micro User	Sound Demo 6	SOUND6	C	19	tmu83-12	U	N
+The Micro User	EU: Anagrams	ANAGRAM	C	19	tmu83-12	U	N
+The Micro User	EU: Hangman	HANGMAN	C	19	tmu83-12	U	N
+The Micro User	EU: Meteors	METEORS	C	19	tmu83-12	U	N
+The Micro User	EU: French Verbs	FRENCH	C	19	tmu83-12	U	N
+The Micro User	Micro User Header	HEADER	C	19	tmu83-12	U	N
+The Micro User	Micro User Header	HEADER	C	19	tmu84-01	U	N
+The Micro User	Barrel Battle	BARRELS	C	19	tmu84-01	U	N
+The Micro User	Sound Doodle	DOODLE	C	19	tmu84-01	U	N
+The Micro User	Noteplay	NOTEPLA	C	19	tmu84-01	U	N
+The Micro User	Printing Pixels	DUMP1	C	19	tmu84-01	U	N
+The Micro User	Sparkjet Printout	DUMPSPA	C	19	tmu84-01	U	N
+The Micro User	Self-modifying program	SELFMOD	C	19	tmu84-01	U	N
+The Micro User	TAB Demos	BEGIN	C	19	tmu84-01	U	N
+The Micro User	Sound Demos	SOUNDS	C	19	tmu84-01	U	N
+The Micro User	GCOL Demo 1	GR01	C	19	tmu84-01	U	N
+The Micro User	GCOL Demo 2	GR02	C	19	tmu84-01	U	N
+The Micro User	GCOL Demo 3	GR03	C	19	tmu84-01	U	N
+The Micro User	GCOL Demo 4	GR04	C	19	tmu84-01	U	N
+The Micro User	GCOL Demo 5	GR05	C	19	tmu84-01	U	N
+The Micro User	EU: Kaleidoscope	KALEIDO	C	19	tmu84-01	U	N
+The Micro User	EU: Combinations	COMBINE	C	19	tmu84-01	U	N
+The Micro User	EU: Micro Cosmic Models	COSMIC	C	19	tmu84-01	U	N
+The Micro User	EU: Simon Says	SIMON	C	19	tmu84-01	U	N
+The Micro User	EU: Interst Rates	INTERES	C	19	tmu84-01	U	N
+The Micro User	EU: Digital Dice	DICE	C	19	tmu84-01	U	N
+The Micro User	EU: Quakers	QUACKER	C	19	tmu84-01	U	N
+The Micro User	EU: Doodlebug	DOODLEB	C	19	tmu84-01	U	N
+The Micro User	EU: Buzzword Generator	BUZZWOR	C	19	tmu84-01	U	N
+The Micro User	EU: Fair and Square	SQUARES	C	19	tmu84-01	U	N
+The Micro User	EU: Iron Ring	RING	C	19	tmu84-01	U	N
+The Micro User	EU: Euromap	EUROMAP	C	19	tmu84-01	U	N
+The Micro User	Micro User Header	HEADER	C	19	tmu84-02	U	N
+The Micro User	Balancing	BALANCE	C	19	tmu84-02	g	N
+The Micro User	Single Key Entry Prog 1	ONEKEY1	C	19	tmu84-02	U	N
+The Micro User	Single Key Entry Prog 2	ONEKEY2	C	19	tmu84-02	U	N
+The Micro User	Single Key Entry Prog 3	ONEKEY3	C	19	tmu84-02	U	N
+The Micro User	Recursion Competition Winner	RECURSE	C	19	tmu84-02	U	N
+The Micro User	Frogs 'n' Dogs	FROGS	C	19	tmu84-02	g	N
+The Micro User	Alien Invasion	INVASIO	C	19	tmu84-02	U	N
+The Micro User	Missing Words	WORDS	C	19	tmu84-02	U	N
+The Micro User	EEC Picture Gallery	EECGAL	C	19	tmu84-02	U	N
+The Micro User	Text Encoder	CODER	C	19	tmu84-02	U	N
+The Micro User	Sound Experimenter	ENVGEN	C	19	tmu84-02	U	N
+The Micro User	Bodybuilding Clock	CLOCK	C	19	tmu84-02	U	N
+The Micro User	MODE Demos	BEGIN	C	19	tmu84-02	U	N
+The Micro User	Checking User Input 1	CHECK1	C	19	tmu84-02	U	N
+The Micro User	Checking User Input 2	CHECK2	C	19	tmu84-02	U	N
+The Micro User	Checking User Input 3	CHECK3	C	19	tmu84-02	U	N
+The Micro User	SOUND Demos	SOUNDS	C	19	tmu84-02	U	N
+The Micro User	MODE 7 Graphics Demo 1	TTXT1	C	19	tmu84-02	U	N
+The Micro User	MODE 7 Graphics Demo 2	TTXT2	C	19	tmu84-02	U	N
+The Micro User	Arrays Demo 1	ARRAYS1	C	19	tmu84-02	U	N
+The Micro User	Arrays Demo 2	ARRAYS2	C	19	tmu84-02	U	N
+The Micro User	Arrays Demo 3	ARRAYS3	C	19	tmu84-02	U	N
+The Micro User	Validating Input	VALIDAT	C	19	tmu84-03	U	N
+The Micro User	Serial Port Timesharing	SHARE	C	19	tmu84-03	U	N
+The Micro User	Denary Derrick	DENARY	C	19	tmu84-03	U	N
+The Micro User	Micro User Birthday	CANDLE	C	19	tmu84-03	U	N
+The Micro User	Maze Munch	MUNCH	C	19	tmu84-03	U	N
+The Micro User	Verify BASIC Programs	VERIFYS	C	19	tmu84-03	U	N
+The Micro User	Freeze-Frame Screen Saver	FREEZE	C	19	tmu84-03	U	N
+The Micro User	Save Screen	SCDUMP	C	19	tmu84-03	U	N
+The Micro User	Simple Disk Menu	DISKMEN	C	19	tmu84-03	U	N
+The Micro User	Simple Bad Program Rescuer	BADRESC	C	19	tmu84-03	U	N
+The Micro User	A/D Converter Test Program	ADTEST	C	19	tmu84-03	U	N
+The Micro User	Beeb Oscilloscope	SCOPE	C	19	tmu84-03	U	N
+The Micro User	High-Res Lightpen	HRESPEN	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 1	SOUND1	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 2	SOUND2	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 3	SOUND3	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 4	SOUND4	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 5	SOUND5	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 6	SOUND6	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 7	SOUND7	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 8	SOUND8	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 9	SOUND9	C	19	tmu84-03	U	N
+The Micro User	SOUND Demo 10	SOUND10	C	19	tmu84-03	U	N
+The Micro User	COLOUR demo 1	COLOUR1	C	19	tmu84-03	U	N
+The Micro User	COLOUR demo 2	COLOUR2	C	19	tmu84-03	U	N
+The Micro User	COLOUR demo 3	COLOUR3	C	19	tmu84-03	U	N
+The Micro User	COLOUR demo 4	COLOUR4	C	19	tmu84-03	U	N
+The Micro User	COLOUR demo 5	COLOUR5	C	19	tmu84-03	U	N
+The Micro User	Sound Library	SNDLIB	C	19	tmu84-04	U	N
+The Micro User	SOUNDS for Sound Library	EXPLAN	C	19	tmu84-04	U	N
+The Micro User	BBC Owl	OWL	C	19	tmu84-04	U	N
+The Micro User	Serial Transfer Prog 1	TRX1	C	19	tmu84-04	U	N
+The Micro User	Serial Transfer Prog 2	TRX2	C	19	tmu84-04	U	N
+The Micro User	Judgement Room	JUDGE	C	19	tmu84-04	a	N
+The Micro User	Heart Rate Moitor	HEART	C	19	tmu84-04	U	N
+The Micro User	Magic Squares	MAGIC	C	19	tmu84-04	U	N
+The Micro User	Sea Wall Maths	SEAWALL	C	19	tmu84-04	g	N
+The Micro User	Easter Maze	MAZE2	C	19	tmu84-04	U	N
+The Micro User	Golf Simulation	GOLF	C	19	tmu84-04	U	N
+The Micro User	April Fool	FOOL	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 1	ENVEL01	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 2	ENVEL02	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 3	ENVEL03	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 4	ENVEL04	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 5	ENVEL05	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 6	ENVEL06	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 7	ENVEL07	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 8	ENVEL08	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 9	ENVEL09	C	19	tmu84-04	U	N
+The Micro User	ENVELOPE Demo 10	ENVEL10	C	19	tmu84-04	U	N
+The Micro User	Big Letters 1	BIGLET1	C	19	tmu84-05	U	N
+The Micro User	Big Letters 2	BIGLET2	C	19	tmu84-05	U	N
+The Micro User	Big Letters 3	BIGLET3	C	19	tmu84-05	U	N
+The Micro User	Trap Door	ADVENTU	C	19	tmu84-05	a	N
+The Micro User	Damraider	DAMRAID	C	19	tmu84-05	U	N
+The Micro User	Dug Dig	DUGDIG	C	19	tmu84-05	U	N
+The Micro User	Spirograph	SPIRO	C	19	tmu84-05	U	N
+The Micro User	ENVELOPE Designer	ENVAID	C	19	tmu84-05	U	N
+The Micro User	Extended Renumber and Verify	RENUMBE	C	19	tmu84-05	U	N
+The Micro User	Stepper Motor Controller 1	STEP1	C	19	tmu84-05	U	N
+The Micro User	Stepper Motor Controller 2	STEP2	C	19	tmu84-05	U	N
+The Micro User	Prime Number Lister	PRIMES	C	19	tmu84-05	U	N
+The Micro User	MODE 7 Centred Text Demo	CENTRE1	C	19	tmu84-05	U	N
+The Micro User	MODE 2 Centred Text Demo	CENTRE2	C	19	tmu84-05	U	N
+The Micro User	SOUND Demos	SOUNDS	C	19	tmu84-05	U	N
+The Micro User	Simple Overlays Program 1	MEMORY1	C	19	tmu84-05	U	N
+The Micro User	Simple Overlays Program 2	MEMORY2	C	19	tmu84-05	U	N
+The Micro User	Simple Overlays Program 3	MEMORY3	C	19	tmu84-05	U	N
+The Micro User	Simple Overlays Program 4	MEMORY4	C	19	tmu84-05	U	N
+The Micro User	Simple Overlays PROC_1	PROC_1	C	19	tmu84-05	U	N
+The Micro User	Simple Overlays PROC_2	PROC_2	C	19	tmu84-05	U	N
+The Micro User	6502 Monitor	MONITOR	C	19	tmu84-06	U	N
+The Micro User	Make Data for 6502 Monitor	MKDATA	C	19	tmu84-06	U	N
+The Micro User	Quadline 4 in a Row	QUAD	C	19	tmu84-06	U	N
+The Micro User	3D Road Racer	3DRACER	C	19	tmu84-06	U	N
+The Micro User	Areas of Shapes	AREAS	C	19	tmu84-06	U	N
+The Micro User	Disk Toolkit Program 1	DZAPI	C	19	tmu84-06	U	N
+The Micro User	Disk Toolkit Program 2	DZAPII	C	19	tmu84-06	U	N
+The Micro User	Rotating Coloured Spokes	SPOKES	C	19	tmu84-06	U	N
+The Micro User	List Function Keys	KEYS	C	19	tmu84-07	U	N
+The Micro User	MODE 7 Graphics	TIDISK	C	19	tmu84-07	U	N
+The Micro User	Confirm Overwriting on Save	SAVE?	C	19	tmu84-07	U	N
+The Micro User	Doomrun	DOOMRUN	C	19	tmu84-07	U	N
+The Micro User	Alice's Unbirthdays	ALICE1	C	19	tmu84-07	U	N
+The Micro User	Alice's Safe Cracking	ALICE2	C	19	tmu84-07	U	N
+The Micro User	Backgammon	BACKGAM	C	19	tmu84-07	U	N
+The Micro User	Acoustic Coupler Modem	ACOUSTI	C	19	tmu84-07	U	N
+The Micro User	Dumb Terminal 1	TERM1	C	19	tmu84-07	U	N
+The Micro User	Dumb Terminal 2	TERM2	C	19	tmu84-07	U	N
+The Micro User	Teletext Screen Editor	TEDIT	C	19	tmu84-08	U	N
+The Micro User	Sqwhere Bat-n-Ball	SQWHERE	C	19	tmu84-08	g	N
+The Micro User	Gridman	GRIDMAN	C	19	tmu84-08	g	N
+The Micro User	Difference Squares	DSQUARE	C	19	tmu84-08	U	N
+The Micro User	General Purpose Input Code	INPUT	C	19	tmu84-08	U	N
+The Micro User	Hardware Scrolling Demo 1	SCROLL1	C	19	tmu84-08	U	N
+The Micro User	Hardware Scrolling Demo 2	SCROLL2	C	19	tmu84-08	U	N
+The Micro User	Bells	BELLS	C	19	tmu84-08	a	N
+The Micro User	Castle of Fear	CASTLE	C	19	tmu84-08	a	N
+The Micro User	Disc Editor	DEDIT	C	19	tmu84-08	U	N
+The Micro User	Flip Flop Operation	FLIPFLO	C	19	tmu84-08	U	N
+The Micro User	Extended User Port Tester	PORTTES	C	19	tmu84-08	U	N
+The Micro User	GGOL 3 Demo	GCOL3	C	19	tmu84-08	U	N
+The Micro User	Teletext Screen Dump	TTXTDMP	C	19	tmu84-09	U	N
+The Micro User	Number Signs Quiz	NUMSIGN	C	19	tmu84-09	U	N
+The Micro User	The Filthy 15	ALICE	C	19	tmu84-09	g	N
+The Micro User	Villains	VILLAIN	C	19	tmu84-09	U	N
+The Micro User	Micro Terminal	MTERM	C	19	tmu84-09	U	N
+The Micro User	Write string to file	FILEOUT	C	19	tmu84-09	U	N
+The Micro User	Read string from file	FILEIN	C	19	tmu84-09	U	N
+The Micro User	Rollerball	ROLLERB	C	19	tmu84-09	U	N
+The Micro User	Frequency Counter/Timer 1	FMETER1	C	19	tmu84-09	U	N
+The Micro User	Frequency Counter/Timer 2	FMETER2	C	19	tmu84-09	U	N
+The Micro User	Frequency Counter/Timer 3	FMETER3	C	19	tmu84-09	U	N
+The Micro User	Frequency Counter/timer 4	FMETER4	C	19	tmu84-09	U	N
+The Micro User	Video Titling Demo 1	VIDEO1	C	19	tmu84-09	U	N
+The Micro User	Video Titling Demo 2	VIDEO2	C	19	tmu84-09	U	N
+The Micro User	Video Titling Demo 3	VIDEO3	C	19	tmu84-09	U	N
+The Micro User	Video Titling Demo 4	VIDEO4	C	19	tmu84-09	U	N
+The Micro User	Multiple Colours in MODE 0	MORECOL	C	19	tmu84-10	U	N
+The Micro User	Joystick Input Demo 1	INPUT1	C	19	tmu84-10	U	N
+The Micro User	Load Input 3 or Input 4	INPUT2	C	19	tmu84-10	U	N
+The Micro User	Changes to Input Demo 1	INPUT3	C	19	tmu84-10	U	N
+The Micro User	Joystick Input Demo 2	INPUT4	C	19	tmu84-10	U	N
+The Micro User	Sideway RAM/ROM Demo	PAGERAM	C	19	tmu84-10	U	N
+The Micro User	Hunt The Wampus	WAMPUS	C	19	tmu84-10	U	N
+The Micro User	Split Windows Demo	SPLITS	C	19	tmu84-10	U	N
+The Micro User	Escape The Goulogs	BALLOON	C	19	tmu84-10	U	N
+The Micro User	Waveform Generator	DACONV	C	19	tmu84-10	U	N
+The Micro User	Integer Variable Lister	INTEGER	C	19	tmu84-10	U	N
+The Micro User	Disc Loader	DSCLOAD	C	19	tmu84-11	U	N
+The Micro User	Large Teletext Characters	M7CHARS	C	19	tmu84-11	U	N
+The Micro User	Two-Player Duel	DUEL	C	19	tmu84-11	U	N
+The Micro User	Blockbuster	BUSTER	C	19	tmu84-11	U	N
+The Micro User	Beside The Seaside	SEASIDE	C	19	tmu84-11	U	N
+The Micro User	Sound Synthesiser 1	SYNTH-1	C	19	tmu84-11	U	N
+The Micro User	Sound Synthesiser 2	SYNTH-2	C	19	tmu84-11	U	N
+The Micro User	Assembling 65C02 Opcodes 1	6502-1	C	19	tmu84-11	U	N
+The Micro User	Assembling 65C02 Opcodes 2	6502-2	C	19	tmu84-11	U	N
+The Micro User	Assembling 65C02 Opcodes 3	6502-3	C	19	tmu84-11	U	N
+The Micro User	Omega Probe	0MEGA	C	19	tmu84-12	U	N
+The Micro User	Memory Edit	MEDIT	C	19	tmu84-12	U	N
+The Micro User	Christmas Carol on Interupts	CAROL	C	19	tmu84-12	U	N
+The Micro User	Snow Vaders	SNOWVAD	C	19	tmu84-12	U	N
+The Micro User	Pyramid Painter	PAINTER	C	19	tmu84-12	U	N
+The Micro User	Tight Rope Walker	TIGHTRO	C	19	tmu84-12	U	N
+The Micro User	Foot-controlled Training	TRAIN	C	19	tmu84-12	U	N
+The Micro User	Miner Bill	MINER	C	19	tmu84-12	g	N
+The Micro User	Magic Garden	GARDEN	C	19	tmu84-12	g	N
+The Micro User	Ladders	LADDERS	C	19	tmu84-12	g	N
+The Micro User	Fun With Polygons	POLYGON	C	19	tmu84-12	U	N
+The Micro User	Disc Save	DSCSAVE	C	19	tmu84-12	U	N
+The Micro User	Formatted Catalog	CATALOG	C	19	tmu84-12	U	N
+The Micro User	Galactic Tycoon	TYCOON	C	19	tmu85-01	U	N
+The Micro User	Matchmaker	MATCH	C	19	tmu85-01	g	N
+The Micro User	Printing In-Line Text	PRTEXT	C	19	tmu85-01	U	N
+The Micro User	Variable-Speed Printing	SPEEDPR	C	19	tmu85-01	U	N
+The Micro User	Search Through Program	SEARCH	C	19	tmu85-01	U	N
+The Micro User	Rover	ROVER	C	19	tmu85-01	g	N
+The Micro User	Two-Player Backgammon	BACKTWO	C	19	tmu85-01	U	N
+The Micro User	Trackerball Test	BALLTES	C	19	tmu85-01	U	N
+The Micro User	Trackerball Draughtsman	TRACKER	C	19	tmu85-01	U	N
+The Micro User	6502 2nd Proc: Invert Screen	6502-1	C	19	tmu85-01	U	N
+The Micro User	6502 2nd Proc: Transfer Data	6502-2	C	19	tmu85-01	U	N
+The Micro User	6502 2nd Proc: Client Code	6502-3	C	19	tmu85-01	U	N
+The Micro User	6502 2nd Proc: Host Code	6502-4	C	19	tmu85-01	U	N
+The Micro User	Graphics Demo Program 1	GRAFIX1	C	19	tmu85-01	U	N
+The Micro User	Graphics Demo Program 2	GRAFIX2	C	19	tmu85-01	U	N
+The Micro User	Graphics Demo Program 3	GRAFIX3	C	19	tmu85-01	U	N
+The Micro User	Graphics Demo Program 4	GRAFIX4	C	19	tmu85-01	U	N
+The Micro User	Graphics Demo Program 5	GRAFIX5	C	19	tmu85-01	U	N
+The Micro User	Graphics Demo Program 6	GRAFIX6	C	19	tmu85-01	U	N
+The Micro User	Atomic Protector	ATOMPR	C	19	tmu85-02	U	N
+The Micro User	Alice Hint Decoder 1	ALICE1	C	19	tmu85-02	g	N
+The Micro User	Alice Hint Decoder 2	ALICE2	C	19	tmu85-02	g	N
+The Micro User	Alice Colours 3	ALICE3	C	19	tmu85-02	g	N
+The Micro User	Speech Synth Sentence Editor	TALKER	C	19	tmu85-02	U	N
+The Micro User	Helicopter Dogfight	DOGFIGH	C	19	tmu85-02	U	N
+The Micro User	Palace of Craal	CRAAL	C	19	tmu85-02	a	N
+The Micro User	Lower Case PROC Names	LOWER	C	19	tmu85-02	U	N
+The Micro User	Tracker-Ball Driver	TRACKDR	C	19	tmu85-02	U	N
+The Micro User	Pilot Interpreter	PILOT	C	19	tmu85-02	U	N
+The Micro User	Ultimate Disassembler	DISDUMP	C	19	tmu85-02	U	N
+The Micro User	Calling the BASIC ROM 1	BASROM1	C	19	tmu85-02	U	N
+The Micro User	Calling the BASIC ROM 2	BASROM2	C	19	tmu85-02	U	N
+The Micro User	M/C Games: Screen Writing 1	MCGAME1	C	19	tmu85-02	U	N
+The Micro User	M/C Games: Screen Writing 2	MCGAME2	C	19	tmu85-02	U	N
+The Micro User	M/C Games: Screen Writing 3	MCGAME3	C	19	tmu85-02	U	N
+The Micro User	M/C Games: Screen Writing 4	MCGAME4	C	19	tmu85-02	U	N
+The Micro User	M/C Games: Screen Writing 5	MCGAME5	C	19	tmu85-02	U	N
+The Micro User	M/C Games: Screen Writing 6	MCGAME6	C	19	tmu85-02	U	N
+The Micro User	Disc String Search	DISCSEA	C	19	tmu85-03	U	N
+The Micro User	CataCastles #2	CASTLE	C	19	tmu85-03	g	N
+The Micro User	Dune	DUNROAM	C	19	tmu85-03	a	N
+The Micro User	Star Finder	STARFIN	C	19	tmu85-03	U	N
+The Micro User	Astro-Mines	MINES	C	19	tmu85-03	g	N
+The Micro User	Data Maker	DATAMAK	C	19	tmu85-03	U	N
+The Micro User	Define Printer Pound Char	POUNDFX	C	19	tmu85-03	U	N
+The Micro User	Flex	FLEX	C	19	tmu85-03	g	N
+The Micro User	Intercepting Break BASIC1	BREAK1	C	19	tmu85-03	U	N
+The Micro User	Intercepting Break BASIC2	BREAK2	C	19	tmu85-03	U	N
+The Micro User	Shinwa Pound Patch	POUNDSH	C	19	tmu85-03	U	N
+The Micro User	Arc-Drawing Routine	CURVE	C	19	tmu85-03	U	N
+The Micro User	Verify Vocab Files	SPEECH1	C	19	tmu85-03	U	N
+The Micro User	Print Vocab File List	SPEECH2	C	19	tmu85-03	U	N
+The Micro User	M/C Games: Screen Writing 1	MCGAM1	C	19	tmu85-03	U	N
+The Micro User	M/C Games: Screen Writing 1A	MCGAM1A	C	19	tmu85-03	U	N
+The Micro User	M/C Games: Screen Writing 2	MCGAM2	C	19	tmu85-03	U	N
+The Micro User	M/C Games: Screen Writing 3	MCGAM3	C	19	tmu85-03	U	N
+The Micro User	Strings Demos	STRINGS	C	19	tmu85-03	U	N
+The Micro User	Rabbit Run!	RABBIT	C	19	tmu85-04	g	N
+The Micro User	X-15 Flight Simulator	X-15	C	19	tmu85-04	g	N
+The Micro User	Fifteen Filthy Prisoners	PRISONE	C	19	tmu85-04	gdin din tmu85-03	N
+The Micro User	Beginning Databases	BEGINDB	C	19	tmu85-04	U	N
+The Micro User	Mornington Crescent	MORCRES	C	19	tmu85-04	g	N
+The Micro User	Mouse Calculator	CALCULA	C	19	tmu85-04	U	N
+The Micro User	Chatterbox	CHATTER	C	19	tmu85-04	U	N
+The Micro User	Voltmeter A/D Converter	SLOWAD	C	19	tmu85-04	U	N
+The Micro User	Dithering Pixels Prog 1	DITHER1	C	19	tmu85-04	U	N
+The Micro User	Dithering Pixels Prog 2	DITHER2	C	19	tmu85-04	U	N
+The Micro User	Dithering Pixels Source	DITHER3	C	19	tmu85-04	U	N
+The Micro User	M/C Games: Screen Writing 1	MCGAME1	C	19	tmu85-04	U	N
+The Micro User	M/C Games: Screen Writing 2	MCGAME2	C	19	tmu85-04	U	N
+The Micro User	M/C Games: Screen Writing 3	MCGAME3	C	19	tmu85-04	U	N
+The Micro User	M/C Games: Screen Writing 4	MCGAME4	C	19	tmu85-04	U	N
+The Micro User	M/C Games: Screen Writing 5	MCGAME5	C	19	tmu85-04	U	N
+The Micro User	Alice: Navigate	NAVIGAT	C	19	tmu85-05	U	N
+The Micro User	Alice: Hacker	HACKER	C	19	tmu85-05	U	N
+The Micro User	Stellar Rescue	STELLAR	C	19	tmu85-05	U	N
+The Micro User	Events: Example Code	EVENTS1	C	19	tmu85-05	U	N
+The Micro User	Events: Demo Program	EVENTS2	C	19	tmu85-05	U	N
+The Micro User	Teaching Clock 1	TELLTIM	C	19	tmu85-05	U	N
+The Micro User	Teaching Clock 2	CLOCK	C	19	tmu85-05	U	N
+The Micro User	Mega-Fast Plot 69	PLOT69	C	19	tmu85-05	U	N
+The Micro User	Sheila Slideshow: Recorder	SHEILA1	C	19	tmu85-05	U	N
+The Micro User	Sheila Slideshow: Playback	SHEILA2	C	19	tmu85-05	U	N
+The Micro User	Dominoes	DOMINO	C	19	tmu85-05	U	N
+The Micro User	Pound & Hash On Epson	POUNDHA	C	19	tmu85-05	U	N
+The Micro User	M/C Games: Sprite Code 1	MCGAME1	C	19	tmu85-05	U	N
+The Micro User	M/C Games: Sprite Code 2	MCGAME2	C	19	tmu85-05	U	N
+The Micro User	M/C Games: Sprite Code 3	MCGAME3	C	19	tmu85-05	U	N
+The Micro User	M/C Games: Sprite Code 4	MCGAME4	C	19	tmu85-05	U	N
+The Micro User	M/C Games: Sprite Code 5	MCGAME5	C	19	tmu85-05	U	N
+The Micro User	M/C Games: Sprite Code 6	MCGAME6	C	19	tmu85-05	U	N
+The Micro User	Anemometer	WINDY	C	19	tmu85-06	U	N
+The Micro User	Mrs Thatcher's Maze	MAZE	C	19	tmu85-06	U	N
+The Micro User	Epson Type Setter	EPSON	C	19	tmu85-06	U	N
+The Micro User	LPRINT with *LINE <text>	LPRINT	C	19	tmu85-06	U	N
+The Micro User	Calling BASIC routines 1	EVAL1	C	19	tmu85-06	U	N
+The Micro User	Calling BASIC routines 2	EVAL2	C	19	tmu85-06	U	N
+The Micro User	Calling BASIC routines 3	EVAL3	C	19	tmu85-06	U	N
+The Micro User	Activities Matching	ACTIVIT	C	19	tmu85-06	g	N
+The Micro User	Cat-Napper	CATNAP	C	19	tmu85-06	U	N
+The Micro User	Simon Quackers	SIMONQU	C	19	tmu85-06	U	N
+The Micro User	Text File Stripper	STRIPPE	C	19	tmu85-06	U	N
+The Micro User	Shape Recognition	SHAPERE	C	19	tmu85-06	U	N
+The Micro User	Othello	OTHELLO	C	19	tmu85-06	U	N
+The Micro User	M/C Games 1: Definer	MCGAME1	C	19	tmu85-06	U	N
+The Micro User	M/C Games 2: Sprites	MCGAME2	C	19	tmu85-06	U	N
+The Micro User	M/C Games 3: Demo	MCGAME3	C	19	tmu85-06	U	N
+The Micro User	Draughts	DRAUGHT	C	19	tmu85-07	U	N
+The Micro User	RAMifcation: Library Creator	PAGERA1	C	19	tmu85-07	U	N
+The Micro User	RAMifcation: Library Handler	PAGERA2	C	19	tmu85-07	U	N
+The Micro User	Sideways ROM/RAM Saver	RAMSAVE	C	19	tmu85-07	U	N
+The Micro User	Mutant Fly	FLY	C	19	tmu85-07	U	N
+The Micro User	M/C Convert To Lower Case	MCBASI1	C	19	tmu85-07	U	N
+The Micro User	M/C Swap Two Variables	MCBASI2	C	19	tmu85-07	U	N
+The Micro User	M/C FP Routines Example 1	MCBASI3	C	19	tmu85-07	U	N
+The Micro User	M/C FP Routines Example 2	MCBASI4	C	19	tmu85-07	U	N
+The Micro User	5-Card Busy Beaver	ALICE	C	19	tmu85-07	U	N
+The Micro User	Screen Compression Source	COMPAC1	C	19	tmu85-07	U	N
+The Micro User	Screen Compresssion Demo	COMPAC2	C	19	tmu85-07	U	N
+The Micro User	Micro Disco	VIDEO	C	19	tmu85-07	U	N
+The Micro User	Hour Clock	CLOCK	C	19	tmu85-07	U	N
+The Micro User	3D Noughts & Crosses	3DNANDX	C	19	tmu85-07	U	N
+The Micro User	Double Height Characters	DOUBLEH	C	19	tmu85-07	U	N
+The Micro User	M/C Games: Scoring	MCGAME1	C	19	tmu85-07	U	N
+The Micro User	M/C Games: High Scores	MCGAME2	C	19	tmu85-07	U	N
+The Micro User	Beeb Numeric Keypad	KEYPATC	C	19	tmu85-07	U	N
+The Micro User	Beeb Numeric Keytest	KEYTEST	C	19	tmu85-07	U	N
+The Micro User	Mouse Organ	MOUSEOR	C	19	tmu85-08	U	N
+The Micro User	Harbour Command	COMMAND	C	19	tmu85-08	U	N
+The Micro User	Disk File Recoverer	FILEREC	C	19	tmu85-08	U	N
+The Micro User	M/C Games: RND Generator 1	MCGAME1	C	19	tmu85-08	U	N
+The Micro User	M/C Games: RND Generator 2	MCGAME2	C	19	tmu85-08	U	N
+The Micro User	Jackpot! Fruit Machine	FRUITMC	C	19	tmu85-08	g	N
+The Micro User	Formatted String Output	STRFORM	C	19	tmu85-08	U	N
+The Micro User	Flash Utility	FLASH	C	19	tmu85-08	U	N
+The Micro User	Ball Lightning	LIGHTNI	C	19	tmu85-09	U	N
+The Micro User	Al's Smiley Hunt	SMILEYH	C	19	tmu85-09	U	N
+The Micro User	M/C Game: Simple Demo	KEVSGAM	C	19	tmu85-09	U	N
+The Micro User	BBC B+ 1: OS Action Addr's	BPLUS1	C	19	tmu85-09	U	N
+The Micro User	BBC B+ 2: Variable Pointers	BPLUS2	C	19	tmu85-09	U	N
+The Micro User	BBC B+ 3: Clear Shadow RAM	BPLUS3	C	19	tmu85-09	U	N
+The Micro User	BBC B+ 4: PageRAM Read/Write	BPLUS4	C	19	tmu85-09	U	N
+The Micro User	BBC B+ 5: PageRAM Integers	BPLUS5	C	19	tmu85-09	U	N
+The Micro User	BBC B+ 6: PageRAM Strings	BPLUS6	C	19	tmu85-09	U	N
+The Micro User	BBC B+ 7: Screen Fill	BPLUS7	C	19	tmu85-09	U	N
+The Micro User	Display Error Handlers	ERROR1	C	19	tmu85-09	U	N
+The Micro User	Extended Error Handler	ERROR2	C	19	tmu85-09	U	N
+The Micro User	Read Error String	ERROR3	C	19	tmu85-09	U	N
+The Micro User	Quarters - 4-Way Dominoes	QUARTER	C	19	tmu85-09	U	N
+The Micro User	Variable Lister	VARLIST	C	19	tmu85-09	U	N
+The Micro User	Body Build 1: Tremelo	BBUILD1	C	19	tmu85-09	U	N
+The Micro User	Body Build 2: Filter Sweep	BBUILD2	C	19	tmu85-09	U	N
+The Micro User	Karate Warrior	KARATE	C	19	tmu85-10	U	N
+The Micro User	Alice	ALICE	C	19	tmu85-10	u	N
+The Micro User	Scrolling Message Source	SCROLLE	C	19	tmu85-10	U	N
+The Micro User	Disc Scanner	DISCSCA	C	19	tmu85-10	U	N
+The Micro User	Solitaire	SOLITAI	C	19	tmu85-10	U	N
+The Micro User	Case Statement Example	CASE	C	19	tmu85-10	U	N
+The Micro User	Whodunnit?	WHODUNN	C	19	tmu85-11	U	N
+The Micro User	Alice	ALICE	C	19	tmu85-11	u	N
+The Micro User	WordWise Function Keys	WWFKEYS	C	19	tmu85-11	U	N
+The Micro User	BASIC Program Analyser v3	ANALYSE	C	19	tmu85-11	U	N
+The Micro User	Green Gloop Gulper	GLOOPGU	C	19	tmu85-11	U	N
+The Micro User	Sideways Screen Clear	SIDECLS	C	19	tmu85-11	U	N
+The Micro User	MODE 8 9 10	MODE89X	C	19	tmu85-11	U	N
+The Micro User	Sideways ROM Disabler	DISABLE	C	19	tmu85-11	U	N
+The Micro User	Event-Driven Memory Dump	DUMPSRC	C	19	tmu85-12	U	N
+The Micro User	Wizard's Castle	WIZARDC	C	19	tmu85-12	g	N
+The Micro User	Alice	ALICE	C	19	tmu85-12	U	N
+The Micro User	BASIC Program Analyser v3	ANALYSE	C	19	tmu85-12	U	N
+The Micro User	Wordsquare Editor	WORDGEN	C	19	tmu85-12	U	N
+The Micro User	Molecule Chamber	MOLECUL	C	19	tmu85-12	U	N
+The Micro User	Alphabet Train	TRAIN	C	19	tmu85-12	U	N
+The Micro User	McBase Database	MCBASE	C	19	tmu85-12	U	N
+The Micro User	Squares	SQUARES	C	19	tmu85-12	U	N
+The Micro User	Al's Subhunt	SUBHUNT	C	19	tmu85-12	U	N
+The Micro User	Multiplexed Input/Output	MULTIIO	C	19	tmu85-12	U	N
+The Micro User	Play Alonga Music Ed 1	PLAY1	C	19	tmu86-01	U	N
+The Micro User	Play Alonga Music Ed 2	PLAY2	C	19	tmu86-01	U	N
+The Micro User	Megaroids	MEGROID	C	19	tmu86-01	U	N
+The Micro User	Find And Replace	FINDREP	C	19	tmu86-01	U	N
+The Micro User	Disc Copy Source	DSCCOPY	C	19	tmu86-01	U	N
+The Micro User	Wordsquare	WORDSQU	C	19	tmu86-01	U	N
+The Micro User	Claustrophobia	CLAUSTR	C	19	tmu86-01	U	N
+The Micro User	Fives	FIVES	C	19	tmu86-01	U	N
+The Micro User	Alice adventures	ALICE	C	19	tmu86-01	u	N
+The Micro User	Sound Sampler	SNDSAMP	C	19	tmu86-01	U	N
+The Micro User	Automatic Up/Downloader	UPDOWN	C	19	tmu86-02	U	N
+The Micro User	Add WHILE/WEND to BASIC	WWEND	C	19	tmu86-02	U	N
+The Micro User	WHILE/WEND Demo 1	WWDEMO1	C	19	tmu86-02	U	N
+The Micro User	WHILE/WEND Demo 2	WWDEMO2	C	19	tmu86-02	U	N
+The Micro User	Ploy	PLOY	C	19	tmu86-02	U	N
+The Micro User	Elite Commander Editor	ELITEED	C	19	tmu86-02	U	N
+The Micro User	Elite Commander File Layout	ELITETE	C	19	tmu86-02	U	N
+The Micro User	In The Castle of Tipaka	TIPAKA	C	19	tmu86-02	a	N
+The Micro User	USS Endeavour	ENDEAVO	C	19	tmu86-02	g	N
+The Micro User	File-to-File Assembler	DISCASS	C	19	tmu86-02	U	N
+The Micro User	512-byte Sector Formatter	512BYTE	C	19	tmu86-02	U	N
+The Micro User	Function Key Verifier	VERIFY1	C	19	tmu86-02	U	N
+The Micro User	Fast Program Verify Source	VERIFY2	C	19	tmu86-02	U	N
+The Micro User	BodyBuild: Echo Chamber	ECHO	C	19	tmu86-02	U	N
+The Micro User	BodyBuild: Frequency Shift	SHIFT	C	19	tmu86-02	U	N
+The Micro User	INSTR Music Demo	INSTRDE	C	19	tmu86-02	U	N
+The Micro User	Morris Miner	MORRIS	C	19	tmu86-03	U	N
+The Micro User	M/C: Demo Program 1	MCPROG1	C	19	tmu86-03	U	N
+The Micro User	Beginning BASIC 3	BEGIN3	C	19	tmu86-03	U	N
+The Micro User	Beginning BASIC 4	BEGIN4	C	19	tmu86-03	U	N
+The Micro User	Beginning BASIC 5	BEGIN5	C	19	tmu86-03	U	N
+The Micro User	Read Disk Sector IDs	RD-IDS	C	19	tmu86-03	U	N
+The Micro User	Read 8271 Special Registers	RD-REGS	C	19	tmu86-03	U	N
+The Micro User	Write 8271 Special Registers	WR-REGS	C	19	tmu86-03	U	N
+The Micro User	Read Disk Sectors	RD-SECT	C	19	tmu86-03	U	N
+The Micro User	Character Definer	CHARDEF	C	19	tmu86-03	U	N
+The Micro User	Load Characters to Memory	CHARLDR	C	19	tmu86-03	U	N
+The Micro User	Poster Pete's Puzzle	PUZZLER	C	19	tmu86-03	U	N
+The Micro User	Eleusis Puzzle	ELEUSIS	C	19	tmu86-03	U	N
+The Micro User	Bubble & Quick Sort	SORT1	C	19	tmu86-03	U	N
+The Micro User	Quick Sort (M/C)	SORT2	C	19	tmu86-03	U	N
+The Micro User	BodyBuild: Sound Sampler	C_MAP	C	19	tmu86-03	U	N
+The Micro User	Execute Run-Time BASIC Code	EXECBAS	C	19	tmu86-03	U	N
+The Micro User	Simple Enigma Coding	ENIGMA	C	19	tmu86-04	U	N
+The Micro User	Self-Listing Program	QUINE	C	19	tmu86-04	U	N
+The Micro User	Hyperspace Puzzle	HYPERSP	C	19	tmu86-04	U	N
+The Micro User	Set Up View Functions Keys	VIEWKEY	C	19	tmu86-04	U	N
+The Micro User	Mousetrap	MOUSETR	C	19	tmu86-04	U	N
+The Micro User	Print Character on Printer	PRINTA	C	19	tmu86-04	U	N
+The Micro User	Send Characters to Printer	ANYPRNT	C	19	tmu86-04	U	N
+The Micro User	Extended Fonts Source	FONTSRC	C	19	tmu86-04	U	N
+The Micro User	Extended Fonts Demo	FONTDEM	C	19	tmu86-04	U	N
+The Micro User	Notepad	NOTEPAD	C	19	tmu86-04	U	N
+The Micro User	Hexer Memory Editor	HEXER	C	19	tmu86-04	U	N
+The Micro User	Ghouls Of Azzod	AZZOD	C	19	tmu86-04	U	N
+The Micro User	PLOT 21 Demonstration	PLOT21	C	19	tmu86-04	U	N
+The Micro User	Sideways Printing	SIDEMSG	C	19	tmu86-04	U	N
+The Micro User	Double-Height data	BIGTEXT	C	19	tmu86-04	U	N
+The Micro User	Nested WHILE/WEND in BASIC	WWEND+	C	19	tmu86-04	U	N
+The Micro User	Nested WHILE/WEND Demo	WW+DEMO	C	19	tmu86-04	U	N
+The Micro User	Beginning BASIC 1	BEGIN1	C	19	tmu86-04	U	N
+The Micro User	Beginning BASIC 2	BEGIN2	C	19	tmu86-04	U	N
+The Micro User	Beginning BASIC 3	BEGIN3	C	19	tmu86-04	U	N
+The Micro User	Beginning BASIC 4	BEGIN4	C	19	tmu86-04	U	N
+The Micro User	Beginning BASIC 5	BEGIN5	C	19	tmu86-04	U	N
+The Micro User	Beginning BASIC 6	BEGIN6	C	19	tmu86-04	U	N
+The Micro User	Create Thin Characters	CHARMAK	C	19	tmu86-05	U	N
+The Micro User	Load Thin Characters	CHARLDR	C	19	tmu86-05	U	N
+The Micro User	*TUBEON and *TUBEOFF Source	TUBESWI	C	19	tmu86-05	U	N
+The Micro User	Catalog II	CATLOG2	C	19	tmu86-05	U	N
+The Micro User	Cavern Quest	QUEST	C	19	tmu86-05	U	N
+The Micro User	4-Site	4SITE	C	19	tmu86-05	U	N
+The Micro User	List messages in Red Moon	MOONLST	C	19	tmu86-05	U	N
+The Micro User	Additional lives in Red Moon	MOONLIV	C	19	tmu86-05	U	N
+The Micro User	Self-Listing Program	QUINE	C	19	tmu86-05	U	N
+The Micro User	Reverse Polish Puzzle	PUZZLE	C	19	tmu86-05	U	N
+The Micro User	Beginning BASIC 1	BEGIN1	C	19	tmu86-05	U	N
+The Micro User	Beginning BASIC 2	BEGIN2	C	19	tmu86-05	U	N
+The Micro User	Beginning BASIC 3	BEGIN3	C	19	tmu86-05	U	N
+The Micro User	Beginning BASIC 4	BEGIN4	C	19	tmu86-05	U	N
+The Micro User	Beginning BASIC 5	BEGIN5	C	19	tmu86-05	U	N
+The Micro User	Beginning BASIC 5A	BEGIN5A	C	19	tmu86-05	U	N
+The Micro User	Beginning BASIC 6	BEGIN6	C	19	tmu86-05	U	N
+The Micro User	Beginning BASIC 7	BEGIN7	C	19	tmu86-05	U	N
+The Micro User	Beginning BASIC 7A	BEGIN7A	C	19	tmu86-05	U	N
+The Micro User	Rainbow Lightpen	RAINBOW	C	19	tmu86-06	U	N
+The Micro User	Pendragon (BBC only)	PENDRAG	C	19	tmu86-06	U	N
+The Micro User	Spacebase	SPACEBA	C	19	tmu86-06	U	N
+The Micro User	Sideways Printing	SIDEMSG	C	19	tmu86-06	U	N
+The Micro User	Beginning BASIC 1	BEGIN1	C	19	tmu86-06	U	N
+The Micro User	Beginning BASIC 2	BEGIN2	C	19	tmu86-06	U	N
+The Micro User	Beginning BASIC 3	BEGIN3	C	19	tmu86-06	U	N
+The Micro User	Beginning BASIC 4	BEGIN4	C	19	tmu86-06	U	N
+The Micro User	Beginning BASIC 5	BEGIN5	C	19	tmu86-06	U	N
+The Micro User	Beginning BASIC 6	BEGIN6	C	19	tmu86-06	U	N
+The Micro User	Beginning BASIC 7	BEGIN7	C	19	tmu86-06	U	N
+The Micro User	Royal Wedding Sliding Puzzle	WEDDING	C	19	tmu86-07	U	N
+The Micro User	Double Disk Catalogue	4080SPL	C	19	tmu86-07	U	N
+The Micro User	View Printer Driver Creator	VIEWGEN	C	19	tmu86-07	U	N
+The Micro User	Create DATA with CMOS data	CMOSRAM	C	19	tmu86-07	U	N
+The Micro User	All Capitals	ALLCAPS	C	19	tmu86-07	U	N
+The Micro User	Beginning Machine Code 1	MCODE1	C	19	tmu86-08	U	N
+The Micro User	Beginning Machine Code 2	MCODE2	C	19	tmu86-08	U	N
+The Micro User	Beginning Machine Code 3	MCODE3	C	19	tmu86-08	U	N
+The Micro User	Beginning Machine Code 4	MCODE4	C	19	tmu86-08	U	N
+The Micro User	Beginning Machine Code 5	MCODE5	C	19	tmu86-08	U	N
+The Micro User	Fruitworm	FRUITWO	C	19	tmu86-08	U	N
+The Micro User	Olivetti Inkjet Test Program	INKJET1	C	19	tmu86-08	U	N
+The Micro User	Screen Dump Program 1	SCDUMP1	C	19	tmu86-08	U	N
+The Micro User	Screen Dump Program 2	SCDUMP2	C	19	tmu86-08	U	N
+The Micro User	Force to Upper Case 1	UPPER1	C	19	tmu86-08	U	N
+The Micro User	Force to Upper Case 2	UPPER2	C	19	tmu86-08	U	N
+The Micro User	Confirm Save Overwriting	SAVEPRO	C	19	tmu86-08	U	N
+The Micro User	BodyBuild: Geiger Counter	GEIGER	C	19	tmu86-08	U	N
+The Micro User	Swap Case of Input	REVERSE	C	19	tmu86-08	U	N
+The Micro User	Test if Printer Ready	CHKPRIN	C	19	tmu86-08	U	N
+The Micro User	Machine Code Text Printing	PRTEXT	C	19	tmu86-08	U	N
+The Micro User	Hash Searching 1	SEARCH1	C	19	tmu86-08	U	N
+The Micro User	Hash Searching 2	SEARCH2	C	19	tmu86-08	U	N
+The Micro User	Hash Searching 3	SEARCH3	C	19	tmu86-08	U	N
+The Micro User	Hash Searching 4	SEARCH4	C	19	tmu86-08	U	N
+The Micro User	Hash Searching 5	SEARCH5	C	19	tmu86-08	U	N
+The Micro User	Beginning BASIC 1	BEGIN1	C	19	tmu86-08	U	N
+The Micro User	Beginning BASIC 2	BEGIN2	C	19	tmu86-08	U	N
+The Micro User	Beginning BASIC 3	BEGIN3	C	19	tmu86-08	U	N
+The Micro User	Beginning BASIC 4	BEGIN4	C	19	tmu86-08	U	N
+The Micro User	Patrick The Pear Picker	PEARPIC	C	19	tmu86-09	U	N
+The Micro User	View Preview Printer Driver	VIEWPRE	C	19	tmu86-09	U	N
+The Micro User	Palette Switching Demo 1	VDU19-1	C	19	tmu86-09	U	N
+The Micro User	Palette Switching Demo 2	VDU19-2	C	19	tmu86-09	U	N
+The Micro User	Palette Switching Demo 3	VDU19-3	C	19	tmu86-09	U	N
+The Micro User	Palette Switching Demo 4	VDU19-4	C	19	tmu86-09	U	N
+The Micro User	Calling BASIC With Events	EVENTS	C	19	tmu86-09	U	N
+The Micro User	Formatted String Printing	FORMAT	C	19	tmu86-09	U	N
+The Micro User	Any Questions Instructions	S.INST	C	19	tmu86-09	U	N
+The Micro User	View/WW: Learn Keypresses	LEARNER	C	19	tmu86-09	U	N
+The Micro User	Any Questions Magazine Vers	M.ANYQUES	C	19	tmu86-09	U	N
+The Micro User	Any Questions Free Version	F.ANYQUES	C	19	tmu86-09	U	N
+The Micro User	Rock Fall	ROCKFAL	C	19	tmu86-09	U	N
+The Micro User	Coloured Lights	LIGHTS	C	19	tmu86-10	U	N
+The Micro User	Mode 7 Epson Printer Dump	M7DUMP1	C	19	tmu86-10	U	N
+The Micro User	Mode 7 Olivetti Printer Dump	M7DUMP2	C	19	tmu86-10	U	N
+The Micro User	Text Compression	TEXTCPR	C	19	tmu86-10	U	N
+The Micro User	Witch Hunt	WITCH-H	C	19	tmu86-10	U	N
+The Micro User	Auto-Run BASIC program	AUTORUN	C	19	tmu86-10	U	N
+The Micro User	Computer Weather Vane	BBCVANE	C	19	tmu86-10	U	N
+The Micro User	Quasimodo's Quest	QUASIMO	C	19	tmu86-10	U	N
+The Micro User	AQ: Computer Studies	COMPSTD	C	19	tmu86-10	U	N
+The Micro User	AQ: Music	MUSIC	C	19	tmu86-10	U	N
+The Micro User	Dual Screen Source	DUALSRC	C	19	tmu86-11	U	N
+The Micro User	Dual Screen Demo	DUALDEM	C	19	tmu86-11	U	N
+The Micro User	Casting Shadows	SHADOW	C	19	tmu86-11	U	N
+The Micro User	Printer Star Commands	PRINTCM	C	19	tmu86-11	U	N
+The Micro User	VIEW Ruler Cursor	VIEWRUL	C	19	tmu86-11	U	N
+The Micro User	Multicoloured Life	LIFE	C	19	tmu86-11	U	N
+The Micro User	Maltese Cross	MALTESE	C	19	tmu86-11	U	N
+The Micro User	BOS Editor Source	BOSSRC	C	19	tmu86-11	U	N
+The Micro User	Analogue Port Monitor	APMON	C	19	tmu86-11	U	N
+The Micro User	Matrix Keypad Test	KP-TEST	C	19	tmu86-11	U	N
+The Micro User	Matrix Keypad Driver	KP-DRIV	C	19	tmu86-11	U	N
+The Micro User	Rhondo	RHONDO	C	19	tmu87-02	U	N
+The Micro User	Save A Life	S-A-L	C	19	tmu87-02	U	N
+The Micro User	Collision detection	MCODE2	C	19	tmu87-02	U	N
+The Micro User	Date Stamp	STAMPER	C	19	tmu87-02	U	N
+The Micro User	List Hold	LSTHOLD	C	19	tmu87-02	U	N
+The Micro User	Wordwise Plus Index	WWINDEX	C	19	tmu87-02	U	N
+The Micro User	Compressor	VARCOMP	C	19	tmu87-02	U	N
+The Micro User	Choice	CHOICE	C	19	tmu87-02	U	N
+The Micro User	Map Test	MAPTEST	C	19	tmu87-02	U	N
+The Micro User	A to D converter	FSCOPE	C	19	tmu87-02	U	N
+The Micro User	Checksums	CHECKSM	C	19	tmu87-06	U	N
+The Micro User	Checksums (M/Code gen.)	CHECKSC	C	19	tmu87-06	U	N
+The Micro User	Raglan	RAGLAN	C	19	tmu87-06	U	N
+The Micro User	Prommer	PROMMER	C	19	tmu87-06	U	N
+The Micro User	Button Rom	BUTTONS	C	19	tmu87-06	U	N
+The Micro User	Agriculture Simulation	CANSIM	C	11	tmu87-06	U	N
+The Micro User	Video Digitiser Prog 1	VIDEO1	C	19	tmu87-06	U	N
+The Micro User	Video Digitiser Prog 2	VIDEO2	C	19	tmu87-06	U	N
+The Micro User	Video Digitiser Prog 3	VIDEO3	C	19	tmu87-06	U	N
+The Micro User	*DOG	DOGSRC	C	19	tmu87-06	U	N
+The Micro User	Faint Characters	FNTSRC	C	19	tmu87-06	U	N
+The Micro User	Pinball	PINBALL	C	19	tmu88-02	U	N
+The Micro User	Ram Wars (Compile)	COMPILE	C	19	tmu88-02	U	N
+The Micro User	Ram Wars (Mars)	MARS	C	19	tmu88-02	U	N
+The Micro User	Get It Right!	CHECKS	C	19	tmu88-02	U	N
+The Micro User	File Recovery	RESCUE	C	19	tmu88-02	U	N
+The Micro User	Star Gazing	GAZETER	C	19	tmu88-02	U	N
+The Micro User	Body Building	BB-LIST	C	19	tmu88-02	U	N
+The Micro User	Z88 Adventure	ZCROWN	C	19	tmu88-02	U	N
+The Micro User	Z88 Tables	ZTABLES	C	19	tmu88-02	U	N
+The Micro User	Z88 Spell	ZSPELL	C	19	tmu88-02	U	N
+The Micro User	Pipeline	PIPLINE	C	19	tmu88-03	U	N
+The Micro User	Hide and Seek	HIDSEEK	C	19	tmu88-03	U	N
+The Micro User	Minicom	MINICOM	C	19	tmu88-03	U	N
+The Micro User	Z88-BBC Archiving	ARCHIVE	C	19	tmu88-03	U	N
+The Micro User	Z88 Balance	BALANCE	C	19	tmu88-03	U	N
+The Micro User	Sketch	Sketch	C	19	tmu88-03	U	N
+The Micro User	Draught	Draught	C	19	tmu88-03	U	N
+The Micro User	Label Highlighting	S.LAB	C	19	tmu88-03	U	N
+The Micro User	Alpha Sort	B.SRT	C	19	tmu88-03	U	N
+The Micro User	Easter Day	B.DAY	C	19	tmu88-03	U	N
+The Micro User	Anagram	B.ANA	C	19	tmu88-03	U	N
+The Micro User	Simple Terminal	B.TRM	C	19	tmu88-03	U	N
+The Micro User	Darts	DARTS	C	19	tmu88-04	U	N
+The Micro User	Cat Flap	MIAOW	C	19	tmu88-04	U	N
+The Micro User	Solid Graphics	PLOBAK	C	19	tmu88-04	U	N
+The Micro User	Fax Page Creator	GEO-FAX	C	19	tmu88-04	U	N
+The Micro User	Super Shift	SUPER	C	19	tmu88-04	U	N
+The Micro User	Cursor Column Display	B.CURSOR	C	19	tmu88-04	U	N
+The Micro User	Disc Editor	EDITOR	C	19	tmu88-04	U	N
+The Micro User	Record Collection	INDEXER	C	19	tmu88-04	U	N
+The Micro User	Added Basic Commands	S.ABC	C	19	tmu88-04	U	N
+The Micro User	Template	B.ENV	C	19	tmu88-04	U	N
+The Micro User	Break Message	S.BRK	C	19	tmu88-04	U	N
+The Micro User	Password	S.PAS	C	19	tmu88-04	U	N
+The Micro User	CSAVER	S.SAV	C	19	tmu88-04	U	N
+The Micro User	LISP Routines In Ascii	A.LSP	C	19	tmu88-04	U	N
+The Micro User	Less Typing	FOOL	C	19	tmu88-04	U	N
+The Micro User	Z88 Printer Server	ZSERVER	C	19	tmu88-04	U	N
+The Micro User	Video titling	Caption	C	19	tmu89-05	U	N
+The Micro User	Slow box (listing 1)	SLOW1	C	19	tmu89-05	U	N
+The Micro User	Slox box (listing 2)	SLOW2	C	19	tmu89-05	U	N
+The Micro User	Domino theory	DOMINO	C	19	tmu89-05	U	N
+The Micro User	Card Index database	CardInd	C	19	tmu89-05	U	N
+The Micro User	Soundex demo	SOUNDEX	C	19	tmu89-05	U	N
+The Micro User	Odd one out	ODDONE	C	19	tmu89-05	U	N
+The Micro User	Sprites	Sprite2	C	19	tmu89-05	U	N
+The Micro User	Yahtzee!	YAHTZEE	C	19	tmu89-05	U	N
+The Micro User	Sound synthesizer	Synth	C	19	tmu89-05	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu89-05	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu89-05	U	N
+The Micro User	5 Alive (part 1)	5ALIVE1	C	19	tmu89-06	U	N
+The Micro User	5 Alive data creator	5DATA	C	19	tmu89-06	U	N
+The Micro User	Emulating Archie (BBC Micro)	BOUNCE	C	11	tmu89-06	U	N
+The Micro User	Making movies part 1	Spr_31	C	19	tmu89-06	U	N
+The Micro User	Making movies part 2	Spr_32	C	19	tmu89-06	U	N
+The Micro User	Making movies part 3	Spr_33	C	19	tmu89-06	U	N
+The Micro User	Evolution simulation	EvoSim	C	19	tmu89-06	U	N
+The Micro User	WholeBody joystick (Tester)	WB_Test	C	19	tmu89-06	U	N
+The Micro User	WholeBody joystick (Body Rap)	BodyRap	C	19	tmu89-06	U	N
+The Micro User	Program debug utility	Timer	C	19	tmu89-06	U	N
+The Micro User	Anagram hunter	ELIMIN8	C	19	tmu89-06	U	N
+The Micro User	Table expert (educational)	EXPERT	C	19	tmu89-06	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu89-06	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu89-06	U	N
+The Micro User	Fractal	Fractal	C	19	tmu89-07	U	N
+The Micro User	Fred Drip	FREDRIP	C	19	tmu89-07	g	N
+The Micro User	Classic solids	Solids	C	19	tmu89-07	U	N
+The Micro User	Text scroller	Scroll	C	19	tmu89-07	U	N
+The Micro User	Magic Wand (BBuild)	WAND	C	19	tmu89-07	U	N
+The Micro User	Sprite program 1	SPRprg1	C	19	tmu89-07	U	N
+The Micro User	Sprite program 2	SPRprg2	C	19	tmu89-07	U	N
+The Micro User	Sprite m/c code	SPRTass	C	19	tmu89-07	U	N
+The Micro User	Sprite Designer	SPRTdef	C	19	tmu89-07	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu89-07	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu89-07	U	N
+The Micro User	Merrills	Merills	C	19	tmu89-08	U	N
+The Micro User	Sprite demo I	MoveMan	C	19	tmu89-08	U	N
+The Micro User	Sprite demo II	BallMan	C	19	tmu89-08	U	N
+The Micro User	The Gate	THEGATE	C	19	tmu89-08	U	N
+The Micro User	Date Analysis	DateCnv	C	19	tmu89-08	U	N
+The Micro User	Fast Overlays	OVLDEMO	C	19	tmu89-08	U	N
+The Micro User	Overlays (OL1-OL4)	OVLDEMO	C	19	tmu89-08	U	N
+The Micro User	Teletext update	Update	C	19	tmu89-08	U	N
+The Micro User	Checksums (8-bit new)	xs	R	19	tmu89-08	U	N
+The Micro User	Checksums (8-bit old)	xsum	R	19	tmu89-08	U	N
+The Micro User	Crystal Sea	Crystal	C	19	tmu89-09	U	N
+The Micro User	Sprites	Spr-5	C	19	tmu89-09	U	N
+The Micro User	Flick Book Dump	FB-DUMP	C	19	tmu89-09	U	N
+The Micro User	Body Building	BodyPrg	C	19	tmu89-09	U	N
+The Micro User	Memory dumping (Source)	DMP/SRC	C	19	tmu89-09	U	N
+The Micro User	Memory dumping (Object)	MDUMP	R	19	tmu89-09	U	N
+The Micro User	Quick Menus Design	QM-Dsgn	C	19	tmu89-09	U	N
+The Micro User	Quick Menus Demo	QM-Demo	C	19	tmu89-09	U	N
+The Micro User	Beehive	Beehive	C	19	tmu89-09	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu89-09	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu89-09	U	N
+The Micro User	Orbits	ORBITS	C	19	tmu89-10	U	N
+The Micro User	Sideways ram wipe	SRCWIPE	C	19	tmu89-10	U	N
+The Micro User	Body Building	BODY	C	19	tmu89-10	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu89-10	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu89-10	U	N
+The Micro User	Wizard's Revenge	M-MAZE	C	19	tmu89-11	U	N
+The Micro User	Even more Fractals! (prog1)	AFINE0	C	19	tmu89-11	U	N
+The Micro User	Even more Fractals! (prog2)	AFINE6	C	19	tmu89-11	U	N
+The Micro User	Challenge	CIRCLES	C	19	tmu89-11	U	N
+The Micro User	LaBELLE: Label printer	LaBELLE	C	19	tmu89-11	U	N
+The Micro User	LaBETTE: Label printer	LaBETTE	C	19	tmu89-11	U	N
+The Micro User	Body Building (Test)	BB1	C	19	tmu89-11	U	N
+The Micro User	Body Building (Sheep)	BB2	C	19	tmu89-11	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu89-11	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu89-11	U	N
+The Micro User	Jingles	Jingles	C	19	tmu89-12	U	N
+The Micro User	Spinner	Spinner	C	19	tmu89-12	U	N
+The Micro User	Helper (sideways ram)	Helper	C	19	tmu89-12	U	N
+The Micro User	View (Helper)	H.VIEW	C	19	tmu89-12	U	N
+The Micro User	Add (Helper)	H.ADD	C	19	tmu89-12	U	N
+The Micro User	File protection	Protect	C	19	tmu89-12	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu89-12	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu89-12	U	N
+The Micro User	Snowman's Revenge	Revenge	C	19	tmu90-01	U	N
+The Micro User	Chameleon	Chameln	C	19	tmu90-01	U	N
+The Micro User	File converter (1)	IW_to_>	C	19	tmu90-01	U	N
+The Micro User	Print some sums	SumSums	C	19	tmu90-01	U	N
+The Micro User	Jingles	Jingles	C	19	tmu90-01	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-01	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu90-01	U	N
+The Micro User	Golf	GolfGam	C	19	tmu90-02	g	N
+The Micro User	Golf Designer	GolfDes	C	19	tmu90-02	U	N
+The Micro User	Contents maker	Content	C	19	tmu90-02	U	N
+The Micro User	Tree Sort	TreeSrt	C	19	tmu90-02	U	N
+The Micro User	File Converter	View->	C	19	tmu90-02	U	N
+The Micro User	Chameleon 2 (The Sequel)	Camel2	C	19	tmu90-02	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-02	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu90-02	U	N
+The Micro User	Dickie Brickie	GAME1	C	19	tmu90-03	g	N
+The Micro User	Demons	Demon	C	19	tmu90-03	U	N
+The Micro User	Body Building (1)	List1	C	19	tmu90-03	U	N
+The Micro User	Body Building (2)	List2	C	19	tmu90-03	U	N
+The Micro User	Stratagem	STRAT	C	19	tmu90-03	U	N
+The Micro User	Golf Course	GOLF21	C	19	tmu90-03	U	N
+The Micro User	View converter	View->	C	19	tmu90-03	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-03	U	N
+The Micro User	Cheshire Cat	Cat	C	19	tmu90-04	U	N
+The Micro User	Wormy Num Num	Wormy1	C	19	tmu90-04	U	N
+The Micro User	Convert to View & IW	To->VIW	C	19	tmu90-04	U	N
+The Micro User	Golf Course Decompacter	Gdecode	C	19	tmu90-04	U	N
+The Micro User	Golf Course Compacter	GEncode	C	19	tmu90-04	U	N
+The Micro User	Stratagem	STRAT1	C	19	tmu90-04	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-04	U	N
+The Micro User	King Albert Patience	King	C	19	tmu90-05	U	N
+The Micro User	Random numbers	RndBBC	C	19	tmu90-05	U	N
+The Micro User	SuperCal	SupaCal	C	19	tmu90-05	U	N
+The Micro User	Database	DataPrg	C	19	tmu90-05	U	N
+The Micro User	Golf Course Decompacter	Gdecode	C	19	tmu90-05	U	N
+The Micro User	Golf Course Compacter	GEncode	C	19	tmu90-05	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-05	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu90-05	U	N
+The Micro User	Pipe Mania	PMDemo	R	19	tmu90-06	U	N
+The Micro User	Sundial	Sundial	C	19	tmu90-06	U	N
+The Micro User	Snake	Snake	C	19	tmu90-06	U	N
+The Micro User	Slides DB Editor	Slides	C	19	tmu90-06	U	N
+The Micro User	Program Lister	PrgList	C	19	tmu90-06	U	N
+The Micro User	Database Manager	DataPrg	C	19	tmu90-06	U	N
+The Micro User	Golf Decoder	GDecode	C	19	tmu90-06	U	N
+The Micro User	Golf Encoder	GEncode	C	19	tmu90-06	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-06	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu90-06	U	N
+The Micro User	Blue Meanie	BLUE	C	19	tmu90-07	U	N
+The Micro User	Canfield	Canfeld	C	19	tmu90-07	U	N
+The Micro User	Ultima	Ultima	C	19	tmu90-07	U	N
+The Micro User	Variable Lister	VarList	C	19	tmu90-07	U	N
+The Micro User	10k Scroll	10kScrl	C	19	tmu90-07	U	N
+The Micro User	Slides DB Editor	Slides	C	19	tmu90-07	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-07	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu90-07	U	N
+The Micro User	Lunar Eclipse	Eclipse	C	19	tmu90-08	U	N
+The Micro User	RAM Board Tester	RamTest	C	19	tmu90-08	U	N
+The Micro User	RAM Board Firmware	Firmwre	C	80	tmu90-08	U	N
+The Micro User	Ultima (again)	Ultima	C	19	tmu90-08	U	N
+The Micro User	Press COPY	!BOOT	E	19	tmu90-08	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-08	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu90-08	U	N
+The Micro User	Car Race	Car	C	19	tmu90-09	U	N
+The Micro User	Car Race bits 1	IkeAssm	C	19	tmu90-09	U	N
+The Micro User	Car Race bits 2	CarAssm	C	19	tmu90-09	U	N
+The Micro User	Griddles	Griddle	C	19	tmu90-09	U	N
+The Micro User	Print Codes	PrntGen	C	19	tmu90-09	U	N
+The Micro User	Pocket Sundial	PktDial	C	19	tmu90-09	U	N
+The Micro User	Rout.Matt.: Decimal Out	DecOut	C	19	tmu90-09	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-09	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu90-09	U	N
+The Micro User	Scorpion Patience	Scorpio	C	11	tmu90-10	U	N
+The Micro User	Tidbit Teazer	Tidbits	C	19	tmu90-10	U	N
+The Micro User	SRBuild #1	SRBuild	C	19	tmu90-10	U	N
+The Micro User	SRBuild #2	SRB2	C	19	tmu90-10	U	N
+The Micro User	SRBuild #3	SRB3	C	19	tmu90-10	U	N
+The Micro User	SRBuild #4	SRB4	C	19	tmu90-10	U	N
+The Micro User	Rout.Matt.: WipeSrc	R.WipeSrc	C	19	tmu90-10	U	N
+The Micro User	Rout.Matt.: TmpConv	R.TmpConv	C	19	tmu90-10	U	N
+The Micro User	Rout.Matt.: Coder	R.Coder	C	19	tmu90-10	U	N
+The Micro User	Rout.Matt.: Patch	R.Patch	C	19	tmu90-10	U	N
+The Micro User	Random Access Files #1	RAF1	C	19	tmu90-10	U	N
+The Micro User	Random Access Files #2	Phone	C	19	tmu90-10	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-10	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu90-10	U	N
+The Micro User	Danger Dog	Danger1	C	19	tmu90-11	U	N
+The Micro User	Extended Palette	ExtPal	C	19	tmu90-11	U	N
+The Micro User	PI	PiCalc	C	19	tmu90-11	U	N
+The Micro User	Rout.Matt.: TPlayer	R.Tplayer	C	19	tmu90-11	U	N
+The Micro User	Rout.Matt.: IntCalc	R.IntCalc	C	19	tmu90-11	U	N
+The Micro User	Rout.Matt.: WordWrp	R.WordWrp	C	19	tmu90-11	U	N
+The Micro User	Rout.Matt.: Outline	R.Outline	C	19	tmu90-11	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu90-11	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu90-11	U	N
+The Micro User	Pipe Loonacy	Pipe	C	19	tmu90-12	U	N
+The Micro User	Exile #il	ExileCh	C	19	tmu90-12	c	N
+The Micro User	Exile Mapper	ExilMap	C	19	tmu90-12	U	N
+The Micro User	Making Waves	Fourier	C	19	tmu90-12	U	N
+The Micro User	Auto Basic Saver	SaveSrc	C	19	tmu90-12	U	N
+The Micro User	Ball bounce demo	BalBnce	C	19	tmu90-12	U	N
+The Micro User	Body Building	Kinetic	C	19	tmu90-12	U	N
+The Micro User	Three dice probability	ThreeDi	C	19	tmu90-12	U	N
+The Micro User	Red Shift Xmas	DEMO	C	19	tmu90-12	U	N
+The Micro User	Rout.Matt.: Date	R.Date	C	19	tmu90-12	U	N
+The Micro User	Rout.Matt.: DecPats	R.DecPats	C	19	tmu90-12	U	N
+The Micro User	Rout.Matt.: GuessGm	R.GuessGm	C	19	tmu90-12	U	N
+The Micro User	Rout.Matt.: MicrChk	R.MicrChk	C	19	tmu90-12	U	N
+The Micro User	Rout.Matt.: QuadSol	R.QuadSol	C	19	tmu90-12	U	N
+The Micro User	WizBlob	WizLoad	C	19	tmu91-01	U	N
+The Micro User	Covers	Covers	C	19	tmu91-01	U	N
+The Micro User	Calendar	Calendr	C	19	tmu91-01	U	N
+The Micro User	Quelle heure est-il?	TIMEF	C	19	tmu91-01	U	N
+The Micro User	Que hora es?	TIMES	C	19	tmu91-01	U	N
+The Micro User	Wieviel Uhr ist es?	TIMEG	C	19	tmu91-01	U	N
+The Micro User	What is the time?	TIMEE	C	19	tmu91-01	U	N
+The Micro User	Routine Matters: KeyTune	R.KeyTune	C	19	tmu91-01	U	N
+The Micro User	Routine Matters: Errors	R.Errors	C	19	tmu91-01	U	N
+The Micro User	Routine Matters: TextChk	R.TextChk	C	19	tmu91-01	U	N
+The Micro User	Routine Matters: Graph	R.Graph	C	19	tmu91-01	U	N
+The Micro User	Routine Matters: Anagram	R.Anagram	C	19	tmu91-01	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu91-01	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu91-01	U	N
+The Micro User	Bombed:The Gate Part 2	Bombed	C	19	tmu91-02	U	N
+The Micro User	Graph Plotter	GPlot	C	19	tmu91-02	U	N
+The Micro User	Shopping List program	ShopLst	C	19	tmu91-02	U	N
+The Micro User	Function Key Strip Maker	FuncKey	C	11	tmu91-02	U	N
+The Micro User	Dragon curve generator	Dragon	C	19	tmu91-02	U	N
+The Micro User	ISBN Checker program	ISBN	C	19	tmu91-02	U	N
+The Micro User	Routine Matters: Murder	R.MrdrSrc	C	19	tmu91-02	U	N
+The Micro User	Routine Matters: Text Fade	R.TxtFade	C	19	tmu91-02	U	N
+The Micro User	Routine Matters: Password	R.Passwrd	C	19	tmu91-02	U	N
+The Micro User	Routine Matters: Clock	R.Clock	C	19	tmu91-02	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu91-02	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu91-02	U	N
+The Micro User	Make Four	Make4	C	19	tmu91-03	U	N
+The Micro User	Bugs: Advanced Trace	AdvTrce	C	19	tmu91-03	U	N
+The Micro User	Bugs: Error handler	ERRHdlr	C	19	tmu91-03	U	N
+The Micro User	Product of Primes	ProdPri	C	19	tmu91-03	U	N
+The Micro User	Touch Pad program	PadSrce	C	19	tmu91-03	U	N
+The Micro User	Worksheet Work-out	WorkOut	C	19	tmu91-03	U	N
+The Micro User	Worksheet File maker	MakeFil	C	19	tmu91-03	U	N
+The Micro User	Function Key Strip Gen	FuncKey	C	0E	tmu91-03	U	N
+The Micro User	Routine Matters: Disable	R.Dsble+1	C	19	tmu91-03	U	N
+The Micro User	Routine Matters: Fader	R.Fader	C	19	tmu91-03	U	N
+The Micro User	Routine Matters: Staves	R.Staves	C	19	tmu91-03	U	N
+The Micro User	Routine Matters: DTPconv	R.DTPconv	C	19	tmu91-03	U	N
+The Micro User	Routine Matters: Keywrds	R.Keywrds	C	19	tmu91-03	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu91-03	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu91-03	U	N
+The Micro User	Exile Revisited: Cheat	ExCheat	C	19	tmu91-04	U	N
+The Micro User	Exile Revisited: Mapper	Mapper	C	19	tmu91-04	U	N
+The Micro User	Exile Revisited: Editor	ExEdit	C	19	tmu91-04	U	N
+The Micro User	Strange Attractor 1	KAM-1	C	19	tmu91-04	U	N
+The Micro User	Strange Attractor 2	KAM-2	C	19	tmu91-04	U	N
+The Micro User	Font Styler	!Start	C	19	tmu91-04	U	N
+The Micro User	Errors#3: Break handler	BRKHdlr	C	19	tmu91-04	U	N
+The Micro User	Errors#3: Multi-Labels	MULTlbl	C	19	tmu91-04	U	N
+The Micro User	Routines: Base converter	R.BDHcvrt	C	19	tmu91-04	U	N
+The Micro User	Routines: Hall of Fame	R.HofFame	C	19	tmu91-04	U	N
+The Micro User	Routines: Standard Dev	R.Mean/SD	C	19	tmu91-04	U	N
+The Micro User	Routines: Quick Commands	R.QCsrce	C	19	tmu91-04	U	N
+The Micro User	Routines: Spirals	R.Spirals	C	19	tmu91-04	U	N
+The Micro User	Bombed: The Gate II (again)	BOMBED	C	19	tmu91-04	U	N
+The Micro User	Bombed: The Editor	Editor	C	13	tmu91-04	U	N
+The Micro User	Function Key Maker	FuncKey	C	12	tmu91-04	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu91-04	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu91-04	U	N
+The Micro User	PROCs & FNs	PF-List	C	19	tmu91-05	U	N
+The Micro User	Sort Evaluator	SRTEVAL	C	19	tmu91-05	U	N
+The Micro User	Permutations	Permuta	C	19	tmu91-05	U	N
+The Micro User	Danger Dog (for Master ONLY)	Danger	C	19	tmu91-05	U	N
+The Micro User	Font Styler	!Start	C	19	tmu91-05	U	N
+The Micro User	Routines: Hall of Fame	R.HofFame	C	19	tmu91-05	U	N
+The Micro User	Routines: Quick Commands	R.QCsrce	C	19	tmu91-05	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu91-05	U	N
+The Micro User	Checksums (old	xsum	R	19	tmu91-05	U	N
+The Micro User	Bloc busta	blkbust	C	19	tmu91-06	U	N
+The Micro User	Home Brewed wine	wine	C	19	tmu91-06	U	N
+The Micro User	BBC Demo	demo	C	19	tmu91-06	U	N
+The Micro User	Strange attractors	duffing	C	19	tmu91-06	U	N
+The Micro User	Elite cheat	elitech	C	19	tmu91-06	U	N
+The Micro User	Magic Square	magic	C	19	tmu91-06	U	N
+The Micro User	Utilities, converter	r.bdhcvrt	C	19	tmu91-06	U	N
+The Micro User	Mean/sd 	R.Mean/SD	C	19	tmu91-06	U	N
+The Micro User	Thruster	Thrust1	C	19	tmu91-07	U	N
+The Micro User	Chaos: Program 1	Chaos1	C	19	tmu91-07	U	N
+The Micro User	Chaos: Program 2	Chaos2	C	19	tmu91-07	U	N
+The Micro User	Chaos: Program 3	Chaos3	C	19	tmu91-07	U	N
+The Micro User	Perspective drawing (Master)	CAPD	C	19	tmu91-07	U	N
+The Micro User	Perspective drawing data	BLOCK	C	19	tmu91-07	U	N
+The Micro User	Strange Attractors: 3D	Strange	C	19	tmu91-07	U	N
+The Micro User	Data Encryption: Init	InitDES	C	19	tmu91-07	U	N
+The Micro User	Data Encryption: Main	DES	C	23	tmu91-07	U	N
+The Micro User	Screen scrolling	ScrSoft	C	19	tmu91-07	U	N
+The Micro User	TV/Monitor test program	TV/Test	C	19	tmu91-07	U	N
+The Micro User	BBC Calendar program	Calendr	C	19	tmu91-07	U	N
+The Micro User	Routine Matters: Circles	R.Circles	C	19	tmu91-07	U	N
+The Micro User	Routine Matters: Gal/Lit	R.Gal/Lit	C	19	tmu91-07	U	N
+The Micro User	Routine Matters: BigText	R.BigText	C	19	tmu91-07	U	N
+The Micro User	Routine Matters: MenuPrg	R.MenuPrg	C	19	tmu91-07	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu91-07	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu91-07	U	N
+The Micro User	Sample Player demo	PlaySmp	C	19	tmu91-08	U	N
+The Micro User	Sample Player main	STplay	C	19	tmu91-08	U	N
+The Micro User	Sample player converter	ConvLog	C	19	tmu91-08	U	N
+The Micro User	TV/Monitor test program	TV/Test	C	19	tmu91-08	U	N
+The Micro User	Teletext Screen Editor	TTX/Ed	C	19	tmu91-08	U	N
+The Micro User	Teletext Carousel Grab	GetPage	C	19	tmu91-08	U	N
+The Micro User	HPGL Plotter Data Input	GeogInp	C	19	tmu91-08	U	N
+The Micro User	HPGL Plotter Program 1	GeogDT2	C	19	tmu91-08	U	N
+The Micro User	HPGL Plotter Program 2	GeogDT3	C	19	tmu91-08	U	N
+The Micro User	Magic Square	Magic	C	19	tmu91-08	U	N
+The Micro User	Routine Matters: Circles	R.Circles	C	19	tmu91-08	U	N
+The Micro User	Routine Matters: Gal/Lit	R.Gal/Lit	C	19	tmu91-08	U	N
+The Micro User	Routine Matters: BigText	R.BigText	C	19	tmu91-08	U	N
+The Micro User	Routine Matters: MenuPrg	R.MenuPrg	C	19	tmu91-08	U	N
+The Micro User	Checksums (new)	xs	R	19	tmu91-08	U	N
+The Micro User	Checksums (old)	xsum	R	19	tmu91-08	U	N
+The Micro User	Veg!	Veg1	C	19	tmu91-09	U	N
+The Micro User	Thruster	Thrust1	C	19	tmu91-09	U	N
+The Micro User	Triangular Tiling	Tiling	C	19	tmu91-09	U	N
+The Micro User	New checksums	xs	R	19	tmu91-09	U	N
+The Micro User	Old checksums	xsum	R	19	tmu91-09	U	N
+The Micro User	Taipei	Taipei	C	19	tmu91-10	U	N
+The Micro User	Mozaic Madness	Mozaic	C	19	tmu91-10	U	N
+The Micro User	Digital Clock	Digital	C	19	tmu91-10	U	N
+The Micro User	Safe Scientist on Food	Diet	C	19	tmu91-10	U	N
+The Micro User	Body Building: Brain Game	BrainB	C	19	tmu91-10	U	N
+The Micro User	Letters: Graphics Chars Src	GCHRSRC	C	19	tmu91-10	U	N
+The Micro User	Letters: Alphanumeric Chars	TCHRSRC	C	19	tmu91-10	U	N
+The Micro User	Checksums: XS	xs	R	19	tmu91-10	U	N
+The Micro User	Jigsaw	Jigsaw	C	11	tmu91-11	U	N
+The Micro User	DFS Disc Partitioning	MAKEPRT	C	19	tmu91-11	U	N
+The Micro User	Safe Scientist on Genes	Genetic	C	19	tmu91-11	U	N
+Public domain	CV Editor	CV-Edit	C	19	tmu91-11	U	N
+Public domain	Password program	Passwrd	C	19	tmu91-11	U	N
+Public domain	Addicto Anthem	Addicto	C	19	tmu91-11	m	N
+Public domain	 Always on my mind	Always	C	19	tmu91-11	m	N
+Public domain	OXEGENE	OXEGENE	C	19	tmu91-11	m	N
+Public domain	Domino	Domino	C	19	tmu91-11	m	N
+The Micro User	Checksums: XS	xs	R	19	tmu91-11	U	N
+The Micro User	Santa's Slip-up	listII	C	11	tmu91-12	U	N
+The Micro User	Safe Scientist on Sound	Sound	C	19	tmu91-12	U	N
+The Micro User	Versatile Music Stave printer	Stave	C	19	tmu91-12	U	N
+Public domain	XMAS	Xmas	C	19	tmu91-12	U	N
+Public domain	Publisher	PubLoad	C	19	tmu91-12	U	N
+Public domain	Voyage	Voyage	C	19	tmu91-12	U	N
+Public domain	 Rent	Rent	C	19	tmu91-12	m	N
+Public domain	Small Town Bo	STown	C	19	tmu91-12	m	N
+Public domain	Laura Brannigan Mix	Mix4	C	19	tmu91-12	m	N
+The Micro User	Checksum utility	xs	C	19	tmu91-12	U	N
+The Micro User	Arena:6502	Loader	C	19	tmu92-01	U	N
+The Micro User	Rom & Ram: Character graphics	Prog1	C	19	tmu92-01	U	N
+The Micro User	R&R: Graphic cursor graphics	Prog2	C	19	tmu92-01	U	N
+The Micro User	Safe Scientist on Density	Density	C	19	tmu92-01	U	N
+The Micro User	Screen blanker	Blanker	C	19	tmu92-01	U	N
+The Micro User	Quick keyword entry	Quick	C	19	tmu92-01	U	N
+The Micro User	Body Build: Sound Sampler	HardSmp	C	19	tmu92-01	U	N
+The Micro User	Body Build: Sample converter	S+C	C	19	tmu92-01	U	N
+The Micro User	Body Build: Sample Player	SFplay	C	19	tmu92-01	U	N
+The Micro User	Basic variables help rom	helpsrc	C	19	tmu92-01	U	N
+Public domain	Atomic Theory	Atomic	C	19	tmu92-01	U	N
+Public domain	Atomic Quiz 1	Arrange	C	19	tmu92-01	U	N
+Public domain	Atomic Quiz 2	Symbols	C	19	tmu92-01	U	N
+The Micro User	Rom and Ram: Animation 1	List1	C	19	tmu92-02	U	N
+The Micro User	Rom and Ram: Animation 2	List2	C	19	tmu92-02	U	N
+The Micro User	Rom and Ram: Animation 3	List3	C	19	tmu92-02	U	N
+The Micro User	Safe Scientist on Springs	Springs	C	19	tmu92-02	U	N
+The Micro User	Sample Player Version 2	XPlay8	C	19	tmu92-02	U	N
+Public domain	ZEDON	Z.ZEDON	C	19	tmu92-02	U	N
+The Micro User	Arachnoid (a bit slow)	Arachno	C	19	tmu92-03	U	N
+The Micro User	Arachnoid Screen Designer	ArachDe	C	19	tmu92-03	U	N
+The Micro User	Pointless line program	BLines	C	19	tmu92-03	U	N
+The Micro User	The Safe Scientist on Lenses	Lenses	C	19	tmu92-03	U	N
+The Micro User	Rom & Ram demo #1	Mar1	C	19	tmu92-03	U	N
+The Micro User	Rom & Ram demo #2	Mar2	C	19	tmu92-03	U	N
+The Micro User	Rom & Ram demo #3	Mar3	C	19	tmu92-03	U	N
+The Micro User	Rom & Ram demo #4	Mar4	C	19	tmu92-03	U	N
+The Micro User	Rom & Ram demo #5	Mar5	C	19	tmu92-03	U	N
+The Micro User	Rom & Ram demo #6	Mar6	C	19	tmu92-03	U	N
+The Micro User	Rom & Ram demo #7	Mar7	C	19	tmu92-03	U	N
+Public domain	Bare Necessities	Bear	C	19	tmu92-03	U	N
+Public domain	Bomber	Bomber	C	19	tmu92-03	g	N
+Public domain	Star Wars	StarWar	C	19	tmu92-03	p	N
+Public domain	Dr Who	DocWho	C	19	tmu92-03	m	N
+The Micro User	Checksum generator	xs	R	19	tmu92-03	U	N
+The Micro User	Balls of Destiny	Destin1	C	19	tmu92-04	U	N
+The Micro User	Arachnoid Screen Designer	ArachDe	C	19	tmu92-04	U	N
+The Micro User	Rom & Ram: PROC example #1	PROC1	C	19	tmu92-04	U	N
+The Micro User	Rom & Ram: PROC example #2	PROC2	C	19	tmu92-04	U	N
+The Micro User	Rom & Ram: PROC example #3	PROC3	C	19	tmu92-04	U	N
+The Micro User	Rom & Ram: PROC example #4	PROC4	C	19	tmu92-04	U	N
+The Micro User	Rom & Ram: Sprite definer	Definer	C	19	tmu92-04	U	N
+The Micro User	Rom & Ram: Sprite Mover	Mover	C	19	tmu92-04	U	N
+The Micro User	Arachnoid Machine Code	Arachno	C	19	tmu92-05	U	N
+The Micro User	Rom & Ram: Define5	Define5	C	19	tmu92-05	U	N
+The Micro User	Rom & Ram: Animate	Animate	C	19	tmu92-05	U	N
+The Micro User	Rom & Ram: Demo (Passed: PG)	Example	C	19	tmu92-05	U	N
+The Micro User	Safe Scientist: Heart	Heart	C	19	tmu92-05	U	N
+Public domain	Turbo Publisher	TP1	C	19	tmu92-05	U	N
+The Micro User	Rom & Ram: New animator	Part1	C	19	tmu92-06	U	N
+The Micro User	Rom & Ram: Animation demo 1	Alone	C	19	tmu92-06	U	N
+The Micro User	Rom & Ram: Animation Demo 2	Demo2	C	19	tmu92-06	U	N
+The Micro User	Rom & Ram: Animation Demo 3	Face	C	19	tmu92-06	U	N
+The Micro User	Safe Scientist: Logic	Logic	C	19	tmu92-06	U	N
+The Micro User	A postman knocks	Postie	C	19	tmu92-06	U	N
+The Micro User	New modes for the BBC: Mode A	ModeA	C	19	tmu92-06	U	N
+The Micro User	New modes for the BBC: Mode B	ModeB	C	19	tmu92-06	U	N
+The Micro User	New modes for the BBC: Mode C	ModeC	C	19	tmu92-06	U	N
+The Micro User	Body Building: TV Controller	IR	C	19	tmu92-06	U	N
+The Micro User	Checksums	Xsum	R	19	tmu92-06	U	N
+The Micro User	Rom & Ram: Drumkit	DRUMKIT	C	19	tmu92-07	U	N
+The Micro User	Rom & Ram: Enveloper	Envelop	C	19	tmu92-07	U	N
+The Micro User	Safe Scientist on Levers	Lever	C	19	tmu92-07	U	N
+The Micro User	Checksum program	xs	R	19	tmu92-07	U	N
+Public domain	Ghostbusters	GhostA	C	19	tmu92-07	U	N
+Public domain	Time Lapsed	T.Lapsed	R	19	tmu92-07	g	N
+Public domain	Robocop	Spook	R	19	tmu92-07	m	N
+Public domain	Spinning globe	SPIN	C	19	tmu92-07	U	N
+Public domain	Entropy	E.EntLoad	C	19	tmu92-07	g	N
+The Micro User	Rom & Ram: Battleships	Battles	C	19	tmu92-08	U	N
+The Micro User	Safe Scientist on Insulation	House	C	19	tmu92-08	U	N
+The Micro User	Body Building: Mirrors	Magic1	C	19	tmu92-08	U	N
+Public domain	Snacker	O.INTRO	R	19	tmu92-08	g	N
+Public domain	Chief	Chief	s	00	tmu92-08	p	N
+The Micro User	Checksum program	xs	R	19	tmu92-08	U	N
+The Micro User	Rom & Ram: Rom's snake game	Snake1	C	19	tmu92-09	U	N
+The Micro User	Rom & Ram: Ram's snake game	Snake2	C	19	tmu92-09	U	N
+The Micro User	Checksum generator	xs	R	19	tmu92-09	U	N
+Public domain	Power Raider	power	R	19	tmu92-09	U	N
+Public domain	ECG Simulator 3	ECGsim3	C	19	tmu92-09	U	N
+Public domain	ECG Instructions	ECGinfo	R	19	tmu92-09	U	N
+The Micro User	Rom & Ram: Pretty Write #1	Write1	C	19	tmu92-10	U	N
+The Micro User	Rom & Ram: Pretty Write 2	Write2	C	19	tmu92-10	U	N
+The Micro User	Rom & Ram: Scoreboard	SCRABit	C	19	tmu92-10	U	N
+The Micro User	Body Building: Sneak Thief #1	SneakT1	C	19	tmu92-10	U	N
+The Micro User	Body Building: Sneak Thief #2	SneakT2	C	19	tmu92-10	U	N
+The Micro User	Pixel Mapper: Shaper	Shaper	C	19	tmu92-10	U	N
+The Micro User	Pixel Mapper: PixMap	Pixmap	C	19	tmu92-10	U	N
+The Micro User	Cashbook	CashBk	C	19	tmu92-10	U	N
+The Micro User	Elysia	Elysia	C	19	tmu92-10	U	N
+The Micro User	Mechaworm	MW	C	19	tmu92-10	U	N
+The Micro User	Mechaworm2	MW2	C	19	tmu92-10	U	N
+The Micro User	Myriapod	Myriap	C	19	tmu92-10	U	N
+The Micro User	Checksum generator	xs	R	19	tmu92-10	U	N
+The Micro User	Roulette (NEEDS SHADOW RAM)	Roul	C	19	tmu92-11	U	N
+The Micro User	Castle of Fear	Castle	C	19	tmu92-11	z	N
+The Micro User	Blockbuster score board	Blockit	C	19	tmu92-11	U	N
+The Micro User	Body Building: Light gun	GUNBeeb	C	19	tmu92-11	U	N
+The Micro User	Cyberdoc: Reflections	Reflex	C	19	tmu92-11	U	N
+The Micro User	Pixel Mapper: Shaper	Shaper	C	19	tmu92-11	U	N
+The Micro User	Pixel Mapper: PixMap	Pixmap	C	19	tmu92-11	U	N
+The Micro User	Checksum generator	xs	R	19	tmu92-11	U	N
+The Micro User	Quick Compressor	QCD	R	19	tmu92-12	U	N
+The Micro User	On-Screen Clock	Clock	C	19	tmu92-12	U	N
+The Micro User	On-screen clock (Master)	MClock	C	19	tmu92-12	U	N
+The Micro User	QuadCube	QuadCbe	C	27	tmu92-12	G	N
+The Micro User	Tetris	QuadCbe	C	27	tmu92-12	G	N
+The Micro User	Block Cursor	Cursor	C	19	tmu92-12	U	N
+The Micro User	Checksum generator	xs	R	19	tmu92-12	U	N
+The Micro User	Push the Bale	Push	C	19	tmu93-01	U	N
+The Micro User	Body Building, Morse 1	MorR2_8	C	19	tmu93-01	U	N
+The Micro User	Body Building, Morse 2	MorR8	C	19	tmu93-01	U	N
+The Micro User	On-line Calendar	CalBas	C	19	tmu93-01	U	N
+The Micro User	Piano Player	Piano1	C	19	tmu93-01	U	N
+The Micro User	Telephone Mania	TPhone	C	19	tmu93-01	U	N
+The Micro User	Checksum generator	xs	C	19	tmu93-01	U	N
+The Micro User	Valentine	FEB14	C	19	tmu93-02	U	N
+The Micro User	Mode 2 Graphics package	Drawing	C	19	tmu93-02	U	N
+The Micro User	Sand simulator	Sand1	C	19	tmu93-02	U	N
+The Micro User	The Klect	Klect1	C	19	tmu93-02	g	N
+The Micro User	Cyberdoc on Current Affairs	Meter	C	19	tmu93-02	U	N
+The Micro User	Body Building: Morse Code 2	MKey8	C	19	tmu93-02	U	N
+The Micro User	Checksum generator	xs	R	19	tmu93-02	U	N
+Public domain	Text & Box styles	LettBox	C	19	tmu93-02	U	N
+Public domain	Spirals (instruct)	SprInst	R	19	tmu93-02	U	N
+Public domain	Spirals (program)	Spirals	C	19	tmu93-02	U	N
+The Micro User	Uni-Sample, see main article	SampLDR	C	19	tmu93-03	U	N
+The Micro User	Cyberdoc on Cooking (???)	Spud	C	19	tmu93-03	U	N
+The Micro User	Star Commander (utility)	StarSrc	C	19	tmu93-03	U	N
+The Micro User	Pirate's Gold	GOLD	C	11	tmu93-03	g	N
+The Micro User	Palette display	Palette	C	19	tmu93-03	U	N
+The Micro User	Morse Code	Morse	C	19	tmu93-03	U	N
+The Micro User	Checksum generator	xs	R	19	tmu93-03	U	N
+The Micro User	Time Slip Demo	!T-Slip	R	19	tmu93-04	U	N
+The Micro User	Banjo music demo	Banjo	C	19	tmu93-04	U	N
+The Micro User	Count in bases	BaseCou	C	19	tmu93-04	U	N
+The Micro User	Timetable printer	TimeTab	C	19	tmu93-04	U	N
+The Micro User	Checksum generator	xs	R	19	tmu93-04	U	N
+The Micro User	Bright Eyes	Bright	C	19	tmu93-05	g	N
+The Micro User	Protected Input routine	ProtInp	C	19	tmu93-05	U	N
+The Micro User	Screen Fader (Modes 0-2)	ScrFade	C	19	tmu93-05	U	N
+The Micro User	How many days has it been?	Days	C	19	tmu93-05	U	N
+The Micro User	Checksum routine	xs	R	19	tmu93-05	U	N
+The Micro User	Defender	Defend	C	19	tmu93-06	U	N
+The Micro User	CrowGo -- Sound and Music	CrowGo	C	19	tmu93-06	U	N
+The Micro User	3-D Demo program	3D_Demo	C	19	tmu93-06	U	N
+The Micro User	Fractions to Decimals #1	FrDecD	C	19	tmu93-06	U	N
+The Micro User	Fractions to Decimals #2	FrDecDL	C	19	tmu93-06	U	N
+The Micro User	Music (needs Hybrid 5000)	X.INTRO	C	19	tmu93-06	U	N
+The Micro User	Checksum routine	xs	C	19	tmu93-06	U	N
+The Micro User	3's & 5's dominoes	MAGDOM	C	19	tmu93-07	g	N
+The Micro User	Demo Creator: The Demo	a.DEMO	R	19	tmu93-07	U	N
+The Micro User	Demo Creator Program #1	List1	C	19	tmu93-07	U	N
+The Micro User	Demo Creator Program #2	List2	C	19	tmu93-07	U	N
+The Micro User	Demo Creator Program #3	List3	C	19	tmu93-07	U	N
+The Micro User	Check your differentials!	Differs	C	19	tmu93-07	U	N
+The Micro User	Password for your micro	PssWord	C	19	tmu93-07	U	N
+The Micro User	Checksum routine	xs	R	19	tmu93-07	U	N
+The Micro User	Maze Duel	M.LoadMD	C	19	tmu93-08	g	N
+The Micro User	WaterWorks	W.!BOOT	E	19	tmu93-08	g	N
+The Micro User	Pipemania	W.!BOOT	E	19	tmu93-08	g	N
+The Micro User	BlockIn	B.!BOOT	E	19	tmu93-08	g	N
+The Micro User	Tetris	B.!BOOT	E	19	tmu93-08	g	N
+The Micro User	Sprint (fund-raiser)	Sprint	C	19	tmu93-08	U	N
+The Micro User	Body Building: Sensor8	Sensor8	C	19	tmu93-08	U	N
+The Micro User	Checksum routine	xs	C	19	tmu93-08	U	N
+The Micro User	Campanology - the bells	B.Bells	C	19	tmu93-09	U	N
+The Micro User	Campanology - the methods	B.MethPtr	C	19	tmu93-09	U	N
+The Micro User	3D Maze	M.3D_Maze	C	19	tmu93-09	U	N
+The Micro User	Autorun for BASIC	A.AutoRun	C	19	tmu93-09	U	N
+The Micro User	Word Search	W.WSearch	C	0e	tmu93-09	U	N
+Public domain	Coke Can	CokeCan	C	19	tmu93-09	p	N
+Public domain	Letter Box	LettBox	C	19	tmu93-09	p	N
+Public domain	Shapes	Shapes	C	19	tmu93-09	p	N
+Public domain	Fall	Fall	C	19	tmu93-09	g	N
+Public domain	Marbles	Marbles	C	19	tmu93-09	g	N
+Public domain	Paras	Paras	C	19	tmu93-09	g	N
+Public domain	Short	Short	C	19	tmu93-09	g	N
+Public domain	Basic Reader	BasRead	C	19	tmu93-09	U	N
+The Micro User	Big Ben	BigBen	C	19	tmu93-09	U	N
+The Micro User	Cursor	Cursor	C	19	tmu93-09	U	N
+The Micro User	NumConv	NumConv	C	19	tmu93-09	U	N
+The Micro User	Fast checksum	xs	C	19	tmu93-09	U	N
+The Micro User	Power checksum	xsum	C	19	tmu93-09	U	N
+The Micro User	Huffman compression #1	Huff1	C	19	tmu93-10	U	N
+The Micro User	Huffman compression #2	Huff2	C	19	tmu93-10	U	N
+The Micro User	Heatseeker	MGAME	C	19	tmu93-10	g	N
+The Micro User	Day at the races	Races1	C	19	tmu93-10	U	N
+The Micro User	Fast checksum	xs	R	19	tmu93-10	U	N
+The Micro User	Power checksum	xsum	R	19	tmu93-10	U	N
+The Micro User	Sliding compression #1	Slide1	C	19	tmu93-11	U	N
+The Micro User	Sliding compression #2	Slide2	C	19	tmu93-11	U	N
+The Micro User	Sliding compression #3	Slide3	C	19	tmu93-11	U	N
+The Micro User	Address book	AddBook	C	19	tmu93-11	U	N
+The Micro User	Colours of Darkness	DarkLdr	C	15	tmu93-11	U	N
+The Micro User	Fast checksum	xs	C	19	tmu93-11	U	N
+The Micro User	Power checksum	xsum	C	19	tmu93-11	U	N
+The Micro User	Q-Master	!RunQM	R	19	tmu93-12	U	N
+The Micro User	Compression #3: Archiver	ListI	C	19	tmu93-12	U	N
+The Micro User	Compression #3: Dearchiver	ListII	C	19	tmu93-12	U	N

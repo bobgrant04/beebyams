@@ -1,0 +1,28 @@
+In order to create a new collection
+
+create a new beeb.mmb
+
+add mmcmenu,process,rawdat
+type *magic on disk process to see  supported special file types use these with S and last last hex byte
+
+add required disks
+
+optional rename disks using p.dinren on process this is good as makes a collection easily identifiable and prevents name clashes
+
+take any of the existing $.XXX.csv files
+use as a template 
+
+select the first disk - look at !boot to see the structure
+record the files into csv file
+repeat until complete
+
+save csv AS A TAB DELIMINATED FILE (sorry to shout!)
+
+add newly created file to raw.dat
+
+run p.processs on disk process with newly created csv using the 'V' option -this will ensure that you have a clean data set
+correct CSV file as required (i.e. - or _)
+
+run p.process on disk process with newly created csv using the 'M' option 
+run p.process on disk process with newly created csv using the 'MF' option to force use of csv details (will ask for each one)
+

@@ -263,155 +263,6 @@ BBC Soft	Space Invaders	INVAD-I	c	19	AltD012b	g	n
 Alternative	Video Pinball (Re-Issue)	PINBALL	c	19	AltD012b	g	n
 BBC Soft	Wall Game (Pre)	BREAK02	c	19	AltD012b	g	n
 Micro Power	Yahtzee	YAHT-L	c	19	AltD012b	s	n
-Unknown	Airlift#x	$.airlift	C	19	CH01A	C	N
-Unknown	Airwolf#i	$.airwolf	R	19	CH01A	C	N
-Unknown	Alien 8	$.LOADER	C	11	CH01A	C	N
-Unknown	Arkanoid	$.ARKNOID	C	19	CH01A	C	N
-Unknown	Atic atac#i	$.AACHEAT	C	19	CH01A	C	N
-Unknown	Blagger#il	$.BLAG-A	C	19	CH01A	C	N
-Unknown	Blitzkrieg#sx	$.BLITZKR	C	19	CH01A	C	N
-Unknown	Boulder crash#x	$.Boulder	C	19	CH01A	C	N
-Unknown	BMX on the moon#x	$.BMX	C	19	CH01B	C	N
-Unknown	Boffin#xl	$.BOFFCH1	C	19	CH01B	C	N
-Unknown	Boulderdash#x	$.BOULDER	C	19	CH01B	C	N
-Unknown	Bounty bob	$.BOB	C	19	CH01B	C	N
-Unknown	Breakthrough	$.BTCHEAT	C	19	CH02A	C	N
-Unknown	Castle quest#x	$.CSTLQST	C	19	CH02A	C	N
-Unknown	Chuckie Egg	$.UPGRADE	C	19	CH02A	C	N
-Unknown	Chuckie Egg 2	$.LOADER	C	19	CH02A	C	N
-Unknown	Chuckie egg chukee	$.CHKE	C	19	CH02A	C	N
-Unknown	Citadel	$.CITADEL	C	19	CH02A	C	N
-Unknown	Crazy tracer#x	$.CHEAT	C	19	CH02A	C	N
-Unknown	Arcadians#xl	$.LOADER	C	19	CH02B	C	N
-Unknown	Barbarian 2	$.B2CHT	C	19	CH02B	C	N
-Unknown	BoneCruncher	$.BONOCHT	C	19	CH02B	C	N
-Unknown	Chuckie egg#i	$.CH_EGG	R	19	CH02B	C	N
-Unknown	Code name droid	$.CNDCHT	C	19	CH03A	C	N
-Unknown	Combat Lynx	$.LYNXCHT	C	19	CH03A	C	N
-Unknown	Commando	$.COMMAND	C	19	CH03A	C	N
-Unknown	Creepy Cave	$.CCCHEAT	C	19	CH03A	C	N
-Unknown	Cybertron#xl	$.CHEAT	C	17	CH03A	C	N
-Unknown	Cylon attack#i	$.CYLON	C	19	CH03A	C	N
-Unknown	Deathstar#x	$.DEATH1	C	19	CH03A	C	N
-Unknown	defender#l	$.DEFEND	C	19	CH03A	C	N
-Unknown	Denolator#x	$.DEMOCHT	R	19	CH03B	C	N
-Unknown	Dune Rider	$.DUNE	C	19	CH03B	C	N
-Unknown	Elexir#xs	$.ELIXCHT	C	19	CH03B	C	N
-Unknown	Escape moon base alpha	$.EMBA1	C	19	CH03B	C	N
-Unknown	ewgeebez#x	$.EWGEE	C	19	CH03B	C	N
-Unknown	fortress	$.FORT	C	19	CH03B	C	N
-Unknown	Frenzy#x	$.CHEAT	C	19	CH03B	C	N
-Unknown	galaforce	$.GFORCE	C	19	CH03B	C	N
-Unknown	galaforce 2#x	$.GAL2CHT	C	19	CH03B	C	N
-Unknown	Ghouls#xl	$.LOADER	C	60	CH03B	C	N
-Unknown	Jet pac#l	$.JETPAC	C	19	CH03B	C	N
-Unknown	E-type	$.ETYPECH	C	19	CH04A	C	N
-Unknown	Firecraft#x	$.FTCHEAT	C	19	CH04A	C	N
-Unknown	FireTrack	FTCHT	R	19	CH04A	C	N
-Unknown	Jet set willy#l	$.JETSET	C	19	CH04A	C	N
-Unknown	Gisburnes cat#x	$.CHEAT	C	69	CH04B	C	N
-Unknown	Grand prix const set	$.GPCHT	C	19	CH04B	C	N
-Unknown	Green Beret	$.G-BERET	C	19	CH04B	C	N
-Unknown	Hobgoblin 2	$.HOBBY2	C	19	CH04B	C	N
-Unknown	Hobgoblin#x	$.HOBGBLN	C	19	CH04B	C	N
-Unknown	Impact built in cheat	$.IMPACT	C	19	CH04B	C	N
-Unknown	Jet set willy#x	$.JSW1CHT	C	19	CH04B	C	N
-Unknown	Jetset willy 2#i	$.JSW2CHT	C	19	CH04B	C	N
-Unknown	Frak	$.FRAK	C	19	CH05A	C	N
-Unknown	Joe Blade#i	$.JOBLADE	C	19	CH05A	C	N
-Unknown	Killer gorilla killa	$.KILLA	C	19	CH05A	C	N
-Unknown	Kissin cousins#x	$.KLOAD	C	19	CH05A	C	N
-Unknown	KIX#x	$.CHEAT	C	19	CH05A	C	N
-Unknown	Knightlore	$.KNIGHT	C	11	CH05A	C	N
-Unknown	Krakout#l	$.KRAKCHT	C	19	CH05A	C	N
-Unknown	Monsters#x	$.MONST	C	19	CH05A	C	N
-Unknown	Joe Blade2#i	$.JOE-CHT	C	19	CH05B	C	N
-Unknown	Killer gorilla	$.KILLER	C	19	CH05B	C	N
-Unknown	Kourtyard	$.CHEATKD	C	19	CH05B	C	N
-Unknown	Labyrinth#x	$.LABYRIN	C	19	CH05B	C	N
-Unknown	Lunar jetman#xl	$.JETLOAD	C	19	CH05B	C	N
-Unknown	Manic miner#x	$.MINER	C	19	CH05B	C	N
-Unknown	Martian attack#x	$.MARTIAN	C	1D	CH05B	C	N
-Unknown	GAForce#i	$.M-FORCE	C	19	CH06A	C	N
-Unknown	MR EE#xl	$.MREE	C	19	CH06A	C	N
-Unknown	MR WIZ#xl	$.MRWIZ	C	19	CH06A	C	N
-Unknown	Network#x	$.NETWORK	C	19	CH06A	C	N
-Unknown	Omega orb	$.OMEGA	C	19	CH06A	C	N
-Unknown	one last game#x	$.OLGLOAD	C	19	CH06A	C	N
-Unknown	PacMan#s	$.LOADER	C	19	CH06B	C	N
-Unknown	Palace of magic#i	$.Palace	C	19	CH06B	C	N
-Unknown	Pandemonium#x	$.PANDMNM	C	19	CH06B	C	N
-Unknown	Pharaohs curse#x	$.CURSECH	C	19	CH06B	C	N
-Unknown	Plan b	$.PLANB	C	19	CH06B	C	N
-Unknown	Plan B2	$.PLANB-2	C	19	CH06B	C	N
-Unknown	Planetoid#i	$.PLANETO	C	19	CH06B	C	N
-Unknown	Pole position	$.POLE	C	19	CH06B	C	N
-Unknown	Positron#x	$.POSITRO	C	19	CH06B	C	N
-Unknown	Yoyo#x	$.YOYO	C	19	CH06B	C	N
-Unknown	Repton	$.REPTON	C	19	CH07A	C	N
-Unknown	Repton 3	$.REP3CHT	C	19	CH07A	C	N
-Unknown	REVs	$.REVSZAP	C	19	CH07A	C	N
-Unknown	RIPTON#x	$.RIPCHT	C	19	CH07A	C	N
-Unknown	Psycastria	$.PSYCAST	C	19	CH07B	C	N
-Unknown	Quest	$.QCHEAT	C	19	CH07B	C	N
-Unknown	Ransack#i	$.RANLOAD	C	19	CH07B	C	N
-Unknown	Ravenskull	$.SKULCHT	C	19	CH07B	C	N
-Unknown	Perlexity	$.PERPCHT	C	19	CH08A	C	N
-Unknown	Repton 2	$.R2CHT	C	19	CH08A	C	N
-Unknown	Rocket raid#x	$.RAID	C	19	CH08A	C	N
-Unknown	Round ones#x	$.ROUND1	R	19	CH08A	C	N
-Unknown	Rubble trouble#i	$.RUBBLE	C	19	CH08A	C	N
-Unknown	Sabre wulf#x	$.SABRE	C	19	CH08A	C	N
-Unknown	Secret garden#l	$.GDNCHT	C	19	CH08A	C	N
-Unknown	Repton Thru Time	$.RTTLOAD	C	70	CH08B	C	N
-Unknown	Shanghai warriors#x	$.SHANGHI	C	9	CH08B	C	N
-Unknown	SIM#x	$.SCHEAT	C	19	CH08B	C	N
-Unknown	Subway vigilante#x	$.SUBWAY	C	19	CH08B	C	N
-Unknown	snapper1#s	$.SNAP	C	19	CH09A	C	N
-Unknown	Snapper1#xl	$.LOADV1	C	19	CH09A	C	N
-Unknown	Space Pilot	$.PILOT	C	19	CH09A	C	N
-Unknown	Spellbinder#i	$.SPELLCH	C	19	CH09A	C	N
-Unknown	Sphere Of Destiny	$.SPHERE	C	19	CH09A	C	N
-Unknown	Snapper2#xl	$.LOADV2	C	19	CH09B	C	N
-Unknown	Spy Hunter	$.HUNTLDR	C	19	CH09B	C	N
-Unknown	Spycat	$.SPYCAT	C	19	CH09B	C	N
-Unknown	Star warp#li	$.SPCWARP	C	19	CH09B	C	N
-Unknown	Starquake	$.SQCHEAT	C	19	CH09B	C	N
-Unknown	Starship Command	$.CHEAT	C	19	CH09B	C	N
-Unknown	STRIP POKER	$.CHTPOKR	C	19	CH10A	C	N
-Unknown	Syncron#l	$.SYNCRON	R	19	CH10A	C	N
-Unknown	Tarzan#x	$.TARZAN	C	19	CH10A	C	N
-Unknown	Tempest#x	$.TEMPEST	C	19	CH10B	C	N
-Unknown	Templeton#x	$.TEMPLE	C	19	CH10B	C	N
-Unknown	The pyramid#l	$.PYRA	C	19	CH10B	C	N
-Unknown	The Sentinel	$.SENT	C	19	CH10B	C	N
-Unknown	Thunderstruck 2#i	$.MIND	C	19	CH10B	C	N
-Unknown	Tomcat#xl	$.TOMCAT	C	19	CH10B	C	N
-Unknown	The big KO	$.BIGKO	C	19	CH11A	C	N
-Unknown	Shark	$.CHEAT	C	19	CH11B	C	N
-Unknown	Thrust	$.LOADER	C	19	CH11B	C	N
-Unknown	Tron#x	$.ULTRON	R	19	CH11B	C	N
-Unknown	Uncle claude#x	$.CLAUDE	C	19	CH11B	C	N
-Unknown	Uridium	$.URLOAD	C	70	CH11B	C	N
-Unknown	Warehouse#x	$.WAREHSE	C	19	CH11B	C	N
-Unknown	Wizadore	$.WIZ	C	19	CH11B	C	N
-Unknown	Vertigo#x	$.Menu	C	19	CH12A	C	N
-Unknown	Last Ninja	$.NINCHT	C	19	CH12B	C	N
-Unknown	WAR#x	$.WAR	C	19	CH12B	C	N
-Unknown	Who Dares Wins 2	$.WHODARE	C	19	CH13A	C	N
-Unknown	YIE AR KUNG	$.LOADER	C	19	CH13A	C	N
-Unknown	YIE AR KUNG#xl	$.YIE-AR2	C	19	CH13A	C	N
-Unknown	Camelot	$.CAMELOT	C	19	CH13B	C	N
-Unknown	Genesis project#i	$.GENCHT	C	19	CH13B	C	N
-Unknown	Microball	$.LOADER	C	19	CH13B	C	N
-Unknown	Space Ranger#i	$.RANGER	C	19	CH13B	C	N
-Unknown	Zalaga#x	$.ZALAGA	C	19	CH13B	C	N
-Unknown	Ziggy	$.CHEAT	C	19	CH13B	C	N
-Unknown	Elite editor	$.ELCHT	C	19	CH14A	C	N
-Unknown	Exile	$.EXLCHT	C	19	CH14A	C	N
-microuser	Exile	$.!B	C	19	CH14A	C	N
-Unknown	Exile editor	$.EXEDIT	C	19	CH14A	C	N
-Unknown	Exile mapper	$.MAPPER	C	19	CH14A	C	N
 A&F 	Cylon Attack	caintro	c	19	Disc001a	g	y
 Acornsoft	Defender	planet	c	19	Disc001a	g	y
 Micro Power	Felix In The Factory	Fact-l	c	19	Disc001a	g	n
@@ -3285,8 +3136,8 @@ Riverdale	AMERICAN SUDS pt2	amsud2b	C	19	STH021	A	N
 Riverdale	AMERICAN SUDS pt3	amsud3b	C	19	STH021	A	N
 Riverdale	AMERICAN SUDS pt4	amsud4b	C	19	STH021	A	N
 database	Aussi  SUDS	aussie1	C	19	STH021	A	N
-Potter Progs	Hexagram Of Trutania Valley	hexgram	c	19	STH021	g	n
-database	Percy's Panic#E	percy	c	19	STH021	z	n
+Potter Progs	Hexagram Of Trutania Valley	hexgram	c	19	STH027	g	n
+database	Percy's Panic#E	percy	c	19	STH027	z	n
 Riverdale	SUDS pt1	SUDS1/M	C	19	STH021	A	N
 Riverdale	SUDS pt2	SUDS2/M	C	19	STH021	A	N
 Riverdale	SUDS pt3	SUDS3/M	C	19	STH021	A	N
@@ -3314,7 +3165,7 @@ IJK	beetle	fgbeetl	C	19	STH025	G	N
 Minic	BRIDGE MENTOR	FRONT	C	19	STH025	S	N
 Electron user	count dracula castle	dracula	C	19	STH025	G	N
 IJK	dice	fgdice	C	19	STH025	G	N
-Acornsoft	Draughts	draught	c	19	sth025	s	n
+Acornsoft	Draughts	draught	c	19	sth027	s	n
 ILMN	Football#2	CLASSIC	R	19	STH025	G	N
 ILMN	four bat blip	CLASSIC	R	19	STH025	G	N
 BBC Soft	Galaxy 	galaxy	C	19	STH025	G	N

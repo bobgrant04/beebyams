@@ -274,7 +274,7 @@ LDY #0:LDA(APtr),Y:BEQ ob::JSRged:LDA(APtr),Y:CMP y:BNE du:INY:INY:INY:LDA(APtr)
 \Check for OVERFLOW
 .xg:LDA p:CMP #cla%:BCS pe:JMP xa
 .pe
-JSR totalreccount:LDY #21:.pf:LDA overflow,Y:STA(APtr),Y:DEY:BPL pf
+JSR totalreccount:LDY #&19:.pf:LDA overflow,Y:STA(APtr),Y:DEY:BPL pf
 JMP pg
 .overflow:EQUS"..OUT OF MEMORY.":EQUB &AE:EQUB 0:EQUB 0:EQUB 0:EQUB 0:EQUB 0:EQUB 0
 .dh:RTS

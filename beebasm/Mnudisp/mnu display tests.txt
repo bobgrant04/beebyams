@@ -67,7 +67,6 @@ R filter screen displayed with strategy on the D line
 A select display results (either cursor or I) and select
 R bottom screen is blanked out and some green dots and white dots appear puncutated with spaces (shows search progress)
 R Then result screen is shown A is 1984 fight R is aces high note S is the only software type shown
-\to do tab btn leads to too big!
 
 
 \test e
@@ -84,7 +83,7 @@ R filter screen displayed with on replacing off on the E line
 A select display results (either cursor or I) and select
 R bottom screen is blanked out and some green dots and white dots appear puncutated with spaces (shows search progress)
 R Then result screen is shown A is 737 flight R is carnival note fav is not marked on the menu
-\to do fav indication?
+\todo fav indication?
 
 \test f
 A shift break
@@ -100,7 +99,6 @@ R filter screen launches F has "SNA"
 A select display results (either cursor or I) and select
 R bottom screen is blanked out and some green dots appear puncutated with spaces (shows search progress)
 R Then result screen is shown A is Jsnake R is Snaker
-\todo tab
 
 \test g
 A shift break
@@ -136,8 +134,7 @@ R Then result screen is shown A is 3d dog fight R is androidz note Acornsoft is 
 \individual filter test ends
 
 \test I
-\not needed as tested but above tests
-
+\not needed as tested by above tests
 
 
 
@@ -166,6 +163,9 @@ A enter sna
 R filter screen launches F has "SNA" 
 A select J and press return	
 R filter screen displayed with off replacing all previous entries with F being blank
+A slect I and retun
+R inital screen is seen
+
 
 \test m
 A shift break

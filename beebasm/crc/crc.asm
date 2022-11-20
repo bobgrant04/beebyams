@@ -187,7 +187,7 @@ EQUS"K.0 */code|M",&8D
 .erraddr:EQUW errtxt
 .errtxt
 \ 1 usage"
-EQUS"Usage <fsp> (<dno>/<dsp>) (<drv>) E%=exec l%=load N%=length m%=CRC":EQUB &8D
+EQUS"Usage <fsp> (<dno>/<dsp>) (<drv>) E%=exec L%=load N%=length M%=CRC":EQUB &8D
 \ 2 file not found 
 EQUS"file not foun",&E4
 \ 3 exe address invalid

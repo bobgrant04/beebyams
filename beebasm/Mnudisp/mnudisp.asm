@@ -59,7 +59,7 @@ Dr%=3:\drive to be used to read cat etc
 \OS routines
 osasci=&FFE3:osbyte=&FFF4:oscli=&FFF7:osfile=&FFDD:osnewl=&FFE7:osword=&FFF1
 
-ORG &6D00
+ORG &6C00
 GUARD &7C00
 
 .start
@@ -89,7 +89,9 @@ GUARD &7C00
 \StrAlen len of str
 \Cap StrA%
 .Cap
-{:LDY StrAlen:.aa:LDA StrA%,Y:CMP #97:BCC ab:SBC #32:STA StrA%,Y:.ab:DEY:BPL aa:RTS }
+{
+LDY StrAlen:.aa:LDA StrA%,Y:CMP #97:BCC ab:SBC #32:STA StrA%,Y:.ab:DEY:BPL aa:RTS 
+}
 \Din command
 .din
 {:LDX dsadd:LDY dsadd+1:JMP oscli }\RET
@@ -112,23 +114,30 @@ GUARD &7C00
 .drstr:EQUS"DR. ":EQUB &D:.drstradd:EQUW drstr
 \Set Din Z sdz
 .sdz
-{:LDY #1:.ja:LDA z,Y:STA IntA,Y:DEY:BPL ja:LDY #0:LDX #48
-
-:.la:DEC IntA+1:BNE lc:LDX #50:LDY #56:.lc:LDA IntA:SEC:
+{
+LDY #1:.ja:LDA z,Y:STA IntA,Y:DEY:BPL ja:LDY #0:LDX #48
+.la:DEC IntA+1:BNE lc:LDX #50:LDY #56:.lc:LDA IntA:SEC:
 SBC #100:
 BCC le:INX:STA IntA:BNE lc:.le:TYA:ADC IntA:STA IntA:SEC:SBC #100 
 :BCC lv:INX:STA IntA:.lv:STX dinstr+3
 STX StrA%
-LDX #48:.lh:LDA IntA:SEC:SBC #10:BCC lj:INX:STA IntA:BNE lh:.lj:STX dinstr+4:STX StrA%+1:LDA #48:ADC IntA:STA dinstr+5:STA StrA%+2:RTS }
+LDX #48:.lh:LDA IntA:SEC:SBC #10:BCC lj:INX:STA IntA:BNE lh:.lj:STX dinstr+4:STX StrA%+1:LDA #48:ADC IntA:STA dinstr+5:STA StrA%+2:RTS 
+}
 \check catfile exists cce
 .cce
-{:LDA catdatadd:STA block:LDA catdatadd+1:STA block+1:LDA #5:LDX blockadd:LDY blockadd+1:JMP osfile:}\rts
+{
+LDA catdatadd:STA block:LDA catdatadd+1:STA block+1:LDA #5:LDX blockadd:LDY blockadd+1:JMP osfile:
+}\rts
 \load catfile lcf
 .lcf:
-{ JSR ifcp:LDA #4:STA comprec:LDA catdatadd:STA block:LDA catdatadd+1:STA block+1:JMP lf:}\rts
+{
+JSR ifcp:LDA #4:STA comprec:LDA catdatadd:STA block:LDA catdatadd+1:STA block+1:JMP lf:
+}\rts
 \Loadpub lpub
 .lpub
-{:JSR ifsp:LDA #0:STA comprec:LDA pubadd:STA block:LDA pubadd+1:STA block+1:JMP lf:} \rts
+{
+JSR ifsp:LDA #0:STA comprec:LDA pubadd:STA block:LDA pubadd+1:STA block+1:JMP lf:
+} \rts
 \Loaddin ldin
 .ldin
 {:JSR ifcp:LDA #0:STA comprec:LDA dinadd:STA block:LDA dinadd+1:STA block+1:JMP lf:}\rts
@@ -305,12 +314,14 @@ CPY #&D:BEQ lcr:}
 RTS
 \.XXoe:JSR dfs:JMP 
 \Launch current record lcr
-\X filename din
+\X filename din drive
 \put X% dinno u%=catno
 \Need to convert catno-filename
 .lcr
 JSR postgns
-{:JSR cda:JSR mrz:}
+{
+JSR cda:JSR mrz
+}
 \clear X%
 LDX #&5C:JSR clearint
 \clear U%
@@ -324,12 +335,19 @@ CLC:JSR ddc:
 \read catalogue
 \ReadCat rac ret 0 OR NOT IN A
 {:LDA #&7F:LDX pramadd:LDY pramadd+1:JSR osword:LDA pramadd+10:SBC &10:}
-LDA #88:STA StrA%:LDA #32:STA StrA%+1
-LDX u:LDA #0:CLC:.oi:ADC #8:DEX:BNE oi:TAY:LDX #0:LDA cat+7,Y:STA StrA%+2:LDA #46:STA StrA%+3
-.oj:LDA cat,Y:CMP #32:BEQ rq:STA StrA%+4,X:INY:INX:CPX #7:BNEoj:LDA#32:STA StrA%+4,X:LDY #&FF
-.rq:LDY #&FF:.ok:INY:INX:LDA dinstr+3,Y:STAStrA%+4,X:CMP #13:BNE ok
+LDA #'X':STA StrA%:LDA #' ':STA StrA%+1
+LDX u:LDA #0:CLC:.oi:ADC #8:DEX:BNE oi
+TAY:LDX #0:LDA cat+7,Y:STA StrA%+2:LDA #46:STA StrA%+3
+.oj:LDA cat,Y:CMP #32:BEQ rq:STA StrA%+4,X:INY:INX:CPX #7:BNE oj:.rq:LDA #32:STA StrA%+4,X:LDY #&FF
+\.rq:
+LDY #&FF:.ok:INY:INX:LDA dinstr+3,Y:STAStrA%+4,X:CMP #13:BNE ok
+LDA #' ':STAStrA%+4,X
+INX:LDA #'3':STAStrA%+4,X
+INX:LDA #&D:STAStrA%+4,X
 LDA #48:JSR ds
-{:LDX #LO(StrA%):LDY #HI(StrA%):JMP oscli:}\RET
+{
+LDX #LO(StrA%):LDY #HI(StrA%):JMP oscli
+}\RET
 
 \dr/din/cat ddc
 .ddc
@@ -684,5 +702,5 @@ SAVE "mnudisp", start, end,startexec
 
 \\cd d:\bbc/beebasm
 \cd D:\GitHub\beebyams\beebasm
-\beebasm -i mnudisp.asm -do mnudisp.ssd -boot x -v -title mmudisp
+\beebasm -i .\mnudisp\mnudisp.asm -do .\mnudisp\mnudisp.ssd -boot x -v -title mmudisp
 \\

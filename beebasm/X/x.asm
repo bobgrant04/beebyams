@@ -230,6 +230,9 @@ GUARD &7C00
 
 .start
 
+.modexec
+INCBIN ".\x\$.modexec"
+
 .altdec
 INCBIN ".\x\$.altdec"
 
@@ -397,8 +400,10 @@ LDX #9
 \setup *k.1
 .repton3
 {
-\*dr.0
 JSR setdr0
+\set drive 0 to x-files
+LDX #NoSpecials%+3
+JSR prepcmd:JSR execmd
 
 \*k.1 setup
 LDX #NoSpecials%+5:JSR prepcmd:JSR addparam:JSR execmd
@@ -414,8 +419,7 @@ LDX #0
 .ac
 JSR gti
 }
-\mode5
-LDX #5:JSR setmode
+
 \need to init zero page (&70 &82 loaded with zero)
 LDX #18:LDA #0
 .ab
@@ -424,8 +428,11 @@ STA &70,X:DEX:BPL ab
 lDA #&60:STA &7C
 LDA #&3:STA &7F
 
-LDX #0:STX &FE01:INX:STX &FE00
-LDY #strA% DIV 256:LDX #strA% MOD 256:JMP oscli
+JMP setandexe
+
+
+\LDX #0:STX &FE01:INX:STX &FE00
+\LDY #strA% DIV 256:LDX #strA% MOD 256:JMP oscli
 \JMP execmd:\RTS
 }
 \7FF5 scrload
@@ -483,11 +490,18 @@ LDX #0
 .aa:LDA reptoninfinitytext,X:BEQ ac:JSR osasci:INX:BNE aa
 .ac
 JSR gti
-}
-
-\*repi
 LDX #NoSpecials%+9
-JSR prepcmd:JMP execmd:\RTS
+JSR prepcmd:
+}
+\setmode and execute
+.setandexe
+{
+LDY #0:.xx:LDA modexec,Y:STA &900,Y:INY:BNE xx
+LDX #5:JMP &900
+}
+\*repi
+\LDX #NoSpecials%+9
+\JSR prepcmd:JMP execmd:\RTS
 .cl
 .cz:CPX#00:BEQ screencheck:
 JSR prepcmd:JSR addparam:JMP execmd
@@ -651,8 +665,8 @@ EQUS"*DIN",&A0
 EQUS"LO.",&A0
 \select repton3 disk #3
 EQUS "DIN x-files",&8D
-\* run repton2 #4
-EQUS "REPTON2",&8D
+\* run repton3 #4
+EQUS "REP3",&8D
 \*K.1 #5
 EQUS "K.1:3",'.'+&80
 \delete prelude #6
@@ -695,7 +709,7 @@ EQUS"7FF8 DEC compressed picture":EQUB &D
 EQUS"7FF7 viewsheet":EQUB &D
 EQUS"7FF6 31E0 repton 3 level (screen)":EQUB &D
 EQUS"7FF5 SCRLOAD TODO":EQUB &D
-EQUS"7FF6 31E0 repton infinity level (screen)":EQUB &D
+EQUS"7FF4 31E0 repton infinity level (screen)":EQUB &D
 EQUS"7F07 mode 7 Screen":EQUB &D
 EQUS"7F06 mode 6 Screen":EQUB &D
 EQUS"7F05 mode 5 Screen":EQUB &D
@@ -728,6 +742,6 @@ SAVE "x", start, end,startexec
 \cd d:\bbc/beebasm
 \cd D:\GitHub\beebyams\beebasm
 \beebasm -i .\x\x.asm -do .\x\x.ssd -boot x -v -title x
-\beebasm -i .\x\x.asm -di .\x\x-devtemplate.ssd -do .\x\x-dev 
-\beebasm -i .\x\x.asm -di .\x\x-filestemplate.ssd -do .\x\x-files.ssd
+\beebasm -i .\x\x.asm -di .\x\x-devtemplate.ssd -do .\x\x-dev.ssd -v
+\beebasm -i .\x\x.asm -di .\x\x-filestemplate.ssd -do .\x\x-files.ssd -v
 

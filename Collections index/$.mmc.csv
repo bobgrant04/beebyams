@@ -5,15 +5,13 @@ Advent Intl	11 Savage Island Pt 2	ADVENT	c	19	DISC096b	a	n
 Advent Intl	12 Golden Voyage	GOLD-L	c	19	DISC096b	a	n
 Advent Intl	13 Sorceror Claymorgue Castle	ADVENTU	c	19	DISC097a	a	n
 Advent Intl	15 Buckaroo Banzai	ADVENTU	c	19	DISC097b	a	n
-Repton3 Lvl	18+ joke	joke	s	f6	Rep3lvl1	g	n
-Repton3 Lvl	18+ rude	rude	s	f6	Rep3lvl3	g	n
 A&F 	180! Darts	180dart	c	19	Disc009b	g	n
 Incentive	1984	four	c	19	Disc053b	s	n
 Advent Intl	2 Pirate	PIRATE	c	19	DISC091b	a	n
 Superior 	2002	2002ldr	c	19	Disc069b	g	n
 A&B	2002	a.2002	C	15	STH005	A	N
 Self Pub.	2048	2048INS	c	19	DISC110b	s	n
-Repton3 Lvl	2j3rep	r.2j3rep	s	f6	Rep3lvl1	g	n
+Repton3 Lvl	2j3rep	2j3rep	s	f6	Rep3lvl1	g	n
 Repton3 Lvl	3	03	s	f6	Rep3lvl2	g	n
 PD	3-A-Line#2	3INALI1	c	19	Disc127b	s	n
 Fontana Pub	3-D Maze	3DMINST	c	19	Disc145b	g	n
@@ -106,13 +104,16 @@ Soft Hits	Airbrush	airbrsh	c	19	Disc053b	g	n
 PCW	Aircraft Landing Simulator	LandER	c	19	Disc120b	s	n
 Superior 	Airlift	airlift	c	19	Disc007b	g	n
 Bug-Byte	Airlift	airlift	c	19	DISC107b	g	y
+Unknown	Airlift#x	$.airlift	C	19	CH01A	C	N
 CCS	Airline	AIRLINE	c	19	DISC087b	g	n
 Elite	Airwolf	wolf	c	19	Disc027a	g	n
+Unknown	Airwolf#i	$.airwolf	R	19	CH01A	C	N
 SW Lucas	Aladdin	ALADIN1	c	19	DISC096a	a	n
 Beebug	Alien	MENU	c	19	DISC090a	g	n
 Bug-Byte	Alien	ALIEN	c	19	Disc128b	g	n
 Acorn Computing	Alien 32	load32	c	19	DISC081a	g	n
 Ultimate	Alien 8	alien	c	19	Disc013a	g	
+Unknown	Alien 8	$.LOADER	C	11	CH01A	C	N
 Ultimate	Alien 8 -Alt	ALIEN-8	c	19	AltD009b	g	n
 ASP	Alien Attack	ALIEN	c	19	Disc137a	g	n
 PCW	Alien Blaster	BLASTER	c	19	DISC089b	g	n
@@ -174,6 +175,7 @@ Microbyte	Arcade Pinball	pinball	c	19	Disc018a	g	n
 4th Dimension	Arcade Soccer	arcade	c	19	Disc045b	g	n
 Everiss 	Arcadia	ARC	c	19	AltD002a	g	n
 Acornsoft	Arcadians	arc	c	19	Disc002a	g	y
+Unknown	Arcadians#xl	$.LOADER	C	19	CH02B	C	N
 For All	Area Radar Controller	arc	c	19	DISC074b	s	n
 Microdeal	Arena 3000	arena	c	19	DISC021b	g	n
 Micro User	Arena:6502	loader	c	19	Disc062a	g	n
@@ -181,6 +183,7 @@ Electron User	Arena#E	arena	c	19	DISC070b	g	n
 Acorn Programs	Argon Attack	airatta	c	19	Disc059b	u	n
 boulsworth 	Ariadne	ARIADN1	c	19	Disc116b	a	n
 IJK 	Arkanoid	arkinst	c	19	Disc036b	g	n
+Unknown	Arkanoid	$.ARKNOID	C	19	CH01A	C	N
 Your Comp.	Armoured Toms	toms1	c	19	Disc049b	g	n
 Digital Fantasia	Arrow Of Death Pt 1	death	c	19	DISC094a	a	n
 Digital Fantasia	Arrow Of Death Pt 2	DEATH	c	19	DISC096a	a	n
@@ -210,6 +213,7 @@ Self Pub.	Astrorun	astro	c	19	Disc058a	g	n
 popular CW	Astrosmash	ASMASH	c	19	Disc145a	g	n
 Melbat Soft	Asylum	asylum	c	19	Disc020b	g	n
 Ultimate	Atic Atac	Atic-lo	c	19	Disc010b	g	n
+Unknown	Atic atac#i	$.AACHEAT	C	19	CH01A	C	N
 IJK 	Atlantis	atlanti	c	19	Disc022a	g	n
 Romik	Atom Smasher	Atom-sm	c	19	Disc029b	g	n
 Alternative	Atom Smasher#E	atomsma	c	19	Disc050a	g	n
@@ -264,6 +268,7 @@ Robico	Banjax	loader	c	19	Disc012a	g	n
 Acorn Programs	Bank Robber	BANKROB	c	19	Disc128b	g	n
 Blue Ribbon	Bar Billiards	Bar-bbc	c	19	Disc031a	g	n
 Acorn Programs	Bar Maze	maze	c	19	Disc061b	g	n
+Unknown	Barbarian 2	$.B2CHT	C	19	CH02B	C	N
 Superior 	Barbarian A&B	barbari	c	19	Disc043b	g	n
 Superior 	Barbarian II:	barbari	c	19	Disc055b	g	n
 Micro User	Barny-Bee	BARNY	c	19	DISC084b	g	n
@@ -345,6 +350,7 @@ Micro User	Blackjack#2	BLACKJA	c	19	Disc120a	s	n
 Alligata	Blagger	BLAGGER	c	19	AltD007b	g	n
 Alligata	Blagger	blag	c	19	Disc002b	g	n
 Alligata	Blagger#2	blagger	c	19	Disc022b	g	n
+Unknown	Blagger#il	$.BLAG-A	C	19	CH01A	C	N
 Fast Access	Blast-Out	head	c	19	Disc049b	g	n
 Audiogenic	Blast!	blast!	c	19	Disc045a	g	n
 Micro User	Blind-Man's Buff	BLIND_B	c	19	Disc141b	g	n
@@ -355,6 +361,7 @@ Your Comp.	Blitz	BLITZ	c	19	Disc122a	g	n
 Bug-Byte	Blitz	BLITZ-L	c	19	Disc129a	g	n
 Invasion	Blitzkrieg (Mono)	BLITZK	c	19	AltD008a	g	n
 Invasion	Blitzkrieg A&B	blitz	c	19	Disc010a	g	n
+Unknown	Blitzkrieg#sx	$.BLITZKR	C	19	CH01A	C	N
 Disk user	Blobber	blobber	c	19	Disc035b	g	n
 PD	Blobo	BLOBO	c	19	DISC084a	g	n
 Micro User	Blocbusta	blkbust	c	19	DISC073a	g	n
@@ -374,12 +381,13 @@ Macsen	Blockbusters#2	blockb	c	19	Disc062a	s	n
 Thor	Blocker	blocker	c	19	Disc031a	g	n
 Micro Power	Blockman	BMAN	c	19	AltD002a	g	n
 Micro Power	Blockman	uxb	c	19	Disc004a	g	n
-Repton3 Lvl	Blog	r.blog	s	f6	Rep3lvl1	g	n
+Repton3 Lvl	Blog	blog	s	f6	Rep3lvl1	g	n
 JBF 	Blokkendoos#STD	BLOK	c	19	Disc112a	g	n
 Robico	Blood Of The Mutineers	MUTINY	c	19	DISC099b	a	n
 MP 	Blue Dragon	DRAGON	c	19	DISC092a	g	n
 Micro User	Blue Meanie	blue-l	c	19	DISC072b	g	n
 Superior 	BMX On The Moon	moon	c	19	Disc005b	g	n
+Unknown	BMX on the moon#x	$.BMX	C	19	CH01B	C	N
 Model B Comp	Boat Race	boat1	c	19	Disc041b	g	n
 Repton infinity lvl	bobbo the clearout	g.bobbo	S	f4	RepIlvl2	g	n
 DACC	Bobby Charlton Soccer	soccer	c	19	Disc052a	s	n
@@ -388,6 +396,7 @@ Granada	Bobsleigh	BOBSLEI	c	19	Disc132a	g	n
 Self Pub.	BODY IN THE BUNKER	INTRO	C	19	STH008	A	N
 Addictive Games	Boffin	boffin	c	19	Disc016a	g	y
 Addictive Games	Boffin 2 (Modified)	boffin2	c	19	Disc019a	g	y
+Unknown	Boffin#xl	$.BOFFCH1	C	19	CH01B	C	N
 Electron User	Bomb Alert#E	BOMB	c	19	DISC089b	g	n
 Electron User	Bomb Disposal#E	defuse	c	19	DISC074b	g	n
 PD	Bomb-Out	BOMBOUT	c	19	DISC081b	g	n
@@ -413,6 +422,7 @@ Practical Comp.	Bomber Strike	AIRRAID	c	19	AltD012b	g	n
 Micro User	Bomber Strike	BOMBER	c	19	DISC090a	g	n
 Self Pub.	Bombhunt	BOMBHUN	c	19	DISC101b	g	n
 Superior 	Bone Cruncher 	bonecru	c	19	Disc036a	g	y
+Unknown	BoneCruncher	$.BONOCHT	C	19	CH02B	C	N
 Salamander	Boot Hill#2	boothil	c	19	Disc049a	g	n
 HCW	Boot Hill#2	boot1	c	19	Disc066a	g	n
 Games Computing	Booty	BOOTY-L	c	19	Disc143b	g	n
@@ -422,7 +432,9 @@ Acorn Programs	Boris The Spider	BORIS	c	19	Disc121b	g	n
 Peaksoft	Boss	BOSS	c	19	DISC090a	s	n
 Your Comp.	Boulder Crash	ROCKRU1	c	19	AltD004a	g	n
 Self Pub.	Boulder Crash	boulder	c	19	Disc039b	g	n
+Unknown	Boulder crash#x	$.Boulder	C	19	CH01A	C	N
 Tynesoft	Boulder Dash	boulder	c	19	Disc038a	g	y
+Unknown	Boulderdash#x	$.BOULDER	C	19	CH01B	C	N
 Beebug	Bounca Ball	bounce1	c	19	Disc066b	g	n
 Acornsoft	Bouncer	bouncer	c	19	Disc008a	g	n
 A&F 	Bouncer	bouncer	c	19	Disc016a	g	n
@@ -433,6 +445,7 @@ HCW	Bouncing Benny	benny1	c	19	Disc035b	g	n
 Oak 	Bouncing Bill	bouncin	c	19	Disc032a	g	n
 IJK 	Bouncing Bomb Chase#E	bbc	c	19	DISC072b	g	n
 Usborne pub.	Bouncing Bug	BUG-INS	c	19	Disc136b	g	n
+Unknown	Bounty bob	$.BOB	C	19	CH01B	C	N
 U.S. Gold	Bounty Bob Strikes Back	bobinst	c	19	Disc022a	g	n
 Acornsoft	Boxer	box	c	19	Disc009a	g	n
 BP Soft	Bozo & Beebo	b&b	c	19	Disc028a	g	n
@@ -457,6 +470,7 @@ Elbug	Breakout?#E	BREAK	c	19	Disc122b	g	n
 Audiogenic	Breakthrough	BREAKTH	c	19	AltD009a	g	n
 ASP	Breakthrough	BREAK	c	19	AltD012b	g	n
 Your Comp.	Breakthrough	breaktr	c	19	Disc045b	g	n
+Unknown	Breakthrough	$.BTCHEAT	C	19	CH02A	C	N
 Audiogenic	Breakthrough 	breakth	c	19	Disc042a	g	n
 CDS	Brian Clough Fball Fortune#2	CLOUGH	c	19	DISC088b	s	n
 Martech	Brian Jacks Super* Challenge	Brian-l	c	19	Disc010a	s	n
@@ -500,8 +514,8 @@ PCN	Buzzy Bee	BUZZY	c	19	Disc137a	g	n
 Superior 	By Fair Means Or Foul	foul	c	19	Disc042b	g	n
 Mirrorsoft	Caesar The Cat	caesar	c	19	Disc007b	g	n
 HCW	Camel Race	CAMEL1	c	19	Disc135a	s	n
-Unknown	Camelot	$.CAMELOT	C	19	CH13B	C	N
 Superior 	Camelot	camelot	c	19	Disc047b	g	y
+Unknown	Camelot	$.CAMELOT	C	19	CH13B	C	N
 Repton3 Lvl	Camping	camping	s	f6	Rep3lvl1	g	n
 IJK 	Candyfloss	candyfl	c	19	DISC074a	g	n
 Micro User	Canfield Patience	CAN-INS	c	19	Disc136a	s	n
@@ -536,6 +550,7 @@ Acornsoft	Castle Of Riddles	CASTLEL	c	19	DISC091b	g	n
 Self Pub.	Castle Of The Skull Lord#E	SKULL-L	c	19	DISC100a	g	n
 Micro Power	Castle Quest	CASTLE	c	19	AltD001a	g	n
 Micro Power	Castle Quest	castle	c	19	Disc014b	g	y
+Unknown	Castle quest#x	$.CSTLQST	C	19	CH02A	C	N
 Micro Power	Castle Raider	CASTLE	c	19	AltD001a	g	n
 Retro 	Castle Raider#E	CASTLE	c	19	DISC107b	g	n
 Superior 	Castle Ravenskull	loader	c	19	Disc023b	g	y
@@ -637,17 +652,22 @@ Micro User	Christmas Lights	XMASLTS	c	19	Disc118b	g	n
 Icon	Chrysalis	loader	c	19	Disc019b	g	n
 Self Pub.	Chuckie Cheat!	CHUCKIE	c	19	AltD012a	c	n
 A&F 	Chuckie Egg	chuckie	c	19	Disc002b	g	y
+Unknown	Chuckie Egg	$.UPGRADE	C	19	CH02A	C	N
 Self Pub.	Chuckie Egg -Extra Col.	CHUCKIE	c	19	AltD011b	g	n
 A&F 	Chuckie Egg 2	chuckie	c	19	Disc023a	g	n
+Unknown	Chuckie Egg 2	$.LOADER	C	19	CH02A	C	N
 A&F 	Chuckie Egg 3	chukee	c	19	Disc029b	g	n
 A&F 	Chuckie Egg 4	chuckie	c	19	Disc043a	g	n
 A&F 	Chuckie Egg 5	upgrade	c	19	Disc055a	g	n
 A&F 	Chuckie Egg 6	CHUCKIE	c	19	DISC103a	g	n
+Unknown	Chuckie egg chukee	$.CHKE	C	19	CH02A	C	N
+Unknown	Chuckie egg#i	$.CH_EGG	R	19	CH02B	C	N
 Your Comp.	Circus	circus	c	19	Disc050b	g	n
 Digital Fantasia	Circus	MA6	c	19	DISC097a	a	n
 Trickysoft	Circus	CIRCINS	c	19	Disc116b	g	n
 Tynesoft	Circus Games 	circus	c	19	Disc066a	g	n
 Superior 	Citadel	citinst	c	19	Disc017b	g	y
+Unknown	Citadel	$.CITADEL	C	19	CH02A	C	N
 Superior 	Citadel (Pre)	CIT_I	c	19	AltD002a	g	n
 Superior 	Citadel 2	citmenu	c	19	DISC071b	g	n
 8-Bit 	City Bomber	bomber	c	19	Disc065a	g	n
@@ -667,6 +687,7 @@ For All	Cobra	COBRA	c	19	DISC106a	g	n
 A&B	Cockpit	COCKPIT	c	19	Disc120b	g	n
 Alternative	Code Breaker	CODEBRE	c	19	DISC085b	s	n
 Argus Press 	Code Breaker	CODEINT	c	19	Disc116b	s	n
+Unknown	Code name droid	$.CNDCHT	C	19	CH03A	C	N
 Superior 	Codename:Droid	CDROID	c	19	AltD008b	g	n
 Superior 	Codename:Droid	droid	c	19	Disc032b	g	y
 Acorn User	Codename:Druid	druid	c	19	Disc040b	g	n
@@ -679,8 +700,10 @@ CDS	Colossus Bridge	bridge	c	19	Disc068b	s	n
 CDS	Colossus Chess	chess	c	19	Disc047b	s	n
 Clemoes 	Colour-Cube	COLCUBE	c	19	Disc119a	s	n
 Durell	Combat Lynx	combat	c	19	Disc012b	g	n
+Unknown	Combat Lynx	$.LYNXCHT	C	19	CH03A	C	N
 Elite	Commando	COMMand	c	19	AltD003b	g	n
 Elite	Commando	cominst	c	19	Disc018a	g	n
+Unknown	Commando	$.COMMAND	C	19	CH03A	C	N
 Granada	Commando Jump	COMM-IN	c	19	Disc142a	g	n
 ASP	Commodities	COMMOD	c	19	Disc142b	g	n
 Tynesoft	Commonwealth Game'86	loader	c	19	Disc056b	g	n
@@ -747,10 +770,12 @@ R.H. 	Crazy Fruit	Las_veg	c	19	Disc044b	s	n
 Superior 	Crazy Painter	crazy	c	19	Disc008a	g	n
 Micro User	Crazy Santa	CRAZYSA	c	19	Disc129b	g	n
 Acornsoft	Crazy Tracer	trace	c	19	Disc008b	g	n
+Unknown	Crazy tracer#x	$.CHEAT	C	19	CH02A	C	N
 DACC	Creatures Of The Deep	cod	c	19	Disc022a	g	n
 Self Pub.	Cred Breaks Out!	loader	c	19	Disc026a	g	n
 A&B	creepy	a.creepy	C	15	STH005	A	N
 Atlantis	Creepy Cave	creepy	c	19	Disc037a	g	n
+Unknown	Creepy Cave	$.CCCHEAT	C	19	CH03A	C	N
 Micro User	Crib	CRIB-L	c	19	Disc123a	s	n
 Database	Crib	crib	C	19	STH026	S	N
 Superior 	Cribbage	cribbag	c	19	Disc065b	s	n
@@ -788,6 +813,7 @@ Power House	Cute To Kill	cutekil	c	19	Disc061b	g	y
 popular CW	Cutter	CUTTER	c	19	AltD008b	g	n
 CME	Cutter	cutter	c	19	Disc050b	g	n
 Micro Power	Cybertron Mission	cybertr	c	19	Disc004b	g	y
+Unknown	Cybertron#xl	$.CHEAT	C	17	CH03A	C	N
 Superior 	Cyborg Warriors	cybload	c	19	Disc053b	g	n
 Micro User	Cybot!	CYBOT	c	19	DISC083a	z	n
 PD	Cycles	CYCLES	c	19	DISC082a	g	n
@@ -796,6 +822,7 @@ Acorn Programs	Cycles#2	CYCLE-L	c	19	Disc136b	g	n
 Beebug	Cylon	cylon	c	19	DISC071b	g	n
 A&F 	Cylon Attack	caintro	c	19	Disc001a	g	y
 Beebug	Cylon Attack	cylon	c	19	DISC071b	g	n
+Unknown	Cylon attack#i	$.CYLON	C	19	CH03A	C	N
 Tynesoft	Cylon Invasion	CYLOAD	c	19	AltD003a	g	n
 Icon	Cylon Invasion	Space-1	c	19	DISC021b	g	n
 Unknown	DAARK	DAARK	C	19	STH004	A	N
@@ -838,6 +865,7 @@ Peaksoft	DEATH'S HEAD HOLE	DEATH	C	0E	STH019	G	N
 Interface Pub	Deathmaze	DEATH-L	c	19	Disc139b	g	n
 Superior 	Deathstar	DEATHST	c	19	AltD007a	g	n
 Superior 	Deathstar	deathst	c	19	Disc014a	g	y
+Unknown	Deathstar#x	$.DEATH1	C	19	CH03A	C	N
 What Micro	December 24th	DEC-INS	c	19	Disc141b	g	n
 Acorn User	Defence Com	DEFENCE	c	19	DISC102b	g	n
 Acornsoft	Defender	DEFENDR	c	19	AltD001a	g	n
@@ -845,6 +873,7 @@ Acornsoft	Defender	planet	c	19	Disc001a	g	y
 Acorn Computing	Defender	DEFEND	c	19	DISC105b	g	n
 Alligata	Defender#E	DEFEND	c	19	AltD005b	g	n
 Alligata	Defender#E	guardia	c	19	Disc014a	g	n
+Unknown	defender#l	$.DEFEND	C	19	CH03A	C	N
 C&VG	Defuse	defuse	c	19	Disc059a	g	n
 Visions	Demolator	deminst	c	19	Disc005a	g	n
 R.H. 	Demolish	DEMOLIS	c	19	DISC104b	g	n
@@ -853,6 +882,7 @@ Micro Power	Demon Decorator	decorat	c	19	Disc001b	g	n
 Melbourne House	Denis Through Drinking Glass	DENIS	c	19	DISC095b	g	n
 Acorn Programs	Dennis In The Mines	dennis	c	19	Disc048b	g	n
 Acorn Programs	Dennis On The Farm	farm	c	19	Disc051a	g	n
+Unknown	Denolator#x	$.DEMOCHT	R	19	CH03B	C	N
 Granada	Derby Day	DERBY-I	c	19	Disc134a	s	n
 Newnes 	Derby Day	DERBY-I	c	19	Disc135b	s	n
 Audiogenic	Despatch Rider	bbcload	c	19	Disc030a	g	n
@@ -962,6 +992,7 @@ Repton infinity lvl	Duke nukem	g.duke1	S	f4	RepIlvl3	g	n
 Micro User	Dune Hunter	dunerai	c	19	Disc032a	g	n
 Micro Power	Dune Rider	D-RIDE	c	19	AltD007a	g	n
 Micro Power	Dune Rider	Dune-ri	c	19	Disc008a	g	n
+Unknown	Dune Rider	$.DUNE	C	19	CH03B	C	N
 A&B	dunefighters#2	dunefig	c	19	DISC075b	g	n
 A&B	Dunefighters#2	dunefig	c	19	DISC075b	g	n
 Fast Access	Dungeon	loader	c	19	Disc060a	g	n
@@ -972,6 +1003,7 @@ Electron User	Dungeon Quest#E	DUNGEQ1	c	19	DISC088a	g	n
 Bug-Byte	Dunjunz	dunjunz	c	19	Disc060a	g	y
 Cascade	Dynamite	dyn	c	19	DISC075b	g	n
 4th Dimension	E-Type	E_inst	c	19	Disc050a	g	n
+Unknown	E-type	$.ETYPECH	C	19	CH04A	C	N
 Salamander	Eagle	eagle	c	19	Disc025a	g	n
 Alligata	Eagle Empire	EAG	c	19	AltD008a	g	n
 Alligata	Eagle Empire	empire	c	19	Disc007b	g	y
@@ -997,6 +1029,7 @@ Softspot	Electro Freddy	EF0	c	19	AltD001b	g	n
 Alligata	Electro Freddy	uncle	c	19	Disc003b	g	n
 Micro Power	Electron Invaders#E	invader	c	19	Disc015a	g	n
 Beebug	Elevasion	elevas	c	19	DISC076b	g	n
+Unknown	Elexir#xs	$.ELIXCHT	C	19	CH03B	C	N
 KCS	Elf Sword	F1	c	19	DISC100b	g	n
 Fontana Pub	Eliminate	ELIM-IN	c	19	Disc138b	g	n
 Electron User	Eliminator#E	elimin	c	19	Disc050b	g	n
@@ -1024,6 +1057,7 @@ Alligata	Escape From Ebony Tower	EBONY	c	19	DISC094a	a	n
 Robico	ESCAPE FROM ENTHAR 7	ENTHAR	C	19	STH022	A	N
 Hopesoft	Escape From Orion	orion	c	19	Disc004a	g	n
 Digital Fantasia	Escape From Pulsar 7	ESCAPE	c	19	DISC096a	a	n
+Unknown	Escape moon base alpha	$.EMBA1	C	19	CH03B	C	N
 Micro User	Escape The Goulogs	BALLOON	c	19	DISC088b	g	n
 Model B Comp	Espionage	INTRO	c	19	Disc113b	s	n
 Micro User	Espionage	ESPION1	c	19	Disc130b	g	n
@@ -1035,6 +1069,7 @@ Hewson Consultants	Evening Star	Estar-l	c	19	Disc040b	g	n
 Palace	Evil Dead	evil	c	19	Disc014b	g	n
 IJK 	Evil Invaders	EVILIN	c	19	AltD011b	g	n
 Projects	Ewgeebez	ewgeebz	c	19	Disc019a	g	n
+Unknown	ewgeebez#x	$.EWGEE	C	19	CH03B	C	N
 Repton3 Lvl	ex	ex	s	f6	Rep3lvl3	g	n
 Unknown	Exile	$.EXLCHT	C	19	CH14A	C	N
 microuser	Exile	$.!B	C	19	CH14A	C	N
@@ -1090,8 +1125,10 @@ Self Pub.	Fire Rescue	fire!	c	19	Disc067b	g	n
 Self Pub.	Fire!	fire!	c	19	Disc067b	g	n
 Acornsoft	Firebug	fire	c	19	Disc009a	g	n
 DACC	Firechief	firechi	c	19	Disc027b	g	n
+Unknown	Firecraft#x	$.FTCHEAT	C	19	CH04A	C	N
 Salamander	Fireman	FIREMAN	c	19	Disc112b	g	n
 Aardvark	FireTrack	firetra	c	19	Disc034a	g	y
+Unknown	FireTrack	FTCHT	R	19	CH04A	C	N
 Acornsoft	FireTrack 	FTL	c	19	AltD006b	g	n
 MP 	Firien Wood	FIRIEN	c	19	DISC095b	g	n
 Longman	First Moves Chess	chboot	c	19	Disc068a	s	n
@@ -1143,6 +1180,7 @@ A&B	Formula 1	formula	c	19	Disc062b	g	n
 A&B	Formula One	formula	c	19	DISC063b	g	n
 Pace	Fortress	FORTRES	c	19	AltD006b	g	n
 Pace	Fortress	fortres	c	19	Disc005b	g	n
+Unknown	fortress	$.FORT	C	19	CH03B	C	N
 ILMN	four bat blip	CLASSIC	R	19	STH025	G	N
 C&VG	Four Colours	FOURCOL	c	19	Disc126a	s	n
 PCW	Four In A Line#2	4line	c	19	Disc059a	s	n
@@ -1153,6 +1191,7 @@ DW Gore	FOUR WANDS	CHOOSE	C	19	STH006	A	N
 Laserbug	Four-In-A-Row	FIAR	c	19	Disc134a	s	n
 ASP	Fox & Hounds	FOX-INS	c	19	Disc134a	s	n
 What Micro	Foxhole	FOXHOLE	c	19	Disc140b	g	n
+Unknown	Frak	$.FRAK	C	19	CH05A	C	N
 Aardvark	Frak!	FRAK!	c	19	AltD005a	g	n
 Aardvark	Frak!	Frak-l	c	19	Disc006a	g	y
 Aardvark	Frak!#E	FRAK-L	c	19	AltD011a	g	n
@@ -1168,6 +1207,7 @@ Acornsoft	Free Fall (Pre)	FREE-F	c	19	AltD004b	g	n
 Your Comp.	Freeway Frog	frogger	c	19	Disc068a	g	n
 Micro Power	Frenzy	FRENZY	c	19	AltD007a	g	n
 Micro Power	Frenzy	frenzy	c	19	Disc013b	g	y
+Unknown	Frenzy#x	$.CHEAT	C	19	CH03B	C	N
 For All	Frog	thefrog	c	19	Disc041a	g	n
 Superior 	Frogger	frogger	c	19	Disc002a	g	n
 A&F 	Frogger	frogger	c	19	Disc035b	g	n
@@ -1208,6 +1248,7 @@ Nebulae	FSS Liberator	liberat	c	19	Disc027b	g	n
 Softspot	Funfair	funfair	c	19	Disc024b	g	n
 Tynesoft	Future Shock	loader	c	19	Disc030a	g	n
 Superior 	G * Birds	GALAXY	c	19	AltD001a	g	n
+Unknown	GAForce#i	$.M-FORCE	C	19	CH06A	C	N
 Cascade	Galactic Attack	gal	c	19	Disc053a	g	n
 Micro Power	Galactic Commander	Comm-l	c	19	Disc010b	g	n
 GEM	Galactic Empire	empire1	c	19	DISC069b	s	n
@@ -1221,7 +1262,9 @@ Mastertronic	Galactic Patrol	galaxy	c	19	Disc023a	g	n
 R.H. 	Galactic Wipeout	galacti	c	19	DISC021b	g	n
 Potter Progs	Galadriel In Distress	GALAD-L	c	19	DISC098a	g	n
 Superior 	Galaforce	galafor	c	19	Disc025a	g	y
+Unknown	galaforce	$.GFORCE	C	19	CH03B	C	N
 Superior 	Galaforce 2	gala2in	c	19	Disc039a	g	y
+Unknown	galaforce 2#x	$.GAL2CHT	C	19	CH03B	C	N
 PCG	Galaxian	galaxia	c	19	DISC070b	g	n
 Invasion	Galaxian	GALAXY	c	19	DISC081b	g	n
 Superior 	Galaxians	galaxia	c	19	Disc002b	g	n
@@ -1260,9 +1303,11 @@ Micro Power	Ghoulies	ghouls	c	19	Disc004a	g	y
 Micro Power	Ghouls	GHOULDR	c	19	AltD008b	g	n
 Micro Power	Ghouls	ghouls	c	19	Disc004a	g	y
 Micro User	Ghouls Of Azzod	header	c	19	Disc034a	g	n
+Unknown	Ghouls#xl	$.LOADER	C	60	CH03B	C	N
 Superior 	Gideon's Gamble	gideon	c	19	Disc043a	g	n
 A&B	Gimpo	gimpld	c	19	Disc028a	g	n
 Martech	Gisburne's Castle	Gis-l	c	19	Disc010b	g	n
+Unknown	Gisburnes cat#x	$.CHEAT	C	69	CH04B	C	N
 Beebug	Gladiator	GLADIAT	c	19	DISC082a	g	n
 Apex	Glider Pilot	gldrplt	c	19	Disc051b	g	n
 Superior 	Gnasher	gnasher	c	19	Disc015b	g	n
@@ -1308,6 +1353,7 @@ HCW	Grand Prix	prix1	c	19	DISC072a	g	n
 For All	Grand Prix	Grand-P	c	19	DISC106b	g	n
 PCN	Grand Prix	GrandPR	c	19	Disc132a	g	n
 C&VG	Grand Prix	GP	c	19	Disc133b	g	n
+Unknown	Grand prix const set	$.GPCHT	C	19	CH04B	C	N
 Superior 	Grand Prix Construction	Grand-P	c	19	Disc033a	u	n
 Beebug	Grand Prix#2	grandp	c	19	Disc055a	g	n
 A&B	Grand Prix#2	Grand-i	c	19	Disc059b	g	n
@@ -1317,6 +1363,7 @@ Artic	Great Wall	tgw	c	19	Disc046b	g	n
 Alternative	Grebit#E	grebit	c	19	Disc053b	g	n
 Goldstar	Greedy Dwarf	ARFA	c	19	DISC096b	g	n
 IJK 	Green Beret	Gb-inst	c	19	Disc030a	g	n
+Unknown	Green Beret	$.G-BERET	C	19	CH04B	C	N
 HCW	Greenham Common	greenh1	c	19	Disc028b	g	n
 Advent Soft UK	Gremlins	GREMLIN	c	19	DISC091a	g	n
 HCW	Greyhound Derby	GREYHO1	c	19	Disc136a	s	n
@@ -1416,7 +1463,9 @@ Computer Gamer	Hippo Quest	hipp1	c	19	Disc068b	g	n
 Computer Concepts	Hitch Hiker	HITCHIK	c	19	DISC091a	g	n
 Melbourne House	Hobbit	HOB-L	c	19	DISC094b	a	y
 Atlantis	Hobgoblin 2	hobgobl	c	19	Disc048b	g	n
+Unknown	Hobgoblin 2	$.HOBBY2	C	19	CH04B	C	N
 Atlantis	Hobgoblin V2	hobgobl	c	19	Disc043b	g	n
+Unknown	Hobgoblin#x	$.HOBGBLN	C	19	CH04B	C	N
 Your Comp.	Hold Up	holdup1	c	19	DISC071b	s	n
 4th Dimension	Holed Out!	holed	c	19	DISC070b	g	n
 4th Dimension	Holed Out! Vol1	holed	c	19	DISC072b	s	n
@@ -1467,6 +1516,7 @@ Bug-Byte	Ice Hockey	test	c	19	Disc026a	g	n
 Kosmos	Identify Europe	EUROPE	c	19	DISC087b	s	n
 PD	Idiot's Delight Patience	IDIOT	c	19	Disc145b	s	n
 Micro Power	Imogen	imogen	c	19	Disc029a	g	y
+Unknown	Impact built in cheat	$.IMPACT	C	19	CH04B	C	N
 Audiogenic	Impact!	LOADER	c	19	AltD004b	g	n
 Audiogenic	Impact! 	impact	c	19	Disc041a	g	n
 U.S. Gold	Impossible Mission	im0	c	19	Disc024a	g	n
@@ -1521,25 +1571,32 @@ Acornsoft	JCB Digger	jcbdig	c	19	Disc004a	g	n
 Self Pub.	Jedi Battle	jedi	c	19	Disc031b	g	n
 Superior 	Jeremy Goes Jumping	jeremy	c	19	Disc018a	g	n
 Invasion	Jet Boat	jetlogo	c	19	Disc011b	g	n
+Unknown	Jet pac#l	$.JETPAC	C	19	CH03B	C	N
 Micro Power	Jet Power Jack	jet	c	19	Disc004a	g	n
 Retro 	Jet Set Miner	RSLDR	c	19	DISC105b	g	n
 Tynesoft	Jet Set Willy	jsw	c	19	Disc025a	g	y
 Tynesoft	Jet Set Willy 2	jsw	c	19	Disc029b	g	n
+Unknown	Jet set willy#l	$.JETSET	C	19	CH04A	C	N
+Unknown	Jet set willy#x	$.JSW1CHT	C	19	CH04B	C	N
 English 	Jet-Boot Jack	jbj	c	19	Disc009b	g	y
 Ultimate	Jet-Pac	Jet-ldr	c	19	Disc007a	g	n
 Micro User	Jet-Pack Rescue	HEADER	c	19	Disc113b	g	n
 Micro User	Jet-Pack Santa	JPS	c	19	Disc129a	g	n
 Electron User	Jetcar#E	jetcar	c	19	DISC072a	g	n
 Self Pub.	Jetman	JETLOAD	c	19	DISC103a	g	n
+Unknown	Jetset willy 2#i	$.JSW2CHT	C	19	CH04B	C	N
 KCS	Jigsaw	jig-puz	c	19	DISC074a	s	n
 Beebug	Jigsaw Puzzles	jigsaw	c	19	Disc064a	s	n
 Players	Joe Blade	blade	c	19	Disc038a	g	n
 Players	Joe Blade 2	game	c	19	Disc039b	g	n
+Unknown	Joe Blade#i	$.JOBLADE	C	19	CH05A	C	N
+Unknown	Joe Blade2#i	$.JOE-CHT	C	19	CH05B	C	N
 Self Pub.	Joe The Lion	JOE	c	19	AltD002a	g	n
 Blue Ribbon	Joey	joeyldr	c	19	Disc025b	g	n
 What Micro	Jog	JOG-INS	c	19	Disc140a	g	n
 Lothlorien	Johnny Reb	jr	c	19	Disc051a	g	n
 Acorn Programs	Join 'Em Up!#2	JOINEM	c	19	Disc131a	s	n
+Repton3 Lvl	Joke 18+	joke	s	f6	Rep3lvl1	g	n
 Arrowsoft	Jolly Jake's Escape	ESCAPE	c	19	Disc114b	g	n
 Atari	Joust	JOUST-L	c	19	AltD001a	g	y
 Aardvark	Joust	JOUST-L	c	19	AltD006a	g	n
@@ -1564,7 +1621,7 @@ Acorn Programs	Jungle Maze	jungle	c	19	Disc057a	g	n
 Acorn Programs	Jungle Maze	jungle	c	19	Disc057a	g	n
 Repton3 Lvl	junior	junior	s	f6	Rep3lvl1	g	n
 Self Pub.	Jupiter 3#E	SWREK2	c	19	DISC103b	g	n
-Repton3 Lvl	k1p	r.k1p	s	f6	Rep3lvl1	g	n
+Repton3 Lvl	k1p	k1p	s	f6	Rep3lvl1	g	n
 A&F 	Kamikaze	KAMIKAZ	c	19	AltD007b	g	n
 A&F 	Kamikaze	Plane-l	c	19	Disc008a	g	n
 Mastertronic	Kane	Kane-l	c	19	Disc025a	g	n
@@ -1588,15 +1645,19 @@ Players	Killapede	killape	c	19	Disc024b	g	n
 Beebug	Killer Dice	KILDICE	c	19	Disc119a	s	n
 Micro Power	Killer Gorilla	KGOR	c	19	AltD005a	g	n
 Micro Power	Killer Gorilla	Kill-l	c	19	Disc001a	g	y
+Unknown	Killer gorilla	$.KILLER	C	19	CH05B	C	N
 Superior 	Killer Gorilla 2	KGORIL2	c	19	AltD003a	g	n
+Unknown	Killer gorilla killa	$.KILLA	C	19	CH05A	C	N
 U.S. Gold	Killing Of Kayleth	KAY-L	c	19	DISC093b	a	n
 Micro User	King Kong	KONG	c	19	DISC085b	g	n
 Acornsoft	Kingdom Of Hamil	HAM-L	c	19	DISC092b	a	n
 Epic Adventures	Kingdom Of Klein	KLEIN	c	19	DISC095a	a	n
+Unknown	Kissin cousins#x	$.KLOAD	C	19	CH05A	C	N
 English 	Kissin' Kousins	kk	c	19	Disc013a	g	n
 Computer Gamer	Kitchen Capers	capers	c	19	Disc027b	g	n
 Beebug	Kitchen Chaos	fryup	c	19	Disc046b	g	n
 Superior 	Kix	Kix-l	c	19	Disc026a	g	n
+Unknown	KIX#x	$.CHEAT	C	19	CH05A	C	N
 PD	Klacz	KLACZ1	c	19	Disc125b	g	n
 Domark	Klax	kloader	c	19	Disc050b	g	n
 Micro User	Klect#2	klect-l	c	19	DISC072b	g	n
@@ -1605,6 +1666,7 @@ Acorn Computing	Knight Game	KNTGAME	c	19	DISC088b	s	n
 Ultimate	Knight Lore	knight	c	19	Disc012a	g	n
 Beebug	Knight Quest	Quest-i	c	19	Disc060b	g	n
 Fast Access	Knight's Move?#STD	KN-INS	c	19	Disc131b	s	n
+Unknown	Knightlore	$.KNIGHT	C	11	CH05A	C	N
 8-Bit  	Knights Tour?#STD	KNIGHTS	c	19	Disc135a	s	n
 Virgin	Knightsbridge	KNIG-L	c	19	Disc138b	s	n
 Alternative	Knockout	knockou	c	19	Disc048a	g	n
@@ -1612,7 +1674,9 @@ R.H. 	Knockout	KNOCKOU	c	19	DISC105a	g	n
 Acorn Programs	Knockout	KNOCKOU	c	19	Disc125a	g	n
 Mirrorsoft	Know Your Own Psi-Q	PSI-Q	c	19	Disc118b	u	n
 Go-Dax	Kourtyard	kourtya	c	19	Disc039a	g	n
+Unknown	Kourtyard	$.CHEATKD	C	19	CH05B	C	N
 Unknown	Krakout	krakout	c	19	Disc035a	g	n
+Unknown	Krakout#l	$.KRAKCHT	C	19	CH05A	C	N
 Your Comp.	Krazy John	krazy	c	19	Disc048b	g	n
 Doctor Soft	Kremlin	kremlin	c	19	Disc042b	g	n
 IJK	kryptogram	fgkrypt	C	19	STH025	G	N
@@ -1626,6 +1690,7 @@ Acornsoft	Labyrinth	labyrin	c	19	Disc014b	s	n
 Beebug	Labyrinth	labrnth	c	19	Disc034a	s	n
 C&VG	Labyrinth	LABYRIN	c	19	DISC085b	s	n
 Acorn Programs	Labyrinth	LABY-L	c	19	Disc137b	s	y
+Unknown	Labyrinth#x	$.LABYRIN	C	19	CH05B	C	N
 Micro Power	Labyrinths Of LaCoshe	LABLOAD	c	19	DISC093b	s	n
 Superior 	Ladder Maze	ladmaze	c	19	Disc015a	s	n
 Delta 4	Land Of Chark	CHARK	c	19	DISC093a	a	n
@@ -1643,8 +1708,8 @@ Electron Computing	Laser Cycles#2E	LASER	c	19	Disc122b	g	n
 Model B Comp	Laser Range	laser	c	19	Disc055b	g	n
 tcs	Laser Reflex	Lazer-l	c	19	Disc006a	g	n
 Laserbug	Laserbug Grand Prix	GP	c	19	Disc130b	g	n
-Unknown	Last Ninja	$.NINCHT	C	19	CH12B	C	N
 Superior 	Last Ninja	L-nja1	c	19	Disc059b	g	n
+Unknown	Last Ninja	$.NINCHT	C	19	CH12B	C	N
 Superior 	Last Ninja 2	ninja	c	19	Disc062b	g	n
 Audiogenic	Last Of The Free	last	c	19	Disc031a	g	n
 Elk Adventure Club	last starship	Star-q3	C	19	STH014	G	N
@@ -1711,6 +1776,7 @@ Beebug	Lunar Escape	escape	c	19	Disc048b	g	n
 Alternative	Lunar Invasion	invade	c	19	DISC108b	g	n
 Ultimate	Lunar Jetman	jetman	c	19	Disc023a	g	n
 Ultimate	Lunar Jetman (Alt)	JETMAN	c	19	AltD004a	g	n
+Unknown	Lunar jetman#xl	$.JETLOAD	C	19	CH05B	C	N
 A&F 	Lunar Lander	lunar	c	19	Disc054b	g	n
 MRM 	Lunar Lander	lunarla	c	19	Disc056b	g	n
 PD	Lunar Lander	LUNARLA	c	19	Disc116b	g	n
@@ -1750,6 +1816,7 @@ KCS	Maniac Mower#E	k	c	19	Disc054b	g	n
 Self Pub.	Manic Mansion	MANSION	c	19	DISC101b	g	n
 Beebug	Manic Mechanic	manic	c	19	Disc023b	g 	n
 Projects	Manic Miner	manic	c	19	Disc011b	g	n
+Unknown	Manic miner#x	$.MINER	C	19	CH05B	C	N
 Alternative	Manic Mole	Manic-m	c	19	Disc032a	g	n
 Acorn Programs	Map Game	MPROG1	c	19	Disc130b	s	n
 PCW	Map Quiz	MAP-QUI	c	19	Disc132a	s	n
@@ -1761,6 +1828,7 @@ ASP	Mars-Lander	MARS	c	19	Disc130a	g	n
 Unknown	MARTIAN	MARSADV	C	19	STH009	A	N
 Micro Power	Martian Attack	martian	c	19	Disc007a	a	n
 PCW	Martian Attack	martian	c	19	Disc056a	a	n
+Unknown	Martian attack#x	$.MARTIAN	C	1D	CH05B	C	N
 Disk user	Martian Nim	NIM-INS	c	19	Disc143b	s	n
 Micro Power	Martians	mart-l	c	19	Disc069b	g	n
 Repton infinity lvl	martins mapz	g.martin	S	f4	RepIlvl2	g	n
@@ -1821,8 +1889,8 @@ Bug-Byte	Micro Derby	DERBY-L	c	19	DISC089b	g	n
 Database	Micro Olympics	header	c	19	Disc014a	g	n
 Splanger-Soft	Micro Olympics	olympic	c	19	Disc067a	g	y
 Glengary	MICRO QUEST	MICROQU	C	19	STH014	G	N
-Unknown	Microball	$.LOADER	C	19	CH13B	C	N
 Alternative	Microball	pinball	c	19	Disc040b	g	n
+Unknown	Microball	$.LOADER	C	19	CH13B	C	N
 Virgin	Microbe	microbe	c	19	Disc004b	g	y
 Firebird	Microcosm	microco	c	19	Disc011a	g	n
 Self Pub.	Microgo1	MICROGO	c	19	DISC089b	s	n
@@ -1889,6 +1957,7 @@ Unicorn 	Monstermania	MONSTER	c	19	AltD006a	g	n
 PCG	Monstermania	monster	c	19	Disc066a	g	n
 Bit Twiddlers	Monsters	MUP	c	19	AltD011a	g	n
 Acornsoft	Monsters	mons	c	19	Disc001b	g	y
+Unknown	Monsters#x	$.MONST	C	19	CH05A	C	N
 Retro 	Monstrous MazezaM	LOADER2	c	19	DISC104a	g	n
 Repton3 Lvl	moon	moon	s	f6	Rep3lvl3	g	n
 KCS	Moon Buggy	kansas	c	19	Disc023a	g	n
@@ -1921,7 +1990,9 @@ Micro User	Mover	MOVER	c	19	Disc141a	g	n
 Acorn Programs	Moving Maze	movingm	c	19	Disc069b	g	n
 Your Comp.	Mower	mower	c	19	DISC078b	g	n
 Micro User	Mozaic Madness	MOZAIC	c	19	Disc121a	s	n
+Unknown	MR EE#xl	$.MREE	C	19	CH06A	C	N
 EUG	Mr Miner#STDE	MINLD	c	19	AltD011a	g	n
+Unknown	MR WIZ#xl	$.MRWIZ	C	19	CH06A	C	N
 Acorn Programs	Mr.Do!	MRDO-L	c	19	AltD006b	g	n
 Self Pub.	Mr.Do!	mrdo	c	19	Disc032b	g	n
 Acorn Programs	Mr.Doo	mrdoo	c	19	DISC074a	g	n
@@ -1972,6 +2043,7 @@ Electron user	Necromancer	necro	C	19	STH025	G	N
 Micro Power	Nemesis	Nem-l	c	19	Disc010b	g	n
 Top Ten	Network	network	c	19	Disc027b	g	n
 Top Ten	Network 	NET-L	c	19	AltD005b	g	n
+Unknown	Network#x	$.NETWORK	C	19	CH06A	C	N
 Superior 	Neutron	neut	c	19	Disc013a	g	n
 Fast Access	Neuzone	zoneld	c	19	Disc045a	g	n
 John Sekula	nevil rides out	SATAN	C	19	STH009	A	N
@@ -2023,12 +2095,14 @@ A&B	Olsen	olsen	c	19	Disc047b	g	n
 Alligata	Olympic Decathlon	decath	c	19	DISC063b	g	n
 Beebug	Omega	omega	c	19	Disc042a	g	n
 Audiogenic	Omega Orb	omegorb	c	19	Disc037b	g	n
+Unknown	Omega orb	$.OMEGA	C	19	CH06A	C	N
 Optima	Omega Probe	omegapr	c	19	Disc017a	g	n
 AMF-Soft	Omegas	omega-l	c	19	Disc069b	g	n
 PCW	Omniopoly#2	omniopl	c	19	Disc055b	s	n
 Self Pub.	Omniscient#E	omnisc1	c	19	Disc059b	g	n
 Prentice Hall	On The Adventure Trail	INTRO1	c	19	Disc137a	a	n
 Bevan Technology	One Last Game	oneload	c	19	Disc030b	g	n
+Unknown	one last game#x	$.OLGLOAD	C	19	CH06A	C	N
 Laserbug	One-Armed Bandit	BandIT	c	19	Disc134a	s	n
 Acorn Programs	One-Way Driver	FORM1	c	19	Disc124b	g	n
 Self Pub.	Oozeman	OOZEMAN	c	19	DISC103b	g	n
@@ -2061,6 +2135,7 @@ Acornsoft	Pacman	snap	c	19	Disc001a	g	n
 Self Pub.	Pacman	pacman	c	19	Disc052b	g	n
 C&VG	Pacman	PACMAN	c	19	Disc128b	g	n
 Repton infinity lvl	Pacman infinity	g.rpac	S	f4	RepIlvl2	g	n
+Unknown	PacMan#s	$.LOADER	C	19	CH06B	C	N
 Repton3 Lvl	pain	pain	s	f6	Rep3lvl2	g	n
 Electron User	Paint Roller!#E	paintro	c	19	Disc055b	g	n
 Alligata	painter	ROBOMAN	c	19	AltD001a	g	n
@@ -2072,8 +2147,10 @@ Fast Access	Pairs	PAIRS	c	19	Disc121b	s	n
 Beebug	Pairs	PAIRS	c	19	Disc124a	s	n
 Model B Comp	Pairs	TITLE	c	19	Disc127b	s	n
 Superior 	Palace Of Magic	palace	c	19	Disc025b	g	y
+Unknown	Palace of magic#i	$.Palace	C	19	CH06B	C	N
 Acornsoft	Pandemonium	PALOAD	c	19	AltD004b	g	n
 Top Ten	Pandemonium	pandemn	c	19	Disc028a	g	n
+Unknown	Pandemonium#x	$.PANDMNM	C	19	CH06B	C	N
 Atlantis	Panik	Pan-ldr	c	19	Disc035a	g	n
 HardCore 	Pantheon	MENU	c	19	DISC102b	g	n
 PD	PANTHEON	PANTH	C	19	STH025	G	N
@@ -2121,6 +2198,7 @@ Electron User	Percy's Panic#E	PERCY	c	19	DISC101b	g	n
 database	Percy's Panic#E	percy	c	19	STH027	z	n
 Garadan	Percy's Revenge	PERCY2	c	19	DISC101b	g	n
 Willow	Perils Of Percival Penguin	percy	c	19	Disc033a	g	n
+Unknown	Perlexity	$.PERPCHT	C	19	CH08A	C	N
 Superior 	Perplexity	perplex	c	19	Disc046b	g	n
 Digital Fantasia	Perseus & andromeda 9	MA9	c	19	DISC099a	a	n
 ASP	Pete the Plastered Postman	POSTMAN	c	19	DISC109b	g	n
@@ -2130,6 +2208,7 @@ Doctor Soft	Phantom Combat	phantom	c	19	Disc017a	g	n
 Doctor Soft	Phantom Combat2	BBC4F1	c	19	AltD004b	g	n
 H-Soft	Pharaoh's Curse	pharaoh	c	19	Disc027a	g	n
 A&F 	Pharaoh's Tomb	phtomb	c	19	Disc045b	g	n
+Unknown	Pharaohs curse#x	$.CURSECH	C	19	CH06B	C	N
 Self Pub.	Pheenix	PHEENIX	c	19	DISC104a	g	n
 Acornsoft	Philosopher's Quest	QUEST-L	c	19	DISC093a	a	n
 Potter Progs	Philosopher's Stone	HEADER	c	19	DISC096a	a	n
@@ -2156,7 +2235,9 @@ Beebug	Pitfall Pete	pitload	c	19	Disc037a	g	n
 Beebug	Pitfall Pete +extra scr's	PITLOAD	c	19	AltD012a	g	n
 Alpine	PLAGUE PLANET	LOGO	C	19	STH011	G	N
 Bug-Byte	Plan B	plana	c	19	Disc033a	g	y
+Unknown	Plan b	$.PLANB	C	19	CH06B	C	N
 Bug-Byte	Plan B Pt2	mun	c	19	Disc034a	g	n
+Unknown	Plan B2	$.PLANB-2	C	19	CH06B	C	N
 Labyrinth	PLANE CRASH	Pcload	C	19	STH015	G	N
 A&F 	Planes	KAMIKAZ	c	19	AltD007b	g	n
 A&F 	Planes	Plane-l	c	19	Disc008a	g	n
@@ -2165,6 +2246,7 @@ Superior 	Planetarium	plan-l	c	19	DISC077b	s	n
 Argus Press 	Planetfall	P/FALL	c	19	Disc118b	g	n
 Acornsoft	Planetoid	DEFENDR	c	19	AltD001a	g	n
 Acornsoft	Planetoid	planet	c	19	Disc001a	g	y
+Unknown	Planetoid#i	$.PLANETO	C	19	CH06B	C	N
 Virgin	Plankwalk	logo	c	19	Disc038b	g	n
 Self Pub.	Plasma Bolt	DEATH	c	19	AltD006b	g	n
 Cascade	Plasma Bolt	pla	c	19	Disc059b	g	n
@@ -2190,6 +2272,7 @@ Statasoft	Poker Dice#2	poker	c	19	Disc062b	s	n
 Squirrel Soft	Polar Perils	perils	c	19	Disc034a	g	n
 Bug-Byte	Polaris	polaris	c	19	Disc051a	g	n
 Atari	Pole Position	polepos	c	19	Disc006b	g	n
+Unknown	Pole position	$.POLE	C	19	CH06B	C	N
 CDS	Pontoon	PONTOON	c	19	AltD007b	s	n
 Superior 	Pontoon	pontoon	c	19	DISC063b	s	n
 IJK 	Pontoon	pontoon	c	19	DISC077b	s	n
@@ -2205,6 +2288,7 @@ Dynabyte	Pool Hall#2	pool	c	19	Disc007a	s	n
 Self Pub.	Pooperpig	pigload	c	19	Disc054b	g	n
 Beebug	Posidroid	posinst	c	19	Disc041a	g	n
 Micro Power	Positron	Posit-l	c	19	Disc008b	g	n
+Unknown	Positron#x	$.POSITRO	C	19	CH06B	C	N
 Micro User	Poster Pete's Puzzle	PUZZLER	c	19	Disc124a	s	n
 ASP	Postman	POSTMAN	c	19	DISC109b	g	n
 PCN	Postman	POSTMAN	c	19	Disc138a	g	n
@@ -2233,6 +2317,7 @@ Acorn Programs	Protector#E	PROTECT	c	19	DISC088a	g	n
 Quicksilva	Protector#j	Pro-ldr	c	19	Disc006b	g	n
 Audiogenic	Psycastria	LOADER	c	19	AltD007a	g	n
 Audiogenic	Psycastria	psycast	c	19	Disc024b	g	n
+Unknown	Psycastria	$.PSYCAST	C	19	CH07B	C	N
 Audiogenic	Psycastria 2	!BOOTER	c	19	AltD007b	g	n
 Audiogenic	Psycastria 2	P	c	19	Disc041b	g	n
 Your Comp.	Psychic Asteroids	asteroi	c	19	DISC075b	g	n
@@ -2279,6 +2364,7 @@ Beebug	Quasimodo	quasi	c	19	Disc057a	g	n
 Micro User	Quasimodo's Quest	quasimo	c	19	Disc023a	g	n
 Superior 	Quest	quest	c	19	Disc037a	g	n
 Disk user	Quest	QUEST	c	19	DISC099a	a	n
+Unknown	Quest	$.QCHEAT	C	19	CH07B	C	N
 Superior 	Quest 2	camelot	c	19	Disc047b	g	y
 IJK 	Quest For Freedom#E	QUEST	c	19	AltD002b	g	n
 PD	Quest For Last Baked Bean	BAKBEAN	c	19	DISC098b	a	n
@@ -2311,6 +2397,7 @@ Granada	Rainbow Squash	RAIN-IN	c	19	Disc135a	g	n
 Electron User	Rally Driver#E	rally	c	19	DISC073b	g	n
 Electron User	Randall Rabbit#E	rabbit	c	19	Disc057b	g	n
 Audiogenic	Ransack!	ransack	c	19	Disc040b	g	n
+Unknown	Ransack#i	$.RANLOAD	C	19	CH07B	C	N
 EUG	Ransom#STD	RAN-L	c	19	DISC110a	a	n
 Marcus K Donnelly	RASSILION	RASS	C	19	STH007	A	N
 Fontana Pub	Rat Catch	RATLOAD	c	19	Disc132b	g	n
@@ -2318,6 +2405,7 @@ STL	Rat Race	RATLOAD	c	19	Disc119a	g	n
 Blue Ribbon	Ravage	Rav-ldr	c	19	Disc022b	g	n
 Superior 	Ravenskull	RAVENSK	c	19	AltD008a	g	n
 Superior 	Ravenskull	loader	c	19	Disc023b	g	y
+Unknown	Ravenskull	$.SKULCHT	C	19	CH07B	C	N
 Electron User	Raving Roller#E	RAVEROL	c	19	DISC080b	g	n
 Model B Comp	Ray-Box	RAY-INT	c	19	Disc125a	s	n
 PD	React	SIT	c	19	AltD003a	g	n
@@ -2341,8 +2429,11 @@ Repton infinity lvl	Rep dash land M	g.dashm2p	S	f4	RepIlvl3	g	n
 Repton3 Lvl	rep01	rep01	s	f6	Rep3lvl2	g	n
 Repton3 Lvl	rep17	rep17	s	f6	Rep3lvl2	g	n
 Superior 	Repton	repton	c	19	Disc015a	g	y
+Unknown	Repton	$.REPTON	C	19	CH07A	C	N
 Superior 	Repton 2	repton	c	19	Disc017a	g	y
+Unknown	Repton 2	$.R2CHT	C	19	CH08A	C	N
 Superior 	Repton 2 (Pre)	REPTON2	c	19	AltD003b	g	n
+Unknown	Repton 3	$.REP3CHT	C	19	CH07A	C	N
 Superior 	Repton 3 + Editor	repload	c	19	Disc024a	g	y
 Repton infinity lvl	Repton 5	G.rep5	S	f4	RepIlvl2	g	n
 Repton infinity lvl	Repton doing garden	g.garden	S	f4	RepIlvl2	g	n
@@ -2350,6 +2441,7 @@ Repton infinity lvl	Repton goes footballing	g.futball	S	f4	RepIlvl2	g	n
 Repton infinity lvl	Repton in the mine	g.miner	S	f4	RepIlvl2	g	n
 Superior 	Repton Infinity	repton	c	19	Disc048a	g	y
 Superior 	Repton Thru Time	repton	c	19	Disc045a	g	n
+Unknown	Repton Thru Time	$.RTTLOAD	C	70	CH08B	C	N
 Superior 	Repton-Around The World	repton	c	19	DISC046a	g	n
 Repton infinity lvl	Repton3 overhead	g.repover	S	f4	RepIlvl2	g	n
 Repton infinity lvl	repton3 take2	g.rep3a	S	f4	RepIlvl1	g	n
@@ -2382,6 +2474,7 @@ C&VG	Reversi	REV-INS	c	19	Disc135b	s	n
 Acornsoft	Reversi	reversi	C	19	STH025	G	N
 Microbyte	Reversi#E	REVERSI	c	19	DISC088a	s	n
 Acornsoft	Revs	car	c	19	Disc015a	g	y
+Unknown	REVs	$.REVSZAP	C	19	CH07A	C	N
 Acornsoft	Revs 4 Tracks	revs	c	19	Disc063a	g	n
 HCW	Ribbet!	ribbet1	c	19	Disc042b	g	n
 Robico	Rick Hanson Trilogy	RICKHAN	c	19	DISC098a	g	n
@@ -2393,6 +2486,7 @@ KCS	Ring Of Time Part II	K	c	19	DISC093a	a	n
 Laserbug	Rings	RINGS-I	c	19	Disc132b	s	n
 Trickysoft	Rip Cord	RIPINS	c	19	Disc117b	g	n
 A&B	Ripton	ripload	c	19	Disc037b	g	n
+Unknown	RIPTON#x	$.RIPCHT	C	19	CH07A	C	N
 Acorn Programs	Rising Damp	RISING	c	19	Disc129b	g	n
 PCG	Road Hog	ROADHOG	c	19	Disc124a	g	n
 Micro User	Road Racer	3DRACER	c	19	Disc118b	g	n
@@ -2427,6 +2521,7 @@ Computer Gamer	Rock-Race	rokrace	c	19	Disc066b	g	n
 Century	Rocket Attack	ROCKET	c	19	Disc138b	g	n
 Games Computing	Rocket Man	ROCK-L	c	19	Disc128b	g	n
 Acornsoft	Rocket Raid	rocket	c	19	Disc001a	g	y
+Unknown	Rocket raid#x	$.RAID	C	19	CH08A	C	N
 C&VG	Rockfall	ROCKFAL	c	19	Disc112a	g	n
 Superior 	Rocky	rocky	c	19	Disc006b	g	n
 Elk Adventure Club	ROHAK SWORDSMAN pt1	Rohak	C	19	STH014	G	N
@@ -2445,6 +2540,7 @@ Micro User	Rondo	rondo-l	c	19	Disc066b	g	n
 Let's Compute!	Roobix Timepiece	ROOBIX	c	19	DISC080b	g	n
 Repton3 Lvl	rosmi	rosmi	s	f6	Rep3lvl4	g	n
 Micro Power	Roulette	ROULETT	c	19	DISC087b	s	n
+Unknown	Round ones#x	$.ROUND1	R	19	CH08A	C	N
 Lothlorien	Roundheads & Cavaliers#STD	INTRO	c	19	Disc120a	s	n
 Micro User	Rover	ROVER-L	c	19	DISC083b	g	n
 Repton3 Lvl	rovers	rovers	s	f6	Rep3lvl2	g	n
@@ -2454,14 +2550,17 @@ For All	Row Of Four	ROWOF4	c	19	AltD008b	s	n
 For All	Row Of Four	Row-o-4	c	19	Disc058b	s	n
 Micro User	Royal Wedding	WEDDING	c	19	Disc119a	s	n
 Micro Power	Rubble Trouble	rubble	c	19	Disc011a	g	n
+Unknown	Rubble trouble#i	$.RUBBLE	C	19	CH08A	C	N
 Computer Concepts	Rubik Cube	rubik	c	19	Disc010b	s	n
 PD	Rubik's Cube	rubcube	c	19	DISC083a	s	n
 Micro Press	Rubik's Cube	RUBIK-L	c	19	Disc138b	s	n
+Repton3 Lvl	Rude  18+	rude	s	f6	Rep3lvl3	g	n
 Disk user	Rumble	rumble	c	19	Disc044b	g	n
 Acorn User	Run Silent  Run Deep	sub1	c	19	Disc022a	g	n
 Acorn User	Runemaker	druid	c	19	Disc040b	g	n
 Squaresoft	Runestaff	RUNESTA	c	19	DISC093a	g	n
 Ultimate	Sabre Wulf	sabre	c	19	Disc011b	g	y
+Unknown	Sabre wulf#x	$.SABRE	C	19	CH08A	C	N
 MP 	Sadim Castle	SADIM	c	19	DISC097b	a	n
 Level 9	Saga Of Erik The Viking	erik	c	19	Disc043a	a	n
 Tynesoft	Saigon	saigon	c	19	Disc037a	g	n
@@ -2513,6 +2612,7 @@ PCW	Search & Rescue	search	c	19	Disc069b	g	n
 A&B	Secret Agent	SAGENT1	c	19	DISC100a	a	n
 A&B	Secret Agent	agent	C	19	STH006	A	N
 mosaic	Secret Diary Of Adrian Mole	TITLE	c	19	Disc112a	a	n
+Unknown	Secret garden#l	$.GDNCHT	C	19	CH08A	C	N
 Advent Intl	Secret Mission 3	SECRET	c	19	DISC092a	a	n
 Triffid	Secret reiver	secrivr	C	19	STH023	G	N
 MRM 	Secret Sam 1	INTRO	c	19	DISC091a	g	n
@@ -2530,10 +2630,11 @@ Database	sevens	sevens	C	19	STH026	S	N
 Acornsoft	Seventh Star	SEVENTH	c	19	DISC092a	a	n
 Postern	Shadowfax	shadowf	c	19	Disc029b	g	n
 Players	Shanghai Warriors	shan	c	19	Disc042b	g	n
+Unknown	Shanghai warriors#x	$.SHANGHI	C	9	CH08B	C	N
 Beebug	Shape Match#2	SHAPEMA	c	19	DISC087b	s	n
 Beebug	Shapes Game	shape	c	19	DISC073a	s	n
-Unknown	Shark	$.CHEAT	C	19	CH11B	C	N
 Audiogenic	Shark	Shark-l	c	19	Disc038b	g	n
+Unknown	Shark	$.CHEAT	C	19	CH11B	C	N
 Romik	Shark Attack	shark	c	19	Disc020b	g	n
 Fontana Pub	Sharp Shooter	SHARPSH	c	19	Disc136a	g	n
 PCG	Sheep Drive	SHEEP	c	19	Disc123b	g	n
@@ -2561,6 +2662,7 @@ A&B	silicon	a.silicon	C	15	STH005	A	N
 Viper	Sim	sim	c	19	Disc015b	g	n
 CSM	SIM	SIM	C	19	STH025	G	N
 Superior 	Sim City	simcity	c	19	Disc052a	g	n
+Unknown	SIM#x	$.SCHEAT	C	19	CH08B	C	N
 Computer Tele	Simon	SIMON1	c	19	DISC110a	g	n
 Salamander	Simon	SIMON	c	19	Disc118b	g	n
 Your Comp.	Simon	SIMON	c	19	Disc130a	g	n
@@ -2633,6 +2735,9 @@ Acornsoft	Snapper	SNAPPER	c	19	AltD001a	g	y
 Acornsoft	Snapper (Fast)	SNAPPER	c	19	AltD010b	g	n
 Acornsoft	Snapper V2	SNAPPER	c	19	AltD006a	g	n
 Acornsoft	Snapper v2	snap	c	19	Disc001a	g	n
+Unknown	snapper1#s	$.SNAP	C	19	CH09A	C	N
+Unknown	Snapper1#xl	$.LOADV1	C	19	CH09A	C	N
+Unknown	Snapper2#xl	$.LOADV2	C	19	CH09B	C	N
 Micro Press	Snazzy Snake	SNAKE	c	19	Disc137b	g	n
 Beebug	Snip Snap	SNIP	c	19	DISC085a	g	n
 Acornsoft	Snooker	snoo	c	19	Disc002b	s	y
@@ -2728,6 +2833,7 @@ Micro Power	Space Maze	spacema	c	19	Disc039a	g	n
 Esmifrasoft	Space Panic	panic1	c	19	Disc056a	g	n
 Superior 	Space Pilot	pilot	c	19	Disc007b	g	n
 Micro User	Space Pilot	PILOT	c	19	DISC087b	g	y
+Unknown	Space Pilot	$.PILOT	C	19	CH09A	C	N
 DACC	Space Pilot Test	spt	c	19	Disc023a	g	n
 Bug-Byte	Space Pirates	Sp-pira	c	19	Disc015b	g	n
 Self Pub.	Space Pirates	SP	c	19	Disc143b	g	n
@@ -2758,9 +2864,11 @@ Acorn User	Spectramania	spectro	c	19	Disc026b	g	n
 C&VG	Speed Trial	SPEED	c	19	Disc144b	g	n
 Electron Computing	Speedway Manager	SPEEDWA	c	19	Disc124a	z	n
 Superior 	Spellbinder	spellbn	c	19	Disc035a	g	n
+Unknown	Spellbinder#i	$.SPELLCH	C	19	CH09A	C	N
 Self Pub.	Sphenisciformes	sphen	c	19	DISC021b	g	n
 Audiogenic	Sphere Of Destiny	SPHERE	c	19	AltD007b	g	n
 Audiogenic	Sphere Of Destiny	sod	c	19	Disc025a	g	n
+Unknown	Sphere Of Destiny	$.SPHERE	C	19	CH09A	C	N
 Audiogenic	Sphere Of Destiny 2	S	c	19	Disc042b	g	n
 Alternative	Spheroids (Round Ones)	Round_o	c	19	Disc044a	g	n
 Acornsoft	Sphinx	SPHINXL	c	19	DISC091a	a	y
@@ -2787,9 +2895,11 @@ Retro 	Sprint 1#j	SPRINT1	c	19	Disc133b	g	n
 Electron User	Sprog!#E	sprog	c	19	DISC077a	g	n
 Superior 	Spy cat	spycat	c	19	Disc041b	g	y
 U.S. Gold	Spy Hunter	SPY	c	19	AltD009b	g	n
+Unknown	Spy Hunter	$.HUNTLDR	C	19	CH09B	C	N
 U.S. Gold	Spy Hunter-Speech Ver	spy	c	19	Disc018a	g	n
 Tynesoft	Spy vs Spy	SPYV	c	19	AltD009b	g	n
 Tynesoft	Spy vs Spy	spyvspy	c	19	Disc033b	g	n
+Unknown	Spycat	$.SPYCAT	C	19	CH09B	C	N
 popular CW	Spyplane	SPYINST	c	19	Disc145a	g	n
 Your Comp.	Squares	square1	c	19	DISC077b	g	n
 PD	Squares	SQU-INS	c	19	Disc135a	s	n
@@ -2826,6 +2936,7 @@ First Byte	Star Trader	fbc	c	19	DISC076b	s	n
 Superior 	Star Trek: The Advent	STARTRK	c	19	DISC093b	a	n
 Argus Press 	Star Trek: The Game	STARTRK	c	19	DISC110b	s	n
 Superior 	Star Warp	starwar	c	19	Disc007a	g	n
+Unknown	Star warp#li	$.SPCWARP	C	19	CH09B	C	N
 Domark	Star Wars	starw	c	19	Disc031b	g	n
 Acorn Programs	Star Wars Fighter	starwar	c	19	DISC074b	g	n
 Your Comp.	Star-Trek	STARTR1	c	19	Disc120a	s	n
@@ -2836,7 +2947,9 @@ First Byte	Starforce Lander	fbc	c	19	Disc032b	g	n
 Audiogenic	Starman To The Rescue	starman	c	19	Disc020b	g	n
 Software Invasion	STARMAZE	LOADER	C	19	STH024	G	N
 Bubble Bus	Starquake	quake	c	19	Disc031a	g	n
+Unknown	Starquake	$.SQCHEAT	C	19	CH09B	C	N
 Acornsoft	Starship Command	comm	c	19	Disc002a	g	y
+Unknown	Starship Command	$.CHEAT	C	19	CH09B	C	N
 Acornsoft	Starship Command (Pre)	STAR	c	19	AltD009b	g	n
 Alligata	Starship Discovery	starshi	c	19	Disc064b	g	n
 Elk Adventure Club	STARSHIP QUEST pt1	star	C	19	STH014	G	N
@@ -2871,6 +2984,7 @@ JBF 	Strawberry Fields	SF	c	19	DISC101b	g	n
 Invasion	Street Machine	street	c	19	Disc025b	g	n
 Mirrorsoft	Strike Force Harrier	strike	c	19	Disc016a	g	n
 Artworx	STRIP POKER	POKER	C	19	STH004	S	N
+Unknown	STRIP POKER	$.CHTPOKR	C	19	CH10A	C	N
 Anco	STRIP POKER 2+	STRIP	C	13	STH026	S	N
 Superior 	Stryker's Run	stryker	c	19	Disc024b	g	y
 Superior 	Stryker's Run 2	droid	c	19	Disc032b	g	y
@@ -2885,6 +2999,7 @@ betasoft	Subhunt	S1	c	19	Disc115b	g	n
 Dk'Tronics	SubKiller	subkill	c	19	Disc018b	g	n
 Players	Subway Vigilante	SUBWAY	c	19	AltD008b	g	n
 Players	Subway Vigilante	subway	c	19	Disc043b	g	n
+Unknown	Subway vigilante#x	$.SUBWAY	C	19	CH08B	C	N
 Riverdale	SUDS pt1	SUDS1/M	C	19	STH021	A	N
 Riverdale	SUDS pt2	SUDS2/M	C	19	STH021	A	N
 Riverdale	SUDS pt3	SUDS3/M	C	19	STH021	A	N
@@ -2936,6 +3051,7 @@ Acorn User	Sword Master#2	sword	c	19	Disc046a	g	n
 KCS	Swords & Sorcery	SWORDS	c	19	DISC097a	g	n
 Superior 	Syncron	syncron	c	19	Disc038a	g	n
 Superior 	Syncron Slow Ver	SYNCRON	c	19	AltD008a	g	n
+Unknown	Syncron#l	$.SYNCRON	R	19	CH10A	C	N
 AVS	System 15000	SYSINST	c	19	Disc113a	g	n
 Blue Ribbon	System 8	OK	c	19	DISC089b	g	n
 Self Pub.	System Wadgebury	wadger	c	19	Disc032a	g	y
@@ -2962,6 +3078,7 @@ PCW	Target Practice#2	TARGET	c	19	Disc121b	g	n
 PD	Targets	TARGET	c	19	Disc131a	g	n
 Alligata	Tarzan	jungle	c	19	Disc005b	g	n
 Alligata	Tarzan Boy	TAR-INS	c	19	AltD011b	g	n
+Unknown	Tarzan#x	$.TARZAN	C	19	CH10A	C	N
 R.H. 	Task-Force#2	TASK-FO	c	19	DISC104a	s	n
 Disk user	Tazman	tazman	c	19	Disc041a	g	n
 Self Pub.	Tea-Bag Terror 2#E	TEA	c	19	Disc122b	g	n
@@ -2969,9 +3086,11 @@ Self Pub.	Tea-Bag Terror#E	TEA	c	19	Disc121b	g	n
 Acorn Computing	Telephone Mania	TPINST	c	19	DISC108a	g	n
 A&B	Teletext Invaders	txtinva	c	19	Disc033a	g	n
 Superior 	Tempest	tempest	c	19	Disc010a	g	n
+Unknown	Tempest#x	$.TEMPEST	C	19	CH10B	C	N
 U.S. Gold	Temple Of Terror	TEMP-L	c	19	DISC095b	g	n
 Incentive	Temple Of Vran	VLOADER	c	19	DISC098b	a	n
 Bug-Byte	Templeton	temple	c	19	Disc028b	g	n
+Unknown	Templeton#x	$.TEMPLE	C	19	CH10B	C	N
 Digital Fantasia	Ten Little Indians	MA10	c	19	DISC099b	a	n
 Beebug	Ten Pin Bowling#2	bowling	c	19	Disc061b	s	n
 Bug-Byte	Tennis	loader	c	19	Disc024a	g	n
@@ -3018,23 +3137,26 @@ Duckworth	The Pieman Quins	PIEMAN	c	19	Disc127b	a	n
 Larsoft	THE PROPHECY	Lar_scr	R	1d	STH017	G	N
 Projects	The Pyramid	PYRA	c	19	AltD001a	g	n
 Projects	The Pyramid	capers	c	19	Disc017b	g	n
+Unknown	The pyramid#l	$.PYRA	C	19	CH10B	C	N
 Larsoft	The Rising Of Salandra 1	PROP-L	c	19	DISC094a	a	n
 Larsoft	The Rising Of Salandra Pt 2	RET-L	c	19	DISC094b	g	n
 Jon Oates	THE SEA QUEEN	SEAQUEE	C	19	STH009	A	N
 Firebird	The Sentinel	SENTINL	c	19	AltD005b	g	n
 Firebird	The Sentinel	SENTNEL	c	19	AltD009a	g	n
+Unknown	The Sentinel	$.SENT	C	19	CH10B	C	N
 Repton infinity lvl	the sequel to..	g.rep53	S	f4	RepIlvl2	g	n
 Acorn User	The Train Game '91	TRAIN-L	c	19	AltD011a	g	n
 ASP	THE VALLEY	VALLEYL	C	19	STH003	G	N
 Argus Press 	The White Barrows	WHITE	c	19	Disc118b	a	n
 Practical Comp.	The-Grid	THEGRID	c	19	Disc138b	g	n
 Potter Progs	Three Crystals	YPM	c	19	DISC108a	s	n
-Unknown	Thrust	$.LOADER	C	19	CH11B	C	N
 Superior 	Thrust	thrust	c	19	Disc024b	g	y
+Unknown	Thrust	$.LOADER	C	19	CH11B	C	N
 Micro User	Thruster	THRUST1	c	19	DISC109b	g	n
 Mastertronic	Thunderball#2	tball	c	19	Disc010a	g	n
 Audiogenic	Thunderstruck	thunins	c	19	Disc026a	g	n
 Audiogenic	Thunderstruck 2	mindins	c	19	Disc034a	g	n
+Unknown	Thunderstruck 2#i	$.MIND	C	19	CH10B	C	N
 Database	tic tac toe	tictac	C	19	STH026	S	N
 For All	Time	TIMETRA	c	19	DISC092a	a	n
 A&B	Time Bomb	time1	c	19	Disc054b	g	n
@@ -3055,6 +3177,7 @@ KCS	Tomahawk V2	thawk	c	19	Disc018b	g	n
 Holl-Soft	Tomb Of Death#E	INTRO	c	19	DISC096a	g	n
 Power House	Tomb Of Syrinx	SYRINX	c	19	DISC086b	g	n
 Beebug	Tombs Of Tutankhamen	khamen	c	19	Disc027a	g	n
+Unknown	Tomcat#xl	$.TOMCAT	C	19	CH10B	C	N
 Electron User	Tommy & The Toadstools#E	tommy	c	19	DISC074a	g	n
 Repton3 Lvl	Topd	topd	s	f6	Rep3lvl1	g	n
 Repton3 Lvl	topd2	topd2	s	f6	Rep3lvl1	g	n
@@ -3091,8 +3214,8 @@ Beebug	Trivia Quiz	quiz	c	19	DISC077a	s	n
 Domark	Trivial Pursuit	genus	c	19	DISC078a	s	n
 Domark	Trivial Pursuit Baby Edn	BABY	c	19	Disc129a	s	n
 Domark	Trivial Pursuit Young Edn	YOUNG	c	19	Disc128a	s	n
-Repton3 Lvl	Trog	r.trog	s	f6	Rep3lvl1	g	n
-Repton3 Lvl	trog2	r.trog2	s	f6	Rep3lvl1	g	n
+Repton3 Lvl	Trog	trog	s	f6	Rep3lvl1	g	n
+Repton3 Lvl	trog2	trog2	s	f6	Rep3lvl1	g	n
 8-Bit 	Tron 2	tron2	c	19	DISC073b	g	n
 Watford Electronics	Tron#2	Grid-cy	c	19	DISC021b	g	n
 Science Line	Tron#2	tron	c	19	DISC071b	g	n
@@ -3131,8 +3254,8 @@ Mosaic	Unorthodox Engineers	MOSAIC	c	19	DISC096b	a	n
 Self Pub.	Up Up & Away	up&away	c	19	Disc020a	g	n
 Repton3 Lvl	upaka	upaka	s	f6	Rep3lvl1	g	n
 Bug-Byte	Uranians (Speech Chip)	uran	c	19	Disc040a	g	n
-Unknown	Uridium	$.URLOAD	C	70	CH11B	C	N
 Hewson Consultants	Uridium	uridium	c	19	Disc031b	g	y
+Unknown	Uridium	$.URLOAD	C	70	CH11B	C	N
 Tynesoft	US Drag Racing	loader	c	19	Disc034b	g	n
 Ultrasoft	US Invaders	INVADER	c	19	AltD011a	g	n
 Micro User	USS Endeavour	END-L	c	19	DISC101b	g	n
@@ -3229,8 +3352,8 @@ Retro 	White Light#STD	WL	c	19	Disc122a	g	n
 4th Dimension	White Magic	whitema	c	19	Disc047a	g	n
 4th Dimension	White Magic 2	magic	c	19	Disc049a	g	n
 Micro User	White Widow	widow	c	19	DISC078b	g	n
-Unknown	Who Dares Wins 2	$.WHODARE	C	19	CH13A	C	N
 Alligata	Who Dares Wins 2	ins	c	19	DISC076a	g	n
+Unknown	Who Dares Wins 2	$.WHODARE	C	19	CH13A	C	N
 Micro User	Whodunnit?	HEADER	c	19	Disc117a	s	n
 Shards 	Whoopsy	whoopsy	c	19	Disc039a	g	n
 A&B	Wiggler	wiggler	c	19	Disc054a	g	n
@@ -3245,8 +3368,8 @@ Tynesoft	Winter Olympics 	winter	c	19	Disc054b	g	n
 Incentive	Winter Wonderland	Wint-l	c	19	Disc049a	g	n
 Electron User	Wishing Wells#E	well	c	19	Disc046b	g	n
 Micro User	Witch Hunt	wich-l	c	19	DISC071b	g	n
-Unknown	Wizadore	$.WIZ	C	19	CH11B	C	N
 IJK 	Wizadore	wizinst	c	19	Disc013a	g	n
+Unknown	Wizadore	$.WIZ	C	19	CH11B	C	N
 Acorn User	Wizalon	wizload	c	19	Disc041b	g	n
 Quicksilva	Wizard	The-wiz	c	19	Disc020b	g	n
 Beebug	Wizard 2	wizard1	c	19	Disc065a	g	n
@@ -3304,6 +3427,7 @@ Unknown	YIE AR KUNG#xl	$.YIE-AR2	C	19	CH13A	C	N
 Repton3 Lvl	yj2rep	yj2rep	s	f6	Rep3lvl2	g	n
 Top Ten	Yoyo!	yoyo	c	19	Disc026b	g	n
 Superior 	Yoyo! (Re-Issue)	YOYO-L	c	19	AltD006b	g	n
+Unknown	Yoyo#x	$.YOYO	C	19	CH06B	C	N
 Aardvark	Zalaga	ZALAGA	c	19	AltD005b	g	n
 Aardvark	Zalaga V2.2	zalag-l	c	19	Disc003a	g	y
 Unknown	Zalaga#x	$.ZALAGA	C	19	CH13B	C	N
@@ -3320,8 +3444,8 @@ Icon	Zelda Meets The Bug-Eyes	BUGEYES	c	19	AltD002b	g	n
 Self Pub.	Zen#STD	ZENLOAD	c	19	DISC111a	g	n
 Impact	Zenon	start	c	19	Disc038a	g	n
 Beebug	Zeus	gzeus	c	19	DISC074a	g	n
-Unknown	Ziggy	$.CHEAT	C	19	CH13B	C	N
 Audiogenic	Ziggy	Ziggy-l	c	19	Disc039a	g	n
+Unknown	Ziggy	$.CHEAT	C	19	CH13B	C	N
 Electron User	Ziggy#E	CATER	c	19	DISC105b	g	n
 Fontana Pub	Zombie	ZOMB-L	c	19	Disc137b	g	n
 For All	Zombie Island	zombies	c	19	Disc058a	g	n

@@ -43,9 +43,9 @@ Disc User http://8bs.com/catalogue/tdu.htm
 
 A & B computing http://8bs.com/catalogue/a&b.htm
 
-The micro user
+The micro user http://8bs.com/catalogue/tmu.htm
 
-cbm 30 years games archive based on https://stardot.org.uk/forums/viewtopic.php?f=32&t=8270&hilit=disc+114
+cbm 30 years games archive based on https://stardot.org.uk/forums/viewtopic.php?f=32&t=8270&hilit=disc+114 hosted @  http://bbcmicro.co.uk/
 
 programs used
 X - Usage <fsp> (<dno>/<dsp>) (<drv>)
@@ -54,7 +54,7 @@ a launcher program that takes a filename selects din and drive (defaults to curr
 
 Magic - Usage <fsp> (<dno>/<dsp>) (<drv>)
   
-a program for analysing program to accertain type does some magic byte checks via embedded look up tables. sets E% for exe address and L% for load.  will do some rudamentry PAGE=&E00 checks for basic programs
+a program for analysing program to accertain type does some magic byte checks via embedded look up tables. sets E% for exe address and L% for load.  will do some rudamentry PAGE=&E00 checks for basic programs (only if at very start of program)
 
 Alter - Usage <fsp> (<dno>/<dsp>) (<drv>)
 used for executing results of magic or in the future process

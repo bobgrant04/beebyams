@@ -1,178 +1,532 @@
 COMPUTER CONCEPTS	ACCELERATOR	A.ACCELRA	L	80	rom1A	U	N
-UNKNOWN	ADDCOMM	$.ADCM130	L	80	rom1A	U	N
-UNKNOWN	ADDCOMM	$.ADCM120	L	80	rom1A	U	N
-UNKNOWN	ADE	$.ADE200	L	80	rom1A	U	N
-UNKNOWN	ADE	$.ADE100	L	80	rom1A	U	N
+COMPUTER CONCEPTS	Accelerator v1.00	Acc1.0	L	80	rom13a	U	N
+COMPUTER CONCEPTS	Accelerator v1.05	Acc1.5	L	80	rom13a	U	N
+acorn	Acorn bus Machine BBC B+	abm+	L	80	rom13a	U	N
+ACP LTD	ACP1.02	add102	L	80	rom13a	U	N
+unknown	ADD Utils v1.03	add103	L	80	rom13a	U	N
+ACP LTD	ADD Utils v1.04	add104	L	80	rom13a	U	N
+unknown	ADD Utils v2.02	add202	L	80	rom12a	U	N
+unknown	ADDCOM v1.00	addcom	L	80	rom12a	U	N
+UNKNOWN	ADDCOMM1.20	$.ADCM120	L	80	rom1A	U	N
+UNKNOWN	ADDCOMM1.30	$.ADCM130	L	80	rom1A	U	N
+UNKNOWN	ADE v1.0	$.ADE100	L	80	rom1A	U	N
+UNKNOWN	ADE v2.01	$.ADE200	L	80	rom1A	U	N
+system	ADE v1.90	ade190	L	80	rom12a	U	N
+Acorn	ADFS 1.0	aadfs1	L	80	rom12a	U	N
+ACP LTD	ADFS 1770 v1.00	adfs100	L	80	rom12a	U	N
+ACP LTD	ADFS 1770 v1.04	adfs104	L	80	rom12a	U	N
+ACP LTD	ADFS 1770 v1.08	adfs108	L	80	rom12a	U	N
+unknown	adfs E00	padfs	L	80	Rom21b	U	N
+pinnapple	ADFS Utilities 	adfsutl	L	80	rom12a	U	N
 ACORNSOFT	ADFS1.3	$.adfs130	L	80	rom1A	U	N
-ACORNSOFT	ADFS1.3  	D.ADFS130	L	80	rom1A	U	N
-ACORNSOFT	ADFS1.5	M.ADFS150	L	80	rom1A	U	N
+acorn	Adfs1.31 E00	adfs131	L	80	rom12b	U	N
+acorn	ADFS1.40	adfs140	L	80	rom12b	U	N
 ACORNSOFT	ADFS1.5 	$.adfs150	L	80	rom1A	U	N
 ACORNSOFT	ADFS2.03 	$.adfs203	L	80	rom1A	U	N
 ACORNSOFT	ADFS2.1  	$.ADFS210	L	80	rom1A	U	N
+Acon	adfs3.31	adfs331	L	80	Rom22a	U	N
 UNKNOWN	ADT	$.ADT200	L	80	rom1A	U	N
+ACP LTD	Adv Disk Investigator v1.00a2	adi1a2	L	80	Rom23a	U	N
+ACP LTD	Adv Disk Investigator v1.10	adi110	L	80	Rom23a	U	N
+ACP LTD	Adv Disk Investigator v1.00	adi100	L	80	rom13a	U	N
+ACP LTD	Adv Disk Investigator v1.00a	adi1a	L	80	rom13a	U	N
+ACP LTD	Adv Disk Investigator v1.20	adi120	L	80	rom13a	U	N
+ACP LTD	Adv Disk Investigator v2.00	adi200	L	80	rom13a	U	N
+ACP LTD	Advanced Disk Toolkit v1.20	avt120	L	80	rom13a	U	N
+pres	Advanced Disk Toolkit v2.00 	ADT2	L	80	rom11a	U	N
+ACP LTD	Advanced filemanager	afm109	L	80	rom13a	U	N
+pres	Advanced filemanager1.07	afm107	L	80	rom12b	U	N
+pres	Advanced filemanager1.09	afm109	L	80	rom12b	U	N
+ACP LTD	Advanced Ram utils	aramu	L	80	rom12b	U	N
+ACP LTD	Advanced rom managerV1	aromman	L	80	rom12b	U	N
+ACP LTD	Advanced Rom managerv1.13	arom113	L	80	rom12b	U	N
+acorn	Affs1.10	padf110	L	80	Rom22a	U	N
 UNKNOWN	AID	$.AID	L	80	rom1A	U	N
 SOFTSMITH	AIDS	$.AIDS	L	80	rom1A	U	N
+unknown	Airodrome trainer	airtrn	L	80	rom12b	U	N
+unknown	alans tools	alans	L	80	rom12b	U	N
+unknown	Ample nucleus	nucleus	L	80	Rom8b	U	N
 ADVANCED MEMORY SYSTEMS LTD	AMS DISC UTILITY	$.AMSUTIL	L	80	rom1A	U	N
+unknown	Amt1.04	amt104	L	80	Rom8b	U	N
 ADVANCED MEMORY SYSTEMS LTD	AMX MOUSE   	$.AMXMou	L	80	rom1B	U	N
-ELLIOT SOFTWARE	AMX MOUSE SUPPORT	$.AMXV341	L	80	rom1B	U	N
 ELLIOT SOFTWARE	AMX MOUSE SUPPORT	$.AMXV331	L	80	rom1B	U	N
+ELLIOT SOFTWARE	AMX MOUSE SUPPORT	$.AMXV341	L	80	rom1B	U	N
 TECNATION 	AMX PAGEMAKER+	A.PGM+17	L	80	rom1B	U	N
+acorn	Anfs4.21	anfs421	L	80	Rom13b	U	N
+ACP LTD	Apb1.01	apb101	L	80	Rom13b	U	N
+acorn	arabic	arabic	L	80	Rom13b	U	N
+unknown	Aries B20 V2.2	AriesB2	L	80	Rom13b	U	N
 ACP LTD	ARM	$.ARM113	L	80	rom1B	U	N
+unknown	Arom	Arom	L	80	Rom13b	U	N
 Self pub.	ARTIST	$.ARTIST	L	80	rom1B	U	N
+unknown	arts	arts	L	80	Rom13b	U	N
 UNKNOWN	ASM	$.ASM	L	80	rom1B	U	N
 Self pub.	ASM  V	S.VASM65	L	80	rom1B	U	N
+unknown	asrom switch3.10	asrom31	L	80	Rom13b	U	N
+bbc	ATS2.58 	ats258	L	80	Rom14a	U	N
+unknown	ats2.59 	ats259	L	80	Rom14a	U	N
+unknown	autosave basic	autosav	L	80	Rom14a	U	N
 UNKNOWN	AXR	$.AXR	L	80	rom1B	U	N
-ACORNSOFT	BASIC 	$.PBAS	L	80	rom1B	U	N
-ACORNSOFT	BASIC 	$.BASIC2	L	80	rom1B	U	N
-ACORNSOFT	BASIC 	$.BAS486	L	80	rom1B	U	N
-ACORNSOFT	BASIC 	$.65C02	L	80	rom1B	U	N
+unknown	B sheet	bsht	L	80	Rom15a	U	N
 UNKNOWN	B-UTILITY 	$.BUTIL	L	80	rom2A	U	N
-ACORNSOFT	BASIC	$.HIBAS	L	80	rom2A	U	N
-ACORNSOFT	BASIC 	$.BAS486	L	80	rom2A	U	N
-ACORNSOFT	BASIC 	$.HIbasic	L	80	rom2A	U	N
+ACORNSOFT	BASIC 1983	$.HIBAS	L	80	rom2A	U	N
+ACORNSOFT	BASIC 1986	$.BAS486	L	80	rom1B	U	N
+ACORNSOFT	BASIC 1982	$.BASIC2	L	80	rom1B	U	N
+ACORNSOFT	BASIC 1982	$.PBAS	L	80	rom1B	U	N
+ACORNSOFT	BASIC 1984	$.HIbasic	L	80	rom2A	U	N
+acorn	Basic 1982	basic	L	80	Rom14a	U	N
+acorn	Basic 1982	basic2	L	80	Rom14a	U	N
+acorn	Basic 1986	bas486	L	80	Rom14a	U	N
+acorn	Basic 6502	basic2a	L	80	Rom14a	U	N
+BEEBUG	basic booster	basbost	L	80	Rom14a	U	N
+acornsoft	basic editor	be132	L	80	Rom14b	U	N
+ACORNSOFT	BASIC EDITOR v1.32	$.BE132	L	80	rom7B	U	N
+unknown	BASIC EXTENSION 	basext	L	80	Rom14a	U	N
 UNKNOWN	BASIC EXTENSIONS 	$.BASEXT	L	80	rom2A	U	N
-ACORNSOFT	BASIC1	$.BASIC1	L	80	rom2A	U	N
-ACORNSOFT	BASIC4	M.BASIC4	L	80	rom2A	U	N
+ACORNSOFT	BASIC 1981	$.BASIC1	L	80	rom2A	U	N
+ACORNSOFT	BASIC 1984	M.BASIC4	L	80	rom2A	U	N
+acorn	Basic4 1984	basic4	L	80	Rom14a	U	N
+unknown	bbc terminal control0.23	term023	L	80	Rom14b	U	N
+unknown	Bcpl7.0	bcpl70	L	80	Rom14b	U	N
+unknown	Beast1.7	beast17	L	80	Rom14b	U	N
+unknown	beeb manager	beebman	L	80	Rom14b	U	N
+unknown	beeb pen1	beebpen	L	80	Rom14b	U	N
+unknown	Beebase1.06	bbase16	L	80	Rom14b	U	N
 Self pub.	BEEBCALC	$.BEEBCAL	L	80	rom2A	U	N
+unknown	beebcalc1.2b	bcalc12	L	80	Rom14b	U	N
+unknown	beebcalc1.2E	bcal12e	L	80	Rom14b	U	N
+unknown	beebcom	beebcom	L	80	Rom14b	U	N
+unknown	beebflex	beebflx	L	80	Rom14b	U	N
+WATFORD	beebfont	beebfnt	L	80	Rom14b	U	N
+WATFORD	beebfonta 	bbfonta	L	80	Rom14b	U	N
 UNKNOWN	BEEBMON	$.BEEBMON	L	80	rom2A	U	N
+unknown	Beebrom1.0	beebrom	L	80	Rom14b	U	N
+unknown	Beebtel2.0	beebtel	L	80	Rom14b	U	N
+ROBOCOM LTD	Bitstick service rom	bitsk1	L	80	Rom23a	U	N
+ROBOCOM LTD	Bitstick2	bitsk2	L	80	Rom14b	U	N
 ROBOCOM LTD	BITSTIK 	$.BITSTIK	L	80	rom2A	U	N
-Self pub.	BROM	$.Brom	L	80	rom2A	U	N
-Self pub.	BROM	$.BROM112	L	80	rom2A	U	N
-COMPUTER CONCEPTS	CARETAKER	$.CARETAK	L	80	rom2A	U	N
+Self pub.	BROM 1.06	$.Brom	L	80	rom2A	U	N
+Self pub.	BROM 1.12	$.BROM112	L	80	rom2A	U	N
+unknown	Brom+1.02	brom102	L	80	Rom23a	U	N
+unknown	BS dos2.22	bsdos22	L	80	Rom14b	U	N
+WATFORD	BUFFER & BACKUP	$.BUFBACK	L	80	rom2a	U	N
+unknown	buffer and backup	bbrom	L	80	Rom15a	U	N
+COMPUTER CONCEPTS	CARETAKER 1.0	$.CARETAK	L	80	rom2A	U	N
+COMPUTER CONCEPTS	CaretaKER 1.03	car103	L	80	Rom16a	U	N
+COMPUTER CONCEPTS	CaretaKER 1.03	care102	L	80	Rom16a	U	N
+COMPUTER CONCEPTS	CARETAKER 1.0	care100	L	80	Rom16a	U	N
+unknown	cartridge 64k	cart64k	L	80	Rom16a	U	N
+unknown	ceefax menu3.00	ceemnu	L	80	Rom16a	U	N
+unknown	Centurion1.03	cent103	L	80	Rom23a	U	N
+unknown	Centurion1.05	cent105	L	80	Rom16a	U	N
+unknown	chauffeur mouse	chau	L	80	Rom16a	U	N
+unknown	Clock & desk	C&D	L	80	Rom16a	U	N
 SOLIDISK	CLOCK & DESK 	$.RTC	L	80	rom2A	U	N
+acorn	COMAL 	comala	L	80	Rom15b	U	N
 ACORNSOFT	COMAL 	$.COMAL	L	80	rom2A	U	N
+acorn	Comal2	comala2	L	80	Rom15b	U	N
+acorn	combi rom1.1	comb110	L	80	Rom15b	U	N
+BEEBUG	command master3.11	commas3	L	80	Rom15b	U	N
+BEEBUG	command1.0	comm1	L	80	Rom15b	U	N
+BEEBUG	Command1.01	comm101	L	80	Rom15b	U	N
+BEEBUG	Command1.04	comm104	L	80	Rom15b	U	N
+BEEBUG	commpanion8.5h	comp85	L	80	Rom15b	U	N
+BEEBUG	comms demo rfs1.1	cmdem11	L	80	Rom15b	U	N
+BEEBUG	commsoft8.6e	cmsft86	L	80	Rom15b	U	N
+BEEBUG	Commstar 9054	comstar	L	80	Rom15a	U	N
+BEEBUG	Commstar 1051	csr1051	L	80	Rom15b	U	N
+BEEBUG	Commstar 1983	csr1983	L	80	Rom15b	U	N
+BEEBUG	Commstar 6973	cmsr697	L	80	Rom24a	U	N
+BEEBUG	Commstar 8179	cmsr817	L	80	Rom15a	U	N
+BEEBUG	commstar 882A1.40	csr882	L	80	Rom23a	U	N
+BEEBUG	commstar r032	cstr032	L	80	Rom15a	U	N
+BEEBUG	Commstar2.22	cstr222	L	80	Rom15a	U	N
+BEEBUG	Commstar2.31	cstr231	L	80	Rom15a	U	N
+BEEBUG	Commstar2.40	comsr24	L	80	Rom15a	U	N
+unknown	Communicator0.9	comm09	L	80	Rom15a	U	N
+unknown	communicator1.04a	com104a	L	80	Rom15a	U	N
+unknown	compas 2d1.0	compas	L	80	Rom15a	U	N
+unknown	Cookie rom	cookie	L	80	Rom15a	U	N
+unknown	Copyfile1.0	cpfile1	L	80	Rom15a	U	N
+unknown	cp rom1.0	cprom1	L	80	Rom23a	U	N
+unknown	cp rom2.0	cprom2	L	80	Rom15a	U	N
+unknown	cpr gm4ofc1.0	cpr10	L	80	Rom15a	U	N
+unknown	DA util	dautil	L	80	Rom16a	U	N
+unknown	data gem1.02F	datgem	L	80	Rom16a	U	N
+unknown	databeeb	dbeeb12	L	80	Rom16a	U	N
 UNKNOWN	DDFS	$.DDFS153	L	80	rom2B	U	N
+unknown	ddfs E00	ddfs	L	80	Rom16a	U	N
 UNKNOWN	DDFS+	$.DDFS+	L	80	rom2B	U	N
+unknown	Ddfs0.9	ddfs09	L	80	Rom23a	U	N
+WATFORD	Ddfs0.91	wdfs091	L	80	Rom19a	U	N
+WATFORD	DDFS1.50	wdfs150	L	80	rom24a	U	N
+WATFORD	Ddfs1.54	wdfs154	L	80	Rom19a	U	N
+unknown	DDFS1.9	ddfs19	L	80	Rom16b	U	N
+SLOGGER SOFTWARE	Ddos3.15	ddos315	L	80	Rom23a	U	N
+SLOGGER SOFTWARE	Ddos3.35	ddos335	L	80	Rom16b	U	N
 UNKNOWN	DDT 	$.DDT	L	80	rom2B	U	N
+COMPUTER CONCEPTS	Debug0.01	debug	L	80	Rom16b	U	N
+acorn	demo A	demoa	L	80	Rom16b	U	N
+acorn	demo B	demob	L	80	Rom16b	U	N
 ACORNSOFT	DEMO-A-V  	$.DEMO1MC	L	80	rom2B	U	N
 ACORNSOFT	DEMO-B-V  	$.DEMO2MC	L	80	rom2B	U	N
+unknown	demon zromm	zrom101	L	80	Rom16b	U	N
+AMS	design	amx100	L	80	Rom8b	U	N
+unknown	desrom	desrom1	L	80	Rom16b	U	N
+unknown	Detalker1.00	talk100	L	80	Rom16b	U	N
 UNKNOWN	DETTE	R.TEGNHZ	L	80	rom2B	U	N
-UNKNOWN	DFS	F.DFS144	L	80	rom2B	U	N
-UNKNOWN	DFS	$.watfs	L	80	rom2B	U	N
-UNKNOWN	DFS	$.DFS144	L	80	rom2B	U	N
-UNKNOWN	DFS	$.E00DFS	L	80	rom2B	U	N
-ACORNSOFT	DFS2.0j	$.DFS2.0J	L	80	rom2B	U	N
-ACORNSOFT	DFS2.23	$.DFS2.23	L	80	rom2B	U	N
-ACORNSOFT	DFS2.26	$.dfs226	L	80	rom2B	U	N
-UNKNOWN	DFS	$.DFS0.9	L	80	rom3A	U	N
+UNKNOWN	DFS 1.44	$.DFS144	L	80	rom2B	U	N
+UNKNOWN	ZDFS 0.9	$.E00DFS	L	80	rom2B	U	N
 ACORNSOFT	DFS	$.DFS224	L	80	rom3A	U	N
-ACORNSOFT	DFS	A.1770223	L	80	rom3A	U	N
-SOLIDISK	DFS	S.1770V21	L	80	rom3A	U	N
-UNKNOWN	DFS	F.DFS144	L	80	rom3A	U	N
+SOLIDISK	DFS 2.1 (1770)	S.1770V21	L	80	rom3A	U	N
+amcon	Dfs	adfs0	L	80	Rom23a	U	N
+WATFORD	Dfs 1.1	Wat1.1	L	80	rom10a	U	N
+WATFORD	Dfs 1.30A	Wat1.3A	L	80	rom10a	U	N
+WATFORD	Dfs 1.30a2	Wat13a2	L	80	rom10a	U	N
+apc	DFS 1770 v1	fs17701	L	80	Rom16b	U	N
+SOLIDISK	DFS 1770 V2.1j issue1	fs17702	L	80	Rom16b	U	N
+SOLIDISK	DFS 1770 V2.1j issue2	f1170j2	L	80	Rom16b	U	N
+SOLIDISK	DFS 1770 V2.2d	f177022	L	80	Rom16b	U	N
+SOLIDISK	DFS 1770 V2.2j	f17702j	L	80	Rom17a	U	N
+unknown	DFS 1770 V2.2j issue 2	17702j2	L	80	Rom17a	U	N
+unknown	Dfs 1770 v2.2m	17702m2	L	80	Rom17a	U	N
+unknown	Dfs 1770 v2.2n issue2	1770222	L	80	Rom17a	U	N
 SOLIDISK	DFS 2.1	$.SDFS2.1	L	80	rom3A	U	N
 SOLIDISK	DFS 2.1m	$.SDFS21M	L	80	rom3A	U	N
+unknown	Dfs 8271 1770 v.2	82-172	L	80	Rom17a	U	N
+unknown	Dfs 8271 1770 v.2i	82-172i	L	80	rom24a	U	N
+unknown	Dfs 8271 1770 v.2j	82-172j	L	80	rom24a	U	N
+amcon	dfs a7259	fs7259	L	80	rom23b	U	N
+amcon	DFS B4084	dfs4084	L	80	rom12b	U	N
+unknown	DFS NET 119E	dfsnet	L	80	Rom17a	U	N
 UNKNOWN	DFS0-9	$.DFS0-9H	L	80	rom3A	U	N
-ROFF	DFS1.2	$.dfs120	L	80	rom3A	U	N
-WATFORD	DIGITISER	$.DIGITIZ	L	80	rom3A	U	N
-COMPUTER CONCEPTS	DISC DOCTOR 	$.DDOC109	L	80	rom3A	U	N
+unknown	Dfs0.98	dfs098	L	80	Rom17a	U	N
+WATFORD	dfs1.10	Wat1.1	L	80	rom10a	U	N
+unknown	Dfs1.21	dfs121	L	80	Rom17a	U	N
+WATFORD	dfs1.30	Wat1.3	L	80	rom10a	U	N
+WATFORD	Dfs1.40	wdfs140	L	80	Rom19a	U	N
+WATFORD	Dfs1.41	Wat1.41	L	80	rom10a	U	N
+WATFORD	Dfs1.42	Wat1.42	L	80	rom10a	U	N
+WATFORD	Dfs1.43	Wat1.43	L	80	rom10a	U	N
+ACORNSOFT	DFS2.0j	$.DFS2.0J	L	80	rom2B	U	N
+acorn	dfs2.10	dfs210	L	80	Rom17a	U	N
+ACP LTD	Dfs2.20	dfs220	L	80	Rom17a	U	N
+ACP LTD	Dfs2.20a	dfs220a	L	80	Rom17a	U	N
+ACP LTD	Dfs2.20a2	dfs22a2	L	80	Rom17a	U	N
+ACP LTD	Dfs2.20a3	dfs22a3	L	80	Rom17b	U	N
+acorn	Dfs2.22	dfs222	L	80	Rom17b	U	N
+ACORNSOFT	DFS2.23	$.DFS2.23	L	80	rom2B	U	N
+acorn	Dfs2.25	dfs225	L	80	Rom17b	U	N
+ACORNSOFT	DFS2.26	$.dfs226	L	80	rom2B	U	N
+acorn	Dfs2.28	dfs228	L	80	Rom17b	U	N
+unknown	diagram	diagram	L	80	Rom17b	U	N
+WATFORD	DIGITISER 1.00	$.DIGITIZ	L	80	rom3A	U	N
+WATFORD	Digitiser1.0	dig100	L	80	Rom17b	U	N
+unknown	dimage processor0.9a	dimpr09	L	80	Rom17b	U	N
+unknown	Disasem0.10	dam010	L	80	Rom17b	U	N
+unknown	Disasem2.0	dasm2	L	80	Rom17b	U	N
+unknown	disc aid	daid	L	80	Rom18a	U	N
+COMPUTER CONCEPTS	DISC DOCTOR 1.09	$.DDOC109	L	80	rom3A	U	N
+COMPUTER CONCEPTS	disc docTOR	ddocr	L	80	Rom17b	U	N
+COMPUTER CONCEPTS	disc doctor 1.05	ddoc105	L	80	Rom17b	U	N
+COMPUTER CONCEPTS	disc doctor 1.07	ddoc107	L	80	Rom17b	U	N
+COMPUTER CONCEPTS	disc doctor 1.0b	ddoc10b	L	80	Rom17b	U	N
+COMPUTER CONCEPTS	disc doctor 1.10	ddoc110	L	80	Rom18a	U	N
+unknown	disc master2.00	dmas200	L	80	Rom17b	U	N
+unknown	disc rom utils	dromu	L	80	Rom18a	U	N
+unknown	disc servanta1.07	dser107	L	80	Rom18a	U	N
+AMS	disc utility	AMSutil	L	80	Rom8b	U	N
+unknown	Disc utils2.19	dutl219	L	80	Rom17b	U	N
 SUPERIOR	DISK SERVANT 	$.SERVANT	L	80	rom3A	U	N
+UNKNOWN	DISK ZAP	$.ZAP	L	80	rom3B	U	N
+unknown	DiskAid II 	daid2	L	80	Rom18a	U	N
+SUPERIOR	Dmon1.14	dmon114	L	80	Rom18a	U	N
 ROFF	DNFS	$.DNFS	L	80	rom3A	U	N
 ROFF	DNFS1.2	$.DNFS1.2	L	80	rom3A	U	N
-UNKNOWN	DISK ZAP	$.ZAP	L	80	rom3B	U	N
 UNKNOWN	DOCTOR WHO   	$.Doctor	L	80	rom3B	U	N
+unknown	Dotprint+1.24	dpnt124	L	80	Rom18a	U	N
+unknown	double precision	dpre100	L	80	Rom18a	U	N
+unknown	double view 2.1 	dviw210	L	80	Rom18a	U	N
+unknown	double view 1.1	dviw110	L	80	Rom18a	U	N
 Self pub.	DUMPMASTER II 	$.DMPII10	L	80	rom3B	U	N
-Self pub.	DUMPOUT	$.DUMP32j	L	80	rom3B	U	N
-ACORNSOFT	EDIT	$.Hiedit	L	80	rom3B	U	N
-ACORNSOFT	EDIT	$.EDIT320	L	80	rom3B	U	N
-ACORNSOFT	EDIT 	$.EDIT350	L	80	rom3B	U	N
-UNKNOWN	ENIGMA DISC IMAGER	$.ENIG107	L	80	rom3B	U	N
-BEEBUG	EXMON II1.03	$.EXII103	L	80	rom3B	U	N
-BEEBUG	EXMON II1.1	$.EXMII10	L	80	rom3B	U	N
-BEEBUG	EXMON II2.02	$.XMON202	L	80	rom3B	U	N
-BEEBUG	EXMON1.1a 	$.EXM11a	L	80	rom3B	U	N
-UNKNOWN	EXTRAS	$.EXTRAS	L	80	rom3B	U	N
+unknown	Dumpmaster 2.0	dmas200	L	80	Rom18a	U	N
+unknown	Dumpmaster 2.15	dmas215	L	80	Rom18a	U	N
+Self pub.	DUMPOUT 3.2j	$.DUMP32j	L	80	rom3B	U	N
+unknown	Dumpout 0.5d	dout05d	L	80	rom23b	U	N
+unknown	Dumpout 3.0m	dout30m	L	80	Rom18a	U	N
+unknown	Dumpout 3.0p	dout30p	L	80	rom23b	U	N
+unknown	Dumpout 3.3	dout33	L	80	Rom18a	U	N
+unknown	Dumpout 3.2g	dout32g	L	80	Rom18a	U	N
+amcon	E-net 4.55	net455	L	80	rom12b	U	N
+amcon	E-net 5.16	Enet517	L	80	rom12b	U	N
+amcon	E-net 6.23	Enet623	L	80	rom12b	U	N
+unknown	e2pcode	e2pcode	L	80	Rom19a	U	N
+unknown	easy talk 1.0	etlk101	L	80	Rom19a	U	N
+unknown	easy talk 2.0	etlk200	L	80	Rom19a	U	N
+ACORNSOFT	EDIT 1.0	$.EDIT320	L	80	rom3B	U	N
+ACORNSOFT	EDIT 1.2	$.Hiedit	L	80	rom3B	U	N
+ACORNSOFT	EDIT  1.50r	$.EDIT350	L	80	rom3B	U	N
+acorn	Edit 3.2	edit320	L	80	Rom18b	U	N
+acorn	Edit 3.5	edit350	L	80	Rom18b	U	N
+unknown	Elite edit	Elitedt	L	80	rom24a	U	N
+UNKNOWN	ENIGMA DISC IMAGER 1.07	$.ENIG107	L	80	rom3B	U	N
+unknown	ENIGMA DISC IMAGER 0.04	edim04	L	80	Rom18b	U	N
+unknown	ENIGMA DISC IMAGER 0.04cr	edim04c	L	80	Rom18b	U	N
+unknown	ENIGMA DISC IMAGER 0.04cr2	edim04m	L	80	Rom18b	U	N
+unknown	ENIGMA DISC IMAGER 1.06	edim106	L	80	Rom18b	U	N
+unknown	ENIGMA DISC IMAGER 1.07	endi107	L	80	Rom18b	U	N
+unknown	Enigma+2.4	Enga+24	L	80	Rom18b	U	N
+WATFORD	ENVELOPES	$.SOUNDS	L	80	rom1B	U	N
+unknown	Epic 2.47	epic247	L	80	Rom19b	U	N
+unknown	Eprom programmer1.04	eprm104	L	80	Rom19b	U	N
+unknown	Eprom programmer8	eprom8	L	80	Rom23a	U	N
+unknown	eprom utility	eprutil	L	80	Rom19b	U	N
+unknown	Eprommer II	eprII	L	80	Rom19b	U	N
+unknown	Epson fx80 styles 1	efx801	L	80	Rom19a	U	N
+unknown	Epson fx80 styles 1a	efx801a	L	80	Rom19a	U	N
+WATFORD	EPSON NLQ	$.EPSNLQ	L	80	rom2B	U	N
+unknown	Eurobeeb terminal 2.1	ebt21	L	80	Rom19a	U	N
+unknown	everest	everest	L	80	Rom19a	U	N
+unknown	Eword 1.02	edwrd12	L	80	Rom18b	U	N
+unknown	Eword 1.02e	ewrd102	L	80	Rom18b	U	N
+unknown	Eword 2.00	ewrd200	L	80	Rom18b	U	N
+unknown	exmon II 1.0	xmonii1	L	80	Rom19a	U	N
+BEEBUG	EXMON II 1.03	$.EXII103	L	80	rom3B	U	N
+BEEBUG	EXMON II 1.1	$.EXMII10	L	80	rom3B	U	N
+unknown	exmon II 2.01	xmnii20	L	80	Rom19a	U	N
+BEEBUG	EXMON II 2.02	xmon220	L	80	Rom19a	U	N
+BEEBUG	EXMON II 2.02	$.XMON202	L	80	rom3B	U	N
+unknown	Exmon 1.0a	xmon10a	L	80	Rom19a	U	N
+BEEBUG	EXMON 1.1a 	$.EXM11a	L	80	rom3B	U	N
+UNKNOWN	EXTRAS 1.01	$.EXTRAS	L	80	rom3B	U	N
+unknown	Fanfare 1.40	fare140	L	80	Rom19b	U	N
+unknown	fbbs3.0	fbbs30	L	80	Rom19b	U	N
+unknown	file+	file+	L	80	Rom19b	U	N
+unknown	Fileplus 1984	fileplu	L	80	Rom19b	U	N
+unknown	Firstaid 1.1	1aid11	L	80	Rom19b	U	N
 MAGNUM ELECTRONICS	FLOPPY COPY	$.FLOCOPY	L	80	rom3B	U	N
-SOFTWARE SERVICES	FLOPPY-WISE	$.FLOPPYW	L	80	rom3B	U	N
-SOFTWARE SERVICES	FLOPPY-WISE+	H.FLOPPY+	L	80	rom3B	U	N
-SOFTWARE SERVICES	FLOPPY-WISE+	$.FLOPPY+	L	80	rom4A	U	N
+SOFTWARE SERVICES	Floppy wise+ 1.7	fwse+17	L	80	Rom19b	U	N
+SOFTWARE SERVICES	Floppy wise+ 1.8	Fwse+18	L	80	Rom19b	U	N
+SOFTWARE SERVICES	Floppy wise+ 1.9	Fwse+19	L	80	Rom19b	U	N
+SOFTWARE SERVICES	Floppy wise+ 2.1	Fwse+21	L	80	Rom20a	U	N
+SOFTWARE SERVICES	Floppy wise+ 2.3	Fwse+23	L	80	Rom20a	U	N
+SOFTWARE SERVICES	FLOPPY-WISE 2.3	$.FLOPPYW	L	80	rom3B	U	N
+SOFTWARE SERVICES	FLOPPY-WISE+ 1.c	H.FLOPPY+	L	80	rom3B	U	N
+unknown	floppycopy	flopcpy	L	80	Rom19b	U	N
+unknown	Font	font10	L	80	Rom20a	U	N
+unknown	Fontaid1.10	faid110	L	80	Rom20a	U	N
 ACORNSOFT	FORTH	$.FORTH	L	80	rom4A	U	N
 UNKNOWN	FORTH	$.G:FORTH	L	80	rom4A	U	N
+unknown	Forth10	4thvx	L	80	Rom20a	U	N
+unknown	Forth2.4	4th24	L	80	Rom20a	U	N
+unknown	forth2.5	4th25	L	80	Rom20a	U	N
+unknown	Forth79	4th79	L	80	Rom20a	U	N
 UNKNOWN	FX SCREENDUMP	$.FX80AID	L	80	rom4A	U	N
+unknown	Fx80 Screen dump3.1	fx8sd31	L	80	Rom20a	U	N
+unknown	Fx80 Screen dump3.2	fx8sd32	L	80	Rom20a	U	N
+unknown	G-code INTERPRETER	gcode	L	80	Rom20a	U	N
 COMPUTER CONCEPTS	G-CODE INTERPRETER 	A.G-CODE	L	80	rom4A	U	N
+unknown	G-code INTERPRETER 1.05	gcode10	L	80	Rom20a	U	N
+unknown	Giant Text 1.0	gtxt10	L	80	Rom20a	U	N
+unknown	ginn language 2.1	glan21	L	80	Rom20b	U	N
 UNKNOWN	GOMMCTOOL	$.toolrom	L	80	rom4A	U	N
-ACORNSOFT	GRAPHICS EXT	$.GXR	L	80	rom4A	U	N
-ACORNSOFT	GRAPHICS EXT 	$.GXR120	L	80	rom4A	U	N
+unknown	Graphic dump 1.01	gdmp101	L	80	Rom20a	U	N
+COMPUTER CONCEPTS	graphic extension 1.02	grex102	L	80	rom23b	U	N
+COMPUTER CONCEPTS	graphic extension 1.03	grex103	L	80	Rom20b	U	N
+COMPUTER CONCEPTS	graphic extension 2.09	grex209	L	80	Rom20b	U	N
+unknown	Graphic pad 	grapad	L	80	Rom20b	U	N
+ACORNSOFT	GRAPHICS EXT 0.37	$.GXR	L	80	rom4A	U	N
+ACORNSOFT	GRAPHICS EXT 1.2	$.GXR120	L	80	rom4A	U	N
+COMPUTER CONCEPTS	graphics terminal2.01	gtrm201	L	80	Rom20b	U	N
 COMPUTER CONCEPTS	GREMLIN	$.GREMLIN	L	80	rom4A	U	N
+COMPUTER CONCEPTS	Gremlin1.21	grem121	L	80	Rom20b	U	N
+unknown	gum	gum	L	80	Rom20b	U	N
 UNKNOWN	HACKER  UTILITY	$.HACK	L	80	rom4A	U	N
-Self pub.	HACKSTAR V	$.HACKSTR	L	80	rom4A	U	N
+Self pub.	HACKSTAR 2.2	$.HACKSTR	L	80	rom4A	U	N
+unknown	handy utils	hutil23	L	80	Rom20b	U	N
+unknown	Handy+2.00	h+200	L	80	Rom20b	U	N
+unknown	hans	hans	L	80	Rom20b	U	N
 Self pub.	HELIX DISass	$.HELIX	L	80	rom4A	U	N
-BEEBUG	HELP	$.HLP100	L	80	rom4A	U	N
-BEEBUG	HELP1.2	$.HELP12	L	80	rom4A	U	N
-BEEBUG	HELP1.2	$.HELP12C	L	80	rom4A	U	N
-BEEBUG	HELP (*H)	$.HELP	L	80	rom4B	U	N
+BEEBUG	HELP 1.00	$.HLP100	L	80	rom4A	U	N
+BEEBUG	HELP 1.2	$.HELP12	L	80	rom4A	U	N
+unknown	Help 2.1c4	help214	L	80	Rom20b	U	N
+unknown	helping hand 1.29	hand129	L	80	Rom21a	U	N
 UNKNOWN	HERSHEY CHAR	$.HERSHEY	L	80	rom4B	U	N
-UNKNOWN	HKR UTILITIES	$.HKR100	L	80	rom4B	U	N
-UNKNOWN	HKR UTILITIES	$.HKR120	L	80	rom4B	U	N
-UNKNOWN	HKR UTILITIES	$.HKR130	L	80	rom4B	U	N
-UNKNOWN	HKR UTILITIES	$.HRUTL11	L	80	rom4B	U	N
-Self pub.	ICE-BOX	$.ICE-BOX	L	80	rom4B	U	N
+unknown	hibasic3	hibas3	L	80	Rom21a	U	N
+UNKNOWN	HKR UTILITIES 1.0	$.HKR100	L	80	rom4B	U	N
+UNKNOWN	HKR UTILITIES 1.2	$.HKR120	L	80	rom4B	U	N
+UNKNOWN	HKR UTILITIES 1.3	$.HKR130	L	80	rom4B	U	N
+UNKNOWN	HKR UTILITIES 1.1	$.HRUTL11	L	80	rom4B	U	N
+unknown	Hyperdriver 1.10	hdvr110	L	80	Rom21a	U	N
+unknown	Hyperdriver 1.11	hdrr111	L	80	Rom21a	U	N
+Self pub.	ICE-BOX 1.0	$.ICE-BOX	L	80	rom4B	U	N
 BEEBUG	ICON MASTER	$.ICONMST	L	80	rom4B	U	N
+SOLIDISK	index	index	L	80	Rom21a	U	N
 UNKNOWN	INDEX UTILITY  	$.INDEXUT	L	80	rom4B	U	N
-UNKNOWN	INTER-CHART	$.CHRT103	L	80	rom4B	U	N
+unknown	index UTILITY 3.03	idx303	L	80	Rom21a	U	N
+unknown	index UTILITY 3.03a	idx303a	L	80	Rom21a	U	N
+unknown	index utility 2.05	idxu205	L	80	Rom21a	U	N
+COMPUTER CONCEPTS	inter sheet 1.02	sht102	L	80	rom11b	U	N
+COMPUTER CONCEPTS	inter sheet 1.03	sht103	L	80	rom24a	U	N
+COMPUTER CONCEPTS	inter sheet 1.06	sht106	L	80	rom11b	U	N
+COMPUTER CONCEPTS	inter sheet 1.06a	sht106a	L	80	rom11b	U	N
+COMPUTER CONCEPTS	inter sheet 1.06s	sht106s	L	80	rom11b	U	N
+COMPUTER CONCEPTS	inter word 1.02	wrd102l	L	80	rom11b	U	N
+COMPUTER CONCEPTS	inter word 1.02 lo	wrd102	L	80	rom11b	U	N
+UNKNOWN	INTER-CHART 1.03a	$.CHRT103	L	80	rom4B	U	N
 COMPUTER CONCEPTS	INTER-SHEET	B.ISHT	L	80	rom4B	U	N
-COMPUTER CONCEPTS	INTER-WORD	R.I-WORD2	L	80	rom4B	U	N
 COMPUTER CONCEPTS	INTER-WORD	R.I-WORD1	L	80	rom4B	U	N
+COMPUTER CONCEPTS	INTER-WORD	R.I-WORD2	L	80	rom4B	U	N
+unknown	Interchart 1.01	icrt101	L	80	Rom21a	U	N
+unknown	Interchart 1.02	icrt102	L	80	Rom21a	U	N
+Self pub.	interpreter	intper	L	80	rom8b	U	N
+Self pub.	Kcopy	kcopy	L	80	rom11b	U	N
+COMPUTER CONCEPTS	Kermit 1.02	kmt102	L	80	rom11b	U	N
+COMPUTER CONCEPTS	Kermit 1.30	kmt130	L	80	rom11b	U	N
+COMPUTER CONCEPTS	Kermit 1.33	kmt133	L	80	rom11b	U	N
+COMPUTER CONCEPTS	Kermit 1.45	kmt145	L	80	rom11b	U	N
+Self pub.	Keyboard 1	Kbd.1	L	80	rom11b	U	N
 UNKNOWN	KRYDSREF 	$.XREF	L	80	rom4B	U	N
+Self pub.	L-dos .9	Ldos.9	L	80	rom9b	U	N
+unknown	Label	label	L	80	rom11b	U	N
+acb	Lemon 2.26	lemon2	L	80	rom9b	U	N
+acb	Lemon 4.0	Lemon4	L	80	rom9b	U	N
 UNKNOWN	LINEMASTER 	$.LINEMST	L	80	rom4B	U	N
-ACORNSOFT	LISP	$.LispRom	L	80	rom5A	U	N
-ACORNSOFT	LISP	$.LISP	L	80	rom5A	U	N
-CATSOFT	LOGO	$.LOGOCAT	L	80	rom5A	U	N
+ACORNSOFT	LISP 5.0	$.LISP	L	80	rom5A	U	N
+acorn	LISP 1.0	lisp	L	80	rom9b	U	N
+CATSOFT	LOGO 1.0	$.LOGOCAT	L	80	rom5A	U	N
 ACT	LOGO 	L.LOGO100	L	80	rom5A	U	N
-RCP LTD	LOGO1   	$.LOGO1	L	80	rom5A	U	N
-RCP LTD	LOGO1   	$.LOGO-1	L	80	rom5A	U	N
-RCP LTD	LOGO2  	$.LOGO2	L	80	rom5A	U	N
-RCP LTD	LOGO2   	$.LOGO-2	L	80	rom5A	U	N
-UNKNOWN	MANAGER 	S.32KMAN	L	80	rom5A	U	N
+Act-inf	logo ACT	logoact	L	80	rom9b	U	N
+Self-pub	logo brown	logojw	L	80	rom9b	U	N
+RCP LTD	logo RCP	logo	L	80	rom9b	U	N
+catsoft	logo v1.20	Logo1.2	L	80	rom9b	U	N
+RCP LTD	LOGO 1   	$.LOGO1	L	80	rom5A	U	N
+RCP LTD	LOGO 2  	$.LOGO2	L	80	rom5A	U	N
+Self pub.	lx handy utis 	lxhandy	L	80	rom9b	U	N
+Horsington	LX80 toolkit	lx-80	L	80	rom9b	U	N
+Horsington	LX80 toolkitA	lx-80-a	L	80	rom9b	U	N
+Gnomica	Mach v1.0	machv1	L	80	rom9b	U	N
 UNKNOWN	MANAGER 	$.MAN256	L	80	rom5A	U	N
+UNKNOWN	MANAGER 	S.32KMAN	L	80	rom5A	U	N
+UNKNOWN	MASTER	$.RomMast	L	80	rom6B	U	N
 UNKNOWN	MATHS ROM	$.MXR	L	80	rom5A	U	N
 ELLIOT SOFTWARE	MAX	$.MAX12	L	80	rom5A	U	N
 Self pub.	MCMON	$.McMon	L	80	rom5B	U	N
+MDM	rfs paged rom 	A.M7ED1	L	80	rom5B	U	N
 MDM	MDM  	A.M7ED2	L	80	rom5B	U	N
-MDM	MDM  	A.M7ED1	L	80	rom5B	U	N
 Self pub.	MEDMON 	$.MedMon	L	80	rom5B	U	N
 Self pub.	MERLIN	$.MERLIN	L	80	rom5B	U	N
-Self pub.	META ASSEMBLER        	E.META	L	80	rom5B	U	N
+Self pub.	META ASSEMBLER 2.13a      	E.META	L	80	rom5B	U	N
+unknown	META ASSEMBLER2.13a       	meta	L	80	Rom19a	U	N
 UNKNOWN	MICRO PROLOG  	$.PROLOG	L	80	rom5B	U	N
-UNKNOWN	MMC-DFS COPIER 	$.COP112	L	80	rom5B	U	N
-UNKNOWN	MMC-DFS COPIER 	$.COP113	L	80	rom5B	U	N
-UNKNOWN	MMC-DFS COPIER 	$.COP114	L	80	rom5B	U	N
-UNKNOWN	MMC-DFS COPIER  	$.COP105	L	80	rom5B	U	N
-UNKNOWN	MMC-DFS COPIER  	$.COP109	L	80	rom5B	U	N
-ISMEC	MONITOR	$.ASMON	L	80	rom5B	U	N
-ISMEC	MONITOR  	$.AcrnMon	L	80	rom5B	U	N
+UNKNOWN	MMC-DFS COPIER 1.12	$.COP112	L	80	rom5B	U	N
+UNKNOWN	MMC-DFS COPIER 1.13	$.COP113	L	80	rom5B	U	N
+UNKNOWN	MMC-DFS COPIER 1.14	$.COP114	L	80	rom5B	U	N
+UNKNOWN	MMC-DFS COPIER 1.05  	$.COP105	L	80	rom5B	U	N
+UNKNOWN	MMC-DFS COPIER 1.09	$.COP109	L	80	rom5B	U	N
+WATFORD	Modem 1.0	modem	L	80	rom9b	U	N
+ISMEC	MONITOR 0.01	$.ASMON	L	80	rom5B	U	N
+unknown	Mouse pac1.2	mous12	L	80	rom24a	U	N
+Amx	mouse support	mous21	L	80	Rom8b	U	N
+AMS	mouse support (a)	mous21a	L	80	Rom8b	U	N
+amx	mouse support 2.1	mous21	L	80	Rom13b	U	N
+amx	mouse support 3.31a	mou331	L	80	Rom13b	U	N
+amx	mouse support 3.31a2	mus331a	L	80	Rom13b	U	N
+amx	mouse support 3.61	mous361	L	80	Rom13b	U	N
+unknown	MOVIE MAKER A 	cmov2	L	80	Rom16a	U	N
 SLIPPERY SLUG	MOVIE MAKER A 	C.MOVIEM2	L	80	rom5B	U	N
+unknown	movie maker b	cmov1	L	80	Rom16a	U	N
 SLIPPERY SLUG	MOVIE MAKER B	C.MOVIEM1	L	80	rom5B	U	N
+PMS	multifont nqt	pmfntq	L	80	rom23b	U	N
 BEEBUG	MUROM	$.Murom	L	80	rom5B	U	N
-UNKNOWN	QUICKCOPY 	$.QUICKY	L	80	rom5B	U	N
 UNKNOWN	NLQ DESIGNER VERSION	$.NLQDE13	L	80	rom6A	U	N
 ACORNSOFT	NORDIC CHAR	$.DK-TEGN	L	80	rom6A	U	N
+unknown	Ols UTIL 3.00	hols300	L	80	Rom20b	U	N
 UNKNOWN	OLSUTIL	H.OLS300	L	80	rom6A	U	N
-OPEN UNIVERSITY 	OPEN LOGO	$.OPENLO	L	80	rom6A	U	N
-OPEN UNIVERSITY 	OPEN LOGO	$.OPENLO1	L	80	rom6A	U	N
+OPEN UNIVERSITY 	OPEN LOGO r1	$.OPENLO	L	80	rom6A	U	N
+OPEN UNIVERSITY 	OPEN LOGO r2	$.OPENLO1	L	80	rom6A	U	N
 UNKNOWN	P 	$.SFX	L	80	rom6A	U	N
+amx	Pagemaker 1.0	page10	L	80	Rom13b	U	N
+amx	PAGEMAKER SUPPORT  	page	L	80	Rom13b	U	N
 TECNATION 	PAGEMAKER SUPPORT  	A.PGM+S17	L	80	rom6A	U	N
-Self pub.	PASCAL 	$.PASCALT	L	80	rom6A	U	N
+amx	pageMAKER SUPPORT1.2	page12	L	80	Rom13b	U	N
 OCSS	PASCAL 	$.OXPASC	L	80	rom6A	U	N
+Self pub.	PASCAL 	$.PASCALT	L	80	rom6A	U	N
 ACORNSOFT	PASCAL  	$.ISOPAS1	L	80	rom6A	U	N
 UNKNOWN	PASCAL  	$.ISOPAS2	L	80	rom6A	U	N
+unknown	Pascal 1.00a	pas100a	L	80	Rom21a	U	N
+unknown	Pascal 1.11	pas111	L	80	Rom21a	U	N
+unknown	Pascal 1.12	pas112	L	80	rom23b	U	N
+unknown	Pcb 1.04	ppcb104	L	80	Rom21b	U	N
+unknown	PCB 1.07	ppcb107	L	80	Rom21b	U	N
+unknown	Pcb 3.02	ppcb302	L	80	Rom21b	U	N
+pinnapple	PCB 4.03	ppcb403	L	80	Rom21b	U	N
+unknown	pen friend 1.2	penf120	L	80	rom23b	U	N
+unknown	pen friend 1.24	penf124	L	80	Rom21b	U	N
+unknown	Pendown 1.13	pend113	L	80	Rom21b	U	N
+unknown	Pendown 1.13A	pend13a	L	80	Rom21b	U	N
+UNKNOWN	PHILOSOPHER  0.1	$.PhilRom	L	80	rom7B	U	N
+unknown	Phx 2.0	phx200	L	80	Rom21b	U	N
+unknown	Pig 1.0	pig100	L	80	Rom21b	U	N
+unknown	Pig 1.1	pig11	L	80	Rom21b	U	N
+unknown	Plus 1.117	+1117	L	80	Rom21b	U	N
+unknown	Plus 1.123	1123	L	80	rom23b	U	N
 UNKNOWN	PMFS  	$.PMFS	L	80	rom6A	U	N
+pms	Powerfont5.01	pwrf501	L	80	rom23b	U	N
+WATFORD	Prestel1.0	pres100	L	80	rom24a	U	N
+unknown	Prestel1.1	pres110	L	80	Rom22a	U	N
+unknown	prestel4.7n	pres47n	L	80	Rom22a	U	N
+unknown	prestel4.8n	pres48n	L	80	Rom22a	U	N
+unknown	Printbox1.22	pbox122	L	80	rom24a	U	N
 Self pub.	PRINTER BUFFER 	$.BUFFER	L	80	rom6A	U	N
 SOLIDISK	PRINTER BUFFER     	$.PRBUF	L	80	rom6A	U	N
+unknown	Printer buffer2.1	pbuf210	L	80	Rom22a	U	N
+acorn	printer server	prtsrv	L	80	Rom22a	U	N
+unknown	Printer1.0	ptr100	L	80	Rom22a	U	N
 COMPUTER CONCEPTS	PRINTMASTER (STAR) 	$.STAR110	L	80	rom6A	U	N
 COMPUTER CONCEPTS	PRINTMASTER (TAXAN)	$.PRINTMA	L	80	rom6A	U	N
+COMPUTER CONCEPTS	printmaster epson r1.0	pmep100	L	80	Rom22a	U	N
+COMPUTER CONCEPTS	printmaster epson 1.0	pme100	L	80	Rom22a	U	N
+COMPUTER CONCEPTS	printmASTER epson 1.01	pme101	L	80	Rom22a	U	N
+COMPUTER CONCEPTS	printmASTER epson 1.08	pme108	L	80	Rom22a	U	N
+COMPUTER CONCEPTS	printmASTER epson 1.08a	pme108a	L	80	Rom22a	U	N
+COMPUTER CONCEPTS	printmASTER epson 1.08a2	pe108a2	L	80	rom24a	U	N
+COMPUTER CONCEPTS	printmaster epson 1.1	pme110	L	80	Rom22a	U	N
+COMPUTER CONCEPTS	printmaster star 1.1	pms110	L	80	Rom22a	U	N
+unknown	Probe 4.02	prob402	L	80	Rom22a	U	N
+unknown	Probe 4.05	prob405	L	80	Rom22b	U	N
+unknown	Procyon 1.81	prc181	L	80	Rom22b	U	N
 UNKNOWN	PROGRAMSMITH 	$.ProSmit	L	80	rom6A	U	N
+unknown	protect	protect	L	80	rom24a	U	N
+unknown	Proword 1.2	prow12	L	80	Rom22b	U	N
+unknown	Proword 1.3	prow13	L	80	Rom22b	U	N
 ACORNSOFT	PS 	$.PS1	L	80	rom6A	U	N
-UNKNOWN	MASTER	$.RomMast	L	80	rom6B	U	N
 UNKNOWN	QFS	$.QFS2.00	L	80	rom6B	U	N
-Self pub.	QUEST PAINT	$.QPAINT1	L	80	rom6B	U	N
-Self pub.	QUEST PAINT 	$.QPAINT	L	80	rom6B	U	N
+unknown	qrom	qrom	L	80	Rom22b	U	N
+Self pub.	QUEST PAINT 1.04	$.QPAINT	L	80	rom3A	U	N
+Self pub.	QUEST PAINT 1.04(2)	$.QPAINT2	L	80	rom3A	U	N
+unknown	Quest 2.1a	que21a	L	80	Rom22b	U	N
+unknown	quick paint 1.1	qpai110	L	80	Rom22b	U	N
+UNKNOWN	QUICKCOPY 	$.QUICKY	L	80	rom5B	U	N
+unknown	Quikmon 1.1	qmon110	L	80	Rom22b	U	N
+unknown	Quikmon 1.1a	qmon11a	L	80	Rom22b	U	N
+beebug	rfs	rfs	L	80	Rom22b	U	N
 BEEBUG	RFS  	$.RFS	L	80	rom6B	U	N
+unknown	Rfs1.0	autorom	L	80	Rom14a	U	N
 UNKNOWN	RIPPER V 	R.Ripper	L	80	rom6B	U	N
+unknown	Ripper 1	rip1	L	80	Rom22b	U	N
+unknown	Ripper 1a	rip1a	L	80	Rom22b	U	N
+unknown	Ripper 1a2	rip1a2	L	80	Rom22b	U	N
+Self pub.	rom info 	README	L	80	rom1a	U	N
+unknown	rom plus rfs	plrfs	L	80	Rom23a	U	N
 BEEBUG	ROMIT	$.ROMIT01	L	80	rom6B	U	N
+unknown	rtegnhz	rtegnhz	L	80	Rom22b	U	N
 MDM	SCREEN	$.SCDUMP	L	80	rom6B	U	N
 ACP LTD	SED-MMC SEARCH/EDIT	$.SEDrom	L	80	rom6B	U	N
+unknown	Selcopy 5.0	scpy500	L	80	Rom23a	U	N
 ACORNSOFT	SERIAL	$.COPYR	L	80	rom6B	U	N
 UNKNOWN	SFS	$.SFS	L	80	rom6B	U	N
+unknown	shadow ram 2.4	os240	L	80	Rom23a	U	N
 UNKNOWN	SHEET 	B.SHT	L	80	rom6B	U	N
 UNKNOWN	SLAVE 	R.SLAVE+	L	80	rom6B	U	N
 UNKNOWN	SLEUTH	$.SLEUTH	L	80	rom7A	U	N
@@ -181,62 +535,73 @@ Self pub.	SNAPPER 	$.SNAPROM	L	80	rom7A	U	N
 Self pub.	SOLIWIN 	$.SOLIWIN	L	80	rom7A	U	N
 SUPERIOR 	SPEECH!  	$.SP8000	L	80	rom7A	U	N
 BEEBUG	SPELLCHECK II V	$.BSPEL12	L	80	rom7A	U	N
-UNKNOWN	SPY  	$.SPY212	L	80	rom7A	U	N
 UNKNOWN	SPY  	$.SPY210	L	80	rom7A	U	N
-UNKNOWN	STARSTICK	$.ST2V224	L	80	rom7A	U	N
-UNKNOWN	STARSTICK	$.STARST2	L	80	rom7A	U	N
-UNKNOWN	STARSTICK	$.STARSTK	L	80	rom7A	U	N
+UNKNOWN	SPY  	$.SPY212	L	80	rom7A	U	N
+SLOGGER SOFTWARE	Starbase 2	stbse2	L	80	rom24a	U	N
+SLOGGER SOFTWARE	Stargraph 2.01	stgr201	L	80	Rom22b	U	N
+SLOGGER SOFTWARE	Starmon 1.2	stmn120	L	80	Rom22b	U	N
+UNKNOWN	STARSTICK 2.24	$.ST2V224	L	80	rom7A	U	N
+UNKNOWN	STARSTICK 1.41	$.STARSTK	L	80	rom7A	U	N
+tornado	StarStore II	starsto	L	80	rom11a	U	N
+SLOGGER SOFTWARE	StarWord 1.01	starw	L	80	rom11a	U	N
 SOLIDISK	STL ADFS	$.SADFS21	L	80	rom7A	U	N
 SOLIDISK	STL ADFS 	$.ADFS21M	L	80	rom7A	U	N
 UNKNOWN	STL RFS V  	$.STLRFS	L	80	rom7A	U	N
 SOLIDISK	STL TOOLKIT	$.STLTOOL	L	80	rom7A	U	N
 UNKNOWN	STLE 	$.STL0E00	L	80	rom7A	U	N
+amx	stop press support 1.9	stop19	L	80	Rom13b	U	N
+amx	stop press1.9	stopP19	L	80	Rom13b	U	N
 UNKNOWN	SWR UTILITIES 	$.SWRU1.0	L	80	rom7A	U	N
-Self pub.	TAPE TO DISC 'TD' ROM	$.Tdrom	L	80	rom7A	U	N
-ACORNSOFT	BASIC EDITOR	A.BASEDIT	L	80	rom7B	U	N
-ACORNSOFT	BASIC EDITOR	$.BE132	L	80	rom7B	U	N
-UNKNOWN	PHILOSOPHER  	$.PhilRom	L	80	rom7B	U	N
+SLOGGER SOFTWARE	T2 PEG400 2.02	peg400	L	80	rom11a	U	N
+SLOGGER SOFTWARE	t2p3	t2p3202	L	80	Rom23a	U	N
+Self pub.	TAPE TO DISC 	$.Tdrom	L	80	rom7A	U	N
 Self pub.	TECHNO-FONT	$.FONT12	L	80	rom7B	U	N
 Self pub.	TECHNO-FONT	$.TEGN1.2	L	80	rom7B	U	N
 Self pub.	TELEDATA 	$.TELEDAT	L	80	rom7B	U	N
 UNKNOWN	TERMINAL	$.TERMINA	L	80	rom7B	U	N
+unknown	Terminal Emulator 	term	L	80	rom11a	U	N
 UNIVERSITY OF SUSSEX	TERMULATOR 	$.TERMULA	L	80	rom7B	U	N
 UNKNOWN	THE GRAPHICS EDITER 	$.GRAEDIT	L	80	rom7B	U	N
 BEEBUG	TOOLKIT PLUS 	$.TOOL+	L	80	rom7B	U	N
 BEEBUG	TOOLKIT PLUS 	$.TOOL+HR	L	80	rom7B	U	N
-BEEBUG	TOOLKIT PLUS2.05	$.TKIT205	L	80	rom7B	U	N
-BEEBUG	TOOLKIT1.2	$.TOOL120	L	80	rom7B	U	N
-BEEBUG	TOOLKIT1.23	$.TOOL123	L	80	rom7B	U	N
-BEEBUG	TOOLKIT1.25	$.TOOL125	L	80	rom7B	U	N
+BEEBUG	TOOLKIT PLUS 2.05	$.TKIT205	L	80	rom7B	U	N
+BEEBUG	TOOLKIT 1.2	$.TOOL120	L	80	rom7B	U	N
+BEEBUG	TOOLKIT 1.23	$.TOOL123	L	80	rom7B	U	N
+BEEBUG	TOOLKIT 1.25	$.TOOL125	L	80	rom7B	U	N
 UNKNOWN	TOOLSTAR	$.TOOLSTR	L	80	rom7B	U	N
 Self pub.	TRACE	$.SOLITRA	L	80	rom7B	U	N
+acorn	Trackerball 0.01	tball	L	80	rom11a	U	N
+tornado	TREK - The Complete Dis	trek	L	80	rom11a	U	N
+acorn	TUBE 6502 64k	tube	L	80	rom11a	U	N
+acorn	TUBE 6502 64k v1.1	Tube1.1	L	80	rom11a	U	N
+Self pub.	TUBE KILLER  	killsrc	L	80	rom1a	U	N
 UNKNOWN	TUBE KILLER  	$.TKILL	L	80	rom7B	U	N
-UNIVERSITY OF SUSSEX	WORKSTATION	$.TERMULA	L	80	rom7B	U	N
 UNKNOWN	TURTLE	$.TURTLE	L	80	rom8A	U	N
-S AND A SOFTWARE	USERS UTILITY	$.UserUtl	L	80	rom8A	U	N
-UNKNOWN	UTILS	$.UTIL1.2	L	80	rom8A	U	N
-SOLIDISK	UVIProm 	$.UVIPROM	L	80	rom8A	U	N
-Self pub.	VDUREC 	$.VDUREC	L	80	rom8A	U	N
-ACORNSOFT	VIEW 	$.VIEWA30	L	80	rom8A	U	N
-PROTECHNIC	VIEW A	$.VIEW1.4	L	80	rom8A	U	N
-PROTECHNIC	VIEW A	E.VIEWD/N	L	80	rom8A	U	N
-PROTECHNIC	VIEW A	$.VIEW2-1	L	80	rom8A	U	N
-PROTECHNIC	VIEW A	$.VIEW2.1	L	80	rom8A	U	N
-ACORNSOFT	VIEW3.1	$.VIEWB31	L	80	rom8A	U	N
-ACORNSOFT	VIEW3.11	$.VIWB311	L	80	rom8A	U	N
-AARDVARK SOFTWARE 	VIEWSHAPE	$.VwShape	L	80	rom8A	U	N
-PROTECHNIC	VIEWSHEET 	$.VIEWSHT	L	80	rom8A	U	N
-ACORNSOFT	VIEWSPELL	V.SPELL10	L	80	rom8A	U	N
-ACORNSOFT	VIEWSTORE	$.VSTORE	L	80	rom8A	U	N
-WATFORD	BUFFER & BACKUP	$.BUFBACK	L	80	rom8B	U	N
-WATFORD	ENVELOPES	$.SOUNDS	L	80	rom8B	U	N
-WATFORD	EPSON NLQ	$.EPSNLQ	L	80	rom8B	U	N
-WATFORD	EPSON NLQ 	$.WATFORD	L	80	rom8B	U	N
-ACORNSOFT	VIEWSTORE1	V.STORE10	L	80	rom8B	U	N
-ACORNSOFT	VIEWSTORE1.1	V.STORE11	L	80	rom8B	U	N
-COMPUTER CONCEPTS	Word+.F 	$.WWP14F	L	80	rom8B	U	N
-COMPUTER CONCEPTS	WORD+A	$.WORD+	L	80	rom8B	U	N
-COMPUTER CONCEPTS	WORDWISE	$.WORD110	L	80	rom8B	U	N
-ACORNSOFT	DFS2.23	$.DFS2.23	L	80	rom9A	U	N
-ROFF	DNFS1.2	$.DNFS1.2	L	80	rom9A	U	N
-Self pub.	QUEST PAINT	$.QPAINT	L	80	rom9A	U	N
+S AND A SOFTWARE	USERS UTILITY	$.UserUtl	L	80	rom2b	U	N
+UNKNOWN	UTILS	$.UTIL1.2	L	80	rom6A	U	N
+acorn	Utils v1.0	utils	L	80	rom11a	U	N
+SOLIDISK	UVIProm 	$.UVIPROM	L	80	rom2b	U	N
+SOLIDISK	UVIPROM v1E1	uviprom	L	80	rom11a	U	N
+Self pub.	VDUREC 	$.VDUREC	L	80	rom2b	U	N
+ACORNSOFT	VIEW a3.0	$.VIEWA30	L	80	rom8A	U	N
+PROTECHNIC	VIEW 1.4	$.VIEW1.4	L	80	rom8A	U	N
+PROTECHNIC	VIEW A2.1	$.VIEW2.1	L	80	rom8A	U	N
+ACORNSOFT	VIEW 3.1	$.VIEWB31	L	80	rom8A	U	N
+ACORNSOFT	VIEW 3.11	$.VIWB311	L	80	rom8A	U	N
+AARDVARK SOFTWARE 	VIEWSHAPE	$.VwShape	L	80	rom4b	U	N
+PROTECHNIC	VIEWSHEET 	$.VIEWSHT	L	80	rom5A	U	N
+ACORNSOFT	VIEWSPELL	V.SPELL10	L	80	rom3b	U	N
+ACORNSOFT	ViewSpell v1.0	spell	L	80	rom11a	U	N
+ACORNSOFT	VIEWSTORE 1.0	V.STORE10	L	80	rom1B	U	N
+ACORNSOFT	VIEWSTORE 1.1	V.STORE11	L	80	rom2a	U	N
+unknown	Wapping Editor - High v1.30	wap130h	L	80	rom12a	U	N
+unknown	Wapping Editor - Low v1.30	wap130l	L	80	rom12a	U	N
+COMPUTER CONCEPTS	Word+. 1.4f	$.WWP14F	L	80	rom1a	U	N
+COMPUTER CONCEPTS	WORD+ 1.4a	$.WORD+	L	80	rom1a	U	N
+COMPUTER CONCEPTS	WORDWISE 1.10	$.WORD110	L	80	rom2B	U	N
+COMPUTER CONCEPTS	Wordwise+ 1.4a	wrd+14a	L	80	rom10a	U	N
+COMPUTER CONCEPTS	Wordwise+ 1.4e	wrd+14e	L	80	rom10a	U	N
+UNIVERSITY OF SUSSEX	WORKSTATION	$.TERMULA	L	80	rom7B	U	N
+unknown	ZDFE00 a	eoo09	L	80	rom10a	U	N
+unknown	ZDFE00 b	eoo09b	L	80	rom10a	U	N
+unknown	Zdfs 0.9	e00dfs	L	80	Rom19a	U	N

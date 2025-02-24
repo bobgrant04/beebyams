@@ -81,7 +81,9 @@ GUARD &7C00
 \where xxxx has different code to be run
 \note order is important as a rom and basic can have characteristics of text
 
-
+\Entry 6
+\6,offset,nobytes,check bytes,exec,load,ident
+EQUS 6,7,3,0,"(C)",&CD,&D9,0,&80,"Rom #1",13
 \Entry type 1
 \Offset, nobytes,exec,load ident
 \1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
@@ -91,9 +93,7 @@ EQUS 1,0,1,&60,&40,&FE,&7F,0,0,"Ldpic #2",13
 EQUS 1,0,1,&10,0,&FE,&7F,0,0,"Ldpic #3",13
 EQUS 1,0,1,&0D,00,&23,&80,0,0,"Basic #1",13
 EQUS 1,1,2,&30,0,&30,&F8,&7F,0,0,"DEC compressed picture #1",13
-\Entry 6
-\6,offset,nobytes,check bytes,exec,load,ident
-EQUS 6,7,3,0,"(C)",&CD,&D9,0,&80,"Rom",13
+
 \Entry type 2
 \2,Startrange,Endrange,minvalue,maxvalue,,exec,load ident
 EQUS 2,&66,&78,0,&20,&F9,&7F,0,&11,"TYB music samples #6",13
@@ -133,9 +133,7 @@ EQUS 5,2,' ',0,'E',0,&FC,&7F,0,0,"text/word #2",13
 EQUS 7,110,8,'a','e','h','i','n','o','r','s','t',&FC,&7F,0,0,"text/word #3",13
 EQUS 7,110,8,'A','E','H','I','N','O','R','S','T',&FC,&7F,0,0,"text/word #4",13
 
-
-
-
+\marks end of block
 EQUS 0
 
 .startexec
@@ -161,7 +159,7 @@ INC quiet
 LDX #0
 INY:
 .xb:
-LDA(blockstart),Y:STA strB%,x:INY:INX:CMP #&D:BNE xb
+LDA(blockstart),Y :STA strB%,x:INY:INX:CMP #&D:BNE xb
 LDY #0
 .xc
 LDA strB%,Y:STA (blockstart),Y:INY:CMP #&D:BNE xc
@@ -171,13 +169,13 @@ CMP #&D:BEQ cmdend:INY:LDA(blockstart),Y:CMP #32:BNE xa:INX:BNE xa
 .cmdend:CPX #2:BNE ab:STX tempx:DEY:STY tempy
 \"…"Have drive param
 LDX #NoSpecials%:JSR prepcmd:LDY tempy:LDA(blockstart),Y:STA strA%,X
-INX:LDA #&D:STA strA%,X
+INX : LDA #&D : STA strA%,X
 DEY:STA(blockstart),Y:STY tempy
 JSR execmd
 LDX tempx:LDY tempy
 .ab:CPX #1:BCC ac
 \"…"Have DIN param
-.ad:DEY:LDA(blockstart),Y:CMP #32:BNE ad:LDA #&D:STA(blockstart),Y:STY tempy
+.ad: DEY : LDA(blockstart),Y : CMP #32:BNE ad:LDA #&D:STA(blockstart),Y:STY tempy
 LDX #NoSpecials%+1:JSR prepcmd:LDY tempy
 DEX
 .ae:INY:INX:LDA(blockstart),Y:STA strA%,X:CMP #&D:BNE ae:CMP #&32:BEQ ae
@@ -237,13 +235,14 @@ LDA #0:LDY conb:JSR osfind
 
 
 .magicfile
-{
 
+\set aptr to magic block
 LDA #LO(magicdata):STA Aptr
 LDA #HI(magicdata):STA Aptr+1
 \first byte is ident so construct case statement
 .ff:
-LDY#0:LDA(Aptr),Y:BNE ab:JSR screencheck:
+{
+LDY#0: LDA(Aptr),Y: BNE ab: JSR screencheck:
 \if Quiet check against existing
 .alldone
 {
@@ -351,7 +350,7 @@ LDA(Aptr),Y:CMP highestbyte:BNE ao
 INY:LDA(Aptr),Y
 CMP noofbytes:BCS ao
 DEC tempx:BNE ap
-INY:JSR fullmatch:JMP ff
+INY :JSR fullmatch :JMP ff
 .ap
 LDX highestbyte
 LDA #0:STA countpg,X
@@ -361,7 +360,7 @@ LDY ypush
 JMP an
 .ao
 \move to next rec 
-CLC:LDA tempy:ADC#6:TAY:JSR nextrec:JMP ff
+CLC: LDA tempy: ADC#6: TAY: JSR nextrec: JMP ff
 }
 
 .aj
@@ -370,29 +369,18 @@ CLC:LDA tempy:ADC#6:TAY:JSR nextrec:JMP ff
 CMP #6:BNE ak
 {
 INY
-LDA(Aptr),Y:TAY:LDA rawdat,Y:TAX:
-LDY #2:LDA (Aptr),Y:STA matchlen
+LDA (Aptr),Y: TAY : LDA rawdat,Y: TAX 
+LDY #2: LDA (Aptr),Y: STA matchlen
 .al
-INY:LDA(Aptr),Y:CMP rawdat,X:BEQ am
+INY : LDA (Aptr),Y: CMP rawdat,X: BEQ am
 JMP movenxt
 .am
 INX
-DEC matchlen:BPL fh
+DEC matchlen: BPL al
 INY
-JSR fullmatch:JMP ff
-.fh
-{
-INY:LDA(Aptr),Y:CMP rawdat,X:BNE movenxt
-INX
-DEC matchlen:BPL fh
-INY
-JSR fullmatch:JMP ff
-}
-.movenxt
-{
-LDY #2:LDA(Aptr),Y:CLC:ADC #7:TAY
-JSR nextrec:JMP ff
-}
+JSR fullmatch: JMP alldone:
+
+
 }
 .ak
 \Entry type 7
@@ -432,7 +420,11 @@ LDY #7:JSR nextrec:JMP ff
 \should not be here
 RTS
 }:\magic
-
+.movenxt
+{
+LDY #2:LDA(Aptr),Y:CLC:ADC #7:TAY
+JSR nextrec:JMP ff
+}
 
 .GethighestByte
 {
@@ -493,20 +485,20 @@ ADC erradd+1:STA erradd+1:LDY #0:BEQ ba
 .fullmatch
 {
 STY ypush
-CLC:LDA e:ADC e+1:BEQ bc
-CLC:LDA(Aptr),Y:INY:ADC(Aptr),Y:BEQ bd
+CLC :LDA e: ADC e+1:BEQ bc
+CLC : LDA (Aptr),Y : INY : ADC (Aptr),Y: BEQ bd
 DEY
-LDA(Aptr),Y:CMP e:BNE abort
+LDA (Aptr),Y: CMP e: BNE abort
 INY
-LDA(Aptr),Y:CMP e+1:BNE abort
+LDA (Aptr),Y: CMP e+1: BNE abort
 BEQ bd
 .bc:\e is 0 need to write out
-LDA(Aptr),Y:STA e
+LDA (Aptr),Y: STA e
 INY
-LDA(Aptr),Y:STA e+1
+LDA (Aptr),Y: STA e+1
 .bd
 INY
-CLC:LDA l:ADC l+1:BEQ bf
+CLC : LDA l: ADC l+1: BEQ bf
 CLC:LDA(Aptr),Y:INY:ADC(Aptr),Y:BEQ bg
 DEY
 LDA(Aptr),Y:CMP l:BNE abort
@@ -526,7 +518,7 @@ LDA quiet:BNE noprint
 .aa
 LDA(Aptr),Y:
 
-JSR osasci:INY:CMP #13:BNE aa
+JSR osasci: INY : CMP #13 : BNE aa
 TYA:CLC:ADC Aptr:STA Aptr:
 LDA #0:ADC Aptr+1:STA Aptr+1
 RTS
@@ -537,7 +529,7 @@ RTS
 LDA(Aptr),Y:
 INY:CMP #13:BNE aa
 TYA:CLC:ADC Aptr:STA Aptr:
-LDA #0:ADC Aptr+1:STA Aptr+1
+LDA #0: ADC Aptr+1: STA Aptr+1
 RTS
 }
 .abort

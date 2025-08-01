@@ -1,0 +1,1099 @@
+Including file VERSION.asm
+Processed file 'VERSION.asm' ok
+Including file SYSVARS.asm
+Processed file 'SYSVARS.asm' ok
+Including file BEEBINTS.asm
+Processed file 'BEEBINTS.asm' ok
+.start
+.magicdata
+     7100   06
+     7101   07
+     7102   03
+     7103   00
+     7104   28 43 29 
+     7107   CD
+     7108   D9
+     7109   00
+     710A   80
+     710B   52 6F 6D ...
+     7111   0D
+     7112   01
+     7113   04
+     7114   07
+     7115   E7
+     7116   90
+     7117   3C 3E 26 ...
+     711D   23
+     711E   80
+     711F   00
+     7120   0E
+     7121   72 65 6C ...
+     7135   0D
+     7136   01
+     7137   00
+     7138   01
+     7139   10
+     713A   80
+     713B   FE
+     713C   7F
+     713D   00
+     713E   00
+     713F   4C 64 70 ...
+     7147   0D
+     7148   01
+     7149   00
+     714A   01
+     714B   60
+     714C   40
+     714D   FE
+     714E   7F
+     714F   00
+     7150   00
+     7151   4C 64 70 ...
+     7159   0D
+     715A   01
+     715B   00
+     715C   01
+     715D   10
+     715E   00
+     715F   FE
+     7160   7F
+     7161   00
+     7162   00
+     7163   4C 64 70 ...
+     716B   0D
+     716C   01
+     716D   00
+     716E   01
+     716F   0D
+     7170   00
+     7171   23
+     7172   80
+     7173   00
+     7174   00
+     7175   42 61 73 ...
+     717D   0D
+     717E   01
+     717F   01
+     7180   02
+     7181   30
+     7182   00
+     7183   30
+     7184   F8
+     7185   7F
+     7186   00
+     7187   00
+     7188   44 45 43 ...
+     71A1   0D
+     71A2   02
+     71A3   66
+     71A4   78
+     71A5   00
+     71A6   20
+     71A7   F9
+     71A8   7F
+     71A9   00
+     71AA   11
+     71AB   54 59 42 ...
+     71BF   0D
+     71C0   03
+     71C1   E0
+     71C2   31
+     71C3   F6
+     71C4   7F
+     71C5   00
+     71C6   00
+     71C7   52 65 70 ...
+     71D9   0D
+     71DA   04
+     71DB   23
+     71DC   80
+     71DD   23
+     71DE   80
+     71DF   00
+     71E0   00
+     71E1   42 61 73 ...
+     71E9   0D
+     71EA   04
+     71EB   1F
+     71EC   80
+     71ED   23
+     71EE   80
+     71EF   00
+     71F0   00
+     71F1   42 61 73 ...
+     71F9   0D
+     71FA   04
+     71FB   2B
+     71FC   80
+     71FD   23
+     71FE   80
+     71FF   00
+     7200   00
+     7201   42 61 73 ...
+     7209   0D
+     720A   08
+     720B   30
+     720C   25
+     720D   F4
+     720E   7F
+     720F   00
+     7210   00
+     7211   52 65 70 ...
+     7227   0D
+     7228   08
+     7229   20
+     722A   26
+     722B   F6
+     722C   7F
+     722D   E0
+     722E   31
+     722F   52 65 70 ...
+     7241   0D
+     7242   05
+     7243   01
+     7244   77
+     7245   07
+     7246   F9
+     7247   7F
+     7248   00
+     7249   11
+     724A   54 59 42 ...
+     725E   0D
+     725F   05
+     7260   01
+     7261   76
+     7262   0B
+     7263   F9
+     7264   7F
+     7265   00
+     7266   11
+     7267   54 59 42 ...
+     727B   0D
+     727C   05
+     727D   01
+     727E   66
+     727F   07
+     7280   F9
+     7281   7F
+     7282   00
+     7283   11
+     7284   54 59 42 ...
+     7298   0D
+     7299   05
+     729A   01
+     729B   68
+     729C   07
+     729D   F9
+     729E   7F
+     729F   00
+     72A0   11
+     72A1   54 59 42 ...
+     72B5   0D
+     72B6   05
+     72B7   01
+     72B8   67
+     72B9   07
+     72BA   F9
+     72BB   7F
+     72BC   00
+     72BD   11
+     72BE   54 59 42 ...
+     72D2   0D
+     72D3   05
+     72D4   01
+     72D5   01
+     72D6   40
+     72D7   F5
+     72D8   7F
+     72D9   00
+     72DA   00
+     72DB   53 63 72 ...
+     72E2   0D
+     72E3   05
+     72E4   01
+     72E5   FF
+     72E6   A0
+     72E7   F5
+     72E8   7F
+     72E9   00
+     72EA   00
+     72EB   53 63 72 ...
+     72F2   0D
+     72F3   05
+     72F4   02
+     72F5   20
+     72F6   00
+     72F7   65
+     72F8   00
+     72F9   FC
+     72FA   7F
+     72FB   00
+     72FC   00
+     72FD   74 65 78 ...
+     7309   0D
+     730A   05
+     730B   02
+     730C   20
+     730D   00
+     730E   45
+     730F   00
+     7310   FC
+     7311   7F
+     7312   00
+     7313   00
+     7314   74 65 78 ...
+     7320   0D
+     7321   09
+     7322   05
+     7323   3C 3E 26 ...
+     7329   23
+     732A   80
+     732B   00
+     732C   0E
+     732D   72 65 6C ...
+     7341   0D
+     7342   07
+     7343   6E
+     7344   08
+     7345   61
+     7346   65
+     7347   68
+     7348   69
+     7349   6E
+     734A   6F
+     734B   72
+     734C   73
+     734D   74
+     734E   FC
+     734F   7F
+     7350   00
+     7351   00
+     7352   74 65 78 ...
+     735E   0D
+     735F   07
+     7360   6E
+     7361   08
+     7362   41
+     7363   45
+     7364   48
+     7365   49
+     7366   4E
+     7367   4F
+     7368   52
+     7369   53
+     736A   54
+     736B   FC
+     736C   7F
+     736D   00
+     736E   00
+     736F   74 65 78 ...
+     737B   0D
+     737C   00
+.startexec
+     737D   A2 70      LDX #&70
+     737F   A0 00      LDY #&00
+     7381   A9 01      LDA #&01
+     7383   20 DA FF   JSR &FFDA
+     7386   98         TYA
+     7387   A9 00      LDA #&00
+     7389   85 41      STA &41
+     738B   85 42      STA &42
+     738D   AA         TAX
+     738E   B1 70      LDA (&70),Y
+     7390   C9 0D      CMP #&0D
+     7392   D0 0A      BNE &739E
+     7394   A2 01      LDX #&01
+     7396   20 32 77   JSR &7732
+     7399   A2 05      LDX #&05
+     739B   4C 32 77   JMP &7732
+.aa
+     739E   C9 2D      CMP #&2D
+     73A0   D0 27      BNE &73C9
+     73A2   C8         INY
+     73A3   B1 70      LDA (&70),Y
+     73A5   C9 51      CMP #&51
+     73A7   D0 02      BNE &73AB
+     73A9   E6 41      INC &41
+.shift
+     73AB   A2 00      LDX #&00
+     73AD   C8         INY
+.xb
+     73AE   B1 70      LDA (&70),Y
+     73B0   9D 40 06   STA &0640,X
+     73B3   C8         INY
+     73B4   E8         INX
+     73B5   C9 0D      CMP #&0D
+     73B7   D0 F5      BNE &73AE
+     73B9   A0 00      LDY #&00
+.xc
+     73BB   B9 40 06   LDA &0640,Y
+     73BE   91 70      STA (&70),Y
+     73C0   C8         INY
+     73C1   C9 0D      CMP #&0D
+     73C3   D0 F6      BNE &73BB
+     73C5   A0 00      LDY #&00
+     73C7   98         TYA
+     73C8   AA         TAX
+.xa
+     73C9   C9 0D      CMP #&0D
+     73CB   F0 0A      BEQ &73D7
+     73CD   C8         INY
+     73CE   B1 70      LDA (&70),Y
+     73D0   C9 20      CMP #&20
+     73D2   D0 F5      BNE &73C9
+     73D4   E8         INX
+     73D5   D0 F2      BNE &73C9
+.cmdend
+     73D7   E0 02      CPX #&02
+     73D9   D0 23      BNE &73FE
+     73DB   86 3D      STX &3D
+     73DD   88         DEY
+     73DE   84 3B      STY &3B
+     73E0   A2 01      LDX #&01
+     73E2   20 07 77   JSR &7707
+     73E5   A4 3B      LDY &3B
+     73E7   B1 70      LDA (&70),Y
+     73E9   9D A0 06   STA &06A0,X
+     73EC   E8         INX
+     73ED   A9 0D      LDA #&0D
+     73EF   9D A0 06   STA &06A0,X
+     73F2   88         DEY
+     73F3   91 70      STA (&70),Y
+     73F5   84 3B      STY &3B
+     73F7   20 2B 77   JSR &772B
+     73FA   A6 3D      LDX &3D
+     73FC   A4 3B      LDY &3B
+.ab
+     73FE   E0 01      CPX #&01
+     7400   90 2C      BCC &742E
+.ad
+     7402   88         DEY
+     7403   B1 70      LDA (&70),Y
+     7405   C9 20      CMP #&20
+     7407   D0 F9      BNE &7402
+     7409   A9 0D      LDA #&0D
+     740B   91 70      STA (&70),Y
+     740D   84 3B      STY &3B
+     740F   A2 02      LDX #&02
+     7411   20 07 77   JSR &7707
+     7414   A4 3B      LDY &3B
+     7416   CA         DEX
+.ae
+     7417   C8         INY
+     7418   E8         INX
+     7419   B1 70      LDA (&70),Y
+     741B   9D A0 06   STA &06A0,X
+     741E   C9 0D      CMP #&0D
+     7420   D0 F5      BNE &7417
+     7422   C9 32      CMP #&32
+     7424   F0 F1      BEQ &7417
+     7426   A9 0D      LDA #&0D
+     7428   9D A0 06   STA &06A0,X
+     742B   20 2B 77   JSR &772B
+.ac
+     742E   A2 10      LDX #&10
+     7430   20 70 78   JSR &7870
+     7433   A2 2C      LDX #&2C
+     7435   20 70 78   JSR &7870
+     7438   A2 3C      LDX #&3C
+     743A   20 70 78   JSR &7870
+     743D   A2 70      LDX #&70
+     743F   A0 00      LDY #&00
+     7441   A9 05      LDA #&05
+     7443   20 DD FF   JSR &FFDD
+     7446   C9 01      CMP #&01
+     7448   F0 08      BEQ &7452
+     744A   A2 02      LDX #&02
+     744C   8E 40 04   STX &0440
+     744F   4C 32 77   JMP &7732
+.al
+     7452   A5 77      LDA &77
+     7454   C9 7F      CMP #&7F
+     7456   D0 0A      BNE &7462
+     7458   A5 41      LDA &41
+     745A   D0 05      BNE &7461
+     745C   A2 04      LDX #&04
+     745E   20 32 77   JSR &7732
+.ax
+     7461   60         RTS
+.magic
+.loadprogpage
+     7462   A6 70      LDX &70
+     7464   A4 71      LDY &71
+     7466   A9 40      LDA #&40
+     7468   20 CE FF   JSR &FFCE
+     746B   D0 01      BNE &746E
+     746D   60         RTS
+.db
+     746E   8D 90 7B   STA &7B90
+     7471   A9 00      LDA #&00
+     7473   A0 0C      LDY #&0C
+.de
+     7475   99 90 7B   STA &7B90,Y
+     7478   88         DEY
+     7479   D0 FA      BNE &7475
+     747B   A9 09      LDA #&09
+     747D   8D 92 7B   STA &7B92
+     7480   A9 FF      LDA #&FF
+     7482   8D 95 7B   STA &7B95
+     7485   A9 04      LDA #&04
+     7487   A2 90      LDX #&90
+     7489   A0 7B      LDY #&7B
+     748B   20 D1 FF   JSR &FFD1
+     748E   A9 00      LDA #&00
+     7490   AC 90 7B   LDY &7B90
+     7493   20 CE FF   JSR &FFCE
+.magicfile
+     7496   A9 00      LDA #&00
+     7498   85 30      STA &30
+     749A   A9 71      LDA #&71
+     749C   85 31      STA &31
+.ff
+     749E   A0 00      LDY #&00
+     74A0   B1 30      LDA (&30),Y
+     74A2   D0 2E      BNE &74D2
+     74A4   20 1C 78   JSR &781C
+.alldone
+     74A7   A5 41      LDA &41
+     74A9   F0 26      BEQ &74D1
+     74AB   A5 76      LDA &76
+     74AD   CD 14 04   CMP &0414
+     74B0   D0 0C      BNE &74BE
+     74B2   A5 77      LDA &77
+     74B4   CD 15 04   CMP &0415
+     74B7   D0 05      BNE &74BE
+     74B9   A2 10      LDX #&10
+     74BB   20 70 78   JSR &7870
+.bd
+     74BE   A5 72      LDA &72
+     74C0   CD 30 04   CMP &0430
+     74C3   D0 0C      BNE &74D1
+     74C5   A5 73      LDA &73
+     74C7   CD 31 04   CMP &0431
+     74CA   D0 05      BNE &74D1
+     74CC   A2 2C      LDX #&2C
+     74CE   20 70 78   JSR &7870
+.exit
+     74D1   60         RTS
+.ab
+     74D2   C9 01      CMP #&01
+     74D4   D0 2B      BNE &7501
+     74D6   C8         INY
+     74D7   B1 30      LDA (&30),Y
+.ac
+     74D9   AA         TAX
+.fg
+     74DA   C8         INY
+     74DB   B1 30      LDA (&30),Y
+     74DD   85 3C      STA &3C
+.fh
+     74DF   C8         INY
+     74E0   B1 30      LDA (&30),Y
+     74E2   DD 00 09   CMP &0900,X
+     74E5   D0 0C      BNE &74F3
+     74E7   E8         INX
+     74E8   C6 3C      DEC &3C
+     74EA   10 F3      BPL &74DF
+     74EC   C8         INY
+     74ED   20 6E 77   JSR &776E
+     74F0   4C 9E 74   JMP &749E
+.movenxt
+     74F3   A0 02      LDY #&02
+     74F5   B1 30      LDA (&30),Y
+     74F7   18         CLC
+     74F8   69 07      ADC #&07
+     74FA   A8         TAY
+     74FB   20 F2 76   JSR &76F2
+     74FE   4C 9E 74   JMP &749E
+.cb
+     7501   C9 02      CMP #&02
+     7503   D0 3E      BNE &7543
+     7505   AD 14 04   LDA &0414
+     7508   18         CLC
+     7509   6D 15 04   ADC &0415
+     750C   F0 03      BEQ &7511
+     750E   4C A7 74   JMP &74A7
+.cd
+     7511   20 B9 76   JSR &76B9
+     7514   20 A4 76   JSR &76A4
+     7517   A0 01      LDY #&01
+     7519   B1 30      LDA (&30),Y
+     751B   C5 3F      CMP &3F
+     751D   B0 1C      BCS &753B
+     751F   C8         INY
+     7520   B1 30      LDA (&30),Y
+     7522   C5 3F      CMP &3F
+     7524   90 15      BCC &753B
+     7526   C8         INY
+     7527   B1 30      LDA (&30),Y
+     7529   C5 40      CMP &40
+     752B   B0 0E      BCS &753B
+     752D   C8         INY
+     752E   B1 30      LDA (&30),Y
+     7530   C5 40      CMP &40
+     7532   90 07      BCC &753B
+     7534   C8         INY
+     7535   20 6E 77   JSR &776E
+     7538   4C 9E 74   JMP &749E
+.ab
+     753B   A0 07      LDY #&07
+     753D   20 F2 76   JSR &76F2
+     7540   4C 9E 74   JMP &749E
+.aa
+     7543   C9 03      CMP #&03
+     7545   D0 1D      BNE &7564
+     7547   C8         INY
+     7548   B1 30      LDA (&30),Y
+     754A   C5 72      CMP &72
+     754C   D0 0E      BNE &755C
+     754E   C8         INY
+     754F   B1 30      LDA (&30),Y
+     7551   C5 73      CMP &73
+     7553   D0 07      BNE &755C
+     7555   C8         INY
+     7556   20 6E 77   JSR &776E
+     7559   4C 9E 74   JMP &749E
+.ag
+     755C   A0 07      LDY #&07
+     755E   20 F2 76   JSR &76F2
+     7561   4C 9E 74   JMP &749E
+.ad
+     7564   C9 04      CMP #&04
+     7566   D0 15      BNE &757D
+     7568   C8         INY
+     7569   B1 30      LDA (&30),Y
+     756B   C5 76      CMP &76
+     756D   D0 ED      BNE &755C
+     756F   C8         INY
+     7570   B1 30      LDA (&30),Y
+     7572   C5 77      CMP &77
+     7574   D0 E6      BNE &755C
+     7576   C8         INY
+     7577   20 6E 77   JSR &776E
+     757A   4C 9E 74   JMP &749E
+.ah
+     757D   C9 05      CMP #&05
+     757F   D0 52      BNE &75D3
+     7581   AD 14 04   LDA &0414
+     7584   18         CLC
+     7585   6D 15 04   ADC &0415
+     7588   F0 03      BEQ &758D
+     758A   4C A7 74   JMP &74A7
+.cd
+     758D   20 B9 76   JSR &76B9
+     7590   20 A4 76   JSR &76A4
+     7593   A0 01      LDY #&01
+     7595   B1 30      LDA (&30),Y
+     7597   85 3D      STA &3D
+     7599   18         CLC
+     759A   2A         ROL A
+     759B   85 3B      STA &3B
+.an
+     759D   C8         INY
+     759E   B1 30      LDA (&30),Y
+     75A0   C5 3F      CMP &3F
+     75A2   D0 23      BNE &75C7
+     75A4   C8         INY
+     75A5   B1 30      LDA (&30),Y
+     75A7   C5 40      CMP &40
+     75A9   B0 1C      BCS &75C7
+     75AB   C6 3D      DEC &3D
+     75AD   D0 07      BNE &75B6
+     75AF   C8         INY
+     75B0   20 6E 77   JSR &776E
+     75B3   4C 9E 74   JMP &749E
+.ap
+     75B6   A6 3F      LDX &3F
+     75B8   A9 00      LDA #&00
+     75BA   9D 00 0A   STA &0A00,X
+     75BD   84 3E      STY &3E
+     75BF   20 A4 76   JSR &76A4
+     75C2   A4 3E      LDY &3E
+     75C4   4C 9D 75   JMP &759D
+.ao
+     75C7   18         CLC
+     75C8   A5 3B      LDA &3B
+     75CA   69 06      ADC #&06
+     75CC   A8         TAY
+     75CD   20 F2 76   JSR &76F2
+     75D0   4C 9E 74   JMP &749E
+.aj
+     75D3   C9 06      CMP #&06
+     75D5   D0 25      BNE &75FC
+     75D7   C8         INY
+     75D8   B1 30      LDA (&30),Y
+     75DA   A8         TAY
+     75DB   B9 00 09   LDA &0900,Y
+     75DE   AA         TAX
+     75DF   A0 02      LDY #&02
+     75E1   B1 30      LDA (&30),Y
+     75E3   85 3C      STA &3C
+.al
+     75E5   C8         INY
+     75E6   B1 30      LDA (&30),Y
+     75E8   DD 00 09   CMP &0900,X
+     75EB   F0 03      BEQ &75F0
+     75ED   4C 96 76   JMP &7696
+.am
+     75F0   E8         INX
+     75F1   C6 3C      DEC &3C
+     75F3   10 F0      BPL &75E5
+     75F5   C8         INY
+     75F6   20 6E 77   JSR &776E
+     75F9   4C A7 74   JMP &74A7
+.ak
+     75FC   C9 07      CMP #&07
+     75FE   D0 37      BNE &7637
+     7600   20 B9 76   JSR &76B9
+     7603   A9 00      LDA #&00
+     7605   85 40      STA &40
+     7607   C8         INY
+     7608   B1 30      LDA (&30),Y
+     760A   85 3D      STA &3D
+     760C   C8         INY
+     760D   B1 30      LDA (&30),Y
+     760F   85 3B      STA &3B
+.cb
+     7611   C8         INY
+     7612   B1 30      LDA (&30),Y
+     7614   AA         TAX
+     7615   BD 00 0A   LDA &0A00,X
+     7618   18         CLC
+     7619   65 40      ADC &40
+     761B   85 40      STA &40
+     761D   C6 3B      DEC &3B
+     761F   10 F0      BPL &7611
+     7621   C5 3D      CMP &3D
+     7623   B0 0B      BCS &7630
+     7625   98         TYA
+     7626   18         CLC
+     7627   69 05      ADC #&05
+     7629   A8         TAY
+     762A   20 F2 76   JSR &76F2
+     762D   4C 9E 74   JMP &749E
+.cc
+     7630   C8         INY
+     7631   20 6E 77   JSR &776E
+     7634   4C 9E 74   JMP &749E
+.ca
+     7637   C9 08      CMP #&08
+     7639   D0 1D      BNE &7658
+     763B   C8         INY
+     763C   B1 30      LDA (&30),Y
+     763E   C5 7A      CMP &7A
+     7640   D0 0E      BNE &7650
+     7642   C8         INY
+     7643   B1 30      LDA (&30),Y
+     7645   C5 7B      CMP &7B
+     7647   D0 07      BNE &7650
+     7649   C8         INY
+     764A   20 6E 77   JSR &776E
+     764D   4C 9E 74   JMP &749E
+.ag
+     7650   A0 07      LDY #&07
+     7652   20 F2 76   JSR &76F2
+     7655   4C 9E 74   JMP &749E
+.bv
+     7658   C9 09      CMP #&09
+     765A   D0 39      BNE &7695
+     765C   C8         INY
+     765D   B1 30      LDA (&30),Y
+     765F   85 3C      STA &3C
+     7661   C6 3C      DEC &3C
+     7663   C8         INY
+     7664   A2 00      LDX #&00
+.loop
+     7666   B1 30      LDA (&30),Y
+     7668   DD 00 09   CMP &0900,X
+     766B   F0 06      BEQ &7673
+     766D   E8         INX
+     766E   D0 F6      BNE &7666
+     7670   4C 96 76   JMP &7696
+.am
+     7673   E8         INX
+     7674   86 3D      STX &3D
+     7676   84 3B      STY &3B
+     7678   A5 3C      LDA &3C
+     767A   85 2A      STA &2A
+.al
+     767C   C8         INY
+     767D   B1 30      LDA (&30),Y
+     767F   DD 00 09   CMP &0900,X
+     7682   D0 0B      BNE &768F
+     7684   E8         INX
+     7685   C6 2A      DEC &2A
+     7687   10 F3      BPL &767C
+     7689   20 6E 77   JSR &776E
+     768C   4C A7 74   JMP &74A7
+.nomatch
+     768F   A4 3B      LDY &3B
+     7691   A6 3D      LDX &3D
+     7693   D0 D1      BNE &7666
+.by
+     7695   60         RTS
+.movenxt
+     7696   A0 02      LDY #&02
+     7698   B1 30      LDA (&30),Y
+     769A   18         CLC
+     769B   69 07      ADC #&07
+     769D   A8         TAY
+     769E   20 F2 76   JSR &76F2
+     76A1   4C 9E 74   JMP &749E
+.GethighestByte
+     76A4   A9 00      LDA #&00
+     76A6   A8         TAY
+.aa
+     76A7   D9 00 0A   CMP &0A00,Y
+     76AA   B0 07      BCS &76B3
+     76AC   B9 00 0A   LDA &0A00,Y
+     76AF   84 3F      STY &3F
+     76B1   90 F4      BCC &76A7
+.ab
+     76B3   C8         INY
+     76B4   D0 F1      BNE &76A7
+     76B6   85 40      STA &40
+     76B8   60         RTS
+.statistic
+     76B9   A9 00      LDA #&00
+     76BB   85 8E      STA &8E
+     76BD   85 8F      STA &8F
+     76BF   A8         TAY
+.fa
+     76C0   99 00 0A   STA &0A00,Y
+     76C3   88         DEY
+     76C4   D0 FA      BNE &76C0
+.fb
+     76C6   B9 00 09   LDA &0900,Y
+     76C9   AA         TAX
+     76CA   18         CLC
+     76CB   65 8E      ADC &8E
+     76CD   85 8E      STA &8E
+     76CF   A5 8F      LDA &8F
+     76D1   69 00      ADC #&00
+     76D3   85 8F      STA &8F
+     76D5   84 3B      STY &3B
+     76D7   8A         TXA
+     76D8   A8         TAY
+     76D9   B9 00 0A   LDA &0A00,Y
+     76DC   AA         TAX
+     76DD   E8         INX
+     76DE   8A         TXA
+     76DF   99 00 0A   STA &0A00,Y
+     76E2   A4 3B      LDY &3B
+     76E4   C8         INY
+     76E5   D0 DF      BNE &76C6
+     76E7   A5 8E      LDA &8E
+     76E9   8D 68 04   STA &0468
+     76EC   A5 8F      LDA &8F
+     76EE   8D 69 04   STA &0469
+     76F1   60         RTS
+.nextrec
+.aa
+     76F2   C8         INY
+     76F3   B1 30      LDA (&30),Y
+     76F5   C9 0D      CMP #&0D
+     76F7   D0 F9      BNE &76F2
+     76F9   C8         INY
+     76FA   98         TYA
+     76FB   18         CLC
+     76FC   65 30      ADC &30
+     76FE   85 30      STA &30
+     7700   A9 00      LDA #&00
+     7702   65 31      ADC &31
+     7704   85 31      STA &31
+     7706   60         RTS
+.prepcmd
+     7707   A0 00      LDY #&00
+.ez
+     7709   CA         DEX
+     770A   D0 15      BNE &7721
+.ey
+     770C   B9 85 78   LDA &7885,Y
+     770F   C9 80      CMP #&80
+     7711   90 07      BCC &771A
+     7713   29 7F      AND #&7F
+     7715   9D A0 06   STA &06A0,X
+     7718   E8         INX
+     7719   60         RTS
+.am
+     771A   9D A0 06   STA &06A0,X
+     771D   E8         INX
+     771E   C8         INY
+     771F   D0 EB      BNE &770C
+.nexcmd
+     7721   B9 85 78   LDA &7885,Y
+     7724   C8         INY
+     7725   C9 80      CMP #&80
+     7727   90 F8      BCC &7721
+     7729   B0 DE      BCS &7709
+.execmd
+     772B   A0 06      LDY #&06
+     772D   A2 A0      LDX #&A0
+     772F   4C F7 FF   JMP &FFF7
+.diserror
+     7732   AD A0 78   LDA &78A0
+     7735   85 34      STA &34
+     7737   AD A1 78   LDA &78A1
+     773A   85 35      STA &35
+     773C   A0 00      LDY #&00
+.ba
+     773E   CA         DEX
+     773F   D0 16      BNE &7757
+.bc
+     7741   B1 34      LDA (&34),Y
+     7743   C9 80      CMP #&80
+     7745   90 06      BCC &774D
+     7747   29 7F      AND #&7F
+     7749   20 E3 FF   JSR &FFE3
+     774C   60         RTS
+.bd
+     774D   20 E3 FF   JSR &FFE3
+     7750   C8         INY
+     7751   D0 EE      BNE &7741
+     7753   E6 35      INC &35
+     7755   D0 EA      BNE &7741
+.bb
+     7757   B1 34      LDA (&34),Y
+     7759   C8         INY
+     775A   C9 80      CMP #&80
+     775C   90 F9      BCC &7757
+     775E   18         CLC
+     775F   98         TYA
+     7760   65 34      ADC &34
+     7762   85 34      STA &34
+     7764   A9 00      LDA #&00
+     7766   65 35      ADC &35
+     7768   85 35      STA &35
+     776A   A0 00      LDY #&00
+     776C   F0 D0      BEQ &773E
+.fullmatch
+     776E   84 3E      STY &3E
+     7770   18         CLC
+     7771   AD 14 04   LDA &0414
+     7774   6D 15 04   ADC &0415
+     7777   F0 1A      BEQ &7793
+     7779   18         CLC
+     777A   B1 30      LDA (&30),Y
+     777C   C8         INY
+     777D   71 30      ADC (&30),Y
+     777F   F0 1D      BEQ &779E
+     7781   88         DEY
+     7782   B1 30      LDA (&30),Y
+     7784   CD 14 04   CMP &0414
+     7787   D0 74      BNE &77FD
+     7789   C8         INY
+     778A   B1 30      LDA (&30),Y
+     778C   CD 15 04   CMP &0415
+     778F   D0 6C      BNE &77FD
+     7791   F0 0B      BEQ &779E
+.bc
+     7793   B1 30      LDA (&30),Y
+     7795   8D 14 04   STA &0414
+     7798   C8         INY
+     7799   B1 30      LDA (&30),Y
+     779B   8D 15 04   STA &0415
+.bd
+     779E   C8         INY
+     779F   18         CLC
+     77A0   AD 30 04   LDA &0430
+     77A3   6D 31 04   ADC &0431
+     77A6   F0 1A      BEQ &77C2
+     77A8   18         CLC
+     77A9   B1 30      LDA (&30),Y
+     77AB   C8         INY
+     77AC   71 30      ADC (&30),Y
+     77AE   F0 1D      BEQ &77CD
+     77B0   88         DEY
+     77B1   B1 30      LDA (&30),Y
+     77B3   CD 30 04   CMP &0430
+     77B6   D0 45      BNE &77FD
+.aa
+     77B8   C8         INY
+     77B9   B1 30      LDA (&30),Y
+     77BB   CD 31 04   CMP &0431
+     77BE   D0 3D      BNE &77FD
+     77C0   F0 0B      BEQ &77CD
+.bf
+     77C2   B1 30      LDA (&30),Y
+     77C4   8D 30 04   STA &0430
+     77C7   C8         INY
+     77C8   B1 30      LDA (&30),Y
+     77CA   8D 31 04   STA &0431
+.bg
+     77CD   C8         INY
+     77CE   A5 41      LDA &41
+     77D0   D0 17      BNE &77E9
+.printdescription
+.aa
+     77D2   B1 30      LDA (&30),Y
+     77D4   20 E3 FF   JSR &FFE3
+     77D7   C8         INY
+     77D8   C9 0D      CMP #&0D
+     77DA   D0 F6      BNE &77D2
+     77DC   98         TYA
+     77DD   18         CLC
+     77DE   65 30      ADC &30
+     77E0   85 30      STA &30
+     77E2   A9 00      LDA #&00
+     77E4   65 31      ADC &31
+     77E6   85 31      STA &31
+     77E8   60         RTS
+.noprint
+.aa
+     77E9   B1 30      LDA (&30),Y
+     77EB   C8         INY
+     77EC   C9 0D      CMP #&0D
+     77EE   D0 F9      BNE &77E9
+     77F0   98         TYA
+     77F1   18         CLC
+     77F2   65 30      ADC &30
+     77F4   85 30      STA &30
+     77F6   A9 00      LDA #&00
+     77F8   65 31      ADC &31
+     77FA   85 31      STA &31
+     77FC   60         RTS
+.abort
+     77FD   A9 06      LDA #&06
+     77FF   18         CLC
+     7800   65 3E      ADC &3E
+     7802   20 D2 77   JSR &77D2
+     7805   00         BRK
+     7806   00
+     7807   43 6F 6E ...
+     781A   0D
+     781B   00
+.screencheck
+     781C   AD 31 04   LDA &0431
+     781F   C9 7C      CMP #&7C
+     7821   D0 0C      BNE &782F
+     7823   AD 4D 04   LDA &044D
+     7826   C9 04      CMP #&04
+     7828   D0 45      BNE &786F
+     782A   A9 07      LDA #&07
+     782C   4C 7C 78   JMP &787C
+.aa
+     782F   C9 60      CMP #&60
+     7831   D0 0C      BNE &783F
+     7833   AD 4D 04   LDA &044D
+     7836   C9 20      CMP #&20
+     7838   D0 35      BNE &786F
+     783A   A9 06      LDA #&06
+     783C   4C 7C 78   JMP &787C
+.ab
+     783F   C9 58      CMP #&58
+     7841   D0 0C      BNE &784F
+     7843   AD 4D 04   LDA &044D
+     7846   C9 28      CMP #&28
+     7848   D0 25      BNE &786F
+     784A   A9 04      LDA #&04
+     784C   4C 7C 78   JMP &787C
+.ac
+     784F   C9 40      CMP #&40
+     7851   D0 0C      BNE &785F
+     7853   AD 4D 04   LDA &044D
+     7856   C9 40      CMP #&40
+     7858   D0 15      BNE &786F
+     785A   A9 03      LDA #&03
+     785C   4C 7C 78   JMP &787C
+.ad
+     785F   C9 30      CMP #&30
+     7861   D0 0C      BNE &786F
+     7863   AD 4D 04   LDA &044D
+     7866   C9 50      CMP #&50
+     7868   D0 05      BNE &786F
+     786A   A9 00      LDA #&00
+     786C   4C 7C 78   JMP &787C
+.exit
+     786F   60         RTS
+.clearint
+     7870   A9 00      LDA #&00
+     7872   A0 03      LDY #&03
+.dx
+     7874   9D 04 04   STA &0404,X
+     7877   E8         INX
+     7878   88         DEY
+     7879   10 F9      BPL &7874
+     787B   60         RTS
+.setexe
+     787C   8D 14 04   STA &0414
+     787F   A9 7C      LDA #&7C
+     7881   8D 15 04   STA &0415
+.exit
+     7884   60         RTS
+.cmdadd
+     7885   2A 44 52 ...
+     7889   A0
+     788A   2A 44 49 ...
+     788E   A0
+     788F   4C 4F 2E 
+     7892   A0
+     7893   4B 2E 30 ...
+     789F   8D
+.erraddr
+     78A0   A2 78
+.errtxt
+     78A2   55 73 61 ...
+     78C8   8D
+     78C9   66 69 6C ...
+     78D6   E4
+     78D7   53 70 65 ...
+     78EF   E4
+     78F0   4D 61 67 ...
+     7901   8D
+     7902   6F 75 74 ...
+     7909   0D
+     790A   4C 25 20 ...
+     7925   0D
+     7926   45 25 20 ...
+     7940   0D
+     7941   50 25 3C ...
+     794C   0D
+.masterlist
+     794D   45 25 20 ...
+     7955   0D
+     7956   38 30 32 ...
+     7965   0D
+     7966   44 39 43 ...
+     7973   0D
+     7974   37 46 46 ...
+     7996   0D
+     7997   37 46 46 ...
+     79A8   0D
+     79A9   37 46 46 ...
+     79C1   0D
+     79C2   37 46 46 ...
+     79D0   0D
+     79D1   37 46 46 ...
+     79DF   0D
+     79E0   37 46 46 ...
+     79FB   0D
+     79FC   37 46 46 ...
+     7A1C   0D
+     7A1D   37 46 46 ...
+     7A30   0D
+     7A31   37 46 46 ...
+     7A49   0D
+     7A4A   37 46 46 ...
+     7A5B   0D
+     7A5C   37 46 46 ...
+     7A7B   0D
+     7A7C   37 46 30 ...
+     7A93   0D
+     7A94   37 46 30 ...
+     7AAB   0D
+     7AAC   37 46 30 ...
+     7AC3   0D
+     7AC4   37 46 30 ...
+     7ADB   0D
+     7ADC   37 46 30 ...
+     7AF3   0D
+     7AF4   37 46 30 ...
+     7B0B   0D
+     7B0C   37 46 30 ...
+     7B23   0D
+     7B24   37 46 30 ...
+     7B3B   8D
+.end
+Saving file 'magic'
+Processed file 'MAGIC.asm' ok

@@ -1,0 +1,191 @@
+Including file VERSION.asm
+Processed file 'VERSION.asm' ok
+Including file SYSVARS.asm
+Processed file 'SYSVARS.asm' ok
+Including file BEEBINTS.asm
+Processed file 'BEEBINTS.asm' ok
+.start
+     7700   A2 F8      LDX #&F8
+     7702   A0 00      LDY #&00
+     7704   A9 01      LDA #&01
+     7706   20 DA FF   JSR &FFDA
+     7709   A0 00      LDY #&00
+     770B   B1 F8      LDA (&F8),Y
+     770D   C9 0D      CMP #&0D
+     770F   D0 08      BNE &7719
+     7711   A2 04      LDX #&04
+     7713   20 E0 77   JSR &77E0
+     7716   4C 55 77   JMP &7755
+.aa
+.main
+     7719   20 87 77   JSR &7787
+     771C   85 3C      STA &3C
+     771E   A9 33      LDA #&33
+     7720   85 3E      STA &3E
+     7722   20 63 77   JSR &7763
+     7725   AD 54 04   LDA &0454
+     7728   D0 12      BNE &773C
+     772A   A9 16      LDA #&16
+     772C   20 E3 FF   JSR &FFE3
+     772F   A9 07      LDA #&07
+     7731   20 E3 FF   JSR &FFE3
+     7734   A2 05      LDX #&05
+     7736   20 E0 77   JSR &77E0
+     7739   4C 12 78   JMP &7812
+.aa
+     773C   20 A6 77   JSR &77A6
+     773F   A2 02      LDX #&02
+     7741   20 E0 77   JSR &77E0
+     7744   20 B0 77   JSR &77B0
+     7747   20 74 77   JSR &7774
+     774A   CA         DEX
+     774B   86 3D      STX &3D
+     774D   A2 03      LDX #&03
+     774F   20 E4 77   JSR &77E4
+     7752   4C 12 78   JMP &7812
+.exit
+.printstrA
+     7755   A2 FF      LDX #&FF
+.ak
+     7757   E8         INX
+     7758   BD A0 06   LDA &06A0,X
+     775B   20 E3 FF   JSR &FFE3
+     775E   C9 0D      CMP #&0D
+     7760   D0 F5      BNE &7757
+     7762   60         RTS
+.setdisk
+     7763   A9 01      LDA #&01
+     7765   AA         TAX
+     7766   20 E0 77   JSR &77E0
+     7769   A2 03      LDX #&03
+     776B   20 E4 77   JSR &77E4
+     776E   20 74 77   JSR &7774
+     7771   4C 12 78   JMP &7812
+.addpram
+     7774   A0 FF      LDY #&FF
+.ae
+     7776   C8         INY
+     7777   E8         INX
+     7778   B9 F0 06   LDA &06F0,Y
+     777B   9D A0 06   STA &06A0,X
+     777E   C9 0D      CMP #&0D
+     7780   F0 02      BEQ &7784
+     7782   D0 F2      BNE &7776
+.af
+     7784   86 3D      STX &3D
+     7786   60         RTS
+.getpramfromOSARGS
+     7787   A9 FF      LDA #&FF
+     7789   A8         TAY
+     778A   AA         TAX
+.ae
+     778B   C8         INY
+     778C   E8         INX
+     778D   B1 F8      LDA (&F8),Y
+     778F   9D F0 06   STA &06F0,X
+     7792   C9 0D      CMP #&0D
+     7794   F0 04      BEQ &779A
+     7796   C9 32      CMP #&32
+     7798   D0 F1      BNE &778B
+.af
+     779A   A9 0D      LDA #&0D
+     779C   9D F0 06   STA &06F0,X
+     779F   60         RTS
+.prepandexec
+     77A0   20 E4 77   JSR &77E4
+     77A3   20 12 78   JSR &7812
+.readCat
+     77A6   A9 7F      LDA #&7F
+     77A8   A2 5A      LDX #&5A
+     77AA   A0 78      LDY #&78
+     77AC   20 F1 FF   JSR &FFF1
+     77AF   60         RTS
+.addfilename
+     77B0   AC 54 04   LDY &0454
+     77B3   A9 00      LDA #&00
+     77B5   18         CLC
+.oi
+     77B6   69 08      ADC #&08
+     77B8   88         DEY
+     77B9   D0 FB      BNE &77B6
+     77BB   A8         TAY
+     77BC   E8         INX
+     77BD   B9 6C 78   LDA &786C,Y
+     77C0   9D A0 06   STA &06A0,X
+     77C3   E8         INX
+     77C4   A9 2E      LDA #&2E
+     77C6   9D A0 06   STA &06A0,X
+     77C9   E8         INX
+.oj
+     77CA   B9 65 78   LDA &7865,Y
+     77CD   C9 20      CMP #&20
+     77CF   F0 09      BEQ &77DA
+     77D1   9D A0 06   STA &06A0,X
+     77D4   C8         INY
+     77D5   E8         INX
+     77D6   E0 0B      CPX #&0B
+     77D8   D0 F0      BNE &77CA
+.rq
+     77DA   A9 20      LDA #&20
+     77DC   9D A0 06   STA &06A0,X
+     77DF   60         RTS
+.initprepcmd
+     77E0   A9 00      LDA #&00
+     77E2   85 3D      STA &3D
+.prepcmd
+     77E4   A0 00      LDY #&00
+.ez
+     77E6   CA         DEX
+     77E7   D0 1F      BNE &7808
+     77E9   A6 3D      LDX &3D
+.ey
+     77EB   B9 19 78   LDA &7819,Y
+     77EE   C9 80      CMP #&80
+     77F0   90 0F      BCC &7801
+     77F2   29 7F      AND #&7F
+     77F4   9D A0 06   STA &06A0,X
+     77F7   E8         INX
+     77F8   A9 0D      LDA #&0D
+     77FA   9D A0 06   STA &06A0,X
+     77FD   CA         DEX
+     77FE   86 3D      STX &3D
+     7800   60         RTS
+.am
+     7801   9D A0 06   STA &06A0,X
+     7804   E8         INX
+     7805   C8         INY
+     7806   D0 E3      BNE &77EB
+.nexcmd
+     7808   B9 19 78   LDA &7819,Y
+     780B   C8         INY
+     780C   C9 80      CMP #&80
+     780E   90 F8      BCC &7808
+     7810   B0 D4      BCS &77E6
+.execmd
+     7812   A0 06      LDY #&06
+     7814   A2 A0      LDX #&A0
+     7816   4C F7 FF   JMP &FFF7
+.cmdadd
+     7819   44 49 4E 
+     781C   A0
+     781D   58 
+     781E   A0
+     781F   20 33 
+     7821   A0
+     7822   74 61 6B ...
+     7855   8D
+     7856   2E 20 33 
+     7859   8D
+.pram
+     785A   03
+     785B   65 78 00 00
+     785F   03
+     7860   53
+     7861   00
+     7862   00
+     7863   21
+     7864   00
+.cat
+.end
+Saving file 'U'
+Processed file 'U.asm' ok

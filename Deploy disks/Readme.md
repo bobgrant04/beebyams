@@ -20,15 +20,15 @@ The Stairway to Hell archive had a good solution with their menu system however 
 
 the start of the process requires TAB delimiated files in the following format:-
 publisher:- name of publisher only have 1024 so try to limit
-long title:- needs to be below 240 chars but for display needs to be less than 30 use the #character to denote joysicks etc
-filename:- assumes $ dir needs to be less than 10 characters if dir specifed or less than 8 if not
-execute type :- crles chain run load execute special uppper of lower case 
+long title:- needs to be below 240 chars but for display needs to be less than 30 use the #character to denote joysticks etc
+filename:- assumes $ dir needs to be less than 10 characters if dir specified or less than 8 if not
+execute type :- crles chain run load execute special upper of lower case 
 page number :- should be the true page required only required for basic or the lSB for specials
-game type :-acgsmpuz adventure cheat game strategy music picture util z=unkown
-favorate :- Y/N based on https://stardot.org.uk/forums/viewtopic.php?f=1&t=8259
+game type :-acgsmpuz adventure cheat game strategy music picture util z=unknown
+favorite :- Y/N based on https://stardot.org.uk/forums/viewtopic.php?f=1&t=8259
 
 these includeinal menu system https://www.stairwaytohell.com/bbc/sthcollection.html
-The yorkshire boys (PD) http://8bs.com/catalogue/tyb.htmalogue/tyb.htm
+The Yorkshire boys (PD) http://8bs.com/catalogue/tyb.htmalogue/tyb.htm
  Roms
  Cheats
 Disc User http://8bs.com/catalogue/tdu.htm
@@ -45,7 +45,7 @@ Magic - Usage <fsp> (<dno>/<dsp>) (<drv>) a program for analysing program to acc
 
 Alter - Usage <fsp> (<dno>/<dsp>) (<drv>) used for executing results of magic or in the future process
 
-P.Process - SLOW programm consumes TAB deliminated files.  A number of switches are available:- sort publisher requires 2 pass, verify used to clean TAB deliminated files.  generates a number of catdat files which will be in the order of the TAB deliminated files, DINREC index of disk titles and SOFTREC index of publishers. This program uses MCPROC the entry points are shared via PROCVAR. Will change exe details if both magic and Special and page fields agree. uses magic and alter
+P.Process - SLOW program consumes TAB deiminated files.  A number of switches are available:- sort publisher requires 2 pass, verify used to clean TAB deiminated files.  generates a number of catdat files which will be in the order of the TAB deiminated files, DINREC index of disk titles and SOFTREC index of publishers. This program uses MCPROC the entry points are shared via PROCVAR. Will change exe details if both magic and Special and page fields agree. uses magic and alter
 
 mnuhelp - displays program details use cursors or letters to move and ret to select.  allows filtering of display
 uses files N O for help X to launch program CATDATx files SOFTREC, DINREC.
@@ -72,7 +72,7 @@ use as a template
 
 select the first disk - look at !boot to see the structure
 record the launch file for into csv file
-If a game has a generic title then its fine to add two entries for the same game (i.e. snapper and pac-man) do this in prefence to (pac-man) as there is little horizontal screen real eastate)
+If a game has a generic title then its fine to add two entries for the same game (i.e. snapper and pac-man) do this in preference to (pac-man) as there is little horizontal screen real estate)
 repeat until complete
 
 save csv AS A TAB DELIMINATED FILE (sorry to shout!)

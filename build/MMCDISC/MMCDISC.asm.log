@@ -1,0 +1,134 @@
+Including file VERSION.asm
+Processed file 'VERSION.asm' ok
+Including file SYSVARS.asm
+Processed file 'SYSVARS.asm' ok
+Including file BEEBINTS.asm
+Processed file 'BEEBINTS.asm' ok
+.start
+     0900   20 AC 09   JSR &09AC
+     0903   85 3E      STA &3E
+     0905   A2 30      LDX #&30
+     0907   A0 00      LDY #&00
+     0909   A9 01      LDA #&01
+     090B   20 DA FF   JSR &FFDA
+     090E   A0 00      LDY #&00
+     0910   B1 30      LDA (&30),Y
+     0912   C9 0D      CMP #&0D
+     0914   D0 13      BNE &0929
+     0916   A2 01      LDX #&01
+     0918   20 7A 09   JSR &097A
+.printstrA
+     091B   A2 FF      LDX #&FF
+.ak
+     091D   E8         INX
+     091E   BD 20 06   LDA &0620,X
+     0921   20 E3 FF   JSR &FFE3
+     0924   C9 0D      CMP #&0D
+     0926   D0 F5      BNE &091D
+     0928   60         RTS
+.aa
+     0929   A2 02      LDX #&02
+     092B   20 7A 09   JSR &097A
+.getargumentcount
+     092E   A9 00      LDA #&00
+     0930   AA         TAX
+     0931   A8         TAY
+.aa
+     0932   C8         INY
+     0933   B1 30      LDA (&30),Y
+     0935   C9 0D      CMP #&0D
+     0937   F0 08      BEQ &0941
+     0939   C8         INY
+     093A   C9 20      CMP #&20
+     093C   D0 F4      BNE &0932
+     093E   E8         INX
+     093F   D0 F1      BNE &0932
+.cmdend
+     0941   E0 01      CPX #&01
+     0943   D0 09      BNE &094E
+     0945   88         DEY
+     0946   B1 30      LDA (&30),Y
+     0948   38         SEC
+     0949   E9 11      SBC #&11
+     094B   18         CLC
+     094C   85 3E      STA &3E
+.ab
+     094E   A6 3D      LDX &3D
+     0950   A5 3E      LDA &3E
+     0952   9D 20 06   STA &0620,X
+     0955   E8         INX
+     0956   A9 20      LDA #&20
+     0958   9D 20 06   STA &0620,X
+     095B   A0 FF      LDY #&FF
+.ae
+     095D   C8         INY
+     095E   E8         INX
+     095F   B1 30      LDA (&30),Y
+     0961   9D 20 06   STA &0620,X
+     0964   C9 0D      CMP #&0D
+     0966   F0 04      BEQ &096C
+     0968   C9 20      CMP #&20
+     096A   D0 F1      BNE &095D
+.af
+     096C   86 3D      STX &3D
+     096E   A2 03      LDX #&03
+     0970   20 7E 09   JSR &097E
+     0973   A0 06      LDY #&06
+     0975   A2 20      LDX #&20
+     0977   4C F7 FF   JMP &FFF7
+.initprepcmd
+     097A   A9 00      LDA #&00
+     097C   85 3D      STA &3D
+.prepcmd
+     097E   A0 00      LDY #&00
+.ez
+     0980   CA         DEX
+     0981   D0 1F      BNE &09A2
+     0983   A6 3D      LDX &3D
+.ey
+     0985   B9 CA 09   LDA &09CA,Y
+     0988   C9 80      CMP #&80
+     098A   90 0F      BCC &099B
+     098C   29 7F      AND #&7F
+     098E   9D 20 06   STA &0620,X
+     0991   E8         INX
+     0992   A9 0D      LDA #&0D
+     0994   9D 20 06   STA &0620,X
+     0997   CA         DEX
+     0998   86 3D      STX &3D
+     099A   60         RTS
+.am
+     099B   9D 20 06   STA &0620,X
+     099E   E8         INX
+     099F   C8         INY
+     09A0   D0 E3      BNE &0985
+.nexcmd
+     09A2   B9 CA 09   LDA &09CA,Y
+     09A5   C8         INY
+     09A6   C9 80      CMP #&80
+     09A8   90 F8      BCC &09A2
+     09AA   B0 D4      BCS &0980
+.getdrive
+     09AC   A9 06      LDA #&06
+     09AE   A2 BD      LDX #&BD
+     09B0   A0 09      LDY #&09
+     09B2   20 D1 FF   JSR &FFD1
+     09B5   AD BA 09   LDA &09BA
+     09B8   60         RTS
+.data
+     09B9   20 20 20 ...
+.conb
+     09BD   00
+     09BE   B9 09 00 00
+     09C2   00 00 00 00
+     09C6   00 00 00 00
+.cmdadd
+     09CA   55 73 61 ...
+     09E5   8D
+     09E6   69 6D 70 ...
+     09EE   A0
+     09EF   2E 73 73 ...
+     09F3   8D
+.end
+Saving file 'MMCdisc'
+Processed file 'MMCDISC.asm' ok

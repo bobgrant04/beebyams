@@ -1,0 +1,183 @@
+Including file VERSION.asm
+Processed file 'VERSION.asm' ok
+Including file SYSVARS.asm
+Processed file 'SYSVARS.asm' ok
+Including file BEEBINTS.asm
+Processed file 'BEEBINTS.asm' ok
+.start
+     0900   A2 50      LDX #&50
+.clearint
+     0902   A9 00      LDA #&00
+     0904   A0 03      LDY #&03
+.dx
+     0906   9D 04 04   STA &0404,X
+     0909   E8         INX
+     090A   88         DEY
+     090B   10 F9      BPL &0906
+     090D   A2 07      LDX #&07
+     090F   A9 20      LDA #&20
+.ab
+     0911   9D A0 06   STA &06A0,X
+     0914   CA         DEX
+     0915   10 FA      BPL &0911
+.aa
+     0917   A2 F8      LDX #&F8
+     0919   A0 00      LDY #&00
+     091B   A9 01      LDA #&01
+     091D   20 DA FF   JSR &FFDA
+     0920   A0 00      LDY #&00
+     0922   B1 F8      LDA (&F8),Y
+     0924   C9 0D      CMP #&0D
+     0926   D0 05      BNE &092D
+.error
+     0928   A2 01      LDX #&01
+     092A   4C E3 09   JMP &09E3
+.ok
+     092D   38         SEC
+     092E   E9 30      SBC #&30
+     0930   8D 45 0A   STA &0A45
+.aa
+     0933   C8         INY
+     0934   B1 F8      LDA (&F8),Y
+     0936   C9 20      CMP #&20
+     0938   D0 EE      BNE &0928
+     093A   A2 00      LDX #&00
+.ab
+     093C   C8         INY
+     093D   B1 F8      LDA (&F8),Y
+     093F   9D A0 06   STA &06A0,X
+     0942   C9 0D      CMP #&0D
+     0944   F0 11      BEQ &0957
+     0946   C9 20      CMP #&20
+     0948   F0 0D      BEQ &0957
+     094A   C9 61      CMP #&61
+     094C   90 03      BCC &0951
+     094E   38         SEC
+     094F   E9 20      SBC #&20
+.ae
+     0951   9D A0 06   STA &06A0,X
+     0954   E8         INX
+     0955   D0 E5      BNE &093C
+.ac
+     0957   A9 0D      LDA #&0D
+     0959   9D A0 06   STA &06A0,X
+     095C   A9 00      LDA #&00
+     095E   A8         TAY
+     095F   AA         TAX
+     0960   AD A1 06   LDA &06A1
+     0963   C9 2E      CMP #&2E
+     0965   D0 28      BNE &098F
+     0967   AD A0 06   LDA &06A0
+     096A   8D B7 06   STA &06B7
+     096D   C8         INY
+     096E   CA         DEX
+.ib
+     096F   C8         INY
+     0970   E8         INX
+.ih
+     0971   C9 0D      CMP #&0D
+     0973   F0 0C      BEQ &0981
+     0975   E0 07      CPX #&07
+     0977   F0 1D      BEQ &0996
+     0979   B9 A0 06   LDA &06A0,Y
+     097C   9D B0 06   STA &06B0,X
+     097F   D0 EE      BNE &096F
+.id
+     0981   CA         DEX
+     0982   CA         DEX
+.ig
+     0983   E0 06      CPX #&06
+     0985   F0 0F      BEQ &0996
+     0987   A9 20      LDA #&20
+     0989   E8         INX
+     098A   9D B0 06   STA &06B0,X
+     098D   D0 F4      BNE &0983
+.ia
+     098F   A9 24      LDA #&24
+     0991   8D B7 06   STA &06B7
+     0994   D0 DB      BNE &0971
+.ie
+.READCAT
+     0996   A9 7F      LDA #&7F
+     0998   A2 45      LDX #&45
+     099A   A0 0A      LDY #&0A
+     099C   20 F1 FF   JSR &FFF1
+     099F   AD 4F 0A   LDA &0A4F
+     09A2   F0 05      BEQ &09A9
+     09A4   A2 02      LDX #&02
+     09A6   4C E3 09   JMP &09E3
+.aa
+     09A9   A0 00      LDY #&00
+     09AB   84 3C      STY &3C
+     09AD   A2 01      LDX #&01
+     09AF   86 3B      STX &3B
+     09B1   CA         DEX
+.af
+     09B2   B9 08 0E   LDA &0E08,Y
+     09B5   29 7F      AND #&7F
+     09B7   DD B0 06   CMP &06B0,X
+     09BA   F0 19      BEQ &09D5
+     09BC   38         SEC
+     09BD   E9 20      SBC #&20
+     09BF   DD B0 06   CMP &06B0,X
+     09C2   F0 11      BEQ &09D5
+     09C4   E6 3B      INC &3B
+     09C6   A9 08      LDA #&08
+     09C8   18         CLC
+     09C9   65 3C      ADC &3C
+     09CB   85 3C      STA &3C
+     09CD   B0 05      BCS &09D4
+     09CF   A8         TAY
+     09D0   A2 00      LDX #&00
+     09D2   F0 DE      BEQ &09B2
+.ak
+     09D4   60         RTS
+.ah
+     09D5   C8         INY
+     09D6   E8         INX
+     09D7   E0 08      CPX #&08
+     09D9   F0 02      BEQ &09DD
+     09DB   D0 D5      BNE &09B2
+.ai
+     09DD   A5 3B      LDA &3B
+     09DF   8D 54 04   STA &0454
+     09E2   60         RTS
+.printcmd
+     09E3   A0 00      LDY #&00
+.ez
+     09E5   CA         DEX
+     09E6   D0 12      BNE &09FA
+.ey
+     09E8   B9 04 0A   LDA &0A04,Y
+     09EB   C9 80      CMP #&80
+     09ED   90 05      BCC &09F4
+     09EF   29 7F      AND #&7F
+     09F1   4C E3 FF   JMP &FFE3
+.am
+     09F4   20 E3 FF   JSR &FFE3
+     09F7   C8         INY
+     09F8   D0 EE      BNE &09E8
+.nexcmd
+     09FA   B9 04 0A   LDA &0A04,Y
+     09FD   C8         INY
+     09FE   C9 80      CMP #&80
+     0A00   90 F8      BCC &09FA
+     0A02   B0 E1      BCS &09E5
+.cmdadd
+     0A04   55 73 61 ...
+     0A2B   8D
+     0A2C   55 6E 61 ...
+     0A44   8D
+.dir
+     0A45   00
+     0A46   00 0E 00 00
+     0A4A   03
+     0A4B   53
+     0A4C   00
+     0A4D   00
+     0A4E   21
+.result
+     0A4F   00
+.end
+Saving file 'gfn'
+Processed file 'GFN.asm' ok

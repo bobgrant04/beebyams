@@ -1,0 +1,381 @@
+tests
+\ensure din 0 on dr.0
+\ensure !boot is set to Exc and launches mnudisp
+
+
+
+\sub test individual filters
+
+\test A disk select
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select A and press return
+R list of disks appears
+A navigate to disk "Disc001A" and select (ret)
+R filter screen displayed with Disk001A on the A line
+A select display results (either cursor or I) and select
+R bottom screen is blanked out and some green dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown A is cyclon attack K is space advent
+
+\test b
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select B and press return
+R prompt appears asking for no between 0 and 510
+A press A  ret
+R green A appears but is cleared and prompt remains 
+A enter 034 ret
+R filter screen launches A has "Disk001A" and B has 034
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select B and press return
+R prompt appears asking for no between 0 and 510
+A enter 34 ret
+R filter screen launches A has "Disk001A" and B has 034
+A select display results (either cursor or I) and select
+R bottom screen is blanked out and some green dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown A is cyclon attack K is space advent
+
+\test c
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select C and press return	
+R list of software appears
+A navigate to Acornsoft F and select (ret)
+R filter screen displayed with Acornsoft on the C line
+A select display results (either cursor or I) and select
+R bottom screen is blanked out and some green dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown A is 3d dog fight R is androidz note Acornsoft is the only software shown
+
+\test d
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select D and press return	
+R list of program types appears
+A navigate to strategy D and select (ret)
+R filter screen displayed with strategy on the D line
+A select display results (either cursor or I) and select
+R bottom screen is blanked out and some green dots and white dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown A is 1984 fight R is aces high note S is the only software type shown
+
+
+\test e
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select E and press return	
+R filter screen displayed with on replacing off on the E line
+A select E and press return	
+R filter screen displayed with off replacing on on the E line
+A select E and press return	
+R filter screen displayed with on replacing off on the E line
+A select display results (either cursor or I) and select
+R bottom screen is blanked out and some green dots and white dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown A is 737 flight R is carnival note fav is not marked on the menu
+\todo fav indication?
+
+\test f
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select F and press return
+R prompt appears asking for description
+A press A  ret
+R green A appears but is cleared and prompt remains 
+A enter sna
+R filter screen launches F has "SNA" 
+A select display results (either cursor or I) and select
+R bottom screen is blanked out and some green dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown A is Jsnake R is Snaker
+
+\test g
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select g and press return
+R prompt appears asking for publisher
+A press A  ret
+R Then result screen is shown A is A&B R is ANCO 
+A select C "Disk001A" press return
+R filter screen launches A has "Disk001A" 
+A select display results (either cursor or I) and select
+R bottom screen is blanked out and some green dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown A is cyclon attack K is space advent
+
+
+\test h
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select H and press return
+R prompt appears asking for disk
+A press 001  ret
+R Then result screen is shown A is Altd001a H is RG0001 NB this will change
+A select D "acornsoft" press return
+R filter screen launches C has "acornsoft" 
+A select display results (either cursor or I) and select
+R bottom screen is blanked out and some green dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown A is 3d dog fight R is androidz note Acornsoft is the only software shown
+
+\individual filter test ends
+
+\test I
+\not needed as tested by above tests
+
+
+
+\test J
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches
+A select A and press return
+R list of disks appears
+A navigate to disk "Disc001A" and select (ret)
+R filter screen displayed with Disk001A on the A line
+A select C and press return	
+R list of software appears
+A navigate to Acornsoft F and select (ret)
+R filter screen displayed with Acornsoft on the C line
+A select D and press return	
+R list of program types appears
+A navigate to strategy D and select (ret)
+R filter screen displayed with strategy on the D line
+A select E and press return	
+R filter screen displayed with off replacing on on the E line
+A select F and press return
+R prompt appears asking for description
+A enter sna
+R filter screen launches F has "SNA" 
+A select J and press return	
+R filter screen displayed with off replacing all previous entries with F being blank
+A slect I and retun
+R inital screen is seen
+
+
+\test m
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select B and press return
+R prompt appears asking for no between 0 and 510
+A enter 34 ret
+R filter screen launches A has "Disk001A" and B has 034
+A select M ret
+R  command prompt seen
+A type mo.7 ret
+R screen clears
+A type *.
+R dir listing appears with disk title of Disk001a in drive 3
+
+\test N
+\test 30 year help file
+A *n
+R 30 year help file launches
+A any key to end
+R mnudisp launches
+A press tab
+R filter screen launches
+A select N and press return
+R 30 year help file launches
+A any key to end
+R mnudisp launches
+
+\test o
+\sub test help system
+\select menu disk 
+
+A *O
+R help prog launches
+A any key to end
+R mnudisp launches
+A press ?
+R help prog launches
+A any key to end
+R mnudisp launches
+A press tab
+R filter screen launches
+A press O press RET
+R help prog launches
+A any key to end
+R mnudisp launches
+A press tab
+R filter screen launches
+A press ?
+R help prog launches
+A any key to end
+R mnudisp launches
+\todo ? in sub menus
+
+\test menu navigation
+\cursor up and down check
+A from command prompt dump catdat1
+R file contents flypast note the last text (e.g. extra)
+
+A shift break
+R mnudisp launches
+A press cursor down 
+R B entry is highlighted and A is not
+A press cursor down repeatedly until R is selected
+R R is selected
+A press Cursor down
+R no screen change seen
+A press cursor up
+R Q entry is highlighted and R is not
+A press cursor up repeatedly until A is selected
+R A is selected
+A press Cursor up
+R no screen change seen
+
+\cursor right and left
+A select R
+R R selected
+A press left cursor
+R no screen change seen
+A press right cursor
+R new screen is displayed
+A press left cursor 
+R original screen is displayed
+A press right cursor until dump of catdat1 last entry is seen (should be an R option!)
+R "extra" is seen
+A press right cursor
+R new screen is seen
+A press left cursor
+R "extra" is seen
+A press left cursor until screen no longer changes
+R original screen is seen
+
+\test direct selection
+A shift break
+R mnudisp launches
+A pressB through to R
+R selected entry highlighted
+
+\test out of memory
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select D and press return	
+R list of program types appears
+A navigate to game C and select (ret)
+R filter screen displayed with game on the D line
+A select display results (either cursor or I) and select
+R bottom screen is blanked out and some green dots and white dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown A is 10 minute gamet R is 3d munchy  note G is the only software type shown
+A navigate through records (cursor right) until end of records
+R last reocord dispays ...out of memory.. as description
+
+\test no records
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches 
+A select B and press return
+R prompt appears asking for no between 0 and 510 
+A enter 034 ret
+R filter screen launches A has "Disk001A" and B has 034
+A select C and press return
+R List appears
+A select first entry "4th" ret
+R filter screen launches AChas "4th"
+A select display results (either cursor or I) and select
+R display No records is seen
+A select record
+R filter display is shown
+
+\test x program
+\if you rename x (*a. x *ren x xx ) then $&640 contains the launch string (P.$640) to access
+
+A shift break
+R mnudisp launches
+A navigate to any prog on first screen 
+R selection highlighted
+A press ret 
+R selected program launches
+A shift break
+R mnudisp launches
+A press tab
+R filter screen launches
+A set some filters then select I
+R bottom screen is blanked out and some green dots appear puncutated with spaces (shows search progress)
+R Then result screen is shown 
+A navigate to any prog 
+R selection highlighted
+A press ret 
+R selected program launches
+A shift break
+R mnudisp launches
+A navigate to any prog on second screen 
+R selection highlighted
+A press ret 
+R selected program launches
+A from command prompt dump catdat1
+R file contents flypast note the last text (e.g. extra)
+A shift break
+R mnudisp launches
+A navigate to any prog after end of catdat1 (e.g. extra)
+R selection highlighted
+A press ret 
+R selected program launches
+
+\test catdat spanning
+Set up drive 0 with no catdat0
+Ensure no other drives are mounted
+A shift break
+R Program renders and ends
+Set up drive 0 with no catdat0
+Set up drive 1 with catdat0
+A shift break
+R Program renders
+Set up drive 0 with no catdat0
+Set up drive 1 with catdat0
+Set up drive 2 with catdat1
+A shift break
+R Program renders
+A move right 
+R ensure both cats are seen
+A move Left
+R Ensure initial cat is seen
+Set up drive 0 with catdat0
+Set up drive 1 with catdat1
+Set up drive 2 with catdat2
+A shift break
+R Program renders
+A move right 
+R ensure all cats are seen
+A move Left
+R Ensure initial cat is seen
+A shift break
+R Program renders
+A move right 
+R ensure both cats are seen
+A move Left
+R Ensure initial cat is seen
+Set up drive 0 with catdat0
+Set up drive 1 with catdat1
+Set up drive 2 with catdat2
+Set up drive 2 with catdat3
+
+
+
+
+
+
+
+

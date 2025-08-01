@@ -1,0 +1,144 @@
+Including file VERSION.asm
+Processed file 'VERSION.asm' ok
+Including file SYSVARS.asm
+Processed file 'SYSVARS.asm' ok
+Including file BEEBINTS.asm
+Processed file 'BEEBINTS.asm' ok
+.start
+.startexec
+.ADR
+     0900   A9 30      LDA #&30
+     0902   8D FD 09   STA &09FD
+.md
+     0905   20 19 09   JSR &0919
+     0908   C9 01      CMP #&01
+     090A   D0 0C      BNE &0918
+     090C   20 CC 09   JSR &09CC
+     090F   20 5D 09   JSR &095D
+     0912   20 2C 09   JSR &092C
+     0915   4C 05 09   JMP &0905
+.ma
+     0918   60         RTS
+.cce
+     0919   EE FD 09   INC &09FD
+     091C   A9 F7      LDA #&F7
+     091E   85 70      STA &70
+     0920   A9 09      LDA #&09
+     0922   85 71      STA &71
+     0924   20 F2 09   JSR &09F2
+     0927   A9 05      LDA #&05
+     0929   4C DD FF   JMP &FFDD
+.scf
+     092C   A9 83      LDA #&83
+     092E   20 E3 FF   JSR &FFE3
+     0931   A9 2E      LDA #&2E
+     0933   20 E3 FF   JSR &FFE3
+     0936   20 52 09   JSR &0952
+     0939   A9 19      LDA #&19
+     093B   85 7B      STA &7B
+     093D   18         CLC
+     093E   A5 30      LDA &30
+     0940   69 01      ADC #&01
+     0942   85 7E      STA &7E
+     0944   A9 00      LDA #&00
+     0946   65 31      ADC &31
+     0948   85 7F      STA &7F
+     094A   20 F2 09   JSR &09F2
+     094D   A9 00      LDA #&00
+     094F   4C DD FF   JMP &FFDD
+.rtb
+     0952   A0 0B      LDY #&0B
+     0954   A9 00      LDA #&00
+.me
+     0956   99 76 00   STA &0076,Y
+     0959   88         DEY
+     095A   10 FA      BPL &0956
+     095C   60         RTS
+.prsd
+     095D   A0 00      LDY #&00
+     095F   B1 30      LDA (&30),Y
+     0961   D0 01      BNE &0964
+     0963   60         RTS
+.aa
+     0964   A9 2E      LDA #&2E
+     0966   20 E3 FF   JSR &FFE3
+.ab
+     0969   C8         INY
+     096A   B1 30      LDA (&30),Y
+     096C   C9 80      CMP #&80
+     096E   90 F9      BCC &0969
+     0970   84 3B      STY &3B
+     0972   C8         INY
+     0973   C8         INY
+     0974   B1 30      LDA (&30),Y
+     0976   8D 5C 04   STA &045C
+     0979   C8         INY
+     097A   B1 30      LDA (&30),Y
+     097C   29 03      AND #&03
+     097E   8D 5D 04   STA &045D
+     0981   A9 11      LDA #&11
+     0983   18         CLC
+     0984   6D 5D 04   ADC &045D
+     0987   85 2F      STA &2F
+     0989   A9 00      LDA #&00
+     098B   85 2E      STA &2E
+     098D   AC 5C 04   LDY &045C
+     0990   B1 2E      LDA (&2E),Y
+     0992   8D 64 04   STA &0464
+     0995   A9 15      LDA #&15
+     0997   18         CLC
+     0998   6D 5D 04   ADC &045D
+     099B   85 2F      STA &2F
+     099D   B1 2E      LDA (&2E),Y
+     099F   8D 65 04   STA &0465
+     09A2   A4 3B      LDY &3B
+     09A4   C8         INY
+     09A5   AD 64 04   LDA &0464
+     09A8   91 30      STA (&30),Y
+     09AA   C8         INY
+     09AB   C8         INY
+     09AC   B1 30      LDA (&30),Y
+     09AE   29 7D      AND #&7D
+     09B0   18         CLC
+     09B1   6D 65 04   ADC &0465
+     09B4   91 30      STA (&30),Y
+     09B6   20 BC 09   JSR &09BC
+     09B9   4C 5D 09   JMP &095D
+.Nextrecord
+     09BC   A5 3B      LDA &3B
+     09BE   18         CLC
+     09BF   69 04      ADC #&04
+     09C1   65 30      ADC &30
+     09C3   85 30      STA &30
+     09C5   A9 00      LDA #&00
+     09C7   65 31      ADC &31
+     09C9   85 31      STA &31
+     09CB   60         RTS
+.lcf
+     09CC   A9 82      LDA #&82
+     09CE   20 E3 FF   JSR &FFE3
+     09D1   A9 2E      LDA #&2E
+     09D3   20 E3 FF   JSR &FFE3
+     09D6   A9 00      LDA #&00
+     09D8   85 30      STA &30
+     09DA   85 72      STA &72
+     09DC   A9 19      LDA #&19
+     09DE   85 31      STA &31
+     09E0   85 73      STA &73
+     09E2   A9 F7      LDA #&F7
+     09E4   85 70      STA &70
+     09E6   A9 09      LDA #&09
+     09E8   85 71      STA &71
+     09EA   20 F2 09   JSR &09F2
+     09ED   A9 FF      LDA #&FF
+     09EF   4C DD FF   JMP &FFDD
+.sbf
+     09F2   A2 70      LDX #&70
+     09F4   A0 00      LDY #&00
+     09F6   60         RTS
+.catdat
+     09F7   63 61 74 ...
+     09FE   0D
+.end
+Saving file 'ADR'
+Processed file 'ADR.asm' ok

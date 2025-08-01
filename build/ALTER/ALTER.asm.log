@@ -1,0 +1,4 @@
+ALTER.asm:129: error: Unrecognised token.
+
+/LDA erraddr
+^

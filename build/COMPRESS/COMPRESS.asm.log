@@ -1,0 +1,200 @@
+Including file VERSION.asm
+Processed file 'VERSION.asm' ok
+Including file SYSVARS.asm
+Processed file 'SYSVARS.asm' ok
+Including file BEEBINTS.asm
+Processed file 'BEEBINTS.asm' ok
+.start
+.startexec
+.encodestrA
+     6800   A2 00      LDX #&00
+     6802   86 2E      STX &2E
+     6804   86 2F      STX &2F
+     6806   CA         DEX
+.aa
+     6807   E8         INX
+     6808   BD 20 06   LDA &0620,X
+     680B   C9 0D      CMP #&0D
+     680D   F0 38      BEQ &6847
+     680F   A0 00      LDY #&00
+.ab
+     6811   C8         INY
+     6812   C0 2E      CPY #&2E
+     6814   F0 58      BEQ &686E
+     6816   D9 FF 68   CMP &68FF,Y
+     6819   D0 F6      BNE &6811
+     681B   98         TYA
+     681C   C9 0E      CMP #&0E
+     681E   B0 05      BCS &6825
+     6820   20 4C 68   JSR &684C
+     6823   50 E2      BVC &6807
+.ac
+     6825   C9 1E      CMP #&1E
+     6827   B0 0F      BCS &6838
+     6829   48         PHA
+     682A   A9 0E      LDA #&0E
+     682C   20 4C 68   JSR &684C
+     682F   68         PLA
+     6830   38         SEC
+     6831   E9 0E      SBC #&0E
+     6833   20 4C 68   JSR &684C
+     6836   50 CF      BVC &6807
+.ad
+     6838   48         PHA
+     6839   A9 0F      LDA #&0F
+     683B   20 4C 68   JSR &684C
+     683E   68         PLA
+     683F   38         SEC
+     6840   E9 1E      SBC #&1E
+     6842   20 4C 68   JSR &684C
+     6845   50 C0      BVC &6807
+.done
+     6847   A9 00      LDA #&00
+     6849   4C 4C 68   JMP &684C
+.storeApram
+     684C   48         PHA
+     684D   A5 2F      LDA &2F
+     684F   49 FF      EOR #&FF
+     6851   85 2F      STA &2F
+     6853   F0 07      BEQ &685C
+     6855   68         PLA
+     6856   A4 2E      LDY &2E
+     6858   99 80 06   STA &0680,Y
+     685B   60         RTS
+.aa
+     685C   68         PLA
+     685D   18         CLC
+     685E   2A         ROL A
+     685F   2A         ROL A
+     6860   2A         ROL A
+     6861   2A         ROL A
+     6862   A4 2E      LDY &2E
+     6864   19 80 06   ORA &0680,Y
+     6867   99 80 06   STA &0680,Y
+     686A   C8         INY
+     686B   84 2E      STY &2E
+     686D   60         RTS
+.invalidchar
+     686E   00         BRK
+     686F   00
+     6870   69 6E 76 ...
+     6892   00
+.decodepram
+     6893   A2 00      LDX #&00
+     6895   86 2E      STX &2E
+     6897   A9 F0      LDA #&F0
+     6899   85 2F      STA &2F
+     689B   CA         DEX
+.ac
+     689C   A5 2F      LDA &2F
+     689E   49 FF      EOR #&FF
+     68A0   85 2F      STA &2F
+     68A2   E8         INX
+     68A3   BD 80 06   LDA &0680,X
+     68A6   25 2F      AND &2F
+     68A8   F0 54      BEQ &68FE
+     68AA   C9 10      CMP #&10
+     68AC   90 05      BCC &68B3
+     68AE   18         CLC
+     68AF   6A         ROR A
+     68B0   6A         ROR A
+     68B1   6A         ROR A
+     68B2   6A         ROR A
+.ab
+     68B3   C9 0E      CMP #&0E
+     68B5   B0 0E      BCS &68C5
+     68B7   A8         TAY
+     68B8   B9 FF 68   LDA &68FF,Y
+     68BB   A4 2E      LDY &2E
+     68BD   99 20 06   STA &0620,Y
+     68C0   C8         INY
+     68C1   84 2E      STY &2E
+     68C3   50 D7      BVC &689C
+.aa
+     68C5   C9 0E      CMP #&0E
+     68C7   D0 04      BNE &68CD
+     68C9   A9 10      LDA #&10
+     68CB   50 02      BVC &68CF
+.ae
+     68CD   A9 20      LDA #&20
+.af
+     68CF   85 30      STA &30
+     68D1   A9 0F      LDA #&0F
+     68D3   25 2F      AND &2F
+     68D5   F0 14      BEQ &68EB
+     68D7   E8         INX
+     68D8   BD 80 06   LDA &0680,X
+     68DB   29 0F      AND #&0F
+     68DD   18         CLC
+     68DE   65 30      ADC &30
+     68E0   A4 2E      LDY &2E
+     68E2   99 20 06   STA &0620,Y
+     68E5   C8         INY
+     68E6   84 2E      STY &2E
+     68E8   E8         INX
+     68E9   50 B1      BVC &689C
+.ad
+     68EB   BD 80 06   LDA &0680,X
+     68EE   29 F0      AND #&F0
+     68F0   18         CLC
+     68F1   65 30      ADC &30
+     68F3   A4 2E      LDY &2E
+     68F5   99 20 06   STA &0620,Y
+     68F8   C8         INY
+     68F9   84 2E      STY &2E
+     68FB   E8         INX
+     68FC   50 9E      BVC &689C
+.done
+     68FE   60         RTS
+.firstpage
+     68FF   00
+     6900   20
+     6901   45
+     6902   41
+     6903   52
+     6904   49
+     6905   4F
+     6906   54
+     6907   4E
+     6908   53
+     6909   4C
+     690A   43
+     690B   44
+     690C   50
+.page14
+     690D   00
+     690E   4D
+     690F   48
+     6910   47
+     6911   42
+     6912   46
+     6913   59
+     6914   57
+     6915   4B
+     6916   56
+     6917   58
+     6918   5A
+     6919   4A
+     691A   51
+     691B   26
+     691C   2C
+.page15
+     691D   00
+     691E   30
+     691F   31
+     6920   32
+     6921   33
+     6922   34
+     6923   35
+     6924   36
+     6925   37
+     6926   38
+     6927   39
+     6928   23
+     6929   2E
+     692A   3E
+     692B   3C
+     692C   3A
+.end
+Saving file 'compres'
+Processed file 'COMPRESS.asm' ok

@@ -20,9 +20,7 @@ save csv AS A TAB DELIMINATED FILE (sorry to shout!)
 
 add newly created file to raw.dat
 
-run p.processs on disk process with newly created csv using the 'V' option -this will ensure that you have a clean data set
-correct CSV file as required (i.e. - or _)
-
-run p.process on disk process with newly created csv using the 'M' option 
-run p.process on disk process with newly created csv using the 'MF' option to force use of csv details (will ask for each one)
+run p.Sfile 
+run p.Ifile 
+run p.out
 

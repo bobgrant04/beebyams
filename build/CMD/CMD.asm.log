@@ -1,0 +1,130 @@
+Including file VERSION.asm
+Processed file 'VERSION.asm' ok
+Including file SYSVARS.asm
+Processed file 'SYSVARS.asm' ok
+Including file BEEBINTS.asm
+Processed file 'BEEBINTS.asm' ok
+.start
+     0900   A2 64      LDX #&64
+     0902   20 21 09   JSR &0921
+     0905   A2 F8      LDX #&F8
+     0907   A0 00      LDY #&00
+     0909   A9 01      LDA #&01
+     090B   20 DA FF   JSR &FFDA
+     090E   20 2D 09   JSR &092D
+     0911   17 09
+     0913   8D 68 04   STA &0468
+     0916   60         RTS
+.cmd
+     0917   A6 F8      LDX &F8
+     0919   A4 F9      LDY &F9
+     091B   20 F7 FF   JSR &FFF7
+     091E   A9 00      LDA #&00
+     0920   60         RTS
+.clearint
+     0921   A9 00      LDA #&00
+     0923   A0 03      LDY #&03
+.dx
+     0925   9D 04 04   STA &0404,X
+     0928   E8         INX
+     0929   88         DEY
+     092A   10 F9      BPL &0925
+     092C   60         RTS
+.xos_call
+     092D   48         PHA
+     092E   8A         TXA
+     092F   48         PHA
+     0930   AD 03 02   LDA &0203
+     0933   48         PHA
+     0934   AD 02 02   LDA &0202
+     0937   48         PHA
+     0938   AD CC 09   LDA &09CC
+     093B   48         PHA
+     093C   BA         TSX
+     093D   8E CC 09   STX &09CC
+     0940   A9 09      LDA #&09
+     0942   8D 03 02   STA &0203
+     0945   A9 B2      LDA #&B2
+     0947   8D 02 02   STA &0202
+     094A   A9 09      LDA #&09
+     094C   48         PHA
+     094D   A9 97      LDA #&97
+     094F   48         PHA
+     0950   48         PHA
+     0951   48         PHA
+     0952   48         PHA
+     0953   48         PHA
+     0954   A5 A9      LDA &A9
+     0956   48         PHA
+     0957   A5 A8      LDA &A8
+     0959   48         PHA
+     095A   18         CLC
+     095B   BD 06 01   LDA &0106,X
+     095E   85 A8      STA &A8
+     0960   69 02      ADC #&02
+     0962   9D 06 01   STA &0106,X
+     0965   BD 07 01   LDA &0107,X
+     0968   85 A9      STA &A9
+     096A   69 00      ADC #&00
+     096C   9D 07 01   STA &0107,X
+     096F   98         TYA
+     0970   48         PHA
+     0971   BA         TSX
+     0972   A0 02      LDY #&02
+     0974   B1 A8      LDA (&A8),Y
+     0976   9D 07 01   STA &0107,X
+     0979   88         DEY
+     097A   B1 A8      LDA (&A8),Y
+     097C   9D 06 01   STA &0106,X
+     097F   BD 0E 01   LDA &010E,X
+     0982   9D 05 01   STA &0105,X
+     0985   BD 0D 01   LDA &010D,X
+     0988   9D 04 01   STA &0104,X
+     098B   68         PLA
+     098C   A8         TAY
+     098D   68         PLA
+     098E   85 A8      STA &A8
+     0990   68         PLA
+     0991   85 A9      STA &A9
+     0993   68         PLA
+     0994   AA         TAX
+     0995   68         PLA
+     0996   08         PHP
+     0997   40         RTI
+.return
+     0998   48         PHA
+     0999   8A         TXA
+     099A   BA         TSX
+     099B   9D 05 01   STA &0105,X
+     099E   68         PLA
+     099F   9D 05 01   STA &0105,X
+     09A2   68         PLA
+     09A3   8D CC 09   STA &09CC
+     09A6   68         PLA
+     09A7   8D 02 02   STA &0202
+     09AA   68         PLA
+     09AB   8D 03 02   STA &0203
+     09AE   68         PLA
+     09AF   AA         TAX
+     09B0   68         PLA
+     09B1   60         RTS
+.error
+     09B2   AE CC 09   LDX &09CC
+     09B5   9A         TXS
+     09B6   68         PLA
+     09B7   8D CC 09   STA &09CC
+     09BA   68         PLA
+     09BB   8D 02 02   STA &0202
+     09BE   68         PLA
+     09BF   8D 03 02   STA &0203
+     09C2   68         PLA
+     09C3   68         PLA
+     09C4   A0 00      LDY #&00
+     09C6   B1 FD      LDA (&FD),Y
+     09C8   2C C7 09   BIT &09C7
+     09CB   60         RTS
+.oldSP
+     09CC   00
+.end
+Saving file 'cmd'
+Processed file 'CMD.asm' ok

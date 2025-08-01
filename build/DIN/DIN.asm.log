@@ -1,0 +1,133 @@
+Including file VERSION.asm
+Processed file 'VERSION.asm' ok
+Including file SYSVARS.asm
+Processed file 'SYSVARS.asm' ok
+Including file BEEBINTS.asm
+Processed file 'BEEBINTS.asm' ok
+.start
+     0900   20 AB 09   JSR &09AB
+     0903   85 3E      STA &3E
+     0905   A2 30      LDX #&30
+     0907   A0 00      LDY #&00
+     0909   A9 01      LDA #&01
+     090B   20 DA FF   JSR &FFDA
+     090E   A0 00      LDY #&00
+     0910   B1 30      LDA (&30),Y
+     0912   C9 0D      CMP #&0D
+     0914   D0 13      BNE &0929
+     0916   A2 01      LDX #&01
+     0918   20 79 09   JSR &0979
+.printstrA
+     091B   A2 FF      LDX #&FF
+.ak
+     091D   E8         INX
+     091E   BD 00 06   LDA &0600,X
+     0921   20 E3 FF   JSR &FFE3
+     0924   C9 0D      CMP #&0D
+     0926   D0 F5      BNE &091D
+     0928   60         RTS
+.aa
+     0929   A2 02      LDX #&02
+     092B   20 79 09   JSR &0979
+.getargumentcount
+     092E   A9 00      LDA #&00
+     0930   AA         TAX
+     0931   A8         TAY
+.aa
+     0932   B1 30      LDA (&30),Y
+     0934   C9 0D      CMP #&0D
+     0936   F0 08      BEQ &0940
+     0938   C8         INY
+     0939   C9 20      CMP #&20
+     093B   D0 F5      BNE &0932
+     093D   E8         INX
+     093E   D0 F2      BNE &0932
+.cmdend
+     0940   A0 00      LDY #&00
+     0942   E0 01      CPX #&01
+     0944   D0 06      BNE &094C
+     0946   B1 30      LDA (&30),Y
+     0948   85 3E      STA &3E
+     094A   C8         INY
+     094B   C8         INY
+.ab
+     094C   88         DEY
+     094D   A6 3D      LDX &3D
+.ae
+     094F   C8         INY
+     0950   E8         INX
+     0951   B1 30      LDA (&30),Y
+     0953   9D 00 06   STA &0600,X
+     0956   C9 0D      CMP #&0D
+     0958   F0 02      BEQ &095C
+     095A   D0 F3      BNE &094F
+.af
+     095C   A9 20      LDA #&20
+     095E   9D 00 06   STA &0600,X
+     0961   86 3D      STX &3D
+     0963   18         CLC
+     0964   A9 11      LDA #&11
+     0966   65 3E      ADC &3E
+     0968   E8         INX
+     0969   9D 00 06   STA &0600,X
+     096C   A9 0D      LDA #&0D
+     096E   E8         INX
+     096F   9D 00 06   STA &0600,X
+.execmd
+     0972   A0 06      LDY #&06
+     0974   A2 00      LDX #&00
+     0976   4C F7 FF   JMP &FFF7
+.initprepcmd
+     0979   A9 00      LDA #&00
+     097B   85 3D      STA &3D
+.prepcmd
+     097D   A0 00      LDY #&00
+.ez
+     097F   CA         DEX
+     0980   D0 1F      BNE &09A1
+     0982   A6 3D      LDX &3D
+.ey
+     0984   B9 C9 09   LDA &09C9,Y
+     0987   C9 80      CMP #&80
+     0989   90 0F      BCC &099A
+     098B   29 7F      AND #&7F
+     098D   9D 00 06   STA &0600,X
+     0990   E8         INX
+     0991   A9 0D      LDA #&0D
+     0993   9D 00 06   STA &0600,X
+     0996   CA         DEX
+     0997   86 3D      STX &3D
+     0999   60         RTS
+.am
+     099A   9D 00 06   STA &0600,X
+     099D   E8         INX
+     099E   C8         INY
+     099F   D0 E3      BNE &0984
+.nexcmd
+     09A1   B9 C9 09   LDA &09C9,Y
+     09A4   C8         INY
+     09A5   C9 80      CMP #&80
+     09A7   90 F8      BCC &09A1
+     09A9   B0 D4      BCS &097F
+.getdrive
+     09AB   A9 06      LDA #&06
+     09AD   A2 BC      LDX #&BC
+     09AF   A0 09      LDY #&09
+     09B1   20 D1 FF   JSR &FFD1
+     09B4   AD B9 09   LDA &09B9
+     09B7   60         RTS
+.data
+     09B8   20 20 20 ...
+.conb
+     09BC   00
+     09BD   B8 09 00 00
+     09C1   00 00 00 00
+     09C5   00 00 00 00
+.cmdadd
+     09C9   55 73 61 ...
+     09EA   8D
+     09EB   4D 4D 43 ...
+     09F2   A0
+.end
+Saving file 'DIN'
+Processed file 'DIN.asm' ok

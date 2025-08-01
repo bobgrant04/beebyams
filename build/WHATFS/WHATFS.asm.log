@@ -1,0 +1,406 @@
+Including file VERSION.asm
+Processed file 'VERSION.asm' ok
+Including file SYSVARS.asm
+Processed file 'SYSVARS.asm' ok
+Including file BEEBINTS.asm
+Processed file 'BEEBINTS.asm' ok
+.start
+     7700   A2 14      LDX #&14
+     7702   20 11 78   JSR &7811
+     7705   A2 F8      LDX #&F8
+     7707   A0 00      LDY #&00
+     7709   A9 01      LDA #&01
+     770B   20 DA FF   JSR &FFDA
+     770E   B1 F8      LDA (&F8),Y
+     7710   C9 0D      CMP #&0D
+     7712   F0 05      BEQ &7719
+     7714   A2 01      LDX #&01
+     7716   20 DB 77   JSR &77DB
+.aa
+     7719   A9 00      LDA #&00
+     771B   A8         TAY
+     771C   AA         TAX
+     771D   20 DA FF   JSR &FFDA
+     7720   C9 04      CMP #&04
+     7722   8D 18 04   STA &0418
+     7725   F0 0D      BEQ &7734
+     7727   C9 0C      CMP #&0C
+     7729   F0 01      BEQ &772C
+     772B   60         RTS
+.bc
+     772C   A9 83      LDA #&83
+     772E   8D 18 04   STA &0418
+     7731   4C 5C 77   JMP &775C
+.bb
+     7734   A9 00      LDA #&00
+     7736   85 3B      STA &3B
+.cc
+     7738   E6 3B      INC &3B
+     773A   A6 3B      LDX &3B
+     773C   20 AF 77   JSR &77AF
+     773F   AD A0 06   LDA &06A0
+     7742   C9 0D      CMP #&0D
+     7744   F0 12      BEQ &7758
+     7746   20 9F 77   JSR &779F
+     7749   8D 04 04   STA &0404
+     774C   C9 FE      CMP #&FE
+     774E   F0 E8      BEQ &7738
+.cmdok
+     7750   A5 3B      LDA &3B
+     7752   18         CLC
+     7753   69 80      ADC #&80
+     7755   8D 18 04   STA &0418
+.exit
+     7758   20 5C 77   JSR &775C
+     775B   60         RTS
+.printdetail
+     775C   A9 F2      LDA #&F2
+     775E   85 2E      STA &2E
+     7760   A9 78      LDA #&78
+     7762   85 2F      STA &2F
+.aa
+     7764   A0 00      LDY #&00
+     7766   B1 2E      LDA (&2E),Y
+     7768   CD 18 04   CMP &0418
+     776B   D0 18      BNE &7785
+.cc
+     776D   C8         INY
+     776E   B1 2E      LDA (&2E),Y
+     7770   C9 80      CMP #&80
+     7772   90 0B      BCC &777F
+     7774   29 7F      AND #&7F
+     7776   20 E3 FF   JSR &FFE3
+     7779   A9 0D      LDA #&0D
+     777B   20 E3 FF   JSR &FFE3
+     777E   60         RTS
+.bd
+     777F   20 E3 FF   JSR &FFE3
+     7782   D0 E9      BNE &776D
+     7784   60         RTS
+.bb
+     7785   C9 FF      CMP #&FF
+     7787   D0 01      BNE &778A
+     7789   60         RTS
+.dd
+     778A   C8         INY
+     778B   B1 2E      LDA (&2E),Y
+     778D   C9 80      CMP #&80
+     778F   90 F9      BCC &778A
+     7791   18         CLC
+     7792   98         TYA
+     7793   65 2E      ADC &2E
+     7795   85 2E      STA &2E
+     7797   A9 00      LDA #&00
+     7799   65 2F      ADC &2F
+     779B   85 2F      STA &2F
+     779D   D0 C5      BNE &7764
+.issuecmd
+     779F   AD A0 06   LDA &06A0
+     77A2   C9 0D      CMP #&0D
+     77A4   F0 08      BEQ &77AE
+     77A6   20 1D 78   JSR &781D
+     77A9   D4 77
+     77AB   8D 04 04   STA &0404
+.exit
+     77AE   60         RTS
+.prepcmd
+     77AF   A9 BD      LDA #&BD
+     77B1   85 2E      STA &2E
+     77B3   A9 78      LDA #&78
+     77B5   85 2F      STA &2F
+     77B7   A0 00      LDY #&00
+.ez
+     77B9   CA         DEX
+     77BA   D0 0E      BNE &77CA
+.ey
+     77BC   B1 2E      LDA (&2E),Y
+     77BE   9D A0 06   STA &06A0,X
+     77C1   C9 0D      CMP #&0D
+     77C3   D0 01      BNE &77C6
+     77C5   60         RTS
+.am
+     77C6   E8         INX
+     77C7   C8         INY
+     77C8   D0 F2      BNE &77BC
+.nexcmd
+     77CA   B9 BD 78   LDA &78BD,Y
+     77CD   C8         INY
+     77CE   C9 0D      CMP #&0D
+     77D0   D0 F8      BNE &77CA
+     77D2   B0 E5      BCS &77B9
+.execmd
+     77D4   A0 06      LDY #&06
+     77D6   A2 A0      LDX #&A0
+     77D8   4C F7 FF   JMP &FFF7
+.diserror
+     77DB   A9 D1      LDA #&D1
+     77DD   85 2E      STA &2E
+     77DF   A9 78      LDA #&78
+     77E1   85 2F      STA &2F
+     77E3   A0 00      LDY #&00
+.ba
+     77E5   CA         DEX
+     77E6   D0 12      BNE &77FA
+.bc
+     77E8   B1 2E      LDA (&2E),Y
+     77EA   C9 80      CMP #&80
+     77EC   90 06      BCC &77F4
+     77EE   29 7F      AND #&7F
+     77F0   20 E3 FF   JSR &FFE3
+     77F3   60         RTS
+.bd
+     77F4   20 E3 FF   JSR &FFE3
+     77F7   C8         INY
+     77F8   D0 EE      BNE &77E8
+.bb
+     77FA   B1 2E      LDA (&2E),Y
+     77FC   C8         INY
+     77FD   C9 80      CMP #&80
+     77FF   90 F9      BCC &77FA
+     7801   18         CLC
+     7802   98         TYA
+     7803   65 2E      ADC &2E
+     7805   85 2E      STA &2E
+     7807   A9 00      LDA #&00
+     7809   65 2F      ADC &2F
+     780B   85 2F      STA &2F
+     780D   A0 00      LDY #&00
+     780F   F0 D4      BEQ &77E5
+.clearint
+.cli
+     7811   A9 00      LDA #&00
+     7813   A0 03      LDY #&03
+.dx
+     7815   9D 04 04   STA &0404,X
+     7818   E8         INX
+     7819   88         DEY
+     781A   10 F9      BPL &7815
+     781C   60         RTS
+.xos_call
+     781D   48         PHA
+     781E   8A         TXA
+     781F   48         PHA
+     7820   AD 03 02   LDA &0203
+     7823   48         PHA
+     7824   AD 02 02   LDA &0202
+     7827   48         PHA
+     7828   AD BC 78   LDA &78BC
+     782B   48         PHA
+     782C   BA         TSX
+     782D   8E BC 78   STX &78BC
+     7830   A9 78      LDA #&78
+     7832   8D 03 02   STA &0203
+     7835   A9 A2      LDA #&A2
+     7837   8D 02 02   STA &0202
+     783A   A9 78      LDA #&78
+     783C   48         PHA
+     783D   A9 87      LDA #&87
+     783F   48         PHA
+     7840   48         PHA
+     7841   48         PHA
+     7842   48         PHA
+     7843   48         PHA
+     7844   A5 A9      LDA &A9
+     7846   48         PHA
+     7847   A5 A8      LDA &A8
+     7849   48         PHA
+     784A   18         CLC
+     784B   BD 06 01   LDA &0106,X
+     784E   85 A8      STA &A8
+     7850   69 02      ADC #&02
+     7852   9D 06 01   STA &0106,X
+     7855   BD 07 01   LDA &0107,X
+     7858   85 A9      STA &A9
+     785A   69 00      ADC #&00
+     785C   9D 07 01   STA &0107,X
+     785F   98         TYA
+     7860   48         PHA
+     7861   BA         TSX
+     7862   A0 02      LDY #&02
+     7864   B1 A8      LDA (&A8),Y
+     7866   9D 07 01   STA &0107,X
+     7869   88         DEY
+     786A   B1 A8      LDA (&A8),Y
+     786C   9D 06 01   STA &0106,X
+     786F   BD 0E 01   LDA &010E,X
+     7872   9D 05 01   STA &0105,X
+     7875   BD 0D 01   LDA &010D,X
+     7878   9D 04 01   STA &0104,X
+     787B   68         PLA
+     787C   A8         TAY
+     787D   68         PLA
+     787E   85 A8      STA &A8
+     7880   68         PLA
+     7881   85 A9      STA &A9
+     7883   68         PLA
+     7884   AA         TAX
+     7885   68         PLA
+     7886   08         PHP
+     7887   40         RTI
+.return
+     7888   48         PHA
+     7889   8A         TXA
+     788A   BA         TSX
+     788B   9D 05 01   STA &0105,X
+     788E   68         PLA
+     788F   9D 05 01   STA &0105,X
+     7892   68         PLA
+     7893   8D BC 78   STA &78BC
+     7896   68         PLA
+     7897   8D 02 02   STA &0202
+     789A   68         PLA
+     789B   8D 03 02   STA &0203
+     789E   68         PLA
+     789F   AA         TAX
+     78A0   68         PLA
+     78A1   60         RTS
+.error
+     78A2   AE BC 78   LDX &78BC
+     78A5   9A         TXS
+     78A6   68         PLA
+     78A7   8D BC 78   STA &78BC
+     78AA   68         PLA
+     78AB   8D 02 02   STA &0202
+     78AE   68         PLA
+     78AF   8D 03 02   STA &0203
+     78B2   68         PLA
+     78B3   68         PLA
+     78B4   A0 00      LDY #&00
+     78B6   B1 FD      LDA (&FD),Y
+     78B8   2C B7 78   BIT &78B7
+     78BB   60         RTS
+.oldSP
+     78BC   00
+.cmdadd
+     78BD   44 49 4E 
+     78C0   0D
+     78C1   4D 4D 43 ...
+     78C8   0D
+     78C9   69 6D 70 ...
+     78CF   0D
+     78D0   0D
+.errtxt
+     78D1   6F 75 74 ...
+     78F1   8D
+.fstxt
+     78F2   00
+     78F3   30 20 4E ...
+     790C   ED
+     790D   01
+     790E   31 20 31 ...
+     792F   ED
+     7930   02
+     7931   32 20 33 ...
+     7951   ED
+     7952   03
+     7953   33 20 52 ...
+     7966   ED
+     7967   04
+     7968   34 20 44 ...
+     797B   ED
+     797C   05
+     797D   35 20 45 ...
+     799A   ED
+     799B   06
+     799C   36 20 54 ...
+     79BA   E5
+     79BB   07
+     79BC   37 20 49 ...
+     79CF   ED
+     79D0   08
+     79D1   38 20 41 ...
+     79DC   D3
+     79DD   09
+     79DE   39 20 48 ...
+     79F1   ED
+     79F2   0A
+     79F3   31 30 20 ...
+     7A0C   ED
+     7A0D   0C
+     7A0E   31 32 20 ...
+     7A21   ED
+     7A22   0D
+     7A23   31 33 20 ...
+     7A29   EC
+     7A2A   0E
+     7A2B   31 34 20 ...
+     7A34   F2
+     7A35   0F
+     7A36   31 35 20 ...
+     7A3E   EC
+     7A3F   10
+     7A40   31 36 20 ...
+     7A4E   D3
+     7A4F   11
+     7A50   31 37 20 ...
+     7A55   F5
+     7A56   12
+     7A57   31 38 20 ...
+     7A5F   F5
+     7A60   13
+     7A61   31 39 20 ...
+     7A66   E4
+     7A67   14
+     7A68   32 30 20 ...
+     7A70   E4
+     7A71   15
+     7A72   32 31 20 ...
+     7A7A   D3
+     7A7B   16
+     7A7C   32 32 20 ...
+     7A95   D3
+     7A96   17
+     7A97   32 33 20 ...
+     7A9E   D3
+     7A9F   18
+     7AA0   32 34 20 ...
+     7AAA   D3
+     7AAB   19
+     7AAC   32 35 20 ...
+     7AB6   F2
+     7AB7   1A
+     7AB8   32 36 20 ...
+     7AC0   D3
+     7AC1   1B
+     7AC2   32 37 20 ...
+     7ACD   F2
+     7ACE   1C
+     7ACF   32 38 20 ...
+     7AD8   F2
+     7AD9   1D
+     7ADA   32 39 20 ...
+     7AE3   D3
+     7AE4   21
+     7AE5   33 33 20 ...
+     7AEA   D3
+     7AEB   25
+     7AEC   33 37 20 ...
+     7AF2   D3
+     7AF3   2B
+     7AF4   34 33 20 ...
+     7AFB   D3
+     7AFC   2E
+     7AFD   34 36 20 ...
+     7B09   D3
+     7B0A   2F
+     7B0B   34 37 20 ...
+     7B13   D3
+     7B14   35
+     7B15   35 33 20 ...
+     7B1F   D3
+     7B20   36
+     7B21   35 34 20 ...
+     7B2B   EC
+     7B2C   81
+     7B2D   31 32 39 ...
+     7B3A   ED
+     7B3B   82
+     7B3C   31 33 30 ...
+     7B45   ED
+     7B46   83
+     7B47   31 33 31 ...
+     7B4E   ED
+     7B4F   FF
+.end
+Saving file 'whatfs'
+Processed file 'WHATFS.asm' ok

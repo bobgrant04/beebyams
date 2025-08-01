@@ -159,9 +159,30 @@ Dr%=3
 \os calls
 ORG &6E00
 GUARD &7C00
-BUILD_COPYRIGHT
+\BUILD_COPYRIGHT
 .start
-
+.startexec
+JMP BCD
+.helptxt 
+\--------------------------------
+\replace for &6E07
+\display starts &6E10
+\after display &6E18
+\end by &6E25
+\NB keep below 255 chars  zero ternminated
+\printed twice as the banner
+\mode 7
+\EQUB 22
+\EQUB 7
+EQUB TELETEXTDoubleheight
+EQUB TELETEXTwhitetext
+EQUB TELETEXTnewbackground
+EQUB TELETEXTbluetext
+EQUS "MMC MENU DISPLAY              V"
+BUILD_VERSION 
+\EQUS TIME$("%x")
+EQUB &D
+EQUB 0
 \ advanced disk user guide pg 241 , pg 42
 .drivestatus
 
@@ -1350,7 +1371,6 @@ JSR TerminateFilterArray
 RTS
 
 \getsearchtxt (description) getsearchtxt
-
 		.getsearchtxt
 		{
 		LDX #searchdescription
@@ -1379,11 +1399,9 @@ RTS
 		}\rts
 
 \Browse catdat BCD
-
-		.startexec
-		.BCD
-		JSR HardInitmenu
 		
+		.BCD
+		JSR HardInitmenu		
 		.bcd
 		{
 \set exten record 
@@ -1428,7 +1446,6 @@ RTS
 		\STA resultvar
 		\display filter results re-entry
 		}
-
 		.browseresults
 		{
 		JSR generalselection
@@ -1463,19 +1480,12 @@ RTS
 
 
 
-	.lcr
-	{
-	JSR PostGeneralSelection
-	JSR CopyPreviousRecordSettoAptr
-	JSR mrzeroz
-	}
-		\clear X%
-		\LDX #('X'-'A')*4
-		\JSR clearint
-		\clear U%
-		\LDX #('U'-'A')*4
-		\JSR clearint
-		\get X% din no
+		.lcr
+		{
+		JSR PostGeneralSelection
+		JSR CopyPreviousRecordSettoAptr
+		JSR mrzeroz
+		}
 		JSR GetEndDescription
 		INY
 		LDA (APtr),Y
@@ -2010,22 +2020,7 @@ JMP mks
 		EQUS"ACGSMPUZ"
 		}
 
-\Convert Case cvc
-\		.cvc
-\		{
-\		CMP #'#'
-\		BEQ ad
-\		CMP #'A'
-\		BCC bh
-\		\lowercase
-\		CLC
-\		ADC #32 
-\		.bh
-\		RTS
-\		.ad
-\		LDA #TELETEXTmagentatext
-\		RTS
-\		}
+
 
 \Selectwindow slw TAKES Y TOPWindow,btmw%,mainW%
 		.Selectwindow
@@ -2688,22 +2683,7 @@ EQUB &80+'P'
 \EQUB &80+'E'
 EQUB 0
 \--------------------------------
-.helptxt 
-\--------------------------------
-\NB keep below 255 chars  zero ternminated
-\printed twice as the banner
-\mode 7
-\EQUB 22
-\EQUB 7
-EQUB TELETEXTDoubleheight
-EQUB TELETEXTwhitetext
-EQUB TELETEXTnewbackground
-EQUB TELETEXTbluetext
-EQUS "MMC MENU DISPLAY "
-BUILD_VERSION 
-\EQUS TIME$("%x")
-EQUB &D
-EQUB 0
+
 \-------------------------------
 .helptxt1
 \-------------------------------

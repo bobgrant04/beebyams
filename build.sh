@@ -42,7 +42,7 @@ do
 	./tools/title.pl ${sys} "$system $VERSION"
     
 	if [ $system == "beebyams" ]; then
-        DEVICES="ASR ALTER ALTER+ ADR CMD COMPRESS CRC DIN IMPORT MAGIC MMCDISC MMUDISP U WHATFS X GFN"
+        DEVICES="ASR ALTER ALTER+ ADR CMD COMPRESS CRC DIN IMPORT MAGIC MMCDISC MMUDISP U WHATFS X GFN pubstr"
     else
         DEVICES=""
     fi

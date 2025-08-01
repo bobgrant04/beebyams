@@ -1886,17 +1886,24 @@ JMP mks
 		.mb
 		INY
 		LDA (APtr),Y
+		CMP #'#'
+		BNE aa
+		.ad
+		LDA #TELETEXTmagentatext
+		BNE mc
+		.aa
 		CMP #&80
 		BCS bi
 		CPY #0
 		BEQ mc
-		JSR cvc
+		\JSR cvc
 		.mc
 		JSR OSASCI
 		BNE mb
 		.bi
 		AND #&7F
-		JSR cvc
+		\JSR cvc
+		.ab
 		JSR OSASCI
 		LDA comprec
 		BNE ExtendedPrintentry
@@ -2004,21 +2011,21 @@ JMP mks
 		}
 
 \Convert Case cvc
-		.cvc
-		{
-		CMP #'#'
-		BEQ ad
-		CMP #'A'
-		BCC bh
-		\lowercase
-		CLC
-		ADC #32 
-		.bh
-		RTS
-		.ad
-		LDA #TELETEXTmagentatext
-		RTS
-		}
+\		.cvc
+\		{
+\		CMP #'#'
+\		BEQ ad
+\		CMP #'A'
+\		BCC bh
+\		\lowercase
+\		CLC
+\		ADC #32 
+\		.bh
+\		RTS
+\		.ad
+\		LDA #TELETEXTmagentatext
+\		RTS
+\		}
 
 \Selectwindow slw TAKES Y TOPWindow,btmw%,mainW%
 		.Selectwindow

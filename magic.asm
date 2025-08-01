@@ -69,12 +69,7 @@ GUARD &7C00
 
 .start
 INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
-\10 20 3dsurfa
-\10 80 cow daffy guards nfl quaza
-\10 00 arnee wwolf
-\60 40 shape sail root03 mand01 mand02 mand04 root01 root02
-\20 40 mand03
-\section for Magic tables
+
 
 .startexec
 {
@@ -144,34 +139,76 @@ STX tempx
 DEY
 STY tempy
 \"…"Have drive param
-LDX #NoSpecials%:JSR prepcmd:LDY tempy:LDA(blockstart),Y:STA strA%,X
-INX : LDA #&D : STA strA%,X
-DEY:STA(blockstart),Y:STY tempy
+LDX #NoSpecials%
+JSR prepcmd
+LDY tempy
+LDA(blockstart),Y
+STA strA%,X
+INX
+LDA #&D
+STA strA%,X
+DEY
+STA (blockstart),Y
+STY tempy
 JSR execmd
-LDX tempx:LDY tempy
-.ab:CPX #1:BCC ac
+LDX tempx
+LDY tempy
+.ab
+CPX #1
+BCC ac
 \"…"Have DIN param
-.ad: DEY : LDA(blockstart),Y : CMP #32:BNE ad:LDA #&D:STA(blockstart),Y:STY tempy
-LDX #NoSpecials%+1:JSR prepcmd:LDY tempy
+.ad
+DEY
+LDA(blockstart),Y
+CMP #32
+BNE ad
+LDA #&D
+STA (blockstart),Y
+STY tempy
+LDX #NoSpecials%+1
+JSR prepcmd
+LDY tempy
 DEX
-.ae:INY:INX:LDA(blockstart),Y:STA strA%,X:CMP #&D:BNE ae:CMP #&32:BEQ ae
-LDA #&D:STA strA%,X
+.ae
+INY
+INX
+LDA(blockstart),Y
+STA strA%,X
+CMP #&D
+BNE ae
+CMP #&32
+BEQ ae
+LDA #&D
+STA strA%,X
 JSR execmd
 .ac
 \clear E%,L%:S%
-LDX #(('E'-'A')*4):JSR clearint
-LDX #(('L'-'A')*4):JSR clearint
-LDX #(('P'-'A')*4):JSR clearint
+LDX #(('E'-'A')*4)
+JSR clearint
+LDX #(('L'-'A')*4)
+JSR clearint
+LDX #(('P'-'A')*4)
+JSR clearint
 \"Process filename
 \now have blockstart with filename does file exist
 
-LDX #blockstart:LDY #0:LDA #5:JSR OSFILE:CMP #1:BEQ al:LDX #2:STX p:JMP diserror:.al
-\LDA load:STA l: LDA load+1:STA l+1:LDA size:STA s:LDA size+1:STA s+1
-\LDA exe:STA e:LDA exe+1:STA e+1
-\check to see if exe is in the 7CXX range
-LDA exe+1:CMP #&7F:BNE Magic:
-LDA quiet:BNE ax
-LDX #4:JSR diserror
+LDX #blockstart
+LDY #0
+LDA #5
+JSR OSFILE
+CMP #1
+BEQ al
+LDX #2
+STX p
+JMP diserror
+.al
+LDA exe+1
+CMP #&7F
+BNE Magic:
+LDA quiet
+BNE ax
+LDX #4
+JSR diserror
 .ax
 RTS
 }
@@ -303,9 +340,9 @@ RTS
 \should not be here
 \drop through to screencheck
 BRK
-\if Quiet check ProcessNextRecainst existing
+\if Quiet check E and L existing
 
-
+\screencheck
 		.screencheck
 		{
 		\mode 7 &7C00 len &400
@@ -392,17 +429,12 @@ BRK
 		.exit
 		RTS
 		}
-\.ab:
-
-
-\Entry type 1
-\1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
-\1,Offset, nobytes,exec,load ident
 
 \ALL Magic subs end with either Fullmatch if matched
+\Fullmatch needs to point to exe
 \or movenext - requires Y to be in the description part of the record
-\CMP #1
-\BNE Not1
+\1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
+\Magic1
 		.Magic1
 		{
 		INY
@@ -431,22 +463,8 @@ BRK
 		JMP fullmatch
 		}
 
-\.movenxt
-\{
-\LDY #2
-\LDA (Aptr),Y
-\CLC
-\ADC #7
-\TAY
-\JSR NextRec
-\JMP ff
-\}
-
-.Not1
-\Entry type 2
 \2,Startrange,Endrange,minvalue,maxvalue,exec,load ident
-\CMP #2
-\BNE Not2
+\Magic2
 		.Magic2
 		{
 		LDA e
@@ -478,11 +496,9 @@ BRK
 		LDY #&A
 		JMP NextRec
 		}
-\.Not2
-\Entry type 3 
+		
 \3,loadadd,exec,load,ident
-\CMP #3
-\BNE Not3
+\Magic3
 		.Magic3
 		{
 		INY
@@ -499,16 +515,9 @@ BRK
 		LDY #7
 		JMP NextRec
 		}
-\.ProcessNextRec
-\LDY #7
-\JSR NextRec
-\JMP ff
-
-.Not3
-\Entry type 4
+		
 \4,exec,exec,load,ident 7 to ident
-\CMP #4
-\BNE Not4
+\Magic4
 		.Magic4
 		{
 		INY
@@ -525,11 +534,9 @@ BRK
 		LDY #7
 		JMP NextRec
 		}
-\.Not4
-\Entry type 5
+
 \5, no of high byte pairs, (high,count or higher),exec,load,ident
-\CMP #5
-\BNE Not5
+\Magic5
 		.Magic5
 		{
 		\JSR statistic
@@ -574,12 +581,7 @@ BRK
 		TAY
 		JMP NextRec
 		}
-
-\.Not5
-\Entry 6
-\6,ofset,nobytes,check bytes,exec,load,ident
-\CMP #6
-\BNE not6
+\Magic6
 		.Magic6
 		{
 		INY
@@ -607,11 +609,7 @@ BRK
 		INY
 		JMP fullmatch
 		}
-\.not6
-\Entry type 7
-\7,count,no entries,bytes,exec,load,ident
-\CMP #7
-\BNE Not7
+\Magic7
 		.Magic7
 		{
 		\JSR statistic
@@ -645,7 +643,7 @@ BRK
 		INY
 		JMP fullmatch
 		}
-
+\Magic8
 		.Magic8
 		{
 		INY
@@ -662,7 +660,7 @@ BRK
 		LDY #7
 		JMP NextRec
 		}
-
+\Magic9
 		.Magic9
 		{
 		INY
@@ -703,7 +701,7 @@ BRK
 		LDX tempx
 		BNE loop
 		}
-
+\GethighestByte
 		.GethighestByte
 		{
 		LDA #0
@@ -720,8 +718,8 @@ BRK
 		STA noofbytes
 		RTS
 		}
-		
-		.statistic: \need to create a page of freqs
+\statistic		
+		.statistic \need to create a page of freqs
 		{
 		LDA #0
 		STA zz
@@ -757,7 +755,7 @@ BRK
 		STA z+1
 		RTS
 		}
-		
+\NextRec		
 		.NextRec
 		{
 		.aa
@@ -823,10 +821,6 @@ BRK
 \diserror		
 		.diserror
 		{
-		\LDA erraddr
-		\STA erradd
-		\LDA erraddr+1
-		\STA erradd+1
 		LDA #HI(errtxt)
 		STA erradd+1
 		LDA #LO(errtxt)
@@ -1061,8 +1055,6 @@ EQUS"7F03 4000 mode 3 Screen":EQUB &D
 EQUS"7F02 3000 mode 2 Screen":EQUB &D
 EQUS"7F01 3000 mode 1 Screen":EQUB &D
 EQUS"7F00 3000 mode 0 Screen":EQUB &8D
-
-
 .end
 
 

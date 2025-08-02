@@ -5,7 +5,7 @@
 INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
-__DEBUG =TRUE
+__DEBUG =FALSE
 \"…Variables
 NoSpecials%=7:\"offset from 1
 EndSpecial%=&FF-NoSpecials% \ TODO REMOVE
@@ -460,7 +460,7 @@ INCLUDE "OSARGS.ASM"
 		BNE aa
 		RTS
 		}
-		\add pram$ to strA%
+	\add pram$ to strA%
 		.addpram
 		{
 		LDY #&FF
@@ -575,7 +575,39 @@ INCLUDE "OSARGS.ASM"
 		TXA
 		JMP OSASCI \RTS
 		}
-		\Display error
+		.OSFILEdelete
+		{
+		IF __DEBUG
+			{
+			LDX #&FF
+			.aa
+			INX
+			LDA debugtext,X
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			BEQ ab
+			.debugtext
+			EQUS "delete file"
+			EQUB &D
+			.ab
+			JSR gti
+			}
+		ENDIF
+		\LDA #LO(catdat)
+		\STA block
+		\LDA #HI(catdat)
+		\STA block+1
+		LDA #OSFILEdelete%
+		JMP OSFILEexecute \rts
+		}
+		.OSFILEexecute
+		{
+		LDX #LO(block)
+		LDY #HI(block)
+		JMP OSFILE \rts
+		}
+	\Display error
 		\takes x as strno
 		.diserror
 		{
@@ -1039,7 +1071,7 @@ INCLUDE "OSARGS.ASM"
 		\set requeested drive back
 		\display text
 		{
-		LDA #repinfin%:STA tempx
+		LDA #rep3instruction%:STA tempx
 		JSR reptoninstructions
 		}
 		
@@ -1070,8 +1102,8 @@ INCLUDE "OSARGS.ASM"
 		
 		
 		\*repton2
-		LDX #reptonthreecmd%
-		JSR initprepcmd
+		\LDX #reptonthreecmd%
+		\JSR initprepcmd
 		\RTS:\debug
 		}
 		\display text
@@ -1150,7 +1182,7 @@ INCLUDE "OSARGS.ASM"
 			BNE aa
 			BEQ ab
 			.debugtext
-			EQUS "repton infinity"
+			EQUS "rep inf"
 			EQUB &D
 			.ab
 			JSR gti
@@ -1162,56 +1194,62 @@ INCLUDE "OSARGS.ASM"
 		STA requesteddrive
 		JSR setrequesteddrive
 		\set drive 0 to x-files
+		LDA tempx
+		STA requesteddrive
 		LDX #xfilescmd%
 		JSR initprepcmd
 		JSR execmd
+		
 		\need to delete prelude from x-files without interaction
-		LDX #LO(preludetxt)
-		LDY #HI(preludetxt)
-		LDA #6
-		JSR OSFILE
+		JSR OSFILEdelete
+		
+		\LDX #LO(preludetxt)
+		\LDY #HI(preludetxt)
+		\LDA #6
+		\JSR OSFILE
 		\copy file to xfiles (dr.0) 
 		\copy 3 0 XXXX
 		LDX #copycmd%
 		JSR initprepcmd
+		LDA requesteddrive
+		STA strA%+5
 		JSR addpram
 		\DEX:JSR addprelude:
 		JSR execmd
 		\drive 0
-		JSR setrequesteddrive
+		\JSR setrequesteddrive
 		\LDX #NoSpecials%+6
 		\JSR initprepcmd:JSR execmd
 		\rename file to prelude
 		LDX #renamecmd%
 		JSR initprepcmd
 		JSR addpram
+		INC strAoffset
 		LDX #preludecmd%
 		JSR prepcmd
 		JSR execmd
-		\DEX:JSR addprelude:JSR execmd
-\display text
+		\*k,2 mo.5 repI
+		LDX #reptonIkeyset2%
+		JSR initprepcmd
+		JSR execmd
 		LDA #repinfin%
 		STA tempx
 		JSR reptoninstructions
+		LDA #FUNCTIONkey2
+		STA key
+		JMP putkeyinbuffer \RTS
+		\DEX:JSR addprelude:JSR execmd
+\display text
+		
 		\{
 		\LDX #0
 		\.aa:LDA reptoninfinitytext,X:BEQ ac:JSR osasci:INX:BNE aa
 		\.ac
 		\JSR gti
-		LDX #reptonicmd%
-		JSR initprepcmd
+		\LDX #reptonicmd%
+		\JSR initprepcmd
 \setmode and execute
-		.setandexe
-		{
-		LDY #endmodexec-modexec
-		.xx
-		LDA modexec,Y
-		STA &900,Y
-		DEY
-		BPL xx
-		LDX #5 \mode5
-		JMP &900 \rts
-		}
+		
 \*repi
 \LDX #NoSpecials%+9
 \JSR initprepcmd:JMP execmd:\RTS
@@ -1409,6 +1447,18 @@ INCLUDE "OSARGS.ASM"
 		LDY #HI(strA%)
 		LDX #LO(strA%)
 		JMP codestart
+		
+		.setandexe
+		{
+		LDY #endmodexec-modexec
+		.xx
+		LDA modexec,Y
+		STA &900,Y
+		DEY
+		BPL xx
+		LDX #5 \mode5
+		JMP &900 \rts
+		}
 \-----------------------
 		.codebegin
 		\need to keep code here to min
@@ -1479,8 +1529,8 @@ EQUS"LO.",&A0
 xfilescmd%=10
 EQUS "DIN x-files",&8D
 \* run repton3 #4
-reptonthreecmd%=11
-EQUS "REP3",&8D
+reptonIkeyset2%=11
+EQUS "K.2MO.5|M*RepI|M",&8D
 \*K.1 #5
 key1cmd%=12
 EQUS "K.1",':'+&80
@@ -1504,9 +1554,11 @@ EQUB'*':EQUB &80+'.'
 \prelude
 .preludetxt
 preludecmd%=19
-EQUS " g.a",&8D  \todo ????? was &D
+EQUS " g.a",&D,&8D  \todo ????? was &D
 repton3keyset2%=20
 EQUS "k.2MO.5|M*REP3|M",&8D
+repinfin%=21
+EQUS "A",' '+&80
 
 
 .boottxt:EQUS"!BOOT"
@@ -1553,7 +1605,7 @@ EQUS"7F00 mode 0 Screen":EQUB &D \22 7 curser off g=get
 EQUS"Version 2.0"
 EQUD &8D
 \#9 repinfinity
-repinfin%=8
+rep3instruction%=8
 EQUS"F",'1'+&80
 \#8 rep3
 rep3%=9
@@ -1561,11 +1613,22 @@ EQUS 'A'+&80
 
  
 .reppre
-EQUS &D,&D,&D,&D,&D,&D,"When game loads please press",130,"L",&D,"Then press",130,0
+EQUS &D,&D,&D,&D,&D,&D,"When game loads please press"
+EQUS 130,"L",&D,"Then press",130
+EQUB 0
 .reppost
-EQUS 135,"to load selected level",&D,131,136,"Press any key",&D,0
+EQUS 135,"to load selected level",&D
+EQUS 131,136,"Press any key",&D
+EQUB 0
 
-
+.block
+EQUB Lo(preludetxt)
+EQUB HI(preludetxt)
+EQUB 0
+EQUB 0
+EQUW 0
+EQUW 0
+EQUD 0
 
 \.preludetxt
 \EQUS " g.a",&D

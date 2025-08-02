@@ -18,6 +18,20 @@ OSBPUT=&FFD4
 OSBGET=&FFD7
 OSARGS=&FFDA
 OSFILE=&FFDD
+	\A=....
+	\&FD 	 Read file system information (Internal Name)
+	\&FE 	 Verify file
+	\&FF 	 Load file
+	\0	 Save file
+	\1	 Write load, exec, attrs
+	\2	 Write load address
+	\3	 Write execution address
+	\4	 Write attributes
+	\5	 Read object information
+	\6	 Delete object
+	OSFILEdelete% =6
+	\7	 Create empty file
+	\8	 Create a directory
 OSBYTE=&FFF4
 OSRDCH=&FFE0
 OSASCI=&FFE3

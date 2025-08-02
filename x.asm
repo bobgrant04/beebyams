@@ -140,13 +140,13 @@ Osargsadd =&2A
 
 \&3B to &42 basic float
 \single bytes
-
+key=&3B
 \&50-&6F Not used
 \&70 to &8F reserved for 
 blockstart=&70:load=blockstart+2:exe=blockstart+6:size=blockstart+&A
 cat=&72
 codestart=&70
-\zz=&8E
+
 \90-9F	allocated for Econet system
 \A0-A7	used by current NMI (mostly disc and network filing)
 \   A8-AF	used for OS commands when executing
@@ -207,12 +207,26 @@ ORG &6800
 GUARD &7C00
 
 .start
+BUILD_VERSION
+
 \"„"RUN this can not be over page boundery hence put at top
 .run
 EQUS"O.",13
 EQUS"RUN",13,0
 .modexec
-INCBIN ".\x\$.modexec"
+{
+LDA #&16
+JSR OSASCI
+TXA
+JSR OSASCI
+\LDX #0
+\STX &FE01
+LDY #HI(strA%)
+LDX #LO(strA%)
+JMP OSCLI
+}
+.endmodexec
+\INCBIN ".\x\$.modexec"
 .altdec
 INCBIN ".\x\$.altdec"
 .scrload
@@ -467,18 +481,29 @@ INCLUDE "OSARGS.ASM"
 		.music
 		\get *K.0 DEFINED AND IN BUFFER
 		{
+		IF __DEBUG
+			{
+			LDX #&FF
+			.aa
+			INX
+			LDA debugtext,X
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			BEQ ab
+			.debugtext
+			EQUS "Music busted !!!"
+			EQUB &D
+			.ab
+			JSR gti
+			}
+		ENDIF
 		LDX #key1cmd%
 		JSR initprepcmd
 		JSR execmd
-		LDA #15
-		JSR OSBYTE
-		LDA #255
-		LDX #1
-		JSR OSBYTE
-		LDA #138
-		LDX #0
-		LDY #128
-		JSR OSBYTE
+		LDA #FUNCTIONkey2
+		STA key
+		JSR putkeyinbuffer
 		LDA #35
 		STA &74
 		LDAload+1
@@ -490,6 +515,33 @@ INCLUDE "OSARGS.ASM"
 		JSR initprepcmd
 		JSR addpram
 		JMP execmd
+		}
+		.putkeyinbuffer
+		{
+		IF __DEBUG
+			{
+			LDX #&FF
+			.aa
+			INX
+			LDA debugtext,X
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			BEQ ab
+			.debugtext
+			EQUS "put key in buffer"
+			EQUB &D
+			.ab
+			JSR gti
+			}
+		ENDIF
+		LDX #0
+		LDA #&15 
+		JSR OSBYTE \flush keyboard buffer
+		LDA #138 \insert value into buffer
+		LDX #0 \keyboard
+		LDY key
+		JMP OSBYTE \RTS
 		}
 		.reptoninstructions
 		{
@@ -954,6 +1006,23 @@ INCLUDE "OSARGS.ASM"
 		.repton3
 		{
 		\todo
+		IF __DEBUG
+			{
+			LDX #&FF
+			.aa
+			INX
+			LDA debugtext,X
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			BEQ ab
+			.debugtext
+			EQUS "Repton 3"
+			EQUB &D			
+			.ab
+			JSR gti
+			}
+		ENDIF
 		LDA requesteddrive
 		STA tempx
 		LDA #'0'
@@ -967,23 +1036,23 @@ INCLUDE "OSARGS.ASM"
 		JSR execmd
 		LDA tempx
 		STA requesteddrive
-		\*k.1 setup
-		LDX #key1cmd%
-		JSR initprepcmd
-		JSR addpram
-		JSR execmd
-		\*repton2
-		LDX #reptonthreecmd%
-		JSR initprepcmd
-		\RTS:\debug
-		}
+		\set requeested drive back
 		\display text
 		{
 		LDA #repinfin%:STA tempx
 		JSR reptoninstructions
 		}
-		{
-		\need to init zero page (&70 &82 loaded with zero)
+		
+		\*k.1 setup
+		LDX #key1cmd%
+		JSR initprepcmd
+		JSR addpram
+		LDA requesteddrive
+		STA strA%+4
+		JSR execmd
+		LDX #repton3keyset2%
+		JSR initprepcmd
+		JSR execmd
 		LDX #18
 		LDA #0
 		.ab
@@ -995,7 +1064,38 @@ INCLUDE "OSARGS.ASM"
 		STA &7C
 		LDA #&3
 		STA &7F
-		JMP setandexe
+		LDA #FUNCTIONkey2
+		STA key
+		JMP putkeyinbuffer \RTS
+		
+		
+		\*repton2
+		LDX #reptonthreecmd%
+		JSR initprepcmd
+		\RTS:\debug
+		}
+		\display text
+		{
+\		LDA #repinfin%:STA tempx
+\		JSR reptoninstructions
+		}
+		{
+		\need to init zero page (&70 &82 loaded with zero)
+\		LDX #18
+\		LDA #0\
+\		.ab
+\		STA &70,X
+\		DEX
+\		BPL ab
+\		\need to initaise &7C and &7F
+\		LDA #&60
+\		STA &7C
+\		LDA #&3
+\		STA &7F
+\		LDA #FUNCTIONkey2
+\		STA key
+\		JMP putkeyinbuffer \RTS
+		\JMP setandexe
 		}
 \7FF5 scrload
 		.cj
@@ -1039,6 +1139,23 @@ INCLUDE "OSARGS.ASM"
 		\*repi
 		\------
 		\set to dr.0
+		IF __DEBUG
+			{
+			LDX #&FF
+			.aa
+			INX
+			LDA debugtext,X
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			BEQ ab
+			.debugtext
+			EQUS "repton infinity"
+			EQUB &D
+			.ab
+			JSR gti
+			}
+		ENDIF
 		LDA requesteddrive
 		STA tempx
 		LDA #'0'
@@ -1086,14 +1203,14 @@ INCLUDE "OSARGS.ASM"
 \setmode and execute
 		.setandexe
 		{
-		LDY #0
+		LDY #endmodexec-modexec
 		.xx
 		LDA modexec,Y
 		STA &900,Y
-		INY
-		BNE xx
-		LDX #5
-		JMP &900
+		DEY
+		BPL xx
+		LDX #5 \mode5
+		JMP &900 \rts
 		}
 \*repi
 \LDX #NoSpecials%+9
@@ -1366,7 +1483,7 @@ reptonthreecmd%=11
 EQUS "REP3",&8D
 \*K.1 #5
 key1cmd%=12
-EQUS "K.1:3",'.'+&80
+EQUS "K.1",':'+&80
 \delete prelude #6
 delprelude%=13
 EQUS "del. prelude",&8D
@@ -1388,6 +1505,8 @@ EQUB'*':EQUB &80+'.'
 .preludetxt
 preludecmd%=19
 EQUS " g.a",&8D  \todo ????? was &D
+repton3keyset2%=20
+EQUS "k.2MO.5|M*REP3|M",&8D
 
 
 .boottxt:EQUS"!BOOT"
@@ -1460,4 +1579,5 @@ SAVE "x", start, end,startexec
 \beebasm -i .\x\x.asm -do .\x\x.ssd -boot x -v -title x
 \beebasm -i .\x\x.asm -di .\x\x-devtemplate.ssd -do .\x\x-dev.ssd -v
 \beebasm -i .\x\x.asm -di .\x\x-filestemplate.ssd -do .\x\x-files.ssd -v
+\ ./tools/beebasm/beebasm.exe -i ./x.asm -do ./build/x.ssd -boot x -v -title x
 

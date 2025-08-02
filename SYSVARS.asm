@@ -48,3 +48,17 @@ FINDV =&21C	\open or close file
 FSCV =&21E	\file system control entry
 EVNTV =&220	\event interrupt
 UPTV =&220	\user print routine
+
+FUNCTIONkey0 =128
+FUNCTIONkey1 =129
+FUNCTIONkey2 =130
+FUNCTIONkey3 =131
+FUNCTIONkey4 =132
+FUNCTIONkey5 =133
+FUNCTIONkey6 =134
+FUNCTIONkey7 =135
+FUNCTIONkey8 =136
+FUNCTIONkey9 =137
+FUNCTIONkey10 =138
+FUNCTIONkey11 =139
+

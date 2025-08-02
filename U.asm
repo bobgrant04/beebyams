@@ -13,8 +13,6 @@ GUARD &B00
 \output  Usage (<dno>/<dsp>) (<drv>)
 \ X  filename$ diskname$ 3
 
-
-
 \…Variables
 \Novariants=2
 \Dr%=3

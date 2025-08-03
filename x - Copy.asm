@@ -5,7 +5,6 @@
 INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
-INCLUDE "TELETEXT.asm"
 __DEBUG =FALSE
 \"…Variables
 NoSpecials%=7:\"offset from 1
@@ -114,7 +113,7 @@ Aptr=&2C
 trueadd=&2E
 loadadd=&30
 exeadd=&32
-\erradd=&34
+erradd=&34
 \--------------------------------------------------------------
 \&36 LENGTH OF STRING BUFFER
 \--------------------------------------------------------------
@@ -137,7 +136,6 @@ drive=&42
 \--------------------------------------------------------------
 \IntA &2A -&2D
 Osargsadd =&2A
-TextAdd =&2C
 \&2E TO &35 basic float
 
 \&3B to &42 basic float
@@ -145,10 +143,7 @@ TextAdd =&2C
 key=&3B
 \&50-&6F Not used
 \&70 to &8F reserved for 
-blockstart=&70
-load=blockstart+2
-exe=blockstart+6
-size=blockstart+&A
+blockstart=&70:load=blockstart+2:exe=blockstart+6:size=blockstart+&A
 cat=&72
 codestart=&70
 
@@ -244,7 +239,16 @@ INCBIN ".\x\$.altldpc"
 .tybmusic
 INCBIN ".\x\$.code2"
 INCLUDE "OSARGS.ASM"
-		
+		.ToManyVariables
+		.ZeroError
+		.NoDisk
+		{
+		LDX #1:JSR diserror
+		LDX #4:JSR diserror
+		LDX #5:JSR diserror
+		LDX #6:JSR diserror
+		LDA #7:JMP diserror:\JMP so end
+		}
 		.GetDrive
 		{
 		LDX #2
@@ -286,6 +290,10 @@ INCLUDE "OSARGS.ASM"
 		}
 		.DealwithArgCount
 		{
+		CPX #0
+		BEQ ZeroError
+		CPX #4
+		BCS ToManyVariables
 		CPX #2
 		BCC aa
 		\have full command line
@@ -409,10 +417,13 @@ INCLUDE "OSARGS.ASM"
 		}
 		.prepcmd
 		{
-		JSR MoveToRec
+		LDY #0
+		.ez
+		DEX
+		BNE nexcmd
 		LDX strAoffset
 		.ey
-		LDA TextAdd,Y
+		LDA cmdadd,Y
 		CMP #&80
 		BCC am
 		AND #&7F
@@ -427,6 +438,12 @@ INCLUDE "OSARGS.ASM"
 		INX
 		INY
 		BNE ey
+		.nexcmd
+		LDA cmdadd,Y
+		INY
+		CMP #&80
+		BCC nexcmd
+		BCS ez 
 		}
 		\Set cursor off
 		.sco
@@ -577,6 +594,10 @@ INCLUDE "OSARGS.ASM"
 			JSR gti
 			}
 		ENDIF
+		\LDA #LO(catdat)
+		\STA block
+		\LDA #HI(catdat)
+		\STA block+1
 		LDA #OSFILEdelete%
 		JMP OSFILEexecute \rts
 		}
@@ -590,63 +611,38 @@ INCLUDE "OSARGS.ASM"
 		\takes x as strno
 		.diserror
 		{
-		JSR MoveToRec
-		JMP PrintRecord
-		}
-		.PrintRecord
-		{
+		LDA #LO(errtxt)
+		STA erradd
+		LDA #HI(errtxt)
+		STA erradd+1
+		LDY #0
+		.ba
+		DEX
+		BNE bb
 		.bc
-		LDA (TextAdd),Y
+		LDA (erradd),Y
 		CMP #&80
 		BCC bd
 		AND #&7F
-		JMP OSASCI \RTS
+		JSR OSASCI
 		RTS
 		.bd
 		JSR OSASCI
 		INY
 		BNE bc
-		}
-		.MoveToRec
-		{
-		LDA #LO(CommandAndErrorText)
-		STA TextAdd
-		LDA #HI(CommandAndErrorText)
-		STA TextAdd+1
-		LDY #0
-		.ba
-		DEX
-		BNE bb
-		RTS
 		.bb
-		LDA (TextAdd),Y
+		LDA (erradd),Y
 		INY
 		CMP #&80
 		BCC bb
 		CLC
 		TYA
-		ADC TextAdd
-		STA TextAdd
-		LDA #0
-		ADC TextAdd+1
-		STA TextAdd+1
+		ADC erradd
+		STA erradd:LDA #0
+		ADC erradd+1
+		STA erradd+1
 		LDY #0
 		BEQ ba
-		}
-		.ToManyVariables
-		.ZeroError
-		.NoDisk
-		{
-		LDX #usage%
-		JSR diserror
-		LDX #extendedhelp%
-		JSR diserror
-		LDX #extendedhelpcont1%
-		JSR diserror
-		LDX #extendedhelpcont2%
-		JSR diserror
-		LDX #extendedhelpcont3%
-		JMP diserror:\JMP so end
 		}
 \-------------------------
 		
@@ -679,12 +675,8 @@ INCLUDE "OSARGS.ASM"
 		{
 		JSR OSARGSinit
 		JSR OSARGSargcountX
-		CPX #0
-		BEQ ZeroError
-		CPX #4
-		BCS ToManyVariables
-		JSR DealwithArgCount
 		}
+		JSR DealwithArgCount
 		\Din command issued
 		\requesteddrive Set
 		JSR setrequesteddrive
@@ -1313,11 +1305,11 @@ INCLUDE "OSARGS.ASM"
 		BNE ag
 		\Special exe address not coded
 		.notcoded
-		LDX #exeaddressinvalid%
+		LDX #3
 		JSR diserror
-		LDX #extendedhelp%
+		LDX #4
 		JSR diserror
-		LDX #extendedhelpcont1%
+		LDX #5
 		JMP diserror:\rts
 \JMP so end
 \prepload
@@ -1516,134 +1508,140 @@ INCLUDE "OSARGS.ASM"
 \-----------------------
 \Strings
 \-----------------------		
-		.boottxt:EQUS"!BOOT"
-		.CommandAndErrorText
-		.cmdadd
-		.errtxt
-		\*LDPIC FE
+.boottxt:EQUS"!BOOT"
+
+.cmdadd
+\*LDPIC FE
 	ldpiccmd%=1
-		EQUS"LDPIC",&A0
-		\*SCRLOAD FD not working !
+	EQUS"LDPIC",&A0
+\*SCRLOAD FD not working !
 	scrloadcmd%=2
-		EQUS"SCRLOAD",&A0
-		\*TYPE FC
+	EQUS"SCRLOAD",&A0
+\*TYPE FC
 	typecmd%=3
-		EQUS"TY",&AE
-		\*DUMP FB
+	EQUS"TY",&AE
+\*DUMP FB
 	dumpcmd%=4
-		EQUS"DU",&AE
-		\*EXEC FA
+	EQUS"DU",&AE
+\*EXEC FA
 	execfilecmd%=5
-		EQUS"EX",&AE
+	EQUS"EX",&AE
+ \*dec F9
 	deccmd%=6
-		EQUS"dec",&A0
-		\SPECIALS ABOVE ALTER NoSpecials%
-		\*DRIVE #0
+	EQUS"dec",&A0
+\SPECIALS ABOVE ALTER NoSpecials%
+\*DRIVE #0
 	dricmd%=7
-		EQUS"DR.",' '+&80
+	EQUS"DR.":EQUB' '+&80
+\*DIN #1
 	dincmd%=8
-		EQUS"DIN",' '+&80
+	EQUS"DIN",&A0
+\*LOAD #2
 	loadcmd%=9
-		EQUS"LO.",' '+&80
-		\select repton3 disk #3
+	EQUS"LO.",&A0
+\select repton3 disk #3
 	xfilescmd%=10
-		EQUS "DIN x-files",&8D
-		\* run repton3 #4
+	EQUS "DIN x-files",&8D
+\* run repton3 #4
 	reptonIkeyset2%=11
-		EQUS "K.2MO.5|M*RepI|M",&8D
-		\*K.1 #5
+	EQUS "K.2MO.5|M*RepI|M",&8D
+\*K.1 #5
 	key1cmd%=12
-		EQUS "K.1",':'+&80
+	EQUS "K.1",':'+&80
+\delete prelude #6
 	delprelude%=13
-		EQUS "del. prelude",&8D
+	EQUS "del. prelude",&8D
+\copy start #7
 	copycmd%=14
-		EQUS "copy 3 0",' '+&80
+	EQUS "copy 3 0",&A0
+\rename #8
 	renamecmd%=15
-		EQUS "Ren.",' '+&80
+	EQUS "Ren.",&A0
+\ REPi #9
 	reptonicmd%=16
-		EQUS "RepI",&8D
-		\1100
+	EQUS "RepI",&8D
+\1100
 	laddcmd%=17
-		EQUS" 1100",&8D
-			
+	EQUS" 1100",&8D
+	
 	catcmd%=18
-		EQUB'*',&80+'.'
-		\prelude
-		.preludetxt
+	EQUB'*':EQUB &80+'.'
+\prelude
+	.preludetxt
 	preludecmd%=19
-		EQUS " g.a",&D,&8D
-			
+	EQUS " g.a",&D,&8D
+	
 	repton3keyset2%=20
-		EQUS "k.2MO.5|M*REP3|M",&8D
-			\repinfin%=21
-			\EQUS 'A'+&80
-
-	usage%=21
-		EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)":EQUB &8D
-	notfound%=22
-		EQUS"file not found",&8D
-	exeaddressinvalid%=23
-		EQUS"Special exe address not code",&80+'d' 
-	extendedhelp%=24
-		EQUS"Basic progs have exe 8023":EQUB &D
-		EQUS"And will be Run from load address":EQUB &D
-		EQUS"!BOOT will be run as per disk opt":EQUB &D
-		EQUS"ROM load should be 8000":EQUB &D
-		EQUS"Files to be *DUMP exe 7FFB":EQUB &D
-		EQUS"TYB music samples to be exe 7FFA":EQUB &D
-		EQUS"Files to be *EXEC exe 7FFA",&8D
-		\#5 EXTENDED HELP CONT
-	extendedhelpcont1%=25
-		EQUS"7FFE LDPIC compressed picture",&D
-		EQUS"7FFD SHOWPIC not working",&D
-		EQUS"7FFC type word text",&D
-		EQUS"7FFB DUMP",&D
-		EQUS"7FFA EXEC",&8D
-	extendedhelpcont2%=26	
-		EQUS"7FF9 TYB music samples":EQUB &D
-		EQUS"7FF8 DEC compressed picture":EQUB &D
-		EQUS"7FF7 viewsheet":EQUB &D
-		EQUS"7FF6 31E0 repton 3 level(screen)":EQUB &D
-		EQUS"7FF5 SCRLOAD TODO":EQUB &D
-		EQUS"7FF4 31E0 repton infinity level(screen)":EQUB &D
-		EQUS"7F07 mode 7 Screen":EQUB &D
-		EQUS"7F06 mode 6 Screen":EQUB &D
-		EQUS"7F05 mode 5 Screen":EQUB &D
-		EQUS"7F04 mode 4 Screen":EQUB &8D
-	extendedhelpcont3%=27
-		EQUS"7F03 mode 3 Screen":EQUB &D
-		EQUS"7F02 mode 2 Screen":EQUB &D
-		EQUS"7F01 mode 1 Screen":EQUB &D
-		EQUS"7F00 mode 0 Screen":EQUB &D \22 7 curser off g=get
-		EQUS"Version ": BUILD_VERSION
-		EQUD &8D
-		\#9 repinfinity
-	rep3instruction%=28
-		EQUS"F",'1'+&80
-		\#8 rep3
-		\rep3%=9
-	repinfin%=29
-		EQUS 'A'+&80
-
-		\Zero terminated strings 
-		.reppre
-		EQUS &D,&D,&D,&D,&D,&D,"When game loads please press"
-		EQUS TELETEXTgreentext,"L",&D,"Then press"
-		EQUS TELETEXTgreentext
-		EQUB 0
-		.reppost
-		EQUS TELETEXTyellowtext,"to load selected level",&D
-		EQUS TELETEXTyellowtext
-		EQUS TELETEXTflashon,"Press any key",&D
-		EQUB 0
+	EQUS "k.2MO.5|M*REP3|M",&8D
+	\repinfin%=21
+	\EQUS 'A'+&80
 
 
+.errtxt
+\ 1 usage"
+EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)":EQUB &8D
+\ 2 file not found 
+notfound%=2
+EQUS"file not found",&8D
+\ 3 exe address invalid
+EQUS"Special exe add not code",&E4
+\ 4 extended help 
+EQUS"Basic progs need exe 8023":EQUB &D
+EQUS"Basic progs need load add set to run page":EQUB &D
+EQUS"!BOOT will be run as per disk opt":EQUB &D
+EQUS"ROM load should be 8000":EQUB &D
+EQUS"Files to be *DUMP exe 7FFB":EQUB &D
+EQUS"TYB music samples to be exe 7FFA":EQUB &D
+EQUS"Files to be *EXEC exe 7FFA":EQUB &D
+EQUS"BOOT will be run as per disk option":EQUB &8D
+\#5 EXTENDED HELP CONT
+EQUS"7FFE LDPIC compressed picture":EQUB &D
+EQUS"7FFD SHOWPIC not working":EQUB &D
+EQUS"7FFC type word text":EQUB &D
+EQUS"7FFB DUMP":EQUB &D
+EQUS"7FFA EXEC":EQUB &8D
+EQUS"7FF9 TYB music samples":EQUB &D
+EQUS"7FF8 DEC compressed picture":EQUB &D
+EQUS"7FF7 viewsheet":EQUB &D
+EQUS"7FF6 31E0 repton 3 level (screen)":EQUB &D
+EQUS"7FF5 SCRLOAD TODO":EQUB &D
+EQUS"7FF4 31E0 repton infinity level (screen)":EQUB &D
+EQUS"7F07 mode 7 Screen":EQUB &D
+EQUS"7F06 mode 6 Screen":EQUB &D
+EQUS"7F05 mode 5 Screen":EQUB &D
+EQUS"7F04 mode 4 Screen":EQUB &8D
+\#6
+EQUS"7F03 mode 3 Screen":EQUB &D
+EQUS"7F02 mode 2 Screen":EQUB &D
+EQUS"7F01 mode 1 Screen":EQUB &D
+EQUS"7F00 mode 0 Screen":EQUB &D \22 7 curser off g=get
+EQUS"Version 2.0"
+EQUD &8D
+\#9 repinfinity
+rep3instruction%=8
+EQUS"F",'1'+&80
+\#8 rep3
+rep3%=9
+repinfin%=9
+EQUS 'A'+&80
 
-		\.preludetxt
-		\EQUS " g.a",&D
-		\.preludeptr
-		\EQUW preludetxt
-		.end
+\Zero terminated strings 
+.reppre
+EQUS &D,&D,&D,&D,&D,&D,"When game loads please press"
+EQUS 130,"L",&D,"Then press",130
+EQUB 0
+.reppost
+EQUS 135,"to load selected level",&D
+EQUS 131,136,"Press any key",&D
+EQUB 0
+
+
+
+\.preludetxt
+\EQUS " g.a",&D
+\.preludeptr
+\EQUW preludetxt
+.end
 SAVE "x", start, end,startexec
 
 \cd d:\bbc/beebasm

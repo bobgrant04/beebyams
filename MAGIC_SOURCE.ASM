@@ -13,7 +13,7 @@ EQUS 6,7,3,0,"(C)",&CD,&D9,0,&80,"Rom #1",13
 \Entry type 1
 \Offset, nobytes,exec,load ident
 \1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
-EQUS 1,4,7,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00 #1",13
+\EQUS 1,4,7,&E7,&90,"<>&E00",&23,&80,0,&E,"relocation to E00 #1",13 \superceeded by entry 9
 EQUS 1,0,1,&10,&80,&FE,&7F,0,0,"Ldpic #1",13
 EQUS 1,0,1,&60,&40,&FE,&7F,0,0,"Ldpic #2",13
 EQUS 1,0,1,&10,0,&FE,&7F,0,0,"Ldpic #3",13
@@ -43,8 +43,8 @@ EQUS 5,1,&76,&B,&F9,&7F,0,&11,"TYB music samples #2",13
 EQUS 5,1,&66,&7,&F9,&7F,0,&11,"TYB music samples #3",13
 EQUS 5,1,&68,&7,&F9,&7F,0,&11,"TYB music samples #4",13
 EQUS 5,1,&67,&7,&F9,&7F,0,&11,"TYB music samples #5",13
-EQUS 5,1,01,&40,&F5,&7F,0,0,"ScrLoad",13
-EQUS 5,1,&FF,&A0,&F5,&7F,0,0,"ScrLoad",13
+EQUS 5,1,01,&40,0,0,&F5,&7F,"ScrLoad",13
+EQUS 5,1,&FF,&A0,0,0,&F5,&7F,"ScrLoad",13
 EQUS 5,2,' ',0,'e',0,&FC,&7F,0,0,"text/word #1",13
 EQUS 5,2,' ',0,'E',0,&FC,&7F,0,0,"text/word #2",13
 \EQUS 5,3,0,1,&80,1,&2E,1,&F7,&7F,0,0,"viewsheet",13

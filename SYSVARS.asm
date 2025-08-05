@@ -26,8 +26,25 @@ OSGBPB=&FFD1
 \=3	 \Read bytes using new pointer
 \=4	 \Read bytes ignoring new pointer
 		OSGBPBTitleAndboot% =5	 \Get media title of CSD disk and boot option
+			\&00  	length of title (n)
+			\&01  	title in ASCII characters
+			\&01+n  	startup option
+			\&02+n  	drive number
+			\&03+n 
 		OSGBPBGetDirectoryName%=6	 \Get currently selected directory name
+			\&00  	length of drive identity (n)
+			\&01  	ASCII drive identity (drive number)
+			\&01+n  	length of directory name (m)
+			\&02+n  	directory name in ASCII characters
+			\&02+n+m  	ownership: &00 - owner, &FF - public
+			\&03+n+m 
 		OSGBPBGetLibraryName%=7	 \Get current library name.
+			\&00  	length of drive identity (n)
+			\&01  	ASCII drive identity (drive number)
+			\&01+n  	length of library name (m)
+			\&02+n  	library name in ASCII characters
+			\&02+n+m  	ownership: &00 - owner, &FF - public
+			\&03+n+m 		
 \=8	 \Read filenames from current directory
 \=9	 \Reads work/login filename, command line tail or entries from specified directory
 \=10	 \Read entries and information from specified directory
@@ -1325,16 +1342,20 @@ FSCV =&21E	\file system control entry
 EVNTV =&220	\event interrupt
 UPTV =&220	\user print routine
 
-FUNCTIONkey0 =128
-FUNCTIONkey1 =129
-FUNCTIONkey2 =130
-FUNCTIONkey3 =131
-FUNCTIONkey4 =132
-FUNCTIONkey5 =133
-FUNCTIONkey6 =134
-FUNCTIONkey7 =135
-FUNCTIONkey8 =136
-FUNCTIONkey9 =137
-FUNCTIONkey10 =138
-FUNCTIONkey11 =139
+FUNCTIONkey0% =128
+FUNCTIONkey1% =129
+FUNCTIONkey2% =130
+FUNCTIONkey3% =131
+FUNCTIONkey4% =132
+FUNCTIONkey5% =133
+FUNCTIONkey6% =134
+FUNCTIONkey7% =135
+FUNCTIONkey8% =136
+FUNCTIONkey9% =137
+FUNCTIONkey10% =138
+FUNCTIONkey11% =139
+
+CopyKey% =&8B
+LeftCursorKey%=&8C
+
 

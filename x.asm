@@ -158,6 +158,7 @@ codestart=&70
 ScrLoadPtr =&A8
 \   B0-BF	filing system scratch space
 \   C0-CF	allocated to current active filing system
+OScurrentDrive%=&CF
 \   D0-E1	allocated to VDU driver
 \   E2		cassette filing system status
 \   E3		cassette filing system options
@@ -267,12 +268,21 @@ INCLUDE "OSARGS.ASM"
 \getcurrent drive
 		.getcurrentdrive
 		{
-		lDA #OSGBPBGetLibraryName%
-		LDX #LO(conb)
-		LDY #HI(conb)
-		JSR OSGBPB
+		\see https://stardot.org.uk/forums/viewtopic.php?p=30012&hilit=assembler+selected+drive#p30012
+		\lDA #OSGBPBGetLibraryName%
+		\LDX #LO(conb)
+		\LDY #HI(conb)
+		\JSR OSGBPB
+		\Hack
+		LDA OScurrentDrive%
+		CLC
+		ADC #'0'
 		IF __DEBUG
 			{
+			LDA OScurrentDrive%
+			CLC
+			ADC #'0'
+			JSR OSASCI
 			LDX #&FF
 			.aa
 			INX
@@ -282,16 +292,16 @@ INCLUDE "OSARGS.ASM"
 			BNE aa
 			BEQ ab
 			.debugtext
-			EQUS "Currentdrive "
+			EQUS " Currentdrive "
 			EQUB &D
 			.ab
-			LDA osgbpbdata%+1
-			JSR OSASCI
 			JSR gti
 			}
 		ENDIF
-		LDA osgbpbdata%+1
-		
+		\LDA osgbpbdata%+1
+		LDA OScurrentDrive%
+		CLC
+		ADC #'0'
 		
 		RTS \RTS
 		}
@@ -512,7 +522,7 @@ INCLUDE "OSARGS.ASM"
 		LDX #key1cmd%
 		JSR initprepcmd
 		JSR execmd
-		LDA #FUNCTIONkey2
+		LDA #FUNCTIONkey2%
 		STA key
 		JSR putkeyinbuffer
 		LDA #35
@@ -722,10 +732,27 @@ INCLUDE "OSARGS.ASM"
 		JSR OSARGSargXtoOSARGSstrB
 		\filenameintopram%
 		\Process filename
+		\need to add $. if no dir specifed
+		LDA pram%+1
+		CMP #'.'
+		BEQ FullyQualifiedFilename
+		{
+		LDX #8
+		.aa
+		LDA pram%,X
+		STA pram%+2,X
+		DEX 
+		BPL aa
+		LDA #'$'
+		STA pram%
+		LDA #'.'
+		STA pram%+1
+		}
+		.FullyQualifiedFilename
 		\Check FOR !BOOT
 		.boot
 		{
-		LDY #4
+		LDY #6
 		.ca
 		LDA boottxt,Y
 		CMP strB%,Y
@@ -854,7 +881,8 @@ INCLUDE "OSARGS.ASM"
 		STA &A00,Y
 		INY
 		BNE xx
-		JMP &900
+		\JMP &900
+		JMP &909
 		}
 		.basicprog
 		IF __DEBUG
@@ -1157,7 +1185,7 @@ INCLUDE "OSARGS.ASM"
 		STA &7C
 		LDA #&3
 		STA &7F
-		LDA #FUNCTIONkey2
+		LDA #FUNCTIONkey2%
 		STA key
 		JMP putkeyinbuffer \RTS
 		
@@ -1194,27 +1222,27 @@ INCLUDE "OSARGS.ASM"
 		.cj
 		CMP #&F5
 		BNE ck
-		{
-		LDY #0
-		.xx
-		LDA scrload,Y
-		STA &900,Y
-		INY
-		BNE xx
-		LDY #0
-		.xa
-		LDA scrload+&100,Y
-		STA &A00,Y
-		INY
-		BNE xa
-		JSR sco
+		\{
+		\LDY #0
+		\.xx
+		\LDA scrload,Y
+		\STA &900,Y
+		\\INY
+		\BNE xx
+		\LDY #0
+		\.xa
+		\LDA scrload+&100,Y
+		\STA &A00,Y
+		\INY
+		\BNE xa
+		\JSR sco
 		\set file name into strA%
-		LDA #0
-		TAY
-		TAX
-		JSR addpram
-		JMP &900
-		}
+		\LDA #0
+		\TAY
+		\TAX
+		\JSR addpram
+		\JMP &900
+		\}
 		.ck
 		CMP #&F4
 		BNE cl
@@ -1296,7 +1324,7 @@ INCLUDE "OSARGS.ASM"
 		LDA #repinfin%
 		STA tempx
 		JSR reptoninstructions
-		LDA #FUNCTIONkey2
+		LDA #FUNCTIONkey2%
 		STA key
 		JMP putkeyinbuffer \RTS
 		\DEX:JSR addprelude:JSR execmd
@@ -1569,7 +1597,7 @@ INCLUDE "OSARGS.ASM"
 \Strings
 \-----------------------		
 		.boottxt
-		EQUS"!BOOT"
+		EQUS"$.!BOOT"
 		.CommandAndErrorText
 		.cmdadd
 		.errtxt
@@ -1641,24 +1669,31 @@ INCLUDE "OSARGS.ASM"
 		EQUS"Basic progs have exe 8023":EQUB &D
 		EQUS"And will be Run from load address":EQUB &D
 		EQUS"!BOOT will be run as per disk opt":EQUB &D
-		EQUS"ROM load should be 8000":EQUB &D
-		EQUS"Files to be *DUMP exe 7FFB":EQUB &D
-		EQUS"TYB music samples to be exe 7FFA":EQUB &D
-		EQUS"Files to be *EXEC exe 7FFA",&8D
+		EQUS"Load ADDRESSES",&D
+		EQUS"8000 ROM ",&D
+		EQUS"7FF5 SCRLOAD",&D
+		EQUS"EXE ADDRESSES",&D
+
+		\EQUS"Files to be *EXEC exe 7FFA",&8D
 		\#5 EXTENDED HELP CONT
 	extendedhelpcont1%=25
-		EQUS"7FFE LDPIC compressed picture",&D
-		EQUS"7FFD SHOWPIC not working",&D
-		EQUS"7FFC type word text",&D
-		EQUS"7FFB DUMP",&D
-		EQUS"7FFA EXEC",&8D
-	extendedhelpcont2%=26	
-		EQUS"7FF9 TYB music samples":EQUB &D
-		EQUS"7FF8 DEC compressed picture":EQUB &D
-		EQUS"7FF7 viewsheet":EQUB &D
-		EQUS"7FF6 31E0 repton 3 level(screen)":EQUB &D
-		EQUS"7FF5 SCRLOAD TODO":EQUB &D
 		EQUS"7FF4 31E0 repton infinity level(screen)", &D
+		EQUS"7FF6 31E0 repton 3 level(screen)":EQUB &D
+		EQUS"7FF7 viewsheet":EQUB &D
+		EQUS"7FF8 DEC compressed picture":EQUB &D
+		
+		
+		
+	extendedhelpcont2%=26	
+		
+		EQUS"7FF9 TYB music samples":EQUB &D
+		\EQUS"7FF5 SCRLOAD TODO":EQUB &D
+		EQUS"7FFA EXEC",&8D
+		EQUS"7FFB DUMP",&D
+		EQUS"7FFC type word text",&D
+		\EQUS"7FFD SHOWPIC not working",&D
+		EQUS"7FFE LDPIC compressed picture",&D
+		
 		EQUS"7F07 mode 7 Screen":EQUB &D
 		EQUS"7F06 mode 6 Screen":EQUB &8D
 	extendedhelpcont3%=27
@@ -1685,7 +1720,7 @@ INCLUDE "OSARGS.ASM"
 		EQUS TELETEXTgreentext
 		EQUB 0
 		.reppost
-		EQUS TELETEXTyellowtext,"to load selected level",&D
+		EQUS TELETEXTwhitetext,"to load selected level",&D
 		EQUS TELETEXTyellowtext
 		EQUS TELETEXTflashon,"Press any key",&D
 		EQUB 0

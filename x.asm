@@ -6,7 +6,7 @@ INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
 INCLUDE "TELETEXT.asm"
-__DEBUG =FALSE
+__DEBUG =TRUE
 \"…Variables
 NoSpecials%=7:\"offset from 1
 EndSpecial%=&FF-NoSpecials% \ TODO REMOVE
@@ -155,6 +155,7 @@ codestart=&70
 \90-9F	allocated for Econet system
 \A0-A7	used by current NMI (mostly disc and network filing)
 \   A8-AF	used for OS commands when executing
+ScrLoadPtr =&A8
 \   B0-BF	filing system scratch space
 \   C0-CF	allocated to current active filing system
 \   D0-E1	allocated to VDU driver
@@ -235,7 +236,8 @@ JMP OSCLI
 .altdec
 INCBIN ".\x\$.altdec"
 .scrload
-INCBIN ".\x\$.altscrl"
+\INCBIN ".\x\$.altscrl"
+INCBIN ".\x\$.scrload"
 \scrload headerless 
 .ldpic
 INCBIN ".\x\$.altldpc"
@@ -265,11 +267,32 @@ INCLUDE "OSARGS.ASM"
 \getcurrent drive
 		.getcurrentdrive
 		{
-		lDA #7
+		lDA #OSGBPBGetLibraryName%
 		LDX #LO(conb)
 		LDY #HI(conb)
 		JSR OSGBPB
+		IF __DEBUG
+			{
+			LDX #&FF
+			.aa
+			INX
+			LDA debugtext,X
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			BEQ ab
+			.debugtext
+			EQUS "Currentdrive "
+			EQUB &D
+			.ab
+			LDA osgbpbdata%+1
+			JSR OSASCI
+			JSR gti
+			}
+		ENDIF
 		LDA osgbpbdata%+1
+		
+		
 		RTS \RTS
 		}
 		.addAtoStrA
@@ -347,7 +370,7 @@ INCLUDE "OSARGS.ASM"
 		}
 		.gettitleopt
 		{
-		lDA #5
+		lDA #OSGBPBTitleAndboot%
 		LDX #LO(conb)
 		LDY #HI(conb)
 		JSR OSGBPB
@@ -384,10 +407,10 @@ INCLUDE "OSARGS.ASM"
 		\Get input 
 		.gti
 		{
-		LDA #&91
-		LDX #0
+		LDA #OSBYTEReadCharacterFromBuffer%
+		LDX #OSBYTEXKeyboardBuffer%
 		JSR OSBYTE
-		BCS gti
+		BCS gti \no character
 		RTS
 		}
 		.addprelude
@@ -411,8 +434,9 @@ INCLUDE "OSARGS.ASM"
 		{
 		JSR MoveToRec
 		LDX strAoffset
+		LDY #0
 		.ey
-		LDA TextAdd,Y
+		LDA (TextAdd),Y
 		CMP #&80
 		BCC am
 		AND #&7F
@@ -457,8 +481,12 @@ INCLUDE "OSARGS.ASM"
 		BEQ af
 		BNE ae
 		.af
-		DEX
+		LDA #' '
+		STA strA%,X
 		STX strAoffset
+		INX
+		LDA #&D
+		STA strA%,X
 		RTS
 		}
 		.music
@@ -518,11 +546,11 @@ INCLUDE "OSARGS.ASM"
 			JSR gti
 			}
 		ENDIF
-		LDX #0
-		LDA #&15 
-		JSR OSBYTE \flush keyboard buffer
-		LDA #138 \insert value into buffer
-		LDX #0 \keyboard
+		LDX #OSBYTEXKeyboardBuffer%
+		LDA #OSBYTEFlushSelectedBuffer%
+		JSR OSBYTE 
+		LDA #OSBYTEPlaceCharacterIntoBuffer% 
+		LDX #OSBYTEXKeyboardBuffer%
 		LDY key
 		JMP OSBYTE \RTS
 		}
@@ -595,6 +623,7 @@ INCLUDE "OSARGS.ASM"
 		}
 		.PrintRecord
 		{
+		LDY #0
 		.bc
 		LDA (TextAdd),Y
 		CMP #&80
@@ -768,10 +797,10 @@ INCLUDE "OSARGS.ASM"
 		ENDIF
 		LDX #blockstart
 		LDY #0
-		LDA #5
+		LDA #OSFILEReadFileInfo%
 		JSR OSFILE
 		\get file info if A<> 1 not a file
-		CMP #1
+		CMP #OSFILEReturnFileFound%
 		BEQ havefiledetails
 		\file not found
 		LDX #notfound%
@@ -794,16 +823,39 @@ INCLUDE "OSARGS.ASM"
 			JSR gti
 			}
 		ENDIF
+		\TO DO Put all descisions here and make jmps?
 		LDA exe+1
 		CMP #&7F
 		BEQ specials
 		CMP #&80
-		BNE endspecial
+		BNE LoadSpecial
 		LDA exe
 		CMP #&23
 		BEQ basicprog
 		CMP #&1F
+		BEQ	basicprog
+		.LoadSpecial
+		LDA load+1
+		CMP #&7F
 		BNE endspecial
+		LDA load
+		CMP #&FD
+		BNE endspecial
+		\Scrload
+		{
+		LDA blockstart
+		STA ScrLoadPtr
+		LDA blockstart+1
+		STA ScrLoadPtr+1
+		.xx
+		LDA scrload,Y
+		STA &900,Y
+		LDA scrload+&100,Y
+		STA &A00,Y
+		INY
+		BNE xx
+		JMP &900
+		}
 		.basicprog
 		IF __DEBUG
 			{
@@ -830,8 +882,8 @@ INCLUDE "OSARGS.ASM"
 		\advanced user guide pg 162
 		\ buffer table pg 138
 		\clear BUFFER
-		LDX #0
-		LDA #&15
+		LDX #OSBYTEXKeyboardBuffer% 
+		LDA #OSBYTEFlushSelectedBuffer%
 		JSR OSBYTE
 		.ui
 		LDY run \0 ldy 1 lowbyte
@@ -841,8 +893,8 @@ INCLUDE "OSARGS.ASM"
 		ENDIF
 		BEQ ab
 		INC ui+1
-		LDA #138
-		LDX #0
+		LDA #OSBYTEPlaceCharacterIntoBuffer%
+		LDX #OSBYTEXKeyboardBuffer%
 		JSR OSBYTE
 		BVC ui \loop jmp
 		.ab
@@ -1457,17 +1509,17 @@ INCLUDE "OSARGS.ASM"
 		LDX #LO(strA%)
 		JMP codestart
 		
-		.setandexe
-		{
-		LDY #endmodexec-modexec
-		.xx
-		LDA modexec,Y
-		STA &900,Y
-		DEY
-		BPL xx
-		LDX #5 \mode5
-		JMP &900 \rts
-		}
+		\.setandexe
+		\{
+		\LDY #endmodexec-modexec
+		\.xx
+		\LDA modexec,Y
+		\STA &900,Y
+		\DEY
+		\BPL xx
+		\LDX #5 \mode5
+		\JMP &900 \rts
+		\}
 \-----------------------
 		.codebegin
 		\need to keep code here to min
@@ -1516,7 +1568,8 @@ INCLUDE "OSARGS.ASM"
 \-----------------------
 \Strings
 \-----------------------		
-		.boottxt:EQUS"!BOOT"
+		.boottxt
+		EQUS"!BOOT"
 		.CommandAndErrorText
 		.cmdadd
 		.errtxt
@@ -1605,12 +1658,12 @@ INCLUDE "OSARGS.ASM"
 		EQUS"7FF7 viewsheet":EQUB &D
 		EQUS"7FF6 31E0 repton 3 level(screen)":EQUB &D
 		EQUS"7FF5 SCRLOAD TODO":EQUB &D
-		EQUS"7FF4 31E0 repton infinity level(screen)":EQUB &D
+		EQUS"7FF4 31E0 repton infinity level(screen)", &D
 		EQUS"7F07 mode 7 Screen":EQUB &D
-		EQUS"7F06 mode 6 Screen":EQUB &D
-		EQUS"7F05 mode 5 Screen":EQUB &D
-		EQUS"7F04 mode 4 Screen":EQUB &8D
+		EQUS"7F06 mode 6 Screen":EQUB &8D
 	extendedhelpcont3%=27
+		EQUS"7F05 mode 5 Screen":EQUB &D
+		EQUS"7F04 mode 4 Screen":EQUB &D
 		EQUS"7F03 mode 3 Screen":EQUB &D
 		EQUS"7F02 mode 2 Screen":EQUB &D
 		EQUS"7F01 mode 1 Screen":EQUB &D

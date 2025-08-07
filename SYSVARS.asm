@@ -12,7 +12,27 @@ EscapeFlag =&FF
 
 OSRDRM=&FFB9
 GSINIT=&FFC2
+\	On Entry:
+\       Address for string stored at .stringInputBufferAddressLow/High
+\       Y = offset into string
+\       C = 0: string is terminated by a space (used for filename parsing)
+\       C = 1: otherwise (used e.g. for defining a soft key with *KEY)
+\	On Exit:
+\       .stringInputOptions bit 7 = double-quote character found at start
+\                           bit 6 = don't stop on space character\
+\       Y = offset of the first non-blank character
+\       A = first non-blank character
+\       Z is set if string is empty
 GSREAD=&FFC5
+\	On Entry:
+\		   Address for string stored at .stringInputBufferAddressLow/High
+\		   Y = offset into string
+\	 On Exit:
+\		   A = character read
+\		   X is preserved
+\		   Y = index of next character to be read
+\		   Carry is set if end of string reached
+\		   Overflow (V flag) is set if the character read was interpreted as a control code
 OSFIND=&FFCE
 		\A=
 		OSFINDCloseChannel% =&00 	 \Close channel
@@ -55,6 +75,30 @@ OSBPUT=&FFD4
 OSBGET=&FFD7
 
 OSARGS=&FFDA
+\	On entry,
+\		X points to a four byte zero page control block.
+\		Y contains the file handle as provided by OSFIND, or
+\		zero.
+\		The accumulator contains a number specifying the action
+\		required.
+\	If Y is zero:
+\		A=0 Returns the current filing system in A:
+\			0 No filing system currently selected.
+\			1 1200 baud cassette
+\			2 300 baud cassette
+\			3 ROM filing system
+\			4 Disc filing system
+\			5 Econet filing system
+\			6 Telesoftware system
+\	A=1 Returns the address of the rest of the command line in the base page control block
+\	    This gives access to the parameters passed with *RUN or *command.
+\	A=&FF Update all files onto the media, ie ensure that the latest copy of the 
+\	      memory buffer is saved.
+\	If Y is not zero:
+\		A=0 Read sequential pointer of file (BASIC PTR#)
+\		A=1 Write sequential pointer of file
+\		A=2 Read length of file (BASIC EXT#)
+\		A=&FF Update this file to media
 OSFILE=&FFDD
 	\A=....
 	OSFILEReadFileSystemInfo%=&FD 	\Read file system information (Internal Name)		 

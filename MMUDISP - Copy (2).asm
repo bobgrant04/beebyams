@@ -62,7 +62,6 @@ MAXmenuletter= 'A'+MAXmenuitems
 \PRINTLineLength
 PRINTLineLength=37
 INTatozLen=&68
-
 \-------------------------------
 \Constant Addresses
 INTatozStart=&404
@@ -106,8 +105,7 @@ AFilterPointer=&41
 PreviousRecordset =&50	
 \&70 - 8F basic for users
 	comprecstore=&70 \TODO
-	zeroz=&74
-	OSARGSptr =&74 \only used at very start so ok
+	zeroz=&74 
 	sti=&76
 	Apub=&7B
 	sno=&7D
@@ -129,8 +127,6 @@ PreviousRecordset =&50
 	\zerozp=&A8
 \&B0- &BF FILESYSTEM SCRATCH
 \&F8-F9 unused by os1.2
-\f2 f3 used by GSinit and GSRead
-FileSystemArgs =&F2
 \resultvar=&F8
 	
 \--------------------------------
@@ -166,7 +162,7 @@ GUARD &7C00
 \BUILD_COPYRIGHT
 .start
 .startexec
-JMP Hardstart
+JMP BCD
 .helptxt 
 \--------------------------------
 \replace for &6E07
@@ -182,12 +178,9 @@ EQUB TELETEXTDoubleheight
 EQUB TELETEXTwhitetext
 EQUB TELETEXTnewbackground
 EQUB TELETEXTbluetext
-.banner
 EQUS "MMC MENU DISPLAY              V"
 BUILD_VERSION 
 \EQUS TIME$("%x")
-.endbanner
-MaxBannerLength% = endbanner - banner -1
 EQUB &D
 EQUB 0
 \ advanced disk user guide pg 241 , pg 42
@@ -787,7 +780,7 @@ EQUB 0:
 		STA APtr+1
 		}
 
-\incSearchNo isn
+\incSearchNo IncSearchNo
 		.IncSearchNo
 		{
 		INC sno
@@ -798,6 +791,9 @@ EQUB 0:
 		}
 
 \get total record count trc
+
+.trc
+
 		.totalreccount
 		{
 		JSR NextRecord
@@ -1426,48 +1422,6 @@ RTS
 
 \Browse catdat BCD
 		
-		.Hardstart \add OSarg to replace banner
-		
-		{
-		LDY #0
-		CLC \C=0: string is terminated by a space (used for filename parsing)
-		JSR GSINIT
-		.ac
-		INY
-		JSR GSREAD
-		BCC ac
-		\Y now set to end of filename
-		
-		\LDX #OSARGSptr
-		\JSR OSARGS
-		\LDA OSARGSptr
-		\STA FileSystemArgs
-		\LDA OSARGSptr+1
-		\STA FileSystemArgs+1
-		SEC \C=1: otherwise (used e.g. for defining a soft key with *KEY
-		JSR GSINIT
-		BEQ bannerend \Z is set if string is empty
-		\BCS bannerend \no banner commandline
-		LDX #&FF
-		.aa
-		INX
-		JSR GSREAD
-		BCS ab \Carry is set if end of string reached
-		STA banner,X
-		CPX #MaxBannerLength%
-		BNE aa
-		BEQ bannerend
-		.ab
-		\CPX #0
-		\BEQ bannerend
-		LDA #' '
-		STA banner,X
-		CPX #MaxBannerLength%
-		BEQ bannerend
-		INX
-		BNE ab
-		.bannerend
-		}
 		.BCD
 		JSR HardInitmenu		
 		.bcd
@@ -1509,8 +1463,7 @@ RTS
 		JSR Selectwindow
 		JSR loadnextcatdat
 		CMP #1
-		BEQ browseresults
-		RTS
+		BNE dh
 		\LDA #0
 		\STA resultvar
 		\display filter results re-entry
@@ -2122,7 +2075,7 @@ JMP mks
 		DEX
 		BNE mj
 		LDA #12
-		JMP OSASCI \him\rts
+		JMP OSASCI \rts
 		}
 
 \copyAptrTostrA
@@ -2299,7 +2252,7 @@ JMP mks
 		ORA FilterbitsSoftwarehigh3Fav1GameType3
 		STA FilterbitsSoftwarehigh3Fav1GameType3
 		LDA #FILTERpublish%
-		JMP Setfilter \him
+		JMP Setfilter \RTS
 		}
 		
 \SetDiskFilterMask		

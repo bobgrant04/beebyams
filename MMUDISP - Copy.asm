@@ -32,11 +32,11 @@ __DEBUG  = FALSE
 __CATDATTEST = TRUE
 \FILTERS 1=disk 2=publish 4=gametype
 \e cont 8=fav A=SearchText
-FILTERdisk%=1
-FILTERpublish%=2
-FILTERgametype% =4
-FILTERfav% =8
-FILTERdescription% =&10
+FILTERdisk=1
+FILTERpublish=2
+FILTERgametype =4
+FILTERfav =8
+FILTERdescription =&10
 \consts used create seperate windows (top main btm)
 \window bits
 TOPLines=3
@@ -47,7 +47,7 @@ BOTTOMWindow=4
 MAINWindow=8
 
 \maximum filter description text
-FILTERTxtLen%=13
+FILTERTxtLen=13
 \filter set character length
 FILTERCharlength =16
 \red
@@ -581,19 +581,12 @@ EQUB 0:
 		\.ged ret Y
 		.GetEndDescription
 		{
-		\LDY #0
-		\.ga
-		\LDA (APtr),Y
-		\INY
-		\CMP #&80
-		\BCC ga
-		\RTS
-		LDY #&FF
-		.aa
-		INY
+		LDY #0
+		.ga
 		LDA (APtr),Y
-		BPL aa
 		INY
+		CMP #&80
+		BCC ga
 		RTS
 		}
 
@@ -668,8 +661,6 @@ EQUB 0:
 		LDY #0
 		.qj
 		LDA (APtr),Y
-		BMI exit
-		AND #&DF \lowercase
 		BNE vb
 		.exit
 		LDA #0
@@ -678,10 +669,8 @@ EQUB 0:
 		.vb
 		CMP tempx
 		BEQ try
-		
-		\CMP #&80
-		\BCS exit
-		\BMI exit
+		CMP #&80
+		BCS exit
 		INY
 		BNE qj
 		.try
@@ -696,7 +685,6 @@ EQUB 0:
 		.vc
 		INY
 		LDA (APtr),Y
-		AND #&DF \lowercase
 		CMP WORKINGStrA,X
 		BEQ trynext
 		AND #&7F
@@ -718,9 +706,8 @@ EQUB 0:
 		.vb
 		CMP tempx
 		BEQ try
-		\CMP #&80
-		\BCS endrec
-		BMI endrec
+		CMP #&80
+		BCS endrec
 		INY
 		BNE qj
 		.try
@@ -758,11 +745,10 @@ EQUB 0:
 		LDY #&FF
 		.qe
 		INY
-		LDA (APtr),Y
+		LDA(APtr),Y
 		BEQ IncSearchNo
-		\CMP #&80
-		\BCC qe
-		BPL qe
+		CMP #&80
+		BCC qe
 		INY
 		TYA
 		CLC
@@ -922,10 +908,9 @@ BNE bbb
 		LDA fav,X
 		CMP #&80
 		BCC jx
-		\BPL jx
 		INX
 		.jy
-		LDA #FILTERfav%
+		LDA #FILTERfav
 		EOR FilterFlag
 		STA FilterFlag
 		LDY #0
@@ -975,7 +960,7 @@ BNE ccc
 		JSR SetSoftwareFilterMask
 		LDX #2
 		JSR Writetofilterscreen
-		LDA #FILTERpublish%
+		LDA #FILTERpublish
 		JSR Setfilter
 		JMP dfs
 		}
@@ -985,7 +970,7 @@ BNE ddd
 		\progtype
 		{
 		.stt
-		LDA #FILTERgametype%
+		LDA #FILTERgametype
 		JSR Setfilter
 		JSR Initmenu
 		\JSR InitprogTypeText
@@ -1002,9 +987,8 @@ BNE ddd
 		.mo
 		JSR DisplayStartLine
 		JSR DisplayPrintEntry
-		\LDA #&D
-		\JSR OSASCI
-		JSR OSNEWL
+		LDA #&D
+		JSR OSASCI
 		JSR NextRecord
 		LDY #0
 		LDA (APtr),Y
@@ -1076,7 +1060,7 @@ BNE fff
 		LDX #2
 		JSR lwtf
 		\JSR Writetofilterscreen
-		LDA #FILTERpublish%
+		LDA #FILTERpublish
 		JSR Setfilter
 		JMP dfs
 		}
@@ -1103,7 +1087,7 @@ BNE ggg
 		LDX #0
 		JSR lwtf \TODO was wtf
 		\JSR wdn
-		LDA #FILTERdisk%
+		LDA #FILTERdisk
 		JSR Setfilter
 		JMP dfs
 		}
@@ -1151,7 +1135,7 @@ BNE lll
 		\launch disk  TODO
 		{
 		LDA FilterFlag
-		AND #FILTERdisk%
+		AND #FILTERdisk
 		BEQ enddisplayinput
 		\x holds dinno
 		\LDX #&50
@@ -1185,9 +1169,6 @@ BNE quest
 		BEQ hlp
 		}
 .quest
-CMP #9 \tab
-BNE enddisplayinput
-JMP BCD
 .enddisplayinput
 RTS \no action
 
@@ -1268,14 +1249,11 @@ JSR TerminateFilterArray
 		{
 		\print green . in btm window and reset to white
 		LDA #TELETEXTgreentext
-		\JSR OSASCI
-		JSR OSWRCH
+		JSR OSASCI
 		LDA #'.'
-		\JSR OSASCI
-		JSR OSWRCH
+		JSR OSASCI
 		LDA #TELETEXTwhitetext
-		\JSR OSASCI
-		JSR OSWRCH
+		JSR OSASCI
 		LDA Filtersomething
 		STA AFilterPointer
 		LDA Filtersomething+1
@@ -1303,7 +1281,7 @@ JSR TerminateFilterArray
 		ENDIF
 		\descripton search setup
 		LDA FilterFlag
-		AND #FILTERdescription%
+		AND #&10
 		BEQ ac
 		LDX #&FF
 		.aa
@@ -1368,7 +1346,7 @@ JSR TerminateFilterArray
 		BNE nomatch
 		.MatchedFilters
 		LDA FilterFlag 
-		AND #FILTERdescription%
+		AND #&10
 		\no description set?
 		BEQ copyrec
 		\JSR SortStr
@@ -1395,12 +1373,12 @@ RTS
 \getsearchtxt (description) getsearchtxt
 		.getsearchtxt
 		{
-		LDX #searchdescription%
+		LDX #searchdescription
 		STX tempx
 		JSR DisplayEnterText
 		JSR EnterSearchText
 		CPY #2
-		BCC getsearchtxt \2 or more chars
+		BCC getsearchtxt
 		.ak
 		LDA WORKINGStrA,Y
 		STA SEARCHtext,Y
@@ -1408,7 +1386,7 @@ RTS
 		BPL ak
 		\LDA #4
 		\STA c
-		LDA #FILTERdescription%
+		LDA #FILTERdescription
 		JSR Setfilter
 		\LDA e
 		\ORA #&10
@@ -1578,22 +1556,19 @@ RTS
 		.jv
 		INY
 		LDA ptxt,Y 
-		\CMP #&80
-		\BCS aa
-		BMI aa
+		CMP #&80
+		BCS aa
 		JSR OSASCI
-		BPL jv
+		BCC jv
 		.aa
 		AND #&7F
 		JMP OSASCI \RTS
 		.nxtrec
 		INY
 		LDA ptxt,Y
-		\CMP #&80
-		\BCC nxtrec
-		BPL nxtrec
-		BMI ju
-		\BCS ju
+		CMP #&80
+		BCC nxtrec
+		BCS ju
 		}
 \Writetofilterscreen wtf
 		\.wtf
@@ -1652,7 +1627,6 @@ RTS
 		\ret
 		CPY #&D \return key
 		BEQ aa
-		
 		CPY #&8F
 		BEQ up
 		CPY #&8E
@@ -1900,18 +1874,16 @@ JMP mks
 		LDY tempy
 		.mf
 		LDA FILTERDisplaySettings,Y
-		\CMP #&80
-		\BCS mg
-		BMI mg
+		CMP #&80
+		BCS mg
 		JSR OSASCI
 		INY
 		BNE mf
 		.mg
 		AND #&7F
 		JSR OSASCI
-		\LDA #&D
-		\JSR OSASCI
-		JSR OSNEWL
+		LDA #&D
+		JSR OSASCI
 		INY
 		STY tempy
 		RTS
@@ -1924,40 +1896,35 @@ JMP mks
 		.mb
 		INY
 		LDA (APtr),Y
-		BMI bi
 		CMP #'#'
 		BNE aa
 		.ad
 		LDA #TELETEXTmagentatext
-		\BNE mc
+		BNE mc
 		.aa
-		\CMP #&80
-		\BCS bi
-		
-		\CPY #0
-		\BEQ mc
+		CMP #&80
+		BCS bi
+		CPY #0
+		BEQ mc
 		\JSR cvc
 		.mc
-		\JSR OSASCI
-		JSR OSWRCH
+		JSR OSASCI
 		BNE mb
 		.bi
 		AND #&7F
 		\JSR cvc
 		.ab
-		\JSR OSASCI
-		JSR OSWRCH
+		JSR OSASCI
 		LDA comprec
 		BNE ExtendedPrintentry
 		\light blue
 		LDA #TELETEXTcyantext
 		JSR OSASCI
 		.md
-		CPY #FILTERTxtLen%
+		CPY #FILTERTxtLen
 		BCS me
 		LDA #' '
-		\JSR OSASCI
-		JSR OSWRCH
+		JSR OSASCI
 		INY
 		BNE md
 		.me
@@ -1969,8 +1936,7 @@ JMP mks
 		{
 		\white
 		LDA #TELETEXTwhitetext
-		\JSR OSASCI
-		JSR OSWRCH
+		JSR OSASCI
 		JSR GetEndDescription
 		TYA
 		CLC
@@ -1992,11 +1958,9 @@ JMP mks
 		AND #&F
 		TAY
 		LDA type,Y
-		\JSR OSASCI
-		JSR OSWRCH
+		JSR OSASCI
 		LDA #TELETEXTcyantext
-		\JSR OSASCI
-		JSR OSWRCH
+		JSR OSASCI
 		\have pub in zeroz
 		LDA #HI(INDEXfileloadAddress)
 		STA Apub+1
@@ -2011,9 +1975,8 @@ JMP mks
 		LDY #0
 		.ou
 		LDA (Apub),Y
-		\CMP #&80
-		\BCS or
-		BMI or
+		CMP #&80
+		BCS or
 		INY
 		BNE ou
 		.or
@@ -2039,11 +2002,9 @@ JMP mks
 		LDY #0
 		.ot
 		LDA (Apub),Y
-		\CMP #&80
-		\BCS os
-		BMI os
-		\JSR OSASCI
-		JSR OSWRCH
+		CMP #&80
+		BCS os
+		JSR OSASCI
 		INC CurrentlineLengh
 		LDA CurrentlineLengh
 		CMP #PRINTLineLength
@@ -2052,9 +2013,7 @@ JMP mks
 		BNE ot
 		.os
 		AND #&7F
-		\
-		JSR OSWRCH
-		\JSR OSASCI
+		JSR OSASCI
 		.na
 		RTS
 		.type
@@ -2086,9 +2045,8 @@ JMP mks
 		INY
 		LDA (APtr),Y
 		STA WORKINGStrA,Y
-		\CMP #&80
-		\BCC mq
-		BPL mq
+		CMP #&80
+		BCC mq
 		STY StrAlen
 		RTS
 		}
@@ -2173,9 +2131,8 @@ JMP mks
 		JSR Initmenu
 		JMP fc
 		.my
-		\LDA #&D
-		\JSR OSASCI
-		JSR OSNEWL
+		LDA #&D
+		JSR OSASCI
 		.fc
 		JSR DisplayStartLine
 		JSR DisplayPrintEntry
@@ -2220,9 +2177,8 @@ JMP mks
 		INY
 		LDA WORKINGStrA,Y
 		STA (APtr),Y
-		\CMP #&80
-		\BCC mx
-		BPL mx
+		CMP #&80
+		BCC mx
 		RTS
 		}
 		
@@ -2251,7 +2207,7 @@ JMP mks
 		LDA #&3
 		ORA FilterbitsSoftwarehigh3Fav1GameType3
 		STA FilterbitsSoftwarehigh3Fav1GameType3
-		LDA #FILTERpublish%
+		LDA #FILTERpublish
 		JMP Setfilter \RTS
 		}
 		
@@ -2268,7 +2224,7 @@ JMP mks
 		LDA #&3
 		ORA FilterbitsDiskHigh3Catno5
 		STA FilterbitsDiskHigh3Catno5
-		LDA #FILTERdisk%
+		LDA #FILTERdisk
 		JMP Setfilter \RTS		
 		}
 \-----------------------
@@ -2471,9 +2427,8 @@ JMP mks
 		.mu
 		LDA WORKINGStrA,Y
 		STA FILTERDisplaySettings,X
-		\CMP #&80
-		\BCS mv
-		BMI mv
+		CMP #&80
+		BCS mv
 		INY
 		INX
 		BNE mu
@@ -2610,7 +2565,7 @@ EQUB &80+':'
 searchpublisher=2
 EQUS"Enter publisher"
 EQUB &80+':'
-searchdescription%=3
+searchdescription=3
 EQUS"Enter description"
 EQUB &80+':'
 
@@ -2639,13 +2594,17 @@ EQUB &80+'n'
 .selectiontext
 
 \A
-EQUS "Of",&80+'f'
+EQUS "Of"
+EQUB &80+'f'
 \B
-EQUS "Of",&80+'f'
+EQUS "Of"
+EQUB &80+'f'
 \C
-EQUS "Of",&80+'f'
+EQUS "Of"
+EQUB &80+'f'
 \D
-EQUS "Of",&80+'f'
+EQUS "Of"
+EQUB &80+'f'
 \E
 EQUS"        "
 EQUB &80
@@ -2859,4 +2818,3 @@ SAVE "mnudisp", start, end,startexec
 
 \ ./tools/beebasm/beebasm.exe -i ./MMUDISP.asm -do ./build/MMUDISP.ssd -boot MMUDISP -v -title MMUDISP
 
-\ 

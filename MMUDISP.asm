@@ -64,21 +64,21 @@ PRINTLineLength=37
 INTatozLen=&68
 
 \-------------------------------
-\Constant Addresses
-INTatozStart=&404
-SEARCHtext=&620 \search text
-WORKINGStrA=&640
-\WORKINGStrB=&680
-\FILENAMEStr=&6FF-10
-FILTERDisplaySettings=&901
-\Filter results"
-FILTERResultsStartAddress=&1100
-\catfile
-CATLoadStartAddress=&1900
-\dinrec Softrec
-INDEXfileloadAddress=&6000
-\Nolen=&A0
-\end constants
+		\Constant Addresses
+		INTatozStart=&404
+		SEARCHtext=&620 \search text
+		WORKINGStrA=&630
+		WORKINGStrB=&6B0
+		\FILENAMEStr=&6FF-10
+		FILTERDisplaySettings=&901
+		\Filter results"
+		FILTERResultsStartAddress=&1100
+		\catfile
+		CATLoadStartAddress=&1900
+		\dinrec Softrec
+		INDEXfileloadAddress=&6000
+		\Nolen=&A0
+		\end constants
 \---------------------------------------------
 \…Zero Page
 \IntA &2A -&2D
@@ -282,6 +282,9 @@ EQUB 0:
 		JSR OSBYTE
 		DEX
 		BPL aa
+		LDA #&10
+		\x=0
+		JSR OSBYTE
 		RTS
 		}
 		.EnableEvents
@@ -293,6 +296,10 @@ EQUB 0:
 		JSR OSBYTE
 		DEX
 		BPL aa
+		LDA #&10
+		INX
+		\x=1
+		JSR OSBYTE
 		RTS
 		}
 \Clearint cli offset from a in X
@@ -654,7 +661,7 @@ EQUB 0:
 		\move to selected record
 		JSR mrzeroz
 		\copy record to StrA
-		JSR copyAptrTostrA
+		JSR CopyAptrToStrA
 		\Set Aptr to Loaded file
 		JSR CopyPreviousRecordSettoAptr
 		\Find record in loaded file
@@ -925,27 +932,32 @@ BNE bbb
 			STA w
 		ENDIF
 		\need to toggle bit 4 on mask and bit
-		
+		LDA #FILTERfav%
+		EOR FilterFlag
+		STA FilterFlag
 		LDA FilterbitsSoftwarehigh3Fav1GameType3
 		EOR #8
 		STA FilterbitsSoftwarehigh3Fav1GameType3
+		
 		LDA FilterMaskSoftwarehigh3Fav1GameType3
 		EOR #&8
 		STA FilterMaskSoftwarehigh3Fav1GameType3
 		AND #&8
 		BNE jy
-		LDX #0
+		\LDX #0
 		.jx
 		INX 
 		LDA fav,X
-		CMP #&80
-		BCC jx
+		BPL jx
+		\CMP #&80
+		\BCC jx
 		\BPL jx
 		INX
 		.jy
-		LDA #FILTERfav%
-		EOR FilterFlag
-		STA FilterFlag
+		\LDA #FILTERfav%
+		\EOR FilterFlag
+		\STA FilterFlag
+		\to do look at rationlaising with fff
 		LDY #0
 		.jw
 		LDA fav,X
@@ -1006,16 +1018,9 @@ BNE ddd
 		LDA #FILTERgametype%
 		JSR Setfilter
 		JSR Initmenu
-		\JSR InitprogTypeText
-		.InitprogTypeText
-		{
-		LDA #HI(prtt)
-		STA APtr+1 
-		LDA #LO(prtt)
-		STA APtr
+		JSR InitprogTypeText
 		JSR CopyAptrtoPreviousRecordset
 		JSR initreccount
-		}
 		JSR Initmenuscreen
 		.mo
 		JSR DisplayStartLine
@@ -1062,7 +1067,7 @@ BNE ddd
 .ddd
 CMP #'E'
 BNE eee
-		\Search desc TODO 
+		\Search desc 
 		.ox
 		{
 		JSR getsearchtxt
@@ -1071,6 +1076,42 @@ BNE eee
 .eee
 CMP #'F'
 BNE fff
+		\show file details?
+		{
+		LDX #0
+		LDA u+1
+		EOR #&FF
+		STA u+1
+		BNE jy 
+		.jx
+		INX 
+		LDA fav,X
+		BPL jx
+		INX
+		.jy \x points to either Off or ON
+		LDY #&FF
+		DEX
+		.jw
+		INX
+		INY
+		LDA fav,X
+		STA WORKINGStrA,Y \WORKINGStrA either Off or ON
+		BPL jw
+		\DEY
+		STY StrAlen
+		JSR expandStrAtoFiltercharlength
+		JSR InitFilterstring
+		JSR clearzeroz
+		LDA #5
+		STA zeroz
+		JSR mrzeroz
+		JSR copystrToArray
+		JSR Initmenu
+		JMP dfs
+		}
+.fff
+CMP #'G'
+BNE ggg
 		\Search pub
 		\Y% = publisher
 		{
@@ -1098,9 +1139,9 @@ BNE fff
 		JSR Setfilter
 		JMP dfs
 		}
-.fff
-CMP #'G'
-BNE ggg
+.ggg
+CMP #'H'
+BNE hhh
 		\Search din
 		{	
 		LDX #searchdisktitle
@@ -1124,26 +1165,24 @@ BNE ggg
 		LDA #FILTERdisk%
 		JSR Setfilter
 		JMP dfs
-		}
-		
-.ggg
-CMP #'H'
-
-BNE hhh
-		\Applyfilterresults
-		{
-		JMP applyfilters
 		}		
 .hhh
 CMP #'I'
 BNE iii
-		{	
-		JMP DFS
-		\Clear filters 
+		\Applyfilterresults
+		{
+		JMP applyfilters
 		}
 .iii
 CMP #'J'
 BNE jjj
+		{	
+		JMP DFS
+		\Clear filters 
+		}
+.jjj
+CMP #'K'
+BNE kkk
 		\"„Sound off
 		.snd
 		{
@@ -1151,9 +1190,9 @@ BNE jjj
 		LDX #1
 		JSR OSBYTE
 		}
-.jjj
-CMP #'K'
-BNE kkk
+.kkk
+CMP #'L'
+BNE lll
 		.tv
 		\TV255
 		{
@@ -1163,9 +1202,9 @@ BNE kkk
 		JSR OSBYTE
 		JMP dfs
 		}
-.kkk
-CMP #'L'
-BNE lll
+.lll
+CMP #'M'
+BNE mmm
 		\launch disk
 		{
 		LDA FilterFlag
@@ -1175,12 +1214,6 @@ BNE lll
 		STA u
 		JMP launchu
 		}
-.lll
-CMP #'M'
-BNE mmm
-		{
-		BEQ hlp
-		}
 .mmm
 CMP #'N'
 BNE nnn 
@@ -1188,10 +1221,12 @@ BNE nnn
 		BEQ hlp
 		}
 .nnn
-\CMP #'O'
-\BNE ooo
-		
-\.ooo
+CMP #'O'
+BNE ooo
+		{		
+		BEQ hlp
+		}	
+.ooo
 CMP #'?'
 BNE quest
 		{
@@ -1554,60 +1589,109 @@ RTS
 		{
 		JSR PostGeneralSelection
 		JSR CopyPreviousRecordSettoAptr
-		JSR mrzeroz
+		JSR mrzeroz 
+		JSR CopyAptrTostrB
 		}
 		JSR GetEndDescription
+		LDA (APtr),Y
+		STA y
 		INY
 		LDA (APtr),Y
 		STA zeroz
 		\STA x
 		INY
 		LDA (APtr),Y
+		TAX
 		AND #7
 		\STA x+1
 		STA zeroz+1
 		\U% cat number
-		LDA (APtr),Y
+		\LDA (APtr),Y
+		TXA
 		ROR A
 		ROR A \added
 		ROR A
 		AND #&1F
 		STA u
-
+		INY
+		LDA (APtr),Y
+		TAX
+		AND #7
+		STA y+1
+		TXA
+		AND #8
+		STA w
+		TXA
+		ROR A
+		ROR A
+		ROR A
+		ROR A
+		AND #&F
+		STA v
+		
+\software house low byte y%
+\disk no low byte x%
+\diskrec 3 bits filename cat no 5 bits 
+\softwarehouse 3 bits fav w(1 bit) gametype(v%) 4 
+\O/P descrip MSB termination
+\"„1Byte Softwarehouse
+\"„1Byte Diskrec 
+\"„Diskrec 3bits Filename Catno
+\"„SoftwareHouse 3bits
+\"„lowest 3 bit
+\"„fav 1bit Gametype 3bit
+\y \x \x+1 (3) u (5)
 \---------------------------------
 		.launchu
 		{
 		JSR EnableEvents
 		LDA #0
 		JSR DriveSelect
-		\ set drive to 0
-		\LDY #&5C
-		\LDY #('X'-'A')*4
-		\JSR cizeroz
-		\LDA FilterMaskDiskLow
-		\STA zeroz
-		\LDA FilterMaskDiskHigh3Catno5
-		\AND #7
-		\STA zeroz+1
 		JSR Loaddin
 		JSR mrzeroz
-		JSR copyAptrTostrA
-		LDA WORKINGStrA,Y
-		AND #&7F
+		LDY #&FF
+		.aa
+		INY
+		LDA launchutxt,Y
 		STA WORKINGStrA,Y
+		BPL aa
+		STY StrAlen
+		JSR AddAptrToStrA \diskname
+		LDA #LO(WORKINGStrB)
+		STA APtr
+		LDA #HI(WORKINGStrB)
+		STA APtr+1
+		JSR AddAptrToStrA \description
+		JSR InitprogTypeText
+		LDA v
+		STA zeroz
+		JSR mrzeroz
+		JSR AddAptrToStrA \game type
+		JSR InitFileSoftrecArrayPtr
+		LDA y
+		STA zeroz
+		LDA y+1
+		STA zeroz+1
+		JSR mrzeroz
+		JSR AddAptrToStrA \software house
+		LDY StrAlen
+		\LDA #' '
+		\STA WORKINGStrA,Y
+		INY
+		LDA w
+		BNE ab
+		LDA #'N'
+		BNE ad
+		.ab
+		LDA #'Y'
+		.ad
+		STA WORKINGStrA,Y
+		\LDY StrAlen
 		INY
 		LDA #&D
 		STA WORKINGStrA,Y
-		LDA #' '
-		STA WORKINGStrA-1
-		LDA #'1'
-		STA WORKINGStrA-2
-		LDA #' '
-		STA WORKINGStrA-3
-		LDA #'U'
-		STA WORKINGStrA-4
-		LDX #LO(WORKINGStrA-4)
-		LDY #HI(WORKINGStrA-4)
+		LDX #LO(WORKINGStrA)
+		LDY #HI(WORKINGStrA)
 		JMP OSCLI \RTS
 		}
 
@@ -1647,7 +1731,7 @@ RTS
 \Writetofilterscreen wtf
 		\.wtf
 		.Writetofilterscreen
-		JSR copyAptrTostrA
+		JSR CopyAptrToStrA
 \copy aptr to string
 		.lwtf
 		{
@@ -2106,8 +2190,7 @@ JMP mks
 		\JSR OSASCI
 		.na
 		RTS
-		.type
-		EQUS"ACGSMPUZ"
+		
 		}
 
 
@@ -2128,7 +2211,7 @@ JMP mks
 		}
 
 \copyAptrTostrA
-		.copyAptrTostrA
+		.CopyAptrToStrA
 		{
 		LDY #&FF
 		.mq
@@ -2141,8 +2224,46 @@ JMP mks
 		STY StrAlen
 		RTS
 		}
-\CopyFromStrAtoStrB
-
+		
+\AddAptrToStrA
+		.AddAptrToStrA
+		{
+		LDY #&FF
+		LDX StrAlen
+		.aa
+		INX
+		INY
+		LDA (APtr),Y
+		STA WORKINGStrA,X
+		BPL aa
+		AND #&7F
+		STA WORKINGStrA,X
+		INX
+		LDA #' '
+		STA WORKINGStrA,X
+		STX StrAlen
+		RTS
+		}
+\CopyAptrTostrB
+		.CopyAptrTostrB
+		{
+		LDY #&FF
+		.mq
+		INY
+		LDA (APtr),Y
+		STA WORKINGStrB,Y
+		BPL mq
+		RTS
+		}
+		
+		.InitprogTypeText
+		{
+		LDA #HI(prtt)
+		STA APtr+1 
+		LDA #LO(prtt)
+		STA APtr
+		RTS
+		}
 \	\.cab
 \	.CopyFromStrAtoStrB
 \	{
@@ -2456,6 +2577,7 @@ JMP mks
 		\LDA #0 done above
 		STA FilterFlag
 		STA catdrive
+		STA u+1
 		\set Drive for catdat0 file
 		\need to see if catdat0 file exists 
 		\\on drive 0 if so all catdat files
@@ -2504,7 +2626,7 @@ JMP mks
 		STA APtr+1
 		LDA #LO(selectiontext)
 		STA APtr
-		LDX#0
+		LDX #0
 		STX comprec
 		}
 \Expand and copy into FILTERDisplaySettings
@@ -2514,7 +2636,7 @@ JMP mks
 		LDY #0
 		LDA (APtr),Y
 		BEQ Initmenu
-		JSR copyAptrTostrA
+		JSR CopyAptrToStrA
 		JSR expandStrAtoFiltercharlength
 		LDY #0
 		.mu
@@ -2632,7 +2754,7 @@ JMP mks
 \--------------------------
 .overflow
 EQUS"..OUT OF MEMORY."
-EQUB &AE
+EQUB &80+'.'
 EQUB 0
 EQUB 0
 EQUB 0
@@ -2642,7 +2764,7 @@ EQUB 0
 .overflowend
 
 
-.cat \NB will overwrite 2 pages below but only used 
+\.cat \NB will overwrite 2 pages below but only used 
 \at when about to launchU
 
 
@@ -2696,10 +2818,10 @@ EQUS "Of",&80+'f'
 \D
 EQUS "Of",&80+'f'
 \E
-EQUS"        "
-EQUB &80
+EQUS"       "
+EQUB &80+' '
 \F
-EQUB &80
+EQUS "Of",&80+'f'
 \G
 EQUB &80
 \H
@@ -2738,6 +2860,12 @@ EQUB &D
 EQUS"catdat0"
 EQUB &D
 
+		.launchutxt
+		EQUS"U 1 ",&80
+
+		.type
+		EQUS"ACGSMPUZ"
+
 .filttxt%
 \--------------------------------
 \NB keep below 255 chars  zero ternminated
@@ -2751,6 +2879,8 @@ EQUS"BY TYP"
 EQUB &80+'E'
 EQUS"BY DESCRIPTIO"
 EQUB &80+'N'
+EQUS"SHOW FILE INF"
+EQUS &80+'O'
 EQUS"SEARCH PUBLISHE"
 EQUB &80+'R'
 EQUS"SEARCH DISK NAM"

@@ -1,1 +1,1600 @@
-Advent Intl	1 Adventureland	ADVENT	c	19	DISC091a	a	n
+A&B,BIG BEN ,BIGBEN,c,19,EDU01,s,n,@
+A&B,EDUDOT,EDUDOT,c,19,EDU01,s,n,@
+A&B,BINGO,BINGO,c,20,EDU01,s,n,@
+A&B,ALPHA,ALPHA,c,20,EDU01,s,n,@
+A&B,HANGMAN,HANG,c,21,EDU01,s,n,@
+A&B,PROGRAM GENERATOR,EDGEN,c,21,EDU01,s,n,@
+A&B,PUNCTUATION,PUNCT,c,22,EDU01,s,n,@
+A&B,WORDS/LETTERS,GRIDS,c,22,EDU01,s,n,@
+A&B,SOLAR SYSTEM,SOLSYS,c,23,EDU01,s,n,@
+A&B,PHONICS,PHONICS,c,23,EDU01,s,n,@
+A&B,ALL CHANGE#J,ALL-CHA,c,24,EDU01,s,n,@
+A&B,WALK THE PLANK,WLKPLNK,c,24,EDU01,s,n,@
+A&B,INVASION TIMES,"INTMSHD""",c,25,EDU01,s,n,@
+A&B,EUROPE,EUROPE,c,15,EDU01,s,n,@
+A&B,SNAKES&LADDERS MATHS,S/L-MAT,c,15,EDU01,s,n,@
+A&B,ADDSNAP,ADDSNAP,c,19,EDU01,s,n,@
+A&B,CROSSWORD,CROSSWO,c,19,EDU01,s,n,@
+A&B,MAGIC SQUARES,MAGIC,c,19,EDU01,s,n,@
+A&B,DOGS DINNER,DOGDINN,c,19,EDU01,s,n,@
+Acornsoft,liquid exercises,Jars,c,1b,EDU01,u,n,@
+Acornsoft,terminal emulator#r,Termul1,l,80,EDU01,u,n,@
+A&B,MUSICIAN,M.CSL1,c,19,EDU02,s,n,@
+A&B,PLAYER,PLAYER,c,19,EDU02,m,n,@
+A&B,COMPOSER,MUSIC1,c,19,EDU02,m,n,@
+A&B,SOUND FILE,SOUNDS,c,19,EDU02,m,n,@
+A&B,STUDIO,STUDIO,c,11,EDU02,m,n,@
+A&B,INFORMATION,T.INFO,E,19,EDU02,m,n,@
+unknown,Address book,+.address,c,19,edu02,u,n,@
+AB European marketing,Music Master II,tp,c,19,EDU03,s,n,@
+Acornsoft,Examine quiz,examine,c,19,edu03,u,n,@
+alligator,primary time,eptime1,c,0e,edu03,u,n,@
+unknown,multicolour,mulcolr,c,19,edu03,u,n,@
+unknown,Factor foe,factor,c,19,edu03,u,n,@
+unknown,a lvl physics,physics,c,0e,edu03,u,n,@
+Acorn user,Bulletin,bulmenu,c,19,EDU04,s,n,@
+Acorn user,Tunemaker,tunemak,c,19,EDU04,u,n,@
+Acorn user,teletext dump,tdump,c,19,EDU04,u,n,@
+Acorn user,Mode7 +,mode7gf,c,19,EDU04,u,n,@
+Acorn user,tape to disc,ttod,c,19,EDU04,u,n,@
+Acorn user,noticeboard,notice,c,19,EDU04,u,n,@
+Acorn user,capitals,capital,c,19,EDU04,u,n,@
+Acorn user,Eco-fax,Eco-fax,c,19,EDU04,u,n,@
+Acorn user,turtle logo,turtle,c,19,EDU04,u,n,@
+Acorn user,all mode dump,Iallmode,c,19,EDU04,u,n,@
+Acorn user,graph,plotequ,c,19,EDU04,u,n,@
+Acorn user,easyplot,plot,c,19,EDU04,u,n,@
+Acorn user,Vufoil,display,,19,EDU04,s,n,@
+Acornsoft,ABC,abc,c,19,EDU05,u,n,@
+Acornsoft,ABC to view conv,Inter,c,19,EDU05,u,n,@
+unknown,Epson print,printer,c,19,edu05,u,n,@
+unknown,map britian,britain,c,19,edu05,u,n,@
+Acornsoft,Accounts payable,title,c,19,EDU06,u,n,@
+Acornsoft,Accounts receivable,title,c,19,EDU07,,n,@
+Acornsoft,polynomial,polynom,c,19,EDU08,u,n,@
+Acornsoft,rational,rationa,c,19,EDU08,u,n,@
+Acornsoft,trigonomic,trigono,c,19,EDU08,u,n,@
+Acornsoft,fourier,fourier,c,19,EDU08,u,n,@
+Acornsoft,Business games,STKMARK,c,19,EDU09,S,n,@
+Acornsoft,Telemarketing ,Telmarkrun,c,19,EDU09,S,n,@
+Acornsoft,Mystery elements,element,c,19,EDU09,u,n,@
+Acornsoft,Organic Analysis,Organtic,c,19,EDU09,u,n,@
+Acornsoft,Inorganic AnalysisInorgan,,c,19,EDU09,u,n,@
+Acornsoft,PH,PH,c,19,EDU09,u,n,@
+Acornsoft,Infra-red spectra,IR,c,19,EDU09,u,n,@
+Acornsoft,organic func analysis,organal,c,19,EDU09,u,n,@
+Acornsoft,Database,Banner,C,1B,EDU10,u,n,@
+Acornsoft,Hooked on numbers ,crane,C,19,EDU11,u,n,@
+Acornsoft,Molecular bonding,Bonding,c,0e,EDU11,u,n,@
+Acornsoft,Molecular shape,shape,C,0e,EDU11,u,n,@
+Acornsoft,Bar chart,L3-bar,c,19,EDU11,u,n,@
+Acornsoft,X-y graph,l3-gra,c,19,EDU11,u,n,@
+Acornsoft,function plot,l3-cur,c,19,EDU11,u,n,@
+Acornsoft,function plotl3-cur,,c,19,EDU11,u,n,@
+Acornsoft,pie chart,l3-pie,c,19,EDU11,u,n,@
+Acornsoft,3-d function plotl3-cur,l3-cv3d,c,19,EDU11,u,n,@
+Acornsoft,2-d Contour map,L3-co2d,c,19,EDU11,u,n,@
+Acornsoft,3-d contour map,l3-co3d,c,19,EDU11,u,n,@
+Acornsoft,surface plot,l3-surf,c,19,EDU11,u,n,@
+Acornsoft,Histogram func,l2-his,c,19,EDU11,u,n,@
+Acornsoft,pi chart func,l2-pie,c,19,EDU11,u,n,@
+Acornsoft,2-d graph func,l2-xy,c,19,EDU11,u,n,@
+Acornsoft,3-d graph func,l2-xyz,c,19,EDU11,u,n,@
+Acornsoft,2-d contour func,l2-c2,c,19,EDU11,u,n,@
+Acornsoft,3-d contour func,l2-c3,c,19,EDU11,u,n,@
+Acornsoft,surface plot func,l2-surf,c,19,EDU11,u,n,@
+Acornsoft,stereo graph funcl2-ster,,c,19,EDU11,u,n,@
+Acornsoft,stereo surface func,l2-stsu,c,19,EDU11,u,n,@
+Acornsoft,History quiz,!boot,R,19,EDU12,u,n,@
+Acornsoft,Invoicing,Title,C,19,EDU13,u,n,@
+Acornsoft,French linkword,Menu,C,19,EDU14,u,n,@
+unknown,A lvl chemistry,c.menu,c,19,edu14,u,n,@
+unknown,Bolzman plot,c.boltzma,c,19,edu14,u,n,@
+unknown,sodium chloride,c.ion,c,19,edu14,u,n,@
+unknown,sodium chloride a,c.ion/b,c,19,edu14,u,n,@
+unknown,mole calculation,c.mole,c,19,edu14,u,n,@
+unknown,ph plot,c.ph,c,19,edu14,u,n,@
+unknown,pv against p,c.gas1,c,19,edu14,u,n,@
+unknown,pressure v vol,c.gas2,c,19,edu14,u,n,@
+unknown,electrolysis,c.copper,c,19,edu14,u,n,@
+Acornsoft,Italian Linkword,Ital1,C,19,EDU15,u,n,@
+Acornsoft,Spanish linkword,span1,C,19,EDU16,u,n,@
+Acornsoft,Ambulance game,Emerg,C,19,EDU17,u,n,@
+Acornsoft,Delivery game,dairy,C,19,EDU17,u,n,@
+Acornsoft,Cargo unloading,cargo,C,19,EDU17,u,n,@
+Acornsoft,guided search,vehicle,C,19,EDU17,u,n,@
+Acornsoft,guided decisions,fashion,C,19,EDU17,u,n,@
+Acornsoft,house plan view,houses,C,19,EDU17,u,n,@
+Microfax,Teletex manager,index,C,19,EDU18,u,n,@
+Acornsoft,One to Nine,one,C,19,EDU18,u,n,@
+ESM,multiply/divide,Mlt-div,C,19,EDU18,u,n,@
+ESM,add/substract,Add-sub,C,19,EDU18,u,n,@
+Acornsoft,Personal money manager,pmm2,C,19,EDU18,u,n,@
+Acornsoft,TELETEXT MANAGER,microfax,C,19,EDU18,u,n,@
+Acornsoft,Movie generator,movie,C,19,EDU19,u,n,@
+Acornsoft,Text editor,Edittext,C,19,EDU19,u,n,@
+Acornsoft,TELETEXT VIEWER,viewer,C,19,EDU20,u,n,@
+Acornsoft,tELETEXT CREATOR,creator,C,19,EDU20,u,n,@
+Acornsoft,TLETEX INDEXER,Indexer,C,19,EDU20,u,n,@
+Acornsoft,Mail manager,title,C,19,EDU21,u,n,@
+Acornsoft,business database,title,C,19,EDU22,u,n,@
+Acornsoft,Biology revision, program,C,19,EDU23,u,n,@
+Acornsoft,Sentence order,Order,C,19,EDU23,u,n,@
+Acornsoft,Sentence rhymes,rhymes,C,19,EDU23,u,n,@
+Acornsoft,Spooky mansion,spooky,c,19,edu23,A,n,@
+Acornsoft,English revision,Program,C,19,EDU25,u,n,@
+Acornsoft,Maths revision,Mathsgo,C,19,EDU26,u,n,@
+unknown,Talkback,talk1,C,19,EDU27,u,n,@
+Acornsoft,Stock Analysis,analys,C,19,EDU27,u,n,@
+Acornsoft,77,Build,C,19,EDU27,u,n,@
+Acornsoft,,Garden1,C,19,EDU27,u,n,@
+Acornsoft,Stock control,Stcmenu,C,19,EDU27,u,n,@
+Acornsoft,workshop,wshop,C,19,EDU28,u,n,@
+Acornsoft,Tree of knowledge,Tree,C,19,EDU28,u,n,@
+Acornsoft,Watch Weight,watch2,C,0e,EDU28,u,n,@
+ACT,odd word out,+.belong,C,0e,EDU29,u,n,@
+ACT,Following instructions,+.wordpik,C,0e,EDU29,u,n,@
+ACT,definitions,+.what?,C,0e,EDU29,u,n,@
+ACT,bigger smaller,+.size,C,0e,EDU29,u,n,@
+ACT,complete saying,+.sayings,C,0e,EDU29,u,n,@
+ACT,compete sentence,+.pronoun,C,0e,EDU29,u,n,@
+ACT,3 worrds of a kind,+.3ofkind,C,0e,EDU29,u,n,@
+ACT,Following number,+.boxes,C,0e,EDU29,u,n,@
+ACT,Comprehension ,+.comphen,C,0e,EDU29,u,n,@
+ACT,same word,+.fillin2,C,0e,EDU29,u,n,@
+ACT,number questions,+.numbers,C,0e,EDU29,u,n,@
+ACT,prepositions,+.preps,C,0e,EDU29,u,n,@
+ACT,right order words,+.reorder,C,0e,EDU29,u,n,@
+ACT,related word,+.sixes,C,0e,EDU29,u,n,@
+ACT,correct spelling,+.spell1,C,0e,EDU29,u,n,@
+ACT,same meaning,+.synonym,C,0e,EDU29,u,n,@
+ACT,correct action,+.didwhat,C,0e,EDU29,u,n,@
+ACT,always never sometimes,+.never?,C,0e,EDU29,u,n,@
+ACT,opposite meaning,+.opposit,C,0e,EDU29,u,n,@
+Action aid,4  families bangladesh,bttl,c,19,EDU30,u,n,@
+Addison-wesley,airline booking,a.airbook,c,19,EDU31,u,n,@
+Addison-wesley,Gas billing,B.startup,c,19,EDU32,u,n,@
+Acornsoft,Business system,title,c,19,EDU34,u,n,@
+Acornsoft,linkword German,gmenu,c,19,EDu34,u,n,@
+Addison-wesley,supermarket stock control,,c,19,EDU35,u,n,@
+unknown,Bar code scan,scan,c,19,EDU36,u,n,@
+unknown,Barcode basic,bcbasic,c,19,EDU36,u,n,@
+unknown,Barcode EAN,ean,c,19,EDU36,u,n,@
+unknown,code decode,decode,c,19,EDU36,u,n,@
+unknown,barcode music,MUSIC,c,19,EDU36,u,n,@
+unknown,barcode picture,picture,c,19,EDU36,u,n,@
+unknown,Barcode Print,printer,c,19,EDU36,u,n,@
+Addison-wesley,Census system,census,c,19,EDU36,u,n,@
+AKADIMIAS,Tutor series,TA,c,19,EDU37,u,n,@
+ALBSU ,time tables,menu,c,19,EDU38,u,n,@
+ALBSU ,unit of time,T1A,c,19,EDU38,u,n,@
+ALBSU ,24 hour clock,T2A,c,19,EDU38,u,n,@
+ALBSU ,bus timetables,t3a,c,19,EDU38,u,n,@
+ALBSU ,train timetables,t4,c,19,EDU38,u,n,@
+ALBSU ,crosswords,menu,c,19,EDU39,u,n,@
+ALBSU ,xword grid gen,cwgen,c,19,EDU39,u,n,@
+ALBSU ,xword clue gen,cwclue1,c,19,EDU39,u,n,@
+ALBSU ,xword puzzles,crossw,c,19,EDU39,u,n,@
+ALBSU ,xword print puzzle,cwprint,c,19,EDU39,u,n,@
+ALBSU ,Spelling,menu,c,19,EDU40,u,n,@
+ALBSU ,spelling intro,RS0,c,19,EDU40,u,n,@
+ALBSU ,photo'ing words,RS1,c,19,EDU40,u,n,@
+ALBSU ,missing letter pairs,RS2,c,19,EDU40,u,n,@
+ALBSU ,underline hard part,RS3,c,19,EDU40,u,n,@
+ALBSU ,breaking a word,RS4,c,19,EDU40,u,n,@
+ALBSU ,Time,menu1,c,19,EDU41,u,n,@
+ALBSU ,time quiz1,f1,c,19,EDU41,u,n,@
+ALBSU ,time quiz2,f2,c,19,EDU41,u,n,@
+ALBSU ,time o'clock,f3,c,19,EDU41,u,n,@
+ALBSU ,time half past,f4,c,19,EDU41,u,n,@
+ALBSU ,time minutes past,f5,c,19,EDU41,u,n,@
+ALBSU ,time minutes to,f6,c,19,EDU41,u,n,@
+ALBSU ,2nd processor utils#r,6502sp,c,19,EDU42,u,n,@
+unknown,angle turner demo,atdem,c,19,EDU42,u,n,@
+unknown,angle turner ,attut,c,19,EDU42,u,n,@
+unknown,cats on the wall,cats,c,19,EDU42,u,n,@
+unknown,counting,count2,c,19,EDU42,u,n,@
+unknown,counting to the moon,moon,c,19,EDU42,u,n,@
+unknown,Make 10,octopus,c,19,EDU42,u,n,@
+unknown,@dump,swrmenu,c,19,EDU42,u,n,@
+unknown,Additional fun,!SB,c,19,EDU42,u,n,@
+unknown,number explination,abacus,c,19,EDU42,u,n,@
+unknown,Angle turner practice,atprac,c,19,EDU42,u,n,@
+unknown,attack the castle,castle,c,0e,EDU42,u,n,@
+unknown,church accounts,cl/acct,c,19,EDU42,u,n,@
+unknown,Numbers,numbers,c,19,EDU42,u,n,@
+unknown,picture,picture,c,0e,EDU42,u,n,@
+unknown,tens and units,tens,c,19,EDU42,u,n,@
+unknown,Anagram,+.anagram,c,19,EDU42,u,n,@
+Anita Straker ,abacus,abacus,c,19,EDU43,u,n,@
+Anita Straker ,adding,adding,c,19,EDU43,u,n,@
+Anita Straker ,angles,angles,c,19,EDU43,u,n,@
+Anita Straker ,areas,areas,c,19,EDU43,u,n,@
+Anita Straker ,change,change,c,19,EDU43,u,n,@
+Anita Straker ,clocks,clocks,c,19,EDU43,u,n,@
+Anita Straker ,conceal,conceal,c,19,EDU43,u,n,@
+Anita Straker ,Connect 4,Connect,c,19,EDU43,u,n,@
+Anita Straker ,counters,countrs,c,19,EDU43,u,n,@
+Anita Straker ,diagonal,diag,c,19,EDU43,u,n,@
+Anita Straker ,difference,differ,c,19,EDU43,u,n,@
+Anita Straker ,flags,flags,c,19,EDU43,u,n,@
+unknown,Car plan your route,d1,c,19,EDU44,u,n,@
+unknown,man left and right,d2,c,19,EDU44,u,n,@
+unknown,boat stop left right,d3,c,19,EDU44,u,n,@
+unknown,compass nesw,d4,c,19,EDU44,u,n,@
+unknown,compass bearings1,d5,c,19,EDU44,u,n,@
+unknown,compass bearings2,d6,c,19,EDU44,u,n,@
+unknown,get fiona home,D7,c,19,EDU44,u,n,@
+unknown,Data-show,dshow,c,19,EDU45,u,n,@
+unknown,bar and pie charts,bar/pie,c,19,EDU45,u,n,@
+unknown,bird anagrams,birdana,c,19,EDU45,u,n,@
+unknown,create anagrams,analys,c,19,EDU45,u,n,@
+unknown,sketch a bird,sketchB,c,19,EDU45,u,n,@
+unknown,sketch a duck,sketchD,c,19,EDU45,u,n,@
+unknown,bird colony simulation,colony,c,19,EDU45,u,n,@
+unknown,crow id,,c,19,EDU45,u,n,@
+unknown,bird habitation,habitat,c,19,EDU45,u,n,@
+unknown,bird quiz,quiz,c,19,EDU45,u,n,@
+unknown,make a quiz,mquiz,c,19,EDU45,u,n,@
+unknown,candy floss,candy,c,19,EDU46,u,n,@
+unknown,nightmare,nightmr,c,19,EDU46,u,n,@
+unknown,pothole,pothole,c,19,EDU46,a,n,@
+unknown,audio experiment,aud,c,19,EDU46,a,n,@
+unknown,planets,planets,c,19,EDU46,u,n,@
+unknown,visula experiment,vis,c,19,EDU46,u,n,@
+unknown,guss experiment,guess,c,19,EDU46,u,n,@
+unknown,ww. index,wwindex,c,19,EDU46,u,n,@
+unknown,ice cream,ices,c,19,EDU46,u,n,@
+unknown,calender,date,c,19,EDU46,u,n,@
+iop publishing,Fern leaf bridges,bbb,c,19,EDU47,u,n,@
+iop publishing,Golem math 1,math1,c,19,EDU47,u,n,@
+iop publishing,Golem math 2,math2,c,19,EDU47,u,n,@
+iop publishing,calender what day,date,c,19,EDU47,u,n,@
+iop publishing,save a life,S-a-l,c,19,EDU47,u,n,@
+iop publishing,product patterns,pattern,c,19,EDU47,u,n,@
+iop publishing,Find the ?,quest'n,c,19,EDU47,u,n,@
+unknown,hotel builder,q,c,19,EDU48,u,n,@
+unknown,Sentence sequ's,senten,c,19,EDU48,u,n,@
+unknown,Nursery rhymes,rhymes,c,19,EDU48,u,n,@
+unknown,wordy wordeater,wordy,c,19,EDU48,u,n,@
+unknown,electic keyboard,kboard,c,19,EDU48,u,n,@
+unknown,Vowel practice,vowels,c,19,EDU48,u,n,@
+unknown,no dropping,drop,c,19,EDU49,u,n,@
+unknown,hungry hedgehog,hedgeho,c,19,EDU49,u,n,@
+unknown,save letters,letter,c,19,EDU49,u,n,@
+unknown,munchy,munchy,c,19,EDU49,u,n,@
+unknown,target angles,target,c,19,EDU49,u,n,@
+unknown,fox,fox,c,19,EDU49,u,n,@
+unknown,life patterns,klifesy,c,19,EDU49,u,n,@
+unknown,magic maze,magicmz,c,19,EDU49,u,n,@
+unknown,symmetry,symmet,c,19,EDU49,u,n,@
+unknown,story,story,c,19,EDU49,u,n,@
+unknown,starspell,stspell,c,19,EDU49,u,n,@
+unknown,saxon raiders,saxons,c,19,EDU49,u,n,@
+unknown,othello,othhelo,c,19,EDU49,u,n,@
+the micro user,Tens units add,tuadd,c,0e,EDU50,u,n,@
+the micro user,Tens unitssub,tusub,c,0e,EDU50,u,n,@
+the micro user,tables,tablemt,c,0e,EDU50,u,n,@
+the micro user,angler,angler,c,0e,EDU50,u,n,@
+the micro user,spell droid,speldrd,c,0e,EDU50,u,n,@
+the micro user,snap,snap,c,0e,EDU50,u,n,@
+the micro user,bridge,bridge,c,0e,EDU50,u,n,@
+the micro user,Gottit,gottit,c,0e,EDU50,u,n,@
+the micro user,dbase,dbase,c,0e,EDU50,u,n,@
+unknown,Road safety quiz,meu,c,19,EDU51,u,n,@
+unknown,Watch person,ticknal,c,19,EDU51,u,n,@
+unknown,watch person (DE),german,c,19,EDU51,u,n,@
+unknown,diet,diet,c,19,EDU51,u,n,@
+unknown,clock,clocks,c,19,EDU52,u,n,@
+unknown,garden,Garden1,c,19,EDU52,u,n,@
+unknown,letter,lets,c,19,EDU52,u,n,@
+unknown,shapes,shps,c,19,EDU52,u,n,@
+unknown,maths,maths,c,19,EDU52,u,n,@
+unknown,Tiles 1,tiles1,c,19,EDU52,u,n,@
+unknown,Tiles 2,tiles2,c,19,EDU52,u,n,@
+unknown,Tiles 3,titles3,c,19,EDU52,u,n,@
+iop publishing,treasure,treas,c,19,EDU52,u,n,@
+unknown,angle,angle,c,19,EDU52,u,n,@
+unknown,frogs,frogs,c,19,EDU52,u,n,@
+unknown,krypto,krypto,c,19,EDU52,u,n,@
+unknown,lines,lines,c,19,EDU52,u,n,@
+unknown,wall,wall,c,19,EDU52,u,n,@
+unknown,odd/even,odss,c,19,EDU52,u,n,@
+unknown,squares,squares,c,19,EDU52,u,n,@
+unknown,area,areas,c,19,EDU52,u,n,@
+unknown,Reversi instructions,Rev-int,c,19,EDU53,u,n,@
+unknown,reviersi,reversi,c,19,EDU53,u,n,@
+unknown,Map-test,maptest,c,19,EDU53,u,n,@
+unknown,tens ,tens,c,19,EDU53,u,n,@
+unknown,numbers,numbers,c,19,EDU53,u,n,@
+unknown,abacus,abacus,c,19,EDU53,u,n,@
+unknown,ices,ices,c,19,EDU53,u,n,@
+unknown,fruit machine,fruitmc,c,19,EDU53,u,n,@
+unknown,parcels,parcels,c,19,EDU53,u,n,@
+unknown,tables,tables,c,19,EDU53,u,n,@
+unknown,santa,santaa,c,19,EDU53,g,n,@
+unknown,zoo,zoo,c,19,EDU53,u,n,@
+unknown,hnagman setup,hangset,c,19,EDU53,u,n,@
+unknown,hangman,hangply,c,19,EDU53,s,n,@
+ECL,Turtle,turtle,c,19,EDU55,u,n,@
+ECL,cloze,cloze,c,19,EDU55,u,n,@
+ECL,move,move,c,19,EDU55,u,n,@
+ECL,spelling,spell,c,19,EDU55,u,n,@
+ECL,directions,direct,c,19,EDU55,u,n,@
+ECL,triangles,triang,c,19,EDU55,u,n,@
+ECL,pairs,pairs,c,19,EDU55,u,n,@
+ECL,Alpha-shoot,alfshot,c,19,EDU55,u,n,@
+ECL,vertical scales,scale/v,c,19,EDU55,u,n,@
+ECL,house,house,c,19,EDU55,u,n,@
+unknown,Baron's vaults,me,c,19,EDU56,u,n,@
+unknown,Auto type,utility,c,19,EDU56,u,n,@
+unknown,Axle loading,Axels,c,19,EDU56,u,n,@
+unknown,grapgics pad,+.picplot,c,19,EDU56,u,n,@
+unknown,digital  to dial clock,digdi,c,19,EDU57,u,n,@
+unknown,dial to digital clock,didig,c,19,EDU57,u,n,@
+unknown,triple clockface,triple,c,19,EDU57,u,n,@
+unknown,Boy and girls,alpha,c,19,EDU58,u,n,@
+unknown,match pictures#o,matpic,c,19,EDU59,u,n,@
+unknown,match colour#o,matcol,c,19,EDU59,u,n,@
+unknown,shape1#o,shape1,c,19,EDU59,u,n,@
+unknown,shape2#o,shape2,c,19,EDU59,u,n,@
+unknown,math numbers#o,matnum,c,19,EDU59,u,n,@
+unknown,match numbers#o,omonum,c,19,EDU59,u,n,@
+unknown,match silloette#o,matsil,c,19,EDU59,u,n,@
+unknown,A touch of colour#o,open,c,19,EDU59,u,n,@
+unknown,do pictures#o,dopics,c,19,EDU59,u,n,@
+unknown,go pictures#o,gopics,c,19,EDU59,u,n,@
+unknown,squares#o,blocks,c,19,EDU61,u,n,@
+unknown,triangles#o,triag,c,19,EDU61,u,n,@
+unknown,rectangles#o,rects,c,19,EDU61,u,n,@
+unknown,circles#o,circles,c,19,EDU61,u,n,@
+unknown,pentagons#o,pent,c,19,EDU61,u,n,@
+unknown,hexagons#o,hex,c,19,EDU61,u,n,@
+unknown,stripes#o,stripes,c,19,EDU61,u,n,@
+unknown,lines#o,lines,c,19,EDU61,u,n,@
+unknown,stars#o,stars,c,19,EDU61,u,n,@
+unknown,bars#o,bars,c,19,EDU61,u,n,@
+unknown,octagons#o,oct,c,19,EDU61,u,n,@
+unknown,Librarian#r,rom,l,80,edu62,u,n,@
+Acornsoft,Scifi quiz,scifi,c,20,EDU63,u,n,@
+Acornsoft,Temp Cntrl Sim,WhoamI,c,21,EDU63,u,n,@
+iop publishing,Numerical analysis,menu,c,19,edu64,u,n,@
+iop publishing,0's of f(x),iterate,c,19,edu64,u,n,@
+iop publishing,recurrence relation,recurr,c,19,edu64,u,n,@
+iop publishing,gauss elimination,gelim,c,19,edu64,u,n,@
+iop publishing,linear equ,gauss,c,19,edu64,u,n,@
+iop publishing,No Quadrature,integr,c,19,edu64,u,n,@
+iop publishing,differential equ,de,c,19,edu64,u,n,@
+iop publishing,Adaptive DE solver,rkf,c,19,edu64,u,n,@
+alligator,Primary Art,art,c,19,edu64,u,n,@
+alternative software,Sooty's & sweep numbers,loader,c,19,edu64,u,n,@
+ACT,Multi choice,banner,c,19,edu65,u,n,@
+Addison-wesley,pic pop,pippop,c,19,edu66,u,n,@
+AKADIMIAS,Hamlet tutor,!boot,e,19,edu67,u,n,@
+AKADIMIAS,French revolution,!boot,c,19,edu68,u,n,@
+alternative software,Fun with thomas 1,Thomas,r,19,edu69,u,n,@
+alternative software,Fun with thomas 2,Thomas1,r,19,edu70,u,n,@
+unknown,AQA prog exemplars,menu,c,19,edu71,u,n,@
+unknown,AQAdo,Aqado#2,c,19,edu71,u,n,@
+unknown,botmove,botmod5,c,19,edu71,u,n,@
+unknown,landscaping,garden4,c,19,edu71,u,n,@
+unknown,flashcards,flash2,c,19,edu71,u,n,@
+unknown,memory game,words2,c,19,edu71,u,n,@
+unknown,population,popul,c,19,edu71,u,n,@
+unknown,txt encrypt,code2,c,19,edu71,u,n,@
+unknown,treasure hunt,treshnt,c,19,edu71,u,n,@
+unknown,word puzzle,wrdpuz6,c,19,edu71,u,n,@
+unknown,population,popul,c,19,edu71,u,n,@
+unknown,ladybirds no 1-10,lady,c,19,edu72,u,n,@
+unknown,washing,washing,c,19,edu72,u,n,@
+unknown,rockets,rockets,c,19,edu72,u,n,@
+unknown,cakes,cakes,c,19,edu72,u,n,@
+unknown,bingo,bingo,c,19,edu72,u,n,@
+unknown,train,train,c,19,edu72,u,n,@
+unknown,simple sum,simsun,c,19,edu72,u,n,@
+unknown,cat&mouse,cat&mse,c,19,edu72,u,n,@
+unknown,stars nos 2-9,jmcount,c,19,edu72,u,n,@
+unknown,Ink-sand spelling,inksand,c,19,edu72,u,n,@
+unknown,analogue recording,ABC,c,19,edu73,u,n,@
+unknown,buffer box,final,c,19,edu73,u,n,@
+unknown,builder nos 1-10,builder,c,19,edu73,u,n,@
+unknown,bungalow security,builder,c,19,edu73,u,n,@
+acornsoft,address book,address,c,19,edu73,u,n,@
+acornsoft,planner,planner,c,19,edu73,u,n,@
+acornsoft,stock control,stock,c,19,edu73,u,n,@
+unknown,class marks,menu,c,19,edu74,u,n,@
+unknown,cakes,cakes,c,19,edu74,u,n,@
+unknown,shape matching,shmatch,c,19,edu74,u,n,@
+unknown,pattern matching,ptmatch,c,19,edu74,u,n,@
+unknown,work matching,wdmatch,c,19,edu74,u,n,@
+unknown,parking,parking,c,19,edu74,u,n,@
+unknown,vowels,vowels,c,19,edu74,u,n,@
+unknown,itteration menu,sflkmnu,c,19,edu75,u,n,@
+unknown,gradient menu,gradmnu,c,19,edu75,u,n,@
+unknown,area menu,areamnu,c,19,edu75,u,n,@
+unknown,limits menu,limmnu,c,19,edu75,u,n,@
+unknown,Snowflake menu,snfkmnu,c,19,edu75,u,n,@
+unknown,Ceefax emulation,starter,c,19,edu76,u,n,@
+unknown,3d structures,3dstrct,c,19,edu10,u,n,@
+unknown,new nomenclaturenewnom,,c,19,edu10,u,n,@
+unknown,ph titration,phtemp,c,19,edu10,u,n,@
+unknown,chopper,dhopper,c,19,edu77,u,n,@
+unknown,count,count,c,19,edu77,u,n,@
+unknown,Spider & fly,fly,c,19,edu77,u,n,@
+unknown,Cat & mouse,cat&mse,c,19,edu77,u,n,@
+unknown,mickey mouse balloon,balloon,c,19,edu77,u,n,@
+unknown,Add  & sub,Add-sub,c,19,edu77,u,n,@
+unknown,Times & div,Mlt-div,c,19,edu77,u,n,@
+unknown,garden of flowers,gard,c,19,edu77,u,n,@
+unknown,Tree of knowledge,sb,c,19,edu77,u,n,@
+unknown,Cornish command,command,c,19,edu77,u,n,@
+unknown,helecopter,chopper,c,19,edu77,u,n,@
+unknown,Cinderella ,cinders,c,19,edu51,u,n,@
+unknown,sizes,sizes,c,19,edu53,u,n,@
+unknown,circles,circles,c,19,edu53,u,n,@
+unknown,A4 concept kbd,ckedit,c,19,edu79,u,n,@
+unknown,CK sequencer,menu,c,19,edu80,u,n,@
+unknown,climate,clim1,c,19,edu81,u,n,@
+unknown,Coincident Pair Mics,coincmi,c,19,EDU16,u,n,@
+unknown,primary colour,colour1,c,19,EDU16,u,n,@
+unknown,Switch control pics1,menu,c,19,edu82,u,n,@
+unknown,Switch control pics2,menu,c,19,edu83,u,n,@
+unknown,Switch control pics2a,menu,c,19,edu84,u,n,@
+unknown,Switch control pics3,menu,c,19,edu85,u,n,@
+unknown,Switch control pics4,menu,c,19,edu86,u,n,@
+unknown,Switch control4,menu,c,19,edu87,u,n,@
+unknown,Switch control4d2,menu,c,19,edu88,u,n,@
+unknown,Competence Analysis ,Intro,c,19,edu89,u,n,@
+unknown,compute a tale#r,!boot,E,19,edu90,u,n,@
+unknown,word processer,a.wordpro,c,19,edu91,u,n,@
+unknown,wordprocessor help,text1,r,19,edu91,u,n,@
+unknown,computer club,text4,r,FC,edu91,u,n,@
+unknown,debug help,aidtext,r,FC,edu91,u,n,@
+unknown,big text,a.bigpnt,r,FC,edu91,u,n,@
+unknown,Disassembler,a.disass,c,19,edu91,u,n,@
+unknown,pixel drawings,a.pixels,c,19,edu91,u,n,@
+unknown,keyboard practice,keybd,c,19,edu92,u,n,@
+unknown,Connect 4,organ,c,19,edu92,u,n,@
+unknown,organ music,organ,c,19,edu92,u,n,@
+unknown,litter simulation,litter,c,19,edu92,u,n,@
+unknown,numbers boxes,boxes,c,19,edu92,u,n,@
+unknown,peripherals,periph,c,19,edu92,u,n,@
+unknown,Logic gates,logic,c,19,edu93,u,n,@
+unknown,Verifier,verify,c,19,edu93,u,n,@
+unknown,C&C concrete,c&C,c,19,edu93,u,n,@
+unknown,washing machine,wash,c,19,edu93,u,n,@
+unknown,ices,ices,c,19,edu25,u,n,@
+unknown,teashop,teashop,c,19,edu25,u,n,@
+unknown,candy floss,candy,c,19,edu25,u,n,@
+unknown,great britain ltd,gbltd,c,19,edu25,u,n,@
+unknown,comp business build,buisness,c,19,edu25,u,n,@
+unknown,Stockmarket,stokm,c,19,edu25,u,n,@
+unknown,breakeven,brkeve,c,19,edu25,u,n,@
+unknown,crosses,crosses,c,19,edu94,u,n,@
+unknown,wordplay,wplay,c,19,edu94,u,n,@
+unknown,word sequences,index,c,19,edu94,u,n,@
+unknown,Sentence sequ's,index2,c,19,edu94,u,n,@
+unknown,squares,squares,c,19,edu94,u,n,@
+unknown,numbe races,numrace,c,19,edu94,u,n,@
+unknown,castle,castle,c,19,edu94,a,n,@
+unknown,curriculum analysis,File,c,15,edu95,u,n,@
+unknown,Beebcalc,beebcal,c,19,edu96,u,n,@
+unknown,edfax,edfax,c,19,edu96,u,n,@
+unknown,vgraph,vgraph,c,19,edu96,u,n,@
+unknown,functionstrip editor,visikey,c,19,edu96,u,n,@
+unknown,visitab,visitab,c,19,edu96,u,n,@
+unknown,3d bar chart,vbar,c,19,edu96,u,n,@
+unknown,rom save,zapwise,c,19,edu96,u,n,@
+unknown,Dragon,Dragon,c,19,edu96,a,n,@
+unknown,data handling,link,c,19,edu63,u,n,@
+unknown,data create sort edit,mkr,c,19,edu63,u,n,@
+unknown,search,bas,c,19,edu63,u,n,@
+unknown,merge,merge,c,19,edu63,u,n,@
+unknown,domestic budget,+.budget,c,19,edu10,u,n,@
+unknown,Drum machine,+.pmachin,c,19,edu10,u,n,@
+unknown,Dress,Dress,c,19,edu97,u,n,@
+unknown,crow,crow,c,19,edu97,u,n,@
+unknown,bottles,bottles,c,19,edu97,u,n,@
+unknown,house,house,c,19,edu97,u,n,@
+unknown,sing6,sing6,c,19,edu97,u,n,@
+unknown,march,march,c,19,edu97,u,n,@
+unknown,silv,silv,c,19,edu97,u,n,@
+unknown,12days,12days,c,19,edu97,u,n,@
+unknown,alpha,alpha,c,19,edu97,u,n,@
+unknown,special needs,Menu,c,19,edu97,u,n,@
+unknown,fractions,frac,c,19,edu10,u,n,@
+unknown,multipication,multds,c,19,edu10,u,n,@
+unknown,times tables,table,c,19,edu10,u,n,@
+unknown,smalldozer,smldzr,c,19,edu10,u,n,@
+unknown,funnyman,funnyma,c,19,edu10,u,n,@
+unknown,Easy spread,!boot,E,19,EDU98,u,n,@
+unknown,add,add,c,19,edu94,u,n,@
+unknown,beat the clock,btc,c,19,edu94,u,n,@
+unknown,Marching -,march,c,19,edu94,u,n,@
+unknown,sing6,sing6,c,19,edu94,u,n,@
+unknown,spell,spell,c,19,edu94,u,n,@
+unknown,subtract,take,c,19,edu94,u,n,@
+unknown,count,count,c,19,edu94,u,n,@
+unknown,animal,animal,c,19,edu99,u,n,@
+unknown,Connect 4,connect,c,19,edu99,u,n,@
+unknown,french tutor,intro1,c,19,edu99,u,n,@
+unknown,othello,othello,c,19,edu99,u,n,@
+unknown,sequences,sequnce,c,19,edu99,u,n,@
+unknown,tables,tables,c,19,edu99,u,n,@
+unknown,world cities,atribut,c,19,edu99,u,n,@
+unknown,nightmare,nightmr,c,19,edu99,u,n,@
+unknown,pothole,pothole,c,19,edu99,u,n,@
+unknown,chicken george,Chicken,c,19,edu98,u,n,@
+unknown,eggs sim1,eggsim1,c,19,edu98,u,n,@
+unknown,eggs sim2,eggsim2,c,19,edu98,u,n,@
+unknown,Election agent,Menu,c,19,edu100,u,n,@
+unknown,ENERGY EFFICIENCY,Menu1,c,19,edu100,u,n,@
+unknown,Engines & electrics,mechani,c,19,edu101,u,n,@
+unknown,factfile,intro,c,19,edu102,u,n,@
+unknown,filecard,loader,c,19,edu102,u,n,@
+unknown,filecard instructs,I.intro,c,19,edu102,u,n,@
+unknown,Recorder,recordr,c,19,edu102,u,n,@
+unknown,upper /lower case,L-match,c,19,edu102,u,n,@
+unknown,writing stories,tsword,c,19,edu102,u,n,@
+unknown,Comprehension ,reason,c,19,edu102,u,n,@
+unknown,eys counting,PLAY,c,19,edu102,u,n,@
+unknown,pictorial stories,preps,c,19,edu102,u,n,@
+unknown,eys subtraction,dropsoc,c,19,edu102,u,n,@
+unknown,context,context,c,19,edu102,u,n,@
+unknown,simple maths,jump,c,19,edu102,u,n,@
+unknown,help with spelling,starspc,c,19,edu102,u,n,@
+unknown,Tens & units,truck10,c,19,edu102,u,n,@
+unknown,counting,sing6,c,19,edu102,u,n,@
+unknown,Renember & sort,pmanpat,c,19,edu102,u,n,@
+unknown,blackboard,house,c,19,edu102,u,n,@
+unknown,marching sub,march,c,19,edu102,u,n,@
+unknown,spell correctly,crow,c,19,edu102,u,n,@
+unknown,bottles counting,bottles,c,19,edu102,u,n,@
+unknown,silver coins,silv,c,19,edu102,u,n,@
+unknown,dressing,dress,c,19,edu102,u,n,@
+unknown,sort words,alpha,c,19,edu102,u,n,@
+unknown,Fitness,Fitness,c,19,edu94,u,n,@
+unknown,Fox & hounds,fox,c,19,edu101,u,n,@
+unknown,plotmate frame design,!boot,E,19,edu102,u,n,@
+unknown,French tutor,westfld,c,19,edu102,u,n,@
+unknown,bounce,bounce,c,19,edu104,u,n,@
+unknown,caterpillar,caterpi,c,19,edu104,u,n,@
+unknown,number jump,jump,c,19,edu104,u,n,@
+unknown,packing,packing,c,19,edu104,u,n,@
+unknown,fuzzbuzz,stan,c,19,edu102,u,n,@
+unknown,fuzzbuzz sentences,chuff,c,19,edu102,u,n,@
+unknown,sentence order,bonzo,c,19,edu102,u,n,@
+unknown,hangman,hang2,c,19,edu104,u,n,@
+unknown,letters,letters,c,19,edu104,u,n,@
+unknown,pairs,pairs,c,19,edu104,u,n,@
+unknown,house that jack..,houses,c,19,edu104,u,n,@
+unknown,2d game gcse,2dgame,c,19,edu98,S,n,@
+unknown,counting words,cwords,c,19,edu105,u,n,@
+unknown,flash cards 1,fcards1,c,19,edu105,u,n,@
+unknown,flash cards 2,fcards2,c,19,edu105,u,n,@
+unknown,think links,links,c,19,edu105,u,n,@
+unknown,three letters,3w,c,19,edu105,u,n,@
+unknown,sentnace maker,S-maker,c,19,edu105,u,n,@
+unknown,Matching 1,match1,c,19,edu105,u,n,@
+unknown,Matching 2,match2,c,19,edu105,u,n,@
+unknown,halving,halving,c,19,edu105,u,n,@
+unknown,looping,looping,c,19,edu105,u,n,@
+unknown,teachme,teachme,c,19,edu105,u,n,@
+unknown,handwriting,writing,c,19,edu105,u,n,@
+unknown,OS Symbols,ORDMAP,c,19,edu106,u,n,@
+unknown,Town Routes,MTOWN1,c,19,edu106,u,n,@
+unknown,World Quiz,GEOG,c,19,edu106,u,n,@
+unknown,Sink-the-submarine ,3DCOOD,c,19,edu106,u,n,@
+unknown,Gomoku,GOMOKU,c,19,edu106,u,n,@
+unknown,Five-in-a-line,GOMOKU,c,19,edu106,u,n,@
+unknown,rammar Tutor,GRAMM1,c,19,EDU103,u,n,@
+unknown,Test on Grammar,GRAMM2,c,19,EDU103,u,n,@
+unknown,Art graphics,graphic,c,19,EDU107,u,n,@
+unknown,hall of mirrors,menu,c,19,EDU92,u,n,@
+unknown,Ices              ,ICES   ,c,19,EDU108,u,n,@
+unknown,Zoo               ,ZOO  ,c,19,EDU108,u,n,@
+unknown,Tables            ,TABLES  ,c,19,EDU108,u,n,@
+unknown,Parcels           ,PARCELS ,c,19,EDU108,u,n,@
+unknown,Fruit Machine     ,FRUITMC ,c,19,EDU108,u,n,@
+unknown,Santa    ,SANTAA ,c,19,EDU108,u,n,@
+unknown,  Tens              ,TENS      ,c,19,EDU108,u,n,@
+unknown, Hangman setup,HANGSET,c,19,EDU108,u,n,@
+unknown,Hangman play,hangply,c,19,EDU108,u,n,@
+unknown,Infants +,SPD+INF,c,19,EDU109,u,n,@
+unknown,Infants -,SPD-INF ,c,19,EDU109,u,n,@
+unknown,InfantS X,SPDXINF,c,19,EDU109,u,n,@
+unknown,Infants ~,SPD~INF,c,19,EDU109,u,n,@
+unknown,Infants Tens +,TEN+INF,c,19,EDU109,u,n,@
+unknown,Infants Tens X,TENXINF,c,19,EDU109,u,n,@
+unknown, Number Balance One,NUMBAL1,c,19,EDU109,u,n,@
+unknown,Number Balance Two,NUMBAL2,c,19,EDU109,u,n,@
+unknown,Junior +,SPD+JUN,c,19,EDU109,u,n,@
+unknown,Junior -,SPD-JUN ,c,19,EDU109,u,n,@
+unknown,Junior X,SPDXJUN,c,19,EDU109,u,n,@
+unknown,Junior ~,SPD~JUN,c,19,EDU109,u,n,@
+unknown,INTERMEDIATE MODEL COMPUTER ,ldr,c,19,EDU108,u,n,@
+unknown,Javelin ctl box,javelin,R,19,EDU110,u,n,@
+unknown,zap base,aliens,C,19,EDU109,u,n,@
+unknown,ten green bottles,bottles,c,19,EDU109,u,n,@
+unknown,drop sock,dropsoc,C,19,EDU109,u,n,@
+unknown,jump count,jmcount,c,19,EDU109,u,n,@
+unknown,Marching -,march,C,19,EDU109,u,n,@
+unknown,maths house,mathous,c,19,EDU109,u,n,@
+unknown,counting,play,C,19,EDU109,u,n,@
+unknown,postman pat,pmanpat,C,19,EDU109,u,n,@
+unknown,starlight,s/light,C,19,EDU109,u,n,@
+unknown,shapes,shapes,C,19,EDU109,u,n,@
+unknown,simple sum,simsum,C,19,EDU109,u,n,@
+unknown,Snap 2,snap2,C,19,EDU109,u,n,@
+unknown,train raid,train,C,19,EDU109,u,n,@
+unknown,Mouse - +,mouse,C,19,EDU109,u,n,@
+unknown,flags,FLAGS,C,19,EDU108,u,n,@
+unknown,Kanga,KANGAroo,C,19,EDU108,u,n,@
+unknown,Taxman  factors,TAXMAN,C,19,EDU108,u,n,@
+unknown,Knitter pattern,knitter,C,19,EDU109,u,n,@
+unknown,Language db,DBS,C,19,EDU111,u,n,@
+unknown,Logotron LOGO ,LLMENU,C,19,EDU112,u,n,@
+unknown,LIBRARY SYSTEM,BOOKS,C,19,EDU113,u,n,@
+unknown,LIFE,LIFE,C,19,EDU113,u,n,@
+unknown,Life (Frog-Spawner!) ,LIFE,C,19,EDU114,u,n,@
+unknown,Canal Lock,LOCK,C,19,EDU114,u,n,@
+unknown,Row-of-Four,ROWOF4,C,19,EDU114,u,n,@
+unknown,Target Practice,TARGETS,C,19,EDU114,u,n,@
+unknown,Short Vowel Sounds,SS.SVS,C,19,EDU114,u,n,@
+unknown,Cover-Up,COVERUP,C,19,EDU114,u,n,@
+unknown,Cut/Val (Maths) ,CUTNVAL  ,C,19,EDU114,u,n,@
+unknown,Morse Code,MORSE,C,19,EDU114,u,n,@
+unknown,LIST CARD INDEX,LISTS,C,19,EDU111,u,n,@
+unknown,Canal Lock,LOCK,C,19,EDU111,u,n,@
+unknown,Green Bottles,BOTTLES      ,C,19,edu115,u,n,@
+unknown,Shapes & Colours,SHAPES      ,C,19,edu115,u,n,@
+unknown,Dressing Up,DRESSG   ,C,19,edu115,u,n,@
+unknown,Dogs and Bones ,DOGS               ,C,19,edu115,u,n,@
+unknown,Mathshouse ,MATHOUS  ,C,19,edu115,u,n,@
+unknown,crow,CROW     ,C,19,edu115,u,n,@
+unknown,Car Park ,PARKING    ,C,19,edu115,u,n,@
+unknown,Countdown,COUNTD,C,19,edu115,u,n,@
+unknown,Addmaths ,ADDMAT ,C,19,edu115,u,n,@
+unknown,Oxo,OXO         ,C,19,edu115,u,n,@
+unknown,Breathtest,BREATHT   ,C,19,edu115,u,n,@
+unknown,Print,PRINT    ,C,19,edu115,u,n,@
+unknown,Easy Car Racer,RACER,C,19,edu115,u,n,@
+unknown,Magic maze,magicmz,C,19,EDU113,u,n,@
+unknown,sense of words,words,C,19,EDU113,u,n,@
+unknown,I can add,ADD,C,19,EDU116,u,n,@
+unknown,I can take away,take,C,19,EDU116,u,n,@
+unknown,ten green bottles,bottles,C,19,EDU116,u,n,@
+unknown,I can count to nine,count,C,19,EDU116,u,n,@
+unknown,"I can tell the time""",CLOCK,C,19,EDU116,u,n,@
+unknown,Sumvaders,SUMVADE,C,19,EDU116,u,n,@
+unknown,Finding numbers,numbers,C,19,EDU116,u,n,@
+unknown,Maths Crosswords ,C-WORDS,C,19,EDU116,u,n,@
+unknown,Arithmetic,ARITH,C,19,EDU116,u,n,@
+unknown,Adding Fractions,ADDFRAC,C,19,EDU116,u,n,@
+unknown,Subtracting Fractions,SUBFRAC,C,19,EDU116,u,n,@
+unknown,Hide and Seek,HIDE,C,19,EDU116,u,n,@
+unknown,Mastermind,XMIND,C,19,EDU116,u,n,@
+unknown,Count with Teddy  ,TEDDY,C,19,EDU116,u,n,@
+unknown,abacus,SPIKE,C,19,EDU116,u,n,@
+unknown,Clock-work,XTIME,C,19,EDU116,u,n,@
+unknown,Long Division,LONGDIV,C,19,EDU116,u,n,@
+unknown,Counting Rabbits,RABBITS,C,19,EDU116,u,n,@
+unknown,Balance 1,BAL1,C,19,EDU117,u,n,@
+unknown,Balance 2,BAL2,C,19,EDU117,u,n,@
+unknown,Bango,BANGO,C,19,EDU117,u,n,@
+unknown,Chains,CHAINS,C,19,EDU117,u,n,@
+unknown,Factor frog,FACTORF,C,19,EDU117,u,n,@
+unknown,Litter,litter,C,19,EDU117,u,n,@
+unknown,Matching 1,match1,C,19,EDU117,u,n,@
+unknown,Matching 2,match2,C,19,EDU117,u,n,@
+unknown,Maths talk,MTALK,C,19,EDU117,u,n,@
+unknown,Patterns 1,PATT1,C,19,EDU117,u,n,@
+unknown,Patterns 2,PATT2,C,19,EDU117,u,n,@
+unknown,Signs 1,Add-sub,C,19,EDU117,u,n,@
+unknown,Signs 2,SIGNS2,C,19,EDU117,u,n,@
+unknown,Signs 3,SIGNS1,C,19,EDU117,u,n,@
+unknown,Blocks ,blocks,C,19,EDU117,u,n,@
+unknown,Crash,FINDME,C,19,EDU117,u,n,@
+unknown,findme,FINDME,C,19,EDU117,u,n,@
+unknown,Manipulation,MANIP,C,19,EDU117,u,n,@
+unknown,Size game,SZEGME,C,19,EDU117,u,n,@
+unknown,"Eggs,",EGGS1,C,19,EDU118,u,n,@
+unknown,"Galleon,",GALLEON,C,19,EDU118,u,n,@
+unknown,"Line-up,",LINEUP,C,19,EDU118,u,n,@
+unknown,"Mickey,",MICKEY,C,19,EDU118,u,n,@
+unknown,"More-less,",MORE-LE,C,19,EDU118,u,n,@
+unknown,Picplot ,PICPLOT,C,19,EDU118,u,n,@
+unknown,"Snap,",SNAP,C,19,EDU118,u,n,@
+unknown,"Teashop,",teashop,C,19,EDU118,u,n,@
+unknown,"Bounce,",BOUNCE1,C,19,EDU118,u,n,@
+unknown,"Flowers,",FLOWERS,C,19,EDU118,u,n,@
+unknown,"Helicopter,",HELICOP,C,19,EDU118,u,n,@
+unknown,Magic-square,MAGIC-S,C,19,EDU118,u,n,@
+unknown,"Mixit,",MIXIT,C,19,EDU118,u,n,@
+unknown,"Number,",NUMBER-,C,19,EDU118,u,n,@
+unknown,"Sink-sub,",SINK-SU,C,19,EDU118,u,n,@
+unknown,"Spider,",SPIDER-,C,19,EDU118,u,n,@
+unknown,"Trains,",TRAINS,C,19,EDU118,u,n,@
+unknown,"Angle turner,",atprac,C,19,EDU118,u,n,@
+unknown,Spots,SPOTS,C,19,EDU118,u,n,@
+unknown,FACTOR,FACTOR,C,19,EDU119,u,n,@
+unknown,PREDICT,PREDICT,C,19,EDU119,u,n,@
+unknown,TOWER,TOWER,C,19,EDU119,u,n,@
+unknown,RACE,RACE,C,19,EDU119,u,n,@
+unknown,BOXES,BOXES,C,19,EDU119,u,n,@
+unknown,CIRCLE,CIRCLE,C,19,EDU119,u,n,@
+unknown,No matche,NIM,C,19,EDU119,u,n,@
+unknown,REVERSE ,REVERSE ,C,19,EDU119,u,n,@
+unknown,Coordinate Jigsaw,JIGLOAD,C,19,EDU120,u,n,@
+unknown,Symmetry Patterns,PATLOAD,C,19,EDU120,u,n,@
+unknown,Colouring Puzzle,COLLOAD,C,19,EDU120,u,n,@
+unknown,The Two Dice Race,DICLOAD,C,19,EDU120,u,n,@
+unknown,large txt scroll,scroll,C,19,EDU120,u,n,@
+unknown,alpha,alpha,C,19,EDU106,u,n,@
+unknown,MAZES,MAZES,C,19,EDU106,u,n,@
+unknown,PALACE,PALACE,C,19,EDU106,u,n,@
+unknown,rockets,rockets,C,19,EDU106,u,n,@
+unknown,cakes,cakes,C,19,EDU106,u,n,@
+unknown,POSTMAN PAT,pmanpat,C,19,EDU106,u,n,@
+unknown,washing,washing,C,19,EDU106,u,n,@
+unknown,Weather station,Menu,C,19,EDU121,u,n,@
+unknown,Moles,moleint,C,19,EDU122,u,n,@
+unknown,MORAG'S MOSAICS ,menu,C,19,EDU122,u,n,@
+unknown,multi choice quizes,multch,C,19,EDU122,u,n,@
+unknown,NANETTE'S HOMEWRK ,!boot,E,19,EDU123,u,n,@
+unknown,newspaper,FPAGEX,C,19,EDU124,u,n,@
+unknown,Note quiz,NoteQz1,C,19,EDU101,u,n,@
+unknown,1dsk home office,P.OFFICE,C,19,EDU115,u,n,@
+unknown,Invaders,INVDS,C,19,EDU124,u,n,@
+unknown,MQuiz,MQUIZ,C,19,EDU124,u,n,@
+unknown,MultDiv,MULTDIV,C,19,EDU124,u,n,@
+unknown,Pairs Opposites,PAIRS,C,19,EDU124,u,n,@
+unknown,Pairs Similies,PAIR1,C,19,EDU124,u,n,@
+unknown,Signs,SINGS,C,19,EDU124,u,n,@
+unknown,Spellings,SPELL,C,19,EDU124,u,n,@
+unknown,Input,4INPUT,C,19,EDU125,u,n,@
+unknown,Accel 1,ACCEL1,C,19,EDU125,u,n,@
+unknown,Accel 2,ACCEL2,C,19,EDU125,u,n,@
+unknown,Accel 3,ACCEL3,C,19,EDU125,u,n,@
+unknown,Analog 2,ANALOG2,C,19,EDU125,u,n,@
+unknown,Balance,BALANCE,C,19,EDU125,u,n,@
+unknown,ECG,ECG,C,19,EDU125,u,n,@
+unknown,Flat Out,FLATOUT,C,19,EDU125,u,n,@
+unknown,Freq Count,FREQCNT,C,19,EDU125,u,n,@
+unknown,Genalog,GENALOG,C,19,EDU125,u,n,@
+unknown,Long Timer,LONGTIM,C,19,EDU125,u,n,@
+unknown,Period,PERIOD,C,19,EDU125,u,n,@
+unknown,Relay,RLYOPT,C,19,EDU125,u,n,@
+unknown,Short Timer,SHRTTIM,C,19,EDU125,u,n,@
+unknown,Timer 1,TIMER1,C,19,EDU125,u,n,@
+unknown,Triscan,TRISCAN,C,19,EDU125,u,n,@
+unknown,Velocity 1,VEL1,C,19,EDU125,u,n,@
+unknown,Velocity 2,VEL2,C,19,EDU125,u,n,@
+unknown,sale til,START,C,19,EDU126,u,n,@
+unknown,Addition,P.ADD,C,19,EDU126,u,n,@
+unknown,Car Park,P.CARPARK,C,19,EDU126,u,n,@
+unknown,Cloze,P.CLOZE,C,19,EDU126,u,n,@
+unknown,Dogs,P.Dogs,C,19,EDU126,u,n,@
+unknown,Gremlin Maze,P.GREMLIN,C,19,EDU126,u,n,@
+unknown,Guess,P.GUESS,C,19,EDU126,u,n,@
+unknown,Homonym,P.HOMONYM,C,19,EDU126,u,n,@
+unknown,Computer LEGO,P.LEGO,C,19,EDU126,u,n,@
+unknown,Missing Signs, P.MISIGNS,C,19,EDU126,u,n,@
+unknown,Missing Numbers,P.MISNUMS,C,19,EDU126,u,n,@
+unknown,Number Bonds,P.NUMBOND,C,19,EDU126,u,n,@
+unknown,Pairs,P.PAIRS,C,19,EDU126,u,n,@
+unknown,Plurals,P.PLURALS,C,19,EDU126,u,n,@
+unknown,Signs,P.SIGNS,C,19,EDU126,u,n,@
+unknown,Simple Sum,P.SIMSUM,C,19,EDU126,u,n,@
+unknown,Spelling Land,P.SPELAND,C,19,EDU126,u,n,@
+unknown,Stars,P.STARS,C,19,EDU126,u,n,@
+unknown,Train,P.TRAIN,C,19,EDU126,u,n,@
+unknown,Zap Bar,P.ZAP,C,19,EDU126,u,n,@
+unknown,Prisoner,prisonr,C,19,EDU126,u,n,@
+unknown,Caroline and Phillippa's house,HOUSE1,C,19,EDU127,u,n,@
+unknown,Caroline and Phillippa's men ,MEN,C,19,EDU127,u,n,@
+unknown,10 green bottles,BOTTLES,C,19,EDU127,u,n,@
+unknown,Jill and Bill the friendly engines,JILL,C,19,EDU127,u,n,@
+unknown,The Maze,MAZE,C,19,EDU127,u,n,@
+unknown,I can count to 9 ,COUNT,C,19,EDU127,u,n,@
+unknown,Snap Shapes,SHAPES,C,19,EDU127,u,n,@
+unknown,Colouring Shapes,COLOURS,C,19,EDU127,u,n,@
+unknown,Dial a tune,DIAL0,C,19,EDU127,u,n,@
+unknown,Dial a Christmas tune,DIAL0,C,19,EDU127,u,n,@
+unknown,I can add,DD,C,19,EDU128,u,n,@
+unknown,I can take away,TAKE,C,19,EDU128,u,n,@
+unknown,I can spell,SPELL0,C,19,EDU128,u,n,@
+unknown,I can draw with the computer,DRAWING,C,19,EDU128,u,n,@
+unknown,Hangman,HANGMAN,C,19,EDU128,u,n,@
+unknown,I can tell the time,CLOCK,C,19,EDU128,u,n,@
+unknown,Nim,NIM,C,19,EDU128,u,n,@
+unknown,Finding numbers ,NUMBER,C,19,EDU128,u,n,@
+unknown,Hide and Seek  ,HIDE,C,19,EDU128,u,n,@
+unknown,Maths Crosswords,C_WORDS,C,19,EDU128,u,n,@
+unknown,Typing test,SGP1,C,19,EDU93,u,n,@
+unknown,RADIOACTIVE DECAY ,Instr,C,19,EDU74,u,n,@
+unknown,The Learning Robot ,TEXT,C,19,EDU129,u,n,@
+unknown,Robotic Arm,ARM  ,C,19,EDU129,u,n,@
+unknown,Pitfall Pete instr,PP,C,19,EDU129,u,n,@
+unknown,Pitfall Pete,Pitfall,C,19,EDU129,u,n,@
+unknown,Wordsquare Maker (Needs Printer),WSQ,C,19,EDU129,u,n,@
+unknown,Music Transposer,MUSIC,C,19,EDU129,u,n,@
+unknown,More or Less?,MLESS,C,19,EDU129,u,n,@
+unknown,Ice Cream,ICES,C,19,EDU129,u,n,@
+unknown,Towers of Hanoi,HAN,C,19,EDU129,u,n,@
+unknown,Rectangles (Magic Drawing!),REC,C,19,EDU129,u,n,@
+unknown,Menu Utility, MU,C,19,EDU129,u,n,@
+unknown,Roman numerals,MASON,C,19,EDU97,u,n,@
+unknown,Guess Letter,ALFOBET,C,19,EDU97,u,n,@
+unknown,Magic Letters,MAGICLT,C,19,EDU97,u,n,@
+unknown,Magic Numbers,MAGICNU,C,19,EDU97,u,n,@
+unknown,Eldorado Gold,GOLD     ,C,19,EDU95,u,n,@
+unknown,Angle-Tester            ,ANGLER,C,19,EDU95,u,n,@
+unknown,Row-of-Four (Maths challenge!),ROWOF4,C,19,EDU95,u,n,@
+unknown,Cowboys!,GOLD     ,C,19,EDU95,u,n,@
+4nation,Grannys garden pt1,G1,c,0e,EDU96,u,n,@
+4nation,Grannys garden pt2,g2,c,0e,EDU96,u,n,@
+unknown,House Builder,HOUSE,c,19,EDU130,u,n,@
+unknown,Marching Along,MARCH,c,19,EDU130,u,n,@
+unknown,Silver Targets,SILV,c,19,EDU130,u,n,@
+unknown,Twelve Days,12DAYS,c,19,EDU130,u,n,@
+unknown,Ten Green Bottles,BOTTLES,c,19,EDU130,u,n,@
+unknown,Dressing Up,DRESS,c,19,EDU130,u,n,@
+unknown,Sing-a-Song,SING6,c,19,EDU130,u,n,@
+unknown,Counting Stars,STARS,c,19,EDU130,u,n,@
+unknown,Guess-My-Number,GUESS,c,19,EDU130,u,n,@
+unknown,Guess-My-Words,WORDS,c,19,EDU130,u,n,@
+unknown,Car-Parking ,CARPARK,c,19,EDU130,u,n,@
+unknown,Time ,TIME,c,19,EDU130,u,n,@
+unknown,Magic Garden,GARDEN,c,19,EDU130,u,n,@
+unknown,BILLY BULDOZER,SMLDZR,c,19,EDU131,u,n,@
+unknown,DART -TURTLE GRAPics,DARTP ,c,19,EDU131,u,n,@
+unknown,WORDBUILD,WORDBUI,c,19,EDU131,u,n,@
+unknown,MARSH,MARSH,c,19,EDU131,u,n,@
+unknown,JUMBO,JUMBO1,c,19,EDU131,u,n,@
+unknown,VOLUMES,VOLUME,c,19,EDU131,u,n,@
+unknown,TEN GREEN BOTTLES,BOTTLES,c,19,EDU131,u,n,@
+unknown,TALES WORDPROC,TALES  ,c,19,EDU131,u,n,@
+unknown,SPIKE,SPIKE,c,19,EDU131,u,n,@
+unknown,AXES OF SYMETRY,SYMMET,c,19,EDU131,u,n,@
+unknown,PALACE,PALACE,c,19,EDU131,u,n,@
+unknown,ODD,ODD,c,19,EDU131,u,n,@
+unknown,ODD COLOUR,ODDCOL,c,19,EDU131,u,n,@
+unknown,SNAP,SNAP,c,19,EDU131,u,n,@
+unknown,COLOURS,COLOURS,c,19,EDU131,u,n,@
+unknown,TARGET,TARGET,c,19,EDU131,u,n,@
+unknown,PREPS,PREPS,c,19,EDU131,u,n,@
+unknown,MAZE,MAZE,c,19,EDU131,u,n,@
+unknown,D END,DEND,c,19,EDU131,u,n,@
+unknown,WORD TEST 1,SENT1,c,19,EDU131,u,n,@
+unknown,WORD TEST 2,SENT2,c,19,EDU131,u,n,@
+unknown,AXES OF SYMETRY,SYMMET,c,19,EDU131,u,n,@
+unknown,FOOTBALL,FBALL,c,19,EDU131,u,n,@
+unknown,DOMINOE,DOMINOE,c,19,EDU131,u,n,@
+unknown,SHAPES,SHAPES,c,19,EDU131,u,n,@
+unknown,SCI WORDPROCESSOR ,rommenu,c,19,EDU132,u,n,@
+unknown,biology quiz,biology,c,0e,EDU130,u,n,@
+unknown,chemistry quiz,chemsty,c,0e,EDU130,u,n,@
+unknown,signals,+.signals,c,19,EDU130,u,n,@
+unknown,Peak Maths Add card,ADD20,c,19,EDU133,u,n,@
+unknown,Add or take,ADRTAKE,c,19,EDU133,u,n,@
+unknown,Carry on,CARRYON,c,19,EDU133,u,n,@
+unknown,House more!,HSEMORE,c,19,EDU133,u,n,@
+unknown,House sums,HSESUM,c,19,EDU133,u,n,@
+unknown,Racing car subtraction,RACEOFF,c,19,EDU133,u,n,@
+unknown,Colour sums,SUMS,c,19,EDU133,u,n,@
+unknown,Number bonds,TENS,c,19,EDU133,u,n,@
+unknown,Take away,TKEMART,c,19,EDU133,u,n,@
+unknown,Vest more!,VSTMORE,c,19,EDU133,u,n,@
+unknown,Play your cards right,B.CARDS,c,19,EDU133,u,n,@
+unknown,Anagram (Anita Straker),ANAG,c,19,EDU134,u,n,@
+unknown,Box  (Anita Straker),BOX,c,19,EDU134,u,n,@
+unknown,The Coffee Quiz,COFFEE,c,19,EDU134,u,n,@
+unknown,Files available,FL,c,19,EDU134,u,n,@
+unknown,The guessing Game (MEP),GUESS,c,19,EDU134,u,n,@
+unknown,Set up guessing game,GUESSF,c,19,EDU134,u,n,@
+unknown,Hangman,HANG,c,19,EDU134,u,n,@
+unknown,Name Writing,NMEWRTE,c,19,EDU134,u,n,@
+unknown,Social Sight practice,SOCIAL,c,19,EDU134,u,n,@
+unknown,Word match screen-concept,SOC,c,19,EDU134,u,n,@
+unknown,Make up word list,MkList,c,19,EDU134,u,n,@
+unknown,COLOUR,SHAPE,c,19,EDU135,u,n,@
+unknown,COLOURS,SWITCH,c,19,EDU135,u,n,@
+unknown,SHAPES,COLOURS,c,19,EDU135,u,n,@
+unknown,SIZE1,SHAPES,c,19,EDU135,u,n,@
+unknown,SIZE2,SIZE1,c,19,EDU135,u,n,@
+unknown,SHAPECOL1,SIZE2,c,19,EDU135,u,n,@
+unknown,SHAPECOL2,SHPCOL1,c,19,EDU135,u,n,@
+unknown,SIZECOL1,SHPCOL2,c,19,EDU135,u,n,@
+unknown,SIZECOL2,SIZCOL1,c,19,EDU135,u,n,@
+unknown,ODDCOL,SIZCOL2,c,19,EDU135,u,n,@
+unknown,NUMBERS,ODDCOL,c,19,EDU135,u,n,@
+unknown,MATCH,MATCH,c,19,EDU135,u,n,@
+unknown,BOXES,BOXES,c,19,EDU135,u,n,@
+unknown,Sketch,Sketch,c,19,EDU128,u,n,@
+unknown,SLIDE FILING SYSTEM ,PROJ-7,c,19,EDU128,u,n,@
+unknown,SLIDE FILING SYSTEM #E,PROJECT,c,19,EDU128,u,n,@
+unknown,speak,speak,c,14,EDU135,u,n,@
+unknown,Helicopters ,HELICOP,c,19,EDU136,u,n,@
+unknown,Counters,COUNTRS,c,19,EDU136,u,n,@
+unknown,Number House  + & -,NUMHO,c,19,EDU136,u,n,@
+unknown,Pairs,PAIRS,c,19,EDU136,u,n,@
+unknown,Spelling four languages,SPELLIN,c,19,EDU136,u,n,@
+unknown,Conceal,CONCEAL,c,19,EDU136,u,n,@
+unknown,Line up,LINEUP,c,19,EDU136,u,n,@
+unknown,Symmetry Spot axes of it,SYMMETR,c,19,EDU136,u,n,@
+unknown,Stop It  Letter shape recognition,STOP_IT,c,19,EDU136,u,n,@
+unknown,Laser Maths,LASERMA,c,19,EDU136,u,n,@
+unknown,Stonemason Roman Numerals,MASON,c,19,EDU136,u,n,@
+unknown,Target,TARGET,c,19,EDU136,u,n,@
+unknown,Hangman,HANGMAN,c,19,EDU136,u,n,@
+unknown,Match it,MATCHIT,c,19,EDU136,u,n,@
+unknown,Spike Abacus,SPIKE,c,19,EDU136,u,n,@
+unknown,Vernon Reading Test,Vernon,c,19,EDU136,u,n,@
+unknown,Rowan Reading Test,Rowan,c,19,EDU136,u,n,@
+unknown,french word,b.Squares,c,19,EDU137,u,n,@
+unknown,SORT ROUTINE,b.sorting,c,19,EDU137,u,n,@
+unknown,Disc Servicer,b.service,c,19,EDU137,u,n,@
+unknown,Scorpion Patience,b.scorpio,c,19,EDU137,u,n,@
+unknown,Quad solver,b.quadsol,c,19,EDU137,u,n,@
+unknown,%,b.marks,c,19,EDU137,u,n,@
+unknown,label printer,b.labels,c,19,EDU137,u,n,@
+unknown,word hunt1,hunt1,c,19,EDU137,u,n,@
+the micro user,covers,covers,c,19,EDU137,u,n,@
+unknown,flags,b.flags,c,19,EDU137,u,n,@
+unknown,cassete label designer,b.casslab,c,19,EDU138,u,n,@
+unknown,word hunt2,b.Hunt2,c,19,EDU137,u,n,@
+unknown,word hunt3,b.Hunt3,c,19,EDU137,u,n,@
+unknown,Quad solver,b.quadsol,c,19,EDU137,u,n,@
+unknown,Yacht Race,b.yacht,c,19,EDU137,u,n,@
+unknown,Tape to disk,td,c,19,EDU138,u,n,@
+unknown,tabpe to Disc,copyfil,c,19,EDU138,u,n,@
+unknown,GREGORIAN CALENDAR,b.calenda,c,19,EDU138,u,n,@
+unknown,compount interest,b.comint,c,19,EDU138,u,n,@
+unknown,Desk diary,b.diary,c,19,EDU138,u,n,@
+unknown,Dual cat,b.dualcat,c,19,EDU138,u,n,@
+unknown,Function strip ,b.fkstrip,c,19,EDU138,u,n,@
+unknown,GUITAR CHORDS,b.guitar,C,0e,EDU138,u,n,@
+unknown, Disc cataloger,b.indexa,c,19,EDU138,u,n,@
+unknown,STANDARD DEVIATOR,b.m15,c,19,EDU138,u,n,@
+unknown,Mot Par Mot,b.motpar,c,19,EDU138,u,n,@
+unknown,tapedisk,b.tapdis,c,19,EDU138,u,n,@
+watford,digitizer#r,r.video,c,19,EDU138,u,n,@
+unknown,2GRAPH,u.2GRAPH,c,19,EDU139,u,n,@
+unknown,Polar plotter,u.POLAR,c,19,EDU139,u,n,@
+unknown,Simple parameters,u.SPAR,c,19,EDU139,u,n,@
+unknown,Tangent ,u.TANGENT,c,19,EDU139,u,n,@
+unknown,Envelopes,u.ENV,c,19,EDU139,u,n,@
+unknown,Bouncing rectangles,u.QL,c,19,EDU139,u,n,@
+unknown,Simple plotter,u.SPLOT,c,19,EDU139,u,n,@
+unknown,Simpson's rule,u.SIMPSON,c,19,EDU139,u,n,@
+unknown,Trapezium rule,u.TRAPEZM,c,19,EDU139,u,n,@
+unknown,Differentiation,u.DIFF,c,19,EDU139,u,n,@
+unknown,Newton Raphson,u.NEWTON,c,19,EDU139,u,n,@
+unknown,Tangent,u.TANGENT,c,19,EDU139,u,n,@
+unknown,Complex,u.COMPLEX,c,19,EDU139,u,n,@
+unknown,Complex powers,u.CXPWRS,c,19,EDU139,u,n,@
+unknown,Complex roots,u.CXRTS,c,19,EDU139,u,n,@
+unknown,Highest common factor,u.HCF,c,19,EDU139,u,n,@
+unknown,Fractions,u.FRACT,c,19,EDU139,u,n,@
+unknown,5cards,u.5cards,c,19,EDU139,u,n,@
+unknown,brthdy,u.brthdy,c,19,EDU139,u,n,@
+unknown,coin/s,u.coin/s,c,19,EDU139,u,n,@
+unknown,drop,u.drop,c,19,EDU139,u,n,@
+unknown,ftrials,u.ftrials,c,19,EDU139,u,n,@
+unknown,mcpi,u.mcpi,c,19,EDU139,u,n,@
+unknown,mcrt2,u.mcrt2,c,19,EDU139,u,n,@
+unknown,perm,u.perm,c,19,EDU139,u,n,@
+unknown,win,u.win,c,19,EDU139,u,n,@
+unknown,Times expert,expert,c,19,EDU139,u,n,@
+unknown,Teletext editor,TELE-ED ,c,19,EDU140,u,n,@
+unknown,The executioner,execute,c,19,EDU135,u,n,@
+unknown,AIRWOLF,A.AIRWOLF,c,19,EDU141,u,n,@
+unknown,BIORHYTHMS,BIORHYA,c,19,EDU141,u,n,@
+unknown,MUSIC,MUSIC,c,19,EDU141,u,n,@
+unknown,CALENDAR,CALENDR,c,19,EDU141,u,n,@
+unknown,WORD SEARCH,WSEARCH,c,19,EDU141,u,n,@
+unknown,GALLEON,GALLEON,c,19,EDU141,u,n,@
+unknown,ZELLER'S CONGRUENCE,ZELLERS,c,19,EDU141,u,n,@
+unknown,ENGLISH TOWNS,TOWNS,c,19,EDU141,u,n,@
+unknown,HANGMAN,HANG123,c,19,EDU141,u,n,@
+unknown,CONSTELLATIONS,CONSTEL,c,19,EDU141,u,n,@
+unknown,CASTLE QUEST,QUEST,c,19,EDU141,u,n,@
+unknown,THEORY OF MUSIC ,THST,c,13,EDU142,u,n,@
+unknown,time 1        ,T1,c,19,EDU143,u,n,@
+unknown,time2,T2,c,19,EDU143,u,n,@
+unknown,time3,T3,c,19,EDU143,u,n,@
+unknown,time4     ,t4,c,19,EDU143,u,n,@
+unknown,Expert time       ,T5,c,19,EDU143,u,n,@
+unknown,Bus Trips   ,T6,c,19,EDU143,u,n,@
+unknown,Digital 1  ,andig,c,19,EDU143,u,n,@
+unknown,Sundial  ,sun,c,19,EDU143,u,n,@
+unknown,Candle Clock,can,c,19,EDU143,u,n,@
+unknown,Digital 2,digan,c,19,EDU143,u,n,@
+unknown,TV QUIZ,TV,c,19,EDU143,u,n,@
+unknown,Numberless 1,nons,c,19,EDU143,u,n,@
+unknown,Numberless 2,NLESS2,c,19,EDU143,u,n,@
+unknown,Numberless 3,NLESS3,c,19,EDU143,u,n,@
+unknown,Numberless 4,NLESS4,c,19,EDU143,u,n,@
+unknown,24 Hr Clock,HC24,c,19,EDU143,u,n,@
+unknown,Minutes 1,MINS1,c,19,EDU143,u,n,@
+unknown,Minutes 2,MINS2,c,19,EDU143,u,n,@
+unknown,SINGLE TRAFFIC LIGHT,traff1,c,19,EDU144,u,n,@
+unknown,TWIN TRAFFIC LIGHTS  ,traff2,c,19,EDU144,u,n,@
+unknown,PELICAN CROSSING,traff3,c,19,EDU144,u,n,@
+unknown,SINGLE TRAFFIC LIGHT TEST,traqu1,c,19,EDU144,u,n,@
+unknown,PELICAN CROSSING TEST,traqu3,c,19,EDU144,u,n,@
+unknown,Assembler,Ass6802,c,19,EDU145,u,n,@
+unknown,Disassembler,Dis6802,c,19,EDU145,u,n,@
+unknown,Fourier Analysis,Fourier,c,19,EDU145,u,n,@
+unknown,Correlation Graph,Correl,c,19,EDU145,u,n,@
+unknown,Real-Time Graph27,Graph27,c,19,EDU145,u,n,@
+unknown,Real-Time Graphs55,Graph55,c,19,EDU145,u,n,@
+unknown,Digital Meter Program27,Digit27,c,19,EDU145,u,n,@
+unknown,Digital Meter Program55,Digit55,c,19,EDU145,u,n,@
+unknown,Storage scope,menu,c,19,EDU145,u,n,@
+unknown,Canal system,!boot,e,19,EDU145,u,n,@
+unknown,WESTMIN ECON  model,Wem,c,19,EDU142,u,n,@
+unknown,Wet ones,wetones,c,19,EDU142,u,n,@
+unknown,Word search generator,ws,c,19,EDU139,u,n,@
+unknown,Wordsearch info,EX,c,19,EDU146,u,n,@
+unknown,Wordsearcher,B.puzz,c,19,EDU146,u,n,@
+unknown,DATA Hangman set-up,HANG ,c,19,EDU146,u,n,@
+unknown,Hangman,HANGMAN,c,19,EDU146,u,n,@
+unknown,Letters,LETTERS,c,19,EDU146,u,n,@
+unknown,Reading-helper (Phonics),PHONICS  ,c,19,EDU146,u,n,@
+unknown,Invasion Times,INTMSHD  ,c,19,EDU146,u,n,@
+unknown,Wordsquare,WSQ  ,c,19,EDU147,u,n,@
+unknown,Starspell,QW,c,19,EDU147,u,n,@
+unknown,WORDPLAY,WORDPLA,c,19,EDU147,u,n,@
+unknown,MOUSE,MOUSE  ,c,19,EDU147,u,n,@
+unknown,SNAP,SNAP+,c,19,EDU147,u,n,@
+unknown,ADDSUP,ADDSUP,c,19,EDU147,u,n,@
+unknown,TADPOLE,TADPOLE,c,19,EDU147,u,n,@
+unknown,STAR LIGHT,S/LIGHT     ,c,19,EDU147,u,n,@
+unknown,CHANGE,CHANGE,c,19,EDU147,u,n,@
+AMPALSOFT,ADDER SUMS,hello,c,19,EDU148,u,n,@
+AMPALSOFT,ALGEBRA,hello1,c,19,EDU148,u,n,@
+AMPALSOFT,O level math pt1,4p,c,19,EDU148,u,n,@
+AMPALSOFT,O level math pt2,5p,c,19,EDU148,u,n,@
+AMPALSOFT,O-LEVEL MATHEMATICS 1 ,Menu,c,19,EDU147,u,n,@
+AMPALSOFT,length,LEN,c,0e,EDU148,u,n,@
+AMPALSOFT,area,AREA,c,0e,EDU148,u,n,@
+AMPALSOFT,volume,VOL,c,0e,EDU148,u,n,@
+AMPALSOFT,temprature,TEMP,c,0e,EDU148,u,n,@
+AMPALSOFT,capacity,CAP,c,0e,EDU148,u,n,@
+AMPALSOFT,weight,MASS,c,0e,EDU148,u,n,@
+AMPALSOFT,ARITHMETIC(EX.1-5),ARITH,c,0e,EDU148,u,n,@
+AMPALSOFT,TIME(EX.6-8),TIME,c,0e,EDU148,u,n,@
+AMPALSOFT,AREA,AREA,c,0e,EDU149,u,n,@
+AMPALSOFT,CHARTS,CHARTS,c,0e,EDU149,u,n,@
+AMPALSOFT,COORDINATES,COORD,c,0e,EDU149,u,n,@
+AMPALSOFT,FUNCTIONS,FUNCT,c,0e,EDU149,u,n,@
+AMPALSOFT,SYMMETRY,SYMM,c,0e,EDU149,u,n,@
+Anita Straker ,Lost Frog,FROG1,c,19,EDU149,u,n,@
+Anita Straker ,Merlin's Castle,MERLIN1,c,19,EDU149,u,n,@
+Anita Straker ,Make Adventure,MAKE1,c,19,EDU149,u,n,@
+Anita Straker ,Edit Adventure,EDIT1,c,19,EDU149,u,n,@
+Anita Straker ,Play Adventure,PLAY1,c,19,EDU149,u,n,@
+Anita Straker ,Lost frog notes,note2,t,FC,EDU149,u,n,@
+Anita Straker ,Merlins castle notes,note1,t,FC,EDU149,u,n,@
+Anita Straker ,make and play notes,note3,t,FC,EDU149,u,n,@
+Anita Straker ,Cubes,CUBES,c,19,EDU150,u,n,@
+Anita Straker ,Beads 1,BEADS1,c,19,EDU150,u,n,@
+Anita Straker ,Beads 2,BEADS2,c,19,EDU150,u,n,@
+Anita Straker ,Number Snap,NSNAP,c,19,EDU150,u,n,@
+Anita Straker ,Chuffer,CHUFFER,c,19,EDU150,u,n,@
+Anita Straker ,Bonzo,BONZO,c,19,EDU150,u,n,@
+Anita Straker ,Ask Me,ASKME,c,19,EDU150,u,n,@
+Anita Straker ,Trains,TRAINS,c,19,EDU150,u,n,@
+Anita Straker ,Sliders,SLIDERS,c,19,EDU150,u,n,@
+Anita Straker ,Shape Hunt,SHUNT,c,19,EDU150,u,n,@
+Anita Straker ,Counting Words,CWORDS,c,19,EDU151,u,n,@
+Anita Straker ,Flash Cards 1,FCARDS1,c,19,EDU151,u,n,@
+Anita Straker ,Flash Cards 2,FCARDS2,c,19,EDU151,u,n,@
+Anita Straker ,Think Links,links,c,19,EDU151,u,n,@
+Anita Straker ,Three Letters,3w,c,19,EDU151,u,n,@
+Anita Straker ,Sentence Maker,S-MAKER,c,19,EDU151,u,n,@
+Anita Straker ,Matching 1,match1,c,19,EDU151,u,n,@
+Anita Straker ,Matching 2,match2,c,19,EDU151,u,n,@
+Anita Straker ,Halving,HALVING,c,19,EDU151,u,n,@
+Anita Straker ,Looping,LOOPING,c,19,EDU151,u,n,@
+Anita Straker ,Teach Me,TEACHME,c,19,EDU151,u,n,@
+Anita Straker ,Handwriting,WRITING,c,19,EDU151,u,n,@
+Anita Straker ,Fraction Lines,FLINES,c,19,EDU152,u,n,@
+Anita Straker ,Bango,BANGO,c,19,EDU152,u,n,@
+Anita Straker ,Hunt,HUNT,c,19,EDU152,u,n,@
+Anita Straker ,Links,LINKS,c,19,EDU152,u,n,@
+Anita Straker ,Criss-Cross,CRISS,c,19,EDU152,u,n,@
+Anita Straker ,Remainders,REMAINS,c,19,EDU152,u,n,@
+Anita Straker ,Routes,ROUTES1,c,19,EDU152,u,n,@
+Anita Straker ,Triangles,TRIANG1,c,19,EDU152,u,n,@
+Anita Straker ,Stars,STARS,c,19,EDU152,u,n,@
+Anita Straker ,Circles,CIRCLES,c,19,EDU152,u,n,@
+Anita Straker ,Boxes 1,BOXES1,c,19,EDU152,u,n,@
+Anita Straker ,Boxes 2,BOXES2,c,19,EDU152,u,n,@
+Anita Straker ,Boxes 3,BOXES3,c,19,EDU152,u,n,@
+Anita Straker ,Boxes 4,BOXES4,c,19,EDU152,u,n,@
+Anita Straker ,Find Me,FINDME,c,19,EDU152,u,n,@
+Anita Straker ,Line up,LINEUP,c,19,EDU152,u,n,@
+Anita Straker ,Going Down,GODOWN,c,19,EDU152,u,n,@
+Anita Straker ,Make 37,MAKE37,c,19,EDU152,u,n,@
+Anita Straker ,Make 57,MAKE57,c,19,EDU152,u,n,@
+Anita Straker ,Spots,SPOTS,c,19,EDU152,u,n,@
+Anita Straker ,Counters,COUNTRS,c,19,EDU152,u,n,@
+Anita Straker ,Chains,CHAINS,c,19,EDU152,u,n,@
+Anita Straker ,Ergo,ERGO,c,19,EDU152,u,n,@
+Anita Straker ,OUR FACTS ,Go,C,13,EDU150,u,n,@
+Anita Straker ,Cubes,CUBES,c,19,EDU146,u,n,@
+Anita Straker ,Beads 1,BEADS1,c,19,EDU146,u,n,@
+Anita Straker ,Beads 2,BEADS2,c,19,EDU146,u,n,@
+Anita Straker ,Number Snap,NSNAP,c,19,EDU146,u,n,@
+Anita Straker ,Chuffer,CHUFFER,c,19,EDU146,u,n,@
+Anita Straker ,Bonzo,BONZO,c,19,EDU146,u,n,@
+Anita Straker ,Ask Me,ASKME,c,19,EDU146,u,n,@
+Anita Straker ,Trains,TRAINS,c,19,EDU146,u,n,@
+Anita Straker ,Sliders,SLIDERS,c,19,EDU146,u,n,@
+Anita Straker ,Shape Hunt,SHUNT,c,19,EDU146,u,n,@
+Anita Straker ,"Training SLIDE SHOW
+",part1,c,19,EDU153,u,n,@
+Anita Straker , GUSINTER,GUSINTR,c,19,EDU153,u,n,@
+Anita Straker ,REVERSE,REVERSE,c,19,EDU153,u,n,@
+Anita Straker ,Bango,BANGO,c,19,EDU154,u,n,@
+Anita Straker ,Chains,CHAINS,c,19,EDU154,u,n,@
+Anita Straker ,Change,CHANGE,c,19,EDU154,u,n,@
+Anita Straker ,Criss-Cross,CRISS,c,19,EDU154,u,n,@
+Anita Straker ,Find Me,FINDME,c,19,EDU154,u,n,@
+Anita Straker ,Flags,FLAGS,c,19,EDU154,u,n,@
+Anita Straker ,Line Up,LINEUP,c,19,EDU154,u,n,@
+Anita Straker ,Links,LINKS,c,19,EDU154,u,n,@
+Anita Straker ,Make 57,MAKE57,c,19,EDU154,u,n,@
+Anita Straker ,Mallory Manor,MALLORY,c,19,EDU154,u,n,@
+Anita Straker ,Squares,SQUARES,c,19,EDU154,u,n,@
+Anita Straker ,Stars,STARS,c,19,EDU154,u,n,@
+Anita Straker ,Tiles 1,TILES1,c,19,EDU154,u,n,@
+Anita Straker ,Tiles 2,TILES2,c,19,EDU154,u,n,@
+Anita Straker ,Tiles 3,TILES3,c,19,EDU154,u,n,@
+Anita Straker ,teashop,Teashop,c,0e,EDU154,u,n,@
+Anita Straker ,Tray,tray1,c,19,EDU155,u,n,@
+Anita Straker ,Tray create,create1,c,19,EDU155,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Ask menu,ASK,c,19,EDU154,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,words words words,Wordsx3,r,19,EDU154,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Hide & Seek,Hide+Se,r,19,EDU154,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Facemaker,Facemak,r,19,EDU154,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Podd,Podd,r,19,EDU154,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Table adventures,Advent,r,19,EDU153,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,number painter,Painter,r,19,EDU153,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,no puzzler,Puzzler,r,19,EDU153,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,squeeze,Squeeze,r,19,EDU153,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Children from space,space,c,19,EDU155,A,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Cranky,Cranky,c,19,EDU155,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,face maker,F-maker,c,19,EDU155,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Hide & Seek,hide,c,19,EDU153,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Let's count,L-count,c,19,EDU153,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Number chase,NumberC,c,19,EDU153,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Number gulper,NUMGULP,c,19,EDU152,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Number painter,Number,c,19,EDU151,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Number puzzler,NUMBERP,c,19,EDU151,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Pazazz scene,o.graph,c,19,EDU156,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Pazazz music,o.music,c,19,EDU156,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Pazazz figure,o.fig,c,19,EDU156,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Pazazz,o.perform,c,19,EDU156,u,n,@
+Acornsoft,PODD,podd,c,19,EDU152,u,n,@
+Acornsoft,Squeeze,Squeeze,c,19,EDU156,u,n,@
+Acornsoft,Table adventures,TABLEA,c,19,EDU151,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Time trucker,boot,R,19,EDU148,u,n,@
+Acornsoft,words words words,words,C,19,EDU146,u,n,@
+unknown,L: A Mathemagical Adventure ,L,C,19,EDU157,u,n,@
+unknown,Counters,b.counter,C,19,EDU157,u,n,@
+unknown,Digame,b.diggame,C,19,EDU157,u,n,@
+unknown,maze,b.maze,C,19,EDU157,u,n,@
+unknown,Monty,b.monty,C,19,EDU157,u,n,@
+unknown,Spiro,b.spiro,C,19,EDU157,u,n,@
+unknown,Tile kit,b.tilekit,C,19,EDU157,u,n,@
+AUCBE ,Easy editor,EASY-ED,C,19,EDU157,u,n,@
+AUCBE ,hex,!boot,E,19,EDU158,u,n,@
+AUCBE ,MOSAIC,MOSAIC,C,19,EDU159,u,n,@
+AUCBE ,Quest DB#r,Quest21,L,80,EDU160,u,n,@
+AUCBE ,Quest convert,convert,c,19,EDU160,u,n,@
+AUCBE ,quest sort,qsort,c,19,EDU160,u,n,@
+AUCBE ,QuestDB disk,m.quest,r,19,EDU160,u,n,@
+AUCBE ,QuestD,QuestD,c,19,EDU160,u,n,@
+AUCBE ,Quest classify,Qclas,c,19,EDU160,u,n,@
+AUCBE ,Quest keywords,Qkey,c,19,EDU160,u,n,@
+AUCBE ,Knights of the Round Table. ,Qchoose,C,19,EDU161,A,n,@
+AUCBE ,Adv generator,Qchoose,C,19,EDU162,u,n,@
+AUCBE ,HARMONY,HARMONY,c,16,EDU163,u,n,@
+AUCBE ,ZOOM,ZOOM,c,19,EDU163,u,n,@
+AUCBE ,COUNTER,COUNTER,C,19,EDU163,u,n,@
+AUCBE ,LINE,LINE,c,19,EDU163,u,n,@
+AUCBE ,WINDOWS,WINDOWS,C,19,EDU163,u,n,@
+AUCBE ,quest SCATTER,SCATTER,c,19,EDU160,u,n,@
+AUCBE ,BOTTLES,BOTTLES,C,19,EDU164,u,n,@
+AUCBE ,BRIDGES,BRIDGES,c,19,EDU164,u,n,@
+AUCBE ,CHANGER,CHANGER,C,19,EDU164,u,n,@
+AUCBE ,CHORDS,CHORDS,c,19,EDU164,u,n,@
+AUCBE ,flask,FGP,C,19,EDU164,u,n,@
+AUCBE ,MAKEFIL,MAKEFIL,c,19,EDU164,u,n,@
+AUCBE ,Spread files,SPREAD,C,19,EDU164,u,n,@
+AUCBE ,TIMES,TIMES,c,19,EDU164,u,n,@
+AUCBE ,Stars,starts,C,19,EDU149,u,n,@
+Anita Straker ,Handwriting,WRITING,c,19,EDU165,u,n,@
+Anita Straker ,Splash,SPLASH,C,19,EDU165,u,n,@
+Anita Straker ,Train,TRAIN,c,19,EDU165,u,n,@
+Anita Straker ,Cat and Mouse,CAT&MSE,C,19,EDU165,u,n,@
+Anita Straker ,Upper,UPPER,c,19,EDU165,u,n,@
+Anita Straker ,Flashcards 1,FCARDS1,C,19,EDU165,u,n,@
+Anita Straker ,Flashcards 2,FCARDS2,c,19,EDU165,u,n,@
+Anita Straker ,Wordshapes,WORDS,C,19,EDU165,u,n,@
+Anita Straker ,Box Clever,BOX,c,19,EDU165,u,n,@
+AVC,Turtle Graphics,Turtle,c,19,EDU166,u,n,@
+AVC,Data procection act,mtext,r,19,EDU166,u,n,@
+AVC,hotel booking sim not working,A29,c,19,EDU167,u,n,@
+AVP,ADDING WAVES ,com66,c,19,EDU168,u,n,@
+AVP,A-LEVEL MATHS/STATS ,menu,C,19,EDU169,u,n,@
+AVP,CHEMICAL FORMULAE ,eal,c,19,EDU169,u,n,@
+AVP,Colour,colour,c,19,EDU169,u,n,@
+AVP,optics,optics,c,19,EDU169,u,n,@
+AVP,Trolleys Investigator,RUNWAY,c,19,EDU170,u,n,@
+AVP,Collisions  Investigator,COLLSNS,c,19,EDU170,u,n,@
+AVP,Puzzle Mode,PUZZLE,c,19,EDU170,u,n,@
+AVP,Meter Reading,Meter,c,19,EDU171,u,n,@
+AVP,Potential Dividers,PDIV,c,19,EDU171,u,n,@
+AVP,Series Circuits,Series,c,19,EDU171,u,n,@
+AVP,Parallel Circuits,PARA,c,19,EDU171,u,n,@
+AVP,Circuit Symbols,Symbols,c,19,EDU171,u,n,@
+AVP,Transformers,Transf,c,19,EDU171,u,n,@
+AVP,Resistor Codes,RESIST,c,19,EDU171,u,n,@
+AVP,water flow and storage,BASNDEM,c,19,EDU172,u,n,@
+AVP,waterflow basin,BASIN,c,19,EDU172,u,n,@
+AVP,rain stats,STATS,c,19,EDU172,u,n,@
+AVP,LOGIC GATES ,Logic,c,19,EDU172,u,n,@
+AVP,Timing package,ime,c,19,EDU172,u,n,@
+AVP,TRANSLATIONS ,NOS,c,19,EDU172,u,n,@
+Ayr Division ,Robot,ROBOT2,c,19,EDU173,u,n,@
+Ayr Division ,Measure,MEASURE,c,19,EDU173,u,n,@
+Ayr Division ,Traffic lights,TRAFIC1,c,19,EDU173,u,n,@
+Ayr Division ,Wattcost,WATTCO2,c,19,EDU173,u,n,@
+Ayr Division ,Word Search 1,WSRCH1,c,19,EDU173,u,n,@
+Ayr Division ,Word Search 2,WORD4,c,19,EDU173,u,n,@
+Ayr Division ,Pollution,POLLUT1,c,19,EDU173,u,n,@
+aztec,BIRDLAND ,Index,c,19,EDU173,u,n,@
+B.J.,News line,startup,c,17,EDU174,u,n,@
+unknown,P L GRAPHICS ,!boot,e,19,EDU176,u,n,@
+unknown,OSCAR stars,OSCAR,c,19,EDU177,u,n,@
+unknown,OSCAR AiD,OSCARAD,c,19,EDU177,u,n,@
+unknown,MOUSE,MOUSE,c,19,EDU177,u,n,@
+unknown,OXO,OXO,c,19,EDU177,u,n,@
+unknown,Oscar MAZE,MAZE,c,19,EDU177,u,n,@
+unknown,HANGMAN,HANGMAN,c,19,EDU177,u,n,@
+unknown,WORD SEARCH,SEARCH,c,19,EDU177,u,n,@
+unknown,KEYWORD,KEYWORD,c,19,EDU177,u,n,@
+unknown,OWL+,OWL+,c,19,EDU177,u,n,@
+unknown,OWL-,OWL-,c,19,EDU177,u,n,@
+unknown,MYST1,MYST1,c,19,EDU177,u,n,@
+unknown,MYST2,MYST2,c,19,EDU177,u,n,@
+unknown,REFLEctions,REFLEX,c,19,EDU177,u,n,@
+unknown,Dos utilities,DOSCOPY,c,19,EDU178,u,n,@
+unknown,Dos readme,REAdme,R,FC,EDU179,u,n,@
+unknown,RBS simulation,text,c,19,EDU167,u,n,@
+BBCSOFT ,Bird spy,!boot,c,19,EDU179,u,n,@
+BBCSOFT ,ollie,loader,c,16,EDU180,A,n,@
+BBCSOFT ,Earth warp,loader,c,16,EDU181,A,n,@
+BBCSOFT ,Edu sw demo,install,c,19,EDU182,u,n,@
+BBCSOFT ,electric fields,Intro,c,19,EDU179,u,n,@
+BBCSOFT ,Espana Viva1,ev,c,19,EDU183,u,n,@
+BBCSOFT ,Espana Viva2,ev,c,19,EDU184,u,n,@
+BBCSOFT ,Espana Viva3,ev,c,19,EDU185,u,n,@
+BBCSOFT ,Flight plan,Flight,c,19,EDU186,u,n,@
+BBCSOFT ,GEORDIE RACER ,loader,C,12,EDU187,A,n,@
+BBCSOFT ,help yourself maths,start,C,14,EDU188,u,n,@
+BBCSOFT ,INSIDE INFo,title,C,19,EDU189,u,n,@
+BBCSOFT ,Nomad,nomad,C,19,EDU190,u,n,@
+BBCSOFT ,Summit,summit,C,19,EDU190,u,n,@
+BBCSOFT ,Make a Wildlife Garden,!boot,E,19,EDU191,u,n,@
+BBCSOFT ,Pirate Gold,PIRATE,C,19,EDU192,u,n,@
+BBCSOFT ,Turnflex,TFLEX,C,19,EDU192,u,n,@
+BBCSOFT ,Dice Squares,DICESQU,C,19,EDU192,u,n,@
+BBCSOFT ,Tile Stretch Game,STRETCH,C,19,EDU192,u,n,@
+BBCSOFT ,MODEM Master,!loadmm,r,19,EDU192,u,n,@
+BBCSOFT ,Music,music,C,19,EDU192,u,n,@
+BBCSOFT ,PICTURE CRAFT ,menu,C,15,EDU193,u,n,@
+BBCSOFT ,RAMAYANA ,init,c,1c,EDU194,u,n,@
+BBCSOFT ,,!boot,R,13,EDU195,u,n,@
+BBCSOFT ,Russian Lang & People,start,C,19,EDU196,u,n,@
+BBCSOFT ,BONDING ,Title,C,19,EDU198,u,n,@
+BBCSOFT ,Periodic Table ,Header,C,19,EDU198,u,n,@
+BBCSOFT ,ECOLOGY ,!boot,E,19,EDU198,u,n,@
+BBCSOFT ,ELECTROMAGNETIC SPECTRUm ,title,C,13,EDU199,u,n,@
+BBCSOFT ,ELECTRONICS IN ACTION ,title,C,13,EDU200,u,n,@
+BBCSOFT ,FOOD AND POPULATION ,Intro,C,19,EDU201,u,n,@
+BBCSOFT ,NEWTON  & space shuttle,title,C,14,EDU202,u,n,@
+BBCSOFT ,POLYMERS ,title,C,13,EDU203,u,n,@
+BBCSOFT ,RELATIONSHIPS ,title,C,13,EDU204,u,n,@
+BBCSOFT ,Waves 1,title,C,14,EDU205,u,n,@
+BBCSOFT ,Waves 2,title,C,15,EDU206,u,n,@
+BBCSOFT ,CONCEPT MOLE,mole,c,11,EDU207,u,n,@
+BBCSOFT ,UNIFORMLY ACCELERATED MOTION ,intro,c,19,EDU208,u,n,@
+BBCSOFT ,Logic Tutor 1,LOGIC1,c,19,EDU209,u,n,@
+BBCSOFT ,Logic Tutor 2,LOGIC2,c,19,EDU209,u,n,@
+BBCSOFT ,Resistor Tutor,RESISTR,c,19,EDU209,u,n,@
+BBCSOFT ,Flip-flops,FLIPS,c,19,EDU209,u,n,@
+BBCSOFT ,Servo,SERVO,c,19,EDU209,u,n,@
+BBCSOFT ,Circuit,CIRCUIT,c,19,EDU209,u,n,@
+BBCSOFT ,SKY HUNTER ,intro,c,16,EDU210,u,n,@
+BBCSOFT ,SPELLING IT OUT ,context,c,19,EDU211,u,n,@
+BBCSOFT ,VU-TYPE ,VU-TYPE ,c,19,EDU212,u,n,@
+BBCSOFT ,Write Plus ,startup,c,14,EDU213,u,n,@
+BBCSOFT ,ALEVEL 1 ,Ralev,c,19,EDU214,u,n,@
+BChem ,Aliphatic Organic Synthesis,ALSYN,c,19,EDU211,u,n,@
+BChem ,Chromatography,CHROM,c,19,EDU211,u,n,@
+BChem ,Electrode Potentials,EPOT,c,19,EDU211,u,n,@
+BChem ,Eudiometric Analysis,EUDIO,c,19,EDU211,u,n,@
+BChem ,Activation Energy,HIMEC,c,19,EDU211,u,n,@
+BChem ,Equilibrium Constant,KESTER,c,19,EDU211,u,n,@
+BChem ,Organic Nomenclature,NOMEN,c,19,EDU211,u,n,@
+BChem ,Rate and Equilibrium,RATEQ,c,19,EDU211,u,n,@
+BChem ,Titrimetric Analysis,TITRE,c,19,EDU211,u,n,@
+BChem ,Titrimetric Calculations,AVOL,c,19,EDU214,u,n,@
+BChem ,Conductivity,CONDUCT,c,19,EDU214,u,n,@
+BChem ,Synthesis of Nitrogen Compounds,NITSYN,c,19,EDU214,u,n,@
+BChem ,Order of Reaction,ORDER,c,19,EDU214,u,n,@
+BChem ,Trends in Chemical Properties,PROPS,c,19,EDU214,u,n,@
+BChem ,Trends in Physical Properties,TRENDS,c,19,EDU214,u,n,@
+BChem ,Emission Spectrum     ,SPECTRA,c,19,EDU214,u,n,@
+BChem ,Vapour Pressure,VAPOUR,c,19,EDU214,u,n,@
+BChem ,Reactivity Series,ACTIV,c,19,EDU215,u,n,@
+BChem ,Atomic Structure,ATOMIC,c,19,EDU215,u,n,@
+BChem ,Catalogue,CATALOG,c,19,EDU215,u,n,@
+BChem ,Ionic and Covalent Bonding,CONFIG,c,19,EDU215,u,n,@
+BChem ,Electrolysis,ELEC,c,19,EDU215,u,n,@
+BChem ,Ionic Equations,ION,c,19,EDU215,u,n,@
+BChem ,Kinetic Theory of Gases,MOLCOL,c,19,EDU215,u,n,@
+BChem ,Reactivity Series,ACTIV,c,19,EDU216,u,n,@
+BChem ,Atomic Structure,ATOMIC,c,19,EDU216,u,n,@
+BChem ,Catalogue,CATALOG,c,19,EDU216,u,n,@
+BChem ,Ionic and Covalent Bonding,CONFIG,c,19,EDU216,u,n,@
+BChem ,Electrolysis,ELEC,c,19,EDU216,u,n,@
+BChem ,Ionic Equations,ION,c,19,EDU216,u,n,@
+BChem ,Kinetic Theory of Gases,MOLCOL,c,19,EDU216,u,n,@
+BChem ,update,update,c,19,EDU216,u,n,@
+BChem ,Atomic Symbols,ASYM,c,19,EDU217,u,n,@
+BChem ,Ionic Symbols,ISYM,c,19,EDU217,u,n,@
+BChem ,Formulae,FORM,c,19,EDU217,u,n,@
+BChem ,Equations,EQUAT,c,19,EDU217,u,n,@
+BChem ,Moles,CALMOLE,c,19,EDU217,u,n,@
+BChem ,Empirical Formulae,EMP,c,19,EDU217,u,n,@
+BChem ,Masses From Equations   ,CALMASS,c,19,EDU217,u,n,@
+BChem ,Volumes of Gases from Equations,CALVOL,c,19,EDU217,u,n,@
+BChem ,Volumetric Analysis,VOLCALC,c,19,EDU217,u,n,@
+BECC ,Click the Easel ,!boot,c,19,EDU218,u,n,@
+Beebug,Billboard ,bill,c,19,EDU219,u,n,@
+Beebug,beebug demo,!boot,E,10,EDU220,u,n,@
+Beebug,screen design,design,c,19,EDU221,u,n,@
+Beebug,Discmaster,menu,c,19,EDU222,u,n,@
+Beebug,Masterfile II ,!boot,E,19,EDU223,u,n,@
+Beebug,Music Synthesiser ,+.SYNTH,c,19,EDU222,u,n,@
+Beebug,Home Accounts Organiser,HOMEACC,c,19,EDU224,u,n,@
+Beebug,Electronic Telephone Directory,PHONE1,c,19,EDU224,u,n,@
+Beebug,Computerised Desk Diary,DIARY,c,19,EDU224,u,n,@
+Beebug,ADFS Menu,ADFSMEN,c,60,EDU224,u,n,@
+Beebug,Disc Manager,DISCMAN,c,19,EDU224,u,n,@
+Beebug,Sound Wizard,WIZARD,c,19,EDU224,u,n,@
+Beebug,Compare Utility,COMPARE,c,19,EDU224,u,n,@
+Beebug,Merge Utility,MERGE,c,19,EDU224,u,n,@
+Beebug,Clock Utility,CLOCK,c,19,EDU224,u,n,@
+Beebug,Tutankhamen,TUTAN,c,19,EDU224,u,n,@
+Beebug,Cubert,CUBERT,c,19,EDU224,u,n,@
+Beebug,Gridrunner,GRIDRUN,c,19,EDU224,u,n,@
+Beebug,paintbox,pntbox,c,19,EDU224,u,n,@
+Beebug,PRINTWISE ,menu,c,19,EDU225,u,n,@
+Beebug,Quick Calc,calc,c,19,EDU225,u,n,@
+Beebug,Slide Show ,slides,c,19,EDU226,u,n,@
+Beebug,Spellcheck ,Scheck,c,19,EDU226,u,n,@
+Beebug,Sprite Utilities,Intro,c,19,EDU227,u,n,@
+Beebug,Studio 8 ,!boot,c,19,EDU228,u,n,@
+Beebug,TELETEXT EDITOR,TTEXT,c,19,EDU229,u,n,@
+Beebug,TELETEXT TUTOR,TUTOR1,c,19,EDU229,u,n,@
+Beebug,wordwise utils wordease,!boot,E,19,EDU229,u,n,@
+unknown,CONSUMPTION AND SAVINGS,CONSUMP,c,19,EDU229,u,n,@
+unknown,EQUILIBRIUM IN THE FLOW OF INCOME,EQUILIB,c,19,EDU229,u,n,@
+unknown,DETERMINING INCOME & THE MULTIPLIER,MULT,c,19,EDU229,u,n,@
+unknown,THE ROLE OF THE GOVERNMENT,GOV,c,19,EDU229,u,n,@
+unknown,FOREIGN TRADE,FOREIGN,c,19,EDU229,u,n,@
+unknown,Intro to role of gov,intro,c,64,EDU229,u,n,@
+unknown,DEMAND AND SUPPLY FUNCTIONS,,c,19,EDU230,u,n,@
+unknown,ELASTICITY,,c,19,EDU230,u,n,@
+unknown,MARKET MODEL +Auctioneer ,,c,19,EDU230,u,n,@
+unknown,Economics intro,intro,c,64,EDU230,u,n,@
+unknown,Osprey! ,osprey,c,19,EDU230,u,n,@
+unknown,First aid CPR,aid6,c,19,EDU230,u,n,@
+unknown,mode7 cartoon,logo,c,19,EDU231,u,n,@
+unknown,Power Plan ,pplan,c,1b,EDU232,u,n,@
+unknown,Tech Tracker ,Tech,c,19,EDU233,u,n,@
+bp,slick!,Slick,c,19,EDU233,u,n,@
+bp,Filling Station ,title,c,19,EDU234,u,n,@
+bp,Paraffin File ,shield,c,19,EDU233,u,n,@
+BRTS,ABACUS,ABACUS,c,0e,EDU235,u,n,@
+BRTS,Add Up ,Addup,c,0e,EDU235,u,n,@
+BRTS,Alphabet sort,alphbt,c,0e,EDU235,u,n,@
+BRTS,Anagram 1,anagram,c,0e,EDU235,u,n,@
+BRTS,Anagram 2,anagrm2,c,0e,EDU235,u,n,@
+BRTS,tables bingo,bingo,c,0e,EDU235,u,n,@
+BRTS,Cloze  missing words,cloze,c,0e,EDU235,u,n,@
+BRTS,Multiplication,multipl,c,0e,EDU235,u,n,@
+BRTS,PHONICS 1,phon1,c,0e,EDU235,u,n,@
+BRTS,subtraction,subtr,c,0e,EDU235,u,n,@
+BRTS,times table tester,table,c,0e,EDU235,u,n,@
+BRTS,tank letter shoot,tank,c,0e,EDU235,u,n,@
+unknown,Population Pyramids ,index,c,19,EDU236,u,n,@
+unknown,Constellation ,constel,c,19,EDU235,u,n,@
+unknown,Night sky,ns,c,19,EDU235,u,n,@
+unknown,planet orbit,planets,c,19,EDU235,u,n,@
+unknown,Star data,Sky-ed,c,19,EDU235,u,n,@
+Brilliant Computing,All Year Round #o,loader,c,19,EDU237,u,n,@
+Brilliant Computing,ARCADE#o,menu,c,19,EDU238,u,n,@
+Brilliant Computing,ARCADE challenge#o,amenu,c,19,EDU238,u,n,@
+Brilliant Computing,BIG MATCH ,tsb,c,1a,EDU238,u,n,@
+Brilliant Computing,CONCEPT KEYBOARD ,SPTLCK,c,19,EDU230,u,n,@
+Brilliant Computing,EVERYDAY SIGNS ,SOCTL,c,19,EDU238,u,n,@
+Brilliant Computing,First Looks  ,SP,c,19,EDU229,u,n,@
+Brilliant Computing,First Moves   ,SM,c,19,EDU229,u,n,@
+Brilliant Computing,First Search,FTS,c,19,EDU229,u,n,@
+Brilliant Computing,Flash cards ,FTL,c,19,EDU224,u,n,@
+Brilliant Computing,RUNNING ON THE SPOT ,R.RUN,c,19,EDU239,u,n,@
+Brilliant Computing,FRASER BAR  ,F.FRASER,c,19,EDU239,u,n,@
+Brilliant Computing,SINGALONG  ,S.SING,c,19,EDU239,u,n,@
+Brilliant Computing,GREYHOUND RACING,D.DATA,c,19,EDU239,u,n,@
+Brilliant Computing,JOGGING,J.DATA,c,19,EDU239,u,n,@
+Brilliant Computing,Mouse Trap#j,MTRAP,c,19,EDU239,u,n,@
+Brilliant Computing,Bullseye#j,TAR,c,19,EDU239,u,n,@
+Brilliant Computing,Find the Bone#j,RUM,c,19,EDU239,u,n,@
+Brilliant Computing,Boris the Spider#j,SAF,c,19,EDU239,u,n,@
+Brilliant Computing,Sketch Pad#j,SKETCH,c,19,EDU239,u,n,@
+Brilliant Computing,Catch the Bus#j,CATCH,c,19,EDU239,u,n,@
+Brilliant Computing,Striker#j,FOOTY,c,19,EDU239,u,n,@
+Brilliant Computing,Greedy Gorilla#j,GREEDY,c,19,EDU239,u,n,@
+Brilliant Computing,Watering Can#j,CLOUD,c,19,EDU239,u,n,@
+Brilliant Computing,Gardening#j,GARDEN,c,19,EDU239,u,n,@
+Brilliant Computing,Joystick games#j,J3menu,c,19,EDU240,u,n,@
+Brilliant Computing,KATIE'S GARDEN ,Menu,c,19,EDU241,u,n,@
+Brilliant Computing,LGI SWITCH ON ,STL,c,19,EDU239,u,n,@
+Brilliant Computing,LGI SWITCH ON PICTURE BUILDER,STL,c,19,EDU236,u,n,@
+Brilliant Computing,PROMENADE,PAD,c,19,EDU235,u,n,@
+Brilliant Computing,HERE & THERE,HT,c,19,EDU235,u,n,@
+Brilliant Computing,PATHFINDER ,!boot,E,19,EDU242,u,n,@
+Brilliant Computing,Spot on games,Somenu,c,19,EDU243,u,n,@
+Brilliant Computing,Story Writer ,OWNCK,c,19,EDU239,u,n,@
+Brilliant Computing,switch on,STL,c,19,EDU243,u,n,@
+Brilliant Computing,SWITCH ON TRAVEL,SOT-TL,c,19,EDU243,u,n,@
+Brilliant Computing,ted sea side,Start,c,19,EDU244,u,n,@
+Brilliant Computing,ted steps out,Start,c,19,EDU245,u,n,@
+Brilliant Computing,Teds shopping party,Start,c,19,EDU246,u,n,@
+Brilliant Computing,Ted goes?,ttl,c,19,EDU240,u,n,@
+Brilliant Computing,Ted goes visiting,visit,c,19,EDU240,u,n,@
+Brilliant Computing,Ted goes to the supermarket,shop,c,19,EDU240,u,n,@
+Brilliant Computing,TIME FOR WORK ,loader,c,19,EDU240,u,n,@
+Brilliant Computing,touch basics,!boot,c,19,EDU247,u,n,@
+Brilliant Computing,BUMPER CARS,BUMPER,c,19,EDU247,u,n,@
+Brilliant Computing,COCONUT SHY,COCONUT,c,19,EDU247,u,n,@
+Brilliant Computing,HAUNTED HOUSE,HOOPLA,c,19,EDU247,u,n,@
+Brilliant Computing,HOOP-LA,FWHEEL,c,19,EDU247,u,n,@
+Brilliant Computing,FERRIS WHEEL,HAUNTED,c,19,EDU247,u,n,@
+Brilliant Computing,CATHERINE WHEELS,CATH,c,19,EDU248,u,n,@
+Brilliant Computing,ROCKETS,ROCK,c,19,EDU248,u,n,@
+Brilliant Computing,BIGMOUTH,BIG,c,19,EDU248,u,n,@
+Brilliant Computing,HONEY BEE,BAFP,c,19,EDU248,u,n,@
+Brilliant Computing,MEMORY DOORS,MD,c,19,EDU248,u,n,@
+Brilliant Computing,MIXED UP MOTORWAY,MUM,c,19,EDU248,u,n,@
+Brilliant Computing,BUZZ OFF,NEWBUG,c,19,EDU249,u,n,@
+Brilliant Computing,WAKE UP!,WAKE,c,19,EDU249,u,n,@
+Brilliant Computing,MAGIC PAINTING,MAGIC,c,19,EDU249,u,n,@
+Brilliant Computing,SUNDAY DRIVER,DRIVER,c,19,EDU249,u,n,@
+Brilliant Computing,BITS & PIECES,FACE,c,19,EDU249,u,n,@
+Brilliant Computing,dogS ,DOG,c,19,EDU249,u,n,@
+Brilliant Computing,dress,DRESS,c,19,EDU249,u,n,@
+Brilliant Computing,house ,HOUSE,c,19,EDU249,u,n,@
+British gas,PROFILE,PROFILE,c,19,EDU248,u,n,@
+British gas,DESIGN HEAT LOSS,DHL,c,19,EDU248,u,n,@
+British gas,GUESTIMATOR,GUES,c,19,EDU248,u,n,@
+British gas,Gas safety quiz,Gas0,c,19,EDU250,u,n,@
+British gas,LAB GAS 1 ,logo,c,19,EDU251,u,n,@
+British gas,LAB GAS 1 ,logo,c,19,EDU252,u,n,@
+unknown,Fillet and Billet,h.fb,c,19,EDU253,u,n,@
+unknown,scoop,Scoop,c,19,EDU254,u,n,@
+unknown,Lost on Mars ,log,c,19,EDU255,A,n,@
+unknown,LabelMaster ,Label,c,19,EDU256,u,n,@
+unknown,biology quiz,biology,c,0e,EDU256,u,n,@
+unknown,Maths quiz,Maths,c,0e,EDU256,u,n,@
+,Green Finger: Plant Selector ,PICKAPL,,,EDU255,u,n,@
+Cambridge Micro Software,1914,1914-0,c,7b,EDU257,u,n,@
+Cambridge Micro Software,BALANCE YOUR DIET ,diet,c,19,EDU257,u,n,@
+Cambridge Micro Software,Factfile,factfil,c,19,EDU257,u,n,@
+Cambridge Micro Software,Directions,direct,c,19,EDU257,u,n,@
+Cambridge Micro Software,Villes de France,villes,c,19,EDU257,u,n,@
+Cambridge Micro Software,Golden Eagle ,GE1,C,19,EDU257,u,n,@
+Cambridge Micro Software,Granville ,!BOOT,r,19,EDU258,u,n,@
+Cambridge Micro Software,Ends meet,MEM-0,c,67,EDU260,u,n,@
+Cambridge Micro Software,F5,F5,C,19,edu259,u,n,@
+Cambridge Micro Software,Symmetry ,SYMMET1,c,20,edu259,u,n,@
+Cambridge Micro Software,Vectors,VECTOR1,c,20,edu259,u,n,@
+Cambridge Micro Software,Moving Molecules ,MOLEC,c,19,edu259,u,n,@
+Cambridge Micro Software,Super Seed ,SS44,c,19,edu255,u,n,@
+Cambridge Micro Software,Tile Mosaic ,Title,c,19,EDU261,u,n,@
+Cambridge Micro Software,Watts in your Home ,Watts1,c,20,EDU261,u,n,@
+cambridge University press,Function Analyser,FunAn,c,10,EDU262,u,n,@
+cambridge University press,Function Calculator,FunCalc,c,10,EDU262,u,n,@
+cambridge University press,Parametric Analyser,ParAn,c,10,EDU262,u,n,@
+cambridge University press,Solution Sketcher,Sketch,c,10,EDU262,u,n,@
+cambridge University press,Information,Info,c,10,EDU262,u,n,@
+cambridge University press,Chance Cards,CHANCE,c,0e,EDU262,u,n,@
+cambridge University press,Nuclear1,NUCLR1,c,0e,EDU262,u,n,@
+cambridge University press,Nuclear2,NUCLR2,c,0e,EDU262,u,n,@
+cambridge University press,Fly,FLY,c,0e,EDU262,u,n,@
+cambridge University press,Bino,BINO,c,0e,EDU262,u,n,@
+cambridge University press,Sampling,SMPINTR,c,0e,EDU262,u,n,@
+cambridge University press,Traprule,TRAPRUL,c,0e,EDU263,u,n,@
+cambridge University press,Binomial,BINOMIA,c,0e,EDU263,u,n,@
+cambridge University press,Coins,COINS,c,0e,EDU263,u,n,@
+cambridge University press,Dist,DIST,c,0e,EDU263,u,n,@
+cambridge University press,Conf,CONF,c,0e,EDU263,u,n,@
+cambridge University press,Conf2,CONF2,c,0e,EDU263,u,n,@
+cambridge University press,Chisquared,CHISQ,c,0e,EDU263,u,n,@
+cambridge University press,Stars,STARS,c,0e,EDU263,u,n,@
+cambridge University press,Bleeps,BLEEPS,c,0e,EDU263,u,n,@
+cambridge University press,Bleeps2,BLEEPS2,c,0e,EDU263,u,n,@
+cambridge University press,Dcomb,DCOMB,c,0e,EDU263,u,n,@
+cambridge University press,Ncomb,NCOMB,c,0e,EDU263,u,n,@
+Camsoft ,French COPYWRITE (EASY),COPYEF,c,19,EDU263,u,n,@
+Camsoft ,French COPYWRITE (HARD),COPYHF,c,19,EDU263,u,n,@
+Camsoft ,French CLOZEWRITE,CLOZEF,c,19,EDU263,u,n,@
+Camsoft ,French ENIGMA,ENIGF,c,19,EDU263,u,n,@
+Camsoft ,French SCRAMBLER,SCRAMBF,c,19,EDU263,u,n,@
+Camsoft ,French PREDICTION,PREDF,c,19,EDU263,u,n,@
+Camsoft ,French TEXTSALAD,SALADF,c,19,EDU263,u,n,@
+Camsoft ,French WRITE/EDIT A TEXT,BUILDF,c,19,EDU263,u,n,@
+Camsoft ,French O/P TXT TO PRr,PRINTF,c,19,EDU263,u,n,@
+Camsoft ,French DO A FREQUENCY COUNT,WORDFF,c,19,EDU263,u,n,@
+Camsoft ,German COPYWRITE (EASY),COPYEG,c,19,EDU264,u,n,@
+Camsoft ,German COPYWRITE (HARD),COPYHG,c,19,EDU264,u,n,@
+Camsoft ,German CLOZEWRITE,CLOZEG,c,19,EDU264,u,n,@
+Camsoft ,German ENIGMA   ,ENIGG,c,19,EDU264,u,n,@
+Camsoft ,German SCRAMBLER,SCRAMBG,c,19,EDU264,u,n,@
+Camsoft ,German PREDICTION,PREDG,c,19,EDU264,u,n,@
+Camsoft ,German TEXTSALAD,SALADG,c,19,EDU264,u,n,@
+Camsoft ,German WRITE/EDIT A TEXT,BUILDG,c,19,EDU264,u,n,@
+Camsoft ,German  O/P TXT TO PtR,PRINTG,c,19,EDU264,u,n,@
+Camsoft ,German DO A FREQUENCY COUNT,WORDFG,c,19,EDU264,u,n,@
+Camsoft ,French gapkit DO A TEST,GAPTEST,c,19,EDU264,u,n,@
+Camsoft ,French gapkit WRITE/EDIT A TEST,GAPKIT,c,19,EDU264,u,n,@
+Camsoft ,German QUESTIONMASTER DEMO,QM,c,19,EDU265,u,n,@
+Camsoft ,German GAPKIT DEMO,GK,c,19,EDU265,u,n,@
+Camsoft ,German COPYWRITE DEMO,CW,c,19,EDU265,u,n,@
+Camsoft ,German INVERTED WORD ORDER,INVERT,c,19,EDU265,u,n,@
+Camsoft ,German ORDER OF OBJECTS,OBJORD,c,19,EDU265,u,n,@
+Camsoft ,German SUBORDINATE CLAUSE WORD ORDER,SUBORD,c,19,EDU265,u,n,@
+Camsoft ,German NUMBERS,NUMBERS,c,19,EDU265,u,n,@
+Camsoft ,German CLOCK TIME,TIME,c,19,EDU265,u,n,@
+Camsoft ,German PRESENT TENSE OF VERBS,PRESENT,c,19,EDU265,u,n,@
+Camsoft ,German SEPARABLE VERBS,SEPVB,c,19,EDU265,u,n,@
+Camsoft ,German PERSONAL PRONOUNS,PRONOUN,c,19,EDU265,u,n,@
+Camsoft ,German TOWNS IN GERMAN SPEAKING COUNTRIES,STADT,c,19,EDU265,u,n,@
+Century,Comp study Quiz,QUIZ,c,19,EDU266,u,n,@
+Century,Comp study Class List,CLASS,c,19,EDU266,u,n,@
+Century,Comp study Machine code,SIMPML,c,19,EDU266,u,n,@
+Century,Comp study Letter Writer,LETTER,c,19,EDU266,u,n,@
+Century,Comp study Hexanoids,HEXNOID,c,19,EDU266,u,n,@
+Century,Computer-aided Design,CAD,c,19,EDU266,u,n,@
+Century,Comp study Robot Truck,TRUCK,c,19,EDU266,u,n,@
+Century,Comp study Business Graphs,GRAPHS,c,19,EDU266,u,n,@
+Century,Comp study Keeping Track of the Charts,CHARTS,c,19,EDU266,u,n,@
+Century,Traffic Light Simulation,TRAFFIC,c,19,EDU266,u,n,@
+Central software,ENERGY ,W.SETUP,c,13,EDU267,u,n,@
+Central software,HEALTHY EATING ,title,c,13,EDU268,u,n,@
+Central software,Keeping Safe ,SAFEMEN,c,13,EDU269,u,n,@
+CET,MALCOM+ ,MALCOM+,c,14,EDU267,u,n,@
+CET,vectors,Vectors,c,0e,EDU267,u,n,@
+CET,CENTRE VILLE ,!boot,E,19,EDU270,u,n,@
+CET,CHICK CHASE,menu,c,19,EDU271,u,n,@
+,,,,,,u,n,@
+,,,,,,u,n,@

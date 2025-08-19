@@ -52,9 +52,10 @@ pram%=&6D0
 
 
 ORG &900
-GUARD &A00
+GUARD &B00
 
 .start
+
 \init stuff
 \get current drive (incase not in request)
 JSR getdrive: STA drive%
@@ -81,32 +82,63 @@ JSR initprepcmd:\now have "mmcdisc "+D
 }
 .getargumentcount
 {
-	LDA #0: TAX : TAY
-	.aa: LDA (OSARGSptr),Y: CMP #&D: BEQ cmdend: INY: CMP #32: BNE aa:
-	INX:BNE aa
+	LDA #0
+	TAX
+	TAY
+	.aa
+	LDA (OSARGSptr),Y
+	CMP #&D
+	BEQ cmdend
+	INY
+	CMP #32
+	BNE aa
+	INX
+	BNE aa
 	.cmdend
 }
 \X contains no of args -1!
-
+{
 LDY #0
-CPX #1: BNE ab
+CPX #1
+BNE ab
 \have drive diskname
 \dealwith drive
-LDA (OSARGSptr),Y: STA drive%: INY : INY
+LDA (OSARGSptr),Y
+STA drive%
+INY
+INY
 .ab
-DEY : LDX strAoffset
+DEY
+LDX strAoffset
+}
 {
-.ae:INY:INX:LDA (OSARGSptr),Y:STA strA%,X:CMP #&D:BEQ af:BNE ae
+.ae
+INY
+INX
+LDA (OSARGSptr),Y
+STA strA%,X
+CMP #&D
+BEQ af
+BNE ae
 .af:
-LDA #32 : STA strA%,X
+LDA #32
+STA strA%,X
 STX strAoffset
 }
-CLC:LDA #('A'-'0'):ADC drive%
-INX:STA strA%,X: LDA #&D:INX:STA strA%,X
-.execmd
-{
-LDY #HI(strA%):LDX #LO(strA%):JMP OSCLI: \RTS
-}
+CLC
+LDA #('A'-'0')
+ADC drive%
+INX
+STA strA%,X
+LDA #&D
+INX
+STA strA%,X
+		.execmd
+		{
+		LDY #HI(strA%)
+		LDX #LO(strA%)
+		JMP OSCLI: \RTS
+		}
 
 
 
@@ -149,9 +181,31 @@ usage=1
 EQUS"Usage <fsp> (<dno>/<dsp>) (<drv>)":EQUB &8D
 \2
 mmcdisc=2
-EQUS"MMCDisc":EQUB &A0
+EQUS"MMCDisc":EQUB &A0 \\*MMCDisc (<name>) (A|B|C|D)V
+import=3
+EQUS"import -3":EQUB &A0 \\"import -3 xxxxx.ssd"+D
+postcmd=4
+EQUS".ssd":EQUB &8D
+hadfs =5
+EQUS"INSTALL"\ (<drv> ($)) (<name>) (<size>) \HadFS
+adfs=6
+EQUS"DIR " \ADFS *DIR <DIRECTORYNAME>
+hdfs =6
+EQUS"DRIVE drv (S/D/A) (C)" \hdfs
+hdfsdir=7
+EQUS"DIR "\(dsp) \hdfs
+hadfs1 =8
+EQUS"MOUNT"\ (<drv>)\HADFS v6.10
+ADFSdrive=9
+EQUS"drive A"
 
 
+\Datacentre RamFS
+\opus EDOS v0.4 for 2791 Controllers
+\Acorn NFS v3.34B 
+\Beebug Master ROM v1.05
+\M
+\*DIR <DIRECTORYNAME> \adfs will need to catch error as dir command exists
 .end
 
 

@@ -90,6 +90,7 @@ OSARGS=&FFDA
 \			4 Disc filing system
 \			5 Econet filing system
 \			6 Telesoftware system
+\           ........    
 \	A=1 Returns the address of the rest of the command line in the base page control block
 \	    This gives access to the parameters passed with *RUN or *command.
 \	A=&FF Update all files onto the media, ie ensure that the latest copy of the 
@@ -215,16 +216,7 @@ OSBYTE=&FFF4
 \    X=6 4800  
 \    X=7 9600    
 \    X=8 19200
-\    On exit X=old ULA setting
-\    (RISC OS 1.00) (Risc OS 3.50)
-\    X=9 50         X=16 38400
-\    X=10 110       X=17 57600
-\    X=11 134.5     X=18 115200
-\    X=12 600
-\    X=13 1800
-\    X=14 3600
-\    X=15 7200
-\    On exit X=old setting
+
 \&08 (Acorn MOS 0.10)
 \    RS423 Baud Transmit Rate
 \    X=0 9600 (default) 
@@ -237,15 +229,6 @@ OSBYTE=&FFF4
 \    X=7 9600    
 \    X=8 19200
 \    On exit X=old ULA setting
-\    (RISC OS 1.00) (Risc OS 3.50)
-\    X=9 50         X=16 38400
-\    X=10 110       X=17 57600
-\    X=11 134.5     X=18 115200
-\    X=12 600
-\    X=13 1800
-\    X=14 3600
-\    X=15 7200
-\    On exit X=old setting
 \&09 (Acorn MOS 0.10)
 \    First Color Duration (exits with X=old value)
 \    X=duration of first flash colour in cs,or 0 to hold still
@@ -259,8 +242,8 @@ OSBYTE=&FFF4
 \    Auto Repeat Period (exits with X=old value)
 \    X=delay between key repeats in cs,or 0 for default
 \&0D (Acorn MOS 1.00)
-\    Disable Event (exits with X=old value)
-\    Y=0 X=0 output buffer empty event
+\    Disable Event (exits with X=old value) Y=0
+DisableOutputBufferEmptyEvent% =0\     X=0 output buffer empty event
 \        X=1 input buffer full
 \        X=2 character entering buffer
 \        X=3 ADC conversion complete
@@ -420,34 +403,9 @@ OSBYTE=&FFF4
 \    (???)
 \    Terminal Function
 \&46 (RISC OS 1.00)
-\    Read/write country number (on exit X=0 if the country was invalid)
-\    X=1 UK
-\    X=2 Master
-\    X=3 Compact
-\    X=4 Italy      X=10 Greece     X=16 Iceland   X=22 Ireland     X=28 LatinAm
-\    X=5 Spain      X=11 Sweden     X=17 Canada1   X=23 Hong Kong   X=48 USA
-\    X=6 France     X=12 Finland    X=18 Canada2   X=24 Russia
-\    X=7 Germany    X=13 Unused     X=19 Canada    X=25 Russia2
-\    X=8 Portugal   X=14 Denmark    X=20 Turkey    X=26 Israel
-\    X=9 Esperanto  X=15 Norway     X=21 Arabic    X=27 Mexico
-\    Or use X=127 to read the current value
+
 \&47 (RISC OS 1.00)
-\    X=0..126   set the alphabet number
-\               X=100 BFont
-\               X=101 Latin1
-\               X=102 Latin2
-\               X=103 Latin3
-\               X=104 Latin4
-\               X=105 Cyrillic
-\               X=106 Arabic
-\               X=107 Greek
-\               X=108 Hebrew
-\               X=120 Cyrillic2
-\    X=127      reads the alphabet number
-\    X=128..254 sets the keyboard number
-\               X=254 standard archimedes keyboard
-\               X=253 A4 internal or PC style keyboard
-\    X=255      read the keyboard number
+
 \&60 (Terminal 1.20)
 \    Used for communication with service code residing in the I/O processor.
 \    X=b7     set for INSV/REMV vector operation (b0 set to install, clear to remove)
@@ -518,17 +476,7 @@ OSBYTE=&FFF4
 \    This call enters with 'some parameter' in X which resets the built in sound
 \    system
 \&75 (RISC OS 1.00)
-\    Read VDU Status Byte
-\    X=b0 Print output enabled by VDU2
-\      b1 Unused
-\      b2 Paged scrolling selected by VDU14
-\      b3 Text window in force ie.software scrolling
-\      b4 In a shadow mode
-\      b5 In VDU5 mode
-\      b6 Cursor editing in progress
-\      b7 Screen disabled with VDU21
-\    (Acorn MOS 1.20)
-\      b1 Scrolling disabled
+
 \&76 (Acorn MOS 1.20)
 \   Reflect keyboard status in LEDs
 \   If the keyboard status byte (CAPs lock etc...) is written to with
@@ -667,7 +615,7 @@ OSBYTE=&FFF4
 \    Returns X and Y of the current cursor position (or input cursor if in
 \    editing mode due to cursor keys)
 \&87 (Acorn MOS 0.10)
-			OSBYTEScreenModeYCurrentCharX%= &87
+		OSBYTEScreenModeYCurrentCharX%= &87
 \    Character at text cursor and screen MODE
 \    On exit X=character at current cursor position (or 0 if unreadable)
 \            Y=current mode number (shadow modes DO NOT return with bit 7 set)
@@ -685,7 +633,6 @@ OSBYTE=&FFF4
 \&8A (Acorn MOS 1.00)
 			\Place character into buffer
 			OSBYTEPlaceCharacterIntoBuffer% =&8A
-
 			\X=buffer number defined &15!
 			\OSBYTEXKeyboardBuffer% =0 			\Keyboard
 			\OSBYTEXSerialInBuffer% =1 			\Serial input
@@ -1184,6 +1131,7 @@ OSBYTE=&FFF4
 \    Read/Write 6522 User IRQ Mask
 \&E8 (Acorn MOS 1.00)
 \    Read/Write 6850 IRQ Mask
+
 \&E9 (Acorn MOS 1.20)
 \    Read/Write 6522 System IRQ Mask
 \&EA (Acorn MOS 1.20)

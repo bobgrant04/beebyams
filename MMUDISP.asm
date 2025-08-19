@@ -273,7 +273,28 @@ EQUB 0:
 		STA zeroz+1
 		RTS
 		}
-
+		.DisableEvents
+		{
+		LDA #&0D
+		LDY #0
+		LDX #9
+		.aa
+		JSR OSBYTE
+		DEX
+		BPL aa
+		RTS
+		}
+		.EnableEvents
+		{
+		LDA #&0E
+		LDY #0
+		LDX #9
+		.aa
+		JSR OSBYTE
+		DEX
+		BPL aa
+		RTS
+		}
 \Clearint cli offset from a in X
 		IF __DEBUG
 			.clearint
@@ -588,13 +609,6 @@ EQUB 0:
 		\.ged ret Y
 		.GetEndDescription
 		{
-		\LDY #0
-		\.ga
-		\LDA (APtr),Y
-		\INY
-		\CMP #&80
-		\BCC ga
-		\RTS
 		LDY #&FF
 		.aa
 		INY
@@ -1152,15 +1166,11 @@ BNE kkk
 .kkk
 CMP #'L'
 BNE lll
-		\launch disk  TODO
+		\launch disk
 		{
 		LDA FilterFlag
 		AND #FILTERdisk%
 		BEQ enddisplayinput
-		\x holds dinno
-		\LDX #&50
-		\LDX #('U'-'A')*4
-		\JSR clearint
 		LDA #0
 		STA u
 		JMP launchu
@@ -1197,7 +1207,7 @@ RTS \no action
 
 \Launch help
 		.hlp
-		
+		JSR EnableEvents
 		STA hlpcmd
 		.straighthelp
 		LDX #LO(hlpcmd)
@@ -1426,8 +1436,7 @@ RTS
 
 \Browse catdat BCD
 		
-		.Hardstart \add OSarg to replace banner
-		
+		.Hardstart \replace banner with command line
 		{
 		LDY #0
 		CLC \C=0: string is terminated by a space (used for filename parsing)
@@ -1437,17 +1446,9 @@ RTS
 		JSR GSREAD
 		BCC ac
 		\Y now set to end of filename
-		
-		\LDX #OSARGSptr
-		\JSR OSARGS
-		\LDA OSARGSptr
-		\STA FileSystemArgs
-		\LDA OSARGSptr+1
-		\STA FileSystemArgs+1
 		SEC \C=1: otherwise (used e.g. for defining a soft key with *KEY
 		JSR GSINIT
 		BEQ bannerend \Z is set if string is empty
-		\BCS bannerend \no banner commandline
 		LDX #&FF
 		.aa
 		INX
@@ -1458,8 +1459,6 @@ RTS
 		BNE aa
 		BEQ bannerend
 		.ab
-		\CPX #0
-		\BEQ bannerend
 		LDA #' '
 		STA banner,X
 		CPX #MaxBannerLength%
@@ -1468,6 +1467,8 @@ RTS
 		BNE ab
 		.bannerend
 		}
+		JSR DisableEvents
+		
 		.BCD
 		JSR HardInitmenu		
 		.bcd
@@ -1576,6 +1577,7 @@ RTS
 \---------------------------------
 		.launchu
 		{
+		JSR EnableEvents
 		LDA #0
 		JSR DriveSelect
 		\ set drive to 0

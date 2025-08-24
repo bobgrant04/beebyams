@@ -6,7 +6,7 @@ INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
 INCLUDE "TELETEXT.asm"
-__DEBUG =TRUE
+__DEBUG = FALSE \TRUE
 \"…Variables
 NoSpecials%=7:\"offset from 1
 EndSpecial%=&FF-NoSpecials% \ TODO REMOVE
@@ -132,6 +132,7 @@ requesteddrive=&41
 drive=&42
 \--------------------------------------------------------------
 \&43 - &4F FLOATING POINT TEMPORARY AREAS
+pramlen=&43
 \--------------------------------------------------------------
 \&50 - &6F not used
 \--------------------------------------------------------------
@@ -143,6 +144,7 @@ TextAdd =&2C
 \&3B to &42 basic float
 \single bytes
 key=&3B
+osargsy=&3C
 \&50-&6F Not used
 \&70 to &8F reserved for 
 blockstart=&70
@@ -191,7 +193,7 @@ WORKINGStrA=&650
 shortcode=&640
 strA%=&6B0
 strB%=&690
-pram%=strB%
+pram%=&6D0 \strB%
 filename%=&6D0
 \&900 - &AFF RS232 & cassette openin/open out
 \&B00 &BFF programmable keys
@@ -201,16 +203,17 @@ filename%=&6D0
 \------------------------------------------------------
 \setup for OSARGS
 __OSARGSinit = TRUE
-__OSARGSargXtoOSARGSstrB = TRUE
-__OSARGSargcountX = TRUE
-__OSARGSallcmdintoOSARGSstrAoffsetX = TRUE
+__OSARGSargXtoOSARGSStrLenA = TRUE
 \Variables - 
-OSARGSptr = Osargsadd
-OSARGSstrB =strB% 
 OSARGSstrA =strA%
+OSARGSStrLenA = strAoffset
+OSARGStempY = tempy
 \-------------------------------------------------------
-
-ORG &6800
+\-------------------------------------------------------
+__MAGICHELPPRINT = TRUE
+MAGICHELPAptr = Aptr
+\-------------------------------------------------------
+ORG &6000
 GUARD &7C00
 
 .start
@@ -247,15 +250,16 @@ INCBIN ".\x\$.altldpc"
 .tybmusic
 INCBIN ".\x\$.code2"
 INCLUDE "OSARGS.ASM"
+INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
+INCLUDE "MAGICHELP.ASM"
 		
 		.GetDrive
 		{
 		LDX #2
-		JSR OSARGSargXtoOSARGSstrB
-		\returns X as LENGTH
-		CPX #1
-		BNE ret
-		LDA pram%
+		JSR OSARGSargXtoOSARGSStrLenA
+		\sets strlenA
+		LDA strA%
+		\LDA pram%
 		CMP #'0'
 		BCC ret
 		CMP #'4'
@@ -319,21 +323,34 @@ INCLUDE "OSARGS.ASM"
 		}
 		.DealwithArgCount
 		{
+		
 		CPX #2
 		BCC aa
+		LDX #2
+		LDA #0
+		STA strAoffset
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDA strA%
+		\LDA pram%
+		CMP #'0'
+		BCC ret
+		CMP #'4'
+		BCS ret
+		STA requesteddrive
+		.ret
+		
 		\have full command line
 		\<fsp> (<drv>) (<dno>/<dsp>)
 		\or <fsp>  (<drv>)
-		\or <fsp> (<dno>/<dsp>)
 		LDX #dincmd%
-		JSR initprepcmd
-		JSR GetDrive
-		BNE Justdsp
+		\JSR initprepcmd
+		\JSR GetDrive
+		\BNE Justdrv
 		JSR addpram
-		LDA #' '
-		JSR addAtoStrA
+		\LDA #' '
+		\JSR addAtoStrA
 		LDX #3
-		JSR OSARGSargXtoOSARGSstrB
+		\JSR OSARGSargXtoOSARGSstrB
 		JSR addpram
 		JMP execmd
 		.Justdsp
@@ -451,8 +468,8 @@ INCLUDE "OSARGS.ASM"
 		BCC am
 		AND #&7F
 		STA strA%,X
-		STX strAoffset
 		INX
+		STX strAoffset
 		LDA #&D
 		STA strA%,X
 		RTS
@@ -478,10 +495,13 @@ INCLUDE "OSARGS.ASM"
 		RTS
 		}
 	\add pram$ to strA%
+		\copies param$ into StrA% strAoffset
+		\pram$ is &D terminated StA% 
 		.addpram
 		{
 		LDY #&FF
 		LDX strAoffset
+		DEX
 		.ae
 		INY
 		INX
@@ -678,14 +698,9 @@ INCLUDE "OSARGS.ASM"
 		{
 		LDX #usage%
 		JSR diserror
-		LDX #extendedhelp%
+		LDX #premagic%
 		JSR diserror
-		LDX #extendedhelpcont1%
-		JSR diserror
-		LDX #extendedhelpcont2%
-		JSR diserror
-		LDX #extendedhelpcont3%
-		JMP diserror:\JMP so end
+		JMP MAGICHELPPRINT
 		}
 \-------------------------
 		
@@ -698,14 +713,17 @@ INCLUDE "OSARGS.ASM"
 		ENDIF
 		.init
 		{
-		LDA #'3'
+		JSR GetDrive
 		STA requesteddrive
+		\LDA #'3'
+		\STA requesteddrive
 		LDA #0
 		STA loadadd
 		\filesize =0 indicates no shift
 		STA filesize
 		\basic =0 indicates not basic
 		STA basic
+		STA strAoffset
 		LDA #HI(pram%)
 		STA blockstart+1
 		LDA #LO(pram%)
@@ -714,57 +732,135 @@ INCLUDE "OSARGS.ASM"
 		\basic =0 indicates not basic
 		
 		}
-\osargs initiate
+		\osargs initiate
 		{
 		JSR OSARGSinit
-		JSR OSARGSargcountX
 		CPX #0
 		BEQ ZeroError
-		CPX #4
-		BCS ToManyVariables
-		JSR DealwithArgCount
-		}
-		\Din command issued
-		\requesteddrive Set
-		JSR setrequesteddrive
-		\Lets get file info!
-		LDX #1
-		JSR OSARGSargXtoOSARGSstrB
-		\filenameintopram%
-		\Process filename
-		\need to add $. if no dir specifed
-		LDA pram%+1
-		CMP #'.'
-		BEQ FullyQualifiedFilename
+		\JSR OSARGSinit
+		\JSR OSARGSargcountX
+		LDX #1 \filename
+		JSR OSARGSargXtoOSARGSStrLenA
+		\filename into StrA%
+		LDX strAoffset
+		DEX
+		LDA #&D
+		STA pram%,X
+		STX strAoffset
+		DEX
 		{
-		LDX #8
 		.aa
-		LDA pram%,X
-		STA pram%+2,X
-		DEX 
+		LDA strA%,X
+		STA pram%,X
+		DEX
 		BPL aa
-		LDA #'$'
-		STA pram%
-		LDA #'.'
-		STA pram%+1
 		}
-		.FullyQualifiedFilename
-		\Check FOR !BOOT
+		\now have file name in param%  &D terminated  ready to go
+		LDY strAoffset
+		DEY
+		STY pramlen
+		JSR OSARGSinit
+		CPX #4
+		BCC ax
+		JMP ToManyVariables
+		.ax
+		CPX #2
+		BCC justfilename
+		LDX #2
+		LDA #0
+		STA strAoffset
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDA strA% \drive we already have current drive saved!
+		CMP #'0'
+		BCC ret
+		CMP #'4'
+		BCS ret
+		STA requesteddrive
+		.ret
+		JSR OSARGSinit
+		CPX #3
+		BCC boot
+		\have full command line
+		\<fsp> (<drv>) (<dno>/<dsp>)
+		\or <fsp>  (<drv>)
+		LDX #dincmd%
+		JSR initprepcmd
+		LDX #2
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDX #3
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDX strAoffset
+		LDA #&D
+		STA strA%,X 
+		JSR execmd
+		\JSR GetDrive
+		\BNE Justdrv
+		\JSR addpram
+		\LDA #' '
+		\JSR addAtoStrA
+		\LDX #3
+		\JSR OSARGSargXtoOSARGSstrB
+		\JSR addpram
+		\JMP execmd
+		\.Justdsp
+		\LDA requesteddrive
+		\JSR addAtoStrA
+		\LDA #' '
+		\JSR addAtoStrA
+		\JSR addpram
+		\JMP execmd \RTS end of DIN
+		\filename
+		.justfilename
+		\<fsp>
+		IF __DEBUG
+			{
+			LDX #&FF
+			.aa
+			INX
+			LDA debugtext,X
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			BEQ ab
+			.debugtext
+			EQUS "Command line just filename"
+			EQUB &D
+			.ab
+			JSR gti
+			}
+		ENDIF
+		}
 		.boot
 		{
-		LDY #6
-		.ca
+		JSR setrequesteddrive
+		LDY pramlen
+		LDA pram%+1 \
+		CMP #'.'
+		BNE ad
+		.ag \full filename i.e. $.xxxx
 		LDA boottxt,Y
-		CMP strB%,Y
-		BEQ cc
-		CLC
+		CMP pram%,Y
+		BNE ah
+		BEQ ai
+		.ad \partial filename
+		LDA boottxt+2,Y
+		CMP pram%,Y
+		BEQ aj
 		ADC #32
-		CMP strB%,Y
+		CMP pram%,y
 		BNE notboot
-		.cc
+		.aj
 		DEY
-		BPL ca
-		}
+		BPL ad
+		BNE haveboot
+		.ah
+		ADC #32
+		CMP pram%,y
+		BNE notboot
+		.ai
+		DEY
+		BPL ag
+		.haveboot
 		IF __DEBUG
 			{
 			LDX #&FF
@@ -803,6 +899,36 @@ INCLUDE "OSARGS.ASM"
 		LDX #catcmd%
 		JSR initprepcmd
 		JMP execmd \rts
+		}
+
+		
+		\Din command issued
+		\requesteddrive Set
+		
+		\Lets get file info!
+		\LDX #1
+		\JSR OSARGSargXtoOSARGSstrB
+		\filenameintopram%
+		\Process filename
+		\need to add $. if no dir specifed
+		\LDA pram%+1
+		\CMP #'.'
+		\BEQ FullyQualifiedFilename
+		\{
+		\LDX #8
+		\.aa
+		\LDA pram%,X
+		\STA pram%+2,X
+		\DEX 
+		\BPL aa
+		\LDA #'$'
+		\STA pram%
+		\LDA #'.'
+		\STA pram%+1
+		\}
+		\.FullyQualifiedFilename
+		\Check FOR !BOOT
+		
 		.notboot
 		\now have blockstart with filename
 		IF __DEBUG
@@ -1365,16 +1491,7 @@ INCLUDE "OSARGS.ASM"
 		JSR execmd
 		JMP gti
 		\now have *lo. FILENAME &D ready
-		RTS
-\EQUS"7F07 mode 7 Screen":EQUB &D
-\EQUS"7F06 mode 6 Screen":EQUB &D
-\EQUS"7F05 mode 5 Screen":EQUB &D
-\EQUS"7F04 mode 4 Screen":EQUB &D
-\EQUS"7F03 mode 3 Screen":EQUB &D
-\EQUS"7F02 mode 2 Screen":EQUB &D
-\EQUS"7F01 mode 1 Screen":EQUB &D
-\EQUS"7F00 mode 0 Screen":EQUB &D \22 7 curser off g=get
-		}
+		RTS		
 		LDA #EndSpecial%
 		STA switch
 		LDX #dricmd%
@@ -1393,12 +1510,13 @@ INCLUDE "OSARGS.ASM"
 		BNE ag
 		\Special exe address not coded
 		.notcoded
-		LDX #exeaddressinvalid%
-		JSR diserror
-		LDX #extendedhelp%
-		JSR diserror
-		LDX #extendedhelpcont1%
-		JMP diserror:\rts
+		\LDX #exeaddressinvalid%
+		\JSR diserror
+		\LDX #extendedhelp%
+		\\JSR diserror
+		\LDX #extendedhelpcont1%
+		JMP ToManyVariables
+		}
 \JMP so end
 \prepload
 		.prepload
@@ -1660,58 +1778,17 @@ INCLUDE "OSARGS.ASM"
 			\EQUS 'A'+&80
 
 	usage%=21
-		EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)":EQUB &8D
+		EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)",&80+&D
 	notfound%=22
-		EQUS"file not found",&8D
+		EQUS"file not found",&80+&D
 	exeaddressinvalid%=23
 		EQUS"Special exe address not code",&80+'d' 
-	extendedhelp%=24
-		EQUS"Basic progs have exe 8023":EQUB &D
-		EQUS"And will be Run from load address":EQUB &D
-		EQUS"!BOOT will be run as per disk opt":EQUB &D
-		EQUS"Load ADDRESSES",&D
-		EQUS"8000 ROM ",&D
-		EQUS"7FF5 SCRLOAD",&D
-		EQUS"EXE ADDRESSES",&D
-
-		\EQUS"Files to be *EXEC exe 7FFA",&8D
-		\#5 EXTENDED HELP CONT
-	extendedhelpcont1%=25
-		EQUS"7FF4 31E0 repton infinity level(screen)", &D
-		EQUS"7FF6 31E0 repton 3 level(screen)":EQUB &D
-		EQUS"7FF7 viewsheet":EQUB &D
-		EQUS"7FF8 DEC compressed picture":EQUB &D
-		
-		
-		
-	extendedhelpcont2%=26	
-		
-		EQUS"7FF9 TYB music samples":EQUB &D
-		\EQUS"7FF5 SCRLOAD TODO":EQUB &D
-		EQUS"7FFA EXEC",&8D
-		EQUS"7FFB DUMP",&D
-		EQUS"7FFC type word text",&D
-		\EQUS"7FFD SHOWPIC not working",&D
-		EQUS"7FFE LDPIC compressed picture",&D
-		
-		EQUS"7F07 mode 7 Screen":EQUB &D
-		EQUS"7F06 mode 6 Screen":EQUB &8D
-	extendedhelpcont3%=27
-		EQUS"7F05 mode 5 Screen":EQUB &D
-		EQUS"7F04 mode 4 Screen":EQUB &D
-		EQUS"7F03 mode 3 Screen":EQUB &D
-		EQUS"7F02 mode 2 Screen":EQUB &D
-		EQUS"7F01 mode 1 Screen":EQUB &D
-		EQUS"7F00 mode 0 Screen":EQUB &D \22 7 curser off g=get
-		EQUS"Version ": BUILD_VERSION
-		EQUD &8D
-		\#9 repinfinity
-	rep3instruction%=28
+	rep3instruction%=24
 		EQUS"F",'1'+&80
-		\#8 rep3
-		\rep3%=9
-	repinfin%=29
+	repinfin%=25
 		EQUS 'A'+&80
+	premagic%=26
+		EQUS " EXE LOAD addresses",&80+&D
 
 		\Zero terminated strings 
 		.reppre

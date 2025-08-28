@@ -123,8 +123,9 @@ OSFILE=&FFDD
 		\02-05 load address
 		\06-09 execute address
 		\&0A - &D length
-		\&0E 0 = unlocked &A locked
-	OSFILELocked% =&A
+		\&0E 0 = unlocked &A =locked
+		OSFILEUnLocked% =0
+		OSFILELocked% =&A
 		\LSB first
 	OSFILEdelete%	=6 				\Delete object
 	OSFILECreateFile% =7	 		\Create empty file

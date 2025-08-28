@@ -6,7 +6,7 @@ INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
 \INCLUDE "TELETEXT.asm"
 
-__DEBUG = TRUE
+__DEBUG = FALSE
 
 \IntA &2A -&2D
 len =&2A
@@ -48,7 +48,7 @@ strA%=&6B0\
 pram%=&6D0 \strB%
 filename%=&6D0
 options% =&6F0
-ORG &6800
+ORG &7000
 GUARD &7C00
 
 .start
@@ -58,7 +58,7 @@ __OSARGSinit = TRUE
 __OSARGSargXtoOSARGSStrLenA = TRUE
 __OSARGSargGetDrive = TRUE
 __OSARGSFileNameToOSARGSPram = TRUE
-__OSARGSOptions = TRUE
+__OSARGSOptions = FALSE
 \Variables - 
 OSARGSstrA =strA%
 OSARGSStrLenA = strAoffset
@@ -70,6 +70,26 @@ OSARGSNoofArgs% = NoofArgs%
 IF __OSARGSOptions
 	OSARGSOptions% = options%
 ENDIF
+\needs following routines 
+\		initprepcmd
+\		prepcmd - part of initprepcmd
+\		MoveToRec
+\		PrintRecord
+\		diserror
+\		execmd
+\		setrequesteddrive
+\		getcurrentdrive
+\		gti	- needed for __debug
+\needs following in data section
+\.CommandAndText
+\&80 terminated with last character added to &80
+\	dricmd%=1 --can alter if required
+\\		EQUS"DR. ",&8D
+\	dincmd%=2  --can alter if required
+\\		EQUS"DIN",' '+&80
+\	usage%=3 --can alter if required
+\\ 		EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)",&80+&D --edit as needed
+
 \-------------------------------------------------------
 INCLUDE "OSARGS.ASM"
 \-------------------------------------------------------
@@ -78,199 +98,15 @@ __MAGICHELPPRINTSELECTED =TRUE
 MAGICHELPAptr = Aptr
 MAGICHELPload%=load%
 MAGICHELPexe%=exe%
-MAGICHELPPrintType% = Printtype%
+IF __MAGICHELPPRINTSELECTED
+	MAGICHELPPrintType% = Printtype%
+ENDIF
 \-------------------------------------------------------
 INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
 INCLUDE "MAGICHELP.ASM"
-
-\Get input 
-	IF __DEBUG
-		.gti
-		{
-		LDA #OSBYTEReadCharacterFromBuffer%
-		LDX #OSBYTEXKeyboardBuffer%
-		JSR OSBYTE
-		BCS gti \no character
-		RTS
-		}
-	ENDIF	
-		.getcurrentdrive
-		{
-		\see https://stardot.org.uk/forums/viewtopic.php?p=30012&hilit=assembler+selected+drive#p30012
-		\lDA #OSGBPBGetLibraryName%
-		\LDX #LO(conb)
-		\LDY #HI(conb)
-		\JSR OSGBPB
-		\Hack
-		LDA OScurrentDrive%
-		CLC
-		ADC #'0'
-		IF __DEBUG
-			{
-			LDA OScurrentDrive%
-			CLC
-			ADC #'0'
-			JSR OSASCI
-			LDX #&FF
-			.aa
-			INX
-			LDA debugtext,X
-			JSR OSASCI
-			CMP #&D
-			BNE aa
-			BEQ ab
-			.debugtext
-			EQUS " = Currentdrive "
-			EQUB &D
-			.ab
-			JSR gti
-			}
-		ENDIF
-		\LDA osgbpbdata%+1
-		LDA OScurrentDrive%
-		CLC
-		ADC #'0'		
-		RTS \RTS
-		}
-		.setrequesteddrive
-		{
-		LDX #dricmd%
-		JSR initprepcmd
-		LDA RequestedDrive%
-		STA strA%+3
-		JMP execmd \RTS
-		}
-		
-		.execmd
-		{
-		IF __DEBUG
-			{
-			LDY #&FF
-			.aa
-			INY
-			LDA strA%,Y
-			JSR OSASCI
-			CMP #&D
-			BNE aa
-			JSR gti 
-			}
-		ENDIF
-		LDY #HI(strA%)
-		LDX #LO(strA%)
-		JMP OSCLI \RTS
-		}
-		
-		.initprepcmd
-		{
-		LDA #0
-		STA strAoffset 
-		}
-		.prepcmd
-		{
-		JSR MoveToRec
-		LDX strAoffset
-		LDY #0
-		.ey
-		LDA (TextAdd),Y
-		CMP #&80
-		BCC am
-		AND #&7F
-		STA strA%,X
-		INX
-		STX strAoffset
-		LDA #&D
-		STA strA%,X
-		RTS
-		.am
-		STA strA%,X
-		INX
-		INY
-		BNE ey
-		}
-		.diserror
-		{
-		JSR MoveToRec
-		JMP PrintRecord
-		}
-		.PrintRecord
-		{
-		LDY #0
-		.bc
-		LDA (TextAdd),Y
-		CMP #&80
-		BCC bd
-		AND #&7F
-		JMP OSASCI \RTS
-		RTS
-		.bd
-		JSR OSASCI
-		INY
-		BNE bc
-		}
-		.MoveToRec
-		{
-		LDA #LO(CommandAndText)
-		STA TextAdd
-		LDA #HI(CommandAndText)
-		STA TextAdd+1
-		LDY #0
-		.ba
-		DEX
-		BNE bb
-		RTS
-		.bb
-		LDA (TextAdd),Y
-		INY
-		CMP #&80
-		BCC bb
-		CLC
-		TYA
-		ADC TextAdd
-		STA TextAdd
-		LDA #0
-		ADC TextAdd+1
-		STA TextAdd+1
-		LDY #0
-		BEQ ba
-		}
-
-		.Nocommands
-		LDX #usage%
-		JMP diserror
-\---------------------------		
-		.startexec
-\---------------------------		
-		{
-		\set current drive
-		JSR getcurrentdrive
-		STA RequestedDrive%
-		JSR OSARGSinit
-		\ X has no of arguments
-		\as has OSARGSNoofArgs%
-		CPX #1
-		BCC Nocommands
-		JSR OSARGSFileNameToOSARGSPram
-		LDX OSARGSNoofArgs%
-		CPX #2
-		BCC Justfilename
-		JSR OSARGSGetDrive \parm 2
-		LDX OSARGSNoofArgs%
-		CPX #3
-		\issues din cmd
-		LDX #dincmd%
-		JSR initprepcmd
-		LDX #2
-		JSR OSARGSargXtoOSARGSStrLenA
-		LDX #3
-		JSR OSARGSargXtoOSARGSStrLenA
-		LDX strAoffset
-		\DEX
-		LDA #&D
-		STA strA%,X 
-		JSR execmd
-		.Justfilename
-		JSR setrequesteddrive
-		\ok so end of standard select stuff
+INCLUDE "command args.asm"
+\start ends here!
+\ok so end of standard select stuff
 		LDA #HI(pram%)
 		STA blockstart+1
 		LDA #LO(pram%)
@@ -286,7 +122,6 @@ INCLUDE "MAGICHELP.ASM"
 		LDX #usage%
 		JMP diserror
 		.ok
-		}
 		\Now have file information
 		\lets print
 		{
@@ -320,7 +155,7 @@ INCLUDE "MAGICHELP.ASM"
 		}
 		\now need to see if it matches magic...
 		LDA #MAGICHELPMatchEitherLoadOrExe
-		JMP MAGICHELPPRINT
+		JMP MAGICHELPPRINT \RTS
 		
 		\LDA #MAGICHELPMatchexe
 		\LDA #MAGICHELPMatchLoad

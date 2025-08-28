@@ -8,13 +8,9 @@
 		\A=3 Match either exe and or load
 		MAGICHELPMatchEitherLoadOrExe =3
 
-
-
-
-
 IF __MAGICHELPPRINT = TRUE		
 		.MAGICHELPPRINT
-		IF __MAGICHELPPRINTSELECTED = TRUE
+		IF __MAGICHELPPRINTSELECTED
 			STA MAGICHELPPrintType%
 		ENDIF
 		.MAGICHELPPRINTInitAptrtoMagicData

@@ -3,9 +3,9 @@
 \** OS CONSTANTS
 
 \zeropage
-
+OScurrentDrive%=&CF
 BPtr1Flag=&FF
-TextPointer=&F2
+OSTextPointer%=&F2
 EscapeFlag =&FF
 
 \oscalls
@@ -124,6 +124,7 @@ OSFILE=&FFDD
 		\06-09 execute address
 		\&0A - &D length
 		\&0E 0 = unlocked &A locked
+	OSFILELocked% =&A
 		\LSB first
 	OSFILEdelete%	=6 				\Delete object
 	OSFILECreateFile% =7	 		\Create empty file
@@ -1307,7 +1308,10 @@ OSNEWL=&FFE7
 		\Send a newline sequence to output stream
 OSWRCH=&FFEE
 		\write character VDU command
-		
+		\A, X and Y are preserved.
+		\C, N, V and Z are undefined.
+		\The interrupt status is preserved (though it may be
+		\enabled during a call)
 OSWORD=&FFF1
 OSCLI =&FFF7
 		\Execute a command

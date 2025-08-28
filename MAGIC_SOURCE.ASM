@@ -26,7 +26,7 @@ EQUS 1,1,2,&30,0,&30,&F8,&7F,0,0,"DEC compressed picture #1",13
 EQUS 2,&66,&78,0,&20,&F9,&7F,0,&11,"TYB music samples #6",13
 \Entry type 3 
 \3,loadadd,exec,load,ident
-EQUS 3,&E0,&31,&F6,&7F,0,0,"Repton 3 screen #1",13
+EQUS 3,&E0,&31,&F6,&7F,&E0,&31,"Repton 3 screen #1",13
 \Entry type 4
 \4,exec,exec,load,ident
 EQUS 4,&23,&80,&23,&80,0,0,"Basic #2",13
@@ -67,6 +67,12 @@ EQUS 5,2,' ',0,'E',0,&FC,&7F,0,0,"text/word #2",13
 EQUS 7,110,8,'a','e','h','i','n','o','r','s','t',&FC,&7F,0,0,"text/word #3",13
 EQUS 7,110,8,'A','E','H','I','N','O','R','S','T',&FC,&7F,0,0,"text/word #4",13
 
+
+\&FF Entries that have no pattern but X will honour added to aid management of Magic addresses
+EQUS &FF,&FD,&FD,0,0,"Showpic #1",13
+EQUS &FF,&FB,&FD,0,0,"Dump #1",13
+EQUS &FF,&FA,&FD,0,0,"Exec #1",13
+EQUS &FF,&F7,&FD,0,0,"viewsheet #1",13
 \marks end of block
 EQUS 0
 

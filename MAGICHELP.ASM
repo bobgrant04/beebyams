@@ -1,19 +1,47 @@
 
-IF __MAGICHELPPRINT = TRUE
+		\A=0 Full print
+		MAGICHELPFullprint =0
+		\A=1 match exe only
+		MAGICHELPMatchexe =1
+		\A=2 match load only
+		MAGICHELPMatchLoad =2
+		\A=3 Match either exe and or load
+		MAGICHELPMatchEitherLoadOrExe =3
+
+
+
+
+
+IF __MAGICHELPPRINT = TRUE		
 		.MAGICHELPPRINT
-		JSR InitAptrtoMagicData
-		.TableScan
+		IF __MAGICHELPPRINTSELECTED = TRUE
+			STA MAGICHELPPrintType%
+		ENDIF
+		.MAGICHELPPRINTInitAptrtoMagicData
+		{
+		LDA #LO(MagicData)
+		STA MAGICHELPAptr
+		LDA #HI(MagicData)
+		STA MAGICHELPAptr+1
+		}
+		.MAGICHELPPRINTTableScan
 		{
 		LDY #0
 		LDA (MAGICHELPAptr),Y
-		BNE aa
-		.exittablescan
+		BEQ exittablescan
+		
+
 		\no need to check for screens as in magic files
 		\need to print *run message
 		\EQUS"Version ": BUILD_VERSION
-		RTS
+		
 		.aa
 		TAX
+		CMP #&FF
+		BNE Notff
+		LDA #1
+		JMP MAGICHELPdisplayrec
+		.Notff
 		DEX
 		BNE Not1
 		\1,Offset, nobytes,exec,load ident
@@ -22,28 +50,28 @@ IF __MAGICHELPPRINT = TRUE
 		LDA (MAGICHELPAptr),Y
 		CLC
 		ADC #4
-		JMP displayrec
+		JMP MAGICHELPdisplayrec
 		.Not1
 		DEX
 		BNE Not2
 		\Entry type 2
 		\2,Startrange,Endrange,minvalue,maxvalue,exec,load ident
 		LDA #5
-		JMP displayrec
+		JMP MAGICHELPdisplayrec
 		.Not2
 		DEX
 		BNE Not3
 		\Entry type 3 
 		\3,loadadd,exec,load,ident
 		LDA#3
-		JMP displayrec
+		JMP MAGICHELPdisplayrec
 		.Not3
 		DEX
 		BNE Not4
 		\Entry type 4
 		\4,exec,exec,load,ident
 		LDA#3
-		JMP displayrec
+		JMP MAGICHELPdisplayrec
 		.Not4
 		DEX
 		BNE Not5
@@ -54,7 +82,7 @@ IF __MAGICHELPPRINT = TRUE
 		ROL A
 		CLC
 		ADC #2
-		JMP displayrec
+		JMP MAGICHELPdisplayrec
 		.Not5
 		DEX
 		BNE Not6
@@ -65,7 +93,7 @@ IF __MAGICHELPPRINT = TRUE
 		LDA (MAGICHELPAptr),Y
 		CLC
 		ADC #4
-		JMP displayrec
+		JMP MAGICHELPdisplayrec
 		.Not6
 		DEX
 		BNE Not7
@@ -76,13 +104,13 @@ IF __MAGICHELPPRINT = TRUE
 		LDA (MAGICHELPAptr),Y
 		CLC
 		ADC #3
-		JMP displayrec
+		JMP MAGICHELPdisplayrec
 		.Not7
 		DEX
 		BNE Not8
 		\8,length,exec,load,ident
 		LDA #3
-		JMP displayrec
+		JMP MAGICHELPdisplayrec
 		.Not8
 		DEX
 		BNE exittablescan
@@ -91,18 +119,25 @@ IF __MAGICHELPPRINT = TRUE
 		LDA (MAGICHELPAptr),Y
 		CLC
 		ADC #3
-		JMP displayrec
-		\.exittablescan
-		\RTS
+		JMP MAGICHELPdisplayrec
 		}
-		.displayrec
+		.exittablescan
+		RTS
+		
+		.MAGICHELPdisplayrec
 		{
-		\for now just display text!
-		\check if we are #1 else ignore
+		IF __MAGICHELPPRINTSELECTED = TRUE
+			LDX MAGICHELPPrintType%
+			BNE entrymatching
+		ENDIF
+		
 		TAX
 		CLC
 		ADC #4
 		TAY
+		}
+		.matchprintrec
+		{
 		.ac
 		INY
 		LDA (MAGICHELPAptr),Y
@@ -111,35 +146,101 @@ IF __MAGICHELPPRINT = TRUE
 		INY
 		LDA (MAGICHELPAptr),Y
 		CMP #'1'
-		BEQ ad
-		JMP NextRec
-		.ad
+		BEQ printthisrec
+		JMP MAGICHELPNextRec
+		}
+		.printthisrec
+		{
 		TXA
 		TAY
-		JSR CheckZero
+		JSR MAGICHELPcheckzero
 		BCS ag
-		JSR PrintAddress
+		JSR MAGICHELPPrintAddress
 		.ag
-		JSR CheckZero
-		BCS ah
-		JSR PrintAddress
-		.ah
+		JSR MAGICHELPcheckzero
+		BCS aa
+		JSR MAGICHELPPrintAddress
 		.aa
 		LDA (MAGICHELPAptr),Y
 		CMP #'#'
 		BNE ab
 		JSR OSNEWL
-		JMP NextRec
+		IF __MAGICHELPPRINTSELECTED = TRUE
+			LDX MAGICHELPPrintType%
+			BNE exittablescan
+		ENDIF
+		JMP MAGICHELPNextRec \exit
 		.ab
 		JSR OSWRCH
 		INY
 		BNE aa
-		\.af\printxxx and return toag
-		\INY
-		\INY
-		\BNE ag
 		}
-		.NextRec
+		IF __MAGICHELPPRINTSELECTED = TRUE
+			.entrymatching
+			{
+			TAX
+			\IF __DEBUG
+			\	LDY #0
+			\	LDA (MAGICHELPAptr),Y
+			\	JSR PrHex
+			\	TXA
+			\ENDIF
+			TAY
+			LDA MAGICHELPPrintType%
+			AND #MAGICHELPMatchexe
+			BEQ loadcheck
+			LDA (MAGICHELPAptr),Y
+			INY
+			CLC
+			ADC (MAGICHELPAptr),Y
+			BEQ loadcheck
+			LDA (MAGICHELPAptr),Y
+			CMP MAGICHELPexe%+1
+			BNE nomatch
+			DEY
+			LDA (MAGICHELPAptr),Y
+			CMP MAGICHELPexe%
+			BNE nomatch
+			\Exe matches
+			.exematch
+			
+			\JMP matchprintrec
+			\JMP printthisrec
+			.aa
+			\0000 for exe
+			.loadcheck
+			LDA MAGICHELPPrintType%
+			AND #MAGICHELPMatchLoad
+			BEQ noloadcheck
+			TXA
+			TAY
+			INY
+			INY
+			LDA (MAGICHELPAptr),Y
+			INY
+			CLC
+			ADC (MAGICHELPAptr),Y
+			BEQ loadzero
+			LDA (MAGICHELPAptr),Y
+			CMP MAGICHELPload%+1
+			BNE nomatch
+			DEY
+			LDA (MAGICHELPAptr),Y
+			CMP MAGICHELPload%
+			BNE nomatch
+			.noloadcheck
+			.loadzero
+			JMP printthisrec 
+			.nomatch
+			TXA
+			CLC
+			ADC #4
+			TAY
+			JMP MAGICHELPNextRec \exit
+			}
+		ENDIF
+		
+		.MAGICHELPNextRec
 		{
 		.aa
 		INY
@@ -154,9 +255,9 @@ IF __MAGICHELPPRINT = TRUE
 		LDA #0
 		ADC MAGICHELPAptr+1
 		STA MAGICHELPAptr+1
-		JMP TableScan
+		JMP MAGICHELPPRINTTableScan
 		}
-		.CheckZero
+		.MAGICHELPcheckzero
 		{
 		LDA (MAGICHELPAptr),Y
 		INY
@@ -181,7 +282,7 @@ IF __MAGICHELPPRINT = TRUE
 		}
 		
 		
-		.PrintAddress
+		.MAGICHELPPrintAddress
 		{
 		INY
 		JSR PrintHex
@@ -202,8 +303,9 @@ IF __MAGICHELPPRINT = TRUE
 		\ Print A in hex
 		\ ==============
 		\ Corrupts A
+		}
 		.PrHex
-		\{
+		{
 		PHA
 		LSR A
 		LSR A
@@ -221,15 +323,8 @@ IF __MAGICHELPPRINT = TRUE
 			.PrDigit
 			{
 			ADC #'0'
-			JMP OSWRCH
+			JMP OSWRCH \RTS
 			}
 		}
-		.InitAptrtoMagicData
-		{
-		LDA #LO(MagicData)
-		STA MAGICHELPAptr
-		LDA #HI(MagicData)
-		STA MAGICHELPAptr+1
-		RTS
-		}
+		
 ENDIF

@@ -145,6 +145,8 @@ TextAdd =&2C
 \single bytes
 key=&3B
 osargsy=&3C
+NoofArgs%=&3D
+PrintType = &3E
 \&50-&6F Not used
 \&70 to &8F reserved for 
 blockstart=&70
@@ -160,7 +162,7 @@ codestart=&70
 ScrLoadPtr =&A8
 \   B0-BF	filing system scratch space
 \   C0-CF	allocated to current active filing system
-OScurrentDrive%=&CF
+\OScurrentDrive%=&CF
 \   D0-E1	allocated to VDU driver
 \   E2		cassette filing system status
 \   E3		cassette filing system options
@@ -204,14 +206,21 @@ filename%=&6D0
 \setup for OSARGS
 __OSARGSinit = TRUE
 __OSARGSargXtoOSARGSStrLenA = TRUE
+__OSARGSargGetDrive = TRUE
+__OSARGSFileNameToOSARGSPram = TRUE
 \Variables - 
 OSARGSstrA =strA%
 OSARGSStrLenA = strAoffset
 OSARGStempY = tempy
+OSARGSrequesteddrive = requesteddrive
+OSARGSpram% = pram%
+OSARGSpramlen% = pramlen
+OSARGSNoofArgs% = NoofArgs%
 \-------------------------------------------------------
 \-------------------------------------------------------
 __MAGICHELPPRINT = TRUE
 MAGICHELPAptr = Aptr
+MAGICHELPPrintType =PrintType
 \-------------------------------------------------------
 ORG &6000
 GUARD &7C00
@@ -253,22 +262,7 @@ INCLUDE "OSARGS.ASM"
 INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
 INCLUDE "MAGICHELP.ASM"
 		
-		.GetDrive
-		{
-		LDX #2
-		JSR OSARGSargXtoOSARGSStrLenA
-		\sets strlenA
-		LDA strA%
-		\LDA pram%
-		CMP #'0'
-		BCC ret
-		CMP #'4'
-		BCS ret
-		STA requesteddrive
-		LDA #0 
-		.ret
-		RTS \RTS
-		}
+		
 \getcurrent drive
 		.getcurrentdrive
 		{
@@ -296,7 +290,7 @@ INCLUDE "MAGICHELP.ASM"
 			BNE aa
 			BEQ ab
 			.debugtext
-			EQUS " Currentdrive "
+			EQUS " = Currentdrive "
 			EQUB &D
 			.ab
 			JSR gti
@@ -305,8 +299,7 @@ INCLUDE "MAGICHELP.ASM"
 		\LDA osgbpbdata%+1
 		LDA OScurrentDrive%
 		CLC
-		ADC #'0'
-		
+		ADC #'0'		
 		RTS \RTS
 		}
 		.addAtoStrA
@@ -321,9 +314,8 @@ INCLUDE "MAGICHELP.ASM"
 		STX strAoffset
 		RTS
 		}
-		.DealwithArgCount
+		.DealwithArgCount \TODO delete
 		{
-		
 		CPX #2
 		BCC aa
 		LDX #2
@@ -355,7 +347,7 @@ INCLUDE "MAGICHELP.ASM"
 		JMP execmd
 		.Justdsp
 		LDA requesteddrive
-		JSR addAtoStrA
+		\JSR addAtoStrA
 		LDA #' '
 		JSR addAtoStrA
 		JSR addpram
@@ -380,9 +372,6 @@ INCLUDE "MAGICHELP.ASM"
 			JSR gti
 			}
 		ENDIF
-		\set requesteddrive
-		JSR getcurrentdrive
-		STA requesteddrive
 		RTS
 		}
 \issue *dr.X command
@@ -700,6 +689,7 @@ INCLUDE "MAGICHELP.ASM"
 		JSR diserror
 		LDX #premagic%
 		JSR diserror
+		LDA #MAGICHELPFullprint
 		JMP MAGICHELPPRINT
 		}
 \-------------------------
@@ -713,7 +703,8 @@ INCLUDE "MAGICHELP.ASM"
 		ENDIF
 		.init
 		{
-		JSR GetDrive
+		JSR getcurrentdrive
+		\JSR OSARGSGetDrive
 		STA requesteddrive
 		\LDA #'3'
 		\STA requesteddrive
@@ -739,45 +730,30 @@ INCLUDE "MAGICHELP.ASM"
 		BEQ ZeroError
 		\JSR OSARGSinit
 		\JSR OSARGSargcountX
-		LDX #1 \filename
-		JSR OSARGSargXtoOSARGSStrLenA
-		\filename into StrA%
-		LDX strAoffset
-		DEX
-		LDA #&D
-		STA pram%,X
-		STX strAoffset
-		DEX
-		{
-		.aa
-		LDA strA%,X
-		STA pram%,X
-		DEX
-		BPL aa
-		}
-		\now have file name in param%  &D terminated  ready to go
-		LDY strAoffset
-		DEY
-		STY pramlen
-		JSR OSARGSinit
+		JSR OSARGSFileNameToOSARGSPram
+		\JSR OSARGSinit
+		LDX NoofArgs%
 		CPX #4
 		BCC ax
 		JMP ToManyVariables
 		.ax
 		CPX #2
 		BCC justfilename
-		LDX #2
-		LDA #0
-		STA strAoffset
-		JSR OSARGSargXtoOSARGSStrLenA
-		LDA strA% \drive we already have current drive saved!
-		CMP #'0'
-		BCC ret
-		CMP #'4'
-		BCS ret
-		STA requesteddrive
-		.ret
-		JSR OSARGSinit
+		JSR OSARGSGetDrive
+		\LDX #2
+		\LDA #0
+		\STA strAoffset
+		\JSR OSARGSargXtoOSARGSStrLenA
+		\LDA strA% \drive we already have current drive saved!
+		\LDX NoofArgs%
+		\CMP #'0'
+		\BCC ret
+		\CMP #'4'
+		\BCS ret
+		\STA requesteddrive
+		\.ret
+		\JSR OSARGSinit
+		LDX NoofArgs%
 		CPX #3
 		BCC boot
 		\have full command line
@@ -790,6 +766,7 @@ INCLUDE "MAGICHELP.ASM"
 		LDX #3
 		JSR OSARGSargXtoOSARGSStrLenA
 		LDX strAoffset
+		DEX
 		LDA #&D
 		STA strA%,X 
 		JSR execmd
@@ -1718,7 +1695,7 @@ INCLUDE "MAGICHELP.ASM"
 		EQUS"$.!BOOT"
 		.CommandAndErrorText
 		.cmdadd
-		.errtxt
+	.errtxt
 		\*LDPIC FE
 	ldpiccmd%=1
 		EQUS"LDPIC",&A0

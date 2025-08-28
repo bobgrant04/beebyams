@@ -5,8 +5,9 @@
 \__OSARGSinit
 \__OSARGSargXtostrB%
 \__OSARGSargcountX
-\ we are using semi offical GSINIT,GSREAD
+\ we are using semi offical GSINIT,OSARGSread
 \It should be noted that this initally point to the whole cmd i.e x myfile 1 din7
+\can not use this but can use the zero page vector! OSTextPointer%
 \GSINIT=&FFC2
 \	On Entry:
 \       Address for string stored at .stringInputBufferAddressLow/High
@@ -19,7 +20,7 @@
 \       Y = offset of the first non-blank character
 \       A = first non-blank character
 \       Z is set if string is empty
-\GSREAD=&FFC5
+\OSARGSread=&FFC5
 \	On Entry:
 \		   Address for string stored at .stringInputBufferAddressLow/High
 \		   Y = offset into string
@@ -32,32 +33,59 @@
 
 \\get OSARGS into blockstart ret x no of args
 IF __OSARGSinit
+		.OSARGSread
+		{
+		CLC
+		LDA (OSTextPointer%),Y
+		CMP #&D
+		BNE	Exit
+		SEC
+		RTS
+		.Exit
+		INY
+		CLC
+		RTS
+		}
 		.OSARGSinit
 		{
 		LDA #0
+		IF __OSARGSOptions
+			STA OSARGSOptions%
+		ENDIF
 		TAY
 		TAX
-		SEC \od
-		JSR GSINIT
-		.aa
-		JSR GSREAD
-		BCS ac \end!
+		\SEC \od
+		\JSR GSINIT
+		}
+		.startread
+		{
+		JSR OSARGSread
+		BCS endofcmdline\end!
 		.ae
+		IF __OSARGSOptions
+			CMP #'|'
+			BEQ switch
+		ENDIF
 		IF __DEBUG
 			JSR OSWRCH
+			\PHA
+			\JSR PrHex
+			\PLA
 		ENDIF
+		.af
 		CMP #' '
-		BNE aa	
+		BNE startread	
 		INX
 		.ad
-		JSR GSREAD
-		BCS af \end!
+		JSR OSARGSread
+		BCS ag \near end!
 		CMP #' '
 		BNE ae
 		BEQ ad
-		.af
+		.ag
 		DEX \have spaces at the end of string !
-		.ac
+		.endofcmdline
+		STX OSARGSNoofArgs%
 		IF __DEBUG
 			{
 			JSR OSNEWL
@@ -80,8 +108,45 @@ IF __OSARGSinit
 			JSR OSNEWL
 			}
 		ENDIF
+		
 		\do not inc X as cmd contains filename that launched it!
 		RTS
+		IF __OSARGSOptions
+			.switch
+			{
+			STX tempy%
+			IF __DEBUG
+				{
+				JSR OSNEWL
+				LDX #&FF
+				.aa
+				INX
+				LDA debugtext,X
+				JSR OSASCI
+				CMP #&D
+				BNE aa
+				BEQ ab
+				.debugtext
+				EQUS " Switch"
+				EQUB &D
+				.ab
+				JSR OSNEWL
+				}
+			ENDIF
+			LDX #&FF
+			.aa
+			INX
+			JSR OSARGSread
+			BCS endofcmdline \ignore switch character
+			STA OSARGSOptions%,X
+			CMP #' '
+			BNE aa
+			LDA #0
+			STA OSARGSOptions%,X
+			LDX tempy%
+			JMP startread
+			}
+		ENDIF
 		}\rtn
 ENDIF
 	
@@ -90,9 +155,17 @@ ENDIF
 		\At end OSARGSStrLenA will point to the same string will have a ' ' character at the end
 		.OSARGSargXtoOSARGSStrLenA
 		{
+		IF __OSARGSOptions
+			{
+			LDA OSARGSOptions%
+			BEQ aa
+			INX
+			.aa
+			}
+		ENDIF
 		LDY #0
 		.aa
-		JSR GSREAD
+		JSR OSARGSread
 		BCS ae
 		.ag
 		CMP #' '
@@ -100,7 +173,7 @@ ENDIF
 		DEX
 		BEQ ah
 		.ad
-		JSR GSREAD
+		JSR OSARGSread
 		BCS ac \end!
 		CMP #' '
 		BEQ ad
@@ -108,7 +181,7 @@ ENDIF
 		.ah
 		LDX OSARGSStrLenA
 		.af
-		JSR GSREAD
+		JSR OSARGSread
 		BCS ac \end!
 		CMP #' '
 		BEQ af
@@ -116,8 +189,8 @@ ENDIF
 		\read into  StrA
 		BNE aj
 		.ab
-		JSR GSREAD
-		BCS ai
+		JSR OSARGSread
+		BEQ ai
 		.aj
 		STA OSARGSstrA,X
 		CMP #'"' \" ignore ""
@@ -135,4 +208,105 @@ ENDIF
 		STA OSARGSstrA,X
 		BNE ac
 		}
+	ENDIF
+	
+	IF __OSARGSargGetDrive
+	\assumes command line is of type filename drive i.e. pram2
+	.OSARGSGetDrive
+		{
+		LDA #0
+		STA OSARGSStrLenA
+		LDX #2
+		JSR OSARGSargXtoOSARGSStrLenA
+		
+		\sets strlenA
+		LDA strA%
+		\LDA pram%
+		CMP #'0'
+		BCC ret
+		CMP #'4'
+		BCS ret
+		STA OSARGSrequesteddrive
+		IF __DEBUG
+			{
+			JSR OSNEWL
+			TXA
+			CLC
+			ADC #'0'-1
+			JSR OSWRCH
+			LDY #&FF
+			.aa
+			INY
+			LDA debugtext,Y
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			BEQ ab
+			.debugtext
+			EQUS " = Requested drive"
+			EQUB &D
+			.ab
+			JSR OSNEWL
+			}
+		ENDIF
+		LDA #0 
+		.ret
+		RTS \RTS
+		}
+	ENDIF
+	
+	IF __OSARGSFileNameToOSARGSPram
+		.OSARGSFileNameToOSARGSPram
+		{
+		LDX #0
+		STX OSARGSStrLenA
+		INX
+		\LDX #1 \filename
+		JSR OSARGSargXtoOSARGSStrLenA
+		\filename into StrA%
+		\LDX OSARGSStrLenA
+		\DEX
+		\LDA #&D
+		\STA OSARGSpram%,X
+		\STX OSARGSStrLenA
+		\STX OSARGSpramlen%
+		LDX #&FF
+		.aa
+		INX
+		LDA OSARGSstrA,X
+		STA OSARGSpram%,X
+		CMP #' '
+		BNE aa
+		LDA #&D
+		STA OSARGSpram%,X
+		IF __DEBUG
+			{
+			JSR OSNEWL
+			LDX #0
+			.ac
+			LDA OSARGSpram%,X
+			CMP #&D 
+			BEQ ad
+			JSR OSWRCH
+			INX
+			BNE ac
+			.ad
+			LDY #&FF
+			.aa
+			INY
+			LDA debugtext,Y
+			JSR OSWRCH
+			CMP #&D
+			BNE aa
+			BEQ ab
+			.debugtext
+			EQUS " = Filename"
+			EQUB &D
+			.ab
+			JSR OSNEWL
+			}
+		ENDIF
+		RTS
+		}
+		
 	ENDIF

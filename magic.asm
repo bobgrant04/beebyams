@@ -69,8 +69,11 @@ GUARD &7C00
 
 .start
 INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
-
-
+\-------------------------------------------------------
+__MAGICHELPPRINT = TRUE
+MAGICHELPAptr = Aptr
+\-------------------------------------------------------
+INCLUDE "MAGICHELP.ASM"
 .startexec
 {
 \get OSARGS into blockstart
@@ -91,10 +94,11 @@ TAX
 LDA(blockstart),Y
 CMP #&D
 BNE aa
-LDX #1
+LDX #Usage%
 JSR diserror
-LDX #5
-JMP diserror \RTS
+LDX #Extendedhelp%
+JSR diserror 
+JMP MAGICHELPPRINT
 .aa:
 CMP #('-')
 BNE xa
@@ -301,6 +305,10 @@ RTS
 			}
 		ENDIF
 		TAX
+		CMP #&FF
+		BNE Notff
+		JMP MagicFF
+		.Notff
 		DEX
 		BNE Not1
 		JMP Magic1
@@ -430,9 +438,16 @@ BRK
 		RTS
 		}
 
+
 \ALL Magic subs end with either Fullmatch if matched
 \Fullmatch needs to point to exe
 \or movenext - requires Y to be in the description part of the record
+\0 exec,load ident
+		.MagicFF
+		{
+		LDY # 5
+		JMP NextRec
+		}
 \1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
 \Magic1
 		.Magic1
@@ -1020,6 +1035,7 @@ EQUS"K.0 */code|M",&8D
 \.erraddr:EQUW errtxt
 .errtxt
 \ 1 usProcessNextRece"
+Usage%=1
 EQUS"Usage (-Q) <fsp> (<dno>/<dsp>) (<drv>)":EQUB &8D
 \ 2 file not found 
 EQUS"file not foun",&E4
@@ -1027,34 +1043,22 @@ EQUS"file not foun",&E4
 EQUS"Special exe add not code",&E4
 \ 4 Magic set
 EQUS"Magic already set",&8D
-\ 5 extended help 
+\ 5 extended help
+Extendedhelp%=5 
 EQUS"outputs":EQUB &D
 EQUS"L% for load 0=do not change":EQUB &D
 EQUS"E% for exe 0=do not change":EQUB &D
 EQUS"P%<>0 error":EQUB &D
- .masterlist
 EQUS"E%   L% ":EQUB &D
-EQUS"8023 0000 Basic":EQUB &D
-EQUS"D9CD 8000 Rom":EQUB &D
-EQUS"7FFE 0000 LDPIC compressed picture":EQUB &D
-EQUS"7FFD 0000 SHOWPIC":EQUB &D
-EQUS"7FFC 0000 type word text":EQUB &D
-EQUS"7FFB 0000 DUMP":EQUB &D
-EQUS"7FFA 0000 EXEC":EQUB &D
-EQUS"7FF9 0000 TYB music samples":EQUB &D
-EQUS"7FF8 0000 DEC compressed picture":EQUB &D
-EQUS"7FF7 0000 viewsheet":EQUB &D
-EQUS"7FF6 31E0 repton 3 level":EQUB &D
-EQUS"7FF5 0000 ScrLoad":EQUB &D
-EQUS"7FF4 0000 Repton Infinity level":EQUB &D
-EQUS"7F07 7C00 mode 7 Screen":EQUB &D
-EQUS"7F06 6000 mode 6 Screen":EQUB &D
-EQUS"7F05 5800 mode 5 Screen":EQUB &D
-EQUS"7F04 5800 mode 4 Screen":EQUB &D
-EQUS"7F03 4000 mode 3 Screen":EQUB &D
-EQUS"7F02 3000 mode 2 Screen":EQUB &D
-EQUS"7F01 3000 mode 1 Screen":EQUB &D
-EQUS"7F00 3000 mode 0 Screen":EQUB &8D
+EQUS " EXE LOAD addresses",&80+&D
+ .masterlist
+\not refed these do not have magic file entries
+\EQUS"7FFD 0000 SHOWPIC":EQUB &D
+\EQUS"7FFC 0000 type word text":EQUB &D
+\EQUS"7FFB 0000 DUMP":EQUB &D
+\EQUS"7FFA 0000 EXEC":EQUB &D
+\EQUS"7FF7 0000 viewsheet":EQUB &D
+\EQUB &8D
 .end
 
 

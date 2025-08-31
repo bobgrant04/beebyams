@@ -143,6 +143,29 @@ IF __OSARGSinit
 			BNE aa
 			LDA #0
 			STA OSARGSOptions%,X
+			\will process basic options here
+			\use bit switches
+			OSARGSbitOptionQuiet% = 1
+			OSARGSbitOptionVerbose% =2
+			\=4 etc
+			\will just do caps!
+			LDA #0
+			STA OSARGSbitOptions%
+			.ab
+			DEX
+			LDA OSARGSOptions%,X
+			CMP#'Q' \Quiet
+			BNE ac
+			LDA OSARGSbitOptions%
+			ORA OSARGSbitOptionQuiet%
+			STA OSARGSbitOptions%
+			.ac
+			CMP#'V' \Verbose
+			BNE ad
+			LDA OSARGSbitOptions%
+			ORA OSARGSbitOptionVerbose%
+			STA OSARGSbitOptions%
+			.ad
 			LDX tempy%
 			JMP startread
 			}

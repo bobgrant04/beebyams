@@ -109,6 +109,15 @@
 		}
 		.PrintRecord
 		{
+		IF __OSARGSOptions = TRUE
+			{
+			LDA OptionBit%
+			AND #OSARGSbitOptionQuiet%
+			BEQ cont
+			RTS
+			.cont
+			}
+		ENDIF
 		LDY #0
 		.bc
 		LDA (TextAdd),Y

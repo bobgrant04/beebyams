@@ -1,6 +1,12 @@
+INCLUDE "VERSION.asm"
+INCLUDE "SYSVARS.asm"			; OS constants
+INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
+
+__DEBUG = TRUE
+
+
 \\MAGIC used to inteligently guess exe and or load address
-\Magic <fsp> (<drv>) (<dno>/<dsp>)
-\TODO honour |Q sooner
+\Magic <fsp> (<dno>/<dsp>) (<drv>)
 \if exe is in the range 7F00 then exe will not be analysied as firm indication of file given 
 \load address will change for rom to &8000
 \will Guess screen load mode from load address and size
@@ -11,224 +17,205 @@
 \use Alter to change file details
 \\
 
-\Magic used to alter exe and or load address
-\Usage <|Q> <fsp> (<dno>/<dsp>) (<drv>)
-INCLUDE "VERSION.asm"
-INCLUDE "SYSVARS.asm"			; OS constants
-INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
-
-__DEBUG = FALSE
-
 \…Variables
-\NoSpecials%=1:\"offset from 1
-\EndSpecial%=&FF-NoSpecials%
-\ZERO page
-\&12 - &13 TOP
-quiet%=&12
-matchlen=&13
+NoSpecials%=1 \"offset from 1
+EndSpecial%=&FF-NoSpecials%
+\ZERO pProcessNextRece
 \IntA &2A -&2D
-\---------------
-TextAdd=&2A
-Aptr=&2C
-\---------------
+len =&2A
 \&2E TO &35 basic float
-\---------------
-highestbyte=&2E
-noofbytes=&2F
-ypush=&30
-len =&31
-OptionBit% =&32 \used by command args.asm
-\--------------
+strptr=&2E
+Aptr=&30
+exeadd=&32
+erradd=&34
 \&3B to &42 basic float
 \single bytes
-\-----------------------
-filesize=&3B
-NoofArgs% =&3C
+tempy=&3B
+matchlen=&3C
 tempx=&3D
-switch=&3E
-basic=&3F
-tempy%=&40
-strAoffset = &41
-RequestedDrive% =&42
-\----------------------
-\&70 to &8F reserved for 
+ypush=&3E
+highestbyte=&3F
+noofbytes=&40
+quiet =&41
+basic=&42
+
+\&70 to &8F reserved for user
 blockstart=&70
-load%=blockstart+2
-exe%=blockstart+6
-size%=blockstart+&A
+load=blockstart+2
+exe=blockstart+6
+size=blockstart+&A
 cat=&72
-\codestart=&70
+codestart=&70
 zz=&8E
+\&F8-F9 UNUSED BY OS
 
-
-\end zero 
+\end zero pProcessNextRece
 
 \&600 String manipulation
-\strB%=&620
-strA%=&620
-pram%=&680
-OptionStr%=&6F0
+strB%=&640
+strA%=&6A0
 \&900 rs232/cassette o/p buffer envelope buffer
 rawdat=&900:\output for file read
 \&A00 RS232 & cassette
-conb=&7B00 :\control block for reading disk
-countpg=&7A00:\pProcessNextRece for count's
+countpg=&A00:\pProcessNextRece for count's
 
 \&1100-7C00 main mem
+conb=&7B90 :\control block for reading disk
 
 
+ORG &7100
+GUARD &7C00
 
-ORG &6900
-GUARD &7A00
-\GUARD = conb
 
 .start
-\------------------------------------------------------
-\setup for OSARGS
-__OSARGSinit = TRUE
-__OSARGSargXtoOSARGSStrLenA = TRUE
-__OSARGSargGetDrive = TRUE
-__OSARGSFileNameToOSARGSPram = TRUE
-__OSARGSOptions = TRUE
-\Variables - 
-OSARGSstrA =strA%
-OSARGSStrLenA = strAoffset
-OSARGStempy% = tempy%
-OSARGSrequesteddrive = RequestedDrive%
-OSARGSpram% = pram%
-\OSARGSpramlen% = pramlen
-OSARGSNoofArgs% = NoofArgs%
-IF __OSARGSOptions = TRUE
-	OSARGSOptions% = OptionStr%
-	OSARGSbitOptions% = OptionBit%
-ENDIF
-\constants
-OSARGSbitOptionQuiet% = 1
-OSARGSbitOptionVerbose% =2
-
-\needs following routines 
-\		initprepcmd
-\		prepcmd - part of initprepcmd
-\		MoveToRec
-\		PrintRecord
-\		diserror
-\		execmd
-\		setrequesteddrive
-\		getcurrentdrive
-\		gti	- needed for __debug
-\needs following in data section
-\.CommandAndText
-\&80 terminated with last character added to &80
-\	dricmd%=1 --can alter if required
-\\		EQUS"DR. ",&8D
-\	dincmd%=2  --can alter if required
-\\		EQUS"DIN",' '+&80
-\	usage%=3 --can alter if required
-\\ 		EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)",&80+&D --edit as needed
-\ notfound% = 4--can alter if required
-\		EQUS"file not found",&8D
-\-------------------------------------------------------
-INCLUDE "OSARGS.ASM"
+INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
 \-------------------------------------------------------
 __MAGICHELPPRINT = TRUE
-__MAGICHELPPRINTSELECTED = FALSE
 MAGICHELPAptr = Aptr
-MAGICHELPload%=load%
-MAGICHELPexe%=exe%
-IF __MAGICHELPPRINTSELECTED = TRUE
-	MAGICHELPPrintType% = Printtype%
-ENDIF
-IF __OSARGSOptions = TRUE
-	MAGICHELPOptionBit% = OptionBit%
-ENDIF
 \-------------------------------------------------------
-INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
 INCLUDE "MAGICHELP.ASM"
-INCLUDE "command args.asm"
-\start ends here!
-\we have drive set / filename in pram
-\any switches in option% null terminated
-		.ZeroVariables
-		{
-		LDA #0
-		STA quiet%
-		STA basic
-		}
-		.dealwithoptions
-		{
-		\done in osargs only Quiet and Verbose coded only quiet used here
-		\LDA options%
-		\BEQ exit
-		\CMP #'Q'
-		\BNE aa
-		\.ab
-		\INC quiet%
-		\BNE exit
-		\.aa
-		\CMP #'q'
-		\BEQ ab
-		\.exit
-		}
-
-\JMP MAGICHELPPRINT
-
-		\clear E%,L%:S%
-		.clearints
-		{
-		LDX #(('E'-'A')*4)
-		JSR clearint
-		LDX #(('L'-'A')*4)
-		JSR clearint
-		LDX #(('P'-'A')*4)
-		JSR clearint
-		}
+.startexec
+{
+\get OSARGS into blockstart
+LDX #blockstart
+LDY #0
+LDA #1
+JSR OSARGS  
+\ptr to command into blockstart&70
+\X,Y,A are preserved OSARGS
+TYA
+LDA #0
+STA quiet
+STA basic
+\filesize =0 indicates no shift
+\=0 indicates not basic
+\STA loadadd
+TAX
+LDA(blockstart),Y
+CMP #&D
+BNE aa
+LDX #Usage%
+JSR diserror
+LDX #Extendedhelp%
+JSR diserror 
+JMP MAGICHELPPRINT
+.aa:
+CMP #('-')
+BNE xa
+INY
+LDA(blockstart),Y
+CMP #('Q')
+BNE shift
+INC quiet
+.shift
+LDX #0
+INY:
+.xb:
+LDA(blockstart),Y
+STA strB%,x
+INY
+INX
+CMP #&D
+BNE xb
+LDY #0
+.xc
+LDA strB%,Y
+STA (blockstart),Y
+INY
+CMP #&D
+BNE xc
+LDY #0
+TYA
+TAX
+.xa
+CMP #&D
+BEQ cmdend
+INY
+LDA(blockstart),Y
+CMP #' '
+BNE xa
+INX
+BNE xa
+.cmdend
+CPX #2
+BNE ab
+STX tempx
+DEY
+STY tempy
+\"…"Have drive param
+LDX #NoSpecials%
+JSR prepcmd
+LDY tempy
+LDA(blockstart),Y
+STA strA%,X
+INX
+LDA #&D
+STA strA%,X
+DEY
+STA (blockstart),Y
+STY tempy
+JSR execmd
+LDX tempx
+LDY tempy
+.ab
+CPX #1
+BCC ac
+\"…"Have DIN param
+.ad
+DEY
+LDA(blockstart),Y
+CMP #32
+BNE ad
+LDA #&D
+STA (blockstart),Y
+STY tempy
+LDX #NoSpecials%+1
+JSR prepcmd
+LDY tempy
+DEX
+.ae
+INY
+INX
+LDA(blockstart),Y
+STA strA%,X
+CMP #&D
+BNE ae
+CMP #&32
+BEQ ae
+LDA #&D
+STA strA%,X
+JSR execmd
+.ac
+\clear E%,L%:S%
+LDX #(('E'-'A')*4)
+JSR clearint
+LDX #(('L'-'A')*4)
+JSR clearint
+LDX #(('P'-'A')*4)
+JSR clearint
 \"Process filename
 \now have blockstart with filename does file exist
-		.checkforfile
-		{
-		
-		LDA #HI(pram%)
-		STA blockstart+1
-		LDA #LO(pram%)
-		STA blockstart
-		LDX #blockstart
-		LDY #0
-		LDA #OSFILEReadFileInfo%
-		JSR OSFILE
-		CMP #OSFILEReturnFileFound%
-		BEQ havefile
-		LDX #notfound%
-		STX p
-		JSR diserror
-		LDX #usage%
-		JSR diserror
-		JMP MAGICHELPPRINT
-		.havefile
-		}
-		.clearloadpage
-		\during testing if a very small file (<255) previous load
-		\needs to be cleared out
-		{
-		LDA #0
-		TAX
-		.aa
-		STA rawdat,X
-		DEX
-		BNE aa
-		}
-		.startchecks
-		{
-		LDA exe%+1
-		CMP #&7F
-		BEQ alreadyset
-		LDA load%+1
-		CMP #&7F
-		BNE Magic
-		.alreadyset
-		LDX #MagicAreadyset%
-		JSR diserror
-		RTS
-		}
+
+LDX #blockstart
+LDY #0
+LDA #5
+JSR OSFILE
+CMP #1
+BEQ al
+LDX #2
+STX p
+JMP diserror
+.al
+LDA exe+1
+CMP #&7F
+BNE Magic:
+LDA quiet
+BNE ax
+LDX #4
+JSR diserror
+.ax
+RTS
+}
 \this is where the Magic happens uses the tables:-
 \.MagicData needs data loading
 \entrytype,Offset, nobytes,exec,load ident
@@ -249,7 +236,7 @@ INCLUDE "command args.asm"
 		{
 		LDX blockstart
 		LDY blockstart+1
-		LDA #OSFINDOpenChannelforInput%
+		LDA #&40
 		JSR OSFIND
 		BNE db
 		RTS
@@ -265,12 +252,12 @@ INCLUDE "command args.asm"
 		STA conb+2
 		LDA #&FF
 		STA conb+5
-		LDA #OSGBPBReadbytesignoringnewpointer%
+		LDA #4:
 		LDX #LO(conb)
 		LDY #HI(conb)
 		JSR OSGBPB
 		\Close File
-		LDA #OSFINDCloseChannel%
+		LDA #0
 		LDY conb
 		JSR OSFIND
 		}
@@ -363,8 +350,7 @@ INCLUDE "command args.asm"
 BRK
 \if Quiet check E and L existing
 
-\screencheck TODO add this to magic file - how can we differentiate modes 
-\with same load and size? currently pick the first one!
+\screencheck
 		.screencheck
 		{
 		\mode 7 &7C00 len &400
@@ -429,21 +415,21 @@ BRK
 
 		.alldone
 		{
-		LDA quiet%
+		LDA quiet
 		BEQ exit
-		LDA exe%
+		LDA exe
 		CMP e
 		BNE bd
-		LDA exe%+1
+		LDA exe+1
 		CMP e+1
 		BNE bd
 		LDX #(('E'-'A')*4)
 		JSR clearint
 		.bd
-		LDA load%
+		LDA load
 		CMP l
 		BNE exit
-		LDA load%+1
+		LDA load+1
 		CMP l+1
 		BNE exit
 		LDX #(('L'-'A')*4)
@@ -456,10 +442,10 @@ BRK
 \ALL Magic subs end with either Fullmatch if matched
 \Fullmatch needs to point to exe
 \or movenext - requires Y to be in the description part of the record
-\&FF,exec,load ident
+\0 exec,load ident
 		.MagicFF
 		{
-		LDY #5
+		LDY # 5
 		JMP NextRec
 		}
 \1,Offset -number of bytes in to read then use content of this to checkfrom, nobytes,exec,load ident
@@ -476,13 +462,13 @@ BRK
 		STA matchlen
 		CLC
 		ADC #7
-		STA tempy%
+		STA tempy
 		.fh
 		INY
 		LDA (Aptr),Y
 		CMP rawdat,X
 		BEQ aa
-		LDY tempy%
+		LDY tempy
 		JMP NextRec
 		.aa
 		INX
@@ -532,11 +518,11 @@ BRK
 		{
 		INY
 		LDA(Aptr),Y
-		CMP load%
+		CMP load
 		BNE ProcessNextRec
 		INY
 		LDA(Aptr),Y
-		CMP load%+1
+		CMP load+1
 		BNE ProcessNextRec
 		INY
 		JMP fullmatch
@@ -551,11 +537,11 @@ BRK
 		{
 		INY
 		LDA (Aptr),Y:
-		CMP exe%
+		CMP exe
 		BNE ProcessNextRec
 		INY
 		LDA (Aptr),Y
-		CMP exe%+1
+		CMP exe+1
 		BNE ProcessNextRec
 		INY
 		JMP fullmatch
@@ -575,7 +561,7 @@ BRK
 		STA tempx
 		CLC
 		ROL A
-		STA tempy%
+		STA tempy
 		LDA e
 		CLC
 		ADC e+1
@@ -605,7 +591,7 @@ BRK
 		.ao
 		\move to next rec 
 		CLC
-		LDA tempy%
+		LDA tempy
 		ADC #6
 		TAY
 		JMP NextRec
@@ -623,13 +609,13 @@ BRK
 		STA matchlen
 		CLC
 		ADC #7
-		STY tempy%
+		STY tempy
 		.al
 		INY
 		LDA (Aptr),Y
 		CMP rawdat,X
 		BEQ am
-		LDY tempy%
+		LDY tempy
 		JMP NextRec
 		.am
 		INX
@@ -649,7 +635,7 @@ BRK
 		STA tempx:\count
 		INY
 		LDA(Aptr),Y
-		STA tempy% \no entries
+		STA tempy \no entries
 		.cb
 		INY
 		LDA(Aptr),Y
@@ -658,7 +644,7 @@ BRK
 		CLC
 		ADC noofbytes
 		STA noofbytes
-		DEC tempy%
+		DEC tempy
 		BPL cb
 		CMP tempx
 		BCS cc
@@ -677,11 +663,11 @@ BRK
 		{
 		INY
 		LDA(Aptr),Y
-		CMP size%
+		CMP size
 		BNE ProcessNextRec
 		INY
 		LDA (Aptr),Y
-		CMP size%+1
+		CMP size+1
 		BNE ProcessNextRec
 		INY
 		JMP fullmatch
@@ -711,7 +697,7 @@ BRK
 		.trynextchar
 		INX
 		STX tempx
-		STY tempy%
+		STY tempy
 		LDA matchlen
 		STA len
 		.al
@@ -721,12 +707,12 @@ BRK
 		BNE nomatch
 		INX
 		DEC len
-		BNE al
+		BPL al
 		\have a match
 		INY
 		JMP fullmatch
 		.nomatch
-		LDY tempy%
+		LDY tempy
 		LDX tempx
 		BNE loop
 		}
@@ -767,7 +753,7 @@ BRK
 		LDA zz+1
 		ADC #0
 		STA zz+1
-		STY tempy%
+		STY tempy
 		TXA
 		TAY
 		LDA countpg,Y
@@ -775,7 +761,7 @@ BRK
 		INX
 		TXA
 		STA countpg,Y
-		LDY tempy%
+		LDY tempy
 		INY
 		BNE fb
 		LDA zz
@@ -802,7 +788,92 @@ BRK
 		STA Aptr+1
 		JMP TableScan
 		}
-
+\prepcmd
+		.prepcmd
+		{
+		LDY #0
+		.ez
+		DEX
+		BNE nexcmd
+		.ey
+		LDA cmdadd,Y
+		CMP #&80
+		BCC am
+		AND #&7F
+		STA strA%,X
+		INX
+		RTS
+		.am
+		STA strA%,X
+		INX
+		INY
+		BNE ey
+		.nexcmd
+		LDA cmdadd,Y
+		INY:CMP #&80
+		BCC nexcmd
+		BCS ez 
+		}
+\execmd
+		.execmd
+		{
+		IF __DEBUG
+			{
+			LDY #&FF
+			.aa
+			INY
+			LDA strA%,Y
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			JSR gti 
+			}
+		ENDIF
+		LDY #strA% DIV 256
+		LDX #strA% MOD 256
+		JMP OSCLI \rts
+		}
+\diserror		
+		.diserror
+		{
+		LDA #HI(errtxt)
+		STA erradd+1
+		LDA #LO(errtxt)
+		STA erradd
+		LDY #0
+		.ba
+		DEX
+		BNE bb
+		.bc
+		LDA (erradd),Y
+		CMP #&80
+		BCC bd
+		AND #&7F
+		JSR OSASCI
+		RTS
+		.bd
+		JSR OSASCI
+		INY
+		BNE bc
+		\have more than 255 chars
+		inc erradd+1
+		BNE bc
+		.bb
+		LDA (erradd),Y
+		INY
+		CMP #&80
+		BCC bb
+		CLC
+		TYA
+		ADC erradd
+		STA erradd
+		LDA #0
+		ADC erradd+1
+		STA erradd+1
+		LDY #0
+		BEQ ba
+		}
+		
 \tables are all consistant at the end namely
 \exec,load,ident
 \if E%=0 overwrite same with L%
@@ -861,7 +932,7 @@ BRK
 		CMP l+1
 		BNE abort
 		BEQ bg
-		.bf \l is 0 need to write out
+		.bf:\l is 0 need to write out
 		LDA(Aptr),Y
 		STA l
 		INY
@@ -869,15 +940,15 @@ BRK
 		STA l+1
 		.bg
 		INY
-		LDA quiet%
+		LDA quiet
 		BNE noprint
-		STY tempy%
+		STY tempy
 		JSR printdescription
-		LDY tempy%
+		LDY tempy
 		.noprint
 		JMP NextRec
 		.ac
-		LDA (Aptr),Y
+		LDA (Aptr),Y:
 		INY
 		CMP #13
 		BNE ac
@@ -902,11 +973,18 @@ BRK
 		.abort
 \		(
 		JSR printdescription
-		LDX #ConflictDetected%
-		JMP diserror \RTS
-		\BRK
-		\EQUS 0,"Conflict detected",&D ,0
+		BRK
+		EQUS 0,"Conflict detected",&D ,0
 \		)
+\clear E%,L%
+\LDX #(('E'-'A')*4):JSR clearint
+\LDX #(('L'-'A')*4):JSR clearint
+
+\}
+\checks for full screen load
+
+		
+
 \Clearint cli offset from a in X
 		.clearint
 		{
@@ -929,30 +1007,58 @@ BRK
 		RTS
 		}
 
-
+		IF __DEBUG
+			.gti
+			{
+			LDA #&91
+			LDX #0
+			JSR OSBYTE
+			BCS gti
+			RTS
+			}
+		ENDIF
 \------------------
 \ strings and things
 \------------------
-.CommandAndText
-dricmd%=1
-EQUS"DR. ",&8D
-dincmd% =2
-EQUS"DIN",' '+&80
-usage%=3 
-EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)",&D
-EQUS"L% for load 0=do not change",&D
-EQUS"E% for exe 0=do not change",&80+&D
-notfound% =4
-EQUS"file not found",&8D
-\Loadcmd% = 5
-\EQUS"LO.",&A0
-ConflictDetected% = 5
-EQUS"Conflict detected",&8D
-NoSpecialexe =6
-EQUS"Special exe add not coded",&8D
-MagicAreadyset%=7
+.cmdadd
+
+\SPECIALS ABOVE ALTER NoSpecials%
+\*DRIVE
+EQUS"*DR.",&A0
+\*DIN
+EQUS"*DIN",&A0
+\*LOAD
+EQUS"LO.",&A0
+\*CODE for music the yorkshire boys
+EQUS"K.0 */code|M",&8D
+
+\.erraddr:EQUW errtxt
+.errtxt
+\ 1 usProcessNextRece"
+Usage%=1
+EQUS"Usage (-Q) <fsp> (<dno>/<dsp>) (<drv>)":EQUB &8D
+\ 2 file not found 
+EQUS"file not foun",&E4
+\ 3 exe address invalid
+EQUS"Special exe add not code",&E4
+\ 4 Magic set
 EQUS"Magic already set",&8D
-.pageload
+\ 5 extended help
+Extendedhelp%=5 
+EQUS"outputs":EQUB &D
+EQUS"L% for load 0=do not change":EQUB &D
+EQUS"E% for exe 0=do not change":EQUB &D
+EQUS"P%<>0 error":EQUB &D
+EQUS"E%   L% ":EQUB &D
+EQUS " EXE LOAD addresses",&80+&D
+ .masterlist
+\not refed these do not have magic file entries
+\EQUS"7FFD 0000 SHOWPIC":EQUB &D
+\EQUS"7FFC 0000 type word text":EQUB &D
+\EQUS"7FFB 0000 DUMP":EQUB &D
+\EQUS"7FFA 0000 EXEC":EQUB &D
+\EQUS"7FF7 0000 viewsheet":EQUB &D
+\EQUB &8D
 .end
 
 

@@ -40,11 +40,15 @@ OSFIND=&FFCE
 		OSFINDOpenChannelforOutput% =&80 	 \Open for output
 		OSFINDOpenChannelInAndOut% =&C0 	 \Open for update
 OSGBPB=&FFD1
-\A=
-\=1	 \Write bytes using new pointer
-\=2	 \Write bytes ignoring new pointer
-\=3	 \Read bytes using new pointer
-\=4	 \Read bytes ignoring new pointer
+		\A=
+		\=1	 \Write bytes using new pointer
+		OSGBPBWritebytesusingnewpointer% =1
+		\=2	 \Write bytes ignoring new pointer
+		OSGBPBWritebytesignoringnewpointer% =2
+		\=3	 \Read bytes using new pointer
+		OSGBPBReadbytesusingnewpointer% =3
+		\=4	 \Read bytes ignoring new pointer
+		OSGBPBReadbytesignoringnewpointer% =4
 		OSGBPBTitleAndboot% =5	 \Get media title of CSD disk and boot option
 			\&00  	length of title (n)
 			\&01  	title in ASCII characters

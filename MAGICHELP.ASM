@@ -8,9 +8,18 @@
 		\A=3 Match either exe and or load
 		MAGICHELPMatchEitherLoadOrExe =3
 
-IF __MAGICHELPPRINT = TRUE		
+IF __MAGICHELPPRINT = TRUE	
+		IF __OSARGSOptions = TRUE
+			{
+			LDA MAGICHELPOptionBit%
+			AND #OSARGSbitOptionQuiet%
+			BEQ cont
+			RTS
+			.cont
+			}
+		ENDIF
 		.MAGICHELPPRINT
-		IF __MAGICHELPPRINTSELECTED
+		IF __MAGICHELPPRINTSELECTED = TRUE
 			STA MAGICHELPPrintType%
 		ENDIF
 		.MAGICHELPPRINTInitAptrtoMagicData

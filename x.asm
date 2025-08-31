@@ -128,7 +128,7 @@ tempx=&3D
 switch=&3E
 basic=&3F
 tempy=&40
-requesteddrive=&41
+RequestedDrive% =&41
 drive=&42
 \--------------------------------------------------------------
 \&43 - &4F FLOATING POINT TEMPORARY AREAS
@@ -208,19 +208,35 @@ __OSARGSinit = TRUE
 __OSARGSargXtoOSARGSStrLenA = TRUE
 __OSARGSargGetDrive = TRUE
 __OSARGSFileNameToOSARGSPram = TRUE
+__OSARGSOptions = FALSE
 \Variables - 
 OSARGSstrA =strA%
 OSARGSStrLenA = strAoffset
 OSARGStempY = tempy
-OSARGSrequesteddrive = requesteddrive
+OSARGSrequesteddrive = RequestedDrive%
 OSARGSpram% = pram%
 OSARGSpramlen% = pramlen
 OSARGSNoofArgs% = NoofArgs%
+IF __OSARGSOptions
+	OSARGSOptions% = OptionStr%
+	OSARGSbitOptions% = OptionBit%
+ENDIF
 \-------------------------------------------------------
 \-------------------------------------------------------
+
+
 __MAGICHELPPRINT = TRUE
+__MAGICHELPPRINTSELECTED = FALSE
 MAGICHELPAptr = Aptr
-MAGICHELPPrintType =PrintType
+
+IF __MAGICHELPPRINTSELECTED
+	MAGICHELPPrintType% = Printtype%
+	MAGICHELPload%=load%
+	MAGICHELPexe%=exe%
+ENDIF
+IF __OSARGSOptions = TRUE
+	MAGICHELPOptionBit% = OptionBit%
+ENDIF
 \-------------------------------------------------------
 ORG &6000
 GUARD &7C00
@@ -232,18 +248,18 @@ BUILD_VERSION
 .run
 EQUS"O.",13
 EQUS"RUN",13,0
-.modexec
-{
-LDA #&16
-JSR OSASCI
-TXA
-JSR OSASCI
-\LDX #0
+\.modexec
+\{
+\LDA #&16
+\JSR OSASCI
+\TXA
+\JSR OSASCI
+\\LDX #0
 \STX &FE01
-LDY #HI(strA%)
-LDX #LO(strA%)
-JMP OSCLI
-}
+\LDY #HI(strA%)
+\LDX #LO(strA%)
+\JMP OSCLI
+\}
 .endmodexec
 \INCBIN ".\x\$.modexec"
 .altdec
@@ -263,127 +279,10 @@ INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
 INCLUDE "MAGICHELP.ASM"
 		
 		
-\getcurrent drive
-		.getcurrentdrive
-		{
-		\see https://stardot.org.uk/forums/viewtopic.php?p=30012&hilit=assembler+selected+drive#p30012
-		\lDA #OSGBPBGetLibraryName%
-		\LDX #LO(conb)
-		\LDY #HI(conb)
-		\JSR OSGBPB
-		\Hack
-		LDA OScurrentDrive%
-		CLC
-		ADC #'0'
-		IF __DEBUG
-			{
-			LDA OScurrentDrive%
-			CLC
-			ADC #'0'
-			JSR OSASCI
-			LDX #&FF
-			.aa
-			INX
-			LDA debugtext,X
-			JSR OSASCI
-			CMP #&D
-			BNE aa
-			BEQ ab
-			.debugtext
-			EQUS " = Currentdrive "
-			EQUB &D
-			.ab
-			JSR gti
-			}
-		ENDIF
-		\LDA osgbpbdata%+1
-		LDA OScurrentDrive%
-		CLC
-		ADC #'0'		
-		RTS \RTS
-		}
-		.addAtoStrA
-		{
-		LDX strAoffset
-		INX
-		STA strA%,X
-		INX
-		LDA #&D
-		STA strA%,X
-		DEX
-		STX strAoffset
-		RTS
-		}
-		.DealwithArgCount \TODO delete
-		{
-		CPX #2
-		BCC aa
-		LDX #2
-		LDA #0
-		STA strAoffset
-		JSR OSARGSargXtoOSARGSStrLenA
-		LDA strA%
-		\LDA pram%
-		CMP #'0'
-		BCC ret
-		CMP #'4'
-		BCS ret
-		STA requesteddrive
-		.ret
+
+
 		
-		\have full command line
-		\<fsp> (<drv>) (<dno>/<dsp>)
-		\or <fsp>  (<drv>)
-		LDX #dincmd%
-		\JSR initprepcmd
-		\JSR GetDrive
-		\BNE Justdrv
-		JSR addpram
-		\LDA #' '
-		\JSR addAtoStrA
-		LDX #3
-		\JSR OSARGSargXtoOSARGSstrB
-		JSR addpram
-		JMP execmd
-		.Justdsp
-		LDA requesteddrive
-		\JSR addAtoStrA
-		LDA #' '
-		JSR addAtoStrA
-		JSR addpram
-		JMP execmd \RTS end of DIN
-		\filename
-		.aa
-		\<fsp>
-		IF __DEBUG
-			{
-			LDX #&FF
-			.aa
-			INX
-			LDA debugtext,X
-			JSR OSASCI
-			CMP #&D
-			BNE aa
-			BEQ ab
-			.debugtext
-			EQUS "Command line just filename"
-			EQUB &D
-			.ab
-			JSR gti
-			}
-		ENDIF
-		RTS
-		}
-\issue *dr.X command
-		
-		.setrequesteddrive
-		{
-		LDX #dricmd%
-		JSR initprepcmd
-		LDA requesteddrive
-		STA strA%+3
-		JMP execmd \RTS
-		}
+
 		.gettitleopt
 		{
 		lDA #OSGBPBTitleAndboot%
@@ -397,29 +296,7 @@ INCLUDE "MAGICHELP.ASM"
 		LDA osgbpbdata%,Y
 		RTS
 		}
-		\execmd
-		.execmd
-		{
-		IF __DEBUG
-			{
-			LDY #&FF
-			.aa
-			INY
-			LDA strA%,Y
-			JSR OSASCI
-			CMP #&D
-			BNE aa
-			JSR gti 
-			}
-		ENDIF
-		LDY #HI(strA%)
-		LDX #LO(strA%)
-		JSR OSCLI \change to JMP below lines are for ?
-		LDY #0
-		LDA filesize
-		TAX
-		RTS
-		}
+
 		\Get input 
 		.gti
 		{
@@ -441,33 +318,8 @@ INCLUDE "MAGICHELP.ASM"
 		BNE af
 		RTS
 		}
-		.initprepcmd
-		{
-		LDA #0
-		STA strAoffset 
-		}
-		.prepcmd
-		{
-		JSR MoveToRec
-		LDX strAoffset
-		LDY #0
-		.ey
-		LDA (TextAdd),Y
-		CMP #&80
-		BCC am
-		AND #&7F
-		STA strA%,X
-		INX
-		STX strAoffset
-		LDA #&D
-		STA strA%,X
-		RTS
-		.am
-		STA strA%,X
-		INX
-		INY
-		BNE ey
-		}
+
+
 		\Set cursor off
 		.sco
 		{
@@ -633,54 +485,8 @@ INCLUDE "MAGICHELP.ASM"
 		LDY #HI(block)
 		JMP OSFILE \rts
 		}
-	\Display error
-		\takes x as strno
-		.diserror
-		{
-		JSR MoveToRec
-		JMP PrintRecord
-		}
-		.PrintRecord
-		{
-		LDY #0
-		.bc
-		LDA (TextAdd),Y
-		CMP #&80
-		BCC bd
-		AND #&7F
-		JMP OSASCI \RTS
-		RTS
-		.bd
-		JSR OSASCI
-		INY
-		BNE bc
-		}
-		.MoveToRec
-		{
-		LDA #LO(CommandAndErrorText)
-		STA TextAdd
-		LDA #HI(CommandAndErrorText)
-		STA TextAdd+1
-		LDY #0
-		.ba
-		DEX
-		BNE bb
-		RTS
-		.bb
-		LDA (TextAdd),Y
-		INY
-		CMP #&80
-		BCC bb
-		CLC
-		TYA
-		ADC TextAdd
-		STA TextAdd
-		LDA #0
-		ADC TextAdd+1
-		STA TextAdd+1
-		LDY #0
-		BEQ ba
-		}
+
+
 		.ToManyVariables
 		.ZeroError
 		.NoDisk
@@ -693,21 +499,18 @@ INCLUDE "MAGICHELP.ASM"
 		JMP MAGICHELPPRINT
 		}
 \-------------------------
-		
-.startexec
-
+\------------------------
+\startexe set within command args.asm file!
+\------------------------		
+\.startexec
 \-------------------------
+INCLUDE "command args.asm"
+
 		IF __DEBUG
 			LDX #7
 			JSR setmode
 		ENDIF
 		.init
-		{
-		JSR getcurrentdrive
-		\JSR OSARGSGetDrive
-		STA requesteddrive
-		\LDA #'3'
-		\STA requesteddrive
 		LDA #0
 		STA loadadd
 		\filesize =0 indicates no shift
@@ -722,94 +525,8 @@ INCLUDE "MAGICHELP.ASM"
 		\filesize =0 indicates no shift
 		\basic =0 indicates not basic
 		
-		}
-		\osargs initiate
-		{
-		JSR OSARGSinit
-		CPX #0
-		BEQ ZeroError
-		\JSR OSARGSinit
-		\JSR OSARGSargcountX
-		JSR OSARGSFileNameToOSARGSPram
-		\JSR OSARGSinit
-		LDX NoofArgs%
-		CPX #4
-		BCC ax
-		JMP ToManyVariables
-		.ax
-		CPX #2
-		BCC justfilename
-		JSR OSARGSGetDrive
-		\LDX #2
-		\LDA #0
-		\STA strAoffset
-		\JSR OSARGSargXtoOSARGSStrLenA
-		\LDA strA% \drive we already have current drive saved!
-		\LDX NoofArgs%
-		\CMP #'0'
-		\BCC ret
-		\CMP #'4'
-		\BCS ret
-		\STA requesteddrive
-		\.ret
-		\JSR OSARGSinit
-		LDX NoofArgs%
-		CPX #3
-		BCC boot
-		\have full command line
-		\<fsp> (<drv>) (<dno>/<dsp>)
-		\or <fsp>  (<drv>)
-		LDX #dincmd%
-		JSR initprepcmd
-		LDX #2
-		JSR OSARGSargXtoOSARGSStrLenA
-		LDX #3
-		JSR OSARGSargXtoOSARGSStrLenA
-		LDX strAoffset
-		DEX
-		LDA #&D
-		STA strA%,X 
-		JSR execmd
-		\JSR GetDrive
-		\BNE Justdrv
-		\JSR addpram
-		\LDA #' '
-		\JSR addAtoStrA
-		\LDX #3
-		\JSR OSARGSargXtoOSARGSstrB
-		\JSR addpram
-		\JMP execmd
-		\.Justdsp
-		\LDA requesteddrive
-		\JSR addAtoStrA
-		\LDA #' '
-		\JSR addAtoStrA
-		\JSR addpram
-		\JMP execmd \RTS end of DIN
-		\filename
-		.justfilename
-		\<fsp>
-		IF __DEBUG
-			{
-			LDX #&FF
-			.aa
-			INX
-			LDA debugtext,X
-			JSR OSASCI
-			CMP #&D
-			BNE aa
-			BEQ ab
-			.debugtext
-			EQUS "Command line just filename"
-			EQUB &D
-			.ab
-			JSR gti
-			}
-		ENDIF
-		}
 		.boot
 		{
-		JSR setrequesteddrive
 		LDY pramlen
 		LDA pram%+1 \
 		CMP #'.'
@@ -929,7 +646,6 @@ INCLUDE "MAGICHELP.ASM"
 		LDY #0
 		LDA #OSFILEReadFileInfo%
 		JSR OSFILE
-		\get file info if A<> 1 not a file
 		CMP #OSFILEReturnFileFound%
 		BEQ havefiledetails
 		\file not found
@@ -1246,19 +962,19 @@ INCLUDE "MAGICHELP.ASM"
 			JSR gti
 			}
 		ENDIF
-		LDA requesteddrive
+		LDA RequestedDrive%
 		STA tempx
 		LDA #'0'
-		STA requesteddrive
+		STA RequestedDrive%
 		JSR setrequesteddrive
 		LDA tempx
-		STA requesteddrive
+		STA RequestedDrive%
 		\set drive 0 to x-files
 		LDX #xfilescmd%
 		JSR initprepcmd
 		JSR execmd
 		LDA tempx
-		STA requesteddrive
+		STA RequestedDrive%
 		\set requeested drive back
 		\display text
 		{
@@ -1271,7 +987,7 @@ INCLUDE "MAGICHELP.ASM"
 		LDX #key1cmd%
 		JSR initprepcmd
 		JSR addpram
-		LDA requesteddrive
+		LDA RequestedDrive%
 		STA strA%+4
 		JSR execmd
 		LDX #repton3keyset2%
@@ -1380,14 +1096,14 @@ INCLUDE "MAGICHELP.ASM"
 			JSR gti
 			}
 		ENDIF
-		LDA requesteddrive
+		LDA RequestedDrive%
 		STA tempx
 		LDA #'0'
-		STA requesteddrive
+		STA RequestedDrive%
 		JSR setrequesteddrive
 		\set drive 0 to x-files
 		LDA tempx
-		STA requesteddrive
+		STA RequestedDrive%
 		LDX #xfilescmd%
 		JSR initprepcmd
 		JSR execmd
@@ -1403,7 +1119,7 @@ INCLUDE "MAGICHELP.ASM"
 		\copy 3 0 XXXX
 		LDX #copycmd%
 		JSR initprepcmd
-		LDA requesteddrive
+		LDA RequestedDrive%
 		STA strA%+5
 		JSR addpram
 		\DEX:JSR addprelude:
@@ -1693,13 +1409,12 @@ INCLUDE "MAGICHELP.ASM"
 \-----------------------		
 		.boottxt
 		EQUS"$.!BOOT"
-		.CommandAndErrorText
-		.cmdadd
-	.errtxt
-		\*LDPIC FE
-	ldpiccmd%=1
-		EQUS"LDPIC",&A0
-		\*SCRLOAD FD not working !
+		.CommandAndText
+		\.cmdadd
+	
+	repinfin%=1
+		EQUS 'A'+&80	
+	
 	scrloadcmd%=2
 		EQUS"SCRLOAD",&A0
 		\*TYPE FC
@@ -1711,17 +1426,15 @@ INCLUDE "MAGICHELP.ASM"
 		\*EXEC FA
 	execfilecmd%=5
 		EQUS"EX",&AE
-	deccmd%=6
-		EQUS"dec",&A0
-		\SPECIALS ABOVE ALTER NoSpecials%
-		\*DRIVE #0
+	premagic%=6
+		EQUS " EXE LOAD addresses",&80+&D
+	
 	dricmd%=7
 		EQUS"DR.",' '+&80
 	dincmd%=8
 		EQUS"DIN",' '+&80
 	loadcmd%=9
 		EQUS"LO.",' '+&80
-		\select repton3 disk #3
 	xfilescmd%=10
 		EQUS "DIN x-files",&8D
 		\* run repton3 #4
@@ -1740,34 +1453,34 @@ INCLUDE "MAGICHELP.ASM"
 		EQUS "RepI",&8D
 		\1100
 	laddcmd%=17
-		EQUS" 1100",&8D
-			
+		EQUS" 1100",&8D		
 	catcmd%=18
 		EQUB'*',&80+'.'
 		\prelude
 		.preludetxt
 	preludecmd%=19
-		EQUS " g.a",&D,&8D
-			
+		EQUS " g.a",&D,&8D		
 	repton3keyset2%=20
 		EQUS "k.2MO.5|M*REP3|M",&8D
-			\repinfin%=21
-			\EQUS 'A'+&80
-
 	usage%=21
 		EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)",&80+&D
 	notfound%=22
 		EQUS"file not found",&80+&D
 	exeaddressinvalid%=23
-		EQUS"Special exe address not code",&80+'d' 
+		EQUS"Special exe address not coded",&8D 
 	rep3instruction%=24
 		EQUS"F",'1'+&80
-	repinfin%=25
-		EQUS 'A'+&80
-	premagic%=26
-		EQUS " EXE LOAD addresses",&80+&D
+	
+	\repinfin%=21
+		\EQUS 'A'+&80
+	\ldpiccmd%=1
+		\EQUS"LDPIC",&A0
+		\*SCRLOAD FD not working !
+	\deccmd%=6
+		\EQUS"dec",&A0	
 
-		\Zero terminated strings 
+
+	\Zero terminated strings 
 		.reppre
 		EQUS &D,&D,&D,&D,&D,&D,"When game loads please press"
 		EQUS TELETEXTgreentext,"L",&D,"Then press"
@@ -1778,13 +1491,6 @@ INCLUDE "MAGICHELP.ASM"
 		EQUS TELETEXTyellowtext
 		EQUS TELETEXTflashon,"Press any key",&D
 		EQUB 0
-
-
-
-		\.preludetxt
-		\EQUS " g.a",&D
-		\.preludeptr
-		\EQUW preludetxt
 		.end
 SAVE "x", start, end,startexec
 

@@ -1363,6 +1363,7 @@ INCLUDE "command args.asm"
 		.codebegin
 		\need to keep code here to min
 		\loadfile and shift if required
+		\goes into zero page!
 		JSR OSCLI
 		LDY #0
 		LDX filesize
@@ -1393,7 +1394,7 @@ INCLUDE "command args.asm"
 		EQUD osgbpbdata%
 		EQUD 0
 		EQUD 0
-		
+	
 	.block
 		EQUB Lo(preludetxt)
 		EQUB HI(preludetxt)
@@ -1409,7 +1410,7 @@ INCLUDE "command args.asm"
 \-----------------------		
 		.boottxt
 		EQUS"$.!BOOT"
-		.CommandAndText
+	.CommandAndText
 		\.cmdadd
 	
 	repinfin%=1

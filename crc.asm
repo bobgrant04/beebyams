@@ -2,7 +2,7 @@ INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
 
-__DEBUG = TRUE
+__DEBUG = FALSE
 \CRC used to give details of the file
 \Usage <fsp> (<dno>/<dsp>) (<drv>)
 \E%=Exec L%=Load N%=length  M%=CRC
@@ -227,35 +227,23 @@ RTS
 		LDA #4
 		JMP OSFILE \RTS
 		}
-
-
-.cmdadd
 .CommandAndText
 dricmd%=1
 EQUS"DR. ",&8D
 dincmd% =2
 EQUS"DIN",' '+&80
 usage%=3 
-EQUS"Usage <fsp> (<drv>)(<dno>/<dsp>)  E%=exec L%=load N%=length M%=CRC":EQUB &8D
+EQUS"Usage <fsp> (<drv>)(<dno>/<dsp>)  E%=exec L%=load N%=length M%=CRC",&8D
 nofilehandle% = 4
 EQUS"Unable to create file handle",&8D 
 notfound% = 5
 EQUS"file not foun",&E4
-
-
-
-
-
-
-
 .end
 
 
 SAVE "crc", start, end, startexec
 \D:\GitHub\beebyams\beebasm
 \beebasm -i .\crc\crc.asm -do .\crc\crc.ssd -boot crc -v -title crc
-
 \cd C:\GitHub\beebyams\beebasm
-
 
 \ ./tools/beebasm/beebasm.exe -i ./CRC.asm -do ./build/CRC.ssd -boot CRC -v -title CRC

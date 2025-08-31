@@ -51,6 +51,7 @@ IF __OSARGSinit
 		LDA #0
 		IF __OSARGSOptions
 			STA OSARGSOptions%
+			STA OSARGSbitOptions%
 		ENDIF
 		TAY
 		TAX
@@ -145,8 +146,7 @@ IF __OSARGSinit
 			STA OSARGSOptions%,X
 			\will process basic options here
 			\use bit switches
-			OSARGSbitOptionQuiet% = 1
-			OSARGSbitOptionVerbose% =2
+			
 			\=4 etc
 			\will just do caps!
 			LDA #0
@@ -157,13 +157,13 @@ IF __OSARGSinit
 			CMP#'Q' \Quiet
 			BNE ac
 			LDA OSARGSbitOptions%
-			ORA OSARGSbitOptionQuiet%
+			ORA #OSARGSbitOptionQuiet%
 			STA OSARGSbitOptions%
 			.ac
 			CMP#'V' \Verbose
 			BNE ad
 			LDA OSARGSbitOptions%
-			ORA OSARGSbitOptionVerbose%
+			ORA #OSARGSbitOptionVerbose%
 			STA OSARGSbitOptions%
 			.ad
 			LDX tempy%

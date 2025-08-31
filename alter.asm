@@ -1,5 +1,5 @@
 
-\alter used to alter exe and or load address
+\Magic used to alter exe and or load address
 \Usage <fsp> (<dno>/<dsp>) (<drv>)
 INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
@@ -18,6 +18,8 @@ trueadd=&2E
 loadadd=&30
 exeadd=&32
 erradd=&34
+OptionBit% =&35
+
 \&3B to &42 basic float
 \single bytes
 filesize=&3B
@@ -40,7 +42,7 @@ zz=&8E
 \&600 String manipulation
 strA%=&6A0
 pram%=&610
-options% =&6F0
+OptionStr% =&6F0
 \&A00 RS232 & cassette
 \&1100-7C00 main mem
 \conb=&5000 :\control block for reading disk
@@ -68,9 +70,13 @@ OSARGSrequesteddrive = RequestedDrive%
 OSARGSpram% = pram%
 \OSARGSpramlen% = pramlen
 OSARGSNoofArgs% = NoofArgs%
-IF __OSARGSOptions
-	OSARGSOptions% = options%
+IF __OSARGSOptions = TRUE
+	OSARGSOptions% = OptionStr%
+	OSARGSbitOptions% = OptionBit%
 ENDIF
+\constants
+OSARGSbitOptionQuiet% = 1
+OSARGSbitOptionVerbose% =2
 \needs following routines 
 \		initprepcmd
 \		prepcmd - part of initprepcmd
@@ -103,12 +109,16 @@ MAGICHELPexe%=exe%
 IF __MAGICHELPPRINTSELECTED
 	MAGICHELPPrintType% = Printtype%
 ENDIF
+IF __OSARGSOptions = TRUE
+	MAGICHELPOptionBit% = OptionBit%
+ENDIF
 \-------------------------------------------------------
 INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
 INCLUDE "MAGICHELP.ASM"
 INCLUDE "command args.asm"
 \start ends here!
 \we have drive set / filename in pram
+\any switches in option% null terminated
 \"Process filename
 		.startprocesswithfile
 		{

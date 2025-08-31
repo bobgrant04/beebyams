@@ -24,7 +24,6 @@ __DEBUG = FALSE
 \EndSpecial%=&FF-NoSpecials%
 \ZERO page
 \&12 - &13 TOP
-quiet%=&12
 matchlen=&13
 \IntA &2A -&2D
 \---------------
@@ -151,12 +150,11 @@ INCLUDE "command args.asm"
 		.ZeroVariables
 		{
 		LDA #0
-		STA quiet%
 		STA basic
 		}
 		.dealwithoptions
 		{
-		\done in osargs only Quiet and Verbose coded only quiet used here
+		\done in osargs only Quiet and Verbose coded only quiet used
 		\LDA options%
 		\BEQ exit
 		\CMP #'Q'
@@ -429,8 +427,6 @@ BRK
 
 		.alldone
 		{
-		LDA quiet%
-		BEQ exit
 		LDA exe%
 		CMP e
 		BNE bd
@@ -869,8 +865,6 @@ BRK
 		STA l+1
 		.bg
 		INY
-		LDA quiet%
-		BNE noprint
 		STY tempy%
 		JSR printdescription
 		LDY tempy%
@@ -892,6 +886,16 @@ BRK
 		}
 		.printdescription
 		{
+		IF __OSARGSOptions = TRUE
+			{
+			LDA OptionBit%
+			AND #OSARGSbitOptionQuiet%
+			BEQ aa
+			RTS
+			.aa
+			}
+		ENDIF
+		
 		LDA (Aptr),Y
 		JSR OSASCI
 		INY

@@ -180,6 +180,7 @@
 		JSR OSARGSGetDrive \parm 2
 		LDX OSARGSNoofArgs%
 		CPX #3
+		BCC Justfilename
 		\issues din cmd
 		LDX #dincmd%
 		JSR initprepcmd

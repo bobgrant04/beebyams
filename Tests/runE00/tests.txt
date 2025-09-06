@@ -1,0 +1,31 @@
+A *runE00 
+R usage message displayed
+A create simple basic program
+A note info
+A *runE00 file
+A note file info
+R file increases in  size load address is 1100 exe address is set to 1100 +initial size file is locked
+
+A create a simple basic program that is around c8 in length - use info
+A *runE00 file
+A *load file and mzap to ensure that *T. o. RUN spans page boundary
+A *filename
+R file runs
+A check pa.=&E00
+
+A create a simple basic program
+A use Alter L%=&900
+A info file Load address set to &900
+A *runE00 file
+A *filename
+R file runs
+A check pa.=&900
+
+A create a number of files first on being around c8 in length
+A compact disc
+A *info first file
+A *runE00 first file
+R unable to extend error displayed
+A *info first file
+R file unchanged
+

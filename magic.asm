@@ -155,17 +155,7 @@ INCLUDE "command args.asm"
 		.dealwithoptions
 		{
 		\done in osargs only Quiet and Verbose coded only quiet used
-		\LDA options%
-		\BEQ exit
-		\CMP #'Q'
-		\BNE aa
-		\.ab
-		\INC quiet%
-		\BNE exit
-		\.aa
-		\CMP #'q'
-		\BEQ ab
-		\.exit
+		
 		}
 
 \JMP MAGICHELPPRINT
@@ -184,7 +174,6 @@ INCLUDE "command args.asm"
 \now have blockstart with filename does file exist
 		.checkforfile
 		{
-		
 		LDA #HI(pram%)
 		STA blockstart+1
 		LDA #LO(pram%)

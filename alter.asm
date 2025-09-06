@@ -5,7 +5,6 @@ INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
 
-__DEBUG = TRUE
 \…Variables
 \NoSpecials%=1:\"offset from 1
 \EndSpecial%=&FF-NoSpecials%
@@ -209,12 +208,11 @@ EQUS"DIN",' '+&80
 usage%=3 
 EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)",&D
 EQUS"L% for load 0=do not change",&D
-EQUS"E% for exe 0=do not change",&80+&D
+EQUS"E% for exe 0=do not change",&D
+BUILD_VERSION
+EQUS &8D
 notfound% =4
 EQUS"file not found",&8D
-
-
-
 
 \EQUS"LO.",&A0
 \*CODE for music the yorkshire boys
@@ -223,7 +221,7 @@ EQUS"file not found",&8D
 \.erraddr:EQUW errtxt
 \.errtxt
 \ 1 usage"
-\EQUS"Usage <fsp> (<dno>/<dsp>) (<drv>)":EQUB &8D
+\EQUS"Usage <fsp> (<dno>/<dsp>) (<drv>)",&data:EQUB &8D
 \ 2 file not found 
 \EQUS"file not foun",&E4
 \ 3 exe address invalid

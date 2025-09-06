@@ -66,6 +66,6 @@ GUARD &7C00
 		BVC store
 		}
 .end
-SAVE "PubStr", start, end\
+SAVE "PubStr", start, end
 \  ./tools/beebasm/beebasm.exe -i ./PubStr.asm -do ./build/PubStr.ssd -boot pubstr -v -title PubStr
 

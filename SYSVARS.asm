@@ -37,8 +37,9 @@ OSFIND=&FFCE
 		\A=
 		OSFINDCloseChannel% =&00 	 \Close channel
 		OSFINDOpenChannelforInput% =&40 	 \Open for input
-		OSFINDOpenChannelforOutput% =&80 	 \Open for output
+		OSFINDOpenChannelforOutputFilehandle% =&80 	 \Open for output
 		OSFINDOpenChannelInAndOut% =&C0 	 \Open for update
+		\after call A=FileHandle \0=no handle
 OSGBPB=&FFD1
 		\A=
 		\=1	 \Write bytes using new pointer
@@ -75,10 +76,19 @@ OSGBPB=&FFD1
 \=11	 \Read entries and extended information from specified directory
 
 OSBPUT=&FFD4
-
+\A=data to be written
+\X does not matter
+\Y file handle
+\all are unchanged on exit
 OSBGET=&FFD7
 
 OSARGS=&FFDA
+\ Y=FileHandle A=Action x=Zeropage 4 bytes
+	
+	OSARGSReadPTR%=0
+	OSARGSWritePTR%=1
+	OSARGSReadLen%=2
+	OSARGSUpdateFile%=&FF
 \	On entry,
 \		X points to a four byte zero page control block.
 \		Y contains the file handle as provided by OSFIND, or
@@ -101,7 +111,7 @@ OSARGS=&FFDA
 \	      memory buffer is saved.
 \	If Y is not zero:
 \		A=0 Read sequential pointer of file (BASIC PTR#)
-\		A=1 Write sequential pointer of file
+\		A=1 Write sequential pointer of file (BASIC PTR#)
 \		A=2 Read length of file (BASIC EXT#)
 \		A=&FF Update this file to media
 OSFILE=&FFDD
@@ -190,7 +200,7 @@ OSBYTE=&FFF4
 \      b5=1 calls VDUXV instead of VDU drivers
 \    Notes b1 is not the same as issuing VDU21,as the printer remains
 \          active throughout.
-\          b3 is not the same as issuing VDU2,as all bytes except the
+\           is not the same as issuing VDU2,as all bytes except the
 \          printer ignore character are put in the printer stream.Of course
 \          b2 and b6 must also be clear!
 \&04 (Acorn MOS 0.10)
@@ -263,13 +273,16 @@ DisableOutputBufferEmptyEvent% =0\     X=0 output buffer empty event
 \    This call decrements the respective count for the event.When it finally 
 \    reaches zero the event is stopped.
 \&0E (Various)
+	 OSBYTEEnableEvent%=&E
 \    Enable Event (exits with X=old value)
 \    This call increments the count for the chosen event.Non zero count means
 \    that the event will be enabled.
 \&0F (Acorn MOS 0.10)
+	 OSBYTEFlushAllBuffers%=&F
 \    Flush all buffers/input buffer
 \    X=0 Flushes all buffers
 \    X=1 Flushes just the input buffer
+	 OSBYTEFlushXInputBuffer% =1
 \&10 (Acorn MOS 0.10)
 \    Set maximum number of ADC chanel (exits with X=old value)
 \    X=0 no ADC sampling takes place
@@ -529,6 +542,7 @@ DisableOutputBufferEmptyEvent% =0\     X=0 output buffer empty event
 \    On exit X=255 successfully cleared condition
 \            X=0   the ESCAPE condition was not cleared (or no ESCAPE condition)
 \&7F (Acorn MOS 0.10)
+	OSWORDCheckForEOF%=&7F
 \    Check for EOF 
 \    X=file handle
 \\\    On exit X=0 it the EOF has not been reached,otherwise it has.
@@ -654,10 +668,12 @@ DisableOutputBufferEmptyEvent% =0\     X=0 output buffer empty event
 \    Set filing system attributes (do *OPT)
 \    This call is a direct equivalent to *OPTx,y
 \&8C (Acorn MOS 0.10)
+	OSBYTEtape%=&8C
 \    Select Tape FS at 1200/300 baud (do *TAPE)
 \    X=0 perform *TAPE and select default speed (1200)
 \    X=3 perform *TAPE at 300 baud
 \    X=12 perform *TAPE at 1200 baud
+	OSBYTEtapex1200baud%= 12
 \&8D (Acorn MOS 1.00)
 \    Select RFS (do *ROM)
 \&8E (Acorn MOS 1.00)
@@ -1318,6 +1334,17 @@ OSWRCH=&FFEE
 		\The interrupt status is preserved (though it may be
 		\enabled during a call)
 OSWORD=&FFF1
+\A=0 Read line from currently selected input into memory.
+\A=1 Read system clock.
+\A=2 Write system clock.
+\A=3 Read interval timer.
+\A=4 Write interval timer.
+\A=5 Read byte of I/O processor memory.
+\A=6 Write byte of I/O processor memory.
+\A=7 Perform a SOUND command.
+\A=8 Define an ENVELOPE
+		OSWORDReadInputToMemory%=0
+		
 OSCLI =&FFF7
 		\Execute a command
 \Vectors

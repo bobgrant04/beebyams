@@ -28,7 +28,6 @@ INCLUDE "TELETEXT.asm" \TELETEXT constants
 \y \x \x+1 (3) u (5)
 \-----------------------------------------
 \constants
-__DEBUG  = FALSE
 __CATDATTEST = TRUE
 \FILTERS 1=disk 2=publish 4=gametype
 \e cont 8=fav A=SearchText
@@ -51,11 +50,11 @@ FILTERTxtLen%=13
 \filter set character length
 FILTERCharlength =16
 \red
-CURSORSelectColour=TELETEXTredtext
+CURSORSelectColour=TELETEXTredtext%
 \green
-LETTERColour=TELETEXTgreentext
+LETTERColour=TELETEXTgreentext%
 \black background
-CURSORCancelSelect=TELETEXTblackbackground
+CURSORCancelSelect=TELETEXTblackbackground%
 \MAXmenuitems A-S
 MAXmenuitems=19
 MAXmenuletter= 'A'+MAXmenuitems 
@@ -178,10 +177,10 @@ JMP Hardstart
 \mode 7
 \EQUB 22
 \EQUB 7
-EQUB TELETEXTDoubleheight
-EQUB TELETEXTwhitetext
-EQUB TELETEXTnewbackground
-EQUB TELETEXTbluetext
+EQUB TELETEXTDoubleheight%
+EQUB TELETEXTwhitetext%
+EQUB TELETEXTnewbackground%
+EQUB TELETEXTbluetext%
 .banner
 EQUS "MMC MENU DISPLAY              V"
 BUILD_VERSION 
@@ -845,7 +844,7 @@ EQUB 0:
 		{
 		LDY #BOTTOMWindow
 		JSR Selectwindow
-		LDA #TELETEXTyellowtext
+		LDA #TELETEXTyellowtext%
 		JSR OSASCI
 		JSR PrintStringX
 		LDA #LETTERColour
@@ -1316,13 +1315,13 @@ JSR TerminateFilterArray
 		.wehavefile
 		{
 		\print green . in btm window and reset to white
-		LDA #TELETEXTgreentext
+		LDA #TELETEXTgreentext%
 		\JSR OSASCI
 		JSR OSWRCH
 		LDA #'.'
 		\JSR OSASCI
 		JSR OSWRCH
-		LDA #TELETEXTwhitetext
+		LDA #TELETEXTwhitetext%
 		\JSR OSASCI
 		JSR OSWRCH
 		LDA Filtersomething
@@ -1655,6 +1654,8 @@ RTS
 		LDA launchutxt,Y
 		STA WORKINGStrA,Y
 		BPL aa
+		AND #&7F
+		STA WORKINGStrA,Y
 		STY StrAlen
 		JSR AddAptrToStrA \diskname
 		LDA #LO(WORKINGStrB)
@@ -1996,7 +1997,7 @@ JMP mks
 		BEQ aa
 		JSR isfav
 		BEQ aa
-		LDA #TELETEXTwhitetext
+		LDA #TELETEXTwhitetext%
 		BNE ab
 		.aa
 		LDA #LETTERColour
@@ -2005,7 +2006,7 @@ JMP mks
 		LDA lastline
 		JSR OSASCI
 		INC lastline
-		LDA #TELETEXTyellowtext
+		LDA #TELETEXTyellowtext%
 		JMP OSASCI \rts
 		}
 
@@ -2061,7 +2062,7 @@ JMP mks
 		CMP #'#'
 		BNE aa
 		.ad
-		LDA #TELETEXTmagentatext
+		LDA #TELETEXTmagentatext%
 		\BNE mc
 		.aa
 		\CMP #&80
@@ -2083,7 +2084,7 @@ JMP mks
 		LDA comprec
 		BNE ExtendedPrintentry
 		\light blue
-		LDA #TELETEXTcyantext
+		LDA #TELETEXTcyantext%
 		JSR OSASCI
 		.md
 		CPY #FILTERTxtLen%
@@ -2101,7 +2102,7 @@ JMP mks
 		.ExtendedPrintentry
 		{
 		\white
-		LDA #TELETEXTwhitetext
+		LDA #TELETEXTwhitetext%
 		\JSR OSASCI
 		JSR OSWRCH
 		JSR GetEndDescription
@@ -2127,7 +2128,7 @@ JMP mks
 		LDA type,Y
 		\JSR OSASCI
 		JSR OSWRCH
-		LDA #TELETEXTcyantext
+		LDA #TELETEXTcyantext%
 		\JSR OSASCI
 		JSR OSWRCH
 		\have pub in zeroz
@@ -2861,7 +2862,7 @@ EQUS"catdat0"
 EQUB &D
 
 		.launchutxt
-		EQUS"U 1 ",&80
+		EQUS"U 1",&80
 
 		.type
 		EQUS"ACGSMPUZ"
@@ -2909,15 +2910,15 @@ EQUB 0
 \-------------------------------
 \NB keep below 255 chars zero ternminated
 EQUS "Search"
-EQUB TELETEXTgreentext
+EQUB TELETEXTgreentext%
 EQUS "SPACE"
-EQUB TELETEXTwhitetext
+EQUB TELETEXTwhitetext%
 EQUS "Advanced"
-EQUB TELETEXTgreentext
+EQUB TELETEXTgreentext%
 EQUS "TAB"
-EQUB TELETEXTwhitetext
+EQUB TELETEXTwhitetext%
 EQUS "Help"
-EQUB TELETEXTgreentext
+EQUB TELETEXTgreentext%
 EQUS "?"
 EQUB 0
 \-------------------------------
@@ -2929,64 +2930,64 @@ EQUB 0
 \NB keep below 255 chars zero ternminated
 EQUB 13
 EQUS"A"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS"dvent"
-EQUB TELETEXTwhitetext
+EQUB TELETEXTwhitetext%
 EQUS "C"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS"heat"
-EQUB TELETEXTwhitetext
+EQUB TELETEXTwhitetext%
 EQUS "G"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS "ame"
-EQUB TELETEXTwhitetext
+EQUB TELETEXTwhitetext%
 EQUS "Z"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS"unknwn"
-EQUB TELETEXTwhitetext
+EQUB TELETEXTwhitetext%
 EQUS "P"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS"ic"
-EQUB TELETEXTwhitetext
+EQUB TELETEXTwhitetext%
 EQUS "U"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS"til"
 EQUS"S"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS "trat"
-EQUB TELETEXTmagentatext
+EQUB TELETEXTmagentatext%
 EQUS "i"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS"nvulnerable"
-EQUB TELETEXTmagentatext
+EQUB TELETEXTmagentatext%
 EQUS "2"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS "playr"
-EQUB TELETEXTmagentatext
+EQUB TELETEXTmagentatext%
 EQUS "p"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS "ass"
-EQUB TELETEXTmagentatext
+EQUB TELETEXTmagentatext%
 EQUS "j"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS"oys"
-EQUB TELETEXTmagentatext
+EQUB TELETEXTmagentatext%
 EQUS "e"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS "lectron"
-EQUB TELETEXTmagentatext
+EQUB TELETEXTmagentatext%
 EQUS "l"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS "vl"
-EQUB TELETEXTmagentatext
+EQUB TELETEXTmagentatext%
 EQUS "X"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS "life"
-EQUB TELETEXTmagentatext
+EQUB TELETEXTmagentatext%
 EQUS "s"
-EQUB TELETEXTyellowtext
+EQUB TELETEXTyellowtext%
 EQUS"peed"
-EQUB TELETEXTwhitetext
+EQUB TELETEXTwhitetext%
 EQUS"A/S fav" 
 EQUB 0
 \-------------------------------

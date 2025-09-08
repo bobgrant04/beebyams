@@ -1,17 +1,27 @@
+\Utility routines
+\(<drv>) (<dno>/<dsp>) (description) (program type) (publisher) (FAV (y/n))
+\output  Usage (<drv>) (<dno>/<dsp>) 
+\ X  filename$ 1 diskname$
 \Constants
 INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
-\Utility routines
-\(<drv>) (<dno>/<dsp>)
-ORG &900
-GUARD &B00
+INCLUDE "TELETEXT.asm" \TELETEXT constants
+PrePrint%=1 \no of special chars before text
+OSARGDiscName% =2
+OSARGDescription%=3
+OSARGProgramType%=4
+OSARGPublisher%=5
+OSARGFavorite%=6
 
-\TODO IF U%=0 Just launch disk!????
+
+
+\TODO IF U%=0 Just put $.!boot as file name dealing with it is then an X issue
+\as a special case
 \U 
 \inputs text diskname U% as cat entry
-\output  Usage (<dno>/<dsp>) (<drv>)
-\ X  filename$ diskname$ 3
+
+
 
 \…Variables
 \Novariants=2
@@ -20,9 +30,11 @@ GUARD &B00
 \&16 -&17 basic err jump add
 
 \IntA &2A -&2D
-
+tempy%=&2A
+NoofArgs%=&2B
 \&2E TO &35 basic float
 aptr=&2E
+TextAdd =&30
 \&3B to &42 basic float
 \single bytes
 \tempx=&3B
@@ -36,222 +48,460 @@ drive%=&3E
 blockstart=&F8 \needed by OSARGS
 \blockstart=&F8
 \end zero page
-cat = &7000
+cat = &7A00
 \&600 String manipulation
 \strB%=&620
 strA%=&650
-
-\pram%=&6F0
+\pram% has !boot in it
+\Pram%=&6E0
 \&A00 RS232 & cassette
 \&1100-7C00 main mem
-\MODULE SETUP
-\------------------------------------------------------
-\setup for OSARGS
-__OSARGSinit = TRUE
-__OSARGSargXtoOSARGSstrB = FALSE
-__OSARGSargcountX = TRUE
-__OSARGSallcmdintoOSARGSstrAoffsetX = TRUE
-\Variables - 
-OSARGSptr =blockstart
-\OSARGSstrB =strB% 
-OSARGSstrA =strA%
+\MODULE 
+
 \-------------------------------------------------------
 
-ORG &900
-GUARD &B00
+ORG &7000
+GUARD &7A00
 
-.error
-{
-LDX #usage
-JSR initprepcmd
-JMP printstrA:\RTS
-}
+\------------------------------------------------------
+__OSARGSinit = TRUE
+__OSARGSargXtoOSARGSStrLenA = TRUE
+__OSARGSargGetDrive = FALSE
+__OSARGSFileNameToOSARGSPram = FALSE
+__OSARGSOptions = FALSE
+\Variables - 
+IF __OSARGSargXtoOSARGSStrLenA
+	OSARGSstrA =strA%
+	OSARGSStrLenA = strAoffset
+ENDIF
+OSARGStempy% = tempy%
+IF __OSARGSargGetDrive
+	OSARGSrequesteddrive = RequestedDrive%
+ENDIF
+IF __OSARGSFileNameToOSARGSPram
+	OSARGSpram% = xpram%
+ENDIF
+\OSARGSpramlen% = pramlen
+OSARGSNoofArgs% = NoofArgs%
+IF __OSARGSOptions
+	OSARGSOptions% = OptionStr%
+	OSARGSbitOptions% = OptionBit%
+	\constants
+	OSARGSbitOptionQuiet% = 1
+	OSARGSbitOptionVerbose% =2
+ENDIF
+
+\------------------------------------------------------
+
 .start
-\init stuff
-\clear %
-\LDX #(('F'-'A')*4): JSR clearint
+INCLUDE "OSARGS.ASM"
+		.AddCharToStrA
+		{
+		LDY strAoffset
+		STA strA%,Y
+		INC strAoffset
+		RTS
+		}
+		.AddPramToStrA
+		{
+		LDY strAoffset
+		LDX #0
+		.loop
+		LDA Pram%,X
+		STA strA%,Y
+		CMP #13
+		BNE aa
+		STY strAoffset
+		RTS
+		.aa
+		INY
+		INX
+		BNE loop
+		}
+		.execmd
+		{
+		IF __DEBUG
+			{
+			LDY #&FF
+			.aa
+			INY
+			LDA strA%,Y
+			JSR OSASCI
+			CMP #&D
+			BNE aa
+			JSR gti 
+			}
+		ENDIF
+		LDY #HI(strA%)
+		LDX #LO(strA%)
+		JMP OSCLI \RTS
+		}
+		
+\--------------
+.startexec
+\--------------
 
+		\JSR getcurrentdrive
+		\STA RequestedDrive%
+		JSR OSARGSinit
+		\ X has no of arguments
+		\as has OSARGSNoofArgs%
+		CPX #2
+		BCS ok
+		LDX #usage%
+		JSR initprepcmd
+		LDX #0
+		JMP PrintstrA:\RTS
+		.ok
+		LDA u+1
+		BNE ab
+		JMP workoutfilename
+		.ab
+		\will just process each line from command
+		\(description) (program type) (publisher) (FAV (y/n))
+		\mainwindow is selected
+		\CLS
+		\inital setup
+		\go double height?
+		LDA #PrePrint%
+		STA strAoffset
+		LDA #TELETEXTcyantext%
+		STA strA%
+		\Description
+		LDX #description%
+		JSR prepcmd
+		LDA #TELETEXTyellowtext%
+		JSR AddCharToStrA
+		LDX #OSARGDescription%
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDA #13
+		JSR AddCharToStrA
+		JSR PrintstrA
+		\Program type
+		LDA #PrePrint%
+		STA strAoffset
+		LDX #Programtype%
+		JSR prepcmd
+		LDA #TELETEXTyellowtext%
+		JSR AddCharToStrA
+		LDX #OSARGProgramType%
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDA #13
+		JSR AddCharToStrA
+		JSR PrintstrA
+		\Publisher
+		LDA #PrePrint%
+		STA strAoffset
+		LDX #Publisher%
+		JSR prepcmd
+		LDA #TELETEXTyellowtext%
+		JSR AddCharToStrA
+		LDX #OSARGPublisher%
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDA #13
+		JSR AddCharToStrA
+		JSR PrintstrA
+		\Favorite
+		LDA #PrePrint%
+		STA strAoffset
+		LDX #Favorite%
+		JSR prepcmd
+		LDA #TELETEXTyellowtext%
+		JSR AddCharToStrA
+		LDX #OSARGFavorite%
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDA #13
+		JSR AddCharToStrA
+		JSR PrintstrA
+		\disc
+		LDA #PrePrint%
+		STA strAoffset
+		LDX #Diskname%
+		JSR prepcmd
+		LDA #TELETEXTyellowtext%
+		JSR AddCharToStrA
+		LDX #OSARGDiscName%
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDA #13
+		JSR AddCharToStrA
+		JSR PrintstrA
+		\Description
+		\LDX #description%
+		\JSR prepcmd
+		\LDA #TELETEXTyellowtext%
+		\JSR AddCharToStrA
+		\LDX #OSARGDescription%
+		\JSR OSARGSargXtoOSARGSStrLenA
+		\LDA #13
+		\JSR AddCharToStrA
+		\JSR PrintstrA
+		\do the work to convert U% into filename
+		\set drive for catalogue
+		.workoutfilename
+		{
+		LDA #0
+		STA strAoffset
+		LDX #1
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDA strA% \drive
+		STA drive%
+		SEC
+		SBC #'0'
+		STA dir
+		}
+		
+		\going to issue din cmd
+		{
+		LDX #dincmd%
+		JSR initprepcmd
+		LDX #1
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDX #2
+		JSR OSARGSargXtoOSARGSStrLenA
+		LDX strAoffset
+		\DEX
+		LDA #&D
+		STA strA%,X 
+		JSR execmd \issue Din cmd
+		}
 
-{
-JSR OSARGSinit
-LDA (blockstart),Y
-BEQ error
-}
+		\read cat?
+		{
+		LDA u
+		BNE readcat
+		LDA #0
+		STA strAoffset
+		LDA #TELETEXTgreentext%
+		JSR AddCharToStrA
+		LDX #Nocatno%
+		JSR prepcmd
+		JSR PrintstrA
+		JMP printfilename
+		.readcat
+		LDX #LO(dir)
+		LDY #HI(dir)
+		LDA #&7F \read no of sectors on disk
+		JSR OSWORD
+		LDA result \should be zero
+		BEQ aa
+		LDX #uabletoreadcat%
+		JSR initprepcmd
+		JMP PrintstrA \RTS
+		.aa
+		}
+		.storefilenameintoPram%
+		{
+		LDY u
+		\TAY
+		LDA #0
+		TAX
+		CLC
+		.oi
+		ADC #8
+		DEY 
+		BNE oi
+		TAY
+		LDA cat+7,Y
+		STA Pram%,X
+		INX
+		LDA #'.'
+		STA Pram%,X
+		INX
+		.oj
+		LDA cat,Y
+		CMP #' '
+		BEQ exit
+		STA Pram%,X
+		INY
+		INX
+		CPX #9 \9 chars for full filename+"X "
+		BNE oj
+		.exit
+		LDA #13
+		STA Pram%,X
+		}
+		.printfilename
+		\print info?
+		{
+		LDA u+1
+		BEQ exit
+		LDA #PrePrint%
+		STA strAoffset
+		LDA #TELETEXTcyantext%
+		STA strA%
+		\Filename
+		LDX #Filename%
+		JSR prepcmd
+		LDA #TELETEXTyellowtext%
+		JSR AddCharToStrA
+		JSR AddPramToStrA
+		JSR PrintstrA
+		\PREss any key
+		JSR gti
+		\create x command
+		\x filename drive din
+		.exit
+		}
+		\do not need to set drive back as read cat without dr cmd!
+		
 
-{
-JSR OSARGSargcountX \X now has arg count!
-\Usage(<drv>) (<dno>/<dsp>)
-\need to count down
-CPX #2
-BNE error
-}
-{
-\going to issue din cmd
-lDX #dincmd
-JSR initprepcmd
-JSR OSARGSallcmdintoOSARGSstrAoffsetX
-}
-\set drive for catalogue
-{
-LDA strA%+3 \drive
-STA drive%
-SEC
-SBC #'0'
-STA dir
-}
-
-{
-\issue Din cmd
-JSR exeStrA%
-}
-
-\read cat
-{
-LDA #&7F
-LDX #LO(dir)
-LDY #HI(dir)
-JSR OSWORD
-LDA result:\should be zero
-BEQ aa
-LDX #uabletoreadcat
-JSR initprepcmd
-JMP printstrA
-.aa
-}
-\create x command
-\x filename drive din
-{
-LDX #xcmd
-JSR initprepcmd
-\X is pointer to next char in strA%
-\.ab
-\DEY
-\BPL ab
-LDA u
-BEQ boot
-TAY
-LDA #0
-INX
-CLC
-.oi
-ADC#8
-DEY 
-BNE oi
-TAY
-LDA cat+7,Y
-STA strA%,X
-INX
-LDA #'.'
-STA strA%,X
-INX
-.oj
-LDA cat,Y
-CMP #' '
-BEQ addosargs
-STA strA%,X
-INY
-INX
-CPX #11 \9 chars for full filename+"X "
-BNE oj
-}
-.addosargs
-{
-LDA #' '
-STA strA%,X
-INX
-JSR OSARGSallcmdintoOSARGSstrAoffsetX
-}
-
+		LDX #xcmd%
+		JSR initprepcmd
+		JSR AddPramToStrA
+		DEC strAoffset
+		LDA #' '
+		JSR AddCharToStrA
+		LDA drive%
+		JSR AddCharToStrA
+		LDA #&D
+		JSR AddCharToStrA
+		JMP execmd \rts
+		RTS
+		
+		\X is pointer to next char in strA%
+		\.ab
+		\DEY
+		\BPL ab
+		
+		\ok so all done!
+		
+		
 
 \------------------------------------
 \ subs below 
-.exeStrA%
-{
-LDY #HI(strA%)
-LDX #LO(strA%)
-JMP OSCLI\rts
-}
-\We do not have U% so launch the disk!
-.boot
-{
-LDX #bootcmd
-JSR initprepcmd
-INX
-JMP addosargs \RTS
-}
-.printstrA
-{
-LDX #&FF
-.ak
-INX
-LDA strA%,X
-JSR OSASCI
-CMP #&D
-BNE ak
-RTS
-}
+
+		.gti
+		{
+		LDA #OSBYTEReadCharacterFromBuffer%
+		LDX #OSBYTEXKeyboardBuffer%
+		JSR OSBYTE
+		BCS gti \no character
+		RTS
+		}
+
+		.addosargs
+		{
+		LDA #' '
+		STA strA%,X
+		INX
+		\JSR OSARGSallcmdintoOSARGSstrAoffsetX
+		}
+		.exeStrA%
+		{
+		LDY #HI(strA%)
+		LDX #LO(strA%)
+		JMP OSCLI\rts
+		}
+
+		.PrintstrA
+		{
+		LDX #&FF
+		.printstrAloop
+		INX
+		LDA strA%,X
+		CMP #'#'
+		BNE aa
+		LDA #TELETEXTmagentatext%
+		.aa
+		JSR OSASCI
+		CMP #&D
+		BNE printstrAloop
+		RTS
+		}
 
 
 \routines
 \initates strA
 
-.initprepcmd
-LDA #0
-STA strAoffset
-\Prepcmd
-\takes x as cmdno ret x ptr to
-\strA%
-.prepcmd
-{
-LDY #0
-.ez
-DEX
-BNE nexcmd
-LDX strAoffset 
-.ey
-LDA cmdadd,Y
-CMP #&80
-BCC am
-AND #&7F
-STA strA%,X
-INX 
-LDA #&D
-STA strA%,X
-DEX
-STX strAoffset
-RTS \all done
-.am
-STA strA%,X
-INX
-INY
-BNE ey
-.nexcmd
-LDA cmdadd,Y
-INY
-CMP #&80
-BCC nexcmd
-BCS ez 
-}
+		.initprepcmd
+		{
+		LDA #0
+		STA strAoffset 
+		}
+		.prepcmd
+		{
+		JSR MoveToRec
+		LDX strAoffset
+		LDY #0
+		.ey
+		LDA (TextAdd),Y
+		CMP #&80
+		BCC am
+		AND #&7F
+		STA strA%,X
+		INX
+		STX strAoffset
+		LDA #&D
+		STA strA%,X
+		RTS
+		.am
+		STA strA%,X
+		INX
+		INY
+		BNE ey
+		}
+		
+		.MoveToRec
+		{
+		LDA #LO(CommandAndText)
+		STA TextAdd
+		LDA #HI(CommandAndText)
+		STA TextAdd+1
+		LDY #0
+		.ba
+		DEX
+		BNE bb
+		RTS
+		.bb
+		LDA (TextAdd),Y
+		INY
+		CMP #&80
+		BCC bb
+		CLC
+		TYA
+		ADC TextAdd
+		STA TextAdd
+		LDA #0
+		ADC TextAdd+1
+		STA TextAdd+1
+		LDY #0
+		BEQ ba
+		}
+\---------------------------
+\ Data structures
+\---------------------------
+.Pram%
+	EQUS"$.!boot",&D
+.CommandAndText
+ 
+dincmd%=1
+	EQUS"DIN",&80+' '
+xcmd%=2
+	EQUS "X",&80+' '
+usage%=3
+	EQUS"(<drv>) (<dno>/<dsp>) and U% output X cmd or cat if u%=0",&D
+	EQUS"(description) (program type) (publisher) (FAV (y/n))",&D
+	BUILD_VERSION
+	EQUS &8D
+uabletoreadcat%=4
+	EQUS"unable to read ca":EQUB &80+'t'
+Filename%=5
+	EQUS"Filename:",&80+' '
+description% =6
+	EQUS"Description:",&80+' '
+Programtype% =7
+	EQUS"Program type:",&80+' '
+Publisher%=8
+	EQUS"Publisher:",&80+' '
+Favorite%=9
+	EQUS"Favorite:",&80+' '
+Diskname%=10
+	EQUS"Disk name:",&80+' '
+Nocatno%=11
+	EQUS"No catalogue number given so..",&8D
+	
 
-.cmdadd
-\note this data block needs to be <&FF you have been warned
-\-----------------------len warning--------------
-\1 
-dincmd=1
-EQUS"DIN":EQUB &80+' '
-\2
-xcmd=2
-EQUS"X":EQUB &80+' '
 
-\3 usage
-usage=3
-EQUS"(<drv>) (<dno>/<dsp>) and U% output X cmd or   cat if u%=0":EQUB &8D
-\4
-uabletoreadcat=4
-EQUS"unable to read ca":EQUB &80+'t'
-bootcmd=5
-EQUS"X !boo":EQUB &80+'t'
-\--------------- end warning------------------------
 
 
 .dir: 
@@ -265,12 +515,12 @@ EQUB &21	\SECTOR 256 bytes
 .result
 EQUB 0
 
-\
-INCLUDE "OSARGS.ASM"
+
+
 .end
 
 
-SAVE "U", start, end
+SAVE "U", start, end,startexec
 \cd D:\GitHub\beebyams\beebasm
 \beebasm -i .\U\U.asm -do .\U\U.ssd -boot U -v -title U
 

@@ -149,8 +149,8 @@ IF __OSARGSinit
 			
 			\=4 etc
 			\will just do caps!
-			LDA #0
-			STA OSARGSbitOptions%
+			\LDA #0
+			\STA OSARGSbitOptions%
 			.ab
 			DEX
 			LDA OSARGSOptions%,X

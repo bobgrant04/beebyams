@@ -176,6 +176,8 @@ ENDIF
 	IF __OSARGSargXtoOSARGSStrLenA
 		\at start OSARGSStrLenA hould point to place where cmd is to be placed
 		\At end OSARGSStrLenA will point to the same string will have a ' ' character at the end
+		\if a char is >&80 sub &80 from it this is to allow mnudisp to pass parms to use
+		\should not impact anthing else as these are not printable characters?
 		.OSARGSargXtoOSARGSStrLenA
 		{
 		IF __OSARGSOptions
@@ -218,6 +220,14 @@ ENDIF
 		STA OSARGSstrA,X
 		CMP #'"' \" ignore ""
 		BEQ ab
+		CMP #&80
+		BCC ak
+		SEC
+		SBC #&80
+		STA OSARGSstrA,X
+		INX
+		BNE ab
+		.ak
 		INX
 		CMP #' '
 		BNE ab

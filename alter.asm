@@ -221,7 +221,9 @@ EQUS"file not found",&8D
 \.erraddr:EQUW errtxt
 \.errtxt
 \ 1 usage"
-\EQUS"Usage <fsp> (<dno>/<dsp>) (<drv>)",&data:EQUB &8D
+\EQUS"Usage <fsp> (<dno>/<dsp>) (<drv>)",&data:EQUB &D
+BUILD_VERSION
+	EQUS &8D
 \ 2 file not found 
 \EQUS"file not foun",&E4
 \ 3 exe address invalid

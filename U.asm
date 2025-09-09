@@ -7,13 +7,20 @@ INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
 INCLUDE "TELETEXT.asm" \TELETEXT constants
-PrePrint%=1 \no of special chars before text
+\-------------------------------
+\constants
+\-------------------------------
+PrePrint%=2 \no of special chars before text
 OSARGDiscName% =2
 OSARGDescription%=3
 OSARGProgramType%=4
 OSARGPublisher%=5
 OSARGFavorite%=6
-
+TOPLines%=3
+BOTTOMLines%=3
+TOPWindow%=0
+BOTTOMWindow%=4
+MAINWindow%=8
 
 
 \TODO IF U%=0 Just put $.!boot as file name dealing with it is then an X issue
@@ -22,37 +29,36 @@ OSARGFavorite%=6
 \inputs text diskname U% as cat entry
 
 
+\-------------------------------
+\Zero page Variables
+\-------------------------------
 
-\…Variables
-\Novariants=2
-\Dr%=3
-\ZERO page
 \&16 -&17 basic err jump add
 
 \IntA &2A -&2D
-tempy%=&2A
-NoofArgs%=&2B
+	tempy%=&2A
+	NoofArgs%=&2B
 \&2E TO &35 basic float
-aptr=&2E
-TextAdd =&30
+	aptr=&2E
+	TextAdd =&30
 \&3B to &42 basic float
 \single bytes
 \tempx=&3B
 \filetype=&3C
-strAoffset=&3D
-drive%=&3E
+	strAoffset=&3D
+	drive%=&3E
 \&70 to &8F reserved for 
 
 \zp=&A8
 \&F8-F9 UNUSED BY OS
-blockstart=&F8 \needed by OSARGS
+	blockstart=&F8 \needed by OSARGS
 \blockstart=&F8
 \end zero page
-cat = &7A00
+	cat = &7A00
 \&600 String manipulation
 \strB%=&620
-strA%=&650
-\pram% has !boot in it
+	strA%=&680
+	\pram% has !boot in it
 \Pram%=&6E0
 \&A00 RS232 & cassette
 \&1100-7C00 main mem
@@ -136,13 +142,21 @@ INCLUDE "OSARGS.ASM"
 		LDX #LO(strA%)
 		JMP OSCLI \RTS
 		}
+		.printdoubleheight
+		{
+		LDA #13
+		JSR AddCharToStrA
+		JSR PrintstrA
+		JMP PrintstrA
+		}
 		
 \--------------
 .startexec
 \--------------
-
-		\JSR getcurrentdrive
-		\STA RequestedDrive%
+		\not going to do to much error checking as 
+		\should only be used from mnudisp
+		
+		
 		JSR OSARGSinit
 		\ X has no of arguments
 		\as has OSARGSNoofArgs%
@@ -157,16 +171,33 @@ INCLUDE "OSARGS.ASM"
 		BNE ab
 		JMP workoutfilename
 		.ab
+		.printKeyBtmText
+		{
+		LDY #BOTTOMWindow%
+		JSR Selectwindow
+		LDY #&FF
+		.ol
+		INY
+		LDA lowertxt,Y
+		BEQ exit
+		JSR OSASCI
+		BNE ol
+		.exit
+		}
+		LDY #MAINWindow%
+		JSR Selectwindow
 		\will just process each line from command
 		\(description) (program type) (publisher) (FAV (y/n))
 		\mainwindow is selected
 		\CLS
 		\inital setup
 		\go double height?
-		LDA #PrePrint%
+		LDA #0
 		STA strAoffset
+		LDA #TELETEXTDoubleheight%
+		JSR AddCharToStrA
 		LDA #TELETEXTcyantext%
-		STA strA%
+		JSR AddCharToStrA
 		\Description
 		LDX #description%
 		JSR prepcmd
@@ -174,9 +205,10 @@ INCLUDE "OSARGS.ASM"
 		JSR AddCharToStrA
 		LDX #OSARGDescription%
 		JSR OSARGSargXtoOSARGSStrLenA
-		LDA #13
-		JSR AddCharToStrA
-		JSR PrintstrA
+		\LDA #13
+		\JSR AddCharToStrA
+		\JSR PrintstrA
+		JSR printdoubleheight
 		\Program type
 		LDA #PrePrint%
 		STA strAoffset
@@ -186,9 +218,10 @@ INCLUDE "OSARGS.ASM"
 		JSR AddCharToStrA
 		LDX #OSARGProgramType%
 		JSR OSARGSargXtoOSARGSStrLenA
-		LDA #13
-		JSR AddCharToStrA
-		JSR PrintstrA
+		\LDA #13
+		\JSR AddCharToStrA
+		\JSR PrintstrA
+		JSR printdoubleheight
 		\Publisher
 		LDA #PrePrint%
 		STA strAoffset
@@ -198,9 +231,10 @@ INCLUDE "OSARGS.ASM"
 		JSR AddCharToStrA
 		LDX #OSARGPublisher%
 		JSR OSARGSargXtoOSARGSStrLenA
-		LDA #13
-		JSR AddCharToStrA
-		JSR PrintstrA
+		\LDA #13
+		\JSR AddCharToStrA
+		\JSR PrintstrA
+		JSR printdoubleheight
 		\Favorite
 		LDA #PrePrint%
 		STA strAoffset
@@ -210,9 +244,10 @@ INCLUDE "OSARGS.ASM"
 		JSR AddCharToStrA
 		LDX #OSARGFavorite%
 		JSR OSARGSargXtoOSARGSStrLenA
-		LDA #13
-		JSR AddCharToStrA
-		JSR PrintstrA
+		\LDA #13
+		\JSR AddCharToStrA
+		\JSR PrintstrA
+		JSR printdoubleheight
 		\disc
 		LDA #PrePrint%
 		STA strAoffset
@@ -222,19 +257,10 @@ INCLUDE "OSARGS.ASM"
 		JSR AddCharToStrA
 		LDX #OSARGDiscName%
 		JSR OSARGSargXtoOSARGSStrLenA
-		LDA #13
-		JSR AddCharToStrA
-		JSR PrintstrA
-		\Description
-		\LDX #description%
-		\JSR prepcmd
-		\LDA #TELETEXTyellowtext%
-		\JSR AddCharToStrA
-		\LDX #OSARGDescription%
-		\JSR OSARGSargXtoOSARGSStrLenA
 		\LDA #13
 		\JSR AddCharToStrA
 		\JSR PrintstrA
+		JSR printdoubleheight
 		\do the work to convert U% into filename
 		\set drive for catalogue
 		.workoutfilename
@@ -325,17 +351,24 @@ INCLUDE "OSARGS.ASM"
 		{
 		LDA u+1
 		BEQ exit
-		LDA #PrePrint%
+		LDA #0
 		STA strAoffset
+		LDA #TELETEXTDoubleheight%
+		JSR AddCharToStrA
 		LDA #TELETEXTcyantext%
-		STA strA%
+		JSR AddCharToStrA
+		\LDA #PrePrint%
+		\STA strAoffset
+		\LDA #TELETEXTcyantext%
+		\STA strA%
 		\Filename
 		LDX #Filename%
 		JSR prepcmd
 		LDA #TELETEXTyellowtext%
 		JSR AddCharToStrA
 		JSR AddPramToStrA
-		JSR PrintstrA
+		JSR printdoubleheight
+		\JSR PrintstrA
 		\PREss any key
 		JSR gti
 		\create x command
@@ -355,7 +388,7 @@ INCLUDE "OSARGS.ASM"
 		JSR AddCharToStrA
 		LDA #&D
 		JSR AddCharToStrA
-		JMP execmd \rts
+		\JMP execmd \rts
 		RTS
 		
 		\X is pointer to next char in strA%
@@ -369,7 +402,20 @@ INCLUDE "OSARGS.ASM"
 
 \------------------------------------
 \ subs below 
-
+		\Selectwindow slw TAKES Y TOPWindow,btmw%,mainW%
+		.Selectwindow
+		{
+		LDX #5
+		LDA #28 \VDU28
+		.mj
+		JSR OSASCI
+		LDA window,Y
+		INY
+		DEX
+		BNE mj
+		LDA #12
+		JMP OSASCI \him\rts
+		}
 		.gti
 		{
 		LDA #OSBYTEReadCharacterFromBuffer%
@@ -486,21 +532,56 @@ usage%=3
 uabletoreadcat%=4
 	EQUS"unable to read ca":EQUB &80+'t'
 Filename%=5
-	EQUS"Filename:",&80+' '
+	EQUS"Filename",&80+':'
 description% =6
-	EQUS"Description:",&80+' '
+	EQUS"Description",&80+':'
 Programtype% =7
-	EQUS"Program type:",&80+' '
+	EQUS"Program type",&80+':'
 Publisher%=8
-	EQUS"Publisher:",&80+' '
+	EQUS"Publisher",&80+':'
 Favorite%=9
-	EQUS"Favorite:",&80+' '
+	EQUS"Favorite",&80+':'
 Diskname%=10
-	EQUS"Disk name:",&80+' '
+	EQUS"Disk name",&80+':'
 Nocatno%=11
 	EQUS"No catalogue number given so..",&8D
-	
+	.lowertxt
+	\-------------------------------
+	\NB keep below 255 chars zero ternminated
+	EQUB 13\line 1
+	EQUB TELETEXTmagentatext%,"I",TELETEXTyellowtext%,"nvulnerable"
+	EQUB TELETEXTmagentatext%,"P",TELETEXTyellowtext%,"assword"
+	EQUB TELETEXTmagentatext%,"J",TELETEXTyellowtext%,"oystick"
+	EQUB TELETEXTmagentatext%,"T",TELETEXTyellowtext%,"ape"
+	\line 2
+	EQUB TELETEXTmagentatext%,"N",TELETEXTyellowtext%,"2nd proc"
+	EQUB TELETEXTmagentatext%,"E",TELETEXTyellowtext%,"lectron"
+	EQUB TELETEXTmagentatext%,"X",TELETEXTyellowtext%,"life"
+	EQUB TELETEXTmagentatext%,"S",TELETEXTyellowtext%,"peed"
+	EQUB TELETEXTmagentatext%,"R",TELETEXTyellowtext%,"om"
+	\line 3
+	EQUB TELETEXTmagentatext%,"2",TELETEXTyellowtext%,"player"
+	EQUB TELETEXTmagentatext%,"D",TELETEXTyellowtext%,"isc"
+	EQUB TELETEXTmagentatext%,"L",TELETEXTyellowtext%,"evel"
 
+	EQUB 0	
+ .window
+ \left X, bottom Y, right X and top Y
+ \top
+EQUB 0
+EQUB TOPLines%   
+EQUB 39
+EQUB 0
+ \btm
+EQUB 0
+EQUB 24        
+EQUB 39
+EQUB 24-BOTTOMLines%
+ \main
+EQUB 0
+EQUB 24-BOTTOMLines%
+EQUB 39
+EQUB TOPLines%
 
 
 

@@ -1,0 +1,28 @@
+
+
+A mount XTesting Disc into drive 1
+A *.
+R catalogue shows 
+A *X
+R extended help seen
+A execute "*X filename"
+R program launches
+
+Files:-
+nonsuch - file not found
+Girl - ldpic internal to X program \press any key to get command prompt
+Basic - Hello shows check pa.=&4000
+Dump - program dumps
+Code - hello world displayed
+Exec - PA&=1900 \ LO."p.X" shown to check *type exe
+Badexec - p. ?$&6B0 should have badexe 0d
+LOWBAS -  hello world displayed check page is &E00
+LOCODE - check hello world text &900
+Wmap2 - screen renders scrload
+Rep3lvl - currently need to have drive other than 0 for this to work go
+          through to the game to ensure that lvl loads
+G.Repinf - currently need to have drive other than 0 for this to work go
+          through to the game to ensure that lvl loads
+
+TYB    - sound plays
+

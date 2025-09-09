@@ -40,11 +40,10 @@ FILTERdescription% =&10
 \window bits
 TOPLines=3
 BOTTOMLines=3
-CURSORInit=&7C01+(&28*(TOPLines))
 TOPWindow=0
 BOTTOMWindow=4
 MAINWindow=8
-
+CURSORInit=&7C01+(&28*(TOPLines))
 \maximum filter description text
 FILTERTxtLen%=13
 \filter set character length
@@ -1501,10 +1500,14 @@ RTS
 		BNE ab
 		.bannerend
 		}
+		{
 		JSR DisableEvents
-		
+		LDA #0
+		STA u+1
+		}
 		.BCD
-		JSR HardInitmenu		
+		JSR HardInitmenu
+		
 		.bcd
 		{
 \set exten record 
@@ -2197,7 +2200,20 @@ JMP mks
 
 
 \Selectwindow slw TAKES Y TOPWindow,btmw%,mainW%
+		\Selectwindow slw TAKES Y TOPWindow,btmw%,mainW%
 		.Selectwindow
+		{
+		LDX #5
+		LDA #28
+		.mj
+		JSR OSASCI
+		LDA window,Y
+		INY
+		DEX
+		BNE mj
+		LDA #12
+		JMP OSASCI \him\rts
+		}
 		{
 		LDX #5
 		LDA #28
@@ -2226,12 +2242,18 @@ JMP mks
 		RTS
 		}
 		
-\AddAptrToStrA
+\AddAptrToStrA 
 		.AddAptrToStrA
 		{
 		LDY #&FF
 		LDX StrAlen
+		LDA #0
 		.aa
+		CMP #' '			\needed as description can contain ' ' 
+		BNE ab				\which we are using as a deliminator
+		LDA #&80+' '		\and is used for command line args
+		STA WORKINGStrA,X
+		.ab
 		INX
 		INY
 		LDA (APtr),Y
@@ -2578,7 +2600,7 @@ JMP mks
 		\LDA #0 done above
 		STA FilterFlag
 		STA catdrive
-		STA u+1
+		
 		\set Drive for catdat0 file
 		\need to see if catdat0 file exists 
 		\\on drive 0 if so all catdat files
@@ -2862,7 +2884,7 @@ EQUS"catdat0"
 EQUB &D
 
 		.launchutxt
-		EQUS"U 1",&80
+		EQUS"U 1",&80+' '
 
 		.type
 		EQUS"ACGSMPUZ"

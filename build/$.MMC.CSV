@@ -1,0 +1,136 @@
+Pubilc domain	bugs bunny	bunny	C	19	JGH02	P	N	_
+Pubilc domain	Crunch basic prog	crunch	R	19	JGH12	U	N	_
+Pubilc domain	ZooLook	ZooLook	C	19	JGH07	U	N	_
+Pubilc domain	Addiction	Addicto	C	19	JGH08	m	N	[
+Pubilc domain	*run basic prog	mcode	R	19	JGH12	S	N	[
+Pubilc domain	Captain Pugwash	Pugwash	C	19	JGH07	U	y	[
+Pubilc domain	basic difference	bdiff	R	19	JGH12	U	N	]
+Pubilc domain	indian chief	chief	S	FE	JGH02	P	N	]
+Pubilc domain	midi	setmidi	R	19	JGH07	U	N	]
+Pubilc domain	PDP11 BBC BASIC#r	PDPbas	l	80	JGH11	P	N	S
+Pubilc domain	dalek	dalek	S	FE	JGH02	p	N	@
+Pubilc domain	Remove dups from basic	link	R	19	JGH11	u	N	B
+Pubilc domain	obey exec without echo	obey	R	23	JGH11	U	N	@
+Pubilc domain	z80 inst	z80bas	S	FC	JGH05	U	N	@
+Pubilc domain	Text decompression	unpack	C	19	JGH11	u	N	A
+Pubilc domain	USB navigator	usbstat	r	19	JGH10	U	N	L
+Pubilc domain	USB library	usbprn	r	19	JGH10	U	N	N
+Pubilc domain	basic variables	blist	R	19	JGH12	U	N	\
+Pubilc domain	clown	clown	S	FE	JGH02	P	N	\
+Pubilc domain	castle	castle	S	FE	JGH02	p	N	^
+Pubilc domain	repair bad program	repair	R	19	JGH12	U	N	^
+Pubilc domain	Sky Toccatta with display	Tocc2	C	19	JGH07	U	N	^
+Pubilc domain	charcter#r	charrom	C	19	JGH10	U	N	A
+Pubilc domain	mouse support	mouse	r	19	JGH07	u	N	A
+Pubilc domain	ext view inst	T.NewView	S	FC	JGH06	U	N	A
+Pubilc domain	tube on off	tube	C	19	JGH09	P	N	A
+Pubilc domain	wwolf	wwolf	C	19	JGH02	p	N	A
+Pubilc domain	dos util	dosutil	C	19	JGH10	U	N	B
+Pubilc domain	mc footer to basic	mcode	r	19	JGH07	U	y	B
+Pubilc domain	Monitor inst	T.Monitor	S	FC	JGH06	U	N	B
+Acorn	CP/M U	t.readme	S	FC	JGH05	U	N	B
+Pubilc domain	wmap4	wmap4	C	40	JGH02	p	N	B
+Pubilc domain	dos ldr	dosldr	C	19	JGH10	U	N	C
+Pubilc domain	explode chars	explode	r	19	JGH07	U	N	C
+Pubilc domain	Extended view 	s.newview	C	19	JGH03	U	N	C
+Pubilc domain	Small C	t.install	S	FC	JGH04	u	N	C
+Pubilc domain	swr inst	T.Modinfo	S	FC	JGH06	U	N	C
+Pubilc domain	wmap3	wmap3	C	15	JGH02	p	N	C
+Pubilc domain	load chars	cload	r	19	JGH07	U	N	D
+Pubilc domain	dos fsm	dosfsm	C	19	JGH10	U	N	D
+Pubilc domain	Edword to VIEWe	EdtoVIE	C	19	JGH03	U	N	D
+Pubilc domain	disinst	T.DisAssm	S	FC	JGH06	U	N	D
+Pubilc domain	Voyage Voyage	VOYAGE	C	19	JGH08	m	N	D
+Pubilc domain	wmap2	wmap2	R	19	JGH02	p	N	D
+Pubilc domain	crossword	crosswd	C	19	JGH03	u	N	E
+Pubilc domain	save chars	csave	r	19	JGH07	U	N	E
+Pubilc domain	ADFS menu gen	dirmenu	C	19	JGH12	U	N	E
+Pubilc domain	dos fsb	dosfsb	C	19	JGH10	U	N	E
+Pubilc domain	character inst	T.CharROM	S	FC	JGH06	U	N	E
+Pubilc domain	wmap1	wmap1	C	19	JGH02	p	N	E
+Pubilc domain	dos file	dosfile	C	19	JGH10	U	N	F
+Pubilc domain	valky	valky	C	19	JGH02	p	N	F
+Pubilc domain	extended View	ViewJ30	C	19	JGH06	U	N	F
+Pubilc domain	dos copy	doscopy	C	16	JGH10	U	N	G
+Pubilc domain	You pay my rent	RENT	C	19	JGH08	m	N	G
+Pubilc domain	taipic	taipic	C	19	JGH02	p	N	G
+Pubilc domain	All Creatures Theme	ALL-C	C	19	JGH07	P	N	H
+Pubilc domain	SCRsave	SCRsave	C	19	JGH02	U	N	H
+Pubilc domain	Swr wipe	SrWipe	r	19	JGH06	U	N	H
+Pubilc domain	usb test	t.bbcusb	r	19	JGH10	U	N	H
+Pubilc domain	Arena II Theme	ArenaII	C	19	JGH07	U	N	I
+Pubilc domain	Piano Rag	Piano1	C	19	JGH08	m	N	I
+Pubilc domain	SCRload	SCRload	C	19	JGH02	U	N	I
+Pubilc domain	swram save	SrSave	r	19	JGH06	U	N	I
+Pubilc domain	Arpegiator	Arpegia	C	19	JGH07	U	N	J
+Pubilc domain	moon	moon	C	19	JGH02	p	N	J
+Pubilc domain	Oxygene	OXEGENE	C	12	JGH08	m	N	J
+Pubilc domain	swr load	srload	r	19	JGH06	U	N	J
+Pubilc domain	Beverly Hills Cop	AxelF	C	19	JGH07	U	y	K
+Pubilc domain	disk indexer	dskmenu	E	19	JGH12	U	N	K
+Pubilc domain	jarre	jarre	C	19	JGH02	p	N	K
+Pubilc domain	old life	oldlife	C	19	JGH09	U	N	K
+Pubilc domain	load relocatable 	SMLoad	r	19	JGH06	U	N	K
+Pubilc domain	Black & White Rag	BlkWht	R	11	JGH07	S	N	L
+Pubilc domain	Bmp to bbc	bmptobb	C	21	JGH03	U	N	L
+Pubilc domain	disk	disk	C	19	JGH02	p	N	L
+Pubilc domain	life with load /save	life	C	14	JGH09	U	N	L
+Pubilc domain	Text compression	packall	R	19	JGH12	u	N	L
+Pubilc domain	list relocatable swr 	SMList	r	19	JGH06	U	N	L
+Pubilc domain	usb status	usbstat	r	19	JGH10	G	N	L
+Pubilc domain	BMP save	BMPsave	C	19	JGH03	U	N	M
+Pubilc domain	inform#R	inform	C	19	JGH12	u	N	M
+Pubilc domain	chess board 	pawns	S	FE	JGH02	p	N	M
+Pubilc domain	USB#r	USBROM	l	80	JGH10	P	N	M
+Pubilc domain	bbc to BMP	bbctobm	C	19	JGH03	U	N	N
+Pubilc domain	Chariots of Fire	Chariot	C	20	JGH07	U	N	N
+Pubilc domain	Norway flag	Norway	C	19	JGH02	p	N	N
+Pubilc domain	compact swr	SMJoin	r	19	JGH06	U	N	N
+Pubilc domain	co pro tests	TEST09	C	19	JGH11	P	N	Q
+Pubilc domain	USB printer	usbprn	r	19	JGH10	U	N	N
+Pubilc domain	Cheers Theme	Cheers	C	19	JGH07	U	N	O
+Pubilc domain	Dreamscape (Cold Tea)	LandDem	C	16	JGH08	m	N	O
+Pubilc domain	pyramid	pyramid	C	19	JGH02	p	N	O
+Pubilc domain	RGB edit	rgbedit	C	19	JGH03	U	N	O
+Pubilc domain	music editor	setcol	C	19	JGH12	u	N	O
+Pubilc domain	Close to the Edge	Close	C	19	JGH07	U	N	P
+Pubilc domain	Reset #r	rstrom	l	80	JGH06	U	N	P
+Pubilc domain	union jack	union	S	FE	JGH02	P	N	P
+Pubilc domain	USB keyboard	usbkbd	r	80	JGH10	U	N	P
+Pubilc domain	Cold Tea	ColdTea	C	19	JGH07	U	N	Q
+Pubilc domain	LDPICv2.1	ldpic	C	19	JGH02	u	N	Q
+Pubilc domain	list roms	ROMs	r	19	JGH06	U	N	Q
+Pubilc domain	usb dump test	usbdump	r	19	JGH10	P	N	Q
+Pubilc domain	Equinoxe 5	Equix5	C	11	JGH07	U	N	R
+Pubilc domain	Ghost Busters	GHOSTA	C	19	JGH08	m	N	R
+Pubilc domain	micro user logo	mulogo	S	FE	JGH02	P	N	R
+Pubilc domain	Ram count#r	ramcoun	l	80	JGH06	U	N	R
+Pubilc domain	micro compact	M128c	C	19	JGH02	P	N	S
+Pubilc domain	Dump memory	MDump	R	19	JGH11	P	N	V
+Pubilc domain	Monitor#r	Monitor	l	80	JGH06	U	N	S
+Pubilc domain	go address	go	R	19	JGH11	P	N	W
+Pubilc domain	HADFS Filing System	HADFSRM	L	80	JGH06	U	N	T
+Pubilc domain	micro compact	m128	S	FE	JGH02	p	N	T
+Pubilc domain	Z80#R	Z80rom	C	19	JGH05	U	N	T
+Pubilc domain	dissasemble#r	DisAssm	L	80	JGH06	U	N	U
+Pubilc domain	Domino Dancing	DOMINO	C	19	JGH08	m	N	U
+Pubilc domain	fireplace	lounge	S	FE	JGH02	p	N	U
+Pubilc domain	M*A*S*H	MASH	C	19	JGH07	U	y	U
+Pubilc domain	lisrt basic variables	vlist	C	19	JGH12	u	N	U
+Pubilc domain	Doctor Who	DocWho	C	19	JGH08	m	N	V
+Pubilc domain	make printer drver	makelp	R	11	JGH12	P	N	V
+Pubilc domain	ARM BBC BASIC#r	ABASIC	l	80	JGH11	P	N	Z
+Pubilc domain	compile multiple files	Assem	R	19	JGH12	u	N	W
+Pubilc domain	SVpicV2.1	svpic	C	25	JGH02	U	N	W
+Pubilc domain	Bear Necessesities	Bear	C	19	JGH08	m	N	X
+Pubilc domain	character#r	charrom	l	80	JGH06	U	N	X
+Pubilc domain	Teletext suite	hello	C	19	JGH01	U	N	X
+Pubilc domain	function key list	keys	R	19	JGH12	U	N	X
+Pubilc domain	Foggy Mountain	Banjo	C	19	JGH08	m	N	Y
+Pubilc domain	grim reaper	grim	S	FE	JGH02	P	N	Y
+Pubilc domain	Function key save	keysave	R	19	JGH12	U	N	Y
+Pubilc domain	midi inst	t.midi	S	FC	JGH07	U	N	Y
+Pubilc domain	Always on my mind	Always	C	19	JGH08	m	N	Z
+Pubilc domain	globe	globe	C	19	JGH02	p	N	Z
+Pubilc domain	Function key load	keyload	R	19	JGH12	U	N	Z
+Pubilc domain	Captain Pugwash Remix!	PugW2	R	19	JGH07	U	N	Z

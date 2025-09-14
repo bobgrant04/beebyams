@@ -1170,7 +1170,7 @@ ASK APPLIED SYSTEMS KNOWLEDGE ,Children from space,space,c,19,EDU155,A,n,@
 ASK APPLIED SYSTEMS KNOWLEDGE ,Cranky,Cranky,c,19,EDU155,u,n,@
 ASK APPLIED SYSTEMS KNOWLEDGE ,face maker,F-maker,c,19,EDU155,u,n,@
 ASK APPLIED SYSTEMS KNOWLEDGE ,Hide & Seek,hide,c,19,EDU153,u,n,@
-ASK APPLIED SYSTEMS KNOWLEDGE ,Let's count,L-count,c,19,EDU153,u,n,@
+ASK APPLIED SYSTEMS KNOWLEDGE ,Letâ€™s count,L-count,c,19,EDU153,u,n,@
 ASK APPLIED SYSTEMS KNOWLEDGE ,Number chase,NumberC,c,19,EDU153,u,n,@
 ASK APPLIED SYSTEMS KNOWLEDGE ,Number gulper,NUMGULP,c,19,EDU152,u,n,@
 ASK APPLIED SYSTEMS KNOWLEDGE ,Number painter,Number,c,19,EDU151,u,n,@
@@ -1470,7 +1470,7 @@ Brilliant Computing,SWITCH ON TRAVEL,SOT-TL,c,19,EDU243,u,n,@
 Brilliant Computing,ted sea side,Start,c,19,EDU244,u,n,@
 Brilliant Computing,ted steps out,Start,c,19,EDU245,u,n,@
 Brilliant Computing,Teds shopping party,Start,c,19,EDU246,u,n,@
-Brilliant Computing,Ted goes?,ttl,c,19,EDU240,u,n,@
+Brilliant Computing,Ted goesâ€¦,ttl,c,19,EDU240,u,n,@
 Brilliant Computing,Ted goes visiting,visit,c,19,EDU240,u,n,@
 Brilliant Computing,Ted goes to the supermarket,shop,c,19,EDU240,u,n,@
 Brilliant Computing,TIME FOR WORK ,loader,c,19,EDU240,u,n,@
@@ -1700,108 +1700,108 @@ Database,Conveyor belt,CONVEYA,c,13,EDU294,u,n,@
 unknown,Splash!,Splash!,c,19,EDU289,u,n,@
 unknown,Cornish Riviera ,cr,c,19,EDU293,u,n,@
 unknown,TASLOGO,Start,c,19,EDU295,u,n,@
-unknown,Energy  usage ,energy,c,12,EDU294,u,n,@
+unknown,EnergyÂ  usage ,energy,c,12,EDU294,u,n,@
 unknown,Flash with Fireworks ,Title,c,19,EDU296,u,n,@
-DESC ,Abacus,ABACUS,c,19,EDU296,u,n,@
-DESC ,Adding,ADDING,c,19,EDU296,u,n,@
-DESC ,Angles,ANGLES,c,19,EDU296,u,n,@
-DESC ,Areas,AREAS,c,19,EDU296,u,n,@
-DESC ,Change,CHANGE,c,19,EDU296,u,n,@
-DESC ,Clocks,CLOCKS,c,19,EDU296,u,n,@
-DESC ,Conceal,CONCEAL,c,19,EDU296,u,n,@
-DESC ,Connect Four,CONNECT,c,19,EDU296,u,n,@
-DESC ,Circles,CIRCLES,c,15,EDU297,u,n,@
-DESC ,Fraction Lines,FLINES,c,15,EDU297,u,n,@
-DESC ,Remainders,REMAINS,c,15,EDU297,u,n,@
-DESC ,Triangles,TRIANG1,c,15,EDU297,u,n,@
-DESC ,Bango,BANGO,c,15,EDU297,u,n,@
-DESC ,Criss-Cross,CRISS,c,15,EDU297,u,n,@
-DESC ,Hunt,HUNT,c,15,EDU297,u,n,@
-DESC ,Links,LINKS,c,15,EDU297,u,n,@
-DESC ,Routes,ROUTES1 ,c,15,EDU297,u,n,@
-DESC ,Stars,STARS,c,15,EDU297,u,n,@
-DESC ,Balancing equations,EQUATNS,c,15,EDU298,u,n,@
-DESC ,Chemical formulas,FORMULA,c,15,EDU298,u,n,@
-DESC ,Inorg. analysis,INORGAN,c,15,EDU298,u,n,@
-DESC ,Ionisation energy,IONSEN,c,15,EDU298,u,n,@
-DESC ,Salt preparation,SALTPRP,c,15,EDU298,u,n,@
-DESC ,Symbols,SYMBOL,c,15,EDU298,u,n,@
-DESC ,symbols & formula,SANDF,c,15,EDU298,u,n,@
-DESC ,Molecular velocities,BOLTZ,c,15,EDU298,u,n,@
-DESC ,Chemical sites,INDCHEM,c,15,EDU298,u,n,@
-DESC ,Reaction rates,RATE,c,15,EDU298,u,n,@
-DESC ,Fertilisers,NPK,c,15,EDU298,u,n,@
-DESC ,Element data,ELEMPRG,c,15,EDU298,u,n,@
-DESC ,Combining masses,ZINCI2,c,15,EDU298,u,n,@
-DESC ,Simple inorg.analysis,LOWAN,c,15,EDU298,u,n,@
-DESC ,Metal structure,METALS,c,15,EDU299,u,n,@
-DESC ,Iron works site,SITEX,c,15,EDU299,u,n,@
-DESC ,Moving molecules,MOLEC,c,15,EDU299,u,n,@
-DESC ,Ion cmpd.structures,IONSTR,c,15,EDU299,u,n,@
-DESC ,I.R. spectra,IR1,c,15,EDU299,u,n,@
-DESC ,pH plots etc.,PH2,c,15,EDU299,u,n,@
-DESC ,Inorg. analysis,IANAL,c,15,EDU299,u,n,@
-DESC ,Simple org.analysis,ORGANIC,c,15,EDU299,u,n,@
-DESC ,Hard org.analysis,ORGANAL,c,15,EDU299,u,n,@
-DESC ,Chemical apparatus,APPARAT,c,15,EDU299,u,n,@
-DESC ,Element data test,CHEMEL,c,15,EDU299,u,n,@
-DESC ,CROSSES,CROSSES,c,19,EDU300,u,n,@
-DESC ,FROGS ,FROGS ,c,19,EDU300,u,n,@
-DESC ,Mallory Manor,MALLORY,c,19,EDU300,u,n,@
-DESC ,SQUARES,SQUARES,c,19,EDU300,u,n,@
-DESC ,Word PLAY,WPLAY,c,19,EDU300,u,n,@
-DESC ,Counting Words,CWORDS,c,19,EDU300,u,n,@
-DESC ,NUMber RACE,numrace,c,19,EDU300,u,n,@
-DESC ,Ligne,index41,C,15,EDU301,u,n,@
-DESC ,Joey,Joey,C,15,EDU301,u,n,@
-DESC ,Star light,S/LIGHT,C,15,EDU301,u,n,@
-DESC ,Christmas tree,C/TREE,C,15,EDU301,u,n,@
-DESC ,Beetles,Beetles,C,15,EDU301,u,n,@
-DESC ,Happy faces,H/FACES,C,15,EDU301,u,n,@
-DESC ,Mouse,Mouse,C,15,EDU301,u,n,@
-DESC ,Shape counter,S/COUNT,C,15,EDU301,u,n,@
-DESC ,Skittles,Skittle,C,15,EDU301,u,n,@
-DESC ,Snakes alive,S/ALIVE,C,15,EDU301,u,n,@
-DESC ,Sunny,Sunny,C,15,EDU301,u,n,@
-DESC ,More - fewer,M/FEWER,C,15,EDU301,u,n,@
-DESC ,Hippity hoppity,HIP/HOP,C,15,EDU301,u,n,@
-DESC ,Rabbits,RABBITS,C,15,EDU301,u,n,@
-DESC ,Smiley,SMILEY,C,15,EDU302,u,n,@
-DESC ,BANDIT,BANDIT+,C,15,EDU302,u,n,@
-DESC ,BOTTLE,BOTTLE+,C,15,EDU302,u,n,@
-DESC ,HeliCOPTER,COPTER+,C,15,EDU302,u,n,@
-DESC ,DARTS,DARTS+,C,15,EDU302,u,n,@
-DESC ,DERBys,DERBRN+,C,15,EDU302,u,n,@
-DESC ,DIGIT,DIGIT,C,15,EDU302,u,n,@
-DESC ,EASY as PI,EASYPI,C,15,EDU302,u,n,@
-DESC ,FLOWERS,FLOWERS,C,15,EDU302,u,n,@
-DESC ,dice,DICE,C,15,EDU303,u,n,@
-DESC ,factor frog,FFROG+,C,15,EDU303,u,n,@
-DESC ,fido,FIDO+,C,15,EDU303,u,n,@
-DESC ,ladybirds,LADYBRD,C,15,EDU303,u,n,@
-DESC ,minibeast,MINIB,C,15,EDU303,u,n,@
-DESC ,mix it,MIXIT,C,15,EDU303,u,n,@
-DESC ,spider,SPIDER+,C,15,EDU303,u,n,@
-DESC ,word house,WORDHO,C,15,EDU303,u,n,@
-DESC ,Stop It  ,stopit,C,15,EDU303,u,n,@
-DESC ,Buildings,BUILDGS,C,15,EDU303,u,n,@
-DESC ,Goal,GOAL,C,15,EDU303,u,n,@
-DESC ,Shuffle,C.SHUFFLE,C,15,EDU303,u,n,@
-DESC ,Ourselves,OURSELV,C,15,EDU303,u,n,@
-DESC ,Shape counter,SHAPECC,C,15,EDU303,u,n,@
-DESC ,Picplot,PICPLOT,C,15,EDU303,u,n,@
-DESC ,Findit,FINDIT,C,15,EDU303,u,n,@
-DESC ,Spelling Mistakes,SPELMIS,C,15,EDU303,u,n,@
-DESC ,Matchit,MATCHIT,C,15,EDU303,u,n,@
-DESC ,spider nim,SPINIM,C,15,EDU304,u,n,@
-DESC ,Engines & electrics,ENGINE,C,15,EDU304,u,n,@
-DESC ,wild flowers,WFHEAD,C,15,EDU304,u,n,@
-DESC ,GUITAR CHORDS,CHORDS,C,15,EDU304,u,n,@
-DESC ,weather plot,WP,C,15,EDU304,u,n,@
-DESC ,string word create,STWD-T,C,15,EDU304,u,n,@
-DESC ,string word look,STWD-L,C,15,EDU304,u,n,@
-DESC ,string word children,SWHEAD,C,15,EDU304,u,n,@
-DESC ,school journey,SJHEAD,C,15,EDU304,u,n,@
+DESCÂ ,Abacus,ABACUS,c,19,EDU296,u,n,@
+DESCÂ ,Adding,ADDING,c,19,EDU296,u,n,@
+DESCÂ ,Angles,ANGLES,c,19,EDU296,u,n,@
+DESCÂ ,Areas,AREAS,c,19,EDU296,u,n,@
+DESCÂ ,Change,CHANGE,c,19,EDU296,u,n,@
+DESCÂ ,Clocks,CLOCKS,c,19,EDU296,u,n,@
+DESCÂ ,Conceal,CONCEAL,c,19,EDU296,u,n,@
+DESCÂ ,Connect Four,CONNECT,c,19,EDU296,u,n,@
+DESCÂ ,Circles,CIRCLES,c,15,EDU297,u,n,@
+DESCÂ ,Fraction Lines,FLINES,c,15,EDU297,u,n,@
+DESCÂ ,Remainders,REMAINS,c,15,EDU297,u,n,@
+DESCÂ ,Triangles,TRIANG1,c,15,EDU297,u,n,@
+DESCÂ ,Bango,BANGO,c,15,EDU297,u,n,@
+DESCÂ ,Criss-Cross,CRISS,c,15,EDU297,u,n,@
+DESCÂ ,Hunt,HUNT,c,15,EDU297,u,n,@
+DESCÂ ,Links,LINKS,c,15,EDU297,u,n,@
+DESCÂ ,Routes,ROUTES1 ,c,15,EDU297,u,n,@
+DESCÂ ,Stars,STARS,c,15,EDU297,u,n,@
+DESCÂ ,Balancing equations,EQUATNS,c,15,EDU298,u,n,@
+DESCÂ ,Chemical formulas,FORMULA,c,15,EDU298,u,n,@
+DESCÂ ,Inorg. analysis,INORGAN,c,15,EDU298,u,n,@
+DESCÂ ,Ionisation energy,IONSEN,c,15,EDU298,u,n,@
+DESCÂ ,Salt preparation,SALTPRP,c,15,EDU298,u,n,@
+DESCÂ ,Symbols,SYMBOL,c,15,EDU298,u,n,@
+DESCÂ ,symbols & formula,SANDF,c,15,EDU298,u,n,@
+DESCÂ ,Molecular velocities,BOLTZ,c,15,EDU298,u,n,@
+DESCÂ ,Chemical sites,INDCHEM,c,15,EDU298,u,n,@
+DESCÂ ,Reaction rates,RATE,c,15,EDU298,u,n,@
+DESCÂ ,Fertilisers,NPK,c,15,EDU298,u,n,@
+DESCÂ ,Element data,ELEMPRG,c,15,EDU298,u,n,@
+DESCÂ ,Combining masses,ZINCI2,c,15,EDU298,u,n,@
+DESCÂ ,Simple inorg.analysis,LOWAN,c,15,EDU298,u,n,@
+DESCÂ ,Metal structure,METALS,c,15,EDU299,u,n,@
+DESCÂ ,Iron works site,SITEX,c,15,EDU299,u,n,@
+DESCÂ ,Moving molecules,MOLEC,c,15,EDU299,u,n,@
+DESCÂ ,Ion cmpd.structures,IONSTR,c,15,EDU299,u,n,@
+DESCÂ ,I.R. spectra,IR1,c,15,EDU299,u,n,@
+DESCÂ ,pH plots etc.,PH2,c,15,EDU299,u,n,@
+DESCÂ ,Inorg. analysis,IANAL,c,15,EDU299,u,n,@
+DESCÂ ,Simple org.analysis,ORGANIC,c,15,EDU299,u,n,@
+DESCÂ ,Hard org.analysis,ORGANAL,c,15,EDU299,u,n,@
+DESCÂ ,Chemical apparatus,APPARAT,c,15,EDU299,u,n,@
+DESCÂ ,Element data test,CHEMEL,c,15,EDU299,u,n,@
+DESCÂ ,CROSSES,CROSSES,c,19,EDU300,u,n,@
+DESCÂ ,FROGS ,FROGS ,c,19,EDU300,u,n,@
+DESCÂ ,Mallory Manor,MALLORY,c,19,EDU300,u,n,@
+DESCÂ ,SQUARES,SQUARES,c,19,EDU300,u,n,@
+DESCÂ ,Word PLAY,WPLAY,c,19,EDU300,u,n,@
+DESCÂ ,Counting Words,CWORDS,c,19,EDU300,u,n,@
+DESCÂ ,NUMber RACE,numrace,c,19,EDU300,u,n,@
+DESCÂ ,Ligne,index41,C,15,EDU301,u,n,@
+DESCÂ ,Joey,Joey,C,15,EDU301,u,n,@
+DESCÂ ,Star light,S/LIGHT,C,15,EDU301,u,n,@
+DESCÂ ,Christmas tree,C/TREE,C,15,EDU301,u,n,@
+DESCÂ ,Beetles,Beetles,C,15,EDU301,u,n,@
+DESCÂ ,Happy faces,H/FACES,C,15,EDU301,u,n,@
+DESCÂ ,Mouse,Mouse,C,15,EDU301,u,n,@
+DESCÂ ,Shape counter,S/COUNT,C,15,EDU301,u,n,@
+DESCÂ ,Skittles,Skittle,C,15,EDU301,u,n,@
+DESCÂ ,Snakes alive,S/ALIVE,C,15,EDU301,u,n,@
+DESCÂ ,Sunny,Sunny,C,15,EDU301,u,n,@
+DESCÂ ,More - fewer,M/FEWER,C,15,EDU301,u,n,@
+DESCÂ ,Hippity hoppity,HIP/HOP,C,15,EDU301,u,n,@
+DESCÂ ,Rabbits,RABBITS,C,15,EDU301,u,n,@
+DESCÂ ,Smiley,SMILEY,C,15,EDU302,u,n,@
+DESCÂ ,BANDIT,BANDIT+,C,15,EDU302,u,n,@
+DESCÂ ,BOTTLE,BOTTLE+,C,15,EDU302,u,n,@
+DESCÂ ,HeliCOPTER,COPTER+,C,15,EDU302,u,n,@
+DESCÂ ,DARTS,DARTS+,C,15,EDU302,u,n,@
+DESCÂ ,DERBys,DERBRN+,C,15,EDU302,u,n,@
+DESCÂ ,DIGIT,DIGIT,C,15,EDU302,u,n,@
+DESCÂ ,EASY as PI,EASYPI,C,15,EDU302,u,n,@
+DESCÂ ,FLOWERS,FLOWERS,C,15,EDU302,u,n,@
+DESCÂ ,dice,DICE,C,15,EDU303,u,n,@
+DESCÂ ,factor frog,FFROG+,C,15,EDU303,u,n,@
+DESCÂ ,fido,FIDO+,C,15,EDU303,u,n,@
+DESCÂ ,ladybirds,LADYBRD,C,15,EDU303,u,n,@
+DESCÂ ,minibeast,MINIB,C,15,EDU303,u,n,@
+DESCÂ ,mix it,MIXIT,C,15,EDU303,u,n,@
+DESCÂ ,spider,SPIDER+,C,15,EDU303,u,n,@
+DESCÂ ,word house,WORDHO,C,15,EDU303,u,n,@
+DESCÂ ,Stop It  ,stopit,C,15,EDU303,u,n,@
+DESCÂ ,Buildings,BUILDGS,C,15,EDU303,u,n,@
+DESCÂ ,Goal,GOAL,C,15,EDU303,u,n,@
+DESCÂ ,Shuffle,C.SHUFFLE,C,15,EDU303,u,n,@
+DESCÂ ,Ourselves,OURSELV,C,15,EDU303,u,n,@
+DESCÂ ,Shape counter,SHAPECC,C,15,EDU303,u,n,@
+DESCÂ ,Picplot,PICPLOT,C,15,EDU303,u,n,@
+DESCÂ ,Findit,FINDIT,C,15,EDU303,u,n,@
+DESCÂ ,Spelling Mistakes,SPELMIS,C,15,EDU303,u,n,@
+DESCÂ ,Matchit,MATCHIT,C,15,EDU303,u,n,@
+DESCÂ ,spider nim,SPINIM,C,15,EDU304,u,n,@
+DESCÂ ,Engines & electrics,ENGINE,C,15,EDU304,u,n,@
+DESCÂ ,wild flowers,WFHEAD,C,15,EDU304,u,n,@
+DESCÂ ,GUITAR CHORDS,CHORDS,C,15,EDU304,u,n,@
+DESCÂ ,weather plot,WP,C,15,EDU304,u,n,@
+DESCÂ ,string word create,STWD-T,C,15,EDU304,u,n,@
+DESCÂ ,string word look,STWD-L,C,15,EDU304,u,n,@
+DESCÂ ,string word children,SWHEAD,C,15,EDU304,u,n,@
+DESCÂ ,school journey,SJHEAD,C,15,EDU304,u,n,@
 Dial,anagrams,anagram,C,19,EDU304,u,n,@
 Dial,BELLS,BELLS,C,19,EDU304,u,n,@
 Dial,TOWER,TOWER,C,19,EDU304,u,n,@
@@ -1830,32 +1830,32 @@ unknown,Number Drop ,drop,C,19,EDU302,u,n,@
 unknown,Percentages ,PERCENT,C,19,EDU300,u,n,@
 unknown,CALForm,CALForm,C,19,EDU300,u,n,@
 unknown,Dynamics ,fp,C,19,EDU307,u,n,@
-,Multiplication Train ,train,C,19,EDU300,u,n,@
-,Thorne House Spelling ,loader,C,19,EDU308,u,n,@
-,Number Stories,st,C,19,EDU300,u,n,@
-,Alphashoot ,ALFSHOT,C,19,EDU308,u,n,@
-,Diet Analysis,DIETF2,C,19,EDU308,u,n,@
-,Personal Best,PB,C,19,EDU308,u,n,@
-,count,count,C,19,,u,n,@
-,Overlaps ,olaps,C,19,,u,n,@
-,Weaving ,weave,c,0e,,u,n,@
-,Islamic Patterns,islam,c,0e,,u,n,@
-,Animation Kit,kit,c,0e,,u,n,@
-,Squares,sq,c,0e,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
-,,,,,,u,n,@
+unknown,Multiplication Train ,train,C,19,EDU300,u,n,@
+unknown,Thorne House Spelling ,loader,C,19,EDU308,u,n,@
+unknown,Number Stories,st,C,19,EDU300,u,n,@
+unknown,Alphashoot ,ALFSHOT,C,19,EDU308,u,n,@
+unknown,Diet Analysis,DIETF2,C,19,EDU308,u,n,@
+unknown,Personal Best,PB,C,19,EDU308,u,n,@
+unknown,which salt,Mainpro,c,0e,EDU308,u,n,@
+unknown,Quest info retrevial,quest,C,19,EDU308,u,n,@
+unknown,number invader,num/inv,C,19,EDU308,u,n,@
+unknown,Company Quest,COMPANY,c,0e,EDU309,u,n,@
+unknown,Dozer Disorder,DOZER,c,0e,EDU309,u,n,@
+unknown,Hiss,HISS,c,0e,EDU309,u,n,@
+unknown,Maths Fun,MATHS,c,0e,EDU309,u,n,@
+unknown,Odd One Out,ODD,c,0e,EDU309,u,n,@
+unknown,Yule Spell,YULE,c,0e,EDU309,u,n,@
+unknown,Crocodile Tears,CROC,c,0e,EDU309,u,n,@
+unknown,Hungry Harry,HARRY,c,0e,EDU309,u,n,@
+unknown,Lemonade Stall,LEMONAD,c,0e,EDU309,u,n,@
+unknown,Snail Trail,SNAIL,c,0e,EDU309,u,n,@
+unknown,animal veg min,AVM1,c,0e,EDU308,u,n,@
+unknown,Asm circle,circle,c,19,EDU309,u,n,@
+unknown,Asm game,game,c,19,EDU309,u,n,@
+unknown,Asm music,music,c,19,EDU309,u,n,@
+unknown,Asm xmas,xmas,c,19,EDU309,u,n,@
+unknown,Asm clock, ,c,19,EDU309,u,n,@
+unknown,Asm ladder,ladder,c,19,EDU309,u,n,@
+,Who is it french,Who17,,,EDU306,u,n,@
+,french directions,map34,,,EDU306,u,n,@
 ,,,,,,u,n,@

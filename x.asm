@@ -6,7 +6,7 @@ INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
 INCLUDE "TELETEXT.asm"
-__DEBUG = FALSE \TRUE
+
 \"…Variables
 NoSpecials%=7:\"offset from 1
 EndSpecial%=&FF-NoSpecials% \ TODO REMOVE
@@ -527,7 +527,15 @@ INCLUDE "command args.asm"
 		
 		.boot
 		{
-		LDY pramlen
+		\LDY pramlen
+		LDY #&FF
+		.aa
+		INY
+		LDA pram%,Y
+		CMP #&D
+		BNE aa
+		DEY
+		STY pramlen
 		LDA pram%+1 \
 		CMP #'.'
 		BNE ad
@@ -540,7 +548,7 @@ INCLUDE "command args.asm"
 		LDA boottxt+2,Y
 		CMP pram%,Y
 		BEQ aj
-		ADC #32
+		ADC #32 \case
 		CMP pram%,y
 		BNE notboot
 		.aj
@@ -1484,13 +1492,13 @@ INCLUDE "command args.asm"
 	\Zero terminated strings 
 		.reppre
 		EQUS &D,&D,&D,&D,&D,&D,"When game loads please press"
-		EQUS TELETEXTgreentext,"L",&D,"Then press"
-		EQUS TELETEXTgreentext
+		EQUS TELETEXTgreentext%,"L",&D,"Then press"
+		EQUS TELETEXTgreentext%
 		EQUB 0
 		.reppost
-		EQUS TELETEXTwhitetext,"to load selected level",&D
-		EQUS TELETEXTyellowtext
-		EQUS TELETEXTflashon,"Press any key",&D
+		EQUS TELETEXTwhitetext%,"to load selected level",&D
+		EQUS TELETEXTyellowtext%
+		EQUS TELETEXTflashon%,"Press any key",&D
 		EQUB 0
 		.end
 SAVE "x", start, end,startexec

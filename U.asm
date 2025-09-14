@@ -370,26 +370,31 @@ INCLUDE "OSARGS.ASM"
 		JSR printdoubleheight
 		\JSR PrintstrA
 		\PREss any key
+		LDA #0
+		STA strAoffset
+		LDA #TELETEXTgreentext%
+		JSR AddCharToStrA
+		LDX #Pressanykey%
+		JSR prepcmd
+		JSR PrintstrA
 		JSR gti
 		\create x command
 		\x filename drive din
 		.exit
 		}
 		\do not need to set drive back as read cat without dr cmd!
-		
-
 		LDX #xcmd%
 		JSR initprepcmd
 		JSR AddPramToStrA
-		DEC strAoffset
+		\DEC strAoffset
 		LDA #' '
 		JSR AddCharToStrA
 		LDA drive%
 		JSR AddCharToStrA
 		LDA #&D
 		JSR AddCharToStrA
-		\JMP execmd \rts
-		RTS
+		JMP execmd \rts
+		\RTS
 		
 		\X is pointer to next char in strA%
 		\.ab
@@ -545,6 +550,8 @@ Diskname%=10
 	EQUS"Disk name",&80+':'
 Nocatno%=11
 	EQUS"No catalogue number given so..",&8D
+Pressanykey%=12
+	EQUS"Press any key to launc",&80+'h'
 	.lowertxt
 	\-------------------------------
 	\NB keep below 255 chars zero ternminated

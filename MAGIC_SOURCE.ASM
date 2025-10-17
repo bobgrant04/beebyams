@@ -4,7 +4,9 @@
 \where xxxx has different code to be run
 \note order is important as a rom and basic can have characteristics of text
 \
-
+\Entry 10
+\10,load,offset from end,exec,load,ident
+EQUS 10,0,&11,&4D,0,0,0,0,0,"Relocate basic to 0E00 #1",13
 \9,number of bytes to match anywhere in first Page,exec,load,ident
 EQUS 9,5,"<>&E00",&23,&80,0,&0E,"Basic page=&E00 #1",13
 EQUS 9,6,"<>&1100",&23,&80,0,&11,"Basic page=&1100 #1",13
@@ -35,15 +37,24 @@ EQUS 4,&2B,&80,&23,&80,0,0,"Basic #4",13
 EQUS 4,&7,&7F,&7,&7F,0,&7C,"Mode 7 screen #1",13
 EQUS 4,&6,&7F,&6,&7F,0,&60,"Mode 6 screen #1",13
 EQUS 4,&5,&7F,&5,&7F,0,&58,"Mode 5 screen #1",13
-EQUS 4,&4,&7F,&4,&7F,0,&7C,"Mode 4 screen #1",13
+EQUS 4,&4,&7F,&4,&7F,0,&58,"Mode 4 screen #1",13
 EQUS 4,&3,&7F,&3,&7F,0,&40,"Mode 3 screen #1",13
 EQUS 4,&2,&7F,&2,&7F,0,&30,"Mode 2 screen #1",13
 EQUS 4,&1,&7F,&1,&7F,0,&30,"Mode 1 screen #1",13
-EQUS 4,&0,&7F,&0,&7F,0,&7C,"Mode 0 screen #1",13
+EQUS 4,&0,&7F,&0,&7F,0,&30,"Mode 0 screen #1",13
 \see DecodingRepton.pdf
 \8,length,exec,load,ident
 EQUS 8,&30,&25,&F4,&7F,0,0,"Repton Infinity screen #1",13
 EQUS 8,&20,&26,&F6,&7F,&E0,&31,"Repton 3 screen #2",13
+\10,len,exec,load,ident
+EQUS 8,0,&4,&7,&7F,0,&7C,"Mode 7 screen #2",13
+EQUS 8,&0,&20,&6,&7F,0,&60,"Mode 6 screen #2",13
+EQUS 8,&0,&28,&5,&7F,0,&58,"Mode 5 screen #2",13
+\EQUS 8,&0,&28,&4,&7F,0,&58,"Mode 4 screen #2",13
+EQUS 8,&0,&40,&3,&7F,0,&40,"Mode 3 screen #2",13
+EQUS 8,&0,&50,&2,&7F,0,&30,"Mode 2 screen #2",13
+\EQUS 8,&0,&50,&1,&7F,0,&30,"Mode 1 screen #2",13
+\EQUS 8,&0,&50,&0,&7F,0,&30,"Mode 0 screen #2",13
 
 \Entry 5
 \5 no of high byte pairs (high,count or higher),exec,load,ident
@@ -66,13 +77,20 @@ EQUS 5,2,' ',0,'E',0,&FC,&7F,0,0,"text/word #2",13
 \7,count,no entries,bytes,exec,load,ident
 EQUS 7,110,8,'a','e','h','i','n','o','r','s','t',&FC,&7F,0,0,"text/word #3",13
 EQUS 7,110,8,'A','E','H','I','N','O','R','S','T',&FC,&7F,0,0,"text/word #4",13
+\mode 0,1,2 &3000 len &5000
+\mode 3 &4000 len &4000
+\mode 4,5 &5800 len &2800
+\mode 6 &6000 len &2000
+\mode 7 &7C00 len &400
+
 
 
 \&FF Entries that have no pattern but X will honour added to aid management of Magic addresses
-EQUS &FF,&FD,&FD,0,0,"Showpic #1",13
-EQUS &FF,&FB,&FD,0,0,"Dump #1",13
-EQUS &FF,&FA,&FD,0,0,"Exec #1",13
-EQUS &FF,&F7,&FD,0,0,"viewsheet #1",13
+EQUS &FF,&FD,&7F,0,0,"Showpic #1",13
+EQUS &FF,&FB,&7F,0,0,"Dump #1",13
+EQUS &FF,&FA,&7F,0,0,"Exec #1",13
+EQUS &FF,&F7,&7F,0,0,"viewsheet #1",13
+
 \marks end of block
 EQUS 0
 

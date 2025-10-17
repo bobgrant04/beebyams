@@ -17,7 +17,7 @@ INCLUDE "VERSION.asm"
 INCLUDE "SYSVARS.asm"			; OS constants
 INCLUDE "BEEBINTS.asm"			; A% to Z% as a ... z
 
-__DEBUG = FALSE
+\__DEBUG = FALSE
 
 \…Variables
 \NoSpecials%=1:\"offset from 1
@@ -37,6 +37,7 @@ noofbytes=&2F
 ypush=&30
 len =&31
 OptionBit% =&32 \used by command args.asm
+calcexe%=&33 \2 bytes
 \--------------
 \&3B to &42 basic float
 \single bytes
@@ -279,7 +280,7 @@ INCLUDE "command args.asm"
 		LDA (Aptr),Y
 		BNE aa
 		.exittablescan
-		JSR screencheck
+		\JSR screencheck
 		JMP alldone
 		.aa
 		IF __DEBUG
@@ -342,8 +343,13 @@ INCLUDE "command args.asm"
 		JMP Magic8
 		.Not8
 		DEX
-		BNE exittablescan
+		BNE Not9
 		JMP Magic9
+		.Not9
+		DEX
+		\BNE Not10
+		BNE exittablescan
+		JMP Magic10
 		}
 \should not be here
 \drop through to screencheck
@@ -353,66 +359,67 @@ BRK
 \screencheck TODO add this to magic file - how can we differentiate modes 
 \with same load and size? currently pick the first one!
 		.screencheck
-		{
-		\mode 7 &7C00 len &400
-		LDA l+1
-		CMP #&7C
-		BNE Notmode7
-			{
-			LDA s+1
-			CMP #4
-			BNE exit
-			LDA #7
-			JMP setexe \rts
-			}
-		.Notmode7
-		\mode 6 &6000 len &2000
-		CMP #&60
-		BNE Notmode6
-			{
-			LDA s+1
-			CMP #&20
-			BNE exit
-			LDA #6
-			JMP setexe
-			}
-		.Notmode6
-		\mode 4,5 &5800 len &2800
-		CMP  #&58
-		BNE Notmode4
-			{
-			LDA s+1
-			CMP #&28
-			BNE exit
-			LDA #4
-			JMP setexe
-			}
-		.Notmode4
-		\mode 3 &4000 len &4000
-		CMP  #&40
-		BNE Notmode3
-			{
-			LDA s+1
-			CMP #&40
-			BNE exit
-			LDA #3
-			JMP setexe
-			}
-		.Notmode3
-		\mode 0,1,2 &3000 len &5000
-		CMP #&30
-		BNE Notmode0
-			{
-			LDA s+1
-			CMP #&50
-			BNE exit
-			LDA #0
-			JMP setexe
-			}
-		.Notmode0
-		.exit
 		RTS
-		}
+		\{
+		\mode 7 &7C00 len &400
+		\LDA l+1
+		\CMP #&7C
+		\BNE Notmode7
+		\	{
+		\	LDA s+1
+		\	CMP #4
+		\	BNE exit
+		\	LDA #7
+		\	JMP setexe \rts
+		\	}
+		\.Notmode7
+		\mode 6 &6000 len &2000
+		\CMP #&60
+		\BNE Notmode6
+		\	{
+		\	LDA s+1
+		\	CMP #&20
+		\	BNE exit
+		\	LDA #6
+		\	JMP setexe
+		\	}
+		\.Notmode6
+		\mode 4,5 &5800 len &2800
+		\CMP  #&58
+		\BNE Notmode4
+		\	{
+		\	LDA s+1
+		\	CMP #&28
+		\	BNE exit
+		\	LDA #4
+		\	JMP setexe
+		\	}
+		\.Notmode4
+		\mode 3 &4000 len &4000
+		\CMP  #&40
+		\BNE Notmode3
+		\	{
+		\	LDA s+1
+		\	CMP #&40
+		\	BNE exit
+		\	LDA #3
+		\	JMP setexe
+		\	}
+		\.Notmode3
+		\mode 0,1,2 &3000 len &5000
+		\CMP #&30
+		\BNE Notmode0
+		\	{
+		\	LDA s+1
+		\	CMP #&50
+		\	BNE exit
+		\	LDA #0
+		\	JMP setexe
+		\	}
+		\.Notmode0
+		\.exit
+		\RTS
+		\}
 
 		.alldone
 		{
@@ -439,7 +446,7 @@ BRK
 
 
 \ALL Magic subs end with either Fullmatch if matched
-\Fullmatch needs to point to exe
+\Fullmatch needs Y to point to exe
 \or movenext - requires Y to be in the description part of the record
 \&FF,exec,load ident
 		.MagicFF
@@ -714,6 +721,49 @@ BRK
 		LDY tempy%
 		LDX tempx
 		BNE loop
+		}
+\Magic10
+\10,load,offset from end,exec,load,ident
+		.Magic10
+		{
+		INY
+		LDA (Aptr),Y
+		CMP load%
+		BNE nomatch
+		INY
+		LDA (Aptr),Y
+		CMP load%+1
+		BNE nomatch
+		\do some math!
+		\load% + size - x =exe?
+		CLC
+		LDA size%
+		ADC load%
+		STA calcexe%
+		LDA size%+1
+		ADC load%+1
+		STA calcexe%+1		
+		LDA calcexe%
+		INY
+		SEC
+		SBC (Aptr),Y
+		STA calcexe%
+		INY
+		LDA calcexe%+1
+		SBC (Aptr),Y
+		CMP exe%+1
+		BNE nomatch
+		LDA calcexe%
+		CMP exe%
+		BNE nomatch
+		INY
+		\JMP fullmatch
+		LDY #9
+		JMP printdescription \RTS do not want to be told its basic !
+		\calcexe%
+		.nomatch
+		LDY #9
+		JMP NextRec
 		}
 \GethighestByte
 		.GethighestByte

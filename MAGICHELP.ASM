@@ -8,7 +8,8 @@
 		\A=3 Match either exe and or load
 		MAGICHELPMatchEitherLoadOrExe =3
 
-IF __MAGICHELPPRINT = TRUE	
+IF __MAGICHELPPRINT = TRUE
+	
 		IF __OSARGSOptions = TRUE
 			{
 			LDA MAGICHELPOptionBit%
@@ -18,10 +19,13 @@ IF __MAGICHELPPRINT = TRUE
 			.cont
 			}
 		ENDIF
+		.ExtendedHelp
 		.MAGICHELPPRINT
 		IF __MAGICHELPPRINTSELECTED = TRUE
+			LDA #MAGICHELPFullprint
 			STA MAGICHELPPrintType%
 		ENDIF
+		
 		.MAGICHELPPRINTInitAptrtoMagicData
 		{
 		LDA #LO(MagicData)
@@ -118,12 +122,18 @@ IF __MAGICHELPPRINT = TRUE
 		JMP MAGICHELPdisplayrec
 		.Not8
 		DEX
-		BNE exittablescan
+		BNE Not9
 		\9,number of bytes to match anywhere in first Page,exec,load,ident
 		INY
 		LDA (MAGICHELPAptr),Y
 		CLC
 		ADC #3
+		JMP MAGICHELPdisplayrec
+		.Not9
+		\0A ,load,offset from end,exec,load,ident
+		DEX
+		BNE exittablescan
+		LDA #5
 		JMP MAGICHELPdisplayrec
 		}
 		.exittablescan

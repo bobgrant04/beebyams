@@ -59,7 +59,8 @@ size%=blockstart+&A
 cat=&72
 \codestart=&70
 zz=&8E
-
+\&F8-F9 UNUSED BY OS
+PrintType%=&F8
 
 \end zero 
 
@@ -90,6 +91,7 @@ __OSARGSargXtoOSARGSStrLenA = TRUE
 __OSARGSargGetDrive = TRUE
 __OSARGSFileNameToOSARGSPram = TRUE
 __OSARGSOptions = TRUE
+__OSARGSExtendedHelp = TRUE
 \Variables - 
 OSARGSstrA =strA%
 OSARGSStrLenA = strAoffset
@@ -106,42 +108,23 @@ ENDIF
 OSARGSbitOptionQuiet% = 1
 OSARGSbitOptionVerbose% =2
 
-\needs following routines 
-\		initprepcmd
-\		prepcmd - part of initprepcmd
-\		MoveToRec
-\		PrintRecord
-\		diserror
-\		execmd
-\		setrequesteddrive
-\		getcurrentdrive
-\		gti	- needed for __debug
-\needs following in data section
-\.CommandAndText
-\&80 terminated with last character added to &80
-\	dricmd%=1 --can alter if required
-\\		EQUS"DR. ",&8D
-\	dincmd%=2  --can alter if required
-\\		EQUS"DIN",' '+&80
-\	usage%=3 --can alter if required
-\\ 		EQUS"Usage <fsp> (<drv>) (<dno>/<dsp>)",&80+&D --edit as needed
-\ notfound% = 4--can alter if required
-\		EQUS"file not found",&8D
 \-------------------------------------------------------
-INCLUDE "OSARGS.ASM"
+\
 \-------------------------------------------------------
 __MAGICHELPPRINT = TRUE
-__MAGICHELPPRINTSELECTED = FALSE
+__MAGICHELPPRINTSELECTED = TRUE
 MAGICHELPAptr = Aptr
 MAGICHELPload%=load%
 MAGICHELPexe%=exe%
+
 IF __MAGICHELPPRINTSELECTED = TRUE
-	MAGICHELPPrintType% = Printtype%
+	MAGICHELPPrintType% = PrintType%
 ENDIF
 IF __OSARGSOptions = TRUE
 	MAGICHELPOptionBit% = OptionBit%
 ENDIF
 \-------------------------------------------------------
+INCLUDE "OSARGS.ASM"
 INCLUDE "MAGIC_SOURCE.asm"		\magic configuration
 INCLUDE "MAGICHELP.ASM"
 INCLUDE "command args.asm"
@@ -349,7 +332,7 @@ INCLUDE "command args.asm"
 		DEX
 		\BNE Not10
 		BNE exittablescan
-		JMP Magic10
+		JMP MagicA
 		}
 \should not be here
 \drop through to screencheck
@@ -724,7 +707,7 @@ BRK
 		}
 \Magic10
 \10,load,offset from end,exec,load,ident
-		.Magic10
+		.MagicA
 		{
 		INY
 		LDA (Aptr),Y
@@ -736,6 +719,7 @@ BRK
 		BNE nomatch
 		\do some math!
 		\load% + size - x =exe?
+		\
 		CLC
 		LDA size%
 		ADC load%

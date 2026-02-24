@@ -159,7 +159,7 @@
 		}
 
 \---------------------------		
-		.startexec
+.startexec
 \---------------------------		
 		{
 		\set current drive
@@ -170,6 +170,9 @@
 		\as has OSARGSNoofArgs%
 		CPX #1
 		BCS havecommands
+		IF __OSARGSExtendedHelp = TRUE
+			JSR ExtendedHelp
+		ENDIF
 		LDX #usage%
 		JMP diserror \RTS
 		.havecommands

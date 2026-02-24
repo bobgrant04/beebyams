@@ -183,6 +183,7 @@ ScrLoadPtr =&A8
 \   F5		current PHROM or ROM filing system ROM number
 \   F6-F7	address pointer to paged ROM
 \&F8-F9 UNUSED BY OS
+PrintType%=&F8
 \FA-FB	general workspace for OS
 \   FC		user IRQ routine slave slot for register
 \   FD-FE	pointer to byte after last BRK
@@ -209,6 +210,7 @@ __OSARGSargXtoOSARGSStrLenA = TRUE
 __OSARGSargGetDrive = TRUE
 __OSARGSFileNameToOSARGSPram = TRUE
 __OSARGSOptions = FALSE
+__OSARGSExtendedHelp = TRUE
 \Variables - 
 OSARGSstrA =strA%
 OSARGSStrLenA = strAoffset
@@ -217,7 +219,7 @@ OSARGSrequesteddrive = RequestedDrive%
 OSARGSpram% = pram%
 OSARGSpramlen% = pramlen
 OSARGSNoofArgs% = NoofArgs%
-IF __OSARGSOptions
+IF __OSARGSOptions = TRUE
 	OSARGSOptions% = OptionStr%
 	OSARGSbitOptions% = OptionBit%
 ENDIF
@@ -226,17 +228,19 @@ ENDIF
 
 
 __MAGICHELPPRINT = TRUE
-__MAGICHELPPRINTSELECTED = FALSE
+__MAGICHELPPRINTSELECTED = TRUE 
 MAGICHELPAptr = Aptr
+MAGICHELPload%=load
+MAGICHELPexe%=exe
 
-IF __MAGICHELPPRINTSELECTED
-	MAGICHELPPrintType% = Printtype%
-	MAGICHELPload%=load%
-	MAGICHELPexe%=exe%
+IF __MAGICHELPPRINTSELECTED = TRUE
+	MAGICHELPPrintType% = PrintType%	
 ENDIF
 IF __OSARGSOptions = TRUE
-	MAGICHELPOptionBit% = OptionBit%
+	OSARGSOptions% = OptionStr%
+	OSARGSbitOptions% = OptionBit%
 ENDIF
+
 \-------------------------------------------------------
 ORG &6000
 GUARD &7C00

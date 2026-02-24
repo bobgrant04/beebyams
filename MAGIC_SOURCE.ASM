@@ -4,7 +4,7 @@
 \where xxxx has different code to be run
 \note order is important as a rom and basic can have characteristics of text
 \
-\Entry 10
+\Entry A
 \10,load,offset from end,exec,load,ident
 EQUS 10,0,&11,&4D,0,0,0,0,0,"Relocate basic to 0E00 #1",13
 \9,number of bytes to match anywhere in first Page,exec,load,ident

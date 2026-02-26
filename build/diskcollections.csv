@@ -3142,7 +3142,7 @@ bbcmicro.co.uk ($.cbm.csv)\Disc025a\$.EAGLE,32803,5120,45343,6400,32803,0,Basic 
 bbcmicro.co.uk ($.cbm.csv)\Disc025a\$.DB1,11968,4096,31277,8192,32761,4352,TYB music samples #4
 bbcmicro.co.uk ($.cbm.csv)\Disc025a\$.DAMBUST,32803,189,41794,6400,32803,32803,Basic #2
 bbcmicro.co.uk ($.cbm.csv)\Disc025a\$.DAMINST,32803,4000,34600,6400,32803,0,Basic #1
-bbcmicro.co.uk ($.cbm.csv)\Disc025a\$.SOD2,27648,23680,23906,7808,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc025a\$.SOD2,27648,23680,23906,7808,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc025a\$.SOD1,14336,8960,10867,14336,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc025a\$.SOD,32803,2048,44871,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc025a\$.JSW1.5,19712,14592,6329,18176,0,0,no match #1
@@ -5323,8 +5323,8 @@ bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.Dunjun6,28288,4480,30957,28288,0,0,no matc
 bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.Dunjun5,4352,7936,1217,4352,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.Dunjun4,1024,2304,5559,1024,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.Dunjun3,12928,12800,5840,12928,0,0,no match #1
-bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.Dunjun2,55757,16384,47346,32768,32515,16384,Mode 3 screen #2
-bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.Dunjun1,55757,3328,62952,32768,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.Dunjun2,55757,16384,47346,32768,217,128,Rom #1
+bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.Dunjun1,55757,3328,62952,32768,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.DUNK,32803,2533,30849,9472,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.TITLE,14534,3072,16680,14336,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc060a\$.PIC,12288,20479,50536,12288,0,0,no match #1
@@ -8216,7 +8216,7 @@ bbcmicro.co.uk ($.cbm.csv)\Disc108b\$.PART1,4376,8879,58127,4352,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc108b\$.KASTLE,32803,3583,51779,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc108b\$.MYRIAP,32803,4595,60371,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc108b\$.MYRIA-L,32803,864,65008,6400,32803,0,Basic #1
-bbcmicro.co.uk ($.cbm.csv)\Disc108b\$.frogger,30721,14436,18506,16375,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc108b\$.frogger,30721,14436,18506,16375,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc108b\$.FROG_LD,32803,2949,13411,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc108b\$.GRAFIX,20480,761,41920,20480,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc108b\$.TGRAFIX,2816,281,51131,2816,0,0,no match #1
@@ -8311,10 +8311,10 @@ bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.PROCVAR,0,112,8558,0,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.mcPROCE,28672,1707,6360,28672,32761,4352,TYB music samples #4
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.PLAY58,30839,5408,15518,25519,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.PILOT28,21931,7701,3571,14318,32803,0,Basic #1
-bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROsp,33990,9065,14282,32768,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROsp,33990,9065,14282,32768,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROwe,31020,11544,13345,19592,32803,0,Basic #1
-bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROs1,32771,11835,8632,32768,0,0,no match #1
-bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROs2,32771,14200,17803,32768,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROs1,32771,11835,8632,32768,217,128,Rom #1
+bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROs2,32771,14200,17803,32768,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROld,32803,6915,16851,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTRO,32803,748,2673,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.Viper1,12288,4736,40340,7680,32803,0,Basic #1
@@ -8333,7 +8333,7 @@ bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.2048INS,32803,1535,13421,6400,32803,0,Basi
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.TIMERUN,32803,7936,15447,7680,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.TIMELD,32803,1417,40862,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.EASTER,32803,5189,20062,6400,32803,0,Basic #1
-bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROBL,23839,11109,41667,12820,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc110b\$.ASTROBL,23839,11109,41667,12820,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc111a\$.!BOOT,9549,3191,1330,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc111a\$.WORLD,32803,18672,14157,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc111a\F.R1,0,28416,21310,0,0,0,no match #1
@@ -8845,7 +8845,7 @@ bbcmicro.co.uk ($.cbm.csv)\Disc119a\$.Curly,32803,4587,47996,6400,32803,0,Basic 
 bbcmicro.co.uk ($.cbm.csv)\Disc119a\$.BACKGAM,32803,10131,5863,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc119a\$.3DNANDX,32803,10828,52163,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc119a\$.KILDICE,32803,6143,29913,6400,32803,0,Basic #1
-bbcmicro.co.uk ($.cbm.csv)\Disc119a\$.RATRACE,55753,16384,23514,32768,32515,16384,Mode 3 screen #2
+bbcmicro.co.uk ($.cbm.csv)\Disc119a\$.RATRACE,55753,16384,23514,32768,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc119a\$.RATLOAD,32803,2047,21506,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc119a\$.4SITE,32803,6372,9861,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc119a\$.Emperor,23040,15616,50630,7680,32803,0,Basic #1
@@ -8989,7 +8989,7 @@ bbcmicro.co.uk ($.cbm.csv)\Disc121b\$.DRAGN-I,32799,2102,15587,6400,32803,0,Basi
 bbcmicro.co.uk ($.cbm.csv)\Disc121b\$.DRAGON,32803,5976,5621,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc121b\$.EGG2,32811,5365,57762,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc121b\$.EGG1,32811,2251,9964,6400,32803,0,Basic #1
-bbcmicro.co.uk ($.cbm.csv)\Disc121b\$.PHOENIX,20516,12229,23443,8377,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc121b\$.PHOENIX,20516,12229,23443,8377,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc121b\$.EGG0,32803,168,51968,6400,32803,32803,Basic #2
 bbcmicro.co.uk ($.cbm.csv)\Disc121b\$.sideart,31490,13011,32625,18567,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc121b\$.PHOLOAD,32803,2056,58732,6400,32803,0,Basic #1
@@ -9213,7 +9213,7 @@ bbcmicro.co.uk ($.cbm.csv)\Disc125b\$.KLACZ3,32811,4281,34476,6400,32803,0,Basic
 bbcmicro.co.uk ($.cbm.csv)\Disc125b\$.ETE-INS,32803,4776,62041,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc125b\$.SPACEFI,32803,6888,59595,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc125b\$.CENT-HI,65532,99,20802,273,0,0,no match #1
-bbcmicro.co.uk ($.cbm.csv)\Disc125b\$.CENTIPD,27408,10887,50860,16611,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc125b\$.CENTIPD,27408,10887,50860,16611,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc125b\$.CENT!B,28672,1427,62338,28672,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc125b\$.CENT-L,32803,511,21286,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc125b\$.DS2,20480,11056,20490,9472,0,0,no match #1
@@ -9372,7 +9372,7 @@ bbcmicro.co.uk ($.cbm.csv)\Disc128a\$.DAT1,8192,19358,62276,8192,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc128a\$.TRIVIA1,32416,27648,15773,5120,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.PACMAN,32803,6029,48762,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.DOMINO,32803,6426,18390,6400,32803,0,Basic #1
-bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.Scrambl,28959,15937,6869,16725021,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.Scrambl,28959,15937,6869,16725021,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.LOADER,32803,1358,34216,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.Scram-L,32803,1279,9442,6400,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.BANKROB,32803,1584,44424,6400,32803,0,Basic #1
@@ -9392,7 +9392,7 @@ bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.SLANDER,32803,4291,4243,6400,32803,0,Basic
 bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.NEWYORK,32803,2607,59669,4352,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.NY-LOAD,32803,128,16083,6400,32803,32803,Basic #2
 bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.DODGEM,32803,5429,23683,6400,32803,0,Basic #1
-bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.ScramBe,28959,15937,18770,16725021,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\Disc128b\$.ScramBe,28959,15937,18770,16725021,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\Disc129a\$.DAT8,8192,16947,27258,8192,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc129a\$.DAT7,8192,17898,1199,8192,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\Disc129a\$.BABY,32803,1791,1127,6400,32803,0,Basic #1
@@ -10317,7 +10317,7 @@ bbcmicro.co.uk ($.cbm.csv)\STH006\$.WAND3,16744483,181,26557,16715264,0,0,no mat
 bbcmicro.co.uk ($.cbm.csv)\STH006\$.WANDS-3,10496,14080,61026,10496,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\STH006\$.WAND2,16744483,179,62650,16715264,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\STH006\$.WANDS-2,10496,14080,15319,10496,0,0,no match #1
-bbcmicro.co.uk ($.cbm.csv)\STH006\$.ACHETO1,6912,7936,14240,6912,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\STH006\$.ACHETO1,6912,7936,14240,6912,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\STH007\$.FRUIT1,3072,256,35986,3072,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\STH007\$.FRUIT,16744483,39,57148,16718080,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\STH007\$.!BOOT,28736,1485,41469,28672,32803,0,Basic #1
@@ -10543,7 +10543,7 @@ bbcmicro.co.uk ($.cbm.csv)\STH017\$.XLOAD,16744483,128,17656,16718080,0,0,no mat
 bbcmicro.co.uk ($.cbm.csv)\STH017\$.QLOAD,16744483,128,51307,16718080,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\STH017\$.LOADER,16744483,261,46221,16718080,32803,0,Basic #1
 bbcmicro.co.uk ($.cbm.csv)\STH017\$.Part1,26623,22315,28717,4352,0,0,no match #1
-bbcmicro.co.uk ($.cbm.csv)\STH018\R.LOTFILE,32768,2794,1414,32768,0,0,no match #1
+bbcmicro.co.uk ($.cbm.csv)\STH018\R.LOTFILE,32768,2794,1414,32768,217,128,Rom #1
 bbcmicro.co.uk ($.cbm.csv)\STH018\4.LOAD,0,1024,28206,0,32519,31744,Mode 7 screen #2
 bbcmicro.co.uk ($.cbm.csv)\STH018\2.TWO,0,23808,18237,0,0,0,no match #1
 bbcmicro.co.uk ($.cbm.csv)\STH018\2.ONE1,0,253,29161,0,0,0,no match #1
@@ -13977,7 +13977,7 @@ Complete BBC micro $.cbm.csv)\Disc025a\$.EAGLE,32803,5120,45343,6400,32803,0,Bas
 Complete BBC micro $.cbm.csv)\Disc025a\$.DB1,11968,4096,31277,8192,32761,4352,TYB music samples #4
 Complete BBC micro $.cbm.csv)\Disc025a\$.DAMBUST,32803,189,41794,6400,32803,32803,Basic #2
 Complete BBC micro $.cbm.csv)\Disc025a\$.DAMINST,32803,4000,34600,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\Disc025a\$.SOD2,27648,23680,23906,7808,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc025a\$.SOD2,27648,23680,23906,7808,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc025a\$.SOD1,14336,8960,10867,14336,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc025a\$.SOD,32803,2048,44871,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc025a\$.JSW1.5,19712,14592,6329,18176,0,0,no match #1
@@ -16158,8 +16158,8 @@ Complete BBC micro $.cbm.csv)\Disc060a\$.Dunjun6,28288,4480,30957,28288,0,0,no m
 Complete BBC micro $.cbm.csv)\Disc060a\$.Dunjun5,4352,7936,1217,4352,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc060a\$.Dunjun4,1024,2304,5559,1024,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc060a\$.Dunjun3,12928,12800,5840,12928,0,0,no match #1
-Complete BBC micro $.cbm.csv)\Disc060a\$.Dunjun2,55757,16384,47346,32768,32515,16384,Mode 3 screen #2
-Complete BBC micro $.cbm.csv)\Disc060a\$.Dunjun1,55757,3328,62952,32768,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc060a\$.Dunjun2,55757,16384,47346,32768,217,128,Rom #1
+Complete BBC micro $.cbm.csv)\Disc060a\$.Dunjun1,55757,3328,62952,32768,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc060a\$.DUNK,32803,2533,30849,9472,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc060a\$.TITLE,14534,3072,16680,14336,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc060a\$.PIC,12288,20479,50536,12288,0,0,no match #1
@@ -19051,7 +19051,7 @@ Complete BBC micro $.cbm.csv)\Disc108b\$.PART1,4376,8879,58127,4352,0,0,no match
 Complete BBC micro $.cbm.csv)\Disc108b\$.KASTLE,32803,3583,51779,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc108b\$.MYRIAP,32803,4595,60371,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc108b\$.MYRIA-L,32803,864,65008,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\Disc108b\$.frogger,30721,14436,18506,16375,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc108b\$.frogger,30721,14436,18506,16375,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc108b\$.FROG_LD,32803,2949,13411,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc108b\$.GRAFIX,20480,761,41920,20480,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc108b\$.TGRAFIX,2816,281,51131,2816,0,0,no match #1
@@ -19146,10 +19146,10 @@ Complete BBC micro $.cbm.csv)\Disc110b\$.PROCVAR,0,112,8558,0,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc110b\$.mcPROCE,28672,1707,6360,28672,32761,4352,TYB music samples #4
 Complete BBC micro $.cbm.csv)\Disc110b\$.PLAY58,30839,5408,15518,25519,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc110b\$.PILOT28,21931,7701,3571,14318,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROsp,33990,9065,14282,32768,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROsp,33990,9065,14282,32768,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROwe,31020,11544,13345,19592,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROs1,32771,11835,8632,32768,0,0,no match #1
-Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROs2,32771,14200,17803,32768,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROs1,32771,11835,8632,32768,217,128,Rom #1
+Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROs2,32771,14200,17803,32768,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROld,32803,6915,16851,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc110b\$.ASTRO,32803,748,2673,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc110b\$.Viper1,12288,4736,40340,7680,32803,0,Basic #1
@@ -19168,7 +19168,7 @@ Complete BBC micro $.cbm.csv)\Disc110b\$.2048INS,32803,1535,13421,6400,32803,0,B
 Complete BBC micro $.cbm.csv)\Disc110b\$.TIMERUN,32803,7936,15447,7680,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc110b\$.TIMELD,32803,1417,40862,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc110b\$.EASTER,32803,5189,20062,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROBL,23839,11109,41667,12820,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc110b\$.ASTROBL,23839,11109,41667,12820,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc111a\$.!BOOT,9549,3191,1330,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc111a\$.WORLD,32803,18672,14157,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc111a\F.R1,0,28416,21310,0,0,0,no match #1
@@ -19680,7 +19680,7 @@ Complete BBC micro $.cbm.csv)\Disc119a\$.Curly,32803,4587,47996,6400,32803,0,Bas
 Complete BBC micro $.cbm.csv)\Disc119a\$.BACKGAM,32803,10131,5863,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc119a\$.3DNANDX,32803,10828,52163,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc119a\$.KILDICE,32803,6143,29913,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\Disc119a\$.RATRACE,55753,16384,23514,32768,32515,16384,Mode 3 screen #2
+Complete BBC micro $.cbm.csv)\Disc119a\$.RATRACE,55753,16384,23514,32768,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc119a\$.RATLOAD,32803,2047,21506,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc119a\$.4SITE,32803,6372,9861,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc119a\$.Emperor,23040,15616,50630,7680,32803,0,Basic #1
@@ -19824,7 +19824,7 @@ Complete BBC micro $.cbm.csv)\Disc121b\$.DRAGN-I,32799,2102,15587,6400,32803,0,B
 Complete BBC micro $.cbm.csv)\Disc121b\$.DRAGON,32803,5976,5621,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc121b\$.EGG2,32811,5365,57762,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc121b\$.EGG1,32811,2251,9964,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\Disc121b\$.PHOENIX,20516,12229,23443,8377,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc121b\$.PHOENIX,20516,12229,23443,8377,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc121b\$.EGG0,32803,168,51968,6400,32803,32803,Basic #2
 Complete BBC micro $.cbm.csv)\Disc121b\$.sideart,31490,13011,32625,18567,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc121b\$.PHOLOAD,32803,2056,58732,6400,32803,0,Basic #1
@@ -20048,7 +20048,7 @@ Complete BBC micro $.cbm.csv)\Disc125b\$.KLACZ3,32811,4281,34476,6400,32803,0,Ba
 Complete BBC micro $.cbm.csv)\Disc125b\$.ETE-INS,32803,4776,62041,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc125b\$.SPACEFI,32803,6888,59595,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc125b\$.CENT-HI,65532,99,20802,273,0,0,no match #1
-Complete BBC micro $.cbm.csv)\Disc125b\$.CENTIPD,27408,10887,50860,16611,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc125b\$.CENTIPD,27408,10887,50860,16611,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc125b\$.CENT!B,28672,1427,62338,28672,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc125b\$.CENT-L,32803,511,21286,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc125b\$.DS2,20480,11056,20490,9472,0,0,no match #1
@@ -20207,7 +20207,7 @@ Complete BBC micro $.cbm.csv)\Disc128a\$.DAT1,8192,19358,62276,8192,0,0,no match
 Complete BBC micro $.cbm.csv)\Disc128a\$.TRIVIA1,32416,27648,15773,5120,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc128b\$.PACMAN,32803,6029,48762,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc128b\$.DOMINO,32803,6426,18390,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\Disc128b\$.Scrambl,28959,15937,6869,16725021,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc128b\$.Scrambl,28959,15937,6869,16725021,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc128b\$.LOADER,32803,1358,34216,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc128b\$.Scram-L,32803,1279,9442,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc128b\$.BANKROB,32803,1584,44424,6400,32803,0,Basic #1
@@ -20227,7 +20227,7 @@ Complete BBC micro $.cbm.csv)\Disc128b\$.SLANDER,32803,4291,4243,6400,32803,0,Ba
 Complete BBC micro $.cbm.csv)\Disc128b\$.NEWYORK,32803,2607,59669,4352,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\Disc128b\$.NY-LOAD,32803,128,16083,6400,32803,32803,Basic #2
 Complete BBC micro $.cbm.csv)\Disc128b\$.DODGEM,32803,5429,23683,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\Disc128b\$.ScramBe,28959,15937,18770,16725021,0,0,no match #1
+Complete BBC micro $.cbm.csv)\Disc128b\$.ScramBe,28959,15937,18770,16725021,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\Disc129a\$.DAT8,8192,16947,27258,8192,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc129a\$.DAT7,8192,17898,1199,8192,0,0,no match #1
 Complete BBC micro $.cbm.csv)\Disc129a\$.BABY,32803,1791,1127,6400,32803,0,Basic #1
@@ -21247,7 +21247,7 @@ Complete BBC micro $.cbm.csv)\DISC152a\$.FSIM2,32811,4306,4986,6400,32803,0,Basi
 Complete BBC micro $.cbm.csv)\DISC152b\$.PATIENC,32799,9668,39750,4352,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC152b\$.PATIRUL,32803,1136,36107,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC152b\$.MANUAL,8704,6807,44639,8704,0,0,no match #1
-Complete BBC micro $.cbm.csv)\DISC152b\$.GAME,16777215,15629,57715,32768,0,0,no match #1
+Complete BBC micro $.cbm.csv)\DISC152b\$.GAME,16777215,15629,57715,32768,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\DISC152b\$.LOADER,6400,2051,62660,6400,0,0,no match #1
 Complete BBC micro $.cbm.csv)\DISC152b\$.SKIRRID,32803,552,21809,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC152b\$.BOXES,32803,7596,18838,3584,32803,0,Basic #1
@@ -21444,7 +21444,7 @@ Complete BBC micro $.cbm.csv)\DISC156a\$.PARADRO,32803,2360,24671,6400,32803,0,B
 Complete BBC micro $.cbm.csv)\DISC156a\$.HORSE,32803,2992,23776,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC156a\$.DUEL,32803,2139,41212,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC156a\$.!BOOT,7680,1536,30361,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\DISC156a\$.GAME,31101,14337,24364,16728927,0,0,no match #1
+Complete BBC micro $.cbm.csv)\DISC156a\$.GAME,31101,14337,24364,16728927,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\DISC156a\$.PLOADER,32803,1248,32682,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC156a\$.PACMAN,32803,750,7823,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC156a\$.SCORE,32803,2285,11713,4352,32803,0,Basic #1
@@ -21583,7 +21583,7 @@ Complete BBC micro $.cbm.csv)\DISC159a\$.code,20480,968,40959,20480,32761,4352,T
 Complete BBC micro $.cbm.csv)\DISC159a\$.zerodat,112,27,13142,112,0,0,no match #1
 Complete BBC micro $.cbm.csv)\DISC159a\$.IDB,32803,982,23853,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC159a\$.IDBINST,32803,872,51356,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\DISC159a\$.Rally-X,27159,10640,241,16896,0,0,no match #1
+Complete BBC micro $.cbm.csv)\DISC159a\$.Rally-X,27159,10640,241,16896,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\DISC159a\$.Rally-L,32803,866,24141,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC159a\$.RALLYIN,32803,866,60852,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC159a\$.ADVEND2,16777215,4814,7115,16777215,32761,4352,TYB music samples #4
@@ -21915,7 +21915,7 @@ Complete BBC micro $.cbm.csv)\DISC165a\$.PIQUINS,32803,5887,35341,6400,32803,0,B
 Complete BBC micro $.cbm.csv)\DISC165a\$.TOBOG,32803,3152,39851,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC165a\$.MOLECU1,32803,5461,59993,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC165a\$.MOLECUL,32803,2017,43489,6400,32803,0,Basic #1
-Complete BBC micro $.cbm.csv)\DISC165a\$.MissCmd,20111,11541,15842,8876,0,0,no match #1
+Complete BBC micro $.cbm.csv)\DISC165a\$.MissCmd,20111,11541,15842,8876,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\DISC165a\$.MissLdr,32803,3725,45136,4352,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC165a\$.MissIns,32803,2912,55709,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\DISC165a\$.DEATH,32803,3790,33235,6400,32803,0,Basic #1
@@ -23058,7 +23058,7 @@ Complete BBC micro $.cbm.csv)\STH006\$.WAND3,16744483,181,26557,16715264,0,0,no 
 Complete BBC micro $.cbm.csv)\STH006\$.WANDS-3,10496,14080,61026,10496,0,0,no match #1
 Complete BBC micro $.cbm.csv)\STH006\$.WAND2,16744483,179,62650,16715264,0,0,no match #1
 Complete BBC micro $.cbm.csv)\STH006\$.WANDS-2,10496,14080,15319,10496,0,0,no match #1
-Complete BBC micro $.cbm.csv)\STH006\$.ACHETO1,6912,7936,14240,6912,0,0,no match #1
+Complete BBC micro $.cbm.csv)\STH006\$.ACHETO1,6912,7936,14240,6912,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\STH007\$.FRUIT1,3072,256,35986,3072,0,0,no match #1
 Complete BBC micro $.cbm.csv)\STH007\$.FRUIT,16744483,39,57148,6400,0,0,no match #1
 Complete BBC micro $.cbm.csv)\STH007\$.!BOOT,28736,1485,41469,28672,32803,0,Basic #1
@@ -23321,7 +23321,7 @@ Complete BBC micro $.cbm.csv)\STH018\$.LZLOADQ,10496,552,30436,10496,0,0,no matc
 Complete BBC micro $.cbm.csv)\STH018\$.LOTR,32803,1138,42513,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\STH018\$.VERB-I,32803,808,9261,6400,32803,0,Basic #1
 Complete BBC micro $.cbm.csv)\STH018\$.!BOOT,16777215,20,19068,0,0,0,no match #1
-Complete BBC micro $.cbm.csv)\STH018\R.LOTFILE,32768,2794,1414,32768,0,0,no match #1
+Complete BBC micro $.cbm.csv)\STH018\R.LOTFILE,32768,2794,1414,32768,217,128,Rom #1
 Complete BBC micro $.cbm.csv)\STH018\4.LOAD,0,1024,28206,0,32519,31744,Mode 7 screen #2
 Complete BBC micro $.cbm.csv)\STH018\4.TWO,0,23808,58960,0,0,0,no match #1
 Complete BBC micro $.cbm.csv)\STH018\4.ONE1,0,253,50978,0,0,0,no match #1
@@ -24147,7 +24147,7 @@ Educational ($.edu.csv)\cjr3v4_A\$.7TO3,16744491,3125,40981,16718080,32803,0,Bas
 Educational ($.edu.csv)\cjr3v4_A\$.CONV2,16744491,680,34227,16715264,32803,0,Basic #1
 Educational ($.edu.csv)\cjr3v4_A\$.!BOOT,16777215,31,3125,0,0,0,no match #1
 Educational ($.edu.csv)\cjr3v4_B\$.Numeric,16777215,174880,7849,0,0,0,no match #1
-Educational ($.edu.csv)\EDU01\$.TERMUL1,0,16384,9584,0,32515,16384,Mode 3 screen #2
+Educational ($.edu.csv)\EDU01\$.TERMUL1,0,16384,9584,0,217,128,Rom #1
 Educational ($.edu.csv)\EDU01\$.jars1,32803,12158,21451,6912,32803,0,Basic #1
 Educational ($.edu.csv)\EDU01\$.GRIDS,16744491,400,57241,3584,32803,0,Basic #1
 Educational ($.edu.csv)\EDU01\$.SOLSYS,16744483,2255,57920,6400,32803,0,Basic #1
@@ -24550,7 +24550,7 @@ Educational ($.edu.csv)\EDU107\$.Graphic,16744483,3003,55875,16718592,32803,0,Ba
 Educational ($.edu.csv)\EDU107\$.FTip,16744483,128,11955,16718592,0,0,no match #1
 Educational ($.edu.csv)\EDU107\$.Felt,16744483,3631,41991,16718592,32803,0,Basic #1
 Educational ($.edu.csv)\EDU107\$.Dump,2247,518,23209,2240,0,0,no match #1
-Educational ($.edu.csv)\EDU107\$.Convert,3784,1166,41193,3784,32761,4352,TYB music samples #4
+Educational ($.edu.csv)\EDU107\$.Convert,3784,1166,41193,3784,217,128,Rom #1
 Educational ($.edu.csv)\EDU107\$.ArtData,2304,1024,61785,2304,32519,31744,Mode 7 screen #2
 Educational ($.edu.csv)\EDU107\$.Art,16744483,6659,7992,16718592,32803,0,Basic #1
 Educational ($.edu.csv)\EDU107\$.usrspry,3104,64,44161,3104,0,0,no match #1
@@ -25138,8 +25138,8 @@ Educational ($.edu.csv)\EDU128\$.SPELL8,16744483,3439,5624,16718080,32803,0,Basi
 Educational ($.edu.csv)\EDU128\$.SPELL7,16744483,5314,5876,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU128\$.SPELL6,16744483,5423,15728,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU128\$.SPELL5,16744483,4645,23737,16718080,32803,0,Basic #1
-Educational ($.edu.csv)\EDU129\R.SUPASTO,0,16384,28253,32768,32515,16384,Mode 3 screen #2
-Educational ($.edu.csv)\EDU129\R.Screenp,0,16384,56709,32768,32515,16384,Mode 3 screen #2
+Educational ($.edu.csv)\EDU129\R.SUPASTO,0,16384,28253,32768,217,128,Rom #1
+Educational ($.edu.csv)\EDU129\R.Screenp,0,16384,56709,32768,217,128,Rom #1
 Educational ($.edu.csv)\EDU129\$.PF,16744483,25,50104,7168,0,0,no match #1
 Educational ($.edu.csv)\EDU129\$.MUSIC,16744483,5163,15080,6400,32803,0,Basic #1
 Educational ($.edu.csv)\EDU129\$.MU,16744483,1946,51646,16718848,32803,0,Basic #1
@@ -25236,7 +25236,7 @@ Educational ($.edu.csv)\EDU132\A.LX,16744491,6042,64584,16715264,32803,0,Basic #
 Educational ($.edu.csv)\EDU132\A.KX,16744491,4307,16836,16715264,32803,0,Basic #1
 Educational ($.edu.csv)\EDU132\A.GP,16744491,1042,29421,16715264,32803,0,Basic #1
 Educational ($.edu.csv)\EDU132\A.FX,16744491,4212,32837,16715264,32803,0,Basic #1
-Educational ($.edu.csv)\EDU132\$.Sci,8192,16384,57802,8192,32515,16384,Mode 3 screen #2
+Educational ($.edu.csv)\EDU132\$.Sci,8192,16384,57802,8192,217,128,Rom #1
 Educational ($.edu.csv)\EDU132\$.Romenu,16744491,2552,43031,16715264,32803,0,Basic #1
 Educational ($.edu.csv)\EDU132\$.LX,12285,1795,34340,12285,0,0,no match #1
 Educational ($.edu.csv)\EDU133\S.HSES,12288,20480,13338,12288,32514,12288,Mode 2 screen #2
@@ -25340,7 +25340,7 @@ Educational ($.edu.csv)\EDU137\$.SUP/LBL,16777215,1393,42076,16777215,0,0,no mat
 Educational ($.edu.csv)\EDU137\$.s,16777215,1393,42076,16777215,0,0,no match #1
 Educational ($.edu.csv)\EDU137\$.MENU,16744483,1080,9605,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU137\$.L,16777215,529,42610,16777215,0,0,no match #1
-Educational ($.edu.csv)\EDU137\$.DUMPOUT,32768,8192,31959,32768,32518,24576,Mode 6 screen #2
+Educational ($.edu.csv)\EDU137\$.DUMPOUT,32768,8192,31959,32768,217,128,Rom #1
 Educational ($.edu.csv)\EDU137\B.SERVICE,16744483,3384,45032,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU137\B.SCORPIO,16744483,5209,19734,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU137\B.QUADSOL,16744483,480,9007,16718336,32803,0,Basic #1
@@ -25349,7 +25349,7 @@ Educational ($.edu.csv)\EDU137\B.LABELS,16744483,1290,30687,16718080,32803,0,Bas
 Educational ($.edu.csv)\EDU137\B.LABELLE,16744483,6233,51454,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU137\B.KENMENU,16744483,1886,16402,16718336,32803,0,Basic #1
 Educational ($.edu.csv)\EDU138\T.INLYTXT,0,3985,18312,0,32761,4352,TYB music samples #4
-Educational ($.edu.csv)\EDU138\R.VIDEO,16767437,16384,29267,16744448,32515,16384,Mode 3 screen #2
+Educational ($.edu.csv)\EDU138\R.VIDEO,16767437,16384,29267,16744448,217,128,Rom #1
 Educational ($.edu.csv)\EDU138\B.MARKS,16744483,225,10313,16718080,0,0,no match #1
 Educational ($.edu.csv)\EDU138\B.M15,16744483,3470,53486,6400,32803,0,Basic #1
 Educational ($.edu.csv)\EDU138\B.LOCATOR,16744479,260,49249,16718080,32803,0,Basic #1
@@ -26029,7 +26029,7 @@ Educational ($.edu.csv)\EDU160\$.QCLASS,16744483,1513,60521,16718592,32803,0,Bas
 Educational ($.edu.csv)\EDU160\Q.BELL,0,29429,45550,0,0,0,no match #1
 Educational ($.edu.csv)\EDU160\M.QUEST,19712,11452,38109,19712,0,0,no match #1
 Educational ($.edu.csv)\EDU160\$.QUESTD,16744483,19249,38129,16718592,32803,0,Basic #1
-Educational ($.edu.csv)\EDU160\$.QUEST21,0,16384,62827,0,32515,16384,Mode 3 screen #2
+Educational ($.edu.csv)\EDU160\$.QUEST21,0,16384,62827,0,217,128,Rom #1
 Educational ($.edu.csv)\EDU160\$.QSORT,16744483,7907,49580,16718592,32803,0,Basic #1
 Educational ($.edu.csv)\EDU160\$.QHELP,0,8412,54593,0,0,0,no match #1
 Educational ($.edu.csv)\EDU161\d.s,6400,14016,59929,6400,32761,4352,TYB music samples #4
@@ -26546,7 +26546,7 @@ Educational ($.edu.csv)\EDU182\$.DICDATA,2304,1024,27255,2304,32519,31744,Mode 7
 Educational ($.edu.csv)\EDU182\$.DESIGN,6400,6608,37158,6400,32803,0,Basic #1
 Educational ($.edu.csv)\EDU182\$.DATA,4704,416,13470,4704,0,0,no match #1
 Educational ($.edu.csv)\EDU182\$.CONT,16744491,4247,33198,16718080,32803,0,Basic #1
-Educational ($.edu.csv)\EDU182\$.CONCODE,0,1280,24330,16744448,32761,4352,TYB music samples #4
+Educational ($.edu.csv)\EDU182\$.CONCODE,0,1280,24330,16744448,217,128,Rom #1
 Educational ($.edu.csv)\EDU182\$.COLOUR,4608,6912,62299,4608,32803,0,Basic #1
 Educational ($.edu.csv)\EDU182\$.CHARS,16718080,5309,13101,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU182\$.UNSQSH,16723456,423,65419,16723456,32761,4352,TYB music samples #4
@@ -27696,7 +27696,7 @@ Educational ($.edu.csv)\EDU226\$.12TEXT,31744,920,2485,31744,0,0,no match #1
 Educational ($.edu.csv)\EDU226\$.11TEXT,31744,920,44137,31744,0,0,no match #1
 Educational ($.edu.csv)\EDU226\$.10TEXT,31744,920,26476,31744,0,0,no match #1
 Educational ($.edu.csv)\EDU226\R.PROGRAM,32768,4096,31828,32768,0,0,no match #1
-Educational ($.edu.csv)\EDU226\R.OPENDAY,32768,4096,7251,32768,0,0,no match #1
+Educational ($.edu.csv)\EDU226\R.OPENDAY,32768,4096,7251,32768,217,128,Rom #1
 Educational ($.edu.csv)\EDU226\R.OPEN,32768,4096,6886,32768,0,0,no match #1
 Educational ($.edu.csv)\EDU226\$.TEXTED,16744479,8081,45889,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU226\$.SLIDES,16744483,4591,19706,16718080,32803,0,Basic #1
@@ -28103,7 +28103,7 @@ Educational ($.edu.csv)\EDU24\$.SF6,7057,2819,59968,7057,32761,4352,TYB music sa
 Educational ($.edu.csv)\EDU24\$.SF5,7057,2745,2780,7057,32761,4352,TYB music samples #1
 Educational ($.edu.csv)\EDU24\$.SF4,7057,593,1464,7057,0,0,no match #1
 Educational ($.edu.csv)\EDU24\$.SF3,7057,3566,18780,7057,32761,4352,TYB music samples #4
-Educational ($.edu.csv)\EDU240\$.SP8000,55757,8192,50704,32768,32518,24576,Mode 6 screen #2
+Educational ($.edu.csv)\EDU240\$.SP8000,55757,8192,50704,32768,217,128,Rom #1
 Educational ($.edu.csv)\EDU240\$.scis,22016,512,31585,22016,0,0,no match #1
 Educational ($.edu.csv)\EDU240\$.bee,22016,512,2073,22016,0,0,no match #1
 Educational ($.edu.csv)\EDU240\$.VISIT,16744483,4172,18761,16718080,32803,0,Basic #1
@@ -29163,7 +29163,7 @@ Educational ($.edu.csv)\EDU277\$.NUTS!,32803,485,53921,6400,32803,0,Basic #1
 Educational ($.edu.csv)\EDU277\$.NUT_CD,3218,110,22930,3218,0,0,no match #1
 Educational ($.edu.csv)\EDU277\$.MONK_B,2304,256,37891,2304,0,0,no match #1
 Educational ($.edu.csv)\EDU277\$.MATHSJT,17920,5888,12889,12288,32803,0,Basic #1
-Educational ($.edu.csv)\EDU278\$.FONTAID,0,8192,47766,0,32518,24576,Mode 6 screen #2
+Educational ($.edu.csv)\EDU278\$.FONTAID,0,8192,47766,0,217,128,Rom #1
 Educational ($.edu.csv)\EDU278\W.EXMPL3,16777215,988,34598,16777215,32803,0,Basic #1
 Educational ($.edu.csv)\EDU278\F.ITALIC,0,6160,24705,0,0,0,no match #1
 Educational ($.edu.csv)\EDU278\F.GOTHIC,0,6160,48052,0,0,0,no match #1
@@ -29442,11 +29442,11 @@ Educational ($.edu.csv)\EDU287\$.9,0,5,4456,0,0,0,no match #1
 Educational ($.edu.csv)\EDU287\$.8,0,5,4456,0,0,0,no match #1
 Educational ($.edu.csv)\EDU287\$.7,0,5,4456,0,0,0,no match #1
 Educational ($.edu.csv)\EDU287\$.6,0,5,4456,0,0,0,no match #1
-Educational ($.edu.csv)\EDU288\$.PRINTWA,0,16384,27629,0,32515,16384,Mode 3 screen #2
+Educational ($.edu.csv)\EDU288\$.PRINTWA,0,16384,27629,0,217,128,Rom #1
 Educational ($.edu.csv)\EDU288\B.PL,16744491,4548,9048,16715264,32803,0,Basic #1
 Educational ($.edu.csv)\EDU288\$.SDUMP,5632,376,11018,5632,0,0,no match #1
 Educational ($.edu.csv)\EDU288\$.PW,16744491,2791,17112,16715264,32803,0,Basic #1
-Educational ($.edu.csv)\EDU288\$.PSR,55757,16384,27629,32768,32515,16384,Mode 3 screen #2
+Educational ($.edu.csv)\EDU288\$.PSR,55757,16384,27629,32768,217,128,Rom #1
 Educational ($.edu.csv)\EDU288\$.PR,16744491,2107,13884,16716032,32803,0,Basic #1
 Educational ($.edu.csv)\EDU288\$.PLAN,16744491,604,51075,16717312,32803,0,Basic #1
 Educational ($.edu.csv)\EDU288\$.PAGE1,13568,18176,29913,13568,0,0,no match #1
@@ -30215,12 +30215,12 @@ Educational ($.edu.csv)\EDU42\$.PICTURE,16744479,7990,47935,16718080,32803,3584,
 Educational ($.edu.csv)\EDU42\T.T/ATS11,0,5332,42100,0,32803,0,Basic #1
 Educational ($.edu.csv)\EDU42\+.B/ATS11,16744491,2594,60878,3584,32803,0,Basic #1
 Educational ($.edu.csv)\EDU42\+.ESP,16744491,9592,62938,3584,32803,0,Basic #1
-Educational ($.edu.csv)\EDU42\$.6502SP,16744448,6638,50533,32768,0,0,no match #1
+Educational ($.edu.csv)\EDU42\$.6502SP,16744448,6638,50533,32768,217,128,Rom #1
 Educational ($.edu.csv)\EDU42\$.ATPRAC,16744483,15201,8440,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU42\T.SPINFO,0,12054,12853,0,32803,0,Basic #1
 Educational ($.edu.csv)\EDU42\$.WWFKEYS,0,340,24331,0,0,0,no match #1
 Educational ($.edu.csv)\EDU42\+.ANAGRAM,16744491,10741,15155,3584,32803,0,Basic #1
-Educational ($.edu.csv)\EDU42\$.SWRMENU,16744448,2408,14316,32768,0,0,no match #1
+Educational ($.edu.csv)\EDU42\$.SWRMENU,16744448,2408,14316,32768,217,128,Rom #1
 Educational ($.edu.csv)\EDU42\$.!BOOT,10758,1845,813,8960,32803,0,Basic #1
 Educational ($.edu.csv)\EDU42\T.INFO,16777215,2637,65443,0,0,0,no match #1
 Educational ($.edu.csv)\EDU42\$.CL/ACCT,16744491,12186,41151,16715264,32803,0,Basic #1
@@ -30592,7 +30592,7 @@ Educational ($.edu.csv)\EDU61\$.MATCOL,16744483,2735,18968,16718080,32803,0,Basi
 Educational ($.edu.csv)\EDU61\$.!BOOT,0,31,3904,0,0,0,no match #1
 Educational ($.edu.csv)\EDU61\$.TITLE,16744483,932,53026,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU62\$.ME,0,25,51433,0,0,0,no match #1
-Educational ($.edu.csv)\EDU62\$.ROM,16777215,16384,63825,0,32515,16384,Mode 3 screen #2
+Educational ($.edu.csv)\EDU62\$.ROM,16777215,16384,63825,0,217,128,Rom #1
 Educational ($.edu.csv)\EDU62\S.DEFCHR,16744483,1704,25875,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU62\S.INC,16744483,1693,2002,16718080,32803,0,Basic #1
 Educational ($.edu.csv)\EDU62\S.FLUSH,16744483,1174,34433,16718080,32803,0,Basic #1
@@ -30930,7 +30930,7 @@ Educational ($.edu.csv)\EDU77\$.BALLOON,16744483,7962,19868,6656,32803,0,Basic #
 Educational ($.edu.csv)\EDU77\$.ADD-SUB,16744483,7029,64038,6656,32803,0,Basic #1
 Educational ($.edu.csv)\EDU77\$.!SB,16744483,827,65446,16718336,32803,0,Basic #1
 Educational ($.edu.csv)\EDU77\$.!BOOT,0,10,3794,0,0,0,no match #1
-Educational ($.edu.csv)\EDU77\$.T,32768,8192,7514,32768,32518,24576,Mode 6 screen #2
+Educational ($.edu.csv)\EDU77\$.T,32768,8192,7514,32768,217,128,Rom #1
 Educational ($.edu.csv)\EDU77\$.SB,16744483,184,9133,6656,0,0,no match #1
 Educational ($.edu.csv)\EDU77\$.PAUL1,16777215,1121,48375,65535,0,0,no match #1
 Educational ($.edu.csv)\EDU77\$.MLT-DIV,16744483,8033,39099,6656,32803,0,Basic #1
@@ -31511,7 +31511,7 @@ JGH PD Library Disks($.JGH.csv)\JGH01\$.TelUtil,16757344,10571,46928,16776006,32
 JGH PD Library Disks($.JGH.csv)\JGH01\$.TelKeys,16741264,1380,63597,16776004,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH01\$.TelInit,16751344,9309,23144,16776006,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH01\T.TxtInit,16730320,9661,4510,16777030,32761,4352,TYB music samples #6
-JGH PD Library Disks($.JGH.csv)\JGH01\$.TelEdRO,16741920,4817,44264,16759878,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH01\$.TelEdRO,16741920,4817,44264,16759878,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH01\$.TelEdit,59312,17615,41729,16776006,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH01\$.SmallEd,59312,7716,58174,16776006,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH01\$.Hello,32803,3253,52003,16776006,32803,0,Basic #1
@@ -31583,9 +31583,9 @@ JGH PD Library Disks($.JGH.csv)\jGH04\H.local,16755904,2892,26368,16777037,32761
 JGH PD Library Disks($.JGH.csv)\jGH04\$.tcpp,6402,8106,42371,6402,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\jGH04\$.tccom,6402,21454,63945,6402,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\jGH04\$.tcc,6402,3146,9748,6402,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\jGH04\$.swcrt,26784,11397,39437,16776515,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\jGH04\$.swcrt,26784,11397,39437,16776515,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\jGH04\$.srload,16714051,399,6842,16713984,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\jGH04\$.sh,16742192,12311,65387,16759885,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\jGH04\$.sh,16742192,12311,65387,16759885,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\jGH04\$.rm,6402,1018,18310,6402,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\jGH04\$.optab,3328,728,31852,16776513,0,32757,ScrLoad #2
 JGH PD Library Disks($.JGH.csv)\jGH04\$.mnemtab,3328,224,47539,16777025,0,0,no match #1
@@ -31610,7 +31610,7 @@ JGH PD Library Disks($.JGH.csv)\JGH05\C.GETBDOS,16766464,256,18616,16712028,0,0,
 JGH PD Library Disks($.JGH.csv)\JGH05\C.FREE,16766464,321,13769,16712028,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH05\C.COLOUR,16766464,100,15782,16712028,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH05\C.CLS,16766464,7,44162,16712028,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH05\$.Z80ROM,55757,15864,61681,32768,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH05\$.Z80ROM,55757,15864,61681,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH05\T.Monitor,16718416,3640,8879,16777051,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH05\$.Z80BAS,13530,13338,31806,256,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH05\$.SrSave,16714037,378,13560,16713984,0,0,no match #1
@@ -31633,21 +31633,21 @@ JGH PD Library Disks($.JGH.csv)\JGH06\$.SMList,16714025,434,38206,16713984,0,0,n
 JGH PD Library Disks($.JGH.csv)\JGH06\$.SMLib,16742656,1280,60252,16776021,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.SMJoin,32803,3006,38106,16776021,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.SMFree,16714007,367,39025,16713984,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH06\$.RSTROM,55757,524,27510,32768,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH06\$.RSTROM,55757,524,27510,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.ROMS,16713984,341,201,16713984,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH06\$.RAMCoun,55757,434,54080,32768,32761,4352,TYB music samples #4
+JGH PD Library Disks($.JGH.csv)\JGH06\$.RAMCoun,55757,434,54080,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.Monitor,32803,5474,31292,16776027,32803,0,Basic #1
-JGH PD Library Disks($.JGH.csv)\JGH06\$.HADFSRM,55757,16384,35242,32768,32766,0,Ldpic #2
+JGH PD Library Disks($.JGH.csv)\JGH06\$.HADFSRM,55757,16384,35242,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH06\T.ModInfo,26112,3156,12854,16777050,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH06\$.DisAssm,55757,3517,35725,32768,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH06\$.DisAssm,55757,3517,35725,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.D2,16729184,953,53962,16776016,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.D1,16767232,350,33942,16776008,32803,0,Basic #1
-JGH PD Library Disks($.JGH.csv)\JGH06\$.CharROM,55757,16384,14159,32768,32515,16384,Mode 3 screen #2
+JGH PD Library Disks($.JGH.csv)\JGH06\$.CharROM,55757,16384,14159,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.!ReadMe,16743728,2475,15385,16777048,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH06\T.DisAssm,48272,8567,60881,16777051,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH06\T.CharROM,16750112,7940,33609,16777051,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH06\$.ViewJ30,55757,16384,59747,32768,32515,16384,Mode 3 screen #2
-JGH PD Library Disks($.JGH.csv)\JGH06\$.SWMode,16711680,1482,61061,16759808,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH06\$.ViewJ30,55757,16384,59747,32768,217,128,Rom #1
+JGH PD Library Disks($.JGH.csv)\JGH06\$.SWMode,16711680,1482,61061,16759808,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.SrWipe,16714008,191,26862,16713984,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.SrSave,16714037,378,13560,16713984,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH06\$.SrLoad,16714045,509,27732,16713984,0,0,no match #1
@@ -31721,8 +31721,8 @@ JGH PD Library Disks($.JGH.csv)\JGH09\$.MseTest,4368,1219,52603,16776003,32803,0
 JGH PD Library Disks($.JGH.csv)\JGH09\$.MSEDEMO,53136,1495,10829,16776022,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH09\$.MKROM,49264,38,43797,16776790,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH09\$.KBDDEMO,16754000,3407,9682,16776022,32803,0,Basic #1
-JGH PD Library Disks($.JGH.csv)\JGH09\$.HiBasic,47104,16384,14156,47104,32515,16384,Mode 3 screen #2
-JGH PD Library Disks($.JGH.csv)\JGH09\$.CRUNCH,1280,409,47624,1280,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH09\$.HiBasic,47104,16384,14156,47104,217,128,Rom #1
+JGH PD Library Disks($.JGH.csv)\JGH09\$.CRUNCH,1280,409,47624,1280,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH09\$.GliderG,16738816,2048,57392,16776514,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH09\$.Curtain,16758784,2048,42883,16776515,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH09\$.Grid2,16769536,2048,40603,16776515,0,0,no match #1
@@ -31731,11 +31731,11 @@ JGH PD Library Disks($.JGH.csv)\JGH09\$.Greg1,16748032,2048,43068,16776515,0,0,n
 JGH PD Library Disks($.JGH.csv)\JGH09\$.U2,16758784,2048,17279,16776515,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH09\$.U1,16758784,2048,55907,16776515,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH09\$.TwoGuns,16715776,2048,31354,16776515,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH10\$.CharROM,55757,16384,14159,32768,32515,16384,Mode 3 screen #2
+JGH PD Library Disks($.JGH.csv)\JGH10\$.CharROM,55757,16384,14159,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH10\$.DOSUtil,32803,10342,33902,16776005,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH10\S.USBKBD,16756656,8238,6759,16776023,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH10\$.USBSTAT,32803,2884,61221,16776022,32803,0,Basic #1
-JGH PD Library Disks($.JGH.csv)\JGH10\$.USBROM,55757,3312,18071,32768,32761,4352,TYB music samples #4
+JGH PD Library Disks($.JGH.csv)\JGH10\$.USBROM,55757,3312,18071,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH10\$.USBPRN,16714281,215,58063,16714281,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH10\$.USBKeyM,54448,7508,28759,16777048,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH10\$.USBKBD,16713916,580,46131,16713916,0,0,no match #1
@@ -31746,10 +31746,10 @@ JGH PD Library Disks($.JGH.csv)\JGH10\$.MSEDEMO,53136,1495,10829,16776022,32803,
 JGH PD Library Disks($.JGH.csv)\JGH10\$.DOSLdr,32803,189,15031,16776003,32803,32803,Basic #2
 JGH PD Library Disks($.JGH.csv)\JGH10\$.MKROM,49264,38,43797,16776790,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH10\$.KBDDEMO,16754000,3407,9682,16776022,32803,0,Basic #1
-JGH PD Library Disks($.JGH.csv)\JGH10\$.HiBasic,47104,16384,14156,47104,32515,16384,Mode 3 screen #2
-JGH PD Library Disks($.JGH.csv)\JGH10\$.CRUNCH,1280,409,47624,1280,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH10\$.dosfsm,55757,6144,5926,32768,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH10\$.dosfsb,55757,5565,56313,32768,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH10\$.HiBasic,47104,16384,14156,47104,217,128,Rom #1
+JGH PD Library Disks($.JGH.csv)\JGH10\$.CRUNCH,1280,409,47624,1280,217,128,Rom #1
+JGH PD Library Disks($.JGH.csv)\JGH10\$.dosfsm,55757,6144,5926,32768,217,128,Rom #1
+JGH PD Library Disks($.JGH.csv)\JGH10\$.dosfsb,55757,5565,56313,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH10\$.DOSFile,32803,12749,45855,16776005,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH10\$.DOSCopy,32803,12287,9866,16776005,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH10\T.BBCUSB,16729360,9306,23674,16777050,0,0,no match #1
@@ -31758,21 +31758,21 @@ JGH PD Library Disks($.JGH.csv)\JGH10\S.USBPRN,16752224,3249,60547,16776023,3280
 JGH PD Library Disks($.JGH.csv)\JGH11\$.Assem,16713937,569,29546,16713920,32761,4352,TYB music samples #4
 JGH PD Library Disks($.JGH.csv)\JGH11\$.Unpack,32803,436,61295,16776001,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH11\M.ABASIC,16711980,61375,49861,16711680,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH11\$.Z80ROM,45056,15864,61681,45056,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH11\$.Z80ROM,45056,15864,61681,45056,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.Z80BAS,13530,13338,31806,256,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.TUBE,16713984,318,1684,16713984,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH11\$.TESTARM,32768,376,2556,32768,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH11\$.TEST65,16384,819,61378,16384,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH11\$.TEST11,16384,672,40106,16384,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH11\$.TEST09,55757,1177,41712,32768,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH11\$.TESTARM,32768,376,2556,32768,217,128,Rom #1
+JGH PD Library Disks($.JGH.csv)\JGH11\$.TEST65,16384,819,61378,16384,217,128,Rom #1
+JGH PD Library Disks($.JGH.csv)\JGH11\$.TEST11,16384,672,40106,16384,217,128,Rom #1
+JGH PD Library Disks($.JGH.csv)\JGH11\$.TEST09,55757,1177,41712,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.ROMS,16713984,341,201,16713984,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH11\$.PDPBAS,55757,12818,48057,32768,32761,4352,TYB music samples #4
-JGH PD Library Disks($.JGH.csv)\JGH11\$.Link,55757,471,42032,32768,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH11\$.PDPBAS,55757,12818,48057,32768,217,128,Rom #1
+JGH PD Library Disks($.JGH.csv)\JGH11\$.Link,55757,471,42032,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.OSWFF,16764240,254,51492,16776539,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.neobbc,6144,3776,44696,16776028,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.MDUMP,16714016,520,51602,16713976,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.GO,16714008,248,59465,16713984,0,0,no match #1
-JGH PD Library Disks($.JGH.csv)\JGH11\$.EXBAS09,32768,9819,58845,32768,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH11\$.EXBAS09,32768,9819,58845,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.ClockSp,30960,2005,31782,16776026,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.ABASIC,4096,39864,54981,4096,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH11\$.Obey,16712026,143,7688,16711936,0,0,no match #1
@@ -31786,7 +31786,7 @@ JGH PD Library Disks($.JGH.csv)\JGH12\$.MENU2,39424,2595,27438,16776005,32803,0,
 JGH PD Library Disks($.JGH.csv)\JGH12\$.MENSYS1,16738816,977,19096,16777029,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.dskmenu,32764,36,18509,16777032,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.PackAll,32803,2113,16131,16717889,32803,0,Basic #1
-JGH PD Library Disks($.JGH.csv)\JGH12\$.INFORM,55757,16384,34657,32768,32515,16384,Mode 3 screen #2
+JGH PD Library Disks($.JGH.csv)\JGH12\$.INFORM,55757,16384,34657,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.UTILS,16771584,3285,28858,16776000,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.SETCOL,32803,345,27559,16776000,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.SCREEN,16771584,1024,60153,16743488,32519,31744,Mode 7 screen #2
@@ -31795,7 +31795,7 @@ JGH PD Library Disks($.JGH.csv)\JGH12\$.MENU,16771584,1624,39075,16776000,32803,
 JGH PD Library Disks($.JGH.csv)\JGH12\$.EDITOR,16771584,3381,11691,16776000,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.!BOOT,16771584,33,46836,16777024,0,0,no match #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.MENSYS,16712704,1127,54851,16776005,32803,0,Basic #1
-JGH PD Library Disks($.JGH.csv)\JGH12\$.VList,55757,666,12634,32768,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH12\$.VList,55757,666,12634,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.MakeLP,32803,9722,15943,16776007,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.Assem,16713937,569,29546,16713920,32761,4352,TYB music samples #4
 JGH PD Library Disks($.JGH.csv)\JGH12\$.Keys,16714006,320,1287,16713984,0,0,no match #1
@@ -31806,7 +31806,7 @@ JGH PD Library Disks($.JGH.csv)\JGH12\$.BList,16714029,511,17008,16713984,0,0,no
 JGH PD Library Disks($.JGH.csv)\JGH12\$.BDiff,32803,1415,63964,16741980,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.Repair,32803,2041,64025,28672,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.EcoMenu,13312,4277,2802,16776007,32803,0,Basic #1
-JGH PD Library Disks($.JGH.csv)\JGH12\$.Crunch,55757,409,47624,32768,0,0,no match #1
+JGH PD Library Disks($.JGH.csv)\JGH12\$.Crunch,55757,409,47624,32768,217,128,Rom #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.DirMenu,32803,6132,55959,16776003,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.ConvRTF,16765408,5609,18216,16776020,32803,0,Basic #1
 JGH PD Library Disks($.JGH.csv)\JGH12\$.UpdateI,16772688,6568,31702,16776011,32803,0,Basic #1
@@ -33072,11 +33072,11 @@ micro user ($.tmu.csv)\tmu89-12\$.xsum,28672,1024,56916,28672,32519,31744,Mode 7
 micro user ($.tmu.csv)\tmu89-12\X.TapeMak,16744483,989,4850,16718080,32803,0,Basic #1
 micro user ($.tmu.csv)\tmu89-12\X.GEN,16744483,4592,27625,16718080,32803,0,Basic #1
 micro user ($.tmu.csv)\tmu89-12\$.Header,16744483,17,20226,16718080,0,0,no match #1
-micro user ($.tmu.csv)\tmu89-12\H.ADD,32803,2804,19978,6400,32803,32803,Basic #2
+micro user ($.tmu.csv)\tmu89-12\H.ADD,32803,2804,19978,6400,217,128,Rom #1
 micro user ($.tmu.csv)\tmu89-12\$.!boot,16777215,14,30663,0,0,0,no match #1
 micro user ($.tmu.csv)\tmu89-12\$.!Menu,10752,1490,16260,10752,0,0,no match #1
 micro user ($.tmu.csv)\tmu89-12\$.!Logo,12288,9600,38191,12288,0,32757,ScrLoad #2
-micro user ($.tmu.csv)\tmu89-12\H.VIEW,32803,12004,53952,6400,32803,32803,Basic #2
+micro user ($.tmu.csv)\tmu89-12\H.VIEW,32803,12004,53952,6400,217,128,Rom #1
 micro user ($.tmu.csv)\tmu89-12\!.Sprites,16776451,15056,50489,16775489,32761,4352,TYB music samples #1
 micro user ($.tmu.csv)\tmu89-12\!.FileFin,16754387,692,5715,16775745,0,0,no match #1
 micro user ($.tmu.csv)\tmu89-12\!.!SPRITE,59400,996,4679,16775489,32761,4352,TYB music samples #1
@@ -33279,7 +33279,7 @@ micro user ($.tmu.csv)\tmu90-08\$.Header,16744483,17,20226,16718080,0,0,no match
 micro user ($.tmu.csv)\tmu90-08\$.!boot,16777215,14,30663,0,0,0,no match #1
 micro user ($.tmu.csv)\tmu90-08\$.TXProg,16711936,4528,38599,16734464,0,0,no match #1
 micro user ($.tmu.csv)\tmu90-08\$.Eclipse,32803,5787,58863,6400,32803,0,Basic #1
-micro user ($.tmu.csv)\tmu90-08\$.firmwre,0,4096,61391,32768,32761,4352,TYB music samples #4
+micro user ($.tmu.csv)\tmu90-08\$.firmwre,0,4096,61391,32768,217,128,Rom #1
 micro user ($.tmu.csv)\tmu90-08\$.RamTest,16744483,1126,57393,16718080,32803,0,Basic #1
 micro user ($.tmu.csv)\tmu90-08\$.xs,2816,512,20491,2816,32761,4352,TYB music samples #3
 micro user ($.tmu.csv)\tmu90-08\$.xsum,28672,1024,56916,28672,32519,31744,Mode 7 screen #2
@@ -34029,9 +34029,9 @@ micro user ($.tmu.csv)\tmu93-11\$.Chars,2304,456,27902,2304,0,0,no match #1
 micro user ($.tmu.csv)\tmu93-11\$.AdSave,16747936,161,55156,16777028,0,0,no match #1
 micro user ($.tmu.csv)\tmu93-11\$.AddBook,32803,6105,54111,6400,32803,0,Basic #1
 micro user ($.tmu.csv)\tmu93-11\$.!BOOT,7680,5142,51255,6656,0,0,no match #1
-micro user ($.tmu.csv)\tmu93-11\$.SoftKey,16744448,16384,26875,16744448,32515,16384,Mode 3 screen #2
+micro user ($.tmu.csv)\tmu93-11\$.SoftKey,16744448,16384,26875,16744448,217,128,Rom #1
 micro user ($.tmu.csv)\tmu93-11\$.xs,32803,512,20491,6400,32803,32803,Basic #2
-micro user ($.tmu.csv)\tmu93-11\$.PRTSC,16777215,16384,25870,0,32515,16384,Mode 3 screen #2
+micro user ($.tmu.csv)\tmu93-11\$.PRTSC,16777215,16384,25870,0,217,128,Rom #1
 micro user ($.tmu.csv)\tmu93-11\$.Slide3,32803,8195,57529,6400,32803,0,Basic #1
 micro user ($.tmu.csv)\tmu93-11\$.Slide2,32803,5201,27429,6400,32803,0,Basic #1
 micro user ($.tmu.csv)\tmu93-11\$.Slide1,32803,9068,40180,6400,32803,0,Basic #1
@@ -34169,13 +34169,13 @@ Public domain ($.8bs.csv)\8BS12a\$.MM1,16744491,1809,47231,16715264,32803,0,Basi
 Public domain ($.8bs.csv)\8BS12a\$.ADDRESS,16744483,10700,15687,16718080,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS12a\$.SUNPROG,16744483,7980,13879,16718080,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS12a\$.TOPD,0,9760,12468,12768,32758,12768,Repton 3 screen #1
-Public domain ($.8bs.csv)\8BS12a\R.XArc,55757,9984,44385,32768,0,0,no match #1
-Public domain ($.8bs.csv)\8BS12a\R.Arc,55757,15104,15835,32768,0,0,no match #1
+Public domain ($.8bs.csv)\8BS12a\R.XArc,55757,9984,44385,32768,217,128,Rom #1
+Public domain ($.8bs.csv)\8BS12a\R.Arc,55757,15104,15835,32768,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS12a\$.SSCREEN,16744483,1173,14546,16718080,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS12a\S.SHARES,16744483,12553,27077,16718080,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS12a\L.DATA,0,382,45376,0,0,0,no match #1
-Public domain ($.8bs.csv)\8BS12a\R.BASDUMP,32768,512,53910,32768,0,0,no match #1
-Public domain ($.8bs.csv)\8BS12a\R.LIFE,16744487,4262,9495,32768,0,0,no match #1
+Public domain ($.8bs.csv)\8BS12a\R.BASDUMP,32768,512,53910,32768,217,128,Rom #1
+Public domain ($.8bs.csv)\8BS12a\R.LIFE,16744487,4262,9495,32768,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS12a\$.New8BS,6404,3471,57811,6400,0,0,no match #1
 Public domain ($.8bs.csv)\8BS12a\$.ROT5,16744483,611,38717,16718080,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS12a\$.RS232,16744483,920,61371,16718080,32803,0,Basic #1
@@ -34351,7 +34351,7 @@ Public domain ($.8bs.csv)\8BS15a\$.View,16733405,1486,48951,16776003,32803,0,Bas
 Public domain ($.8bs.csv)\8BS15a\T.Game,5648,22528,32455,4352,0,0,no match #1
 Public domain ($.8bs.csv)\8BS15b\W.SELECT,16733881,1136,63062,16776515,32761,4352,TYB music samples #4
 Public domain ($.8bs.csv)\8BS15b\W.INTRO,16733980,2425,9492,16776515,32761,4352,TYB music samples #4
-Public domain ($.8bs.csv)\8BS15b\M.UTILROM,16777215,16384,16937,16777215,32515,16384,Mode 3 screen #2
+Public domain ($.8bs.csv)\8BS15b\M.UTILROM,16777215,16384,16937,16777215,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS15b\$.PLAY,2815,1018,35217,2304,0,0,no match #1
 Public domain ($.8bs.csv)\8BS15b\R.Robo,16744483,4632,18366,16718080,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS15b\R.EDANIM,16744483,2159,44182,16716032,32803,4352,Basic page=&1100 #1
@@ -34427,15 +34427,15 @@ Public domain ($.8bs.csv)\8BS17a\$.MixEd,16744491,3240,14780,16715264,32803,0,Ba
 Public domain ($.8bs.csv)\8BS17a\$.!BOOT,16777215,373,20198,0,0,0,no match #1
 Public domain ($.8bs.csv)\8BS17a\$.!Screen,16743418,966,38870,16743418,0,0,no match #1
 Public domain ($.8bs.csv)\8BS17a\S.VIV,6400,25344,62667,6400,32761,4352,TYB music samples #1
-Public domain ($.8bs.csv)\8BS17a\R.TakeOM,16777215,16384,15899,16777215,32515,16384,Mode 3 screen #2
-Public domain ($.8bs.csv)\8BS17a\R.Stop!,16777215,16384,1181,16777215,32515,16384,Mode 3 screen #2
+Public domain ($.8bs.csv)\8BS17a\R.TakeOM,16777215,16384,15899,16777215,217,128,Rom #1
+Public domain ($.8bs.csv)\8BS17a\R.Stop!,16777215,16384,1181,16777215,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS17a\T.ArcTxt,16777215,782,46740,0,0,0,no match #1
 Public domain ($.8bs.csv)\8BS17a\T.ArcINS,16777215,6906,41634,0,0,0,no match #1
 Public domain ($.8bs.csv)\8BS17a\$.Archive,16744483,1647,51209,16718080,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS17a\$.!8BS,16777215,116,31949,0,0,0,no match #1
 Public domain ($.8bs.csv)\8BS17b\$./HINT,16777215,1710,44724,0,0,0,no match #1
 Public domain ($.8bs.csv)\8BS17b\$./HELP,16777215,6306,57962,0,0,0,no match #1
-Public domain ($.8bs.csv)\8BS17b\R.8BSRom,16777215,16384,46477,16777215,32515,16384,Mode 3 screen #2
+Public domain ($.8bs.csv)\8BS17b\R.8BSRom,16777215,16384,46477,16777215,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS17b\R.L1LRep,0,9760,16084,12768,32758,12768,Repton 3 screen #1
 Public domain ($.8bs.csv)\8BS17b\5.M5000,16777215,818,55274,0,0,0,no match #1
 Public domain ($.8bs.csv)\8BS17b\C.OneLine,16777215,4739,24227,0,0,0,no match #1
@@ -34471,7 +34471,7 @@ Public domain ($.8bs.csv)\8BS18a\$.Mode,16740384,1097,9578,16740352,0,0,no match
 Public domain ($.8bs.csv)\8BS18a\$.Joiner,16744483,1744,24534,16718080,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS18a\$.Dbase,16744483,5325,64595,16718336,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS18a\$.DATA,22016,6095,25795,22016,0,0,no match #1
-Public domain ($.8bs.csv)\8BS18a\R.HADFS,16744448,16384,46822,16744448,32515,16384,Mode 3 screen #2
+Public domain ($.8bs.csv)\8BS18a\R.HADFS,16744448,16384,46822,16744448,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS18a\$.ModeDem,16744483,398,4663,16719104,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS18a\$./UPGR,16777215,16129,18317,0,0,0,no match #1
 Public domain ($.8bs.csv)\8BS18a\$./REPT,16777215,4603,11407,0,0,0,no match #1
@@ -34630,9 +34630,9 @@ Public domain ($.8bs.csv)\8BS21b\$.DIRcode,16744483,2879,41968,16719616,32803,0,
 Public domain ($.8bs.csv)\8BS21b\$.DIRlock,2304,512,7118,2304,0,0,no match #1
 Public domain ($.8bs.csv)\8BS21b\$.STARS,2816,320,47589,2816,0,0,no match #1
 Public domain ($.8bs.csv)\8BS21b\$.FIRST,16744491,2637,28449,16715264,32803,0,Basic #1
-Public domain ($.8bs.csv)\8BS21b\$.ARCHIVE,16777215,16384,45806,0,32515,16384,Mode 3 screen #2
+Public domain ($.8bs.csv)\8BS21b\$.ARCHIVE,16777215,16384,45806,0,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS21b\$.SHIP,16744483,2443,37920,16718080,32803,0,Basic #1
-Public domain ($.8bs.csv)\8BS21b\$.DEARCHI,16777215,16384,57786,0,32515,16384,Mode 3 screen #2
+Public domain ($.8bs.csv)\8BS21b\$.DEARCHI,16777215,16384,57786,0,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS21b\C.Hacker,16777215,5853,63418,0,0,0,no match #1
 Public domain ($.8bs.csv)\8BS21b\$.Arcer18,16744491,1647,51209,16715264,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS21b\C.TypTutr,16777215,24678,26462,0,0,0,no match #1
@@ -35895,10 +35895,10 @@ Public domain ($.8bs.csv)\8BS9a\$.Bomber,16744483,609,5226,16718080,32803,0,Basi
 Public domain ($.8bs.csv)\8BS9a\$.Faults,16744491,7105,17361,16716032,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS9a\L.Office,22528,1920,27121,22528,0,0,no match #1
 Public domain ($.8bs.csv)\8BS9a\T.InformI,16777215,9281,56005,0,0,0,no match #1
-Public domain ($.8bs.csv)\8BS9a\R.Inform,16384,16384,28718,16384,32515,16384,Mode 3 screen #2
+Public domain ($.8bs.csv)\8BS9a\R.Inform,16384,16384,28718,16384,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS9a\$.Cards,16744483,17360,61165,16718080,32803,0,Basic #1
 Public domain ($.8bs.csv)\8BS9a\$.MSCREEN,12288,20480,16115,12288,32514,12288,Mode 2 screen #2
-Public domain ($.8bs.csv)\8BS9a\R.NotePad,16777215,16384,64117,16777215,32515,16384,Mode 3 screen #2
+Public domain ($.8bs.csv)\8BS9a\R.NotePad,16777215,16384,64117,16777215,217,128,Rom #1
 Public domain ($.8bs.csv)\8BS9b\V.0,16711680,1024,18120,16743464,32519,31744,Mode 7 screen #2
 Public domain ($.8bs.csv)\8BS9b\V.6,16711680,2048,12721,16743464,0,0,no match #1
 Public domain ($.8bs.csv)\8BS9b\$.TxtConv,16715264,4145,44518,16715264,32803,0,Basic #1
@@ -36058,11 +36058,11 @@ Repton screens - levels ($.rep.csv)\REPMNU\$.CATDAT0,0,1409,55762,0,32761,4352,T
 rom ($.rom.csv)\MicroProlog\$.!BOOT,16777215,20,7961,0,0,0,no match #1
 rom ($.rom.csv)\MicroProlog\$.prop2,0,4859,36634,0,0,0,no match #1
 rom ($.rom.csv)\MicroProlog\$.rem,16714049,107,43320,16713984,0,0,no match #1
-rom ($.rom.csv)\MicroProlog\$.PROLOG,55757,16384,38998,32768,32515,16384,Mode 3 screen #2
+rom ($.rom.csv)\MicroProlog\$.PROLOG,55757,16384,38998,32768,217,128,Rom #1
 rom ($.rom.csv)\MicroProlog\$.COPRIME,16777215,399,52728,0,32761,4352,TYB music samples #3
 rom ($.rom.csv)\MicroProlog\$.MODULES,0,767,19049,0,0,0,no match #1
 rom ($.rom.csv)\MicroProlog\$.SIMPLE,0,7022,9962,0,32761,4352,TYB music samples #3
-rom ($.rom.csv)\MicroProlog\$.HILOG,47104,16383,29517,47104,0,0,no match #1
+rom ($.rom.csv)\MicroProlog\$.HILOG,47104,16383,29517,47104,217,128,Rom #1
 rom ($.rom.csv)\MicroProlog\$.EDITOR,0,5077,11459,0,0,0,no match #1
 rom ($.rom.csv)\MicroProlog\$.DEFTRAP,0,1474,10584,0,32803,0,Basic #1
 rom ($.rom.csv)\MicroProlog\$.TRACE,0,2330,8353,0,0,0,no match #1
@@ -36089,692 +36089,692 @@ rom ($.rom.csv)\MITSI\$.ROYALS,0,1536,1844,0,32761,4352,TYB music samples #3
 rom ($.rom.csv)\MITSI\$.MURDER,0,881,10149,0,0,0,no match #1
 rom ($.rom.csv)\MITSI\$.METALS,0,512,25326,0,0,0,no match #1
 rom ($.rom.csv)\MITSI\$.FAMTREE,0,1792,3905,0,32761,4352,TYB music samples #3
-rom ($.rom.csv)\MITSI\$.PROLOG,55757,16384,38998,32768,32515,16384,Mode 3 screen #2
+rom ($.rom.csv)\MITSI\$.PROLOG,55757,16384,38998,32768,217,128,Rom #1
 rom ($.rom.csv)\MITSI\$.MITSI,0,6975,63159,0,0,0,no match #1
 rom ($.rom.csv)\MITSI\$.INSTALL,16744491,154,40572,16715264,0,0,no match #1
 rom ($.rom.csv)\MITSI\$.!BOOT,16777215,20,7961,0,0,0,no match #1
-rom ($.rom.csv)\rom10A\$.eoo09b,55757,8236,54891,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\rom10A\$.eoo09,55757,8192,35915,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom10A\$.wat13a2,55757,16384,55286,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10A\$.wat1.3a,55757,16384,54383,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10A\$.wat1.3,55757,16384,20567,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10A\$.wat1.1,55757,16384,34089,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10A\$.wrd+14e,55757,16384,3220,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10A\$.wrd+14a,55757,16384,24612,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10A\$.print1e,0,8192,45957,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom10A\$.print1c,0,8192,30495,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom10A\$.wat143a,0,16384,8252,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10A\$.wat1.43,55757,16384,6143,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10A\$.wat1.42,55757,16384,10801,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10A\$.wat1.41,55757,16384,47672,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.intper,0,8192,13979,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom10b\$.sht102,0,8192,52780,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom10b\$.kmt133,0,16384,40351,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.kmt145,0,16384,26945,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.kbd.1,0,8192,60289,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom10b\$.label,0,16384,5052,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.sht106,0,16384,16657,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.sht106a,0,16384,43617,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.sht106s,0,16384,16802,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.wrd102,0,16384,7668,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.wrd102l,0,16384,34994,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.kcopy,0,8192,22945,0,32803,0,Basic #1
-rom ($.rom.csv)\rom10b\$.kmt102,0,16384,30561,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom10b\$.kmt130,0,16384,33013,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11a\$.spell,55757,16384,54511,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11a\$.uviprom,55757,16384,37533,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11a\$.starsto,55757,16384,5886,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11a\$.ADT2,55757,16384,30498,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11a\$.utils,55757,16384,51284,32768,32515,16384,Mode 3 screen #2
+rom ($.rom.csv)\rom10A\$.eoo09b,55757,8236,54891,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.eoo09,55757,8192,35915,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wat13a2,55757,16384,55286,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wat1.3a,55757,16384,54383,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wat1.3,55757,16384,20567,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wat1.1,55757,16384,34089,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wrd+14e,55757,16384,3220,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wrd+14a,55757,16384,24612,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.print1e,0,8192,45957,0,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.print1c,0,8192,30495,0,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wat143a,0,16384,8252,0,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wat1.43,55757,16384,6143,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wat1.42,55757,16384,10801,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10A\$.wat1.41,55757,16384,47672,32768,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.intper,0,8192,13979,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.sht102,0,8192,52780,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.kmt133,0,16384,40351,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.kmt145,0,16384,26945,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.kbd.1,0,8192,60289,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.label,0,16384,5052,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.sht106,0,16384,16657,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.sht106a,0,16384,43617,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.sht106s,0,16384,16802,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.wrd102,0,16384,7668,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.wrd102l,0,16384,34994,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.kcopy,0,8192,22945,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.kmt102,0,16384,30561,0,217,128,Rom #1
+rom ($.rom.csv)\rom10b\$.kmt130,0,16384,33013,0,217,128,Rom #1
+rom ($.rom.csv)\rom11a\$.spell,55757,16384,54511,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11a\$.uviprom,55757,16384,37533,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11a\$.starsto,55757,16384,5886,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11a\$.ADT2,55757,16384,30498,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11a\$.utils,55757,16384,51284,32768,217,128,Rom #1
 rom ($.rom.csv)\rom11a\$.tube1.1,32757,4096,12168,0,0,32757,ScrLoad #2
 rom ($.rom.csv)\rom11a\$.tube,0,2048,11896,0,0,0,no match #1
-rom ($.rom.csv)\rom11a\$.trek,55757,16384,26225,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11a\$.tball,55757,16384,38257,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11a\$.term,55757,5632,13086,32768,0,0,no match #1
-rom ($.rom.csv)\rom11a\$.peg400,55757,16384,9872,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11a\$.starW,55757,16384,64152,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.sht102,55757,8192,52780,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom11b\$.machv1,0,8192,55989,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom11b\$.kmt133,55757,16384,40351,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.kmt145,55757,16384,26945,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.kbd.1,55757,8192,60289,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom11b\$.label,55757,16384,5052,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.sht106,55757,16384,16657,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.sht106a,55757,16384,43617,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.sht106s,55757,16384,16802,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.wrd102,55757,16384,7668,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.wrd102l,55757,16384,34994,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.kcopy,55757,8192,22945,32768,32803,0,Basic #1
-rom ($.rom.csv)\rom11b\$.kmt102,55757,16384,30561,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom11b\$.kmt130,55757,16384,33013,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12a\$.add202,55757,16384,36767,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12a\$.addcom,55757,8192,57806,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom12a\$.ade190,55757,16384,2369,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12a\$.adfs100,55757,16384,28243,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12a\$.adfs104,55757,16384,2911,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12a\$.adfs108,55757,16384,40798,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12a\$.adfsutl,55757,16384,14033,32768,32515,16384,Mode 3 screen #2
+rom ($.rom.csv)\rom11a\$.trek,55757,16384,26225,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11a\$.tball,55757,16384,38257,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11a\$.term,55757,5632,13086,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11a\$.peg400,55757,16384,9872,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11a\$.starW,55757,16384,64152,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.sht102,55757,8192,52780,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.machv1,0,8192,55989,0,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.kmt133,55757,16384,40351,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.kmt145,55757,16384,26945,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.kbd.1,55757,8192,60289,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.label,55757,16384,5052,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.sht106,55757,16384,16657,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.sht106a,55757,16384,43617,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.sht106s,55757,16384,16802,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.wrd102,55757,16384,7668,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.wrd102l,55757,16384,34994,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.kcopy,55757,8192,22945,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.kmt102,55757,16384,30561,32768,217,128,Rom #1
+rom ($.rom.csv)\rom11b\$.kmt130,55757,16384,33013,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12a\$.add202,55757,16384,36767,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12a\$.addcom,55757,8192,57806,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12a\$.ade190,55757,16384,2369,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12a\$.adfs100,55757,16384,28243,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12a\$.adfs104,55757,16384,2911,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12a\$.adfs108,55757,16384,40798,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12a\$.adfsutl,55757,16384,14033,32768,217,128,Rom #1
 rom ($.rom.csv)\rom12a\$.wap130L,0,32768,51711,0,0,0,no match #1
-rom ($.rom.csv)\rom12a\$.wap130H,55757,32768,31060,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\rom12a\$.aadfs1,55757,16384,27723,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.Enet623,55757,16384,42515,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.Enet517,55757,16384,36087,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.Aromman,55757,16384,63396,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.aRAMU,55757,16384,57020,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.adfs131,55757,16384,54048,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.adfs140,55757,16384,48050,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.net455,55757,8192,37304,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom12b\$.dfs4084,55757,8192,45739,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom12b\$.adfs0,0,8192,48534,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom12b\$.alans,55757,16384,54560,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.afm109,55757,16384,65218,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.afm107,55757,16384,11226,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.airtrn,55757,16384,3531,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom12b\$.arom113,55757,8192,18572,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom13a\$.afm109,55757,16384,48997,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13a\$.add102,55757,16384,61039,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13a\$.acc1.5,55757,16384,58334,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13a\$.acc1.0,55757,8192,52377,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom13a\$.add104,55757,16384,44784,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13a\$.adi1a,55757,16384,7132,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13a\$.adi100,55757,16384,4129,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13a\$.adi120,55757,16384,63111,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13a\$.adi200,55757,16384,28271,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13a\$.avt120,55757,16384,50554,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13a\$.add103,55757,16384,40801,32768,32515,16384,Mode 3 screen #2
+rom ($.rom.csv)\rom12a\$.wap130H,55757,32768,31060,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12a\$.aadfs1,55757,16384,27723,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.Enet623,55757,16384,42515,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.Enet517,55757,16384,36087,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.Aromman,55757,16384,63396,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.aRAMU,55757,16384,57020,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.adfs131,55757,16384,54048,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.adfs140,55757,16384,48050,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.net455,55757,8192,37304,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.dfs4084,55757,8192,45739,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.adfs0,0,8192,48534,0,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.alans,55757,16384,54560,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.afm109,55757,16384,65218,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.afm107,55757,16384,11226,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.airtrn,55757,16384,3531,32768,217,128,Rom #1
+rom ($.rom.csv)\rom12b\$.arom113,55757,8192,18572,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.afm109,55757,16384,48997,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.add102,55757,16384,61039,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.acc1.5,55757,16384,58334,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.acc1.0,55757,8192,52377,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.add104,55757,16384,44784,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.adi1a,55757,16384,7132,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.adi100,55757,16384,4129,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.adi120,55757,16384,63111,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.adi200,55757,16384,28271,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.avt120,55757,16384,50554,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13a\$.add103,55757,16384,40801,32768,217,128,Rom #1
 rom ($.rom.csv)\rom13a\$.abm+,0,16384,57249,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13b\$.asrom31,55757,8192,1848,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom13b\$.Arom,55757,8192,31256,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom13b\$.page,55757,8192,7926,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom13b\$.mous21,55757,8192,62277,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom13b\$.mous361,55757,16384,49456,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13b\$.mus331a,55757,16384,61550,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13b\$.mou331,55757,16384,1671,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13b\$.arts,55757,8192,48396,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom13b\$.AriesB2,55757,8192,46719,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom13b\$.arabic,55757,16384,57394,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13b\$.apb101,55757,1626,41052,32768,0,0,no match #1
-rom ($.rom.csv)\rom13b\$.anfs421,55757,16384,51341,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13b\$.stopP19,55757,16384,17133,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13b\$.stop19,55757,16384,6368,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13b\$.page10,55757,16384,25622,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom13b\$.page12,55757,16384,26297,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14a\$.basic4,55757,16384,14156,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14a\$.basic2A,55757,16384,41437,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14a\$.ats258,55757,16384,34275,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14a\$.basic2,55757,32768,57177,32768,0,0,no match #1
-rom ($.rom.csv)\rom14a\$.basbost,55757,8192,4877,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14a\$.basic,55757,32768,28211,32768,0,0,no match #1
-rom ($.rom.csv)\rom14a\$.bas486,55757,16384,12783,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14a\$.basext,55757,8192,5819,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14a\$.autosav,55757,16384,1874,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14a\$.autorom,55757,16384,27615,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14a\$.ats259,55757,16384,28581,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14b\$.bsdos22,55757,16384,16018,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14b\$.bitsk2,55757,8192,834,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.bcal12e,55757,8192,48628,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.bcalc12,55757,8192,17421,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.bbase16,55757,8192,42434,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.beast17,55757,8192,41542,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.be132,55757,16384,52066,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14b\$.bcpl70,55757,16384,20018,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14b\$.term023,55757,8192,15275,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.beebtel,55757,16384,53654,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14b\$.beebrom,55757,8192,39792,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.beebpen,55757,8192,45158,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.beebman,55757,8192,8949,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.bbfonta,55757,16384,16681,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14b\$.beebfnt,55757,16384,37920,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom14b\$.beebflx,55757,8192,40306,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom14b\$.beebcom,55757,10261,48323,32768,0,0,no match #1
-rom ($.rom.csv)\rom15a\$.cmsr817,55757,8192,52784,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15a\$.cstr032,55757,8192,17306,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15a\$.cpfile1,55757,8192,35349,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15a\$.cpr10,55757,16384,36902,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15a\$.cprom2,55757,16384,51223,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15a\$.bbrom,55757,8192,56479,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15a\$.bsht,55757,16384,38795,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15a\$.cstr222,55757,16384,63319,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15a\$.cstr231,55757,16384,57437,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15a\$.comsr24,55757,16384,45191,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15a\$.comstar,55757,8192,49820,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15a\$.comm09,55757,16384,48001,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15a\$.com104a,55757,16384,45981,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15a\$.compas,55757,8192,40958,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15a\$.cookie,55757,16384,21982,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.comala,55757,16384,19022,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.comala2,55757,16384,16797,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.csr1983,55757,8192,33999,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15b\$.csr1051,55757,8192,13058,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15b\$.cstr032,0,8192,17306,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15b\$.cmsr303,0,8192,5530,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom15b\$.comb110,55757,16384,27355,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.commas3,55757,16384,63010,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.comm1,55757,16384,12380,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.comm101,55757,16384,15936,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.comm104,55757,16384,45293,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.comp85,55757,16384,10713,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.cmdem11,55757,16384,38083,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom15b\$.cmsft86,55757,16384,47556,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.ddfs,55757,16384,54053,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.datgem,55757,16384,56199,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.chau,55757,16384,2539,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.C&D,55757,16384,42644,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.cmov1,55757,16384,28643,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.cmov2,55757,16384,10892,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.dbeeb12,55757,8192,64595,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom16a\$.dautil,55757,16384,46080,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.care100,55757,8192,58542,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom16a\$.care102,55757,8192,32137,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom16a\$.car103,55757,8192,54021,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom16a\$.cart64k,55757,16384,26363,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.ceemnu,55757,16384,49432,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16a\$.cent105,55757,16384,59351,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.f177022,55757,16384,28176,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.f1170j2,55757,16384,37201,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.ddos335,55757,16384,17106,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.ddfs19,55757,8192,61408,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom16b\$.ddfs09,0,16384,5751,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.fs17702,55757,16384,19484,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.fs17701,55757,16384,7252,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.talk100,55757,8192,59753,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom16b\$.desrom1,55757,16384,10700,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.zrom101,55757,8192,53992,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom16b\$.demob,55757,16384,28641,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.demoa,55757,16384,61663,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom16b\$.debug,55757,16384,34387,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.dfs22a2,55757,16384,19500,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.dfs220a,55757,16384,44458,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.17702m2,55757,16384,52376,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.17702j2,55757,16384,48736,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.f17702j,55757,16384,18256,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.dfs220,55757,16384,41657,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.dfs210,55757,16384,27771,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.dfs121,55757,8192,61466,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom17a\$.dfs098,55757,8192,56277,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom17a\$.dfsnet,55757,16384,32278,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.82-172i,0,16384,27031,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.82-172,55757,16384,11603,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17a\$.1770222,55757,16384,21472,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17b\$.dutl219,55757,8192,4974,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom17b\$.dmas200,55757,16384,40565,32768,32766,0,Ldpic #2
-rom ($.rom.csv)\rom17b\$.diagram,55757,16384,21330,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17b\$.dfs242,0,16384,29166,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17b\$.dfs228,55757,16384,59268,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17b\$.dfs225,55757,16384,50433,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17b\$.dfs222,55757,16384,32896,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17b\$.dfs22a3,55757,16384,13798,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom17b\$.ddocr,55757,16384,54079,32768,32803,0,Basic #1
-rom ($.rom.csv)\rom17b\$.ddoc107,55757,8192,18490,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom17b\$.ddoc105,55757,8192,54987,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom17b\$.ddoc10b,55757,8192,34732,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom17b\$.dasm2,55757,8192,28502,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom17b\$.dam010,55757,7168,7806,32768,0,0,no match #1
-rom ($.rom.csv)\rom17b\$.dimpr09,55757,8192,46598,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom17b\$.dig100,55757,8192,18970,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom18a\$.dout33,55757,8192,17731,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom18a\$.dout32g,55757,8192,31959,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom18a\$.daid2,55757,16384,45073,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18a\$.dser107,55757,8192,2132,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom18a\$.dromu,55757,8192,64934,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom18a\$.ddoc110,55757,16384,60790,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18a\$.daid,55757,16384,3123,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18a\$.dout30m,55757,16384,16496,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18a\$.dmas215,55757,16384,55371,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18a\$.dmas200,55757,16384,64103,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18a\$.dviw210,55757,16384,35818,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18a\$.dviw110,55757,16384,61951,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18a\$.dpre100,55757,8192,57405,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom18a\$.dpnt124,55757,16384,26857,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18a\$.dmon114,55757,8192,18263,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom18b\$.edit320,55757,16384,8213,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.edit350,55757,16384,29579,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.endi107,55757,16384,44796,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.Enga+24,55757,16384,15192,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.edwrd12,55757,16384,49691,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.ewrd102,55757,16384,12193,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.ewrd200,55757,16384,13576,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.Elitedt,0,16384,4960,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.edim04c,55757,16384,3763,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.edim04m,55757,16384,61999,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.edim04,55757,16384,45488,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom18b\$.edim106,55757,16384,8547,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19a\$.efx801,55757,8192,40097,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom19a\$.efx801a,55757,8192,37949,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom19a\$.wdfs154,55757,16384,19779,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19a\$.wdfs091,55757,16384,33781,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19a\$.meta,55757,16384,63984,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19a\$.e00dfs,55757,8192,50933,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom19a\$.e2pcode,55757,8192,2019,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom19a\$.etlk101,55757,8192,60958,32768,32766,0,Ldpic #2
-rom ($.rom.csv)\rom19a\$.etlk200,55757,8192,27434,32768,32766,0,Ldpic #2
-rom ($.rom.csv)\rom19a\$.ebt21,55757,8192,62048,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom19a\$.everest,55757,16384,21464,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19a\$.xmonii1,55757,8192,13204,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom19a\$.xmnii20,55757,16384,23923,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19a\$.xmon10a,55757,8192,30700,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom19a\$.xmon220,55757,16384,15858,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19a\$.extras,55757,8192,41094,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom19a\$.wdfs140,55757,16384,6963,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.Fwse+19,55757,16384,34648,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.fwse+18,55757,16384,5970,32768,32515,16384,Mode 3 screen #2
+rom ($.rom.csv)\rom13b\$.asrom31,55757,8192,1848,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.Arom,55757,8192,31256,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.page,55757,8192,7926,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.mous21,55757,8192,62277,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.mous361,55757,16384,49456,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.mus331a,55757,16384,61550,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.mou331,55757,16384,1671,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.arts,55757,8192,48396,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.AriesB2,55757,8192,46719,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.arabic,55757,16384,57394,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.apb101,55757,1626,41052,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.anfs421,55757,16384,51341,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.stopP19,55757,16384,17133,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.stop19,55757,16384,6368,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.page10,55757,16384,25622,32768,217,128,Rom #1
+rom ($.rom.csv)\rom13b\$.page12,55757,16384,26297,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.basic4,55757,16384,14156,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.basic2A,55757,16384,41437,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.ats258,55757,16384,34275,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.basic2,55757,32768,57177,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.basbost,55757,8192,4877,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.basic,55757,32768,28211,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.bas486,55757,16384,12783,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.basext,55757,8192,5819,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.autosav,55757,16384,1874,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.autorom,55757,16384,27615,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14a\$.ats259,55757,16384,28581,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.bsdos22,55757,16384,16018,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.bitsk2,55757,8192,834,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.bcal12e,55757,8192,48628,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.bcalc12,55757,8192,17421,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.bbase16,55757,8192,42434,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.beast17,55757,8192,41542,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.be132,55757,16384,52066,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.bcpl70,55757,16384,20018,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.term023,55757,8192,15275,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.beebtel,55757,16384,53654,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.beebrom,55757,8192,39792,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.beebpen,55757,8192,45158,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.beebman,55757,8192,8949,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.bbfonta,55757,16384,16681,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.beebfnt,55757,16384,37920,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.beebflx,55757,8192,40306,32768,217,128,Rom #1
+rom ($.rom.csv)\rom14b\$.beebcom,55757,10261,48323,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.cmsr817,55757,8192,52784,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.cstr032,55757,8192,17306,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.cpfile1,55757,8192,35349,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.cpr10,55757,16384,36902,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.cprom2,55757,16384,51223,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.bbrom,55757,8192,56479,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.bsht,55757,16384,38795,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.cstr222,55757,16384,63319,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.cstr231,55757,16384,57437,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.comsr24,55757,16384,45191,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.comstar,55757,8192,49820,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.comm09,55757,16384,48001,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.com104a,55757,16384,45981,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.compas,55757,8192,40958,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15a\$.cookie,55757,16384,21982,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.comala,55757,16384,19022,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.comala2,55757,16384,16797,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.csr1983,55757,8192,33999,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.csr1051,55757,8192,13058,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.cstr032,0,8192,17306,0,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.cmsr303,0,8192,5530,0,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.comb110,55757,16384,27355,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.commas3,55757,16384,63010,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.comm1,55757,16384,12380,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.comm101,55757,16384,15936,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.comm104,55757,16384,45293,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.comp85,55757,16384,10713,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.cmdem11,55757,16384,38083,32768,217,128,Rom #1
+rom ($.rom.csv)\rom15b\$.cmsft86,55757,16384,47556,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.ddfs,55757,16384,54053,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.datgem,55757,16384,56199,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.chau,55757,16384,2539,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.C&D,55757,16384,42644,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.cmov1,55757,16384,28643,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.cmov2,55757,16384,10892,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.dbeeb12,55757,8192,64595,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.dautil,55757,16384,46080,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.care100,55757,8192,58542,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.care102,55757,8192,32137,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.car103,55757,8192,54021,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.cart64k,55757,16384,26363,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.ceemnu,55757,16384,49432,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16a\$.cent105,55757,16384,59351,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.f177022,55757,16384,28176,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.f1170j2,55757,16384,37201,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.ddos335,55757,16384,17106,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.ddfs19,55757,8192,61408,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.ddfs09,0,16384,5751,0,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.fs17702,55757,16384,19484,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.fs17701,55757,16384,7252,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.talk100,55757,8192,59753,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.desrom1,55757,16384,10700,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.zrom101,55757,8192,53992,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.demob,55757,16384,28641,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.demoa,55757,16384,61663,32768,217,128,Rom #1
+rom ($.rom.csv)\rom16b\$.debug,55757,16384,34387,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.dfs22a2,55757,16384,19500,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.dfs220a,55757,16384,44458,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.17702m2,55757,16384,52376,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.17702j2,55757,16384,48736,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.f17702j,55757,16384,18256,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.dfs220,55757,16384,41657,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.dfs210,55757,16384,27771,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.dfs121,55757,8192,61466,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.dfs098,55757,8192,56277,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.dfsnet,55757,16384,32278,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.82-172i,0,16384,27031,0,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.82-172,55757,16384,11603,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17a\$.1770222,55757,16384,21472,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dutl219,55757,8192,4974,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dmas200,55757,16384,40565,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.diagram,55757,16384,21330,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dfs242,0,16384,29166,0,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dfs228,55757,16384,59268,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dfs225,55757,16384,50433,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dfs222,55757,16384,32896,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dfs22a3,55757,16384,13798,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.ddocr,55757,16384,54079,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.ddoc107,55757,8192,18490,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.ddoc105,55757,8192,54987,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.ddoc10b,55757,8192,34732,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dasm2,55757,8192,28502,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dam010,55757,7168,7806,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dimpr09,55757,8192,46598,32768,217,128,Rom #1
+rom ($.rom.csv)\rom17b\$.dig100,55757,8192,18970,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dout33,55757,8192,17731,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dout32g,55757,8192,31959,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.daid2,55757,16384,45073,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dser107,55757,8192,2132,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dromu,55757,8192,64934,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.ddoc110,55757,16384,60790,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.daid,55757,16384,3123,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dout30m,55757,16384,16496,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dmas215,55757,16384,55371,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dmas200,55757,16384,64103,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dviw210,55757,16384,35818,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dviw110,55757,16384,61951,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dpre100,55757,8192,57405,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dpnt124,55757,16384,26857,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18a\$.dmon114,55757,8192,18263,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.edit320,55757,16384,8213,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.edit350,55757,16384,29579,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.endi107,55757,16384,44796,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.Enga+24,55757,16384,15192,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.edwrd12,55757,16384,49691,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.ewrd102,55757,16384,12193,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.ewrd200,55757,16384,13576,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.Elitedt,0,16384,4960,0,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.edim04c,55757,16384,3763,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.edim04m,55757,16384,61999,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.edim04,55757,16384,45488,32768,217,128,Rom #1
+rom ($.rom.csv)\rom18b\$.edim106,55757,16384,8547,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.efx801,55757,8192,40097,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.efx801a,55757,8192,37949,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.wdfs154,55757,16384,19779,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.wdfs091,55757,16384,33781,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.meta,55757,16384,63984,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.e00dfs,55757,8192,50933,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.e2pcode,55757,8192,2019,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.etlk101,55757,8192,60958,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.etlk200,55757,8192,27434,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.ebt21,55757,8192,62048,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.everest,55757,16384,21464,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.xmonii1,55757,8192,13204,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.xmnii20,55757,16384,23923,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.xmon10a,55757,8192,30700,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.xmon220,55757,16384,15858,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.extras,55757,8192,41094,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19a\$.wdfs140,55757,16384,6963,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.Fwse+19,55757,16384,34648,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.fwse+18,55757,16384,5970,32768,217,128,Rom #1
 rom ($.rom.csv)\rom19b\$.eprutil,32803,16384,54017,0,32803,0,Basic #1
-rom ($.rom.csv)\rom19b\$.eprm104,55757,8192,9596,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom19b\$.eprII,55757,16384,36301,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.fwse+17,55757,16384,16072,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.flopcpy,55757,16384,65135,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.1aid11,55757,16384,14084,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.fileplu,55757,16384,17685,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.file+,55757,16384,4921,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.fbbs30,55757,16384,19477,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.fare140,55757,16384,61469,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom19b\$.epic247,55757,8192,4691,32768,32518,24576,Mode 6 screen #2
+rom ($.rom.csv)\rom19b\$.eprm104,55757,8192,9596,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.eprII,55757,16384,36301,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.fwse+17,55757,16384,16072,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.flopcpy,55757,16384,65135,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.1aid11,55757,16384,14084,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.fileplu,55757,16384,17685,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.file+,55757,16384,4921,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.fbbs30,55757,16384,19477,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.fare140,55757,16384,61469,32768,217,128,Rom #1
+rom ($.rom.csv)\rom19b\$.epic247,55757,8192,4691,32768,217,128,Rom #1
 rom ($.rom.csv)\Rom1a\$.KILLSRC,16744483,3934,39473,16718080,32803,0,Basic #1
 rom ($.rom.csv)\Rom1a\$.README,16777215,980,21852,16777215,0,0,no match #1
-rom ($.rom.csv)\Rom1a\$.ADE200,55757,16384,22821,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1a\$.ADCM130,55757,8192,48550,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom1a\$.ADCM120,55757,8192,24605,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom1a\$.adfs130,55757,16384,11800,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1a\$.ADFS210,55757,16384,27477,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1a\$.adfs150,55757,16384,24790,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1a\$.adfs203,55757,16384,54434,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1a\A.ACCELRA,55757,8192,26035,32768,32518,24576,Mode 6 screen #2
+rom ($.rom.csv)\Rom1a\$.ADE200,55757,16384,22821,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.ADCM130,55757,8192,48550,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.ADCM120,55757,8192,24605,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.adfs130,55757,16384,11800,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.ADFS210,55757,16384,27477,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.adfs150,55757,16384,24790,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.adfs203,55757,16384,54434,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\A.ACCELRA,55757,8192,26035,32768,217,128,Rom #1
 rom ($.rom.csv)\Rom1a\$.RLOAD,2527,263,50868,2512,0,0,no match #1
-rom ($.rom.csv)\Rom1a\$.WWP14F,55757,16384,29269,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1a\$.WORD+,55757,16384,1456,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1a\$.AMSUTIL,55757,8191,31634,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\Rom1a\$.AIDS,55757,8192,5486,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom1a\$.AID,55757,8192,30829,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom1a\$.ADT200,55757,16384,30498,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1a\$.ADE100,55757,16384,62682,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.SOUNDS,55757,8192,35878,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom1b\V.STORE10,55757,16384,47961,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\A.PGM+17,55757,16384,59857,16744448,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.AMXV341,55757,16384,48180,16744448,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.AMXV331,55757,16384,38807,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.AMXMou,55757,16384,53767,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.PBAS,55757,16384,16255,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.BASIC2,55757,16384,60424,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.BAS486,55757,16384,12783,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.AXR,55757,16384,57250,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.ASM,55757,8192,32951,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom1b\S.VASM65,55757,8191,17047,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\Rom1b\$.ARTIST,55757,16384,20600,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom1b\$.ARM113,55757,8192,13697,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20a\$.gtxt10,55757,16384,46019,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20a\$.gdmp101,55757,16384,49739,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20a\$.faid110,55757,8192,15116,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20a\$.font10,55757,16384,22342,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20a\$.flop+,55757,16384,61314,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20a\$.Fwse+23,55757,16384,50108,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20a\$.Fwse+21,55757,8192,49874,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20a\$.gcode10,55757,16384,50447,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20a\$.gcode,55757,16384,35012,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20a\$.fx8sd32,55757,3584,15198,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\rom20a\$.fx8sd31,55757,8192,47759,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20a\$.4thvx,55757,16384,32729,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20a\$.4th79,55757,16384,30801,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20a\$.4th25,55757,8192,9570,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20a\$.4th24,55757,8192,25761,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20b\$.help12,55757,16384,4890,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20b\$.help1,55757,8192,35310,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20b\$.grem120,55757,8192,874,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20b\$.gtrm201,55757,8192,24276,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20b\$.grex209,55757,8192,59746,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20b\$.grex103,55757,8192,47850,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20b\$.grapad,55757,8192,55588,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20b\$.glan21,55757,16384,38402,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20b\$.help214,55757,16384,53619,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20b\$.hans,55757,16384,45312,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20b\$.hutil23,55757,16384,50624,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20b\$.h+200,55757,16384,7093,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20b\$.hack22,55757,16384,22008,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom20b\$.hols300,55757,8192,34368,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom20b\$.gum,55757,10789,23885,32768,0,0,no match #1
-rom ($.rom.csv)\rom20b\$.grem121,55757,16384,54323,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.pas111,55757,16384,36010,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.pas100a,55757,16384,45347,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.hdvr110,55757,16384,57033,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.hdrr111,55757,16384,34848,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.hlp300,55757,8192,31532,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom21a\$.hibas3,55757,16384,34235,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.hand129,55757,16384,45351,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.icrt102,55757,16384,56568,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.icrt101,55757,16384,21265,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.idx303a,55757,8192,39817,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom21a\$.idx303,55757,8192,36920,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom21a\$.idxu205,55757,8192,36424,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom21a\$.index,55757,16384,55182,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21a\$.ibox10a,55757,8192,37176,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom21a\$.ibox10,55757,8192,19406,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom21b\$.padfs,55757,16384,43274,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21b\$.+1117,55757,8192,9041,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom21b\$.pend113,55757,16384,28209,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21b\$.penf124,55757,16384,23951,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21b\$.pas112,0,16384,21979,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21b\$.ppcb104,55757,16384,38842,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21b\$.ppcb403,55757,16384,17395,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21b\$.ppcb107,55757,16384,15447,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21b\$.ppcb302,55757,16384,64448,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21b\$.pig11,55757,8192,25294,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom21b\$.pig100,55757,8192,29770,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom21b\$.phx200,55757,16384,19882,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom21b\$.pend13a,55757,16384,49140,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22a\$.prob402,55757,16384,9971,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22a\$.pms110,55757,8192,44415,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.pbuf210,55757,8192,19168,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.ptr100,55757,16384,10789,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22a\$.pres110,55757,16384,4463,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22a\$.pres47n,55757,8192,51918,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.pres48n,55757,8192,64882,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.adfs331,55757,16384,29257,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22a\$.padf110,55757,16384,42624,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22a\$.pme110,55757,8192,9918,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.aRAMU,0,8192,63683,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.pme108a,55757,8192,41930,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.pme108,55757,8192,6596,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.pme101,55757,16384,30131,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22a\$.pme100,55757,8192,31546,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.pmep100,55757,8192,16857,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22a\$.prtsrv,55757,8192,48908,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22b\$.stmn120,55757,16384,55093,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22b\$.stgr201,55757,8192,23372,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22b\$.qpai110,55757,8192,37219,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22b\$.qrom,55757,8192,8658,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22b\$.prow13,55757,16384,58084,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22b\$.prow12,55757,16384,9922,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22b\$.prc181,55757,8192,44076,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22b\$.prob405,55757,16384,47361,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22b\$.rip1a,55757,16384,16444,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22b\$.rip1a2,55757,16384,35167,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22b\$.rip1,55757,8192,41382,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22b\$.rfs,55757,16384,60557,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom22b\$.rtegnhz,55757,8201,10412,32768,0,0,no match #1
-rom ($.rom.csv)\rom22b\$.qmon11a,55757,8192,32883,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22b\$.qmon110,55757,8192,62562,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom22b\$.que21a,55757,16384,62827,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23a\$.adfs0,55757,8192,48534,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23a\$.ddos315,55757,16384,57870,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23a\$.adi110,55757,16384,58129,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23a\$.scpy500,55757,8191,5845,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\rom23a\$.eprom8,55757,16384,8949,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23a\$.t2p3202,55757,8192,43779,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23a\$.os240,55757,8192,30688,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23a\$.plrfs,55757,16384,25368,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23a\$.ddfs09,55757,16384,5751,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23a\$.cprom1,55757,8192,17391,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23a\$.csr882,55757,8192,50464,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23a\$.csr1983,0,8192,33999,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23a\$.cent103,55757,16384,53600,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23a\$.brom102,55757,16384,50093,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23a\$.bitsk1,55757,8192,24152,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23a\$.adi1a2,55757,16384,51243,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.pwrf501,55757,16384,3284,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.1123,55757,16384,65439,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.fs7259,55757,8192,30114,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23b\$.82-172j,0,16384,41222,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.adi110,0,16384,58129,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.adi1a2,0,16384,51243,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.penf120,55757,16384,15437,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.pas112,55757,16384,21979,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.pmfntq,55757,16384,53576,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.machv1,0,8192,55989,0,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23b\$.grex102,55757,16384,42938,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom23b\$.dout30p,55757,8192,17268,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23b\$.dout05d,55757,8192,51937,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom23b\$.ddoc109,55757,16384,15844,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom24a\$.pbox122,55757,16384,7971,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom24a\$.sht103,55757,8192,55989,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom24a\$.pe108a2,55757,8192,63683,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom24a\$.pres100,55757,8192,54556,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom24a\$.wdfs150,55757,16384,22346,32768,32803,0,Basic #1
-rom ($.rom.csv)\rom24a\$.82-172i,55757,16384,27031,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom24a\$.cmsr697,55757,8192,11423,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom24a\$.Elitedt,55757,16384,4960,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom24a\$.82-172j,55757,16384,41222,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom24a\$.mous12,55757,8192,56901,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom24a\$.stbse2,55757,16384,22272,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom24a\$.protect,55757,16384,2001,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2a\$.BUFBACK,55757,8191,34595,32768,0,0,no match #1
-rom ($.rom.csv)\Rom2a\V.STORE11,55757,16384,59010,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2a\$.BEEBCAL,55757,8192,30454,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2a\$.BASEXT,55757,8192,5819,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2a\$.BASIC1,55757,16384,64771,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2a\$.HIbasic,55757,16381,36204,32768,0,0,no match #1
-rom ($.rom.csv)\Rom2a\M.BASIC4,55757,16384,27478,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2a\$.HIBAS,55757,16384,34235,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2a\$.COMAL,55757,16384,14209,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2a\$.RTC,55757,16384,21688,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2a\$.CARETAK,55757,8192,28683,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2a\$.BUTIL,55757,16384,62292,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2a\$.BRom,55757,8192,62148,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2a\$.BROM112,55757,8192,27041,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2a\$.BITSTIK,55757,8191,50645,32768,0,0,no match #1
-rom ($.rom.csv)\Rom2a\$.BEEBMON,55757,8192,57557,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2b\$.VDUREC,16767437,464,60285,32768,0,0,no match #1
-rom ($.rom.csv)\Rom2b\$.UVIPROM,55757,3072,41840,32768,0,0,no match #1
-rom ($.rom.csv)\Rom2b\$.DFS144,55757,16384,2721,16744448,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2b\R.TEGNHZ,55757,8201,10412,32768,0,0,no match #1
-rom ($.rom.csv)\Rom2b\$.DEMO2MC,55757,16384,15426,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2b\$.DEMO1MC,55757,16384,2337,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2b\$.DDT,55757,8192,13172,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2b\$.DDFS+,55757,16384,28103,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2b\$.DDFS153,55757,16384,42333,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2b\$.UserUtl,55757,8192,33706,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2b\$.WORD110,55757,8192,2492,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2b\$.EPSNLQ,55757,8192,61118,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2b\$.DFS2.0J,55757,16384,52767,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2b\F.DFS144,55757,16384,38051,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2b\$.DFS2.23,55757,16384,2102,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom2b\$.E00DFS,55757,8192,50933,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom2b\$.dfs226,55757,16384,32665,32768,32515,16384,Mode 3 screen #2
+rom ($.rom.csv)\Rom1a\$.WWP14F,55757,16384,29269,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.WORD+,55757,16384,1456,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.AMSUTIL,55757,8191,31634,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.AIDS,55757,8192,5486,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.AID,55757,8192,30829,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.ADT200,55757,16384,30498,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1a\$.ADE100,55757,16384,62682,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.SOUNDS,55757,8192,35878,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\V.STORE10,55757,16384,47961,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\A.PGM+17,55757,16384,59857,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.AMXV341,55757,16384,48180,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.AMXV331,55757,16384,38807,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.AMXMou,55757,16384,53767,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.PBAS,55757,16384,16255,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.BASIC2,55757,16384,60424,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.BAS486,55757,16384,12783,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.AXR,55757,16384,57250,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.ASM,55757,8192,32951,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\S.VASM65,55757,8191,17047,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.ARTIST,55757,16384,20600,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom1b\$.ARM113,55757,8192,13697,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.gtxt10,55757,16384,46019,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.gdmp101,55757,16384,49739,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.faid110,55757,8192,15116,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.font10,55757,16384,22342,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.flop+,55757,16384,61314,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.Fwse+23,55757,16384,50108,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.Fwse+21,55757,8192,49874,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.gcode10,55757,16384,50447,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.gcode,55757,16384,35012,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.fx8sd32,55757,3584,15198,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.fx8sd31,55757,8192,47759,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.4thvx,55757,16384,32729,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.4th79,55757,16384,30801,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.4th25,55757,8192,9570,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20a\$.4th24,55757,8192,25761,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.help12,55757,16384,4890,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.help1,55757,8192,35310,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.grem120,55757,8192,874,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.gtrm201,55757,8192,24276,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.grex209,55757,8192,59746,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.grex103,55757,8192,47850,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.grapad,55757,8192,55588,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.glan21,55757,16384,38402,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.help214,55757,16384,53619,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.hans,55757,16384,45312,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.hutil23,55757,16384,50624,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.h+200,55757,16384,7093,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.hack22,55757,16384,22008,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.hols300,55757,8192,34368,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.gum,55757,10789,23885,32768,217,128,Rom #1
+rom ($.rom.csv)\rom20b\$.grem121,55757,16384,54323,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.pas111,55757,16384,36010,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.pas100a,55757,16384,45347,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.hdvr110,55757,16384,57033,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.hdrr111,55757,16384,34848,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.hlp300,55757,8192,31532,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.hibas3,55757,16384,34235,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.hand129,55757,16384,45351,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.icrt102,55757,16384,56568,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.icrt101,55757,16384,21265,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.idx303a,55757,8192,39817,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.idx303,55757,8192,36920,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.idxu205,55757,8192,36424,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.index,55757,16384,55182,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.ibox10a,55757,8192,37176,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21a\$.ibox10,55757,8192,19406,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.padfs,55757,16384,43274,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.+1117,55757,8192,9041,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.pend113,55757,16384,28209,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.penf124,55757,16384,23951,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.pas112,0,16384,21979,0,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.ppcb104,55757,16384,38842,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.ppcb403,55757,16384,17395,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.ppcb107,55757,16384,15447,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.ppcb302,55757,16384,64448,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.pig11,55757,8192,25294,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.pig100,55757,8192,29770,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.phx200,55757,16384,19882,32768,217,128,Rom #1
+rom ($.rom.csv)\rom21b\$.pend13a,55757,16384,49140,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.prob402,55757,16384,9971,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pms110,55757,8192,44415,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pbuf210,55757,8192,19168,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.ptr100,55757,16384,10789,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pres110,55757,16384,4463,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pres47n,55757,8192,51918,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pres48n,55757,8192,64882,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.adfs331,55757,16384,29257,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.padf110,55757,16384,42624,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pme110,55757,8192,9918,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.aRAMU,0,8192,63683,0,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pme108a,55757,8192,41930,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pme108,55757,8192,6596,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pme101,55757,16384,30131,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pme100,55757,8192,31546,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.pmep100,55757,8192,16857,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22a\$.prtsrv,55757,8192,48908,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.stmn120,55757,16384,55093,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.stgr201,55757,8192,23372,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.qpai110,55757,8192,37219,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.qrom,55757,8192,8658,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.prow13,55757,16384,58084,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.prow12,55757,16384,9922,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.prc181,55757,8192,44076,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.prob405,55757,16384,47361,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.rip1a,55757,16384,16444,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.rip1a2,55757,16384,35167,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.rip1,55757,8192,41382,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.rfs,55757,16384,60557,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.rtegnhz,55757,8201,10412,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.qmon11a,55757,8192,32883,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.qmon110,55757,8192,62562,32768,217,128,Rom #1
+rom ($.rom.csv)\rom22b\$.que21a,55757,16384,62827,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.adfs0,55757,8192,48534,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.ddos315,55757,16384,57870,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.adi110,55757,16384,58129,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.scpy500,55757,8191,5845,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.eprom8,55757,16384,8949,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.t2p3202,55757,8192,43779,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.os240,55757,8192,30688,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.plrfs,55757,16384,25368,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.ddfs09,55757,16384,5751,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.cprom1,55757,8192,17391,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.csr882,55757,8192,50464,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.csr1983,0,8192,33999,0,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.cent103,55757,16384,53600,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.brom102,55757,16384,50093,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.bitsk1,55757,8192,24152,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23a\$.adi1a2,55757,16384,51243,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.pwrf501,55757,16384,3284,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.1123,55757,16384,65439,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.fs7259,55757,8192,30114,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.82-172j,0,16384,41222,0,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.adi110,0,16384,58129,0,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.adi1a2,0,16384,51243,0,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.penf120,55757,16384,15437,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.pas112,55757,16384,21979,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.pmfntq,55757,16384,53576,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.machv1,0,8192,55989,0,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.grex102,55757,16384,42938,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.dout30p,55757,8192,17268,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.dout05d,55757,8192,51937,32768,217,128,Rom #1
+rom ($.rom.csv)\rom23b\$.ddoc109,55757,16384,15844,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.pbox122,55757,16384,7971,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.sht103,55757,8192,55989,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.pe108a2,55757,8192,63683,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.pres100,55757,8192,54556,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.wdfs150,55757,16384,22346,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.82-172i,55757,16384,27031,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.cmsr697,55757,8192,11423,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.Elitedt,55757,16384,4960,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.82-172j,55757,16384,41222,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.mous12,55757,8192,56901,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.stbse2,55757,16384,22272,32768,217,128,Rom #1
+rom ($.rom.csv)\rom24a\$.protect,55757,16384,2001,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.BUFBACK,55757,8191,34595,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\V.STORE11,55757,16384,59010,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.BEEBCAL,55757,8192,30454,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.BASEXT,55757,8192,5819,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.BASIC1,55757,16384,64771,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.HIbasic,55757,16381,36204,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\M.BASIC4,55757,16384,27478,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.HIBAS,55757,16384,34235,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.COMAL,55757,16384,14209,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.RTC,55757,16384,21688,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.CARETAK,55757,8192,28683,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.BUTIL,55757,16384,62292,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.BRom,55757,8192,62148,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.BROM112,55757,8192,27041,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.BITSTIK,55757,8191,50645,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2a\$.BEEBMON,55757,8192,57557,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.VDUREC,16767437,464,60285,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.UVIPROM,55757,3072,41840,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.DFS144,55757,16384,2721,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\R.TEGNHZ,55757,8201,10412,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.DEMO2MC,55757,16384,15426,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.DEMO1MC,55757,16384,2337,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.DDT,55757,8192,13172,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.DDFS+,55757,16384,28103,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.DDFS153,55757,16384,42333,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.UserUtl,55757,8192,33706,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.WORD110,55757,8192,2492,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.EPSNLQ,55757,8192,61118,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.DFS2.0J,55757,16384,52767,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\F.DFS144,55757,16384,38051,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.DFS2.23,55757,16384,2102,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.E00DFS,55757,8192,50933,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom2b\$.dfs226,55757,16384,32665,32768,217,128,Rom #1
 rom ($.rom.csv)\Rom3a\$.QPAINT2,16777215,16384,33675,0,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3a\$.QPAINT,55757,32768,4073,32768,0,0,no match #1
-rom ($.rom.csv)\Rom3a\S.1770V21,16767437,16384,6709,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3a\$.DFS0.9,55757,8192,24165,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3a\$.DFS224,55757,16384,58336,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3a\$.SERVANT,55757,8191,55634,32768,0,0,no match #1
-rom ($.rom.csv)\Rom3a\$.DDOC109,55757,8192,9116,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3a\$.DIGITIZ,55757,16384,49232,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3a\$.DNFS,55757,16384,5964,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3a\$.DNFS1.2,55757,16383,41166,32768,0,0,no match #1
-rom ($.rom.csv)\Rom3a\$.DFS0-9H,55757,8192,18192,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3a\$.SDFS21M,55757,16384,52342,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3a\$.SDFS2.1,55757,16384,17946,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3b\V.SPELL10,55757,8192,63779,16744448,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3b\H.FLOPPY+,55757,16384,61314,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3b\$.EDIT350,55757,16384,29579,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3b\$.HIedit,55757,16566,28624,32768,0,0,no match #1
-rom ($.rom.csv)\Rom3b\$.EDIT320,55757,16384,8213,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3b\$.DUMP32j,55757,8192,59556,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3b\$.DMPII10,55757,16384,25460,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3b\$.Doctor,55757,16384,39131,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3b\$.ZAP,55757,8192,56780,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3b\$.FLOPPYW,55757,8192,26899,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3b\$.FLOCOPY,55757,2799,61426,32768,0,0,no match #1
-rom ($.rom.csv)\Rom3b\$.EXTRAS,55757,8192,41094,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3b\$.EXMII10,55757,8192,23734,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3b\$.EXII103,55757,8192,17344,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3b\$.XMON202,55757,16384,15858,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom3b\$.EXM11a,55757,8192,48367,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom3b\$.ENIG107,55757,16384,3569,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.HELP12,55757,16384,4890,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.HLP100,55757,8192,31532,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom4a\A.G-CODE,55757,16384,46261,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.FX80AID,55757,8448,19415,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\Rom4a\$.G:FORTH,55757,16384,59938,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.FORTH,55757,16384,6194,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.FLOPPY+,55757,16384,35446,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.HELP12C,55757,16384,15481,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.HELIX,55757,2879,43965,32768,0,0,no match #1
-rom ($.rom.csv)\Rom4a\$.HACKSTR,55757,16384,22008,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.HACK,55757,4096,55807,32768,0,0,no match #1
-rom ($.rom.csv)\Rom4a\$.GREMLIN,55757,16384,23566,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.GXR120,55757,16384,43071,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.GXR,55757,16384,57932,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4a\$.toolrom,55757,11542,53748,32768,0,0,no match #1
-rom ($.rom.csv)\Rom4b\$.VwShape,55757,8192,45726,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom4b\$.LINEMST,16767437,16384,25608,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4b\$.HKR100,55757,8192,38370,16744448,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom4b\$.HKR120,55757,16384,54978,16744448,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4b\$.HKR130,55757,16384,60449,16744448,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4b\$.HRUTL11,55757,8192,3574,16744448,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom4b\$.HERSHEY,55757,8090,61008,32768,0,0,no match #1
-rom ($.rom.csv)\Rom4b\$.HELP,55757,8192,12353,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom4b\$.XREF,55757,8192,31427,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom4b\R.I-WORD2,55757,16384,8149,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4b\R.I-WORD1,55757,16384,43068,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4b\B.ISHT,55757,16384,27546,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4b\$.CHRT103,55757,16384,16320,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4b\$.INDEXUT,55757,8192,48968,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom4b\$.ICONMST,55757,16384,44233,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom4b\$.ICE-BOX,55757,8192,13347,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom5a\$.VIEWSHT,55757,16384,2102,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\$.VSTORE,55757,16384,47961,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\$.LispRom,55757,16384,27514,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\$.LISP,55757,16384,19683,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\$.MAX12,55757,16384,43859,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\$.MXR,55757,16384,42486,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\S.32KMAN,55757,16384,62190,16744448,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\$.MAN256,55757,16384,61610,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\$.LOGOCAT,55757,16384,63460,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\$.LOGO1,55757,16384,13072,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\$.LOGO2,55757,16384,41030,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5a\L.LOGO100,55757,16384,54844,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\$.QUICKY,55757,1280,43401,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\Rom5b\$.MUROM,55757,16384,6787,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\$.COP114,55757,4608,5812,32768,0,0,no match #1
-rom ($.rom.csv)\Rom5b\$.PROLOG,55757,16384,38998,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\E.META,55757,16384,63984,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\$.MERLIN,55757,16384,65078,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\$.MedMon,55757,4095,54120,32768,0,0,no match #1
-rom ($.rom.csv)\Rom5b\A.M7ED2,55757,16384,21961,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\A.M7ED1,55757,16384,22549,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\$.McMon,55757,8192,25995,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom5b\C.MOVIEM1,55757,16384,28643,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\C.MOVIEM2,55757,16384,10892,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\$.AcrnMon,55757,16384,46912,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\$.ASMON,55757,16384,21778,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom5b\$.COP105,55757,3328,18781,32768,0,0,no match #1
-rom ($.rom.csv)\Rom5b\$.COP109,55757,3840,6382,32768,0,0,no match #1
-rom ($.rom.csv)\Rom5b\$.COP112,55757,3840,56310,32768,0,0,no match #1
-rom ($.rom.csv)\Rom5b\$.COP113,55757,4608,8002,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6a\$.UTIL1.2,55757,8191,34990,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6a\$.PS1,55757,2816,45344,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6a\$.PASCALT,55757,16384,53803,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6a\A.PGM+S17,55757,16384,22025,16744448,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6a\$.SFX,55757,1024,19020,32768,32519,31744,Mode 7 screen #2
-rom ($.rom.csv)\Rom6a\$.OPENLO,55757,16384,61088,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6a\$.OPENLO1,55757,16384,21445,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6a\H.OLS300,55757,8192,34368,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom6a\$.OXPASC,55757,16384,58282,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6a\$.DK-TEGN,55757,3920,60332,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6a\$.NLQDE13,55757,8192,42433,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom6a\$.ProSmit,55757,8192,17194,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom6a\$.PRINTMA,55757,8191,29368,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6a\$.STAR110,55757,8192,4234,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom6a\$.BUFFER,55757,1280,39649,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6a\$.PRBUF,55757,8192,48837,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom6a\$.PMFS,55757,16384,54129,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6a\$.ISOPAS1,55757,16384,3990,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6a\$.ISOPAS2,55757,16384,58248,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6b\R.SLAVE+,55757,16384,65222,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6b\B.SHT,55757,16384,38795,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6b\$.QPAINT,55757,32768,42800,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6b\$.QPAINT1,55757,16384,10946,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6b\$.QFS2.00,55757,16384,19417,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6b\$.SFS,16767437,16384,12846,16744448,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6b\$.COPYR,55757,13916,36545,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6b\$.SEDrom,55757,11291,29860,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6b\$.SCDUMP,55757,8192,59327,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom6b\$.ROMIT01,55757,16384,4994,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom6b\$.RomMast,55757,8192,10235,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom6b\R.Ripper,55757,8191,40909,32768,0,0,no match #1
-rom ($.rom.csv)\Rom6b\$.RFS,55757,16384,60557,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7a\$.VwShape,55757,8192,45726,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7a\$.TDROM,55757,8192,14931,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7a\$.STARSTK,55757,8193,18588,32768,0,0,no match #1
-rom ($.rom.csv)\Rom7a\$.SPY212,55757,8192,63606,16744448,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7a\$.SPY210,55757,8192,53269,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7a\$.BSPEL12,55757,8192,44687,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7a\$.SP8000,55757,8192,50704,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7a\$.SOLIWIN,55757,1009,53188,32768,0,0,no match #1
-rom ($.rom.csv)\Rom7a\$.SNAPROM,55757,16384,57160,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7a\$.Slogger,55757,16384,12536,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7a\$.SLEUTH,55757,8192,19902,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7a\$.SWRU1.0,55757,16384,32831,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7a\$.STL0E00,55757,16384,49102,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7a\$.STLTOOL,16767437,16384,2238,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7a\$.STLRFS,55757,1280,15260,32768,0,0,no match #1
-rom ($.rom.csv)\Rom7a\$.SADFS21,121293,16384,11307,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7a\$.ADFS21M,55757,16384,10297,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7a\$.ST2V224,55757,8192,48483,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7a\$.STARST2,55757,8192,48916,32768,32518,24576,Mode 6 screen #2
+rom ($.rom.csv)\Rom3a\$.QPAINT,55757,32768,4073,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\S.1770V21,16767437,16384,6709,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.DFS0.9,55757,8192,24165,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.DFS224,55757,16384,58336,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.SERVANT,55757,8191,55634,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.DDOC109,55757,8192,9116,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.DIGITIZ,55757,16384,49232,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.DNFS,55757,16384,5964,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.DNFS1.2,55757,16383,41166,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.DFS0-9H,55757,8192,18192,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.SDFS21M,55757,16384,52342,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3a\$.SDFS2.1,55757,16384,17946,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\V.SPELL10,55757,8192,63779,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\H.FLOPPY+,55757,16384,61314,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.EDIT350,55757,16384,29579,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.HIedit,55757,16566,28624,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.EDIT320,55757,16384,8213,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.DUMP32j,55757,8192,59556,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.DMPII10,55757,16384,25460,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.Doctor,55757,16384,39131,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.ZAP,55757,8192,56780,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.FLOPPYW,55757,8192,26899,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.FLOCOPY,55757,2799,61426,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.EXTRAS,55757,8192,41094,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.EXMII10,55757,8192,23734,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.EXII103,55757,8192,17344,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.XMON202,55757,16384,15858,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.EXM11a,55757,8192,48367,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom3b\$.ENIG107,55757,16384,3569,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.HELP12,55757,16384,4890,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.HLP100,55757,8192,31532,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\A.G-CODE,55757,16384,46261,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.FX80AID,55757,8448,19415,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.G:FORTH,55757,16384,59938,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.FORTH,55757,16384,6194,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.FLOPPY+,55757,16384,35446,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.HELP12C,55757,16384,15481,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.HELIX,55757,2879,43965,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.HACKSTR,55757,16384,22008,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.HACK,55757,4096,55807,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.GREMLIN,55757,16384,23566,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.GXR120,55757,16384,43071,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.GXR,55757,16384,57932,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4a\$.toolrom,55757,11542,53748,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.VwShape,55757,8192,45726,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.LINEMST,16767437,16384,25608,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.HKR100,55757,8192,38370,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.HKR120,55757,16384,54978,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.HKR130,55757,16384,60449,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.HRUTL11,55757,8192,3574,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.HERSHEY,55757,8090,61008,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.HELP,55757,8192,12353,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.XREF,55757,8192,31427,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\R.I-WORD2,55757,16384,8149,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\R.I-WORD1,55757,16384,43068,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\B.ISHT,55757,16384,27546,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.CHRT103,55757,16384,16320,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.INDEXUT,55757,8192,48968,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.ICONMST,55757,16384,44233,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom4b\$.ICE-BOX,55757,8192,13347,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.VIEWSHT,55757,16384,2102,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.VSTORE,55757,16384,47961,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.LispRom,55757,16384,27514,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.LISP,55757,16384,19683,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.MAX12,55757,16384,43859,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.MXR,55757,16384,42486,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\S.32KMAN,55757,16384,62190,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.MAN256,55757,16384,61610,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.LOGOCAT,55757,16384,63460,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.LOGO1,55757,16384,13072,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\$.LOGO2,55757,16384,41030,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5a\L.LOGO100,55757,16384,54844,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.QUICKY,55757,1280,43401,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.MUROM,55757,16384,6787,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.COP114,55757,4608,5812,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.PROLOG,55757,16384,38998,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\E.META,55757,16384,63984,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.MERLIN,55757,16384,65078,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.MedMon,55757,4095,54120,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\A.M7ED2,55757,16384,21961,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\A.M7ED1,55757,16384,22549,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.McMon,55757,8192,25995,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\C.MOVIEM1,55757,16384,28643,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\C.MOVIEM2,55757,16384,10892,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.AcrnMon,55757,16384,46912,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.ASMON,55757,16384,21778,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.COP105,55757,3328,18781,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.COP109,55757,3840,6382,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.COP112,55757,3840,56310,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom5b\$.COP113,55757,4608,8002,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.UTIL1.2,55757,8191,34990,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.PS1,55757,2816,45344,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.PASCALT,55757,16384,53803,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\A.PGM+S17,55757,16384,22025,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.SFX,55757,1024,19020,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.OPENLO,55757,16384,61088,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.OPENLO1,55757,16384,21445,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\H.OLS300,55757,8192,34368,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.OXPASC,55757,16384,58282,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.DK-TEGN,55757,3920,60332,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.NLQDE13,55757,8192,42433,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.ProSmit,55757,8192,17194,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.PRINTMA,55757,8191,29368,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.STAR110,55757,8192,4234,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.BUFFER,55757,1280,39649,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.PRBUF,55757,8192,48837,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.PMFS,55757,16384,54129,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.ISOPAS1,55757,16384,3990,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6a\$.ISOPAS2,55757,16384,58248,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\R.SLAVE+,55757,16384,65222,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\B.SHT,55757,16384,38795,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.QPAINT,55757,32768,42800,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.QPAINT1,55757,16384,10946,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.QFS2.00,55757,16384,19417,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.SFS,16767437,16384,12846,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.COPYR,55757,13916,36545,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.SEDrom,55757,11291,29860,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.SCDUMP,55757,8192,59327,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.ROMIT01,55757,16384,4994,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.RomMast,55757,8192,10235,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\R.Ripper,55757,8191,40909,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom6b\$.RFS,55757,16384,60557,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.VwShape,55757,8192,45726,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.TDROM,55757,8192,14931,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.STARSTK,55757,8193,18588,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.SPY212,55757,8192,63606,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.SPY210,55757,8192,53269,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.BSPEL12,55757,8192,44687,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.SP8000,55757,8192,50704,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.SOLIWIN,55757,1009,53188,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.SNAPROM,55757,16384,57160,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.Slogger,55757,16384,12536,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.SLEUTH,55757,8192,19902,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.SWRU1.0,55757,16384,32831,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.STL0E00,55757,16384,49102,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.STLTOOL,16767437,16384,2238,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.STLRFS,55757,1280,15260,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.SADFS21,121293,16384,11307,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.ADFS21M,55757,16384,10297,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.ST2V224,55757,8192,48483,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7a\$.STARST2,55757,8192,48916,32768,217,128,Rom #1
 rom ($.rom.csv)\Rom7b\$.PACKER,32803,7311,12034,6400,32803,0,Basic #1
-rom ($.rom.csv)\Rom7b\$.TKILL,55757,297,26720,32768,0,0,no match #1
-rom ($.rom.csv)\Rom7b\$.PhilRom,55757,1675,9029,32768,0,0,no match #1
-rom ($.rom.csv)\Rom7b\$.GRAEDIT,55757,6144,11384,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\Rom7b\A.BASEDIT,55757,16384,54983,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7b\$.BE132,55757,16384,52066,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7b\$.TERMULA,55757,16384,9584,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7b\$.TERMINA,55757,8192,49931,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7b\$.TELEDAT,55757,16384,14319,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7b\$.FONT12,55757,8192,6061,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7b\$.TEGN1.2,55757,16384,23701,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7b\$.SOLITRA,55757,8192,27031,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7b\$.TOOLSTR,55757,8192,17685,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7b\$.TOOL+,55757,16384,22909,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7b\$.TOOL+HR,55757,16384,7779,16744448,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7b\$.TKIT205,55757,16384,59768,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom7b\$.TOOL125,55757,8192,34129,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7b\$.TOOL120,55757,8192,51138,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom7b\$.TOOL123,55757,8192,34646,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom8a\$.VIEW1.4,55757,16384,59191,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8a\E.VIEWD/N,55757,16383,7202,32768,32761,4352,TYB music samples #4
-rom ($.rom.csv)\Rom8a\$.VIEW2-1,55757,16384,30903,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8a\$.VIEW2.1,55757,16384,12956,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8a\$.VIEWA30,55757,16384,8870,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8a\$.VIEWB31,55757,13628,55506,32768,0,0,no match #1
-rom ($.rom.csv)\Rom8a\$.VIWB311,55757,16384,62992,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8a\$.TURTLE,55757,16384,22106,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8b\$.mous21a,55757,16384,5368,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8b\$.mous21,55757,8192,28388,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom8b\$.WATFORD,55757,8192,61118,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom8b\$.EPSNLQ,55757,8192,61118,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom8b\$.SOUNDS,55757,8192,35878,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom8b\$.BUFBACK,55757,8191,34595,32768,0,0,no match #1
-rom ($.rom.csv)\Rom8b\V.STORE11,55757,16384,59010,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8b\V.STORE10,55757,16384,47961,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8b\$.amx100,55757,16384,37302,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8b\$.amt104,55757,16383,35472,32768,0,0,no match #1
-rom ($.rom.csv)\Rom8b\$.AMSutil,55757,8192,64134,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom8b\$.nucleus,55757,16384,24410,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8b\$.intper,55757,8192,13979,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\Rom8b\$.WORD+,55757,16384,1456,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8b\$.WWP14F,55757,16384,29269,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\Rom8b\$.WORD110,55757,8192,2492,32768,32518,24576,Mode 6 screen #2
+rom ($.rom.csv)\Rom7b\$.TKILL,55757,297,26720,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.PhilRom,55757,1675,9029,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.GRAEDIT,55757,6144,11384,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\A.BASEDIT,55757,16384,54983,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.BE132,55757,16384,52066,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TERMULA,55757,16384,9584,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TERMINA,55757,8192,49931,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TELEDAT,55757,16384,14319,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.FONT12,55757,8192,6061,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TEGN1.2,55757,16384,23701,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.SOLITRA,55757,8192,27031,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TOOLSTR,55757,8192,17685,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TOOL+,55757,16384,22909,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TOOL+HR,55757,16384,7779,16744448,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TKIT205,55757,16384,59768,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TOOL125,55757,8192,34129,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TOOL120,55757,8192,51138,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom7b\$.TOOL123,55757,8192,34646,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8a\$.VIEW1.4,55757,16384,59191,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8a\E.VIEWD/N,55757,16383,7202,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8a\$.VIEW2-1,55757,16384,30903,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8a\$.VIEW2.1,55757,16384,12956,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8a\$.VIEWA30,55757,16384,8870,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8a\$.VIEWB31,55757,13628,55506,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8a\$.VIWB311,55757,16384,62992,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8a\$.TURTLE,55757,16384,22106,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.mous21a,55757,16384,5368,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.mous21,55757,8192,28388,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.WATFORD,55757,8192,61118,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.EPSNLQ,55757,8192,61118,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.SOUNDS,55757,8192,35878,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.BUFBACK,55757,8191,34595,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\V.STORE11,55757,16384,59010,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\V.STORE10,55757,16384,47961,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.amx100,55757,16384,37302,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.amt104,55757,16383,35472,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.AMSutil,55757,8192,64134,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.nucleus,55757,16384,24410,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.intper,55757,8192,13979,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.WORD+,55757,16384,1456,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.WWP14F,55757,16384,29269,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom8b\$.WORD110,55757,8192,2492,32768,217,128,Rom #1
 rom ($.rom.csv)\Rom9a\$.PROCESS,16744483,3045,49337,16718080,32803,0,Basic #1
-rom ($.rom.csv)\Rom9a\$.QPAINT,16777215,32768,4073,0,0,0,no match #1
+rom ($.rom.csv)\Rom9a\$.QPAINT,16777215,32768,4073,0,217,128,Rom #1
 rom ($.rom.csv)\Rom9a\$.QPAINT2,16777215,16384,33675,0,32515,16384,Mode 3 screen #2
 rom ($.rom.csv)\Rom9a\$.RLOAD,2527,263,50868,2512,0,0,no match #1
 rom ($.rom.csv)\Rom9a\$.README,16777215,980,21852,16777215,0,0,no match #1
 rom ($.rom.csv)\Rom9a\$.KILLSRC,16744483,3934,39473,16718080,32803,0,Basic #1
-rom ($.rom.csv)\Rom9a\$.DNFS1.2,55757,16383,41166,32768,0,0,no match #1
-rom ($.rom.csv)\Rom9a\$.DFS2.23,55757,16384,2102,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom9b\$.Ldos.9,55757,8192,13388,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom9b\$.modem,55757,16384,25856,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom9b\$.lxhandy,55757,8192,58267,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom9b\$.lx-80-a,55757,8192,3445,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom9b\$.lx-80,55757,8192,14397,32768,32518,24576,Mode 6 screen #2
-rom ($.rom.csv)\rom9b\$.machv1,55757,16384,11156,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom9b\$.lemon2,55757,8192,17178,32768,32766,0,Ldpic #2
-rom ($.rom.csv)\rom9b\$.lemon4,55757,16384,16961,32768,32766,0,Ldpic #2
-rom ($.rom.csv)\rom9b\$.linemtr,55757,16384,45317,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom9b\$.lisp,55757,16384,723,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom9b\$.logojw,55757,16384,26292,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom9b\$.logoact,55757,16384,4334,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom9b\$.logo,55757,16384,41512,32768,32515,16384,Mode 3 screen #2
-rom ($.rom.csv)\rom9b\$.logo1.2,55757,16384,61852,32768,32515,16384,Mode 3 screen #2
+rom ($.rom.csv)\Rom9a\$.DNFS1.2,55757,16383,41166,32768,217,128,Rom #1
+rom ($.rom.csv)\Rom9a\$.DFS2.23,55757,16384,2102,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.Ldos.9,55757,8192,13388,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.modem,55757,16384,25856,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.lxhandy,55757,8192,58267,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.lx-80-a,55757,8192,3445,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.lx-80,55757,8192,14397,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.machv1,55757,16384,11156,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.lemon2,55757,8192,17178,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.lemon4,55757,16384,16961,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.linemtr,55757,16384,45317,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.lisp,55757,16384,723,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.logojw,55757,16384,26292,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.logoact,55757,16384,4334,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.logo,55757,16384,41512,32768,217,128,Rom #1
+rom ($.rom.csv)\rom9b\$.logo1.2,55757,16384,61852,32768,217,128,Rom #1
 rom ($.rom.csv)\ROMSMNU\$.!BOOT,0,9,59688,0,0,0,no match #1
 rom ($.rom.csv)\ROMSMNU\$.SOFTREC,20480,411,53139,20480,64596,127,text/word #4
 rom ($.rom.csv)\ROMSMNU\$.magic,29565,2620,64507,28928,32803,3584,Basic page=&E00 #1
@@ -37477,7 +37477,7 @@ Stairway to hell ($.STH.csv)\AC4-r1-1\$.SLAB-82,0,2308,20795,0,0,0,no match #1
 Stairway to hell ($.STH.csv)\AC4-r1-1\$.SLAB-77,0,2308,5718,0,0,0,no match #1
 Stairway to hell ($.STH.csv)\AC4-r1-1\$.SLAB-60,0,2308,57342,0,0,0,no match #1
 Stairway to hell ($.STH.csv)\AC4-r1-1\$.ACHETON,16744483,1189,1724,6400,32803,0,Basic #1
-Stairway to hell ($.STH.csv)\AC4-r1-1\$.ACHETO1,6912,7936,14240,6912,0,0,no match #1
+Stairway to hell ($.STH.csv)\AC4-r1-1\$.ACHETO1,6912,7936,14240,6912,217,128,Rom #1
 Stairway to hell ($.STH.csv)\ACUGD-r1-0\$.LOAD,16744483,270,42999,16718080,32803,0,Basic #1
 Stairway to hell ($.STH.csv)\ACUGD-r1-0\$.Sub2,16744491,7041,14570,16715264,32803,0,Basic #1
 Stairway to hell ($.STH.csv)\ACUGD-r1-0\$.Mind,16744491,48,5552,16718080,0,0,no match #1
@@ -38011,7 +38011,7 @@ Stairway to hell ($.STH.csv)\AU1-r1-1\$.WIZZY,256,112,10983,256,0,0,no match #1
 Stairway to hell ($.STH.csv)\AU1-r1-1\$.BTM,2240,1088,16160,2240,0,0,no match #1
 Stairway to hell ($.STH.csv)\AU1-r1-1\$.MAN,29952,256,19701,29952,32761,4352,TYB music samples #1
 Stairway to hell ($.STH.csv)\AU1-r1-1\$.GAME,4096,18432,46337,4096,0,0,no match #1
-Stairway to hell ($.STH.csv)\AU1-r1-1\$.SOD,27648,23680,23906,7808,0,0,no match #1
+Stairway to hell ($.STH.csv)\AU1-r1-1\$.SOD,27648,23680,23906,7808,217,128,Rom #1
 Stairway to hell ($.STH.csv)\AU1-r1-1\$.B-CODE,30208,2560,15578,30208,0,0,no match #1
 Stairway to hell ($.STH.csv)\AU1-r1-1\$.A-CODE,4352,2048,40803,4352,0,0,no match #1
 Stairway to hell ($.STH.csv)\AU1-r1-1\$.FREE,7168,2047,49945,6912,0,0,no match #1
@@ -41498,7 +41498,7 @@ Stairway to hell ($.STH.csv)\SU5-r1a-1\$.SCREEN1,20480,3072,47427,20480,32761,43
 Stairway to hell ($.STH.csv)\SU5-r1a-1\$.SCREEN,16128,10240,6736,16128,32517,22528,Mode 5 screen #2
 Stairway to hell ($.STH.csv)\SU5-r1a-1\$.BONE2LD,2304,32,27585,2304,0,0,no match #1
 Stairway to hell ($.STH.csv)\SU5-r1a-1\$.BONE2,10018,23488,15906,7680,32761,4352,TYB music samples #1
-Stairway to hell ($.STH.csv)\SU5-r1a-1\$.SP8000,55757,8192,50704,32768,32518,24576,Mode 6 screen #2
+Stairway to hell ($.STH.csv)\SU5-r1a-1\$.SP8000,55757,8192,50704,32768,217,128,Rom #1
 Stairway to hell ($.STH.csv)\SU5-r1a-1\$.BONE,6400,1920,35790,6400,0,0,no match #1
 Stairway to hell ($.STH.csv)\SU5-r1a-1\$.SPELL,16744483,7667,9826,16718080,32803,0,Basic #1
 Stairway to hell ($.STH.csv)\SU5-r1a-1\$.SPEECH,24576,7680,17111,21760,0,0,no match #1
@@ -41707,7 +41707,7 @@ Stairway to hell ($.STH.csv)\SU9-r1-1\$.topstr,25728,320,58451,25728,0,0,no matc
 Stairway to hell ($.STH.csv)\SU9-r1-1\$.botstr,30848,960,30404,30848,0,0,no match #1
 Stairway to hell ($.STH.csv)\SU9-r1-1\$.CU,1024,1024,38681,1024,32519,31744,Mode 7 screen #2
 Stairway to hell ($.STH.csv)\SU9-r1-1\$.TACLOAD,6400,3055,43000,6400,0,0,no match #1
-Stairway to hell ($.STH.csv)\SU9-r1-1\$.TacROM,32768,12847,11460,32768,0,0,no match #1
+Stairway to hell ($.STH.csv)\SU9-r1-1\$.TacROM,32768,12847,11460,32768,217,128,Rom #1
 Stairway to hell ($.STH.csv)\SU9-r1-1\$.TacScr,12288,20480,37446,12288,32514,12288,Mode 2 screen #2
 Stairway to hell ($.STH.csv)\SU9-r1-1\$.TACTIC,4352,10360,26652,4352,0,0,no match #1
 Stairway to hell ($.STH.csv)\SU9-r1-1\$.DATA,9216,18432,41190,9216,0,0,no match #1

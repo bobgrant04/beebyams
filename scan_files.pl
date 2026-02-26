@@ -309,29 +309,48 @@ sub parse_equs_line {
     } elsif ($type == 6) { # offset, nobytes, check bytes, exec, load, ident
         $pattern->{offset} = parse_hex(shift @tokens);
         $pattern->{nobytes} = parse_hex(shift @tokens);
+        
         $pattern->{check_bytes} = [];
+        
+        # Read check_bytes - stop when we hit a string (ident) or have enough
         for (1..$pattern->{nobytes}) {
+            last unless @tokens;
             my $token = shift @tokens;
             if ($token =~ /^"(.*)"$/) {
-                # String token - convert each character to ASCII
-                my $string = $1;
-                for my $i (0..length($string)-1) {
-                    push @{$pattern->{check_bytes}}, ord(substr($string, $i, 1));
-                }
+                unshift @tokens, $token;  # Put string back - it's the ident
+                last;
             } else {
-                # Regular number
                 push @{$pattern->{check_bytes}}, parse_hex($token);
             }
         }
         
+        # Collect all remaining numeric tokens for exec/load
+        my @exec_load_tokens;
+        while (@tokens) {
+            my $token = $tokens[0];
+            if ($token =~ /^&[0-9A-Fa-f]+$/ || $token =~ /^\d+$/) {
+                push @exec_load_tokens, shift @tokens;
+            } else {
+                last;  # Stop at non-numeric token (ident string)
+            }
+        }
+        
         # Parse exec and load values (16-bit little-endian)
-        if (@tokens >= 4) {
-            my $exec_lo = parse_hex(shift @tokens);
-            my $exec_hi = parse_hex(shift @tokens);
-            my $load_lo = parse_hex(shift @tokens);
-            my $load_hi = parse_hex(shift @tokens);
+        # Need at least 2 (exec), preferably 4 (exec + load)
+        if (@exec_load_tokens >= 2) {
+            my $exec_lo = parse_hex(shift @exec_load_tokens);
+            my $exec_hi = parse_hex(shift @exec_load_tokens);
             $pattern->{exec} = $exec_lo + ($exec_hi << 8);
-            $pattern->{load} = $load_lo + ($load_hi << 8);
+            
+            # Parse load if we have at least 2 more tokens
+            if (@exec_load_tokens >= 2) {
+                my $load_lo = parse_hex(shift @exec_load_tokens);
+                my $load_hi = parse_hex(shift @exec_load_tokens);
+                $pattern->{load} = $load_lo + ($load_hi << 8);
+            } elsif (@exec_load_tokens >= 1) {
+                # Single byte load
+                $pattern->{load} = parse_hex(shift @exec_load_tokens);
+            }
             $pattern->{parsed_exec_load} = 1;
         }
     } elsif ($type == 7) { # count, no entries, bytes, exec, load, ident
@@ -611,15 +630,33 @@ sub check_type5 {
 }
 
 # Type 6: Offset byte matching variant
+# Logic (from magic.asm):
+# 1. First byte at offset = position in file to read from
+# 2. Second byte (nobytes - 1) = number of bytes to compare
+# 3. Compare those bytes from file to check_bytes
 sub check_type6 {
     my ($pattern, $first_page) = @_;
     
-    return 0 if $pattern->{offset} >= length($first_page);
-    return 0 if $pattern->{offset} + $pattern->{nobytes} > length($first_page);
+    my $offset = $pattern->{offset};
+    return 0 if $offset >= length($first_page);
     
-    for my $i (0..$#{$pattern->{check_bytes}}) {
+    # Step 1: Read byte at offset - this is the position in file to start checking
+    my $start_pos = ord(substr($first_page, $offset, 1));
+    
+    # Step 2: Use nobytes - 1 from pattern as the count (as per user's description)
+    my $byte_count = $pattern->{nobytes} - 1;
+    
+    # Handle nobytes = 0 case (compare 0 bytes = always match?)
+    $byte_count = 0 if $byte_count < 0;
+    
+    # Step 3: Compare byte_count bytes starting from start_pos
+    return 0 if $start_pos >= length($first_page);
+    return 0 if $start_pos + $byte_count > length($first_page);
+    
+    for my $i (0..$byte_count - 1) {
+        last if $i >= @{$pattern->{check_bytes}};
         my $expected = $pattern->{check_bytes}->[$i];
-        my $actual = ord(substr($first_page, $pattern->{offset} + $i, 1));
+        my $actual = ord(substr($first_page, $start_pos + $i, 1));
         return 0 if $expected != $actual;
     }
     
